@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

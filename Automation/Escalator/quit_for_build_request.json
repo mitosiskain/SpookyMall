@@ -1,0 +1,8 @@
+{
+  "tool": "execute_unreal_python",
+  "arguments": {
+    "python_script_or_patch": "import unreal\nlevels=unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)\nif levels.is_in_play_in_editor(): raise RuntimeError('PIE must be stopped before closing')\ndirty=list(unreal.EditorLoadingAndSavingUtils.get_dirty_map_packages())+list(unreal.EditorLoadingAndSavingUtils.get_dirty_content_packages())\nif dirty: raise RuntimeError('Refusing editor shutdown with unsaved packages: '+str([p.get_path_name() for p in dirty]))\nprint('ESCALATOR_EDITOR_CLEAN_FOR_PERSISTENT_BUILD')\nunreal.SystemLibrary.quit_editor()\n",
+    "request_text": "After the escalator gameplay tests and scoped saves, close Unreal normally only if PIE is stopped and no unsaved map or content packages exist. This permits a regular Editor build of the new native escalator class; the editor will be reopened afterward.",
+    "short_description": "Close clean editor for persistent escalator build"
+  }
+}

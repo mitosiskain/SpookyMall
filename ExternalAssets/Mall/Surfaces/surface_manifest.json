@@ -1,0 +1,377 @@
+{
+  "date": "2026-10-10",
+  "assets": [
+    {
+      "material_name": "M_Mall_white_plaster_02",
+      "asset_id": "white_plaster_02",
+      "provider": "Poly Haven",
+      "source_url": "https://polyhaven.com/a/white_plaster_02",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://polyhaven.com/license",
+      "resolution": "2K",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_diff_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_nor_dx_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_rough_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_ao_2k.png"
+      },
+      "normal_convention": "DirectX",
+      "normal_flip_green": false,
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "metallic_constant": 0.0,
+      "shading_model": "DefaultLit",
+      "blend_mode": "Opaque",
+      "status": "downloaded_verified"
+    },
+    {
+      "material_name": "M_Mall_terrazzo_tiles",
+      "asset_id": "terrazzo_tiles",
+      "provider": "Poly Haven",
+      "source_url": "https://polyhaven.com/a/terrazzo_tiles",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://polyhaven.com/license",
+      "resolution": "2K",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_diff_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_nor_dx_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_rough_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_ao_2k.png"
+      },
+      "normal_convention": "DirectX",
+      "normal_flip_green": false,
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "metallic_constant": 0.0,
+      "shading_model": "DefaultLit",
+      "blend_mode": "Opaque",
+      "status": "downloaded_verified"
+    },
+    {
+      "material_name": "M_Mall_painted_metal_shutter",
+      "asset_id": "painted_metal_shutter",
+      "provider": "Poly Haven",
+      "source_url": "https://polyhaven.com/a/painted_metal_shutter",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://polyhaven.com/license",
+      "resolution": "2K",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_diff_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_nor_dx_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_rough_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_ao_2k.png"
+      },
+      "normal_convention": "DirectX",
+      "normal_flip_green": false,
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "metallic_constant": 0.0,
+      "shading_model": "DefaultLit",
+      "blend_mode": "Opaque",
+      "status": "downloaded_verified"
+    },
+    {
+      "material_name": "M_Mall_CeilingTiles",
+      "asset_id": "texturecan_tiles_0013",
+      "provider": "TextureCan",
+      "source_url": "https://www.texturecan.com/details/131/",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://www.texturecan.com/terms/",
+      "resolution": "2K",
+      "status": "downloaded_verified",
+      "textures": {
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_ao_2k.jpg",
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_color_2k.jpg",
+        "height": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_height_2k.png",
+        "metallic": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_metallic_2k.jpg",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_normal_directx_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_roughness_2k.jpg"
+      },
+      "normal_convention": "DirectX",
+      "normal_convention_source": "https://www.texturecan.com/post/3/DirectX-vs-OpenGL-Normal-Map/",
+      "normal_flip_green": false,
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "metallic_constant": 0.0,
+      "shading_model": "DefaultLit",
+      "blend_mode": "Opaque"
+    }
+  ],
+  "files": [
+    {
+      "asset_id": "white_plaster_02",
+      "role": "base_color",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_plaster_02/white_plaster_02_diff_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_diff_2k.png",
+      "size_bytes": 26712959,
+      "sha256": "d2f27ead0485d9b1c5b4825075abfa725ab1ef79e1973f6a305b5db6efdd77cb",
+      "source_md5": "29845f6a688650189dc29a66c9896a65",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "white_plaster_02",
+      "role": "normal",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_plaster_02/white_plaster_02_nor_dx_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_nor_dx_2k.png",
+      "size_bytes": 24664322,
+      "sha256": "3c5bef5be1d0871848bb1d59aa770933cd626dc514b5f833f79fb9b1e71ead4b",
+      "source_md5": "3b0839a30985ec8ba67130ff52358283",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "white_plaster_02",
+      "role": "roughness",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_plaster_02/white_plaster_02_rough_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_rough_2k.png",
+      "size_bytes": 9074539,
+      "sha256": "a7a4765eee08d3260c03f77e0ed596200298a9a2d1dcd8c70f4da62977e55129",
+      "source_md5": "3aa6655aa83e1d6ccd92eadc4e213b9a",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "white_plaster_02",
+      "role": "ambient_occlusion",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_plaster_02/white_plaster_02_ao_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_ao_2k.png",
+      "size_bytes": 9479790,
+      "sha256": "fe9bbe992071cb0212fabdceca3d91380918057bbacae3feea15450de920fa30",
+      "source_md5": "16a194cff4c6af334d8af77728c1905e",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "terrazzo_tiles",
+      "role": "base_color",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/terrazzo_tiles/terrazzo_tiles_diff_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_diff_2k.png",
+      "size_bytes": 27115185,
+      "sha256": "80cb813199412195523caf0e9e41bf96cf7e8cdf9a9ae91307bb8633c823b9e3",
+      "source_md5": "a29bc9995b08b35f9db004ccac5d16a9",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "terrazzo_tiles",
+      "role": "normal",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/terrazzo_tiles/terrazzo_tiles_nor_dx_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_nor_dx_2k.png",
+      "size_bytes": 16550315,
+      "sha256": "e25e45cc072d62544b4c0f0f1627e8d03f9757f99eed86a9746f4998a7229f66",
+      "source_md5": "1249aa404e7bee5910ee6dc98db7a4b0",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "terrazzo_tiles",
+      "role": "roughness",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/terrazzo_tiles/terrazzo_tiles_rough_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_rough_2k.png",
+      "size_bytes": 6962525,
+      "sha256": "3928d7e6d0c0ce98ac53d80192830dedc04a80f4d9a30eb804d75d23e38ffda4",
+      "source_md5": "47928be054a9f047db418115d28188d1",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "terrazzo_tiles",
+      "role": "ambient_occlusion",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/terrazzo_tiles/terrazzo_tiles_ao_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_ao_2k.png",
+      "size_bytes": 6660977,
+      "sha256": "7cdc12961ba5a0f1239405bb23cd13edd19258ea5aed113d6140039f3fe49ef0",
+      "source_md5": "da130c2f633ca427ef733fc16c8cae71",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "painted_metal_shutter",
+      "role": "base_color",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/painted_metal_shutter/painted_metal_shutter_diff_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_diff_2k.png",
+      "size_bytes": 21073713,
+      "sha256": "6992a0aa5ffb20d9c6e7ac7b13a0bcc69a07d7df732f6004259759f9f3998fec",
+      "source_md5": "27f8f3bc307db25dc197ab8b6daeae66",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "painted_metal_shutter",
+      "role": "normal",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/painted_metal_shutter/painted_metal_shutter_nor_dx_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_nor_dx_2k.png",
+      "size_bytes": 21486263,
+      "sha256": "aadc76fb6f7d838dca45e8a7164d7b32cc3206ef2ff05aa76e9523f9d1e2148a",
+      "source_md5": "aedb7c1eb40bc78fd1728bc5c323032f",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "painted_metal_shutter",
+      "role": "roughness",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/painted_metal_shutter/painted_metal_shutter_rough_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_rough_2k.png",
+      "size_bytes": 7146896,
+      "sha256": "28aa9d8faf0ea621e2a1c30fbcfc03ef54bcd3d44323c985c43a0903a76d7427",
+      "source_md5": "406203213ebe537fc4b6f10ec59f2f2d",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "painted_metal_shutter",
+      "role": "ambient_occlusion",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/painted_metal_shutter/painted_metal_shutter_ao_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_ao_2k.png",
+      "size_bytes": 4389301,
+      "sha256": "93ba0ef6c1a58325ce475fc4f794c11087ac33987686f6d992f45f249ffd083f",
+      "source_md5": "9ed1673333608da63ae293ca3a94c3be",
+      "status": "downloaded_verified"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "source_archive",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_2k.zip",
+      "size_bytes": 35849546,
+      "sha256": "2e7e4db9d12b9a3cdbbd412285fa53baba590d3cde2dbf7d967bb98fad8f3ce9",
+      "status": "downloaded_verified_zip"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "tiles_0013_ao_2k.jpg",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_ao_2k.jpg",
+      "size_bytes": 1046147,
+      "sha256": "67abe453a8f391bccdde5e3b2b56daa75f6ac99f625dbf1643bf9faec27b995e",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "__MACOSX/._tiles_0013_ao_2k.jpg",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\__MACOSX\\._tiles_0013_ao_2k.jpg",
+      "size_bytes": 233,
+      "sha256": "80f0b3dd7fc829ddbe9d3b95d02fa3534cc065b1c853974436877c09a6197681",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "tiles_0013_color_2k.jpg",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_color_2k.jpg",
+      "size_bytes": 399196,
+      "sha256": "f48ae1ce98e4a5c2e7a4ccfc9cb77cb1cbb323d39a76b74f049b5b50af86052b",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "__MACOSX/._tiles_0013_color_2k.jpg",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\__MACOSX\\._tiles_0013_color_2k.jpg",
+      "size_bytes": 233,
+      "sha256": "13a23791dfbb9c46ba1ba7be5a8ad112d1a2ca035ad34dfa9c0b851189cf152d",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "tiles_0013_height_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_height_2k.png",
+      "size_bytes": 181795,
+      "sha256": "fa6cf78dceedf3e42a266e92d97d8c81c2790f403996e3ad94c47b99a6cb8a9b",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "__MACOSX/._tiles_0013_height_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\__MACOSX\\._tiles_0013_height_2k.png",
+      "size_bytes": 233,
+      "sha256": "1c85469241de26b938b678bb21592979e7f53a28d70af5e70f843dade6b92a87",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "tiles_0013_metallic_2k.jpg",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_metallic_2k.jpg",
+      "size_bytes": 281180,
+      "sha256": "87e410c482ecc00abe077579fce344c614f4428fb918c10d2a6d61ea8cd4d6be",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "__MACOSX/._tiles_0013_metallic_2k.jpg",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\__MACOSX\\._tiles_0013_metallic_2k.jpg",
+      "size_bytes": 233,
+      "sha256": "33307cd9685a334c23bfa92e022086b57beae8ad13f0587600d9aae3551474fe",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "tiles_0013_normal_directx_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_normal_directx_2k.png",
+      "size_bytes": 17009474,
+      "sha256": "82ab1f947f041d653f856559aa327d71253f5e2d5486d62cfeac4990c617432d",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "__MACOSX/._tiles_0013_normal_directx_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\__MACOSX\\._tiles_0013_normal_directx_2k.png",
+      "size_bytes": 233,
+      "sha256": "b6a68b62594abb9b970bcd177c1e6ebb1a73415c883e96078050d5554094e61e",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "tiles_0013_normal_opengl_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_normal_opengl_2k.png",
+      "size_bytes": 17017531,
+      "sha256": "3ededa2dd094aa1f466b2ac888dbba9395752a2903563ea685a7c02abe873f9a",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "__MACOSX/._tiles_0013_normal_opengl_2k.png",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\__MACOSX\\._tiles_0013_normal_opengl_2k.png",
+      "size_bytes": 233,
+      "sha256": "5a59c4ab4395460d9d9803e48892ae1fd263b02dd0023b0038dcd81b4c7acaca",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "tiles_0013_roughness_2k.jpg",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_roughness_2k.jpg",
+      "size_bytes": 308348,
+      "sha256": "4d6d964024973a45ad9c5db1077c5b479897be76dfd95cf96841ce88ca864192",
+      "status": "extracted_verified_zip_crc"
+    },
+    {
+      "asset_id": "texturecan_tiles_0013",
+      "role": "archive_member",
+      "source_url": "https://www.texturecan.com/downloads/tiles_0013/tiles_0013_2k_y3eHkx.zip",
+      "archive_member": "__MACOSX/._tiles_0013_roughness_2k.jpg",
+      "local_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\__MACOSX\\._tiles_0013_roughness_2k.jpg",
+      "size_bytes": 233,
+      "sha256": "843f7dbc87fe912f4ffc97381e4d8b43670bf7bf9a950b30e993e661b7ecc9c9",
+      "status": "extracted_verified_zip_crc"
+    }
+  ],
+  "notes": [
+    "Poly Haven API queried with identifying Codex project User-Agent; original metadata retained.",
+    "CC0 commercial game use; credits retained for provenance although not required.",
+    "TextureCan archive CRC checked by zipfile extraction; use the explicitly named DirectX normal. Ignore the alternate OpenGL normal and __MACOSX metadata.",
+    "Painted metal shutter source is coated paint; metallic constant0.0 is appropriate until a separate exposed-metal mask is authored."
+  ]
+}

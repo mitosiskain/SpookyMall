@@ -1,0 +1,62 @@
+[
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionComponentMask_0\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"R\",\r\n\t\t\t\t\"G\",\r\n\t\t\t\t\"B\",\r\n\t\t\t\t\"A\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_leaves.M_Mall_pachira_aquatica_01_leaves\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 2,\r\n\t\"connections_attempted\": 2,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionComponentMask_0\",\r\n\t\t\t\"to_input\": \"Input\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionComponentMask_0\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"OpacityMask\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_MallFloorMarble.M_MallFloorMarble\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_1\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Roughness\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_MallFloorMarble.M_MallFloorMarble\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_2\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Metallic\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Metallic\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

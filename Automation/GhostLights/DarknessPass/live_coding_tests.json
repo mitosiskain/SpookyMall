@@ -1,0 +1,49 @@
+{
+  "execution": "Native regression suite after Live Coding stronger flicker implementation and exact-floor tests",
+  "results": [
+    {
+      "test": "Mall.Ghost.AutomaticHuntCycleNetwork",
+      "result": "Success",
+      "log_line": "[2026.10.18-07.23.54:517][576]LogAutomationController: Display: Test Completed. Result={Success} Name={AutomaticHuntCycleNetwork} Path={Mall.Ghost.AutomaticHuntCycleNetwork}"
+    },
+    {
+      "test": "Mall.Ghost.BookInteraction",
+      "result": "Success",
+      "log_line": "[2026.10.18-07.23.55:853][854]LogAutomationController: Display: Test Completed. Result={Success} Name={BookInteraction} Path={Mall.Ghost.BookInteraction}"
+    },
+    {
+      "test": "Mall.Ghost.PhysicalSoundNetwork",
+      "result": "Success",
+      "log_line": "[2026.10.18-07.23.57:147][ 18]LogAutomationController: Display: Test Completed. Result={Success} Name={PhysicalSoundNetwork} Path={Mall.Ghost.PhysicalSoundNetwork}"
+    },
+    {
+      "test": "Mall.Ghost.SpatialAudio",
+      "result": "Success",
+      "log_line": "[2026.10.18-07.23.57:187][ 20]LogAutomationController: Display: Test Completed. Result={Success} Name={SpatialAudio} Path={Mall.Ghost.SpatialAudio}"
+    },
+    {
+      "test": "Mall.Ghost.SpiritBoxNetwork",
+      "result": "Success",
+      "log_line": "[2026.10.18-07.23.59:765][ 31]LogAutomationController: Display: Test Completed. Result={Success} Name={SpiritBoxNetwork} Path={Mall.Ghost.SpiritBoxNetwork}"
+    },
+    {
+      "test": "Mall.Ghost.StateAndDisturbance",
+      "result": "Success",
+      "log_line": "[2026.10.18-07.24.01:403][591]LogAutomationController: Display: Test Completed. Result={Success} Name={StateAndDisturbance} Path={Mall.Ghost.StateAndDisturbance}"
+    },
+    {
+      "test": "Mall.Ghost.StoreLightNetwork",
+      "result": "Success",
+      "log_line": "[2026.10.18-07.24.02:774][722]LogAutomationController: Display: Test Completed. Result={Success} Name={StoreLightNetwork} Path={Mall.Ghost.StoreLightNetwork}"
+    },
+    {
+      "test": "Mall.Voice.NetworkTransport",
+      "result": "Success",
+      "log_line": "[2026.10.18-07.24.03:836][872]LogAutomationController: Display: Test Completed. Result={Success} Name={NetworkTransport} Path={Mall.Voice.NetworkTransport}"
+    }
+  ],
+  "succeeded": 8,
+  "failed": 0,
+  "errors": [],
+  "warnings": []
+}

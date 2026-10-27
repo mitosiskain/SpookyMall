@@ -1,0 +1,82 @@
+[
+  {
+    "file": "WorkLamp_body_normal_DX.png",
+    "source_embedded_image": "work-lamp_body_normal",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "usage": "linear, DirectX normal, green inverted from glTF OpenGL normal",
+    "sha256": "365308e0d6fda19725ed0c049fbbfaacbc241cc4ce07663e296c9416db2e69f6"
+  },
+  {
+    "file": "WorkLamp_body_basecolor.png",
+    "source_embedded_image": "work-lamp_body_basecolor",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "usage": "sRGB base color",
+    "sha256": "2a8bea648c1b566c6ed58299e5cd0177a2555a12935edd477504e48cc927c174"
+  },
+  {
+    "file": "WorkLamp_body_roughness.png",
+    "source_embedded_image": "work-lamp_body_metallic-work-lamp_body_roughness",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "usage": "linear, glTF packed G roughness",
+    "sha256": "ed5d80254aac82fc0e7eac5dd7a526ac8312f5705f9087c8d06c1cdbe9d8c75a"
+  },
+  {
+    "file": "WorkLamp_body_metallic.png",
+    "source_embedded_image": "work-lamp_body_metallic-work-lamp_body_roughness",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "usage": "linear, glTF packed B metallic",
+    "sha256": "560967b585d847fb6a4c11fb422c725e39ffef85fe65f833e5e697c6b16ce12c"
+  },
+  {
+    "file": "WorkLamp_head_normal_DX.png",
+    "source_embedded_image": "work-lamp_head_normal",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "usage": "linear, DirectX normal, green inverted from glTF OpenGL normal",
+    "sha256": "3f4d9e8cbe839306ace15d9c9e5251e7a2f855aca852d7e53dea521b5cd4a1f9"
+  },
+  {
+    "file": "WorkLamp_head_basecolor.png",
+    "source_embedded_image": "work-lamp_head_basecolor",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "usage": "sRGB base color",
+    "sha256": "7acacc31ce430c357acbe94651b0312ca4906b382f6436ba5103000fe92c0d64"
+  },
+  {
+    "file": "WorkLamp_head_roughness.png",
+    "source_embedded_image": "work-lamp_head_metallic-work-lamp_head_roughness",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "usage": "linear, glTF packed G roughness",
+    "sha256": "38a306b01ea4a9322e621a3515d7ee59b77c38f4fdd87c07e496c0d586a3017b"
+  },
+  {
+    "file": "WorkLamp_head_metallic.png",
+    "source_embedded_image": "work-lamp_head_metallic-work-lamp_head_roughness",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "usage": "linear, glTF packed B metallic",
+    "sha256": "48fc9f29e72436d629cea5d81db5c028c5c73c37ac1525bff02914a6bac29bfa"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark.M_Mall_pachira_aquatica_01_bark\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/pachira_aquatica_01_bark_diff_2k.pachira_aquatica_01_bark_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.69999998807907104\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/pachira_aquatica_01_bark_nor_dx_2k.pachira_aquatica_01_bark_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_leaves.M_Mall_pachira_aquatica_01_leaves\",\r\n\t\"blend_mode\": \"Masked\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"two_sided\": true,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"changed\": [\r\n\t\t\"blend_mode\",\r\n\t\t\"shading_model\",\r\n\t\t\"two_sided\"\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "compile_blueprint",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "file_path: /Game/Environment/Mall/Blueprints/BP_MallEscalator_450\ncompiled: true\nsuccess: true\nstatus: UpToDate\nerrors: []\nwarnings: []\nerror_count: 0\nwarning_count: 0\nsaved: false\nsave_skipped_not_dirty: true"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "compile_blueprint",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "file_path: /Game/Environment/Mall/Blueprints/BP_MallEscalator_450_Down\ncompiled: true\nsuccess: true\nstatus: UpToDate\nerrors: []\nwarnings: []\nerror_count: 0\nwarning_count: 0\nsaved: false\nsave_skipped_not_dirty: true"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

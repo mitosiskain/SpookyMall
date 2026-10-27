@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "fetch_python_best_practices",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "import_AssetCreation_understanding",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete."
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "import_PropertyModification_understanding",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete."
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_available_actors_in_level",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Level Name: Lvl_ThirdPerson\nPath: /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson\n\n\nActor Hierarchy:\n- Label=\"WorldSettings\" Class=WorldSettings\n- Label=\"Brush0\" Class=Brush\n  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"WorldDataLayers\" Class=WorldDataLayers\n- Label=\"LandscapeStreamingProxy_0_3_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=-25200.00, Y=12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"LandscapeStreamingProxy_1_3_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=-12600.00, Y=12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"LandscapeStreamingProxy_1_2_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=-12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"Landscape\" Class=Landscape\n  Spatial info: Location=(X=-25200.00, Y=-25200.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"hello\" Class=LevelSequenceActor\n  Spatial info: Location=(X=-550.00, Y=910.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"LandscapeStreamingProxy_1_0_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=-12600.00, Y=-25200.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"SM_Ramp10\" Class=StaticMeshActor\n  Spatial info: Location=(X=200.00, Y=-500.00) Rotation=(Y=-180.00) Scale=(X=4.00, Y=4.00, Z=2.00)\n- Label=\"SM_Ramp9\" Class=StaticMeshActor\n  Spatial info: Location=(X=-500.00, Y=-200.00) Rotation=(Y=90.00) Scale=(X=4.00, Y=4.00, Z=2.00)\n- Label=\"SM_Cylinder\" Class=StaticMeshActor\n  Spatial info: Location=(X=-2136.00, Y=-1530.00, Z=668.00) Rotation=(0) Scale=(X=19.60, Y=29.40, Z=0.10)\n- Label=\"SM_QuarterCylinder12\" Class=StaticMeshActor\n  Spatial info: Location=(X=200.00, Y=-200.00, Z=-100.00) Rotation=(Y=-90.00) Scale=(X=6.50, Y=6.50, Z=2.00)\n- Label=\"SM_Ramp11\" Class=StaticMeshActor\n  Spatial info: Location=(X=500.00, Y=200.00) Rotation=(Y=-90.00) Scale=(X=4.00, Y=4.00, Z=2.00)\n- Label=\"SM_wlombbzdw_0\" Class=StaticMeshActor\n  Spatial info: Location=(X=978.00, Y=-153.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"SM_SkySphere\" Class=StaticMeshActor\n  Spatial info: Location=(0) Rotation=(0) Scale=(X=400.00, Y=400.00, Z=400.00)\n- Label=\"SM_Ramp8\" Class=StaticMeshActor\n  Spatial info: Location=(X=-1500.00, Y=1200.00) Rotation=(Y=-180.00) Scale=(X=3.00, Y=4.00, Z=2.00)\n- Label=\"LandscapeStreamingProxy_2_3_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(Y=12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"SM_QuarterCylinder4\" Class=StaticMeshActor\n  Spatial info: Location=(X=-1500.00, Y=1500.00) Rotation=(Y=-90.00) Scale=(X=6.00, Y=6.00, Z=2.00)\n- Label=\"VolumetricCloud\" Class=VolumetricCloud\n  Spatial info: Location=(Z=820.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"SM_QuarterCylinder5\" Class=StaticMeshActor\n  Spatial info: Location=(X=200.00, Y=210.00) Rotation=(0) Scale=(X=6.00, Y=6.00, Z=2.00)\n- Label=\"SM_Cube14\" Class=StaticMeshActor\n  Spatial info: Location=(X=200.00, Y=210.00) Rotation=(Y=90.00) Scale=(X=3.00, Y=4.00, Z=2.00)\n- Label=\"BP_HealthPickup\" Class=BP_HealthPickup\n  Spatial info: Location=(X=323.00, Y=-30.00, Z=309.00) Rotation=(0) Scale=(X=0.40, Y=0.40, Z=0.40)\n- Label=\"LandscapeStreamingProxy_3_2_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"SM_Cube12\" Class=StaticMeshActor\n  Spatial info: Location=(X=-1500.00, Y=1200.00) Rotation=(Y=90.00) Scale=(X=6.00, Y=3.00, Z=2.00)\n- Label=\"SM_QuarterCylinder10\" Class=StaticMeshActor\n  Spatial info: Location=(X=-200.00, Y=210.00, Z=-100.00) Rotation=(Y=90.00) Scale=(X=6.50, Y=6.50, Z=2.00)\n- Label=\"stairs\" Class=stairs\n  Spatial info: Location=(X=1219.00, Y=-331.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"BP_NewMetaHumanCharacter\" Class=BP_NewMetaHumanCharacter\n  Spatial info: Location=(X=-650.00, Y=930.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"LandscapeStreamingProxy_2_1_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(Y=-12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"SM_Ramp7\" Class=StaticMeshActor\n  Spatial info: Location=(X=-1200.00, Y=1800.00) Rotation=(Y=-90.00) Scale=(X=3.00, Y=4.00, Z=2.00)\n- Label=\"SM_QuarterCylinder7\" Class=StaticMeshActor\n  Spatial info: Location=(X=-200.00, Y=210.00) Rotation=(Y=90.00) Scale=(X=6.00, Y=6.00, Z=2.00)\n- Label=\"LandscapeStreamingProxy_2_2_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(0) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"SM_Ramp12\" Class=StaticMeshActor\n  Spatial info: Location=(X=-2119.00, Y=-65.00) Rotation=(0) Scale=(X=4.00, Y=3.90, Z=2.00)\n- Label=\"DirectionalLight\" Class=DirectionalLight\n  Spatial info: Location=(Z=920.00) Rotation=(P=-60.78, Y=-14.99, R=25.56) Scale=(X=2.50, Y=2.50, Z=2.50)\n- Label=\"SM_QuarterCylinder11\" Class=StaticMeshActor\n  Spatial info: Location=(X=-200.00, Y=-200.00, Z=-100.00) Rotation=(Y=-180.00) Scale=(X=6.50, Y=6.50, Z=2.00)\n- Label=\"LandscapeStreamingProxy_0_2_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=-25200.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"BP_TestEvidence\" Class=BP_TestEvidence\n  Spatial info: Location=(X=783.00, Y=1256.00, Z=211.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"SM_QuarterCylinder6\" Class=StaticMeshActor\n  Spatial info: Location=(X=200.00, Y=-200.00) Rotation=(Y=-90.00) Scale=(X=6.00, Y=6.00, Z=2.00)\n- Label=\"LandscapeStreamingProxy_3_0_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=12600.00, Y=-25200.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"WorldPartitionMiniMap\" Class=WorldPartitionMiniMap\n- Label=\"SM_QuarterCylinder9\" Class=StaticMeshActor\n  Spatial info: Location=(X=200.00, Y=210.00, Z=-100.00) Rotation=(0) Scale=(X=6.50, Y=6.50, Z=2.00)\n- Label=\"SM_Cube16\" Class=StaticMeshActor\n  Spatial info: Location=(X=-500.00, Y=-200.00) Rotation=(0) Scale=(X=3.00, Y=4.10, Z=2.00)\n- Label=\"SM_Cube11\" Class=StaticMeshActor\n  Spatial info: Location=(X=-1200.00, Y=1500.00) Rotation=(Y=90.00) Scale=(X=3.00, Y=3.00, Z=2.00)\n- Label=\"LandscapeStreamingProxy_0_1_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=-25200.00, Y=-12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"SM_Cube13\" Class=StaticMeshActor\n  Spatial info: Location=(X=-200.00, Y=-200.00) Rotation=(0) Scale=(X=7.00, Y=4.10, Z=2.00)\n- Label=\"BP_FlashlightPickup\" Class=BP_FlashlightPickup\n  Spatial info: Location=(X=151.00, Y=368.00, Z=229.00) Rotation=(0) Scale=(X=0.01, Y=0.01, Z=0.01)\n- Label=\"SM_QuarterCylinder8\" Class=StaticMeshActor\n  Spatial info: Location=(X=-200.00, Y=-200.00) Rotation=(Y=-180.00) Scale=(X=6.00, Y=6.00, Z=2.00)\n- Label=\"SkyAtmosphere\" Class=SkyAtmosphere\n  Spatial info: Location=(Z=1020.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"PlayerStart\" Class=PlayerStart\n  Spatial info: Location=(Z=302.01) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"LandscapeStreamingProxy_1_1_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=-12600.00, Y=-12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"LandscapeStreamingProxy_0_0_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=-25200.00, Y=-25200.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"LandscapeStreamingProxy_2_0_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(Y=-25200.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"SkyLight\" Class=SkyLight\n  Spatial info: Location=(Z=690.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"ExponentialHeightFog\" Class=ExponentialHeightFog\n  Spatial info: Location=(X=-5600.00, Y=-50.00, Z=-6850.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"stairs2\" Class=stairs\n  Spatial info: Location=(X=1409.00, Y=-232.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"SM_Cube15\" Class=StaticMeshActor\n  Spatial info: Location=(X=-200.00, Y=-200.00) Rotation=(Y=-90.00) Scale=(X=3.00, Y=4.00, Z=2.00)\n- Label=\"LandscapeStreamingProxy_3_1_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=12600.00, Y=-12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"LandscapeStreamingProxy_3_3_0\" Class=LandscapeStreamingProxy\n  Spatial info: Location=(X=12600.00, Y=12600.00) Rotation=(0) Scale=(X=100.00, Y=100.00, Z=100.00)\n- Label=\"PostProcessVolume\" Class=PostProcessVolume\n  Spatial info: Location=(X=100.00, Y=100.00, Z=500.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

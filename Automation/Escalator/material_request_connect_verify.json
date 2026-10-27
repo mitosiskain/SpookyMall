@@ -1,0 +1,300 @@
+{
+  "calls": [
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "connect_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal",
+        "connections": [
+          {
+            "from_expression": "MaterialExpressionScalarParameter_0",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Metallic"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_1",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Roughness"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_2",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Specular"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal",
+        "require_outputs": [
+          "BaseColor",
+          "Metallic",
+          "Roughness",
+          "Specular"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "connect_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark",
+        "connections": [
+          {
+            "from_expression": "MaterialExpressionScalarParameter_0",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Metallic"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_1",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Roughness"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_2",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Specular"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark",
+        "require_outputs": [
+          "BaseColor",
+          "Metallic",
+          "Roughness",
+          "Specular"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "connect_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow",
+        "connections": [
+          {
+            "from_expression": "MaterialExpressionScalarParameter_0",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Metallic"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_1",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Roughness"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_2",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Specular"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow",
+        "require_outputs": [
+          "BaseColor",
+          "Metallic",
+          "Roughness",
+          "Specular"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "connect_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark",
+        "connections": [
+          {
+            "from_expression": "MaterialExpressionScalarParameter_0",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Metallic"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_1",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Roughness"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_2",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Specular"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark",
+        "require_outputs": [
+          "BaseColor",
+          "Metallic",
+          "Roughness",
+          "Specular"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "connect_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal",
+        "connections": [
+          {
+            "from_expression": "MaterialExpressionScalarParameter_0",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Metallic"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_1",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Roughness"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_2",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Specular"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal",
+        "require_outputs": [
+          "BaseColor",
+          "Metallic",
+          "Roughness",
+          "Specular"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "connect_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass",
+        "connections": [
+          {
+            "from_expression": "MaterialExpressionScalarParameter_0",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Metallic"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_1",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Roughness"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_2",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Specular"
+          },
+          {
+            "from_expression": "MaterialExpressionScalarParameter_3",
+            "from_output": 0,
+            "to_expression": "Material",
+            "to_input": "Opacity"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass",
+        "require_outputs": [
+          "BaseColor",
+          "Metallic",
+          "Roughness",
+          "Specular",
+          "Opacity"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_info",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass"
+      }
+    }
+  ]
+}

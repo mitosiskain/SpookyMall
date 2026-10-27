@@ -1,0 +1,6 @@
+Poly Haven mall asset intake
+All source models and textures: CC0 1.0 Universal
+License: https://polyhaven.com/license
+Legal dedication: https://creativecommons.org/publicdomain/zero/1.0/
+API queried with identifying User-Agent. Each original source URL and verified SHA256 is in download_manifest.json.
+No assets are redistributed separately by this intake script.

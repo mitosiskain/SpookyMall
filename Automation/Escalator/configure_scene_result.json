@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"Python execution result:\\n{\\n  \\\"bSuccess\\\": true,\\n  \\\"Message\\\": \\\"\\\",\\n  \\\"ResultData\\\": \\\"LOG OUTPUT:\\\\nESCALATOR_SCENE_READY {\\\\\\\"actors\\\\\\\": [\\\\\\\"MallEscalator_Up\\\\\\\", \\\\\\\"MallEscalator_Down\\\\\\\", \\\\\\\"Escalator_LowerLanding\\\\\\\", \\\\\\\"Escalator_UpperLanding\\\\\\\", \\\\\\\"Escalator_UpperBackGuard\\\\\\\", \\\\\\\"Escalator_UpperLeftGuard\\\\\\\", \\\\\\\"Escalator_UpperRightGuard\\\\\\\", \\\\\\\"Escalator_SupportA\\\\\\\", \\\\\\\"Escalator_SupportB\\\\\\\", \\\\\\\"Escalator_SupportC\\\\\\\", \\\\\\\"Escalator_SupportD\\\\\\\"], \\\\\\\"up_tread_count\\\\\\\": 25, \\\\\\\"down_reversed\\\\\\\": true, \\\\\\\"origin\\\\\\\": [1100, 800, 6], \\\\\\\"upper_floor_height\\\\\\\": 366}\\\\r\\\\n\\\",\\n  \\\"TransactionId\\\": \\\"A3E398984D1131D2AF5C82ADB6ADB592\\\"\\n}\\nScript ID: xYpjq8xOphngu2Xs9pn_Y\"\n  }\n]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

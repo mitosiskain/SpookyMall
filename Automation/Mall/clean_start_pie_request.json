@@ -1,0 +1,1 @@
+{"calls":[{"tool":"start_pie","arguments":{"force":true,"num_clients":1,"net_mode":"standalone","window_width":1280,"window_height":720}},{"tool":"wait_pie_seconds","arguments":{"seconds":1}},{"tool":"is_pie_active","arguments":{}},{"tool":"survey_pie_scene","arguments":{"include":["census","player_state","game"],"class_filter":"BP_","max_actors_per_class":1}}]}

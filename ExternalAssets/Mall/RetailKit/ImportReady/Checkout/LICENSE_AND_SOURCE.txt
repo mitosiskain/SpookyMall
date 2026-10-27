@@ -1,0 +1,10 @@
+Checkout display props, already-downloaded Retail Store Fixtures and Mall sources
+Pack: https://3dassets.dev/packs/retail-store-fixtures-and-mall
+Both models: CC0 1.0 Universal; https://creativecommons.org/publicdomain/zero/1.0/
+POS: https://3dassets.dev/assets/retail-store-fixtures-and-mall-pos-terminal-8d0454bd
+Card terminal: https://3dassets.dev/assets/retail-store-fixtures-and-mall-card-terminal-stand-a5c2c2d7
+Original GLB/source URLs and hashes retained in import_plan.json and ../../downloads.json.
+AI-authored mesh sources. Prepared ground-centered centimeter static meshes; source sections/materials retained.
+No UV channels existed in these textureless procedural sources; no texture or UV authoring was added.
+No collision, animation, checkout functionality, download or Unreal import was performed.
+Existing prepared28 FBXs and both original GLBs passed unchanged-hash checks.

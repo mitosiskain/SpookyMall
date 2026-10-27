@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "stop_pie",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "success: true\ndata:\n  status: pie_stop_requested\npie_time_seconds: 213.00839794799685"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "is_pie_active",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "success: true\ndata:\n  is_active: false\n  pie_capacity:\n    hard_max_instances: 4\n    recommended_max_instances: 3\n    basis: live_budget\n    measured_while_pie_active: false\n    gpu:\n      adapter_name: NVIDIA GeForce RTX 3060\n      is_integrated: false\n      dedicated_video_memory_mb: 12115\n      budget_mb: 11347\n      current_usage_mb: 4939\n      available_mb: 6407\n      source: dxgi_local\n    system_memory:\n      total_physical_mb: 49013\n      available_physical_mb: 17808\n    tuning:\n      vram_per_instance_mb: 1536\n      vram_reserve_mb: 512\n      max_parallel_instances_override: 0\n  recommended_max_pie_instances: 3"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

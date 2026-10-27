@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "get_headless_status",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "status: editor_connected"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

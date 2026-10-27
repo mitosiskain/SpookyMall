@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "get_screenshot_of_objects_for_verification",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"data\": {\"actors_found\": 3, \"actors_names\": [\"MallEscalator_Up\", \"MallEscalator_Down\", \"Escalator_UpperLanding\"], \"camera\": {\"x\": 613.7014972803688, \"y\": -163.0685069920919, \"z\": 1144.4042157741785, \"pitch\": -29.999999999999996, \"yaw\": 44.99999999999999}, \"center\": {\"x\": 1701.770004272461, \"y\": 925, \"z\": 256}, \"radius\": 1025.8408262528408, \"distance\": 1776.8084315483572}, \"filepath\": \"C:\\\\unreal\\\\UE_5.8\\\\Engine\\\\Plugins\\\\Marketplace\\\\Saved/Screenshots/AuraScreenshots/viewport_20261010_105645_575.jpg\", \"width\": 948, \"height\": 553}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

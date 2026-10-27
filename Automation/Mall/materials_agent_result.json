@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "material_agent",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"**Partial completion; full request not fulfilled.** Reached the 15-operation limit.\\n\\n**Created/saved name \\u2192 path**\\n- `M_MallFloorMarble` \\u2192 `/Game/Generated_Materials/M_MallFloorMarble`\\n- `M_Mall_pachira_aquatica_01_leaves` \\u2192 `/Game/Generated_Materials/M_Mall_pachira_aquatica_01_leaves`\\n\\n**Marble**\\n- Graph verification passed; no orphan nodes or null samplers.\\n- Uses supplied Stone basecolor and normal.\\n- Shared world-XY texture mapping: `SlabSizeCm=200`.\\n- **Incomplete:** source roughness G was not connected; Roughness remains unwired. Agent constraints require scalar roughness/metallic instead of those texture channels.\\n\\n**Pachira foliage \\u2014 not ready**\\n- Separate `LeafAlphaMask` sampler **R \\u2192 OpacityMask**, not Opacity.\\n- Supplied DX normal assigned; masked and two-sided.\\n- Verification failed: orphan `MaterialExpressionComponentMask_0` from the superseded template mask.\\n- `TwoSidedFoliage` was requested through `set_material_properties`, but the response still reports `DefaultLit`; shading requires confirmation/repair.\\n- AO recipe not implemented.\\n\\n**Intended assignments, not applied**\\n- `SM_PachiraA/B/C/D`, slot 1 (`pachira_aquatica_01_leaves`) \\u2192 new foliage material **after repair**.\\n- Future floor slabs and retail `floor` slots \\u2192 new marble **after roughness completion**.\\n- Retail `metal/dark/glass` \\u2192 existing `/Game/Environment/Escalator/Meshes/{metal,dark,glass}`. Asset metadata confirms existing glass is Translucent; graphs were not audited.\\n\\nRemaining **13 recipes**, including potted foliage and both UV1-cover/UV0-page-mask books, were not created. Complete these in additional bounded batches.\\n\\nOriginal Stone MIC, all existing user materials, textures, meshes, actors, levels, and players were left unchanged. No deletions or assignments performed.\"\n  }\n]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

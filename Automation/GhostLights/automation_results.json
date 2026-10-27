@@ -1,0 +1,57 @@
+{
+  "execution": "In-editor native automation after Live Coding test-fixture corrections",
+  "build": "Saved/Logs/GhostLightsBuild.log",
+  "live_coding": "Compiled and patched test-fixture corrections successfully via Aura",
+  "log": "Saved/Logs/MyProject2.log",
+  "results": [
+    {
+      "test": "Mall.Ghost.AutomaticHuntCycleNetwork",
+      "result": "Success",
+      "log_line": "[2026.10.18-04.34.57:544][150]LogAutomationController: Display: Test Completed. Result={Success} Name={AutomaticHuntCycleNetwork} Path={Mall.Ghost.AutomaticHuntCycleNetwork}"
+    },
+    {
+      "test": "Mall.Ghost.BookInteraction",
+      "result": "Success",
+      "log_line": "[2026.10.18-04.34.59:069][428]LogAutomationController: Display: Test Completed. Result={Success} Name={BookInteraction} Path={Mall.Ghost.BookInteraction}"
+    },
+    {
+      "test": "Mall.Ghost.PhysicalSoundNetwork",
+      "result": "Success",
+      "log_line": "[2026.10.18-04.35.00:820][592]LogAutomationController: Display: Test Completed. Result={Success} Name={PhysicalSoundNetwork} Path={Mall.Ghost.PhysicalSoundNetwork}"
+    },
+    {
+      "test": "Mall.Ghost.SpatialAudio",
+      "result": "Success",
+      "log_line": "[2026.10.18-04.35.00:869][594]LogAutomationController: Display: Test Completed. Result={Success} Name={SpatialAudio} Path={Mall.Ghost.SpatialAudio}"
+    },
+    {
+      "test": "Mall.Ghost.SpiritBoxNetwork",
+      "result": "Success",
+      "log_line": "[2026.10.18-04.35.04:241][604]LogAutomationController: Display: Test Completed. Result={Success} Name={SpiritBoxNetwork} Path={Mall.Ghost.SpiritBoxNetwork}"
+    },
+    {
+      "test": "Mall.Ghost.StateAndDisturbance",
+      "result": "Success",
+      "log_line": "[2026.10.18-04.35.05:839][164]LogAutomationController: Display: Test Completed. Result={Success} Name={StateAndDisturbance} Path={Mall.Ghost.StateAndDisturbance}"
+    },
+    {
+      "test": "Mall.Ghost.StoreLightNetwork",
+      "result": "Success",
+      "log_line": "[2026.10.18-04.35.06:977][295]LogAutomationController: Display: Test Completed. Result={Success} Name={StoreLightNetwork} Path={Mall.Ghost.StoreLightNetwork}"
+    },
+    {
+      "test": "Mall.Voice.NetworkTransport",
+      "result": "Success",
+      "log_line": "[2026.10.18-04.35.08:312][445]LogAutomationController: Display: Test Completed. Result={Success} Name={NetworkTransport} Path={Mall.Voice.NetworkTransport}"
+    }
+  ],
+  "succeeded": 8,
+  "failed": 0,
+  "automation_errors": [],
+  "automation_warnings": [],
+  "initial_failed_fixture_report": "Saved/Automation/GhostLightsInitial/index.json",
+  "initial_fixture_corrections": [
+    "Dedicated server tests inspect evaluated multiplier; actual light brightness varies on rendering clients.",
+    "Late join retains the same engine-created connection and allows bounded extra ticks for an autonomous controller."
+  ]
+}

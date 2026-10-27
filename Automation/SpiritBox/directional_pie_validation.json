@@ -1,0 +1,16 @@
+{
+  "verification": "Live Blueprint identity reply after real F pickup and R power. Microphone not used.",
+  "native_property_read": {
+    "content": [
+      {
+        "type": "text",
+        "text": "success: true\ndata:\n  actor_name: SpiritBox_East_F0_02\n  actor_class: BP_MallSpiritBox_C\n  properties:\n    - name: ResponseCount\n      found: true\n      type: int32\n      value_number: 1\n      value: 1\n    - name: LastPhraseId\n      found: true\n      type: FName\n      value: who_are_you\n    - name: LastSubtitle\n      found: true\n      type: FString\n      value: I am Evelyn.\n    - name: LastResponseLocation\n      found: true\n      type: FVector_NetQuantize\n      value: (X=4950.000000,Y=0.000000,Z=156.150002)\n    - name: ResponseAudio.RelativeLocation\n      found: true\n      type: FVector\n      value: (X=4950.000000,Y=0.000000,Z=156.150002)\n    - name: ResponseAudio.bAbsoluteLocation\n      found: true\n      type: uint8\n      value_bool: true\n      value_number: 1\n      value: true\n    - name: ResponseAudio.bAllowSpatialization\n      found: true\n      type: uint8\n      value_bool: true\n      value_number: 1\n      value: true\n    - name: ResponseAudio.bIsUISound\n      found: true\n      type: uint8\n      value_bool: false\n      value_number: 0\n      value: false\n    - name: ResponseAudio.Sound\n      found: true\n      type: TObjectPtr<USoundBase>\n      value: /Script/Engine.SoundWave'/Game/Audio/Ghost/SpiritBox/SW_SpiritBox_Placeholder.SW_SpiritBox_Placeholder'\n    - name: ScanAudio.RelativeLocation\n      found: true\n      type: FVector\n      value: (X=0.000000,Y=0.000000,Z=0.000000)\npie_time_seconds: 124.64596140757203"
+      }
+    ],
+    "isError": false
+  },
+  "limitations": [
+    "Audible direction and loudness require a human listening test.",
+    "Immediate IsPlaying sampling was not completed because a native-only pawn-view getter was not exposed to Python; the purpose-built property read verified the actual reply event, selected sound and ghost-source transform."
+  ]
+}

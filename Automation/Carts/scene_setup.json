@@ -1,0 +1,171 @@
+{
+  "status": "Placed and saved. Two-player live PIE checks passed; see Evidence/live_acceptance.json. Final cold build and native regression report are recorded separately. Book and radio remain on their existing evidence stand.",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "store_ghost_label": "StoreGhost_East_F0_02",
+  "enable_ghost_tag": "MallCartBoundary",
+  "actors": [
+    {
+      "label": "EquipmentCart_East_F0_02",
+      "blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallEquipmentCart",
+      "parent": "MallPushCart",
+      "location": [
+        3950,
+        0,
+        45
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ]
+    },
+    {
+      "label": "LightCart_East_F0_02",
+      "blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallLightCart",
+      "parent": "MallLightCart",
+      "location": [
+        3560,
+        -400,
+        45
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ]
+    },
+    {
+      "label": "CartDock_East_F0_02",
+      "blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallCartDock",
+      "parent": "MallStoreCartDock",
+      "location": [
+        3950,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "StoreTag": "East_F0_02",
+      "AssignedCart": "EquipmentCart_East_F0_02"
+    },
+    {
+      "label": "CartCharger_East_F0_02",
+      "blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallCartCharger",
+      "parent": "MallCartCharger",
+      "location": [
+        3934,
+        -650,
+        95
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ]
+    },
+    {
+      "label": "CartExtension_East_F0_02",
+      "blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallCartCharger",
+      "parent": "MallCartCharger",
+      "location": [
+        3550,
+        -1150,
+        20
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "bExtensionLead": true
+    },
+    {
+      "label": "CartFlashlight_East_F0_02_A",
+      "blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallCartFlashlight",
+      "parent": "MallCartFlashlight",
+      "location": [
+        3610,
+        -820,
+        18
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "CartFlashlight_East_F0_02_B",
+      "blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallCartFlashlight",
+      "parent": "MallCartFlashlight",
+      "location": [
+        3610,
+        -860,
+        18
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "art": {
+    "cart_mesh": "/Game/Equipment/Carts/Meshes/SM_EquipmentUtilityCart",
+    "cart_mesh_relative_location": [
+      0,
+      0,
+      -45
+    ],
+    "cart_hide_procedural_parts": true,
+    "lamp_head_mesh": "/Game/Equipment/Carts/Meshes/SM_CartWorkLampHead"
+  },
+  "native_test_filter": "Mall.Ghost+Mall.Cart+Mall.Voice.NetworkTransport",
+  "enable_ghost_tags": [
+    "MallCartBoundary",
+    "East_F0_02"
+  ],
+  "doorway": {
+    "clear_width_cm": 139.683227539,
+    "infill_blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallCartDoorInfill",
+    "left_location": [
+      3950,
+      -220,
+      0
+    ],
+    "right_location": [
+      3950,
+      220,
+      0
+    ],
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "scale": [
+      2.5,
+      1,
+      1.25
+    ]
+  },
+  "flashlight_tray": {
+    "blueprint": "/Game/Equipment/Carts/Blueprints/BP_MallCartSupplyTray",
+    "location": [
+      3610,
+      -840,
+      3.1
+    ],
+    "scale": [
+      0.8,
+      0.8,
+      0.062
+    ],
+    "top_z_cm": 6.2,
+    "flashlight_mesh_bottom_z_cm": 6.490686
+  },
+  "extension_note": "Placed powered extension endpoint; native connection cable appears while charging. No simulated electrical grid or loose cable physics."
+}

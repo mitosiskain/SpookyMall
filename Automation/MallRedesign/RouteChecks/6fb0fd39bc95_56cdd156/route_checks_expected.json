@@ -1,0 +1,3071 @@
+{
+  "status": "prepared_not_executed",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "source_file": "C:\\unreal\\uprj\\MyProject2\\Saved\\Aura\\LDA\\District\\MallOvalTest\\connectivity_waypoints.json",
+  "source_sha256": "6fb0fd39bc95a62312d54442b209c4f063cb37c37d916e4d14931a99d07529b8",
+  "confirmation": "Generator invoked with --confirmed-final",
+  "recorded_max_walk_speed_cm_s": 200,
+  "selected_routes": [
+    "Ring_F1",
+    "Bridge_F1_Y-850",
+    "Bridge_F1_Y850",
+    "OuterGalleryLoop_F1",
+    "RearRingBridge_F1",
+    "BridgeWing_F1_Y0_W",
+    "BridgeWing_F1_Y0_E"
+  ],
+  "excluded_routes": [
+    {
+      "route": "Ring_F0",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "Bridge_F0_Y-850",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "FountainBypass_F0",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "Bridge_F0_Y850",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "Escalator_Up",
+      "reason": "Escalator transport is checked separately",
+      "explicitly_requested": false
+    },
+    {
+      "route": "Escalator_Down",
+      "reason": "Escalator transport is checked separately",
+      "explicitly_requested": false
+    },
+    {
+      "route": "RearGallery_F1",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "UpLandingClear_F1",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "DownLandingClear_F1",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    }
+  ],
+  "total_segments": 50,
+  "total_batches": 9,
+  "execution_instruction": "Execute manifest batches in order. Each route gets one initial placement. Continue split batches in the same PIE session at the actual previous endpoint, without any intervening teleport or movement. Escalators require separate tests.",
+  "limits": {
+    "maximum_actions": 50,
+    "maximum_summed_wait_seconds": 60.0
+  },
+  "batches": [
+    {
+      "batch_index_1_based": 1,
+      "request_file": "route_checks_001_Ring_F1_part_001_request.json",
+      "route": "Ring_F1",
+      "selected_route_index_0_based": 0,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        0.0,
+        -1475.0,
+        542.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 49,
+      "summed_wait_seconds": 44.908,
+      "segments": [
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            -1475.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            718.0,
+            -1363.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 726.6828744369858,
+          "direction_unit_xy": [
+            0.98805135673011,
+            0.15412500272113136
+          ],
+          "yaw_degrees": 8.866052816834346,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.633414,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.934,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              0.0,
+              -1475.0,
+              542.15
+            ],
+            "batch_index_1_based": 1,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            718.0,
+            -1363.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1325.0,
+            -1043.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 686.1843775546045,
+          "direction_unit_xy": [
+            0.8846018939737473,
+            0.4663469622266872
+          ],
+          "yaw_degrees": 27.797430013070056,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.430922,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.731,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1325.0,
+            -1043.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1732.0,
+            -564.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 628.5618505763772,
+          "direction_unit_xy": [
+            0.6475098665736555,
+            0.7620570665572015
+          ],
+          "yaw_degrees": 49.64588147264147,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.142809,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.443,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 3,
+          "segment_number_1_based": 4,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1732.0,
+            -564.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1875.0,
+            0.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 581.8461996094844,
+          "direction_unit_xy": [
+            0.24576941483157713,
+            0.9693283214336328
+          ],
+          "yaw_degrees": 75.7726916979561,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.909231,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.21,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 14,
+            "simulate_key_press": 15,
+            "wait_pie_seconds": 16,
+            "get_player_transform": 17
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 12
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 4,
+          "segment_number_1_based": 5,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1875.0,
+            0.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1732.0,
+            564.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 581.8461996094844,
+          "direction_unit_xy": [
+            -0.24576941483157713,
+            0.9693283214336328
+          ],
+          "yaw_degrees": 104.2273083020439,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.909231,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.21,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 18,
+            "simulate_key_press": 19,
+            "wait_pie_seconds": 20,
+            "get_player_transform": 21
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 16
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 5,
+          "segment_number_1_based": 6,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1732.0,
+            564.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1325.0,
+            1043.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 628.5618505763772,
+          "direction_unit_xy": [
+            -0.6475098665736555,
+            0.7620570665572015
+          ],
+          "yaw_degrees": 130.35411852735854,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.142809,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.443,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 22,
+            "simulate_key_press": 23,
+            "wait_pie_seconds": 24,
+            "get_player_transform": 25
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 20
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 6,
+          "segment_number_1_based": 7,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1325.0,
+            1043.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            950.0,
+            1275.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 440.96371732830806,
+          "direction_unit_xy": [
+            -0.8504101023821955,
+            0.5261203833404516
+          ],
+          "yaw_degrees": 148.25630242681993,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.204819,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.505,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 26,
+            "simulate_key_press": 27,
+            "wait_pie_seconds": 28,
+            "get_player_transform": 29
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 24
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 7,
+          "segment_number_1_based": 8,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            950.0,
+            1275.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            850.0,
+            1450.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 201.55644370746373,
+          "direction_unit_xy": [
+            -0.49613893835683387,
+            0.8682431421244593
+          ],
+          "yaw_degrees": 119.74488129694222,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.007782,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.308,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 30,
+            "simulate_key_press": 31,
+            "wait_pie_seconds": 32,
+            "get_player_transform": 33
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 28
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 8,
+          "segment_number_1_based": 9,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            850.0,
+            1450.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            850.0,
+            2150.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 700.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.5,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.8,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 34,
+            "simulate_key_press": 35,
+            "wait_pie_seconds": 36,
+            "get_player_transform": 37
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 32
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 9,
+          "segment_number_1_based": 10,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            850.0,
+            2150.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -950.0,
+            2150.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 1800.0,
+          "direction_unit_xy": [
+            -1.0,
+            0.0
+          ],
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 9.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 9.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 38,
+            "simulate_key_press": 39,
+            "wait_pie_seconds": 40,
+            "get_player_transform": 41
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 36
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 10,
+          "segment_number_1_based": 11,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -950.0,
+            2150.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -950.0,
+            1350.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 800.0,
+          "direction_unit_xy": [
+            0.0,
+            -1.0
+          ],
+          "yaw_degrees": -90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 41,
+            "simulate_key_press": 42,
+            "wait_pie_seconds": 43,
+            "get_player_transform": 44
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 42,
+            "simulate_key_press": 43,
+            "wait_pie_seconds": 44,
+            "get_player_transform": 45
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 40
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 11,
+          "segment_number_1_based": 12,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -950.0,
+            1350.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1325.0,
+            1043.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 484.6380092398862,
+          "direction_unit_xy": [
+            -0.7737733996311099,
+            -0.6334624898313354
+          ],
+          "yaw_degrees": -140.69395673276594,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.42319,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.724,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 45,
+            "simulate_key_press": 46,
+            "wait_pie_seconds": 47,
+            "get_player_transform": 48
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 46,
+            "simulate_key_press": 47,
+            "wait_pie_seconds": 48,
+            "get_player_transform": 49
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 44
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 2,
+      "request_file": "route_checks_002_Ring_F1_part_002_request.json",
+      "route": "Ring_F1",
+      "selected_route_index_0_based": 0,
+      "route_part_1_based": 2,
+      "requires_continuation_from_batch_1_based": 1,
+      "initial_placement_step_index_0_based": null,
+      "initial_placement_capsule_xyz_cm": null,
+      "continuation_instruction": "Continue at the previous batch endpoint in the same PIE session; do not teleport",
+      "action_count": 24,
+      "summed_wait_seconds": 20.971,
+      "segments": [
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 12,
+          "segment_number_1_based": 13,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1325.0,
+            1043.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1732.0,
+            564.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 628.5618505763772,
+          "direction_unit_xy": [
+            -0.6475098665736555,
+            -0.7620570665572015
+          ],
+          "yaw_degrees": -130.35411852735854,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.142809,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.443,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 48
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 13,
+          "segment_number_1_based": 14,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1732.0,
+            564.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1875.0,
+            0.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 581.8461996094844,
+          "direction_unit_xy": [
+            -0.24576941483157713,
+            -0.9693283214336328
+          ],
+          "yaw_degrees": -104.2273083020439,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.909231,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.21,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 2,
+            "step_index_0_based": 3
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 14,
+          "segment_number_1_based": 15,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1875.0,
+            0.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1732.0,
+            -564.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 581.8461996094844,
+          "direction_unit_xy": [
+            0.24576941483157713,
+            -0.9693283214336328
+          ],
+          "yaw_degrees": -75.7726916979561,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.909231,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.21,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 2,
+            "step_index_0_based": 7
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 15,
+          "segment_number_1_based": 16,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1732.0,
+            -564.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1325.0,
+            -1043.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 628.5618505763772,
+          "direction_unit_xy": [
+            0.6475098665736555,
+            -0.7620570665572015
+          ],
+          "yaw_degrees": -49.64588147264147,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.142809,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.443,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 2,
+            "step_index_0_based": 11
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 16,
+          "segment_number_1_based": 17,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1325.0,
+            -1043.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -718.0,
+            -1363.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 686.1843775546045,
+          "direction_unit_xy": [
+            0.8846018939737473,
+            -0.4663469622266872
+          ],
+          "yaw_degrees": -27.797430013070056,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.430922,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.731,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 2,
+            "step_index_0_based": 15
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 17,
+          "segment_number_1_based": 18,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -718.0,
+            -1363.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            -1475.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 726.6828744369858,
+          "direction_unit_xy": [
+            0.98805135673011,
+            -0.15412500272113136
+          ],
+          "yaw_degrees": -8.866052816834346,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.633414,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.934,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 2,
+            "step_index_0_based": 19
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 3,
+      "request_file": "route_checks_003_Bridge_F1_Y-850_part_001_request.json",
+      "route": "Bridge_F1_Y-850",
+      "selected_route_index_0_based": 1,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        -2500.0,
+        -850.0,
+        542.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 41,
+      "summed_wait_seconds": 28.606,
+      "segments": [
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -2500.0,
+            -850.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1900.0,
+            -850.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 600.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              -2500.0,
+              -850.0,
+              542.15
+            ],
+            "batch_index_1_based": 3,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1900.0,
+            -850.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1600.0,
+            -650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 360.5551275463989,
+          "direction_unit_xy": [
+            0.8320502943378437,
+            0.5547001962252291
+          ],
+          "yaw_degrees": 33.690067525979785,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.802776,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.103,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1600.0,
+            -650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1200.0,
+            -650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 400.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 3,
+          "segment_number_1_based": 4,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1200.0,
+            -650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -850.0,
+            -650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 350.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 14,
+            "simulate_key_press": 15,
+            "wait_pie_seconds": 16,
+            "get_player_transform": 17
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 12
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 4,
+          "segment_number_1_based": 5,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -850.0,
+            -650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            -650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 850.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.25,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.55,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 18,
+            "simulate_key_press": 19,
+            "wait_pie_seconds": 20,
+            "get_player_transform": 21
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 16
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 5,
+          "segment_number_1_based": 6,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            -650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            850.0,
+            -650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 850.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.25,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.55,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 22,
+            "simulate_key_press": 23,
+            "wait_pie_seconds": 24,
+            "get_player_transform": 25
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 20
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 6,
+          "segment_number_1_based": 7,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            850.0,
+            -650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1200.0,
+            -650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 350.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 26,
+            "simulate_key_press": 27,
+            "wait_pie_seconds": 28,
+            "get_player_transform": 29
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 24
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 7,
+          "segment_number_1_based": 8,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1200.0,
+            -650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1600.0,
+            -650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 400.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 30,
+            "simulate_key_press": 31,
+            "wait_pie_seconds": 32,
+            "get_player_transform": 33
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 28
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 8,
+          "segment_number_1_based": 9,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1600.0,
+            -650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1900.0,
+            -850.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 360.5551275463989,
+          "direction_unit_xy": [
+            0.8320502943378437,
+            -0.5547001962252291
+          ],
+          "yaw_degrees": -33.690067525979785,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.802776,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.103,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 34,
+            "simulate_key_press": 35,
+            "wait_pie_seconds": 36,
+            "get_player_transform": 37
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 32
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y-850",
+          "source_route_index_0_based": 5,
+          "segment_index_0_based": 9,
+          "segment_number_1_based": 10,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1900.0,
+            -850.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            2500.0,
+            -850.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 600.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 38,
+            "simulate_key_press": 39,
+            "wait_pie_seconds": 40,
+            "get_player_transform": 41
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 36
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 4,
+      "request_file": "route_checks_004_Bridge_F1_Y850_part_001_request.json",
+      "route": "Bridge_F1_Y850",
+      "selected_route_index_0_based": 2,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        -2500.0,
+        850.0,
+        542.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 41,
+      "summed_wait_seconds": 28.606,
+      "segments": [
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -2500.0,
+            850.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1900.0,
+            850.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 600.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              -2500.0,
+              850.0,
+              542.15
+            ],
+            "batch_index_1_based": 4,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1900.0,
+            850.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1600.0,
+            650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 360.5551275463989,
+          "direction_unit_xy": [
+            0.8320502943378437,
+            -0.5547001962252291
+          ],
+          "yaw_degrees": -33.690067525979785,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.802776,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.103,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1600.0,
+            650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1200.0,
+            650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 400.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 3,
+          "segment_number_1_based": 4,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1200.0,
+            650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -850.0,
+            650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 350.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 14,
+            "simulate_key_press": 15,
+            "wait_pie_seconds": 16,
+            "get_player_transform": 17
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 12
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 4,
+          "segment_number_1_based": 5,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -850.0,
+            650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 850.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.25,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.55,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 18,
+            "simulate_key_press": 19,
+            "wait_pie_seconds": 20,
+            "get_player_transform": 21
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 16
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 5,
+          "segment_number_1_based": 6,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            850.0,
+            650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 850.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.25,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.55,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 22,
+            "simulate_key_press": 23,
+            "wait_pie_seconds": 24,
+            "get_player_transform": 25
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 20
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 6,
+          "segment_number_1_based": 7,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            850.0,
+            650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1200.0,
+            650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 350.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 26,
+            "simulate_key_press": 27,
+            "wait_pie_seconds": 28,
+            "get_player_transform": 29
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 24
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 7,
+          "segment_number_1_based": 8,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1200.0,
+            650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1600.0,
+            650.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 400.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 30,
+            "simulate_key_press": 31,
+            "wait_pie_seconds": 32,
+            "get_player_transform": 33
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 28
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 8,
+          "segment_number_1_based": 9,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1600.0,
+            650.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1900.0,
+            850.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 360.5551275463989,
+          "direction_unit_xy": [
+            0.8320502943378437,
+            0.5547001962252291
+          ],
+          "yaw_degrees": 33.690067525979785,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.802776,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.103,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 34,
+            "simulate_key_press": 35,
+            "wait_pie_seconds": 36,
+            "get_player_transform": 37
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 32
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Bridge_F1_Y850",
+          "source_route_index_0_based": 6,
+          "segment_index_0_based": 9,
+          "segment_number_1_based": 10,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            1900.0,
+            850.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            2500.0,
+            850.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 600.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 38,
+            "simulate_key_press": 39,
+            "wait_pie_seconds": 40,
+            "get_player_transform": 41
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 4,
+            "step_index_0_based": 36
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 5,
+      "request_file": "route_checks_005_OuterGalleryLoop_F1_part_001_request.json",
+      "route": "OuterGalleryLoop_F1",
+      "selected_route_index_0_based": 3,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        -2500.0,
+        -2150.0,
+        542.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 13,
+      "summed_wait_seconds": 47.4,
+      "segments": [
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -2500.0,
+            -2150.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            2500.0,
+            -2150.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 5000.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 25.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 25.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              -2500.0,
+              -2150.0,
+              542.15
+            ],
+            "batch_index_1_based": 5,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            2500.0,
+            -2150.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            2500.0,
+            0.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 2150.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 10.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 11.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            2500.0,
+            0.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            2500.0,
+            2150.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 2150.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 10.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 11.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 6,
+      "request_file": "route_checks_006_OuterGalleryLoop_F1_part_002_request.json",
+      "route": "OuterGalleryLoop_F1",
+      "selected_route_index_0_based": 3,
+      "route_part_1_based": 2,
+      "requires_continuation_from_batch_1_based": 5,
+      "initial_placement_step_index_0_based": null,
+      "initial_placement_capsule_xyz_cm": null,
+      "continuation_instruction": "Continue at the previous batch endpoint in the same PIE session; do not teleport",
+      "action_count": 12,
+      "summed_wait_seconds": 47.4,
+      "segments": [
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 3,
+          "segment_number_1_based": 4,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            2500.0,
+            2150.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -2500.0,
+            2150.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 5000.0,
+          "direction_unit_xy": [
+            -1.0,
+            0.0
+          ],
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 25.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 25.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 12
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 4,
+          "segment_number_1_based": 5,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -2500.0,
+            2150.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -2500.0,
+            0.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 2150.0,
+          "direction_unit_xy": [
+            0.0,
+            -1.0
+          ],
+          "yaw_degrees": -90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 10.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 11.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 3
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 5,
+          "segment_number_1_based": 6,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -2500.0,
+            0.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -2500.0,
+            -2150.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 2150.0,
+          "direction_unit_xy": [
+            0.0,
+            -1.0
+          ],
+          "yaw_degrees": -90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 10.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 11.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 7
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 7,
+      "request_file": "route_checks_007_RearRingBridge_F1_part_001_request.json",
+      "route": "RearRingBridge_F1",
+      "selected_route_index_0_based": 4,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        0.0,
+        -2150.0,
+        542.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 9,
+      "summed_wait_seconds": 3.975,
+      "segments": [
+        {
+          "route": "RearRingBridge_F1",
+          "source_route_index_0_based": 11,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            -2150.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            -1850.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 300.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.5,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.8,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              0.0,
+              -2150.0,
+              542.15
+            ],
+            "batch_index_1_based": 7,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "RearRingBridge_F1",
+          "source_route_index_0_based": 11,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            -1850.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            -1475.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 375.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.875,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.175,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 7,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 8,
+      "request_file": "route_checks_008_BridgeWing_F1_Y0_W_part_001_request.json",
+      "route": "BridgeWing_F1_Y0_W",
+      "selected_route_index_0_based": 5,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        -2500.0,
+        0.0,
+        542.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 9,
+      "summed_wait_seconds": 3.725,
+      "segments": [
+        {
+          "route": "BridgeWing_F1_Y0_W",
+          "source_route_index_0_based": 12,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -2500.0,
+            0.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -2200.0,
+            0.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 300.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.5,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.8,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              -2500.0,
+              0.0,
+              542.15
+            ],
+            "batch_index_1_based": 8,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "BridgeWing_F1_Y0_W",
+          "source_route_index_0_based": 12,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            -2200.0,
+            0.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1875.0,
+            0.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 325.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.625,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.925,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 8,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 9,
+      "request_file": "route_checks_009_BridgeWing_F1_Y0_E_part_001_request.json",
+      "route": "BridgeWing_F1_Y0_E",
+      "selected_route_index_0_based": 6,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        2500.0,
+        0.0,
+        542.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 9,
+      "summed_wait_seconds": 3.725,
+      "segments": [
+        {
+          "route": "BridgeWing_F1_Y0_E",
+          "source_route_index_0_based": 13,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            2500.0,
+            0.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            2200.0,
+            0.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 300.0,
+          "direction_unit_xy": [
+            -1.0,
+            0.0
+          ],
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.5,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.8,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              2500.0,
+              0.0,
+              542.15
+            ],
+            "batch_index_1_based": 9,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "BridgeWing_F1_Y0_E",
+          "source_route_index_0_based": 13,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 450.0,
+          "nominal_start_capsule_xyz_cm": [
+            2200.0,
+            0.0,
+            542.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1875.0,
+            0.0,
+            542.15
+          ],
+          "expected_capsule_center_z_cm": 542.15,
+          "horizontal_distance_cm": 325.0,
+          "direction_unit_xy": [
+            -1.0,
+            0.0
+          ],
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.625,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.925,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 9,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"calls":[{"tool":"is_pie_active","arguments":{}},{"tool":"get_unreal_context","arguments":{}},{"tool":"take_editor_screenshot","arguments":{"mode":"viewport","max_width":1086,"max_height":720,"camera_location":{"x":0,"y":-1900,"z":600},"camera_rotation":{"pitch":-10,"yaw":90,"roll":0}}}]}

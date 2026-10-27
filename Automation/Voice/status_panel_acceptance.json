@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "baseline_commit": "953ff80",
+  "result": "Fixed and verified after a cold native build and fresh editor restart",
+  "causes": [
+    {
+      "problem": "Voice status panel absent",
+      "cause": "UE5.8 SetWidgetSlotPosition/DesiredSize reset anchors to top-left after code had selected bottom-left; alignment and negative Y put the entire panel above the viewport",
+      "fix": "Apply desired size and position first, then bottom-left anchors/alignment",
+      "source": "Source/MyProject2/Voice/MallVoiceSubsystem.cpp"
+    },
+    {
+      "problem": "Pressing V did not match configured push-to-talk key",
+      "cause": "FKey custom config importer reads a single token; (KeyName=\"V\") became key '('",
+      "fix": "PushToTalkKey=V",
+      "source": "Config/DefaultGame.ini"
+    }
+  ],
+  "validation": {
+    "live_coding": "Compile and patch Succeeded before cold build",
+    "cold_build": {
+      "target": "MyProject2Editor Win64 Development",
+      "result": "Succeeded",
+      "log": "Saved/Logs/VoiceStatusFixBuild.log"
+    },
+    "regression": {
+      "name": "MyProject2.Voice.PhraseMatching",
+      "succeeded": 1,
+      "failed": 0,
+      "warnings": 0,
+      "errors": 0,
+      "not_run": 0,
+      "report": "Saved/Automation/VoiceStatusFix/index.json",
+      "added_assertion": "The actual configured push-to-talk key resolves to a registered input key"
+    },
+    "fresh_editor_restart": {
+      "process_id": 34352,
+      "no_runtime_config_reload_after_restart": true,
+      "map": "Lvl_MallOval_Test",
+      "topology": "Single-player standalone PIE",
+      "viewport_pixels": [
+        1280,
+        724
+      ],
+      "prompt": "Hold V to talk",
+      "readiness": "Offline English voice recognition ready.",
+      "readiness_observed_pie_time_seconds": 23.130757313221693,
+      "widget": "MallVoiceStatusWidget",
+      "visible_corner": "bottom-left",
+      "widget_realized": true,
+      "screenshot": "Automation/Voice/status_panel_verified.png",
+      "screenshot_pie_time_seconds": 25.757763013243675,
+      "pixels_reviewed": true,
+      "stopped_without_crash": true
+    }
+  },
+  "evidence": "Saved/Automation/VoiceStatusFix/live_hud_receipts.json",
+  "limits": [
+    "No microphone was opened or recorded during these checks; user hardware speech/proximity test remains pending.",
+    "Earlier native network/audio-fixture and book-writing tests remain separate evidence; this targeted check verifies status visibility, config validity and backend readiness."
+  ],
+  "final_editor": {
+    "connected": true,
+    "pie_active": false,
+    "map": "Lvl_MallOval_Test",
+    "dirty_maps": [],
+    "dirty_content": []
+  },
+  "computer_use": false
+}

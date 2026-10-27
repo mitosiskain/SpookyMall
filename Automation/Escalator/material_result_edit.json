@@ -1,0 +1,446 @@
+[
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"name\": \"metal\",\r\n\t\"path\": \"/Game/Environment/Escalator/Meshes/metal.metal\",\r\n\t\"class\": \"Material\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"expression_count\": 1,\r\n\t\"scalar_parameters\": [],\r\n\t\"vector_parameters\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Param\",\r\n\t\t\t\"default\": [\r\n\t\t\t\t0.56000000238418579,\r\n\t\t\t\t0.5899999737739563,\r\n\t\t\t\t0.63999998569488525,\r\n\t\t\t\t0\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"texture_parameters\": [],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/metal.metal\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"changed\": [\r\n\t\t\"blend_mode\",\r\n\t\t\"shading_model\",\r\n\t\t\"two_sided\"\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/metal.metal\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/metal.metal\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/metal.metal\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"name\": \"dark\",\r\n\t\"path\": \"/Game/Environment/Escalator/Meshes/dark.dark\",\r\n\t\"class\": \"Material\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"expression_count\": 1,\r\n\t\"scalar_parameters\": [],\r\n\t\"vector_parameters\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Param\",\r\n\t\t\t\"default\": [\r\n\t\t\t\t0.027000000700354576,\r\n\t\t\t\t0.032000001519918442,\r\n\t\t\t\t0.037999998778104782,\r\n\t\t\t\t0\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"texture_parameters\": [],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/dark.dark\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"changed\": [\r\n\t\t\"blend_mode\",\r\n\t\t\"shading_model\",\r\n\t\t\"two_sided\"\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/dark.dark\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/dark.dark\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/dark.dark\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"name\": \"safety_yellow\",\r\n\t\"path\": \"/Game/Environment/Escalator/Meshes/safety_yellow.safety_yellow\",\r\n\t\"class\": \"Material\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"expression_count\": 1,\r\n\t\"scalar_parameters\": [],\r\n\t\"vector_parameters\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Param\",\r\n\t\t\t\"default\": [\r\n\t\t\t\t0.94999998807907104,\r\n\t\t\t\t0.56000000238418579,\r\n\t\t\t\t0.02500000037252903,\r\n\t\t\t\t0\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"texture_parameters\": [],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/safety_yellow.safety_yellow\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"changed\": [\r\n\t\t\"blend_mode\",\r\n\t\t\"shading_model\",\r\n\t\t\"two_sided\"\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/safety_yellow.safety_yellow\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/safety_yellow.safety_yellow\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/safety_yellow.safety_yellow\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"name\": \"tread_dark\",\r\n\t\"path\": \"/Game/Environment/Escalator/Meshes/tread_dark.tread_dark\",\r\n\t\"class\": \"Material\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"expression_count\": 1,\r\n\t\"scalar_parameters\": [],\r\n\t\"vector_parameters\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Param\",\r\n\t\t\t\"default\": [\r\n\t\t\t\t0.11999999731779099,\r\n\t\t\t\t0.14000000059604645,\r\n\t\t\t\t0.17000000178813934,\r\n\t\t\t\t0\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"texture_parameters\": [],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_dark.tread_dark\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"changed\": [\r\n\t\t\"blend_mode\",\r\n\t\t\"shading_model\",\r\n\t\t\"two_sided\"\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_dark.tread_dark\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_dark.tread_dark\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_dark.tread_dark\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"name\": \"tread_metal\",\r\n\t\"path\": \"/Game/Environment/Escalator/Meshes/tread_metal.tread_metal\",\r\n\t\"class\": \"Material\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"expression_count\": 1,\r\n\t\"scalar_parameters\": [],\r\n\t\"vector_parameters\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Param\",\r\n\t\t\t\"default\": [\r\n\t\t\t\t0.46000000834465027,\r\n\t\t\t\t0.49000000953674316,\r\n\t\t\t\t0.54000002145767212,\r\n\t\t\t\t0\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"texture_parameters\": [],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_metal.tread_metal\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"changed\": [\r\n\t\t\"blend_mode\",\r\n\t\t\"shading_model\",\r\n\t\t\"two_sided\"\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_metal.tread_metal\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_metal.tread_metal\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_metal.tread_metal\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"name\": \"glass\",\r\n\t\"path\": \"/Game/Environment/Escalator/Meshes/glass.glass\",\r\n\t\"class\": \"Material\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"blend_mode\": \"Opaque\",\r\n\t\"two_sided\": false,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"expression_count\": 1,\r\n\t\"scalar_parameters\": [],\r\n\t\"vector_parameters\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Param\",\r\n\t\t\t\"default\": [\r\n\t\t\t\t0.40000000596046448,\r\n\t\t\t\t0.62000000476837158,\r\n\t\t\t\t0.64999997615814209,\r\n\t\t\t\t0\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"texture_parameters\": [],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/glass.glass\",\r\n\t\"blend_mode\": \"Translucent\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"two_sided\": true,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"changed\": [\r\n\t\t\"blend_mode\",\r\n\t\t\"shading_model\",\r\n\t\t\"two_sided\"\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/glass.glass\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/glass.glass\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/glass.glass\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/glass.glass\",\r\n\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"DefaultValue\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

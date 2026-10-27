@@ -1,0 +1,38 @@
+[
+  {
+    "tool": "get_asset_meta",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Blueprint Name: BP_MallEscalator\nPath: /Game/Environment/Escalator/BP_MallEscalator.BP_MallEscalator\n\nParent Class: MallEscalator\n\nComponents:\n- EscalatorRoot (SceneComponent) [Inherited, Native]\n  - Shell (StaticMeshComponent) [Inherited, Native]\n  - Steps (InstancedStaticMeshComponent) [Inherited, Native]\n  - LowerDeck (BoxComponent) [Inherited, Native]\n  - InclineDeck (BoxComponent) [Inherited, Native]\n  - UpperDeck (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - RiderVolume (BoxComponent) [Inherited, Native]\n  - LowerEndPlate (StaticMeshComponent) [Inherited, Native]\n  - UpperEndPlate (StaticMeshComponent) [Inherited, Native]\n\nTo get referenced struct types/layouts call get_asset_structs\nTo get properties on components use get_blueprint_component_properties"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "quicksearch",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "query: BP_EscalatorLanding\nquery_variations:\n  - BP_EscalatorLanding\n  - bp_escalatorlanding\n  - BP_ESCALATORLANDING\n  - BPEscalatorLanding\n  - BP-EscalatorLanding\ntotal_files_found: 1\nasset_files_processed: 1\nfile_analysis:\n  - file_path: C:/unreal/uprj/MyProject2/Content/Environment/Escalator/BP_EscalatorLanding.uasset\n    dependencies:\n    - /Game/Environment/Escalator/Meshes/metal.metal\n    - /Engine/BasicShapes/Cube.Cube\n    referencers: []\n    dependency_count: 2\n    referencer_count: 0"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "query_unreal_project_assets",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Top file paths:\nC:/unreal/uprj/MyProject2/Content/Environment/Escalator/BP_EscalatorLanding.uasset\n\n\n\nFile: Content_Environment_Escalator_BP_EscalatorLanding_uasset\nRelevance Score: 1.6210\n\n\n\nasset_path: /Game/Environment/Escalator/BP_EscalatorLanding.BP_EscalatorLanding\n\nreferencers:\n  []\n\ndependencies:\n  [\n  \"/Game/Environment/Escalator/Meshes/metal\",\n  \"/Engine/BasicShapes/Cube\"\n]\n\ncontent: asset path:\n/Game/Environment/Escalator/BP_EscalatorLanding.BP_EscalatorLanding\nblueprint info:\nBP_EscalatorLanding\n/Game/Environment/Escalator/BP_EscalatorLanding.BP_EscalatorLanding\nBP_EscalatorLanding_C\n/Game/Environment/Escalator/BP_EscalatorLanding\nStaticMeshActor\n\n\nfunction info:\n\nFunctions:\nUserConstructionScript\n\ncomponent info:\n\nComponents:\n\n\n\n\n\n\n"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

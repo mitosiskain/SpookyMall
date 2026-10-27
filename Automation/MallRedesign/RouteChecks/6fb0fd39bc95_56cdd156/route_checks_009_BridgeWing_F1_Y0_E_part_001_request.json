@@ -1,0 +1,73 @@
+{
+  "tool": "run_verification_sequence",
+  "arguments": {
+    "actions": [
+      {
+        "type": "set_player_transform",
+        "params": {
+          "x": 2500.0,
+          "y": 0.0,
+          "z": 542.15,
+          "yaw": 180.0,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 180.0,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.5
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 1.8
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 180.0,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.625
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 1.925
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      }
+    ],
+    "record": true,
+    "attach_images": false
+  }
+}

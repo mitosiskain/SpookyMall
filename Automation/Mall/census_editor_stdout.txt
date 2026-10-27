@@ -1,0 +1,662 @@
+MCP_TOOL get_available_actors_in_level
+Level Name: Lvl_MallAtrium_Test
+Path: /Game/Environment/Mall/Maps/Lvl_MallAtrium_Test.Lvl_MallAtrium_Test
+
+
+Actor Hierarchy:
+- Label="WorldSettings" Class=WorldSettings
+- Label="Brush0" Class=Brush
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Sun_MallAtrium" Class=DirectionalLight
+  Spatial info: Location=(Z=1200.00) Rotation=(P=-55.00, Y=35.00) Scale=(X=2.50, Y=2.50, Z=2.50)
+- Label="SkyLight_MallAtrium" Class=SkyLight
+  Spatial info: Location=(Z=1200.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_PlayerStart_01" Class=PlayerStart
+  Spatial info: Location=(Y=-2000.00, Z=100.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Navigation_Bounds_01" Class=NavMeshBoundsVolume
+  Spatial info: Location=(Z=400.00) Rotation=(0) Scale=(X=23.00, Y=27.00, Z=7.00)
+- Label="RecastNavMesh-Default" Class=RecastNavMesh
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="GroundFloor_Floor_01" Class=DynamicMeshActor
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Floor_01" Class=DynamicMeshActor
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Exterior_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="RemovableRoof_Ceiling_01" Class=DynamicMeshActor
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-900.00, Y=-1400.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_02" Class=StaticMeshActor
+  Spatial info: Location=(X=900.00, Y=-1400.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-900.00, Y=-1000.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_04" Class=StaticMeshActor
+  Spatial info: Location=(X=900.00, Y=-1000.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_05" Class=StaticMeshActor
+  Spatial info: Location=(X=-900.00, Y=-600.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_06" Class=StaticMeshActor
+  Spatial info: Location=(X=900.00, Y=-600.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_07" Class=StaticMeshActor
+  Spatial info: Location=(X=-900.00, Y=-200.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_08" Class=StaticMeshActor
+  Spatial info: Location=(X=900.00, Y=-200.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-900.00, Y=200.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_10" Class=StaticMeshActor
+  Spatial info: Location=(X=900.00, Y=200.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_11" Class=StaticMeshActor
+  Spatial info: Location=(X=-900.00, Y=600.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_12" Class=StaticMeshActor
+  Spatial info: Location=(X=900.00, Y=600.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_13" Class=StaticMeshActor
+  Spatial info: Location=(X=-900.00, Y=1000.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_14" Class=StaticMeshActor
+  Spatial info: Location=(X=900.00, Y=1000.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_15" Class=StaticMeshActor
+  Spatial info: Location=(X=-900.00, Y=1400.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_16" Class=StaticMeshActor
+  Spatial info: Location=(X=900.00, Y=1400.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_17" Class=StaticMeshActor
+  Spatial info: Location=(X=-600.00, Y=-1700.00, Z=450.00) Rotation=(Y=180.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_18" Class=StaticMeshActor
+  Spatial info: Location=(X=-200.00, Y=-1700.00, Z=450.00) Rotation=(Y=180.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_19" Class=StaticMeshActor
+  Spatial info: Location=(X=200.00, Y=-1700.00, Z=450.00) Rotation=(Y=180.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_20" Class=StaticMeshActor
+  Spatial info: Location=(X=600.00, Y=-1700.00, Z=450.00) Rotation=(Y=180.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_21" Class=StaticMeshActor
+  Spatial info: Location=(X=-484.00, Y=1700.00, Z=450.00) Rotation=(0) Scale=(X=1.58, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Platform_22" Class=StaticMeshActor
+  Spatial info: Location=(X=484.00, Y=1700.00, Z=450.00) Rotation=(0) Scale=(X=1.58, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="VerticalAccess_Stairs_01" Class=BP_MallEscalator_450
+  Spatial info: Location=(X=-100.00, Y=690.58) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="VerticalAccess_Stairs_02" Class=BP_MallEscalator_450_Down
+  Spatial info: Location=(X=100.00, Y=690.58) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="VerticalAccess_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Prop_01" Class=BP_Fountain
+  Spatial info: Location=(Y=-450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+
+  Attached Actors:
+  - Label="BP_Stream5" Class=BP_Stream
+    Spatial info: Location=(X=-54.00, Y=-450.00, Z=4.00) Rotation=(0) Scale=(X=0.50, Y=0.50, Z=0.50)
+  - Label="BP_Stream5" Class=BP_Stream
+    Spatial info: Location=(X=-1.00, Y=-393.00, Z=4.00) Rotation=(Y=-90.00) Scale=(X=0.50, Y=0.50, Z=0.50)
+  - Label="BP_Stream5" Class=BP_Stream
+    Spatial info: Location=(X=58.00, Y=-449.00, Z=4.00) Rotation=(Y=-180.00) Scale=(X=0.50, Y=0.50, Z=0.50)
+  - Label="BP_Stream5" Class=BP_Stream
+    Spatial info: Location=(X=-1.00, Y=-508.00, Z=3.00) Rotation=(Y=90.00) Scale=(X=0.50, Y=0.50, Z=0.50)
+- Label="Atrium_Planter_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-540.00, Y=-1100.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Plant_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-540.00, Y=-1100.00, Z=62.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Planter_02" Class=StaticMeshActor
+  Spatial info: Location=(X=540.00, Y=-1100.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Plant_02" Class=StaticMeshActor
+  Spatial info: Location=(X=540.00, Y=-1100.00, Z=62.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Planter_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-550.00, Y=380.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Plant_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-550.00, Y=380.00, Z=62.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Planter_04" Class=StaticMeshActor
+  Spatial info: Location=(X=550.00, Y=380.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Plant_04" Class=StaticMeshActor
+  Spatial info: Location=(X=550.00, Y=380.00, Z=62.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Planter_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1090.00, Y=-600.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Plant_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1090.00, Y=-600.00, Z=498.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Planter_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1090.00, Y=-600.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Plant_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1090.00, Y=-600.00, Z=498.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Planter_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1090.00, Y=600.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Plant_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1090.00, Y=600.00, Z=498.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Planter_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1090.00, Y=600.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Plant_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1090.00, Y=600.00, Z=498.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Prop_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-540.00, Y=-780.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Prop_03" Class=StaticMeshActor
+  Spatial info: Location=(X=540.00, Y=-780.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Prop_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-550.00, Y=80.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Atrium_Prop_05" Class=StaticMeshActor
+  Spatial info: Location=(X=550.00, Y=80.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Prop_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1100.00, Y=2050.00, Z=450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Gallery_F1_Prop_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1100.00, Y=2050.00, Z=450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1200.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1740.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1740.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1620.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1620.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1500.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1500.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1380.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1380.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1020.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1020.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-900.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-900.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-780.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-780.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-660.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-660.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1200.00) Rotation=(Y=-90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=-1200.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-540.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-540.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-420.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-420.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-300.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-300.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-180.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-180.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=180.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=180.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=300.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=300.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=420.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=420.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=540.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=540.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00) Rotation=(Y=-90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1200.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=660.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=660.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=780.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=780.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=900.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=900.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1020.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1020.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1380.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1380.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1500.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1500.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1620.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1620.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1740.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1740.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1200.00) Rotation=(Y=-90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1200.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1740.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1740.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1620.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1620.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1500.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1500.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1380.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1380.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1020.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1020.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-900.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-900.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-780.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-780.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-660.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-660.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1200.00) Rotation=(Y=90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=1200.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-540.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-540.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-420.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-420.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-300.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-300.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-180.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-180.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=180.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=180.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=300.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=300.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=420.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=420.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=540.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=540.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00) Rotation=(Y=90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=1200.00, Y=1200.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=660.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=660.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=780.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=780.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=900.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=900.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1020.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1020.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1380.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1380.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1500.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1500.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1620.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1620.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1740.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1740.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1200.00) Rotation=(Y=90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1200.00, Z=450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1740.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1740.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1620.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1620.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1500.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1500.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1380.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1380.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-1020.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1020.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-900.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-900.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-780.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-780.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-660.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-660.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW01_F1_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-1200.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=-1200.00, Z=450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-540.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-540.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-420.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-420.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-300.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-300.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=-180.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=-180.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=180.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=180.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=300.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=300.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=420.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=420.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=540.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=540.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW02_F1_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1200.00, Z=450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=660.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=660.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=780.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=780.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=900.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=900.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1020.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1020.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1380.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1380.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1500.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1500.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1620.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1620.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=-1220.00, Y=1740.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1740.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreW03_F1_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=-1200.00, Y=1200.00, Z=450.00) Rotation=(Y=-90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1200.00, Z=450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1740.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1740.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1620.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1620.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1500.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1500.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1380.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1380.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-1020.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1020.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-900.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-900.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-780.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-780.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-660.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-660.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE01_F1_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-1200.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=1200.00, Z=450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-540.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-540.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-420.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-420.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-300.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-300.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=-180.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=-180.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=180.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=180.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=300.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=300.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=420.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=420.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=540.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=540.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE02_F1_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_01" Class=DynamicMeshActor
+  Spatial info: Location=(X=1200.00, Y=1200.00, Z=450.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=660.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Window_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=660.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=780.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Window_02" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=780.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=900.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Window_03" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=900.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_05" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1020.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Window_04" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1020.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1380.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Window_07" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1380.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1500.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Window_08" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1500.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1620.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Window_09" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1620.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Wall_11" Class=StaticMeshActor
+  Spatial info: Location=(X=1220.00, Y=1740.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Window_10" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1740.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="StoreE03_F1_Door_01" Class=StaticMeshActor
+  Spatial info: Location=(X=1200.00, Y=1200.00, Z=450.00) Rotation=(Y=90.00) Scale=(X=1.67, Y=1.00, Z=1.00)
+- Label="Lighting_Sky_01" Class=SkyAtmosphere
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_01" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Y=-1400.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_02" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Y=-700.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_03" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_04" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Y=700.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_05" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Y=1400.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_06" Class=RectLight
+  Spatial info: Location=(X=1030.00, Y=-1400.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_07" Class=RectLight
+  Spatial info: Location=(X=1030.00, Y=-700.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_08" Class=RectLight
+  Spatial info: Location=(X=1030.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_09" Class=RectLight
+  Spatial info: Location=(X=1030.00, Y=700.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_10" Class=RectLight
+  Spatial info: Location=(X=1030.00, Y=1400.00, Z=390.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_11" Class=StaticMeshActor
+  Spatial info: Location=(X=-1600.00, Y=-1200.00, Z=374.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_11" Class=RectLight
+  Spatial info: Location=(X=-1600.00, Y=-1200.00, Z=365.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_12" Class=StaticMeshActor
+  Spatial info: Location=(X=-1600.00, Z=374.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_12" Class=RectLight
+  Spatial info: Location=(X=-1600.00, Z=365.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_13" Class=StaticMeshActor
+  Spatial info: Location=(X=-1600.00, Y=1200.00, Z=374.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_13" Class=RectLight
+  Spatial info: Location=(X=-1600.00, Y=1200.00, Z=365.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_14" Class=StaticMeshActor
+  Spatial info: Location=(X=1600.00, Y=-1200.00, Z=374.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_14" Class=RectLight
+  Spatial info: Location=(X=1600.00, Y=-1200.00, Z=365.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_15" Class=StaticMeshActor
+  Spatial info: Location=(X=1600.00, Z=374.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_15" Class=RectLight
+  Spatial info: Location=(X=1600.00, Z=365.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_16" Class=StaticMeshActor
+  Spatial info: Location=(X=1600.00, Y=1200.00, Z=374.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_16" Class=RectLight
+  Spatial info: Location=(X=1600.00, Y=1200.00, Z=365.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_17" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Y=-1400.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_18" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Y=-700.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_19" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_20" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Y=700.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_21" Class=RectLight
+  Spatial info: Location=(X=-1030.00, Y=1400.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_22" Class=RectLight
+  Spatial info: Location=(X=1030.00, Y=-1400.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_23" Class=RectLight
+  Spatial info: Location=(X=1030.00, Y=-700.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_24" Class=RectLight
+  Spatial info: Location=(X=1030.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_25" Class=RectLight
+  Spatial info: Location=(X=1030.00, Y=700.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_26" Class=RectLight
+  Spatial info: Location=(X=1030.00, Y=1400.00, Z=840.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_27" Class=StaticMeshActor
+  Spatial info: Location=(X=-1600.00, Y=-1200.00, Z=824.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_27" Class=RectLight
+  Spatial info: Location=(X=-1600.00, Y=-1200.00, Z=815.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_28" Class=StaticMeshActor
+  Spatial info: Location=(X=-1600.00, Z=824.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_28" Class=RectLight
+  Spatial info: Location=(X=-1600.00, Z=815.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_29" Class=StaticMeshActor
+  Spatial info: Location=(X=-1600.00, Y=1200.00, Z=824.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_29" Class=RectLight
+  Spatial info: Location=(X=-1600.00, Y=1200.00, Z=815.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_30" Class=StaticMeshActor
+  Spatial info: Location=(X=1600.00, Y=-1200.00, Z=824.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_30" Class=RectLight
+  Spatial info: Location=(X=1600.00, Y=-1200.00, Z=815.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_31" Class=StaticMeshActor
+  Spatial info: Location=(X=1600.00, Z=824.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_31" Class=RectLight
+  Spatial info: Location=(X=1600.00, Z=815.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Prop_32" Class=StaticMeshActor
+  Spatial info: Location=(X=1600.00, Y=1200.00, Z=824.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Light_32" Class=RectLight
+  Spatial info: Location=(X=1600.00, Y=1200.00, Z=815.00) Rotation=(P=-90.00) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Ceiling_01" Class=DynamicMeshActor
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+- Label="Lighting_Exposure_01" Class=PostProcessVolume
+  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)
+

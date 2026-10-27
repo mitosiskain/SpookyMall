@@ -1,0 +1,8 @@
+{
+  "source": "where_0.wav",
+  "noisy_snr_db": 15,
+  "speech_gain": 0.35,
+  "seed": 6841,
+  "synthetic_only": true,
+  "note": "Real speech through the player microphone remains a manual acceptance test."
+}

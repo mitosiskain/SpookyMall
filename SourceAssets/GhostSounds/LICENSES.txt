@@ -1,0 +1,34 @@
+Ghost audio source and license record
+Verified: 2026-10-17
+
+Selected recordings are by qubodup and were published under CC0 1.0:
+
+Ghost breath
+https://opengameart.org/content/ghost-breath
+https://opengameart.org/sites/default/files/ghostbreath.flac
+Used for SW_Ghost_InvisibleBreath.wav.
+
+Ghost Monster Voice Moaning & Growling
+https://opengameart.org/content/ghost-monster-voice-moaning-growling
+https://opengameart.org/sites/default/files/qubodup-GhostMoans.zip
+GhostMoan01 used for SW_Ghost_InvisibleMoan.wav.
+GhostMoan05 used for SW_Ghost_HuntGrowl.wav.
+
+Both primary asset pages explicitly show CC0 as the license.
+CC0 deed: https://creativecommons.org/publicdomain/zero/1.0/
+CC0 legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Commercial use and modification are permitted. Attribution is not required.
+Voluntary credit: Ghost breath and Ghost Monster Voice Moaning & Growling by
+qubodup, OpenGameArt.org, CC0 1.0.
+
+The prepared mono WAVs contain level adjustments, fades, DC removal and sample
+rate conversion. They add no generated vocals, pitch changes, reverb or music.
+Original ghost vocals already include their creator's artistic processing.
+See provenance.json for exact source/archive members, SHA-256 hashes and levels.
+
+Research candidate retained but not selected or imported:
+horror breathing by primbal, CC0 1.0
+https://opengameart.org/content/horror-breathing
+https://opengameart.org/sites/default/files/horrorbreathing.zip
+The original ZIP remains in Originals for traceability. Its WAV has a very high
+RMS level; the quieter qubodup material was chosen instead.

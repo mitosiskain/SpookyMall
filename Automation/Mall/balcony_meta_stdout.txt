@@ -1,0 +1,42 @@
+MCP_TOOL get_asset_meta
+Default Property Values for StaticMesh:
+  int32 LightMapResolution = 64
+  int32 LightMapCoordinateIndex = 2
+  EStaticMeshPaintSupport StaticMeshPaintSupport = Default
+  int32 MeshPaintTextureCoordinateIndex = 0
+  int32 MeshPaintTextureResolution = 0
+  float DistanceFieldSelfShadowBias = 0.000000
+  int32 LODForCollision = 0
+  uint8 bGenerateMeshDistanceField = False
+  uint8 bHasNavigationData = True
+  uint8 bSupportUniformlyDistributedSampling = False
+  uint8 bSupportPhysicalMaterialMasks = False
+  uint8 bSupportRayTracing = True
+  uint8 bAllowCPUAccess = False
+  uint8 bSupportGpuUniformlyDistributedSampling = False
+  FVector PositiveBoundsExtension = (X=0.000000,Y=0.000000,Z=0.000000)
+  FVector NegativeBoundsExtension = (X=0.000000,Y=0.000000,Z=0.000000)
+  TArray<TObjectPtr<UAssetUserData> > AssetUserData = []
+  AssetUserData contains 0 objects:
+  int32 NumCinematicMipLevels = 0
+  uint8 NeverStream = False
+  uint8 bGlobalForceMipLevelsToBeResident = False
+
+To get referenced struct types/layouts call get_asset_structs
+To get properties on components use get_blueprint_component_properties
+MCP_TOOL get_asset_meta
+Default Property Values for BodySetup:
+  FKAggregateGeom AggGeom = ()
+  uint8 bConsiderForBounds = True
+  uint8 bDoubleSidedGeometry = False
+  uint8 bNeverNeedsCookedCollisionData = False
+  TObjectPtr<UPhysicalMaterial> PhysMaterial = None
+  FWalkableSlopeOverride WalkableSlopeOverride = ()
+  FBodyInstance DefaultInstance = (ObjectType=PhysicsBody)
+  FName BoneName = None
+  TEnumAsByte<EPhysicsType> PhysicsType = Default
+  TEnumAsByte<ECollisionTraceFlag> CollisionTraceFlag = Project Default
+  TEnumAsByte<EBodyCollisionResponse::Type> CollisionReponse = Enabled
+
+To get referenced struct types/layouts call get_asset_structs
+To get properties on components use get_blueprint_component_properties

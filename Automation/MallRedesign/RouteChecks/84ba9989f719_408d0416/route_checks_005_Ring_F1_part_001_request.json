@@ -1,0 +1,333 @@
+{
+  "tool": "run_verification_sequence",
+  "arguments": {
+    "actions": [
+      {
+        "type": "set_player_transform",
+        "params": {
+          "x": 1875.0,
+          "y": 0.0,
+          "z": 942.15,
+          "yaw": 97.13635175997825,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 97.13635175997825,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.450024
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 1.751
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 111.08714754736015,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.482796
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 1.783
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 124.1946696944559,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.541518
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 1.842
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 136.21222253477637,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.615028
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 1.916
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 147.153686877333,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.690998
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 1.991
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 157.19411826263593,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.758269
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.059
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 166.5783622086369,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.808067
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.109
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": 175.5695798283817,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.834453
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.135
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": -175.5695798283817,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.834453
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.135
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": -166.5783622086369,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.808067
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.109
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": -157.19411826263587,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.758269
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.059
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "yaw": -147.15368687733306,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 1.690998
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 1.991
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      }
+    ],
+    "record": true,
+    "attach_images": false
+  }
+}

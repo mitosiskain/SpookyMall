@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "get_available_actors_in_level",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Level Name: Untitled\nPath: /Temp/Untitled_1091.Untitled\n\n\nActor Hierarchy:\n- Label=\"WorldSettings\" Class=WorldSettings\n- Label=\"Brush0\" Class=Brush\n  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"VerificationFloor\" Class=StaticMeshActor\n  Spatial info: Location=(0) Rotation=(0) Scale=(X=50.00, Y=50.00, Z=1.00)\n- Label=\"VerificationSun\" Class=DirectionalLight\n  Spatial info: Location=(Z=500.00) Rotation=(P=-46.00) Scale=(X=2.50, Y=2.50, Z=2.50)\n- Label=\"VerificationSkyLight\" Class=SkyLight\n  Spatial info: Location=(Z=500.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"VerificationPlayerStart\" Class=PlayerStart\n  Spatial info: Location=(Z=100.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "quicksearch",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "query: SM_MallBalconyStraight_400\nquery_variations:\n  - SM_MallBalconyStraight_400\n  - sm_mallbalconystraight_400\n  - SM_MALLBALCONYSTRAIGHT_400\n  - SMMallBalconyStraight400\n  - SM-MallBalconyStraight-400\ntotal_files_found: 1\nasset_files_processed: 1\nfile_analysis:\n  - file_path: C:/unreal/uprj/MyProject2/Content/Environment/Mall/Models/Architecture/SM_MallBalconyStraight_400.uasset\n    dependencies:\n    - /Script/NavigationSystem.NavigationSystem\n    - /Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial\n    referencers: []\n    dependency_count: 2\n    referencer_count: 0"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "query_unreal_project_assets",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Top file paths:\nC:/unreal/uprj/MyProject2/Content/Environment/Mall/Models/Retail/SM_Retail_25356_MallUnitShellModule.uasset\n\n\n\nFile: Content_Environment_Mall_Models_Retail_SM_Retail_25356_MallUnitShellModule_uasset\nRelevance Score: 1.7505\n\n\n\nasset_path: /Game/Environment/Mall/Models/Retail/SM_Retail_25356_MallUnitShellModule.SM_Retail_25356_MallUnitShellModule\n\nreferencers:\n  []\n\ndependencies:\n  [\n  \"/Script/NavigationSystem\",\n  \"/Engine/EngineMaterials/WorldGridMaterial\"\n]\n\ncontent: asset path:\n/Game/Environment/Mall/Models/Retail/SM_Retail_25356_MallUnitShellModule.SM_Retail_25356_MallUnitShellModule\n\n\n\n\n\n"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_asset_meta",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Blueprint Name: BP_MallEscalator_450\nPath: /Game/Environment/Mall/Blueprints/BP_MallEscalator_450.BP_MallEscalator_450\n\nParent Class: BP_MallEscalator_C\n\nComponents:\n- EscalatorRoot (SceneComponent) [Inherited, Native]\n  - Shell (StaticMeshComponent) [Inherited, Native]\n  - Steps (InstancedStaticMeshComponent) [Inherited, Native]\n  - LowerDeck (BoxComponent) [Inherited, Native]\n  - InclineDeck (BoxComponent) [Inherited, Native]\n  - UpperDeck (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - RiderVolume (BoxComponent) [Inherited, Native]\n  - LowerEndPlate (StaticMeshComponent) [Inherited, Native]\n  - UpperEndPlate (StaticMeshComponent) [Inherited, Native]\n\nTo get referenced struct types/layouts call get_asset_structs\nTo get properties on components use get_blueprint_component_properties"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

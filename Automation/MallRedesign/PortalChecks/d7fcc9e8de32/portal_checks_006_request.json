@@ -1,0 +1,183 @@
+{
+  "tool": "run_verification_sequence",
+  "arguments": {
+    "actions": [
+      {
+        "type": "set_player_transform",
+        "params": {
+          "x": -1299.038105676658,
+          "y": 549.9999999999999,
+          "z": 542.15,
+          "yaw": 150.0,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 2.151
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.401
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "x": 1299.038105676658,
+          "y": 549.9999999999999,
+          "z": 542.15,
+          "yaw": 29.999999999999993,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 2.151
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.401
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "x": -200.0,
+          "y": -650.0,
+          "z": 542.15,
+          "yaw": 0.0,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 2.15
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.4
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "x": -200.0,
+          "y": 650.0,
+          "z": 542.15,
+          "yaw": 0.0,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 2.15
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.4
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "x": -850.0,
+          "y": -200.0,
+          "z": 542.15,
+          "yaw": 90.0,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 2.15
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.4
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      },
+      {
+        "type": "set_player_transform",
+        "params": {
+          "x": 850.0,
+          "y": -200.0,
+          "z": 542.15,
+          "yaw": 90.0,
+          "pitch": 0,
+          "rotation_target": "both",
+          "snap_to_ground": false
+        }
+      },
+      {
+        "type": "simulate_key_press",
+        "params": {
+          "key": "W",
+          "press_duration": 2.15
+        }
+      },
+      {
+        "type": "wait_pie_seconds",
+        "params": {
+          "seconds": 2.4
+        }
+      },
+      {
+        "type": "get_player_transform",
+        "params": {}
+      }
+    ],
+    "record": true,
+    "attach_images": false
+  }
+}

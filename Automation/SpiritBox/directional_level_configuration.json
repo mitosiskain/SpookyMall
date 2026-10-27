@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "actor_count_before": 736,
+  "actor_count_after": 736,
+  "other_actor_poses_preserved": 735,
+  "changed_other_actors": [],
+  "radio_name": "BP_MallSpiritBox_C_1",
+  "radio_label": "SpiritBox_East_F0_02",
+  "radio_class": "/Game/Environment/Mall/Blueprints/BP_MallSpiritBox.BP_MallSpiritBox_C",
+  "radio_pose": [
+    4234.0,
+    -190.0,
+    70.3,
+    0.0,
+    90.0,
+    -0.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "responses": [
+    {
+      "phrase_id": "where_are_you",
+      "sound": "/Game/Audio/Ghost/SpiritBox/SW_SpiritBox_Placeholder.SW_SpiritBox_Placeholder",
+      "subtitle": "I am here."
+    },
+    {
+      "phrase_id": "who_are_you",
+      "sound": "/Game/Audio/Ghost/SpiritBox/SW_SpiritBox_Placeholder.SW_SpiritBox_Placeholder",
+      "subtitle": "I am Evelyn."
+    },
+    {
+      "phrase_id": "how_old_are_you",
+      "sound": "/Game/Audio/Ghost/SpiritBox/SW_SpiritBox_Placeholder.SW_SpiritBox_Placeholder",
+      "subtitle": "I was thirty-two."
+    }
+  ],
+  "powered": false,
+  "map_saved": true
+}

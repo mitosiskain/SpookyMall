@@ -1,0 +1,108 @@
+{
+  "units": "centimeters",
+  "local_axes": {
+    "X": "ascending travel",
+    "Y": "cross tread",
+    "Z": "up"
+  },
+  "origin": "lower outer landing leading edge, centered across width, walking surface Z=0",
+  "lower_landing": {
+    "start": [
+      0,
+      0,
+      0
+    ],
+    "end": [
+      130.0,
+      0,
+      0
+    ]
+  },
+  "slope": {
+    "start": [
+      130.0,
+      0,
+      0
+    ],
+    "end": [
+      753.5382907247958,
+      0,
+      360.0
+    ]
+  },
+  "upper_landing": {
+    "start": [
+      753.5382907247958,
+      0,
+      360.0
+    ],
+    "end": [
+      883.5382907247958,
+      0,
+      360.0
+    ]
+  },
+  "run_cm": 623.5382907247958,
+  "rise_cm": 360.0,
+  "landing_length_cm": 130.0,
+  "step_width_cm": 106.0,
+  "shell_width_cm": 136.0,
+  "fixed_end_plate_length_cm": 45.0,
+  "handrail": {
+    "level_approach": true,
+    "rounded_newel_radius_cm": 30.0,
+    "rubber_section_cm": [
+      10.0,
+      6.4
+    ],
+    "height_above_walk_profile_cm": 111.0
+  },
+  "step_pitch_cm": 40.0,
+  "step_surface_pivot": [
+    0,
+    0,
+    0
+  ],
+  "step_bounds_cm": [
+    [
+      -20.045000076293945,
+      -53.0,
+      -23.0
+    ],
+    [
+      20.0,
+      53.0,
+      0.18000030517578125
+    ]
+  ],
+  "shell_bounds_cm": [
+    [
+      0.0,
+      -68.0038833618164,
+      -60.177642822265625
+    ],
+    [
+      883.5382690429688,
+      68.0038833618164,
+      474.199951171875
+    ]
+  ],
+  "shell_material_slots": [
+    "metal",
+    "glass",
+    "dark",
+    "safety_yellow"
+  ],
+  "step_material_slots": [
+    "tread_dark",
+    "tread_metal",
+    "safety_yellow"
+  ],
+  "removed_static_moving_parts": 120,
+  "fbx_import_settings": {
+    "import_uniform_scale": 1.0,
+    "convert_scene": true,
+    "force_front_x_axis": false
+  },
+  "source_sha256": "b9bc39fa4516480abaf3d0a55c6713c5ba6896c2ab5798493756a894b7d71889"
+}

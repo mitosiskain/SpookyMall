@@ -1,0 +1,72 @@
+{
+  "backend": "Vosk 0.3.45 Win64 + small-en-us-0.15",
+  "model_load_seconds": 0.4786885000012262,
+  "microphone_used": false,
+  "method": "System.Speech offline synthetic WAVs; exact whole-utterance recognition",
+  "cases": [
+    {
+      "case": "come_here",
+      "recognized": "come here",
+      "confidence": 1.0,
+      "matched": "come_here",
+      "expected": "come_here",
+      "passed": true,
+      "decode_seconds": 0.5873541000000841
+    },
+    {
+      "case": "give_me_a_sign",
+      "recognized": "give me a sign",
+      "confidence": 1.0,
+      "matched": "give_me_a_sign",
+      "expected": "give_me_a_sign",
+      "passed": true,
+      "decode_seconds": 0.621086600000126
+    },
+    {
+      "case": "leave_me_alone",
+      "recognized": "leave me alone",
+      "confidence": 1.0,
+      "matched": "leave_me_alone",
+      "expected": "leave_me_alone",
+      "passed": true,
+      "decode_seconds": 0.5871504000006098
+    },
+    {
+      "case": "longer",
+      "recognized": "i said where are you yesterday",
+      "confidence": 1.0,
+      "matched": null,
+      "expected": null,
+      "passed": true,
+      "decode_seconds": 0.9892146999991382
+    },
+    {
+      "case": "negation",
+      "recognized": "do not come here",
+      "confidence": 1.0,
+      "matched": null,
+      "expected": null,
+      "passed": true,
+      "decode_seconds": 0.6258352999993804
+    },
+    {
+      "case": "unrelated",
+      "recognized": "i would like to buy some apples",
+      "confidence": 1.0,
+      "matched": null,
+      "expected": null,
+      "passed": true,
+      "decode_seconds": 0.7264873999993142
+    },
+    {
+      "case": "where_are_you",
+      "recognized": "where are you",
+      "confidence": 1.0,
+      "matched": "where_are_you",
+      "expected": "where_are_you",
+      "passed": true,
+      "decode_seconds": 0.49397420000059356
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "python_agent",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"The agent response stream ended before the response finished. The server likely timed out or the connection dropped.\"\n  }\n]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

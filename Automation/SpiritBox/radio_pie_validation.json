@@ -1,0 +1,33 @@
+{
+  "box_count": 1,
+  "ghost_count": 1,
+  "microphone_used": false,
+  "scan_playing_before": true,
+  "accepted": true,
+  "response_count": 1,
+  "subtitle": "I am here.",
+  "reply_playing": true,
+  "scan_playing_during_reply": false,
+  "radio_location": [
+    4304.999999391602,
+    -194.99999914824247,
+    50.150000000000006
+  ],
+  "reply_location": [
+    4304.999999391602,
+    -194.99999914824247,
+    50.150000000000006
+  ],
+  "ghost_location": [
+    4950.0,
+    0.0,
+    92.1500015258789
+  ],
+  "starting_radio_location": [
+    4304.999999391602,
+    -194.99999914824247,
+    50.150000000000006
+  ],
+  "absolute_location": false,
+  "static_asset": "/Game/Audio/Ghost/SpiritBox/SW_SpiritBox_Static.SW_SpiritBox_Static"
+}

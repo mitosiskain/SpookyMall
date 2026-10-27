@@ -1,0 +1,41 @@
+{
+  "change": "Forgiving ghost phrase matching without a default confidence cutoff",
+  "compile": {"method": "Aura Live Coding", "compile": "Succeeded", "patch": "Succeeded"},
+  "active_settings": {
+    "MinimumPhraseConfidence": 0.0,
+    "voice.SilenceDetectionThreshold": 0.0,
+    "voice.MicNoiseGateThreshold": 0.0,
+    "voice.MicInputGain": 2.0,
+    "capture_tuning_is_temporary": true
+  },
+  "tests": [
+    {
+      "name": "Mall.Voice.NetworkTransport",
+      "result": "Success",
+      "completed_utc": "2026-10-17T01:23:22.876Z",
+      "coverage": "A real owning-client RPC at confidence 0.1 reaches the authoritative ghost after actual decoded synthetic voice and replicates accepted feedback to both clients."
+    },
+    {
+      "name": "MyProject2.Voice.OfflineSpeechBackend",
+      "result": "Success",
+      "completed_utc": "2026-10-17T01:23:36.055Z",
+      "coverage": "Actual Vosk worker decodes existing synthetic positive, unrelated, negated and longer-speech WAV fixtures; no microphone access."
+    },
+    {
+      "name": "MyProject2.Voice.PhraseMatching",
+      "result": "Success",
+      "completed_utc": "2026-10-17T01:23:36.108Z",
+      "coverage": "Both right in the book and the write of the book accepted at confidence 0, 0.1 and 0.4; polite requests, known homophones, negatives, ambiguous matches and invalid scores checked."
+    }
+  ],
+  "final_editor": {
+    "world": "Lvl_MallOval_Test",
+    "pie_active": false,
+    "dirty_map_packages": [],
+    "dirty_content_packages": []
+  },
+  "limitations": [
+    "Real microphone recognition remains the user's next PIE test.",
+    "This pass compiles and patches through Live Coding; a cold native rebuild was not run."
+  ]
+}

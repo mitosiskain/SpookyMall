@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"Python execution result:\\n{\\n  \\\"bSuccess\\\": true,\\n  \\\"Message\\\": \\\"OK\\\",\\n  \\\"ResultData\\\": \\\"LOG OUTPUT:\\\\nEscalator material packages saved\\\\r\\\\n\\\",\\n  \\\"TransactionId\\\": \\\"\\\"\\n}\\nScript ID: 1wyqnlBXZkJHj5USHojb5\"\n  }\n]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

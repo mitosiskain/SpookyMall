@@ -1,0 +1,111 @@
+{
+  "date_utc": "2026-10-18T13:41:40.2097127Z",
+  "build": "Succeeded",
+  "build_log": "Saved/Logs/CartPhysicsBuild.log",
+  "test_filter": "Mall.Ghost+Mall.Cart+Mall.Voice.NetworkTransport",
+  "test_count": 15,
+  "passed": 15,
+  "failed": 0,
+  "tests": [
+    {
+      "test": "Mall.Cart.ConeGeometry",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Cart.FlashlightNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Cart.FPlacementStorageFollowNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 4
+    },
+    {
+      "test": "Mall.Cart.GhostSuppressionCycleNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Cart.MovementStorageNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Cart.PhysicsNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 16
+    },
+    {
+      "test": "Mall.Cart.ProtectionAndBatteryNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 23
+    },
+    {
+      "test": "Mall.Ghost.AutomaticHuntCycleNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Ghost.BookInteraction",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.PhysicalSoundNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Ghost.SpatialAudio",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.SpiritBoxNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Ghost.StateAndDisturbance",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Ghost.StoreLightNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Voice.NetworkTransport",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    }
+  ],
+  "full_report": "Saved/Automation/CartPhysicsFinal/index.json",
+  "binary_sha256": "f5d9f032f72e72c4fb2d4584609919f1c6f2b4f03f6abd061e66afa1a70497dc",
+  "coverage": [
+    "Actual autonomous player movement and ServerMove collision push a simulated cart; peer convergence, upright locks, speed clamp, G physics transitions and occluded/broad grab targeting.",
+    "Actual owner F interaction stores original written book and radio, with original flashlight; all follow controlled motion, physical translation and rotation on authority, peers and late join.",
+    "Rolling cart cannot seal or charge; jitter filtering, physical bump disconnection, cable range/obstruction, ghost collision exclusion and restoration."
+  ],
+  "warning_notes": [
+    "Multi-world automation ambiguity and transient fixture component warnings are present; there are zero test errors."
+  ]
+}

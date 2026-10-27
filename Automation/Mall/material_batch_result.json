@@ -1,0 +1,74 @@
+[
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"ShadingModelOverride\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_leaves\", \"populated_outputs\": [\"BaseColor\", \"OpacityMask\", \"SubsurfaceColor\", \"Roughness\", \"FrontMaterial\", \"Normal\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_MallFloorMarble\", \"populated_outputs\": [\"FrontMaterial\", \"BaseColor\", \"Normal\", \"Roughness\", \"Metallic\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_leaves\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Error executing tool create_edit_material: 1 validation error for create_edit_materialArguments\nparameter_overrides.textures\n  Input should be a valid list [type=list_type, input_value={'FoliageTexture': '/Game...ant_01_leaves_alpha_2k'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/list_type"
+        }
+      ],
+      "isError": true
+    }
+  }
+]

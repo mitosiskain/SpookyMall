@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "baseline_commit": "41e8815",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "result": "Passed native and live two-player prototype checks; hardware audio pending user test",
+  "build": {
+    "target": "MyProject2Editor Win64 Development",
+    "result": "Succeeded",
+    "full_build_log": "Saved/Logs/GhostInteractionBuild.log",
+    "final_build_log": "Saved/Logs/GhostInteractionBuildFinal.log"
+  },
+  "automation": {
+    "report": "Saved/Automation/GhostInteractions/index.json",
+    "succeeded": 6,
+    "failed": 0,
+    "warnings": 0,
+    "errors": 0,
+    "not_run": 0,
+    "tests": [
+      "Mall.Ghost.StateAndDisturbance",
+      "Mall.Voice.CodecAndPacketBounds",
+      "Mall.Voice.NetworkTransport",
+      "MyProject2.Voice.ConcurrentSpeechTeardown",
+      "MyProject2.Voice.OfflineSpeechBackend",
+      "MyProject2.Voice.PhraseMatching"
+    ],
+    "ghost_coverage": [
+      "Independent state attachment with voice disabled",
+      "Server-only mutation and fail-closed missing component",
+      "Mode/visibility replication and preserved voice-signal components",
+      "Book writing replication, synchronized progress and real late join after completion",
+      "Neighbor/upstairs/protruding bounds rejection",
+      "Pause and automatic player-presence rules",
+      "Pawn-ignore prop movement, cooldown and forced recovery"
+    ]
+  },
+  "saved_scene": {
+    "actor_count": 734,
+    "added_actors": [
+      "GhostWritingBook_East_F0_02",
+      "GhostLooseHardcover_East_F0_02",
+      "GhostLooseSoftcover_East_F0_02",
+      "GhostPhysicsFloor_East_F0_02",
+      "GhostPhysicsCounter_East_F0_02"
+    ],
+    "default_mode": "InvisibleDisturbance",
+    "automatic_disturbances": true,
+    "interval_seconds": 12,
+    "interaction_radius_cm": 1000,
+    "ghost_speed_cm_s": 180,
+    "player_speed_cm_s": 600,
+    "writing_duration_seconds": 4,
+    "blueprint_hunt_gates": [
+      "BP_StoreGhost.RuntimeStateTick",
+      "BP_StoreGhost.TryCatchPlayer"
+    ]
+  },
+  "live_pie": {
+    "topology": "Listen server plus one joined client; actual map",
+    "direct_invisible_catch_guard": "Old catch eligibility forced true and direct TryCatchPlayer invoked; catch count remained zero",
+    "writing": {
+      "requested_by": "Remote speaker through actual ghost voice receiver; not an owning-client microphone RPC test",
+      "accepted": true,
+      "finished_on_both_peers": true,
+      "rendered_both_peers_reviewed": true,
+      "preview": "Automation/GhostInteractions/book_written_client.png"
+    },
+    "props": {
+      "original_meshes_unchanged": true,
+      "simple_collision_derivatives": true,
+      "pawn_collision_ignored_on_both_peers": true,
+      "nudge_velocity_cm_s": [
+        40,
+        -25,
+        18
+      ],
+      "throw_velocity_cm_s": [
+        -105,
+        65,
+        145
+      ],
+      "throw_initial_speed_cm_s": 190.4599695,
+      "softcover_actions": 2,
+      "softcover_recoveries": 0,
+      "softcover_net_displacement_cm": 110.4210752,
+      "softcover_max_sampled_interval_speed_cm_s": 240.2752504,
+      "hardcover": "Remained on counter without movement",
+      "softcover": "Settled on floor after throw; action telemetry and movement replicated",
+      "hidden_supports": [
+        {
+          "label": "GhostPhysicsFloor_East_F0_02",
+          "bounds_cm": {
+            "min": [
+              3950,
+              -816.6665,
+              -50
+            ],
+            "max": [
+              5950,
+              816.6665,
+              0
+            ]
+          }
+        },
+        {
+          "label": "GhostPhysicsCounter_East_F0_02",
+          "bounds_cm": {
+            "min": [
+              4162.5,
+              -421.5,
+              84
+            ],
+            "max": [
+              4237.5,
+              -298.5,
+              94
+            ]
+          }
+        }
+      ]
+    },
+    "leave_me_alone": {
+      "accepted": true,
+      "further_disturbance_during_pause": false
+    },
+    "visible_hunt": {
+      "observed_chasing_and_validated_path": true,
+      "intentional_catches": 5,
+      "player_health_both": 100
+    },
+    "moving_invisible_transition": {
+      "before": {
+        "state": "Chasing",
+        "path": true,
+        "speed_cm_s": 80
+      },
+      "after": {
+        "state": "Disturbing",
+        "path": false,
+        "speed_cm_s": 0,
+        "target": null,
+        "catch_count_unchanged": true
+      },
+      "fixture_note": "Temporary PIE chase speed 80 cm/s for transition observation; restored to authored 180 cm/s and verified."
+    },
+    "trace": {
+      "analysis": "Automation/GhostInteractions/trace_analysis.json",
+      "samples": 1859,
+      "duration_seconds": 119.9335369,
+      "capsule_radius_cm": 34,
+      "capsule_half_height_cm": 90,
+      "extra_xy_margin_cm": 5,
+      "samples_outside_capsule_plus_margin": 0,
+      "normal_boundary_counter_range": [
+        0,
+        0
+      ],
+      "ghost_max_sampled_locomotion_speed_cm_s": 180,
+      "catch_reset_intervals_excluded": 5
+    },
+    "separate_forced_boundary_recovery": {
+      "forced_location_cm": [
+        6200,
+        0,
+        92.15
+      ],
+      "recovered_location_cm": [
+        5292.361373,
+        626.942313,
+        92.15
+      ],
+      "mode_remained_invisible": true,
+      "intentional_counter_increment": 1,
+      "catch_count_unchanged": 5,
+      "not_in_normal_trace": true,
+      "recovery_time_not_precisely_measured": true
+    },
+    "speech_workers_ready_both": true,
+    "shutdown": "PIE stopped; editor remains connected without crash"
+  },
+  "rejected_fixtures": [
+    "Initial loose books fell through existing dynamic-mesh floor/counter triangle collision; superseded by fitted mesh colliders and hidden simple supports.",
+    "Two interim support-scale setups used unit-scale instances because spawn tool ignored the scale argument; corrected and verified before accepted recording.",
+    "Earlier invisible transition happened at rest after a catch; separate moving-chase transition supplies the movement-stop evidence."
+  ],
+  "evidence_root": "Saved/GhostInteractionPrototype",
+  "evidence_files": [
+    "final_write_move_tool.json",
+    "final_throw_pause_tool.json",
+    "final_replica_sequence_tool.json",
+    "final_hunt_sequence_tool.json",
+    "final_invisible_stop_tool.json",
+    "final_peers_tool.json",
+    "final_trace_tool.json",
+    "final_trace_analysis.json",
+    "moving_stop_tool.json",
+    "final_guard_tool.json"
+  ],
+  "limits": [
+    "Image wipe reveal rather than freehand pen strokes; open book is always open, no pickup/page turning/E-to-read UI.",
+    "Book/prop appearance is configured in Blueprint defaults; runtime server appearance assignment needs explicit visual refresh.",
+    "Native tests use generated/fixture audio; new writing phrases tested in matcher and live receiver, not actual microphone.",
+    "Editor Python nested RPC callspace is local; live direct receiver results do not prove complete microphone transport or multicast cue media.",
+    "Sampled root positions do not prove instantaneous prop velocity ceilings, every rotated mesh bound or every simulation frame.",
+    "Hunt mode is host console controlled, not an automatic player-facing hunt cycle.",
+    "Real two-computer proximity audio, actual microphone recognition, audible cues and packaged build remain unverified."
+  ],
+  "final_editor": {
+    "map": "Lvl_MallOval_Test",
+    "pie_active": false,
+    "connected": true,
+    "dirty_map_packages": [],
+    "dirty_content_packages": [],
+    "default_automatic_disturbances_restored": true
+  },
+  "computer_use": false,
+  "independent_review": "Read-only book/prop and receiver integration review found no blockers."
+}

@@ -1,0 +1,3811 @@
+{
+  "asset_count": 28,
+  "source_pack": "https://3dassets.dev/packs/retail-store-fixtures-and-mall",
+  "license": "CC0 1.0 Universal",
+  "intended_use": "central atrium structure, public seating, planters and enterable placeholder retail interiors",
+  "units": "centimeters",
+  "fbx_import_settings": {
+    "import_uniform_scale": 1.0,
+    "convert_scene": true,
+    "convert_scene_unit": true,
+    "force_front_x_axis": false,
+    "combine_meshes": true,
+    "normal_import_method": "import normals",
+    "auto_generate_collision": false,
+    "import_materials": false,
+    "import_textures": false
+  },
+  "collision_note": "Use box collisions or per-poly static shell collision after checking entrance clearance. No baked collision in source.",
+  "materials": [
+    {
+      "name": "floor",
+      "base_color_linear_rgba": [
+        0.79,
+        0.78,
+        0.75,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.82,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "two_sided": false,
+      "emissive_linear_rgb": [
+        0,
+        0,
+        0
+      ],
+      "transmission": 0,
+      "has_textures": false
+    },
+    {
+      "name": "carcass",
+      "base_color_linear_rgba": [
+        0.88,
+        0.87,
+        0.85,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.52,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "two_sided": false,
+      "emissive_linear_rgb": [
+        0,
+        0,
+        0
+      ],
+      "transmission": 0,
+      "has_textures": false
+    },
+    {
+      "name": "dark",
+      "base_color_linear_rgba": [
+        0.13,
+        0.14,
+        0.15,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.55,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "two_sided": false,
+      "emissive_linear_rgb": [
+        0,
+        0,
+        0
+      ],
+      "transmission": 0,
+      "has_textures": false
+    },
+    {
+      "name": "metal",
+      "base_color_linear_rgba": [
+        0.71,
+        0.72,
+        0.75,
+        1
+      ],
+      "metallic": 1,
+      "roughness": 0.35,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "two_sided": false,
+      "emissive_linear_rgb": [
+        0,
+        0,
+        0
+      ],
+      "transmission": 0,
+      "has_textures": false
+    },
+    {
+      "name": "glass",
+      "base_color_linear_rgba": [
+        0.6,
+        0.7,
+        0.74,
+        1
+      ],
+      "metallic": 0.2,
+      "roughness": 0.11,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "two_sided": false,
+      "emissive_linear_rgb": [
+        0,
+        0,
+        0
+      ],
+      "transmission": 0,
+      "has_textures": false
+    },
+    {
+      "name": "surface",
+      "base_color_linear_rgba": [
+        0.6,
+        0.45,
+        0.3,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "two_sided": false,
+      "emissive_linear_rgb": [
+        0,
+        0,
+        0
+      ],
+      "transmission": 0,
+      "has_textures": false
+    },
+    {
+      "name": "accent",
+      "base_color_linear_rgba": [
+        0.74,
+        0.29,
+        0.21,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.55,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "two_sided": false,
+      "emissive_linear_rgb": [
+        0,
+        0,
+        0
+      ],
+      "transmission": 0,
+      "has_textures": false
+    }
+  ],
+  "assets": [
+    {
+      "source_id": "25356",
+      "title": "Mall unit shell module 1.2 m (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25356_MallUnitShellModule",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25356_MallUnitShellModule.fbx",
+      "dimensions_cm": [
+        120.12000274658203,
+        100.0042724609375,
+        399.9974060058594
+      ],
+      "bounds_cm": [
+        [
+          -60.060001373291016,
+          -50.00213623046875,
+          0.0
+        ],
+        [
+          60.060001373291016,
+          50.00213623046875,
+          399.9974060058594
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        0.05999755859375,
+        -19.999998092651367,
+        -0.0017084181308746338
+      ],
+      "source_module_front_plane_local_y_cm": -19.999998092651367,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "floor",
+        "carcass",
+        "dark",
+        "metal"
+      ],
+      "materials": [
+        {
+          "name": "floor",
+          "base_color_linear_rgba": [
+            0.79,
+            0.78,
+            0.75,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.82,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-unit-shell-module-41eecee9",
+      "download_url": "https://cdn.3dassets.dev/assets/25356/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "2685f24d31cadc2b9190fd9d74a999398b9c61069414714b11691c572b3dec67",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.2 m mall unit shell module 4 m tall: a concourse floor slab edge, a 2.9 m shopfront opening, a bulkhead over the opening and a capping band at the mall ceiling line. Shells tile along X at 1.2 m and share the shopfront run ports, so glazed shopfront modules drop straight into the opening line. Dimensions 1.20 by 4.00 by 1.00 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: run-left, run-right (shopfront-run). Static geometry; no rig, collision or navigation data.",
+      "triangles": 384,
+      "vertices": 1152
+    },
+    {
+      "source_id": "25357",
+      "title": "Mall unit shell pier module (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25357_MallUnitShellPier",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25357_MallUnitShellPier.fbx",
+      "dimensions_cm": [
+        120.24140167236328,
+        100.0042724609375,
+        399.998291015625
+      ],
+      "bounds_cm": [
+        [
+          -60.12070083618164,
+          -50.00213623046875,
+          0.0
+        ],
+        [
+          60.12070083618164,
+          50.00213623046875,
+          399.998291015625
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -19.999998092651367,
+        -0.0017084181308746338
+      ],
+      "source_module_front_plane_local_y_cm": -19.999998092651367,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "floor",
+        "dark",
+        "carcass",
+        "metal"
+      ],
+      "materials": [
+        {
+          "name": "floor",
+          "base_color_linear_rgba": [
+            0.79,
+            0.78,
+            0.75,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.82,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-unit-shell-pier-cd07d94b",
+      "download_url": "https://cdn.3dassets.dev/assets/25357/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "8c63247bcf999ba3b9448811902c91662245305a4a12dff5b8d7e2100f8e3c6f",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.2 m mall unit pier: a full-height clad pier between two tenancies, with a chamfered base plinth, a flush clad face and the same capping band as the shell module. Separates adjacent units in a mall run; ports match the shell module. Dimensions 1.20 by 4.00 by 1.00 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: run-left, run-right (shopfront-run). Static geometry; no rig, collision or navigation data.",
+      "triangles": 384,
+      "vertices": 1152
+    },
+    {
+      "source_id": "25358",
+      "title": "Mall unit shell corner (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25358_MallUnitShellCorner",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25358_MallUnitShellCorner.fbx",
+      "dimensions_cm": [
+        119.993896484375,
+        160.0,
+        399.998291015625
+      ],
+      "bounds_cm": [
+        [
+          -59.9969482421875,
+          -80.0,
+          0.0
+        ],
+        [
+          59.9969482421875,
+          80.0,
+          399.998291015625
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        30.0,
+        10.000003814697266,
+        -0.0017091631889343262
+      ],
+      "source_module_front_plane_local_y_cm": 10.000003814697266,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "floor",
+        "carcass",
+        "dark",
+        "metal"
+      ],
+      "materials": [
+        {
+          "name": "floor",
+          "base_color_linear_rgba": [
+            0.79,
+            0.78,
+            0.75,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.82,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-unit-shell-corner-0c665ed0",
+      "download_url": "https://cdn.3dassets.dev/assets/25358/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "1d1d4dd2297a530a38e073299ab85221a69811d3a2f510e3c174b51a4812f1df",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A mall unit shell corner: two shell returns meeting at 90 degrees on a shared corner pier, with the bulkhead and capping band carried around the turn. The X leg keeps the shopfront line at z = 0 and the Z leg turns through 90 degrees, so shell modules butt onto either leg. Dimensions 1.20 by 4.00 by 1.60 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: run-left, run-right (shopfront-run). Static geometry; no rig, collision or navigation data.",
+      "triangles": 768,
+      "vertices": 2304
+    },
+    {
+      "source_id": "25340",
+      "title": "Shopfront glazed module 1.2 m (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25340_ShopfrontGlazedModule",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25340_ShopfrontGlazedModule.fbx",
+      "dimensions_cm": [
+        120.126708984375,
+        18.00347900390625,
+        320.0025939941406
+      ],
+      "bounds_cm": [
+        [
+          -60.0633544921875,
+          -9.001739501953125,
+          0.0
+        ],
+        [
+          60.0633544921875,
+          9.001739501953125,
+          320.0025939941406
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        0.05664253234863281,
+        -0.0,
+        0.002594292163848877
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "carcass",
+        "metal",
+        "glass"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "glass",
+          "base_color_linear_rgba": [
+            0.6,
+            0.7,
+            0.74,
+            1
+          ],
+          "metallic": 0.2,
+          "roughness": 0.11,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-glazed-module-e3362ff9",
+      "download_url": "https://cdn.3dassets.dev/assets/25340/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "d5ed99aafd5ffc6b7165b8a99130c315057c8621d6f9c251b5bc7bdaca24b702",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.2 m glazed shopfront module 3.2 m tall: an aluminium cill, stall riser, mullions and head with a full-height pane and a transom light above. The run tiles at 1.2 m; ports sit on the glazing line so modules butt without a gap. Dimensions 1.20 by 3.20 by 0.18 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: run-left, run-right (shopfront-run). Static geometry; no rig, collision or navigation data.",
+      "triangles": 576,
+      "vertices": 1728
+    },
+    {
+      "source_id": "25341",
+      "title": "Shopfront pier module 1.2 m (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25341_ShopfrontPier",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25341_ShopfrontPier.fbx",
+      "dimensions_cm": [
+        120.00000762939453,
+        22.00653076171875,
+        319.998291015625
+      ],
+      "bounds_cm": [
+        [
+          -60.000003814697266,
+          -11.003265380859375,
+          0.0
+        ],
+        [
+          60.000003814697266,
+          11.003265380859375,
+          319.998291015625
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0017084181308746338
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "carcass"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-pier-module-420463fc",
+      "download_url": "https://cdn.3dassets.dev/assets/25341/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "2e0d5d629c75498bff8ac714b886e7715930f8dd0911cc40adff8af850345eab",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A solid 1.2 m shopfront pier module: a rendered pier with a chamfered plinth, a projecting reveal and a plain head band, for closing a shopfront run at a party wall. Same run pitch and port height as the glazed module, with no opening. Dimensions 1.20 by 3.20 by 0.22 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: run-left, run-right (shopfront-run). Static geometry; no rig, collision or navigation data.",
+      "triangles": 320,
+      "vertices": 960
+    },
+    {
+      "source_id": "25343",
+      "title": "Shopfront entrance module, door open (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25343_ShopfrontOpenEntrance",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25343_ShopfrontOpenEntrance.fbx",
+      "dimensions_cm": [
+        120.013427734375,
+        106.9234390258789,
+        320.0
+      ],
+      "bounds_cm": [
+        [
+          -60.0067138671875,
+          -53.46171951293945,
+          0.0
+        ],
+        [
+          60.0067138671875,
+          53.46171951293945,
+          320.0
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        43.4614143371582,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": 43.4614143371582,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "glass",
+        "dark"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "glass",
+          "base_color_linear_rgba": [
+            0.6,
+            0.7,
+            0.74,
+            1
+          ],
+          "metallic": 0.2,
+          "roughness": 0.11,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-entrance-open-ce501cbf",
+      "download_url": "https://cdn.3dassets.dev/assets/25343/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "d5c7c34321724428c8620cba641281a1dbbac87ea70b2d7dee00688df8501eb6",
+      "source_animation_clips": [
+        "open",
+        "close"
+      ],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "The 1.2 m shopfront entrance with the leaf swung inward on its hinge, showing the threshold plate and the frame rebate. Identical frame to the closed entrance with the named leaf rotated about the same pivot. Dimensions 1.20 by 3.20 by 1.07 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: run-left, run-right (shopfront-run). Named pivoted nodes: entrance-door. Rigid node-transform clips: open and close. No skinning. No collision or navigation data.",
+      "triangles": 872,
+      "vertices": 2616
+    },
+    {
+      "source_id": "25355",
+      "title": "Shopfront corner post (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25355_ShopfrontCornerPost",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25355_ShopfrontCornerPost.fbx",
+      "dimensions_cm": [
+        26.0,
+        26.0,
+        325.0
+      ],
+      "bounds_cm": [
+        [
+          -13.0,
+          -13.0,
+          0.0
+        ],
+        [
+          13.0,
+          13.0,
+          325.0
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "dark"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-corner-post-00b020f1",
+      "download_url": "https://cdn.3dassets.dev/assets/25355/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "ebe79c769f6c4dc123b89770168b1b832b5b016d7543c9ef782a176e18dd6c71",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A structural shopfront corner post 3.2 m tall: a chamfered aluminium box section with glazing rebates on two faces and a capping plate. Turns a shopfront run through 90 degrees; each face carries a `shopfront-run` port on the glazing line. Dimensions 0.26 by 3.25 by 0.26 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: run-left, run-right (shopfront-run). Static geometry; no rig, collision or navigation data.",
+      "triangles": 320,
+      "vertices": 960
+    },
+    {
+      "source_id": "25345",
+      "title": "Roller shutter, open (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25345_RollerShutterOpen",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25345_RollerShutterOpen.fbx",
+      "dimensions_cm": [
+        144.0,
+        35.9996337890625,
+        300.0
+      ],
+      "bounds_cm": [
+        [
+          -72.0,
+          -17.99981689453125,
+          0.0
+        ],
+        [
+          72.0,
+          17.99981689453125,
+          300.0
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "dark"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-roller-shutter-open-2351a05a",
+      "download_url": "https://cdn.3dassets.dev/assets/25345/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "7c1c991ac4640d2b9aaa6194129100250a28416998b39dfa0ab613de7f05d9ff",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.4 m shopfront roller shutter in the open position: side guides, a chamfered head box, end plates and the curtain coiled on the barrel with the bottom rail parked under the box. The `roller-shutter` node is pivoted on the barrel axis. The closed variant is the same box and guides with the curtain run down, and carries the open and close clips. Dimensions 1.44 by 3.00 by 0.36 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Named pivoted nodes: roller-shutter. Static geometry; no rig, collision or navigation data.",
+      "triangles": 704,
+      "vertices": 2112
+    },
+    {
+      "source_id": "25344",
+      "title": "Roller shutter, closed (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25344_RollerShutterClosed",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25344_RollerShutterClosed.fbx",
+      "dimensions_cm": [
+        144.0,
+        35.9996337890625,
+        300.0033264160156
+      ],
+      "bounds_cm": [
+        [
+          -72.0,
+          -17.99981689453125,
+          0.0
+        ],
+        [
+          72.0,
+          17.99981689453125,
+          300.0033264160156
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        0.003327801823616028
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "dark"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-roller-shutter-closed-92cb4c1e",
+      "download_url": "https://cdn.3dassets.dev/assets/25344/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "44a476b1521e3ba0dce014bc4a5ee1c018beb66a738cbfb236be81ea148f8d28",
+      "source_animation_clips": [
+        "open",
+        "close"
+      ],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "The shopfront roller shutter run down: interlocking slats filling the guides from the head box to a heavier bottom rail on the threshold. Same box, guides and end plates as the open shutter with the named curtain node deployed. Dimensions 1.44 by 3.00 by 0.36 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Named pivoted nodes: roller-shutter. Rigid node-transform clips: open and close. No skinning. No collision or navigation data.",
+      "triangles": 4768,
+      "vertices": 14304
+    },
+    {
+      "source_id": "25369",
+      "title": "Large atrium planter (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25369_LargeAtriumPlanter",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25369_LargeAtriumPlanter.fbx",
+      "dimensions_cm": [
+        128.0,
+        128.0,
+        75.99891662597656
+      ],
+      "bounds_cm": [
+        [
+          -64.0,
+          -64.0,
+          0.0
+        ],
+        [
+          64.0,
+          64.0,
+          75.99891662597656
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0009298324584960938
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "carcass",
+        "surface"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-atrium-planter-large-ee11d12d",
+      "download_url": "https://cdn.3dassets.dev/assets/25369/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "7a8f63103024a8f1111441272ae94b4ea217d5090a2add960320077a68eeb830",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A large square atrium planter 1.2 m across and 0.75 m high: a chamfered composite tub with a broad top ledge, a recessed shadow-gap base and an empty soil void with a drainage bed. Supplied empty; planting comes from the Nature packs rather than being remodelled here. Dimensions 1.28 by 0.76 by 1.28 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 448,
+      "vertices": 1344
+    },
+    {
+      "source_id": "25370",
+      "title": "Atrium planter trough (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25370_AtriumPlanterTrough",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25370_AtriumPlanterTrough.fbx",
+      "dimensions_cm": [
+        188.0,
+        58.00018310546875,
+        60.12028884887695
+      ],
+      "bounds_cm": [
+        [
+          -94.0,
+          -29.000091552734375,
+          0.0
+        ],
+        [
+          94.0,
+          29.000091552734375,
+          60.12028884887695
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        0.0036478042602539062
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "carcass",
+        "surface"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-atrium-planter-trough-9ba1cffe",
+      "download_url": "https://cdn.3dassets.dev/assets/25370/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "3f43d5c92d61b1a0445688c5ee981633115d85b5082796b1b6770d1b13fdce75",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.8 by 0.5 m planter trough at 0.6 m: a tapered chamfered tub on a recessed plinth with a timber capping ledge and an empty soil void. Divides a concourse or a food-court seating area; supplied empty. Dimensions 1.88 by 0.60 by 0.58 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 448,
+      "vertices": 1344
+    },
+    {
+      "source_id": "25366",
+      "title": "Concourse bench (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25366_ConcourseBench",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25366_ConcourseBench.fbx",
+      "dimensions_cm": [
+        180.0,
+        71.00460815429688,
+        47.103031158447266
+      ],
+      "bounds_cm": [
+        [
+          -90.0,
+          -35.50230407714844,
+          0.0
+        ],
+        [
+          90.0,
+          35.50230407714844,
+          47.103031158447266
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0021383166313171387
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "surface",
+        "metal",
+        "dark"
+      ],
+      "materials": [
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-bench-e1d49b32",
+      "download_url": "https://cdn.3dassets.dev/assets/25366/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "431bb3ea9ca0186826569f0b66e28bb39134face0a9efa7d17d6811dbefe1b5e",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.8 m concourse bench: seven timber slats on a pair of cast steel sled legs with a shaped back rail and rubber floor pads, 0.45 m seat height. Slats are chamfered on all four edges, so the seat reads as timber rather than as a slab. Dimensions 1.80 by 0.47 by 0.71 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 1248,
+      "vertices": 3744
+    },
+    {
+      "source_id": "25368",
+      "title": "Curved concourse bench (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25368_CurvedConcourseBench",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25368_CurvedConcourseBench.fbx",
+      "dimensions_cm": [
+        173.92723083496094,
+        71.70576477050781,
+        46.42670822143555
+      ],
+      "bounds_cm": [
+        [
+          -86.96361541748047,
+          -35.852882385253906,
+          0.0
+        ],
+        [
+          86.96361541748047,
+          35.85287857055664,
+          46.42670822143555
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        52.143516540527344,
+        0.003445148468017578
+      ],
+      "source_module_front_plane_local_y_cm": 52.143516540527344,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "surface",
+        "metal",
+        "dark"
+      ],
+      "materials": [
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-curved-concourse-bench-f19f405c",
+      "download_url": "https://cdn.3dassets.dev/assets/25368/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "aeb2ac1efbddf1ae388a8a2a6e459b61fc32d3ed9443711dce57a94b4f46c784",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A curved backless concourse bench: an arc of eleven timber slats on three cast pedestals, sweeping 2.4 m around an atrium planter. The slats follow the arc rather than being straight sections, so the curve reads at any angle. Dimensions 1.74 by 0.46 by 0.72 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 1560,
+      "vertices": 4680
+    },
+    {
+      "source_id": "25378",
+      "title": "Concourse planter bench (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25378_ConcoursePlanterBench",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25378_ConcoursePlanterBench.fbx",
+      "dimensions_cm": [
+        166.0,
+        118.00477600097656,
+        71.12433624267578
+      ],
+      "bounds_cm": [
+        [
+          -83.0,
+          -59.00238800048828,
+          0.0
+        ],
+        [
+          83.0,
+          59.00238800048828,
+          71.12433624267578
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        19.99916648864746,
+        0.00422745943069458
+      ],
+      "source_module_front_plane_local_y_cm": 19.99916648864746,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "carcass",
+        "surface",
+        "metal"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-planter-bench-7416799b",
+      "download_url": "https://cdn.3dassets.dev/assets/25378/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "b63b3a55051f8b02f856f9144cdd5310553597bd1d3f85f43b06f419a22dda82",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A combined planter and bench: a 1.6 m chamfered planter tub with a timber slat seat cantilevered off one long face at 0.45 m, on a recessed plinth. Supplied with the soil void empty; planting comes from the Nature packs. Dimensions 1.66 by 0.71 by 1.18 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 960,
+      "vertices": 2880
+    },
+    {
+      "source_id": "25310",
+      "title": "Cash desk module 1.2 m (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25310_CashDesk120",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25310_CashDesk120.fbx",
+      "dimensions_cm": [
+        123.0,
+        75.00796508789062,
+        127.99581146240234
+      ],
+      "bounds_cm": [
+        [
+          -61.5,
+          -37.50398254394531,
+          0.0
+        ],
+        [
+          61.5,
+          37.50398254394531,
+          127.99581146240234
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.002777203917503357
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "carcass",
+        "surface",
+        "metal",
+        "glass"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "glass",
+          "base_color_linear_rgba": [
+            0.6,
+            0.7,
+            0.74,
+            1
+          ],
+          "metallic": 0.2,
+          "roughness": 0.11,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cash-desk-module-1200-daec0656",
+      "download_url": "https://cdn.3dassets.dev/assets/25310/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "400aaf8bbcaee49a56a2cc15212c11e5eed6b683ee2a2599c3283ff3b92587d1",
+      "source_animation_clips": [
+        "open",
+        "close"
+      ],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.2 m cash desk module on the 600 mm counter grid: a chamfered carcass with a timber customer face, a bullnose worktop, a glazed counter guard and a named till drawer. Counter ports sit at 0.45 m on each side; desks butt at a 600 mm pitch. Dimensions 1.23 by 1.28 by 0.75 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: counter-left, counter-right (counter-run). Named pivoted nodes: till-drawer. Rigid node-transform clips: open and close. No skinning. No collision or navigation data.",
+      "triangles": 640,
+      "vertices": 1920
+    },
+    {
+      "source_id": "25317",
+      "title": "Cash desk back fixture (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25317_CashDeskBackFixture",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25317_CashDeskBackFixture.fbx",
+      "dimensions_cm": [
+        142.0,
+        43.999324798583984,
+        234.99998474121094
+      ],
+      "bounds_cm": [
+        [
+          -71.0,
+          -21.999662399291992,
+          0.0
+        ],
+        [
+          71.0,
+          21.999662399291992,
+          234.99998474121094
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "carcass",
+        "dark",
+        "surface",
+        "metal",
+        "accent"
+      ],
+      "materials": [
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "accent",
+          "base_color_linear_rgba": [
+            0.74,
+            0.29,
+            0.21,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cash-desk-back-fixture-b9d666d8",
+      "download_url": "https://cdn.3dassets.dev/assets/25317/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "ef3d36266fa0a101e6e3b1dff2462acff7f518a0df352f1692634c33a8af17c7",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A back-of-counter fixture: a 1.4 m unit with three open shelves, a bag rail, two lockable cupboards with handles and a blank sign panel above. Sits behind the cash desk run; the two cupboard doors are hinged leaves with a shared plinth. Dimensions 1.42 by 2.35 by 0.44 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 1176,
+      "vertices": 3528
+    },
+    {
+      "source_id": "25162",
+      "title": "Slatwall panel 1.2 by 2.4 m (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25162_Slatwall120x240",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25162_Slatwall120x240.fbx",
+      "dimensions_cm": [
+        120.25419616699219,
+        2.726055145263672,
+        240.12001037597656
+      ],
+      "bounds_cm": [
+        [
+          -60.127098083496094,
+          -1.363027572631836,
+          0.0
+        ],
+        [
+          60.127098083496094,
+          1.3630274534225464,
+          240.12001037597656
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -1.2400001287460327,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -1.2400001287460327,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "carcass",
+        "metal",
+        "dark"
+      ],
+      "materials": [
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-slatwall-panel-2400-b9244dd5",
+      "download_url": "https://cdn.3dassets.dev/assets/25162/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "dd8235d7c21e3667f41e447c3637bff36a5e2d91181f8e9fe8dd33747c5455b7",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A full-height slatwall panel on the 1.2 m module: an extruded slot profile at 100 mm centres with aluminium insert strips, a skirting rail and a capping rail. Panels butt along X at a 1.2 m pitch; `run-left` and `run-right` sit on the module boundary at 1.2 m above the floor. Dimensions 1.20 by 2.40 by 0.03 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: run-left, run-right (shopfront-run). Static geometry; no rig, collision or navigation data.",
+      "triangles": 1980,
+      "vertices": 5940
+    },
+    {
+      "source_id": "25166",
+      "title": "Slatwall shelf bracket and shelf (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25166_SlatwallShelfBracket",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25166_SlatwallShelfBracket.fbx",
+      "dimensions_cm": [
+        60.000003814697266,
+        29.797666549682617,
+        14.35590648651123
+      ],
+      "bounds_cm": [
+        [
+          -30.000001907348633,
+          -14.898833274841309,
+          0.0
+        ],
+        [
+          30.000001907348633,
+          14.898833274841309,
+          14.35590648651123
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        14.100001335144043,
+        -0.00036135315895080566
+      ],
+      "source_module_front_plane_local_y_cm": 14.100001335144043,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "surface"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-slatwall-shelf-bracket-9b6bccae",
+      "download_url": "https://cdn.3dassets.dev/assets/25166/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "c3c34afc26a330668e351a04b56a9ddd19c3f2bf64a3b04f021041f440401829",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A pair of hooked slatwall shelf brackets carrying a 0.6 m timber shelf with a chamfered front edge and a shallow front lip. The hook tongue is modelled so the bracket reads as engaging the slot rather than floating against the panel. Dimensions 0.60 by 0.14 by 0.30 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 640,
+      "vertices": 1920
+    },
+    {
+      "source_id": "25183",
+      "title": "Perimeter wall bay 2.4 m (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25183_PerimeterWallBay240",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25183_PerimeterWallBay240.fbx",
+      "dimensions_cm": [
+        135.0001983642578,
+        39.99345779418945,
+        243.39999389648438
+      ],
+      "bounds_cm": [
+        [
+          -67.5000991821289,
+          -19.996728897094727,
+          0.0
+        ],
+        [
+          67.5000991821289,
+          19.996728897094727,
+          243.39999389648438
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "surface",
+        "carcass"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-2400-986272c2",
+      "download_url": "https://cdn.3dassets.dev/assets/25183/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "24d25ba8bb8f635c1ebfde1ed016512060e68f8acabdf00532bbf51fa641a194",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.35 m perimeter shop wall bay with 2.4 m slotted uprights, a kick plinth, a back panel and four adjustable timber shelves on cantilever brackets. Perimeter bay on the 1.35 m shop pitch, 2.4 m uprights; bays butt along X and the ports sit on the upright line. Dimensions 1.35 by 2.43 by 0.40 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: bay-left, bay-right (shop-bay). Static geometry; no rig, collision or navigation data.",
+      "triangles": 2440,
+      "vertices": 7320
+    },
+    {
+      "source_id": "25181",
+      "title": "Perimeter wall bay with hanging rails (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25181_PerimeterWallBayHangingRails",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25181_PerimeterWallBayHangingRails.fbx",
+      "dimensions_cm": [
+        135.0001983642578,
+        39.99345779418945,
+        243.39999389648438
+      ],
+      "bounds_cm": [
+        [
+          -67.5000991821289,
+          -19.996728897094727,
+          0.0
+        ],
+        [
+          67.5000991821289,
+          19.996728897094727,
+          243.39999389648438
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "surface",
+        "carcass"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-hanging-rail-fa616c40",
+      "download_url": "https://cdn.3dassets.dev/assets/25181/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "49ffb0ca5608630d93eb0b8b457e0b4a0b0791f27a826e76025d0da35d289453",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.35 m perimeter bay fitted for hanging stock: two full-width chrome rails on cantilever brackets over a kick plinth, with a back panel and a top shelf. Perimeter bay on the 1.35 m shop pitch, 2.4 m uprights; bays butt along X and the ports sit on the upright line. Dimensions 1.35 by 2.43 by 0.40 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: bay-left, bay-right (shop-bay). Static geometry; no rig, collision or navigation data.",
+      "triangles": 2856,
+      "vertices": 8568
+    },
+    {
+      "source_id": "25184",
+      "title": "Perimeter wall bay, shelf and rail (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25184_PerimeterWallBayShelfAndRail",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25184_PerimeterWallBayShelfAndRail.fbx",
+      "dimensions_cm": [
+        135.0001983642578,
+        39.99345779418945,
+        243.39999389648438
+      ],
+      "bounds_cm": [
+        [
+          -67.5000991821289,
+          -19.996728897094727,
+          0.0
+        ],
+        [
+          67.5000991821289,
+          19.996728897094727,
+          243.39999389648438
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "surface",
+        "carcass"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-shelf-and-rail-e1cc3046",
+      "download_url": "https://cdn.3dassets.dev/assets/25184/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "c7b20c3ac7582b81782b1fba39e25df0a7abeebbb0c8dd6a5c69aa94034b842f",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A mixed perimeter bay: two folded-stock shelves over a single hanging rail, the usual arrangement at the end of an apparel wall run. Perimeter bay on the 1.35 m shop pitch, 2.4 m uprights; bays butt along X and the ports sit on the upright line. Dimensions 1.35 by 2.43 by 0.40 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: bay-left, bay-right (shop-bay). Static geometry; no rig, collision or navigation data.",
+      "triangles": 2616,
+      "vertices": 7848
+    },
+    {
+      "source_id": "25193",
+      "title": "Perimeter wall bay, shoe shelves (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25193_PerimeterWallBayShoeShelves",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25193_PerimeterWallBayShoeShelves.fbx",
+      "dimensions_cm": [
+        135.0001983642578,
+        39.99345779418945,
+        243.39999389648438
+      ],
+      "bounds_cm": [
+        [
+          -67.5000991821289,
+          -19.996728897094727,
+          0.0
+        ],
+        [
+          67.5000991821289,
+          19.996728897094727,
+          243.39999389648438
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "surface",
+        "carcass"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-shoe-shelves-db35fa9a",
+      "download_url": "https://cdn.3dassets.dev/assets/25193/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "5854a87ec8a5bc7140c79eb69b9f2731e017bdf7cadebfc0c8b43831ee2d7d24",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A shoe wall bay: six raked shelves with front retaining rails at a rising pitch, on 2.4 m uprights over a kick plinth. Perimeter bay on the 1.35 m shop pitch, 2.4 m uprights; bays butt along X and the ports sit on the upright line. Dimensions 1.35 by 2.43 by 0.40 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: bay-left, bay-right (shop-bay). Static geometry; no rig, collision or navigation data.",
+      "triangles": 4488,
+      "vertices": 13464
+    },
+    {
+      "source_id": "25197",
+      "title": "Perimeter wall bay corner (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25197_PerimeterWallBayCorner",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25197_PerimeterWallBayCorner.fbx",
+      "dimensions_cm": [
+        75.4029769897461,
+        75.4029769897461,
+        240.00001525878906
+      ],
+      "bounds_cm": [
+        [
+          -37.70148849487305,
+          -37.70148849487305,
+          0.0
+        ],
+        [
+          37.70148849487305,
+          37.70148849487305,
+          240.00001525878906
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        17.303321838378906,
+        17.303321838378906,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": 17.303321838378906,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "carcass",
+        "surface"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-corner-166781af",
+      "download_url": "https://cdn.3dassets.dev/assets/25197/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "8015ddc15f9e0753b28a99a92124bba577abf0dd03787b4b09298c1831cf1204",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "An internal corner unit joining two perimeter wall runs at 90 degrees: a shelf stack on three uprights with both backs panelled and the kick plinth carried around the corner. The X run keeps the normal bay back line at z = -0.175 and the Z run turns through 90 degrees, so a bay butts onto either leg without an offset. Dimensions 0.75 by 2.40 by 0.75 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: bay-left, bay-right (shop-bay). Static geometry; no rig, collision or navigation data.",
+      "triangles": 960,
+      "vertices": 2880
+    },
+    {
+      "source_id": "25242",
+      "title": "Mid-floor gondola, general merchandise (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25242_MerchandiseGondola",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25242_MerchandiseGondola.fbx",
+      "dimensions_cm": [
+        135.24124145507812,
+        65.99002838134766,
+        150.0
+      ],
+      "bounds_cm": [
+        [
+          -67.62062072753906,
+          -32.99501419067383,
+          0.0
+        ],
+        [
+          67.62062072753906,
+          32.99501419067383,
+          150.0
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "carcass",
+        "dark",
+        "surface"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mid-floor-gondola-630432ab",
+      "download_url": "https://cdn.3dassets.dev/assets/25242/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "abba57a2ce341a8f143a65e399ab0d15b1174bc33d3415521ccf83b24b8e5c91",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.35 m double-sided mid-floor gondola for general merchandise: a slotted spine with a panelled back, a plinth base deck and three timber decks each side, 1.5 m high. Non-grocery: open timber decks for boxed and folded stock, no chilled case, wire fronts or food shelf strips. Gondolas butt at the 1.35 m shop pitch. Dimensions 1.35 by 1.50 by 0.66 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Connectors: bay-left, bay-right (shop-bay). Static geometry; no rig, collision or navigation data.",
+      "triangles": 1472,
+      "vertices": 4416
+    },
+    {
+      "source_id": "25244",
+      "title": "Gondola endcap unit (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25244_GondolaEndcap",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25244_GondolaEndcap.fbx",
+      "dimensions_cm": [
+        65.997802734375,
+        42.99473571777344,
+        182.0
+      ],
+      "bounds_cm": [
+        [
+          -32.9989013671875,
+          -21.49736785888672,
+          0.0
+        ],
+        [
+          32.9989013671875,
+          21.49736785888672,
+          182.0
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        7.499312877655029,
+        -0.0
+      ],
+      "source_module_front_plane_local_y_cm": 7.499312877655029,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "carcass",
+        "surface",
+        "accent",
+        "metal"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "surface",
+          "base_color_linear_rgba": [
+            0.6,
+            0.45,
+            0.3,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "accent",
+          "base_color_linear_rgba": [
+            0.74,
+            0.29,
+            0.21,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-gondola-endcap-unit-c13129ed",
+      "download_url": "https://cdn.3dassets.dev/assets/25244/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "c32351c48b9b2e2dc242f0327201650a024e1b7ec8d2d9cf13894828397030dd",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "An endcap that closes a gondola run: a 0.66 m wide bay of three stepped decks with side cheeks and a blank endcap header, matched to the gondola plinth. Butts onto the end upright of a gondola run and presents a feature line to the aisle. Dimensions 0.66 by 1.82 by 0.43 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 698,
+      "vertices": 2094
+    },
+    {
+      "source_id": "25208",
+      "title": "Straight hanging rail (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25208_StraightHangingRail",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25208_StraightHangingRail.fbx",
+      "dimensions_cm": [
+        148.0,
+        49.99578857421875,
+        141.80128479003906
+      ],
+      "bounds_cm": [
+        [
+          -74.0,
+          -24.997894287109375,
+          0.0
+        ],
+        [
+          74.0,
+          24.997894287109375,
+          141.80128479003906
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.0,
+        0.002273544669151306
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "metal"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-straight-hanging-rail-32864b2b",
+      "download_url": "https://cdn.3dassets.dev/assets/25208/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "b3e031337bf96ebef9b9ebc906c6d0a3d43d024101010af80ee534d1ce3209c2",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.5 m straight garment rail: a chrome hanging tube on two turned posts and cast T feet with levelling glides, at 1.4 m hanging height. The workhorse apparel fixture; sits mid-floor or against a wall bay run. Dimensions 1.48 by 1.42 by 0.50 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 896,
+      "vertices": 2688
+    },
+    {
+      "source_id": "25210",
+      "title": "Round hanging rail (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25210_RoundHangingRail",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25210_RoundHangingRail.fbx",
+      "dimensions_cm": [
+        113.39125061035156,
+        113.4084701538086,
+        143.9989471435547
+      ],
+      "bounds_cm": [
+        [
+          -56.69562530517578,
+          -56.7042350769043,
+          0.0
+        ],
+        [
+          56.69562530517578,
+          56.7042350769043,
+          143.9989471435547
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        0.0072727203369140625,
+        -0.0,
+        -0.0010533258318901062
+      ],
+      "source_module_front_plane_local_y_cm": -0.0,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "metal",
+        "dark"
+      ],
+      "materials": [
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-round-hanging-rail-1bd87436",
+      "download_url": "https://cdn.3dassets.dev/assets/25210/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "1a3039ef30fb726938864c5b3bb907adc820c3eb25060536a1eb124cf596fc25",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 1.1 m diameter round garment rack: a circular chrome tube carried on four spokes from a central column, on a four-arm cast base with glides. Used to hold a single line in the middle of a floor; the circular tube is a swept torus, not a faceted ring. Dimensions 1.13 by 1.44 by 1.13 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 1228,
+      "vertices": 3684
+    },
+    {
+      "source_id": "25354",
+      "title": "Ceiling track lighting bar (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25354_CeilingTrackLightingBar",
+      "ue_folder": "/Game/Mall/Assets/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25354_CeilingTrackLightingBar.fbx",
+      "dimensions_cm": [
+        200.0,
+        14.159013748168945,
+        25.375289916992188
+      ],
+      "bounds_cm": [
+        [
+          -100.0,
+          -7.079506874084473,
+          0.0
+        ],
+        [
+          100.0,
+          7.079506874084473,
+          25.375289916992188
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        2.816762924194336,
+        0.0019624829292297363
+      ],
+      "source_module_front_plane_local_y_cm": 2.816762924194336,
+      "local_axes": {
+        "X": "module width",
+        "Y": "depth; customer front toward -Y",
+        "Z": "up"
+      },
+      "source_glTF_axes": {
+        "X": "width",
+        "Y": "up",
+        "Z": "customer front"
+      },
+      "original_material_slots": [
+        "dark",
+        "metal",
+        "carcass",
+        "accent"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        },
+        {
+          "name": "accent",
+          "base_color_linear_rgba": [
+            0.74,
+            0.29,
+            0.21,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "alpha_cutoff": 0.5,
+          "two_sided": false,
+          "emissive_linear_rgb": [
+            0,
+            0,
+            0
+          ],
+          "transmission": 0,
+          "has_textures": false
+        }
+      ],
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-ceiling-track-lighting--9cadd166",
+      "download_url": "https://cdn.3dassets.dev/assets/25354/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "a314799655f89f1cfc55e3fe28d4c3a18e55b3b3a0868b1ab2323941df6756b1",
+      "source_animation_clips": [],
+      "animation_note": "static frame0 baked; source GLB preserves original clips for later interactive conversion",
+      "source_description": "A 2.0 m ceiling lighting track with four adjustable spotlights: an extruded track with end feeds, and turned lamp bodies on ball joints angled across a display. Lamp heads are turned bodies on yokes, not capsules; the track is a chamfered extrusion with a live groove. Dimensions 2.00 by 0.25 by 0.14 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "triangles": 1568,
+      "vertices": 4704
+    }
+  ]
+}

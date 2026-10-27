@@ -1,0 +1,1313 @@
+{
+  "assets": [
+    {
+      "source_id": "25271",
+      "ue_name": "SM_Retail_25271_TorsoFormStand",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25271_TorsoFormStand.fbx",
+      "dimensions_cm": [
+        37.994903564453125,
+        37.72089385986328,
+        143.5
+      ],
+      "bounds_cm": [
+        [
+          -18.997451782226562,
+          -18.86044692993164,
+          0.0
+        ],
+        [
+          18.997451782226562,
+          18.86044692993164,
+          143.5
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "metal",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "25272",
+      "ue_name": "SM_Retail_25272_BustForm",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25272_BustForm.fbx",
+      "dimensions_cm": [
+        51.32745361328125,
+        47.71211624145508,
+        136.79930114746094
+      ],
+      "bounds_cm": [
+        [
+          -25.663726806640625,
+          -23.85605812072754,
+          0.0
+        ],
+        [
+          25.663726806640625,
+          23.85605812072754,
+          136.79930114746094
+        ]
+      ],
+      "original_material_slots": [
+        "soft",
+        "surface",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25273",
+      "ue_name": "SM_Retail_25273_LegForm",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25273_LegForm.fbx",
+      "dimensions_cm": [
+        42.441627502441406,
+        37.718448638916016,
+        113.0
+      ],
+      "bounds_cm": [
+        [
+          -21.220813751220703,
+          -18.859224319458008,
+          0.0
+        ],
+        [
+          21.220813751220703,
+          18.859224319458008,
+          113.0
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "metal",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "25257",
+      "ue_name": "SM_Retail_25257_FemaleMannequin",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25257_FemaleMannequin.fbx",
+      "dimensions_cm": [
+        50.091190338134766,
+        35.556915283203125,
+        178.0
+      ],
+      "bounds_cm": [
+        [
+          -25.045595169067383,
+          -17.778457641601562,
+          0.0
+        ],
+        [
+          25.045595169067383,
+          17.778457641601562,
+          178.0
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25225",
+      "ue_name": "SM_Retail_25225_TieredRoundTable",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25225_TieredRoundTable.fbx",
+      "dimensions_cm": [
+        100.0,
+        100.0,
+        99.6030044555664
+      ],
+      "bounds_cm": [
+        [
+          -50.0,
+          -50.0,
+          0.0
+        ],
+        [
+          50.0,
+          50.0,
+          99.6030044555664
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "surface",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25195",
+      "ue_name": "SM_Retail_25195_WallBayCubbies",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25195_WallBayCubbies.fbx",
+      "dimensions_cm": [
+        135.0001983642578,
+        39.99345779418945,
+        243.39999389648438
+      ],
+      "bounds_cm": [
+        [
+          -67.5000991821289,
+          -19.996728897094727,
+          0.0
+        ],
+        [
+          67.5000991821289,
+          19.996728897094727,
+          243.39999389648438
+        ]
+      ],
+      "original_material_slots": [
+        "metal",
+        "surface",
+        "carcass"
+      ]
+    },
+    {
+      "source_id": "25198",
+      "ue_name": "SM_Retail_25198_WallBayMirror",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25198_WallBayMirror.fbx",
+      "dimensions_cm": [
+        135.0001983642578,
+        39.99345779418945,
+        243.39999389648438
+      ],
+      "bounds_cm": [
+        [
+          -67.5000991821289,
+          -19.996728897094727,
+          0.0
+        ],
+        [
+          67.5000991821289,
+          19.996728897094727,
+          243.39999389648438
+        ]
+      ],
+      "original_material_slots": [
+        "metal",
+        "surface",
+        "dark",
+        "glass"
+      ]
+    },
+    {
+      "source_id": "25236",
+      "ue_name": "SM_Retail_25236_AccessorySpinnerRack",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25236_AccessorySpinnerRack.fbx",
+      "dimensions_cm": [
+        61.998104095458984,
+        61.998104095458984,
+        150.00079345703125
+      ],
+      "bounds_cm": [
+        [
+          -30.999052047729492,
+          -30.999052047729492,
+          0.0
+        ],
+        [
+          30.999052047729492,
+          30.999052047729492,
+          150.00079345703125
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "metal",
+        "carcass"
+      ]
+    },
+    {
+      "source_id": "25288",
+      "ue_name": "SM_Retail_25288_FittingRoomCurtain",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25288_FittingRoomCurtain.fbx",
+      "dimensions_cm": [
+        111.00039672851562,
+        127.10987854003906,
+        225.0
+      ],
+      "bounds_cm": [
+        [
+          -55.50019836425781,
+          -63.55493927001953,
+          0.0
+        ],
+        [
+          55.50019836425781,
+          63.55493927001953,
+          225.0
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "dark",
+        "surface",
+        "metal",
+        "glass",
+        "soft"
+      ]
+    },
+    {
+      "source_id": "25339",
+      "ue_name": "SM_Retail_25339_GlazedDisplayCounter",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25339_GlazedDisplayCounter.fbx",
+      "dimensions_cm": [
+        125.0,
+        78.00084686279297,
+        99.5985107421875
+      ],
+      "bounds_cm": [
+        [
+          -62.5,
+          -39.000423431396484,
+          0.0
+        ],
+        [
+          62.5,
+          39.000423431396484,
+          99.5985107421875
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "dark",
+        "metal",
+        "glass",
+        "surface"
+      ]
+    },
+    {
+      "source_id": "25179",
+      "ue_name": "SM_Retail_25179_IlluminatedBackPanel",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25179_IlluminatedBackPanel.fbx",
+      "dimensions_cm": [
+        120.24398040771484,
+        11.00172233581543,
+        140.12001037597656
+      ],
+      "bounds_cm": [
+        [
+          -60.12199020385742,
+          -5.500861167907715,
+          0.0
+        ],
+        [
+          60.12199020385742,
+          5.500861167907715,
+          140.12001037597656
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "accent",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25346",
+      "ue_name": "SM_Retail_25346_FasciaSignBoard",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25346_FasciaSignBoard.fbx",
+      "dimensions_cm": [
+        245.0,
+        20.128177642822266,
+        66.0147476196289
+      ],
+      "bounds_cm": [
+        [
+          -122.5,
+          -10.064088821411133,
+          0.0
+        ],
+        [
+          122.5,
+          10.064088821411133,
+          66.0147476196289
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "accent",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25337",
+      "ue_name": "SM_Retail_25337_CeilingCameraDome",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25337_CeilingCameraDome.fbx",
+      "dimensions_cm": [
+        15.000000596046448,
+        15.000000596046448,
+        12.700507417321205
+      ],
+      "bounds_cm": [
+        [
+          -7.500000298023224,
+          -7.500000298023224,
+          -0.00020898878574371338
+        ],
+        [
+          7.500000298023224,
+          7.500000298023224,
+          12.700298428535461
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "glass",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "25352",
+      "ue_name": "SM_Retail_25352_StockRoomDoor",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25352_StockRoomDoor.fbx",
+      "dimensions_cm": [
+        120.11410593986511,
+        15.798157826066017,
+        260.12001037597656
+      ],
+      "bounds_cm": [
+        [
+          -60.12295484542847,
+          -9.796670824289322,
+          0.0
+        ],
+        [
+          59.991151094436646,
+          6.001487001776695,
+          260.12001037597656
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "dark",
+        "metal",
+        "glass"
+      ]
+    },
+    {
+      "source_id": "25359",
+      "ue_name": "SM_Retail_25359_LiftLobbyModule",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25359_LiftLobbyModule.fbx",
+      "dimensions_cm": [
+        260.11908054351807,
+        26.997897773981094,
+        320.0008511543274
+      ],
+      "bounds_cm": [
+        [
+          -130.11999130249023,
+          -5.00306710600853,
+          -0.0008463859558105469
+        ],
+        [
+          129.99908924102783,
+          21.994830667972565,
+          320.0000047683716
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "dark",
+        "metal",
+        "accent"
+      ]
+    },
+    {
+      "source_id": "25372",
+      "ue_name": "SM_Retail_25372_DirectoryTotem",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25372_DirectoryTotem.fbx",
+      "dimensions_cm": [
+        85.99841594696045,
+        40.00769555568695,
+        229.99999523162842
+      ],
+      "bounds_cm": [
+        [
+          -42.999207973480225,
+          -20.003847777843475,
+          0.0
+        ],
+        [
+          42.999207973480225,
+          20.003847777843475,
+          229.99999523162842
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "metal",
+        "accent",
+        "glass"
+      ]
+    },
+    {
+      "source_id": "25373",
+      "ue_name": "SM_Retail_25373_FoodCourtTableSet",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25373_FoodCourtTableSet.fbx",
+      "dimensions_cm": [
+        154.83556985855103,
+        154.83556985855103,
+        91.60548746585846
+      ],
+      "bounds_cm": [
+        [
+          -77.41778492927551,
+          -77.41778492927551,
+          0.0027626752853393555
+        ],
+        [
+          77.41778492927551,
+          77.41778492927551,
+          91.6082501411438
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "metal",
+        "surface",
+        "carcass",
+        "soft",
+        "accent"
+      ]
+    },
+    {
+      "source_id": "25374",
+      "ue_name": "SM_Retail_25374_ConcourseKioskCart",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25374_ConcourseKioskCart.fbx",
+      "dimensions_cm": [
+        209.99999046325684,
+        89.99398350715637,
+        239.00394439697266
+      ],
+      "bounds_cm": [
+        [
+          -104.99999523162842,
+          -44.996991753578186,
+          0.0
+        ],
+        [
+          104.99999523162842,
+          44.996991753578186,
+          239.00394439697266
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "surface",
+        "carcass",
+        "metal",
+        "glass",
+        "accent"
+      ]
+    },
+    {
+      "source_id": "25376",
+      "ue_name": "SM_Retail_25376_WasteStation",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25376_WasteStation.fbx",
+      "dimensions_cm": [
+        139.9999976158142,
+        52.69804000854492,
+        100.00180304050446
+      ],
+      "bounds_cm": [
+        [
+          -69.9999988079071,
+          -27.197077870368958,
+          -0.0026553869247436523
+        ],
+        [
+          69.9999988079071,
+          25.500962138175964,
+          99.99914765357971
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "surface",
+        "carcass",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25379",
+      "ue_name": "SM_Retail_25379_InfoDesk",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25379_InfoDesk.fbx",
+      "dimensions_cm": [
+        259.99999046325684,
+        101.00222826004028,
+        220.12180089950562
+      ],
+      "bounds_cm": [
+        [
+          -134.99999046325684,
+          -51.00111365318298,
+          -0.0008940696716308594
+        ],
+        [
+          125.0,
+          50.0011146068573,
+          220.12090682983398
+        ]
+      ],
+      "original_material_slots": [
+        "surface",
+        "metal",
+        "carcass",
+        "dark",
+        "accent"
+      ]
+    },
+    {
+      "source_id": "25381",
+      "ue_name": "SM_Retail_25381_ChargingBench",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25381_ChargingBench.fbx",
+      "dimensions_cm": [
+        139.9999976158142,
+        61.991024017333984,
+        92.00299680233002
+      ],
+      "bounds_cm": [
+        [
+          -69.9999988079071,
+          -30.995512008666992,
+          0.0006347894668579102
+        ],
+        [
+          69.9999988079071,
+          30.995512008666992,
+          92.00363159179688
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "surface",
+        "soft",
+        "accent",
+        "carcass"
+      ]
+    },
+    {
+      "source_id": "25382",
+      "ue_name": "SM_Retail_25382_BollardPlanter",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25382_BollardPlanter.fbx",
+      "dimensions_cm": [
+        47.999998927116394,
+        47.51365780830383,
+        85.00108569860458
+      ],
+      "bounds_cm": [
+        [
+          -23.999999463558197,
+          -23.756828904151917,
+          -0.0010833144187927246
+        ],
+        [
+          23.999999463558197,
+          23.756828904151917,
+          85.00000238418579
+        ]
+      ],
+      "original_material_slots": [
+        "metal",
+        "carcass",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "25400",
+      "ue_name": "SM_Retail_25400_StockRollCage",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25400_StockRollCage.fbx",
+      "dimensions_cm": [
+        83.39095711708069,
+        73.39473366737366,
+        172.9995932430029
+      ],
+      "bounds_cm": [
+        [
+          -41.695478558540344,
+          -36.69736683368683,
+          0.00040866434574127197
+        ],
+        [
+          41.695478558540344,
+          36.69736683368683,
+          173.00000190734863
+        ]
+      ],
+      "original_material_slots": [
+        "metal",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "user_bistrot",
+      "ue_name": "SM_Retail_User_BistrotTableSet",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_User_BistrotTableSet.fbx",
+      "dimensions_cm": [
+        141.10186994075775,
+        74.3975579738617,
+        106.29637786187232
+      ],
+      "bounds_cm": [
+        [
+          -106.43479824066162,
+          -34.66707468032837,
+          -0.578695023432374
+        ],
+        [
+          34.66707170009613,
+          39.730483293533325,
+          105.71768283843994
+        ]
+      ],
+      "original_material_slots": [
+        "marble",
+        "brass",
+        "foot",
+        "osier01",
+        "osier02",
+        "assise_black",
+        "assise_gold",
+        "tissu_dossier"
+      ]
+    },
+    {
+      "source_id": "user_restaurant",
+      "ue_name": "SM_Retail_User_RestaurantTableSet",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_User_RestaurantTableSet.fbx",
+      "dimensions_cm": [
+        125.48919916152954,
+        155.36207556724548,
+        81.04509788681753
+      ],
+      "bounds_cm": [
+        [
+          -60.960012674331665,
+          -93.63282322883606,
+          -0.02408105065114796
+        ],
+        [
+          64.52918648719788,
+          61.729252338409424,
+          81.02101683616638
+        ]
+      ],
+      "original_material_slots": [
+        "material"
+      ]
+    },
+    {
+      "source_id": "SM_Bath_OpenRinseShowerRow",
+      "ue_name": "SM_Bath_OpenRinseShowerRow",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Bath_OpenRinseShowerRow.fbx",
+      "dimensions_cm": [
+        419.9999809265137,
+        160.0000023841858,
+        239.00001049041748
+      ],
+      "bounds_cm": [
+        [
+          -209.99999046325684,
+          -80.0000011920929,
+          0.0
+        ],
+        [
+          209.99999046325684,
+          80.0000011920929,
+          239.00001049041748
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "surface",
+        "metal",
+        "glass",
+        "accent",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "SM_Bath_GlassSaunaPavilion",
+      "ue_name": "SM_Bath_GlassSaunaPavilion",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Bath_GlassSaunaPavilion.fbx",
+      "dimensions_cm": [
+        480.0000190734863,
+        379.9999952316284,
+        292.00000762939453
+      ],
+      "bounds_cm": [
+        [
+          -240.00000953674316,
+          -189.9999976158142,
+          0.0
+        ],
+        [
+          240.00000953674316,
+          189.9999976158142,
+          292.00000762939453
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "surface",
+        "metal",
+        "glass",
+        "accent",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "SM_Bath_SteamingOnsenPool",
+      "ue_name": "SM_Bath_SteamingOnsenPool",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Bath_SteamingOnsenPool.fbx",
+      "dimensions_cm": [
+        559.9999904632568,
+        469.9999809265137,
+        56.00000023841858
+      ],
+      "bounds_cm": [
+        [
+          -279.9999952316284,
+          -234.99999046325684,
+          0.0
+        ],
+        [
+          279.9999952316284,
+          234.99999046325684,
+          56.00000023841858
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "surface",
+        "metal",
+        "glass",
+        "accent",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "SM_Bath_SaunaStoveAndBuckets",
+      "ue_name": "SM_Bath_SaunaStoveAndBuckets",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Bath_SaunaStoveAndBuckets.fbx",
+      "dimensions_cm": [
+        110.00000238418579,
+        110.00000238418579,
+        102.99999713897705
+      ],
+      "bounds_cm": [
+        [
+          -55.000001192092896,
+          -55.000001192092896,
+          0.0
+        ],
+        [
+          55.000001192092896,
+          55.000001192092896,
+          102.99999713897705
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "surface",
+        "metal",
+        "glass",
+        "accent",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "25284",
+      "ue_name": "SM_Retail_25284_FittingCubicleClosed",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25284_FittingCubicleClosed.fbx",
+      "dimensions_cm": [
+        111.00039672851562,
+        126.20408630371094,
+        225.0
+      ],
+      "bounds_cm": [
+        [
+          -55.50019836425781,
+          -63.10204315185547,
+          0.0
+        ],
+        [
+          55.50019836425781,
+          63.10204315185547,
+          225.0
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "dark",
+        "surface",
+        "metal",
+        "glass"
+      ]
+    },
+    {
+      "source_id": "25285",
+      "ue_name": "SM_Retail_25285_FittingCubicleOpen",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25285_FittingCubicleOpen.fbx",
+      "dimensions_cm": [
+        111.00039672851562,
+        212.58810424804688,
+        225.0
+      ],
+      "bounds_cm": [
+        [
+          -55.50019836425781,
+          -106.29405212402344,
+          0.0
+        ],
+        [
+          55.50019836425781,
+          106.29405212402344,
+          225.0
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "dark",
+        "surface",
+        "metal",
+        "glass"
+      ]
+    },
+    {
+      "source_id": "25296",
+      "ue_name": "SM_Retail_25296_LeaningMirror",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25296_LeaningMirror.fbx",
+      "dimensions_cm": [
+        72.00643920898438,
+        35.68220138549805,
+        181.12095642089844
+      ],
+      "bounds_cm": [
+        [
+          -36.00321960449219,
+          -17.841100692749023,
+          0.0
+        ],
+        [
+          36.00321960449219,
+          17.841100692749023,
+          181.12095642089844
+        ]
+      ],
+      "original_material_slots": [
+        "surface",
+        "glass",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "25309",
+      "ue_name": "SM_Retail_25309_FittingLobbyBench",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25309_FittingLobbyBench.fbx",
+      "dimensions_cm": [
+        140.0,
+        54.49443054199219,
+        46.19981002807617
+      ],
+      "bounds_cm": [
+        [
+          -70.0,
+          -27.247215270996094,
+          0.0
+        ],
+        [
+          70.0,
+          27.247215270996094,
+          46.19981002807617
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "surface",
+        "soft",
+        "accent",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25259",
+      "ue_name": "SM_Retail_25259_MaleMannequin",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25259_MaleMannequin.fbx",
+      "dimensions_cm": [
+        54.022705078125,
+        36.716590881347656,
+        186.0
+      ],
+      "bounds_cm": [
+        [
+          -27.0113525390625,
+          -18.358295440673828,
+          0.0
+        ],
+        [
+          27.0113525390625,
+          18.358295440673828,
+          186.0
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25265",
+      "ue_name": "SM_Retail_25265_FemaleWalkingMannequin",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25265_FemaleWalkingMannequin.fbx",
+      "dimensions_cm": [
+        49.020530700683594,
+        74.7218246459961,
+        177.9994659423828
+      ],
+      "bounds_cm": [
+        [
+          -24.510265350341797,
+          -37.36091232299805,
+          0.0
+        ],
+        [
+          24.510265350341797,
+          37.36091232299805,
+          177.9994659423828
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25267",
+      "ue_name": "SM_Retail_25267_HeadlessMannequin",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25267_HeadlessMannequin.fbx",
+      "dimensions_cm": [
+        42.52717971801758,
+        34.33893585205078,
+        144.0
+      ],
+      "bounds_cm": [
+        [
+          -21.26358985900879,
+          -17.16946792602539,
+          0.0
+        ],
+        [
+          21.26358985900879,
+          17.16946792602539,
+          144.0
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25270",
+      "ue_name": "SM_Retail_25270_SeatedMannequin",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25270_SeatedMannequin.fbx",
+      "dimensions_cm": [
+        51.12155532836914,
+        99.60763549804688,
+        140.00125122070312
+      ],
+      "bounds_cm": [
+        [
+          -25.56077766418457,
+          -49.80381774902344,
+          0.0
+        ],
+        [
+          25.56077766418457,
+          49.80381774902344,
+          140.00125122070312
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "surface",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "25334",
+      "ue_name": "SM_Retail_25334_SecurityPedestalPair",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25334_SecurityPedestalPair.fbx",
+      "dimensions_cm": [
+        166.0,
+        34.00347900390625,
+        147.19473266601562
+      ],
+      "bounds_cm": [
+        [
+          -83.0,
+          -17.001739501953125,
+          0.0
+        ],
+        [
+          83.0,
+          17.001739501953125,
+          147.19473266601562
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "metal",
+        "glass"
+      ]
+    },
+    {
+      "source_id": "25347",
+      "ue_name": "SM_Retail_25347_ProjectingBladeSign",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25347_ProjectingBladeSign.fbx",
+      "dimensions_cm": [
+        7.998290538787842,
+        76.49737548828125,
+        90.0
+      ],
+      "bounds_cm": [
+        [
+          -3.999145269393921,
+          -38.24869155883789,
+          0.0
+        ],
+        [
+          3.999145269393921,
+          38.248687744140625,
+          90.0
+        ]
+      ],
+      "original_material_slots": [
+        "metal",
+        "dark",
+        "accent"
+      ]
+    },
+    {
+      "source_id": "25367",
+      "ue_name": "SM_Retail_25367_BackToBackBench",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25367_BackToBackBench.fbx",
+      "dimensions_cm": [
+        180.0,
+        99.99960327148438,
+        92.60499572753906
+      ],
+      "bounds_cm": [
+        [
+          -90.0,
+          -49.99980163574219,
+          0.0
+        ],
+        [
+          90.0,
+          49.99980163574219,
+          92.60499572753906
+        ]
+      ],
+      "original_material_slots": [
+        "surface",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25371",
+      "ue_name": "SM_Retail_25371_HangingWayfindingSign",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25371_HangingWayfindingSign.fbx",
+      "dimensions_cm": [
+        160.0,
+        21.07486343383789,
+        97.4959945678711
+      ],
+      "bounds_cm": [
+        [
+          -80.0,
+          -10.537431716918945,
+          0.0
+        ],
+        [
+          80.0,
+          10.537431716918945,
+          97.4959945678711
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "accent",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25375",
+      "ue_name": "SM_Retail_25375_CleaningTrolley",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25375_CleaningTrolley.fbx",
+      "dimensions_cm": [
+        53.50059509277344,
+        104.71134948730469,
+        143.51144409179688
+      ],
+      "bounds_cm": [
+        [
+          -26.75029754638672,
+          -52.355674743652344,
+          0.0
+        ],
+        [
+          26.75029754638672,
+          52.355674743652344,
+          143.51144409179688
+        ]
+      ],
+      "original_material_slots": [
+        "carcass",
+        "metal",
+        "dark",
+        "accent",
+        "soft",
+        "surface"
+      ]
+    },
+    {
+      "source_id": "25384",
+      "ue_name": "SM_Retail_25384_StanchionRopeSet",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25384_StanchionRopeSet.fbx",
+      "dimensions_cm": [
+        172.0,
+        31.999025344848633,
+        107.1988296508789
+      ],
+      "bounds_cm": [
+        [
+          -86.0,
+          -15.999512672424316,
+          0.0
+        ],
+        [
+          86.0,
+          15.999512672424316,
+          107.1988296508789
+        ]
+      ],
+      "original_material_slots": [
+        "metal",
+        "dark",
+        "accent"
+      ]
+    },
+    {
+      "source_id": "25385",
+      "ue_name": "SM_Retail_25385_ConcourseLitterBin",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25385_ConcourseLitterBin.fbx",
+      "dimensions_cm": [
+        39.99420166015625,
+        39.58769226074219,
+        94.99934387207031
+      ],
+      "bounds_cm": [
+        [
+          -19.997100830078125,
+          -19.793846130371094,
+          0.0
+        ],
+        [
+          19.997100830078125,
+          19.793846130371094,
+          94.99934387207031
+        ]
+      ],
+      "original_material_slots": [
+        "metal",
+        "surface",
+        "dark"
+      ]
+    },
+    {
+      "source_id": "25409",
+      "ue_name": "SM_Retail_25409_DarkSlatBench",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25409_DarkSlatBench.fbx",
+      "dimensions_cm": [
+        180.0,
+        71.00460815429688,
+        47.103031158447266
+      ],
+      "bounds_cm": [
+        [
+          -90.0,
+          -35.50230407714844,
+          0.0
+        ],
+        [
+          90.0,
+          35.50230407714844,
+          47.103031158447266
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25239",
+      "ue_name": "SM_Retail_25239_PromoDumpBin",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25239_PromoDumpBin.fbx",
+      "dimensions_cm": [
+        90.0,
+        89.3407974243164,
+        115.0
+      ],
+      "bounds_cm": [
+        [
+          -45.0,
+          -44.6703987121582,
+          0.0
+        ],
+        [
+          45.0,
+          44.6703987121582,
+          115.0
+        ]
+      ],
+      "original_material_slots": [
+        "dark",
+        "accent",
+        "carcass",
+        "metal"
+      ]
+    },
+    {
+      "source_id": "25243",
+      "ue_name": "SM_Retail_25243_GondolaWithHeader",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\SM_Retail_25243_GondolaWithHeader.fbx",
+      "dimensions_cm": [
+        135.24124145507812,
+        65.99575805664062,
+        167.0
+      ],
+      "bounds_cm": [
+        [
+          -67.62062072753906,
+          -32.99787902832031,
+          0.0
+        ],
+        [
+          67.62062072753906,
+          32.99787902832031,
+          167.0
+        ]
+      ],
+      "original_material_slots": [
+        "metal",
+        "carcass",
+        "dark",
+        "surface",
+        "accent"
+      ]
+    }
+  ]
+}

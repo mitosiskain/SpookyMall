@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "get_available_actors_in_level",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Level Name: Lvl_MallAtrium_Test\nPath: /Game/Environment/Mall/Maps/Lvl_MallAtrium_Test.Lvl_MallAtrium_Test\n\n\nActor Hierarchy:\n- Label=\"Sun_MallAtrium\" Class=DirectionalLight\n  Spatial info: Location=(Z=1200.00) Rotation=(P=-55.00, Y=35.00) Scale=(X=2.50, Y=2.50, Z=2.50)\n- Label=\"SkyLight_MallAtrium\" Class=SkyLight\n  Spatial info: Location=(Z=1200.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"MallAtrium_PlayerStart\" Class=PlayerStart\n  Spatial info: Location=(Y=-900.00, Z=110.00) Rotation=(P=90.00) Scale=(X=1.00, Y=1.00, Z=1.00)\n"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: False\n\nLOG OUTPUT:\n\n  ERROR: Python Script Exception: Material: Property 'Expressions' for attribute 'Expressions' on 'Material' is protected and cannot be read\n  ERROR: Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\nException: Material: Property 'Expressions' for attribute 'Expressions' on 'Material' is protected and cannot be read\n"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

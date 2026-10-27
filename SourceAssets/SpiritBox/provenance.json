@@ -1,0 +1,46 @@
+{
+  "purpose": "replaceable prototype audio for the store spirit box",
+  "voice": {
+    "file": "SW_SpiritBox_Placeholder.wav",
+    "text": "I am here.",
+    "origin": "Offline Windows System.Speech synthesis with the installed Microsoft Zira Desktop voice",
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits_per_sample": 16,
+    "generator": "Automation/SpiritBox/create_placeholder_audio.ps1"
+  },
+  "scan": {
+    "file": "SW_SpiritBox_Scan.wav",
+    "origin": "Original deterministic synthesized radio static; no sampled broadcasts, voices, or third-party recordings",
+    "description": "Soft band-limited hiss with slow filter sweeps and subtle irregular crackles; seamless loop with no tonal hum or gated chopping",
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits_per_sample": 16,
+    "duration_seconds": 12,
+    "looping": true,
+    "seed": 20261017,
+    "generator": "Automation/SpiritBox/create_scan_audio.py",
+    "generator_revision": 2,
+    "quality_checks": {
+      "rms": 0.179994,
+      "rms_dbfs": -14.89,
+      "peak": 0.751312,
+      "peak_dbfs": -2.48,
+      "clipped_samples": 0,
+      "loop_seam_delta": 6.1e-05,
+      "adjacent_delta_rms": 0.092225
+    }
+  },
+  "integrity": [
+    {
+      "file": "SW_SpiritBox_Placeholder.wav",
+      "sha256": "bbc9ea0c30506fd1a30b5d348d0908fb931cf113e5b575e3a79fcfb165f482b2",
+      "bytes": 194398
+    },
+    {
+      "file": "SW_SpiritBox_Scan.wav",
+      "sha256": "3fdc84df492f256018aaf966c81c804e97ce472c1eae3a94632d5b945061d387",
+      "bytes": 1152044
+    }
+  ]
+}

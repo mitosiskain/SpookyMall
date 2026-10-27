@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "scope": "Read-only live Blueprint inspection after timed-out Aura BP operation; no Blueprint/map/Git mutation performed by auditor.",
+  "blueprint": "/Game/Environment/Mall/Blueprints/BP_StoreGhost.BP_StoreGhost",
+  "baseline": "Saved/StoreChasePrototype/ghost_graph_readback.txt",
+  "status": "GRAPH_SEMANTICS_PASS_NATIVE_CLIENT_COLLISION_MITIGATION_ADDED",
+  "target_resolution": {
+    "resolve_target_pawn_calls": 2,
+    "get_player_character_calls": 0,
+    "event_begin_play_authority_gate": true,
+    "event_tick_authority_gate": true,
+    "update_guard_authority_gate_preserved": true
+  },
+  "replication": {
+    "bReplicates": true,
+    "bReplicateMovement": true
+  },
+  "exact_graph_equality_after_line_ending_normalization": [
+    {
+      "strand": "RuntimeStateTick",
+      "equal": true
+    },
+    {
+      "strand": "BuildValidatedRoute",
+      "equal": true
+    },
+    {
+      "strand": "FollowValidatedRoute",
+      "equal": true
+    },
+    {
+      "strand": "TryCatchPlayer",
+      "equal": true
+    }
+  ],
+  "update_guard": {
+    "baseline_nodes": 96,
+    "current_nodes": 96,
+    "normalized_directed_pin_graph_matches": true,
+    "allowed_normalizations": [
+      "GetPlayerCharacter changed to ResolveTargetPawn",
+      "Removed Player Index=0 default",
+      "Self World Context Object input renamed Ghost",
+      "Equivalent explicit Self target wiring on own Capsule Component variable read",
+      "Node IDs and storage ordering ignored"
+    ],
+    "eligibility_preserved": "Store XY fields; character capsule feet within StoreFloorZ-40..StoreFloorZ+450",
+    "physical_recovery_preserved": true
+  },
+  "additional_readback": {
+    "CheckSafeCenter": {
+      "baseline_full_graph_available": false,
+      "current_contract": "Capsule radius+5cm store margins; feet within80cm when RequireNav=false/60cm true; short capsule sweep WorldStatic/WorldDynamic/PhysicsBody; optional nav projection25x25x60, <=35cm projection error, projected XY margins and60cm floor band."
+    },
+    "ClearRoute": {
+      "baseline_full_graph_available": false,
+      "current_contract": "HasValidatedPath=false; stop valid AI controller; stop CharacterMovement regardless controller validity; clear waypoints; reset index0 and WaypointMoveIssued=false."
+    }
+  },
+  "finding": {
+    "severity": "client collision consistency",
+    "description": "BeginPlay authority branch now encloses SetCollisionResponseToChannel(Pawn,Ignore). Capsule CDO still uses Pawn profile, whose default Pawn response blocks, with only Visibility=Ignore override. Client collision setup therefore needs the same Pawn=Ignore override outside gameplay authority gate or in the saved capsule defaults.",
+    "status": "Mitigated in native source: UMallGhostVoiceReceiver::BeginPlay sets the owning character capsule Pawn response to Ignore without an authority gate. The server-created replicated component executes BeginPlay on each peer.",
+    "source": "Source/MyProject2/Voice/MallGhostVoiceReceiver.cpp",
+    "runtime_validation": "PASS in Mall.Voice.NetworkTransport: actual ghost Blueprint spawned in isolated native network world while voice disabled; server and both replicated client capsules report Pawn=Ignore. This is not a live store-map movement or audible test."
+  },
+  "limitations": [
+    "This is graph/property inspection, not live multiplayer or microphone acceptance.",
+    "Saved historical graph omitted CheckSafeCenter and ClearRoute, so those were checked against their documented runtime contract, without claiming historical exact text equality.",
+    "Root must recompile/save to confirm persistence after the prior timed-out operation."
+  ]
+}

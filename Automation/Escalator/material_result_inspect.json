@@ -1,0 +1,86 @@
+[
+  {
+    "tool": "fetch_material_best_practices",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete."
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/metal\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 1,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Param\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.56000000238418579,\r\n\t\t\t\t\t0.5899999737739563,\r\n\t\t\t\t\t0.63999998569488525,\r\n\t\t\t\t\t0\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/glass\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 1,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Param\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.40000000596046448,\r\n\t\t\t\t\t0.62000000476837158,\r\n\t\t\t\t\t0.64999997615814209,\r\n\t\t\t\t\t0\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/dark\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 1,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Param\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.027000000700354576,\r\n\t\t\t\t\t0.032000001519918442,\r\n\t\t\t\t\t0.037999998778104782,\r\n\t\t\t\t\t0\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/safety_yellow\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 1,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Param\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.94999998807907104,\r\n\t\t\t\t\t0.56000000238418579,\r\n\t\t\t\t\t0.02500000037252903,\r\n\t\t\t\t\t0\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_dark\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 1,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Param\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.11999999731779099,\r\n\t\t\t\t\t0.14000000059604645,\r\n\t\t\t\t\t0.17000000178813934,\r\n\t\t\t\t\t0\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_metal\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 1,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Param\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.46000000834465027,\r\n\t\t\t\t\t0.49000000953674316,\r\n\t\t\t\t\t0.54000002145767212,\r\n\t\t\t\t\t0\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

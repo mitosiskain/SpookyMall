@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "get_asset_meta",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Default Property Values for StaticMesh:\n  int32 LightMapResolution = 4\n  int32 LightMapCoordinateIndex = 2\n  EStaticMeshPaintSupport StaticMeshPaintSupport = Default\n  int32 MeshPaintTextureCoordinateIndex = 0\n  int32 MeshPaintTextureResolution = 0\n  float DistanceFieldSelfShadowBias = 0.000000\n  int32 LODForCollision = 0\n  uint8 bGenerateMeshDistanceField = False\n  uint8 bHasNavigationData = True\n  uint8 bSupportUniformlyDistributedSampling = False\n  uint8 bSupportPhysicalMaterialMasks = False\n  uint8 bSupportRayTracing = True\n  uint8 bAllowCPUAccess = False\n  uint8 bSupportGpuUniformlyDistributedSampling = False\n  FVector PositiveBoundsExtension = (X=0.000000,Y=0.000000,Z=0.000000)\n  FVector NegativeBoundsExtension = (X=0.000000,Y=0.000000,Z=0.000000)\n  TArray<TObjectPtr<UAssetUserData> > AssetUserData = []\n  AssetUserData contains 0 objects:\n  int32 NumCinematicMipLevels = 0\n  uint8 NeverStream = False\n  uint8 bGlobalForceMipLevelsToBeResident = False\n\nTo get referenced struct types/layouts call get_asset_structs\nTo get properties on components use get_blueprint_component_properties"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  {\"path\": \"/Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/StaticMeshes/railing\", \"min\": [-191.03988647460938, -399.7243957519531, -111.49339294433594], \"max\": [9.0889253616333, 1.519932746887207, 72.99304962158203], \"materials\": [\"/Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Materials/Advanced_Procedural_Glass_for_Cycles.Advanced_Procedural_Glass_for_Cycles\", \"/Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Materials/Stone.Stone\", \"/Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Materials/Stainless_steel.Stainless_steel\"]}\n  {\"path\": \"/Game/Fab/Restaurant_Table_And_Chairs/restaurant_table_and_chairs/StaticMeshes/restaurant_table_and_chairs\", \"min\": [-60.959999084472656, -61.729244232177734, -0.024081043899059296], \"max\": [61.78556823730469, 86.24639892578125, 81.02099609375], \"materials\": [\"/Game/Fab/Restaurant_Table_And_Chairs/restaurant_table_and_chairs/Materials/Material.Material\", \"/Game/Fab/Restaurant_Table_And_Chairs/restaurant_table_and_chairs/Materials/Material_003.Material_003\", \"/Game/Fab/Restaurant_Table_And_Chairs/restaurant_table_and_chairs/Materials/Material_001.Material_001\", \"/Game/Fab/Restaurant_Table_And_Chairs/restaurant_table_and_chairs/Materials/Material_002.Material_002\"]}\n  {\"path\": \"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/StaticMeshes/bistrot_table_and_chair\", \"min\": [-100.25519561767578, -34.66707229614258, -0.5786945819854736], \"max\": [34.66707229614258, 34.66707229614258, 105.66323852539062], \"materials\": [\"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/Materials/marble.marble\", \"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/Materials/brass.brass\", \"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/Materials/foot.foot\", \"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/Materials/osier01.osier01\", \"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/Materials/osier02.osier02\", \"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/Materials/assise_black.assise_black\", \"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/Materials/assise_gold.assise_gold\", \"/Game/Fab/Bistrot_table_and_chair/bistrot_table_and_chair/Materials/tissu_dossier.tissu_dossier\"]}\n  {\"path\": \"/Game/Fab/Waiting_Chair/waiting_chair/StaticMeshes/waiting_chair\", \"min\": [-115.50740051269531, -30.559062957763672, 0.016660496592521667], \"max\": [115.4806137084961, 51.5893440246582, 94.76748657226562], \"materials\": [\"/Game/Fab/Waiting_Chair/waiting_chair/Materials/Waiting_Bench.Waiting_Bench\"]}\n  {\"path\": \"/Game/Fab/Designer_Leather_Tub_Chair___Curved_Design___Cushion_Seat___Leather_Stitched/chair/StaticMeshes/chair\", \"min\": [-230.89727783203125, -233.0841827392578, 0.2770576477050781], \"max\": [229.83087158203125, 233.0841827392578, 746.2055053710938], \"materials\": [\"/Game/Fab/Designer_Leather_Tub_Chair___Curved_Design___Cushion_Seat___Leather_Stitched/chair/Materials/Fabric.Fabric\", \"/Game/Fab/Designer_Leather_Tub_Chair___Curved_Design___Cushion_Seat___Leather_Stitched/chair/Materials/Leather_Cushion_Texture1.Leather_Cushion_Texture1\", \"/Game/Fab/Designer_Leather_Tub_Chair___Curved_Design___Cushion_Seat___Leather_Stitched/chair/Materials/Wood_003.Wood_003\", \"/Game/Fab/Designer_Leather_Tub_Chair___Curved_Design___Cushion_Seat___Leather_Stitched/chair/Materials/Brass_001.Brass_001\", \"/Game/Fab/Designer_Leather_Tub_Chair___Curved_Design___Cushion_Seat___Leather_Stitched/chair/Materials/Wood_124_Dark.Wood_124_Dark\"]}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

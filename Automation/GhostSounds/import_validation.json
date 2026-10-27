@@ -1,0 +1,23 @@
+[
+  {
+    "asset": "/Game/Audio/Ghost/Physical/SW_Ghost_InvisibleBreath.SW_Ghost_InvisibleBreath",
+    "duration": 3.415708303451538,
+    "channels": 1,
+    "looping": false,
+    "saved": true
+  },
+  {
+    "asset": "/Game/Audio/Ghost/Physical/SW_Ghost_InvisibleMoan.SW_Ghost_InvisibleMoan",
+    "duration": 3.0236666202545166,
+    "channels": 1,
+    "looping": false,
+    "saved": true
+  },
+  {
+    "asset": "/Game/Audio/Ghost/Physical/SW_Ghost_HuntGrowl.SW_Ghost_HuntGrowl",
+    "duration": 1.733875036239624,
+    "channels": 1,
+    "looping": false,
+    "saved": true
+  }
+]

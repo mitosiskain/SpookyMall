@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-18",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "method": "Aura, two connected PIE worlds, listen server; actual G/T/H/F/R/E keys and existing movement input. Runtime arrangements were discarded after PIE.",
+  "results": {
+    "equipment_push_release": {"passed": true, "pushing_speed_cm_s": 200, "released_speed_cm_s": 600, "wall_stop_x_cm": 3885, "peer_transform_verified": true},
+    "doorway_seal": {"passed": true, "initial_and_returned_cart_sealed": true, "peer_seal_verified": true},
+    "unsealed_hall_pursuit": {"passed": true, "store_min_x_cm": 3950, "minimum_ghost_x_cm": 3783.8368, "catches_before": 2, "catches_after": 4, "trajectory": "unsealed_hall_pursuit.json"},
+    "cart_inside_store": {"passed": true, "cart_location_cm": [4400, 0, 45], "sealed": false, "suppressed": true, "ghost_mode": "InvisibleDisturbance", "phase": "Activity", "hunt_deadline": 0, "peer_state_verified": true},
+    "powered_safety_light": {"passed": true, "player_capsule_fully_protected": true, "ghost_capsule_outside_cone": true, "catch_count": 0, "boundary_violations": 0, "moving_cone_displaced_ghost_x_cm": 5650, "peer_ghost_position_verified": true},
+    "charging": {"passed": true, "method": "H at cart near outlet", "initial_fraction": 0.2, "observed_fraction": 0.441967, "peer_full_fraction": 1, "runtime_test_recharge_seconds": 10, "lamp_off_and_cable_visible_while_charging": true, "G_disconnected_charger": true},
+    "flashlight": {"passed": true, "world_T_pickup": true, "T_deposit_and_retrieve_same_actor": true, "stored_light_off": true, "hotbar_adapter_updated": true, "peer_storage_verified": true},
+    "writing_book": {"passed": true, "F_pickup": true, "T_deposit_and_retrieve_same_actor": true, "stored_book_closed": true, "blank_state_preserved": true, "R_inspection_after_retrieval": true, "peer_open_state_verified": true},
+    "spirit_box": {"passed": true, "F_pickup_R_power": true, "T_deposit_and_retrieve_same_actor": true, "stored_radio_off": true, "R_power_after_retrieval": true, "peer_storage_verified": true},
+    "saved_map_after_PIE": {"passed": true, "runtime_seconds": 900, "recharge_seconds": 300, "battery_fraction": 1, "equipment_location_cm": [3950, 0, 45], "light_location_cm": [3560, -400, 45], "cart_dynamic_nav_obstacles": true, "cart_nav_area": "NavArea_Null", "lamp_housing_casts_shadow": false, "dirty_map_packages": [], "dirty_content_packages": []}
+  },
+  "visual_evidence": ["light_cart_corrected_three_quarter_t7.28s_f57775.png", "light_cart_player_view_t21.82s_f58095.png"],
+  "excluded_visual_diagnostics": ["light_cart_initial_t26.71s_f48106.png", "light_cart_shadow_check_three_quarter_t103.03s_f49872.png"],
+  "limits": ["15-minute drain and 5-minute charge are configured defaults; live accelerated charge used 10 seconds.", "Written-book persistence is covered by the native network test; the live key test used a blank book.", "Microphone, perceived audio quality, latency balancing, hand grips, caster animation, escalator transport and final prop placement remain human or future checks."]
+}

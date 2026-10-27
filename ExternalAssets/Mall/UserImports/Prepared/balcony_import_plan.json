@@ -1,0 +1,148 @@
+{
+  "source_url": "https://www.fab.com/listings/b82906d1-1b98-4266-83da-c89a389bb62a",
+  "license_note": "User-reported acquired Fab Standard Personal tier; acquisition receipt governs. No standalone redistribution.",
+  "source_glb": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\railing.glb",
+  "source_sha256": "0c7f5e4665a6e52bbd16760111badf7eb3b894009a691c767041edc6c447d9e3",
+  "units": "centimeters",
+  "fbx_import": {
+    "ImportUniformScale": 1,
+    "ConvertScene": true,
+    "ConvertSceneUnit": true,
+    "ForceFrontXAxis": false,
+    "CombineMeshes": true,
+    "ImportMaterials": false,
+    "ImportTextures": false,
+    "AutoGenerateCollision": false
+  },
+  "material_assignments": [
+    {
+      "slot": 0,
+      "name": "Advanced Procedural Glass for Cycles",
+      "existing_unreal_material": "/Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Materials/Advanced_Procedural_Glass_for_Cycles"
+    },
+    {
+      "slot": 1,
+      "name": "Stone",
+      "existing_unreal_material": "/Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Materials/Stone"
+    },
+    {
+      "slot": 2,
+      "name": "Stainless steel",
+      "existing_unreal_material": "/Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Materials/Stainless_steel"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SM_MallBalconyModule_400",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\SM_MallBalconyModule_400.fbx",
+      "sha256": "78eb18fd8c610ae51dedef2ad7481a463489297ca74618ff17e0b9a0f576872a",
+      "usage": "Corner or end with L-shaped rail return",
+      "bounds_cm": [
+        [
+          -200.0,
+          -100.12882995605469,
+          -50.0
+        ],
+        [
+          200.0,
+          100.0,
+          132.36688232421875
+        ]
+      ],
+      "walking_surface_z_cm": 0,
+      "slab_bottom_z_cm": -50,
+      "rail_top_z_cm": 132.36688232421875,
+      "triangles": 7471,
+      "material_slots": [
+        "Advanced Procedural Glass for Cycles",
+        "Stone",
+        "Stainless steel"
+      ],
+      "uv_channels": [
+        "UVMap",
+        "UVMap.001"
+      ],
+      "orientation": "L shape: long edge +Y, return +X; open edges -Y and -X.",
+      "verified_walk_plane_area_cm2": 79998.75220115716,
+      "verified_walk_plane_normal_z": 0.9999999918534938
+    },
+    {
+      "name": "SM_MallBalconyStraight_400",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\SM_MallBalconyStraight_400.fbx",
+      "sha256": "0c8838d58b3eb100bc4c649799dc5e9bf671092a5b880d57f2281d3ed731fd6f",
+      "usage": "Repeatable straight gallery section",
+      "bounds_cm": [
+        [
+          -200.0,
+          -100.0,
+          -50.0
+        ],
+        [
+          200.0,
+          100.0,
+          132.36688232421875
+        ]
+      ],
+      "walking_surface_z_cm": 0,
+      "slab_bottom_z_cm": -50,
+      "rail_top_z_cm": 132.36688232421875,
+      "triangles": 5211,
+      "material_slots": [
+        "Advanced Procedural Glass for Cycles",
+        "Stone",
+        "Stainless steel"
+      ],
+      "uv_channels": [
+        "UVMap",
+        "UVMap.001"
+      ],
+      "orientation": "Straight guard along +Y, ends open along +/-X; steel connectors project 10cm toward deck from the main guard.",
+      "verified_walk_plane_area_cm2": 79998.75220115716,
+      "verified_walk_plane_normal_z": 0.9999999918534938
+    }
+  ],
+  "texture_references": [
+    {
+      "image_name": "Stainless steel_Metalness-Stainless steel_Roughness (1)",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stainless_steel_Metalness-Stainless_steel_Roughness__1_.png",
+      "colorspace": "Non-Color"
+    },
+    {
+      "image_name": "Stainless steel_NormalGL",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stainless_steel_NormalGL.jpg",
+      "colorspace": "Non-Color"
+    },
+    {
+      "image_name": "Stone_basecolor",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stone_basecolor.jpg",
+      "colorspace": "sRGB"
+    },
+    {
+      "image_name": "Stone_normal",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stone_normal.jpg",
+      "colorspace": "Non-Color"
+    },
+    {
+      "image_name": "Stone_roughness",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stone_roughness.png",
+      "colorspace": "Non-Color"
+    }
+  ],
+  "original_placement_at_yaw_zero": {
+    "desired_deck_center_xyz": "Cx,Cy,H",
+    "actor_location_xyz_cm": [
+      "Cx+90.9110718",
+      "Cy+199.1022491",
+      "H+59.3738365"
+    ],
+    "original_floor_surface_z_cm": -59.373836517333984,
+    "original_rail_edge_direction": "Long railing at original +X edge; short return near original -Y edge."
+  },
+  "placement_notes": [
+    "Prepared pivot is deck XY center and walking surface Z0; actor Z equals desired floor walking height.",
+    "A 50cm structural collision box can be centered at local Z-25, with full XY400x200cm.",
+    "Use straight sections along galleries, L return variant at the appropriate corner only.",
+    "Original endposts lie slightly inside the400cm module, so repeating may leave a small guard gap; add separate guard/collision connection rather than treating the visual mesh as a complete perimeter collision barrier.",
+    "Prepared parts preserve original material assignments and both UV channels; no user originals modified."
+  ]
+}

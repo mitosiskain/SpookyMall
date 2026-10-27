@@ -1,0 +1,38 @@
+[
+  {
+    "tool": "get_unreal_context",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "handles: []\nimageParts: []\ntextParts:\n  -\n    Current window info:\n    {\r\n    \t\"open_windows\": [\r\n    \t\t\"MyProject2 - Unreal Editor\",\r\n    \t\t\"Message Log\"\r\n    \t],\r\n    \t\"level\": \"PersistentLevel\",\r\n    \t\"current_level_path\": \"/Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson\"\r\n    }\nuseQuickSearch: true"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_asset_meta",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Blueprint Name: BP_MallEscalator\nPath: /Game/Environment/Escalator/BP_MallEscalator.BP_MallEscalator\n\nParent Class: MallEscalator\n\nComponents:\n- EscalatorRoot (SceneComponent) [Inherited, Native]\n  - Shell (StaticMeshComponent) [Inherited, Native]\n  - Steps (InstancedStaticMeshComponent) [Inherited, Native]\n  - LowerDeck (BoxComponent) [Inherited, Native]\n  - InclineDeck (BoxComponent) [Inherited, Native]\n  - UpperDeck (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - SideGuards (BoxComponent) [Inherited, Native]\n  - RiderVolume (BoxComponent) [Inherited, Native]\n  - LowerEndPlate (StaticMeshComponent) [Inherited, Native]\n  - UpperEndPlate (StaticMeshComponent) [Inherited, Native]\n\nTo get referenced struct types/layouts call get_asset_structs\nTo get properties on components use get_blueprint_component_properties"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_available_actors_in_level",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Level Name: Lvl_ThirdPerson\nPath: /Game/ThirdPerson/Lvl_ThirdPerson.Lvl_ThirdPerson\n\n\nActor Hierarchy:\n- Label=\"Escalator_UpperBackGuard\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=2388.54, Y=675.00, Z=406.00) Rotation=(0) Scale=(X=0.10, Y=6.20, Z=0.80)\n- Label=\"Escalator_SupportC\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=2030.00, Y=950.00, Z=178.00) Rotation=(0) Scale=(X=0.20, Y=0.20, Z=3.56)\n- Label=\"Escalator_LowerLanding\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=900.00, Y=675.00, Z=-4.00) Rotation=(0) Scale=(X=4.00, Y=6.00, Z=0.20)\n- Label=\"Escalator_SupportD\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=2330.00, Y=950.00, Z=178.00) Rotation=(0) Scale=(X=0.20, Y=0.20, Z=3.56)\n- Label=\"MallEscalator_Up\" Class=BP_MallEscalator\n  Spatial info: Location=(X=1100.00, Y=550.00, Z=6.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"Escalator_UpperLanding\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=2183.54, Y=675.00, Z=356.00) Rotation=(0) Scale=(X=4.00, Y=6.00, Z=0.20)\n- Label=\"Escalator_SupportB\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=2330.00, Y=400.00, Z=178.00) Rotation=(0) Scale=(X=0.20, Y=0.20, Z=3.56)\n- Label=\"Escalator_UpperRightGuard\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=2183.54, Y=980.00, Z=406.00) Rotation=(0) Scale=(X=4.00, Y=0.10, Z=0.80)\n- Label=\"Escalator_UpperLeftGuard\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=2183.54, Y=370.00, Z=406.00) Rotation=(0) Scale=(X=4.00, Y=0.10, Z=0.80)\n- Label=\"MallEscalator_Down\" Class=BP_MallEscalator\n  Spatial info: Location=(X=1100.00, Y=800.00, Z=6.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"Escalator_SupportA\" Class=BP_EscalatorLanding\n  Spatial info: Location=(X=2030.00, Y=400.00, Z=178.00) Rotation=(0) Scale=(X=0.20, Y=0.20, Z=3.56)\n"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

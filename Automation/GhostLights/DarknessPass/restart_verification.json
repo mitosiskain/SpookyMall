@@ -1,0 +1,79 @@
+{
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test.Lvl_MallOval_Test",
+  "actor_count": 736,
+  "ghost": [
+    {
+      "component": "MallGhostLights",
+      "tag": "GhostFlicker_East_F0_02",
+      "warning": 0.10000000149011612,
+      "chase": 0
+    }
+  ],
+  "blueprint_template": [
+    {
+      "tag": "GhostFlicker_East_F0_02",
+      "warning": 0.10000000149011612,
+      "chase": 0
+    }
+  ],
+  "shadow_lights": [
+    {
+      "actor": "Lighting_F0_Prop_03",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F0_Prop_05",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F0_Prop_06",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F0_Prop_08",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F0_Prop_11",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F1_Prop_14",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F1_Prop_16",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F1_Prop_17",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F1_Prop_19",
+      "intensity": 65000
+    },
+    {
+      "actor": "Lighting_F1_Prop_22",
+      "intensity": 65000
+    },
+    {
+      "actor": "East_F0_02_Prop_21",
+      "intensity": 12000
+    },
+    {
+      "actor": "East_F0_02_Prop_22",
+      "intensity": 12000
+    },
+    {
+      "actor": "East_F0_02_Prop_23",
+      "intensity": 12000
+    },
+    {
+      "actor": "East_F0_02_Prop_24",
+      "intensity": 12000
+    }
+  ],
+  "dirty_maps": [],
+  "dirty_content": []
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "tool": "fetch_blueprint_best_practices",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_assets",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "total_assets: 1\nsuccessful_assets: 1\nfailed_assets: 0\nsuccessful:\n  - index: 0\n    soft_path: /Game/Environment/Escalator/BP_MallEscalator\n    asset_type: Blueprint\n    result:\n    create_blueprint_result:\n      {\r\n      \t\"file_path\": \"/Game/Environment/Escalator/BP_MallEscalator\",\r\n      \t\"asset_type\": \"Actor Blueprint\",\r\n      \t\"parent_class\": \"MallEscalator\"\r\n      }\nfailed: []\ncontent:\n  - type: text\n    text:\n    total_assets: 1\n    successful_assets: 1\n    failed_assets: 0\n    successful:\n      - index: 0\n        soft_path: /Game/Environment/Escalator/BP_MallEscalator\n        asset_type: Blueprint\n        result:\n        create_blueprint_result:\n          {\r\n          \t\"file_path\": \"/Game/Environment/Escalator/BP_MallEscalator\",\r\n          \t\"asset_type\": \"Actor Blueprint\",\r\n          \t\"parent_class\": \"MallEscalator\"\r\n          }\n    failed: []\n  - type: assets\n    items:\n    - path: /Game/Environment/Escalator/BP_MallEscalator\n      name: BP_MallEscalator\n      label: Blueprint"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_blueprint_properties",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "file_path: /Game/Environment/Escalator/BP_MallEscalator\nclass_name: BP_MallEscalator_C\nproperties:\n  ShellMeshAsset: \n  StepMeshAsset: /Script/Engine.StaticMesh'/Engine/BasicShapes/Cube.Cube'\n  ShellMeshTransform: (Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))\n  StepMaterial: \n  EndPlateMaterial: \n  ShowEndPlates: True\n  Run: 623.539978\n  Rise: 360.000000\n  LandingLength: 130.000000\n  BeltWidth: 106.000000\n  BottomDeckHeight: \n  StepSpacing: 40.000000\n  StepDepth: 40.000000\n  StepHeight: \n  StationaryEndLength: 45.000000\n  TravelSpeed: 50.000000\n  Running: True\n  ReverseDirection: \n  SpeedChangeTime: 0.500000\n  Shell: /Script/Engine.StaticMeshComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:Shell'\n  Steps: /Script/Engine.InstancedStaticMeshComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:Steps'\n  EscalatorRoot: /Script/Engine.SceneComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:EscalatorRoot'\n  LowerDeck: /Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:LowerWalkingDeck'\n  InclineDeck: /Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:InclinedWalkingDeck'\n  UpperDeck: /Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:UpperWalkingDeck'\n  RiderVolume: /Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:RiderVolume'\n  SideGuards: (\"/Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:SideGuard0'\",\"/Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:SideGuard1'\",\"/Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:SideGuard2'\",\"/Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:SideGuard3'\",\"/Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:SideGuard4'\",\"/Script/Engine.BoxComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:SideGuard5'\")\n  LowerEndPlate: /Script/Engine.StaticMeshComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:LowerEndPlate'\n  UpperEndPlate: /Script/Engine.StaticMeshComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:UpperEndPlate'\n  PlateMesh: /Script/Engine.StaticMesh'/Engine/BasicShapes/Cube.Cube'\n  PrimaryActorTick: (TickGroup=TG_PostPhysics,bCanEverTick=True,bStartWithTickEnabled=True,bAllowTickOnDedicatedServer=True)\n  bNetTemporary: \n  bOnlyRelevantToOwner: \n  bAlwaysRelevant: \n  bReplicateMovement: \n  bCallPreReplication: True\n  bCallPreReplicationForReplay: True\n  bHidden: \n  bTearOff: \n  bForceNetAddressable: \n  bIsMainWorldOnly: \n  bNetLoadOnClient: True\n  bNetUseOwnerRelevancy: \n  bRelevantForNetworkReplays: True\n  bRelevantForLevelBounds: True\n  bReplayRewindable: \n  bAllowTickBeforeBeginPlay: \n  bAutoDestroyWhenFinished: \n  bCanBeDamaged: True\n  bBlockInput: \n  bCollideWhenPlacing: \n  bFindCameraComponentWhenViewTarget: True\n  bGenerateOverlapEventsDuringLevelStreaming: \n  bIgnoresOriginShifting: \n  bEnableAutoLODGeneration: True\n  bIsEditorOnlyActor: \n  bReplicates: \n  bCanBeInCluster: \n  bMigratingAsset: \n  bAllowReceiveTickEventOnDedicatedServer: True\n  bReplicateUsingRegisteredSubObjectList: \n  bActorEnableCollision: True\n  bAsyncPhysicsTickEnabled: \n  UpdateOverlapsMethodDuringLevelStreaming: \n  DefaultUpdateOverlapsMethodDuringLevelStreaming: OnlyUpdateMovable\n  InitialLifeSpan: \n  CustomTimeDilation: 1.000000\n  RayTracingGroupId: -1\n  RuntimeGrid: \n  ReplicatedMovement: ()\n  Owner: \n  NetDriverName: GameNetDriver\n  Role: ROLE_Authority\n  NetDormancy: DORM_Awake\n  SpawnCollisionHandlingMethod: AlwaysSpawn\n  AutoReceiveInput: \n  InputPriority: \n  InputComponent: \n  NetCullDistanceSquared: 225000000.000000\n  NetUpdateFrequency: 100.000000\n  MinNetUpdateFrequency: 2.000000\n  NetPriority: 1.000000\n  PhysicsReplicationMode: \n  Instigator: \n  RootComponent: /Script/Engine.SceneComponent'/Game/Environment/Escalator/BP_MallEscalator.Default__BP_MallEscalator_C:EscalatorRoot'\n  PivotOffset: (X=0.000000,Y=0.000000,Z=0.000000)\n  HLODLayer: \n  Layers: \n  ParentComponent: \n  ActorGuid: 00000000000000000000000000000000\n  ContentBundleGuid: 00000000000000000000000000000000\n  DataLayers: \n  DataLayerAssets: \n  ExternalDataLayerAsset: \n  SpriteScale: 1.000000\n  ActorLabel: \n  FolderPath: \n  FolderGuid: 00000000000000000000000000000000\n  bHiddenEd: \n  bLockLocation: \n  bActorLabelEditable: True\n  bEditable: True\n  bListedInSceneOutliner: True\n  bOptimizeBPComponentData: \n  bCanPlayFromHere: \n  bIsSpatiallyLoaded: True\n  Tags: \n  OnTakeAnyDamage: ()\n  OnTakePointDamage: ()\n  OnTakeRadialDamage: ()\n  OnActorBeginOverlap: ()\n  OnActorEndOverlap: ()\n  OnBeginCursorOver: ()\n  OnEndCursorOver: ()\n  OnClicked: ()\n  OnReleased: ()\n  OnInputTouchBegin: ()\n  OnInputTouchEnd: ()\n  OnInputTouchEnter: ()\n  OnInputTouchLeave: ()\n  OnActorHit: ()\n  OnDestroyed: ()\n  OnEndPlay: ()\n  InstanceComponents: \n  BlueprintCreatedComponents: "
+        }
+      ],
+      "isError": false
+    }
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "execution": "Native automation in Live Coding editor",
+  "result": "Success",
+  "passed": 14,
+  "failed": 0,
+  "controller_warnings": [],
+  "tests": {
+    "Mall.Ghost.BookInteraction": "Success",
+    "Mall.Ghost.SpiritBoxNetwork": "Success",
+    "Mall.Ghost.StateAndDisturbance": "Success",
+    "Mall.Voice.CodecAndPacketBounds": "Success",
+    "Mall.Voice.NetworkTransport": "Success",
+    "MyProject2.Voice.Microphone.ChunkInvarianceAndInvalidOptions": "Success",
+    "MyProject2.Voice.Microphone.LoudTransitionsAndManualGain": "Success",
+    "MyProject2.Voice.Microphone.LowFrequencyFilter": "Success",
+    "MyProject2.Voice.Microphone.QuietInput": "Success",
+    "MyProject2.Voice.Microphone.SilenceAndFloor": "Success",
+    "MyProject2.Voice.ConcurrentSpeechTeardown": "Success",
+    "MyProject2.Voice.MicrophonePipeline": "Success",
+    "MyProject2.Voice.OfflineSpeechBackend": "Success",
+    "MyProject2.Voice.PhraseMatching": "Success"
+  },
+  "evidence": [
+    "[2026.10.17-17.02.26:155][ 18]LogAutomationController: Display: Test Completed. Result={Success} Name={BookInteraction} Path={Mall.Ghost.BookInteraction}",
+    "[2026.10.17-17.02.28:243][540]LogAutomationController: Display: Test Completed. Result={Success} Name={SpiritBoxNetwork} Path={Mall.Ghost.SpiritBoxNetwork}",
+    "[2026.10.17-17.02.29:644][123]LogAutomationController: Display: Test Completed. Result={Success} Name={StateAndDisturbance} Path={Mall.Ghost.StateAndDisturbance}",
+    "[2026.10.17-17.02.29:795][125]LogAutomationController: Display: Test Completed. Result={Success} Name={CodecAndPacketBounds} Path={Mall.Voice.CodecAndPacketBounds}",
+    "[2026.10.17-17.02.30:671][276]LogAutomationController: Display: Test Completed. Result={Success} Name={NetworkTransport} Path={Mall.Voice.NetworkTransport}",
+    "[2026.10.17-17.02.30:707][278]LogAutomationController: Display: Test Completed. Result={Success} Name={ChunkInvarianceAndInvalidOptions} Path={MyProject2.Voice.Microphone.ChunkInvarianceAndInvalidOptions}",
+    "[2026.10.17-17.02.30:737][280]LogAutomationController: Display: Test Completed. Result={Success} Name={LoudTransitionsAndManualGain} Path={MyProject2.Voice.Microphone.LoudTransitionsAndManualGain}",
+    "[2026.10.17-17.02.30:767][282]LogAutomationController: Display: Test Completed. Result={Success} Name={LowFrequencyFilter} Path={MyProject2.Voice.Microphone.LowFrequencyFilter}",
+    "[2026.10.17-17.02.30:815][284]LogAutomationController: Display: Test Completed. Result={Success} Name={QuietInput} Path={MyProject2.Voice.Microphone.QuietInput}",
+    "[2026.10.17-17.02.30:874][287]LogAutomationController: Display: Test Completed. Result={Success} Name={SilenceAndFloor} Path={MyProject2.Voice.Microphone.SilenceAndFloor}",
+    "[2026.10.17-17.03.31:721][598]LogAutomationController: Display: Test Completed. Result={Success} Name={ConcurrentSpeechTeardown} Path={MyProject2.Voice.ConcurrentSpeechTeardown}",
+    "[2026.10.17-17.03.31:777][600]LogAutomationController: Display: Test Completed. Result={Success} Name={MicrophonePipeline} Path={MyProject2.Voice.MicrophonePipeline}",
+    "[2026.10.17-17.03.52:499][756]LogAutomationController: Display: Test Completed. Result={Success} Name={OfflineSpeechBackend} Path={MyProject2.Voice.OfflineSpeechBackend}",
+    "[2026.10.17-17.03.52:533][758]LogAutomationController: Display: Test Completed. Result={Success} Name={PhraseMatching} Path={MyProject2.Voice.PhraseMatching}"
+  ],
+  "scope": "Includes oversized non-colliding presentation volumes on both speaker and ghost; microphone never captured"
+}

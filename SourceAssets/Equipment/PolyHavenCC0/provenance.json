@@ -1,0 +1,228 @@
+[
+  {
+    "slug": "retro_multimeter",
+    "name": "Retro Multimeter",
+    "role": "EMF Reader / Handheld Meter CC0 Base",
+    "source_url": "https://polyhaven.com/a/retro_multimeter",
+    "license": "CC0 1.0 Universal (Public Domain Dedication)",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "authors": {
+      "elli moeller": "All"
+    },
+    "polycount": 13356,
+    "dimensions_mm": [
+      215.97424149513245,
+      202.6422657072544,
+      278.6375405266881
+    ],
+    "files": [
+      {
+        "file": "retro_multimeter.fbx",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/retro_multimeter/retro_multimeter_1k.fbx",
+        "sha256": "f3b459c105d11da9dc92e06b2b616b0c63c5f97cb636e8d04d75a0e28e4467b5"
+      },
+      {
+        "file": "retro_multimeter.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/retro_multimeter/retro_multimeter_1k.gltf",
+        "sha256": "47b51486a9fc1b5dab3449b3541e6bcbc3ae866e72372fcd8b67f3f45e803a97"
+      },
+      {
+        "file": "textures/retro_multimeter_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/retro_multimeter/retro_multimeter_nor_gl_1k.jpg",
+        "sha256": "d30fd3007cb35e62a0a5171d148df0dba3bee688e96c76d4ffbc314761fac183"
+      },
+      {
+        "file": "textures/retro_multimeter_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/retro_multimeter/retro_multimeter_diff_1k.jpg",
+        "sha256": "46baf6d9026f3cc79cfe6105c20101ec4436f728ced143f1647931b6d68a2e3b"
+      },
+      {
+        "file": "textures/retro_multimeter_arm_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/retro_multimeter/retro_multimeter_arm_1k.jpg",
+        "sha256": "3fbf956cfc9830fb866535ad8c50a6923ffb848b06707c5d957bbb8d73385c46"
+      },
+      {
+        "file": "retro_multimeter.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/retro_multimeter/retro_multimeter.bin",
+        "sha256": "c2d626778b59eaa5293f7c666433a5b0224cdb2dc38d005a056f95b2ab24b2e8"
+      }
+    ]
+  },
+  {
+    "slug": "Camera_01",
+    "name": "Camera 01",
+    "role": "Photo Camera CC0 Base",
+    "source_url": "https://polyhaven.com/a/Camera_01",
+    "license": "CC0 1.0 Universal (Public Domain Dedication)",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "authors": {
+      "Rajil Jose Macatangay": "All"
+    },
+    "polycount": 26987,
+    "dimensions_mm": [
+      213.90153467655182,
+      262.82382383942604,
+      77.84665003418922
+    ],
+    "files": [
+      {
+        "file": "Camera_01.fbx",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/Camera_01/Camera_01_1k.fbx",
+        "sha256": "84733292eff701f03a1c51816e2b56c3eeedb1353653f1549c4c49a889f1cde8"
+      },
+      {
+        "file": "Camera_01.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/Camera_01/Camera_01_1k.gltf",
+        "sha256": "9c5ca3104579c84ffcebdee5c6e5e09821fe8d4a5cd9ce95ed32d81507450ee3"
+      },
+      {
+        "file": "textures/Camera_01_lens_body_arm_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_lens_body_arm_1k.jpg",
+        "sha256": "6fef8a44334428a8f095315fa8043678994abcc671473cf43f7ca63ec10eb98f"
+      },
+      {
+        "file": "textures/Camera_01_body_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_body_diff_1k.jpg",
+        "sha256": "89b77ec525e933f9f2702e2ccb0c8ba32ecef31dac241bc034e3eddc9481f4f7"
+      },
+      {
+        "file": "textures/Camera_01_strap_arm_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_strap_arm_1k.jpg",
+        "sha256": "17beca6e0542a1a28146b52cff06aad2e404541359e452deca83b74d01505c50"
+      },
+      {
+        "file": "textures/Camera_01_lens_body_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_lens_body_nor_gl_1k.jpg",
+        "sha256": "3d5e695a57ce38f0e35558f43f30497fff2f8cc844c903c95462d105b58cb333"
+      },
+      {
+        "file": "Camera_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/Camera_01/Camera_01.bin",
+        "sha256": "d3d2c78458a4823bc9821c2ba3994c95d15b044c7a1444ba089b163f74c3fcf2"
+      },
+      {
+        "file": "textures/Camera_01_lens_body_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_lens_body_diff_1k.jpg",
+        "sha256": "aafa05c5b106b960b21547ef9d4662083dfc7138261cbab1f10e143afe046b68"
+      },
+      {
+        "file": "textures/Camera_01_body_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_body_nor_gl_1k.jpg",
+        "sha256": "c7ec0d96ae9b5f16559069f1a4c9a006f3ec1d49a7707269a280fe23786db144"
+      },
+      {
+        "file": "textures/Camera_01_body_arm_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_body_arm_1k.jpg",
+        "sha256": "a3b1928d258fdb23687fb005a3d764b008475abb13b47a2bb87ed81200274635"
+      },
+      {
+        "file": "textures/Camera_01_strap_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_strap_diff_1k.jpg",
+        "sha256": "3d4c9cb463b330b7ea4fc713f6dc90a0c5e6d9d3ba707b6921fe0a2d1f9ab146"
+      },
+      {
+        "file": "textures/Camera_01_strap_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Camera_01/Camera_01_strap_nor_gl_1k.jpg",
+        "sha256": "5d4d99d5b1640d5a4d3c2227c264c232279773b5c92e4a6c50d2f34217880202"
+      }
+    ]
+  },
+  {
+    "slug": "signal_flashlight",
+    "name": "Signal Flashlight",
+    "role": "UV Blacklight Torch CC0 Base",
+    "source_url": "https://polyhaven.com/a/signal_flashlight",
+    "license": "CC0 1.0 Universal (Public Domain Dedication)",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "authors": {
+      "Ji\u0159\u00ed Pt\u00e1\u010dek": "All"
+    },
+    "polycount": 9730,
+    "dimensions_mm": [
+      70.99152728915215,
+      44.537635520100594,
+      149.9275267124176
+    ],
+    "files": [
+      {
+        "file": "signal_flashlight.fbx",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/signal_flashlight/signal_flashlight_1k.fbx",
+        "sha256": "ecd95bdb75fee91d3e9d4cf1da3edb40fac4ae0251c4da41de892bbbc1d86872"
+      },
+      {
+        "file": "signal_flashlight.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/signal_flashlight/signal_flashlight_1k.gltf",
+        "sha256": "c2b4b978659d4dcd9d45ccf15bd8d32ea2d4363b999ab6897ee550918cc405d2"
+      },
+      {
+        "file": "textures/signal_flashlight_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/signal_flashlight/signal_flashlight_nor_gl_1k.jpg",
+        "sha256": "373572b579af8500954cc187b075592c4473e774efb64b75fbb013c8382cdc1b"
+      },
+      {
+        "file": "textures/signal_flashlight_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/signal_flashlight/signal_flashlight_diff_1k.jpg",
+        "sha256": "8e35ddfae0bfd1756659a6604e83084eb53bec7348f75aff2654662aadc9cd43"
+      },
+      {
+        "file": "textures/signal_flashlight_arm_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/signal_flashlight/signal_flashlight_arm_1k.jpg",
+        "sha256": "e0a3da5fae991af93c9c72e4f483fec8af2e9ad703b213a96e047c9e1962fd13"
+      },
+      {
+        "file": "signal_flashlight.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/signal_flashlight/signal_flashlight.bin",
+        "sha256": "cff3da15d7f0e33457a481e8f0bf76b87a130c4b59c24c0744f8352cca3b86d3"
+      }
+    ]
+  },
+  {
+    "slug": "portable_cassette_player",
+    "name": "Portable Cassette Player",
+    "role": "Spirit Box / Audio Recorder CC0 Base",
+    "source_url": "https://polyhaven.com/a/portable_cassette_player",
+    "license": "CC0 1.0 Universal (Public Domain Dedication)",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "authors": {
+      "Mateusz Sadek": "All"
+    },
+    "polycount": 13307,
+    "dimensions_mm": [
+      172.25529998540878,
+      39.671553298830986,
+      130.30561804771423
+    ],
+    "files": [
+      {
+        "file": "portable_cassette_player.fbx",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/portable_cassette_player/portable_cassette_player_1k.fbx",
+        "sha256": "256f6f8fb96583742974fbd5efb2a7685a436e99e0918d86b2f875afbf50c38f"
+      },
+      {
+        "file": "portable_cassette_player.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/portable_cassette_player/portable_cassette_player_1k.gltf",
+        "sha256": "7ef3e7b815429601a462fef9cca46639bfc90c0768bc61e0f7a6814ed27ef1e5"
+      },
+      {
+        "file": "textures/portable_cassette_player_nor_gl_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_cassette_player/portable_cassette_player_nor_gl_1k.jpg",
+        "sha256": "0c2ded713627055753d65d2344abfb7284cd7963f77f5b6f0924997edaba84cd"
+      },
+      {
+        "file": "textures/portable_cassette_player_diff_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_cassette_player/portable_cassette_player_diff_1k.jpg",
+        "sha256": "bea3b6d37788842c414e49cb618d84d5aa3da08853170ecc6e79b9b70707c8ee"
+      },
+      {
+        "file": "textures/portable_cassette_player_arm_1k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_cassette_player/portable_cassette_player_arm_1k.jpg",
+        "sha256": "ebbb6ec6f5b5c75b87b1b72160d35a9b94d27d6b44e8be8c5cf7460ad1361f3d"
+      },
+      {
+        "file": "portable_cassette_player.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/portable_cassette_player/portable_cassette_player.bin",
+        "sha256": "c56e64a87077f7969202acad96de59e9a2423579ab1f0acc5de64bd3daade716"
+      }
+    ]
+  }
+]

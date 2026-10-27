@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "python_agent",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"Verified with the corrected read-only script:\\n- PIE inactive.\\n- Dirty map packages: **0**.\\n- Dirty content packages: **0**.\\n- Unreal remains open; no shutdown commands or restriction workarounds used.\\n\\n**The user must close Unreal manually before the regular `MyProject2Editor` native build.** Live Coding does not update the base DLL.\\n\\nExecution caveat: the initial script invoked package saving and closed the two Blueprint asset editors. Those calls were removed before the final read-only verification; its results must not be represented as an entirely read-only session.\\n\\nScript ID: `draft_bd926d15-d87a-4879-bd9d-0d5beaae931f`\"\n  }\n]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

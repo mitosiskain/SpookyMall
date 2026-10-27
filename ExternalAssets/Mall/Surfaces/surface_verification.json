@@ -1,0 +1,182 @@
+[
+  {
+    "asset_id": "white_plaster_02",
+    "role": "base_color",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_diff_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "white_plaster_02",
+    "role": "normal",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_nor_dx_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "white_plaster_02",
+    "role": "roughness",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_rough_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "white_plaster_02",
+    "role": "ambient_occlusion",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_ao_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "terrazzo_tiles",
+    "role": "base_color",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_diff_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "terrazzo_tiles",
+    "role": "normal",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_nor_dx_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "terrazzo_tiles",
+    "role": "roughness",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_rough_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "terrazzo_tiles",
+    "role": "ambient_occlusion",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_ao_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "painted_metal_shutter",
+    "role": "base_color",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_diff_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "painted_metal_shutter",
+    "role": "normal",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_nor_dx_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "painted_metal_shutter",
+    "role": "roughness",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_rough_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "painted_metal_shutter",
+    "role": "ambient_occlusion",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_ao_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "texturecan_tiles_0013",
+    "role": "ambient_occlusion",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_ao_2k.jpg",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "texturecan_tiles_0013",
+    "role": "base_color",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_color_2k.jpg",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "texturecan_tiles_0013",
+    "role": "height",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_height_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "texturecan_tiles_0013",
+    "role": "metallic",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_metallic_2k.jpg",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "texturecan_tiles_0013",
+    "role": "normal",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_normal_directx_2k.png",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  },
+  {
+    "asset_id": "texturecan_tiles_0013",
+    "role": "roughness",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_roughness_2k.jpg",
+    "resolution": [
+      2048,
+      2048
+    ],
+    "image_integrity": "passed"
+  }
+]

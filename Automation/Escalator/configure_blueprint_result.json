@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "edit_blueprint",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "operation: EditBlueprint\nsoft_path: /Game/Environment/Escalator/BP_MallEscalator\nresult:\n  compile_blueprint_result:\n    file_path: /Game/Environment/Escalator/BP_MallEscalator\n    compiled: true\n    success: true\n    status: UpToDate\n    errors: []\n    warnings: []\n    error_count: 0\n    warning_count: 0\n    saved: false\n    save_skipped_not_dirty: false\ncontent:\n  - type: text\n    text:\n    operation: EditBlueprint\n    soft_path: /Game/Environment/Escalator/BP_MallEscalator\n    result:\n      compile_blueprint_result:\n        file_path: /Game/Environment/Escalator/BP_MallEscalator\n        compiled: true\n        success: true\n        status: UpToDate\n        errors: []\n        warnings: []\n        error_count: 0\n        warning_count: 0\n        saved: false\n        save_skipped_not_dirty: false\n  - type: assets\n    items:\n    - path: /Game/Environment/Escalator/BP_MallEscalator\n      name: BP_MallEscalator\n      label: Blueprint"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

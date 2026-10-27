@@ -1,0 +1,77 @@
+{
+  "feature": "Store-confined ghost warning and chase light flicker",
+  "status": "built_tested_saved",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "blueprint": "/Game/Environment/Mall/Blueprints/BP_StoreGhost",
+  "component": "MallGhostLights",
+  "light_tag": "GhostFlicker_East_F0_02",
+  "settings": {
+    "enabled": true,
+    "warning_minimum_brightness": 0.72,
+    "chase_minimum_brightness": 0.22,
+    "rate": 2.3
+  },
+  "selected_lights": [
+    {
+      "actor": "Lighting_F0_Prop_08",
+      "original_intensity": 65000
+    },
+    {
+      "actor": "East_F0_02_Prop_21",
+      "original_intensity": 12000
+    },
+    {
+      "actor": "East_F0_02_Prop_22",
+      "original_intensity": 12000
+    },
+    {
+      "actor": "East_F0_02_Prop_23",
+      "original_intensity": 12000
+    },
+    {
+      "actor": "East_F0_02_Prop_24",
+      "original_intensity": 12000
+    }
+  ],
+  "native_verification": {
+    "build": "Saved/Logs/GhostLightsBuild.log",
+    "suite": "Automation/GhostLights/automation_results.json",
+    "succeeded": 8,
+    "failed": 0,
+    "warnings": 0,
+    "errors": 0,
+    "test_fixture_corrections_compiled_with_live_coding": true
+  },
+  "live_verification": {
+    "topology": "Listen server and one connected client",
+    "default_cycle_timings": true,
+    "mode_commands": false,
+    "microphone_used": false,
+    "reference_resolution": "All five nonreplicated placed light actors resolved on both peers",
+    "shared_seed_and_epoch": true,
+    "summary": "Automation/GhostLights/live_summary.json",
+    "timelines": [
+      "Automation/GhostLights/live_peer0.json",
+      "Automation/GhostLights/live_peer1.json"
+    ],
+    "readbacks": "Automation/GhostLights/live_readbacks.json",
+    "exact_restore_after_catch_cooldown": true,
+    "neighbor_and_upstairs_lamps_unchanged": true,
+    "baseline_image": "Automation/GhostLights/baseline_t30.22s_f625262.png",
+    "active_image": "Automation/GhostLights/active_t60.98s_f626122.png",
+    "cooldown_image": "Automation/GhostLights/cooldown_t68.17s_f626344.png",
+    "visual_review": "Captured frames reviewed; final flicker strength remains a player preference."
+  },
+  "final_editor": {
+    "actor_count": 736,
+    "light_components_per_ghost": 1,
+    "pie_active": false,
+    "dirty_maps": 0,
+    "dirty_content": 0
+  },
+  "limits": [
+    "Only opted-in placed local lights participate; emissive fixture materials are unchanged.",
+    "Use unique tags per ghost/store; simultaneous independent control of the same lamp requires shared ownership handling.",
+    "Existing wide light radii and other ambient/store lights can illuminate neighboring areas."
+  ]
+}

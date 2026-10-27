@@ -1,0 +1,10 @@
+SimpleJSON license declaration retained from Vosk v0.3.45 src/json.h
+Source: https://raw.githubusercontent.com/alphacep/vosk-api/v0.3.45/src/json.h
+Original project: https://github.com/nbsdx/SimpleJSON
+
+// From https://github.com/nbsdx/SimpleJSON
+// SimpleJSON
+// Simple C++ JSON library
+//
+// License
+// Do what the fuck you want public license

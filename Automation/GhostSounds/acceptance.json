@@ -1,0 +1,39 @@
+{
+  "feature": "Positioned invisible and chasing ghost sounds",
+  "status": "built_tested_and_saved",
+  "build": "Saved/Logs/GhostPhysicalSoundsBuild.log",
+  "report": "Saved/Automation/GhostPhysicalSounds/index.json",
+  "native_results": {"succeeded": 5, "failed": 0, "warnings": 0, "skipped": 0},
+  "network_test": "Mall.Ghost.PhysicalSoundNetwork: server, two actual IP clients and a late third client, with voice capture and recognition disabled",
+  "import_record": "Automation/GhostSounds/import_validation.json",
+  "sources_and_licenses": "SourceAssets/GhostSounds/provenance.json",
+  "license": "CC0-1.0; Ghost breath and Ghost Monster Voice Moaning & Growling by qubodup",
+  "origin": "Each listener's replicated ghost pawn at eye/mouth height; attached source follows the ghost",
+  "attenuation": "Full volume inside one metre; linear falloff over the next 24 metres; no new map-specific occlusion/reverb",
+  "invisible": "Random breath/moan, nearby living player wholly inside the same store, harmless mode preserved; 8-16 second gaps after clips",
+  "hunt": "Distinct growl only during actual Chasing state with an eligible target and expired cooldown; 3-6 second gaps after clips",
+  "replication": "Live multicast play/stop with duplicate serial rejection; metadata never replays old audio for late joiners",
+  "manual_review": "Headphone localization, desired creepiness and final loudness remain a user listening test",
+  "live_pie": {
+    "record": "Automation/GhostSounds/live_pie.json",
+    "automatic_invisible_cues_observed": 2,
+    "actual_ai_state_during_playback": "Chasing",
+    "physical_audio_playing": true,
+    "source_follows_moving_ghost": true,
+    "ghost_position_cm": [4903.290654, -99.277153, 92.150002],
+    "playing_sound_position_cm": [4903.290654, -99.277153, 156.150002],
+    "returned_to_invisible_mode": true,
+    "return_stopped_hunt_audio": true,
+    "microphone_used": false
+  },
+  "saved_blueprint": "/Game/Environment/Mall/Blueprints/BP_StoreGhost",
+  "final_editor_state": {
+    "actor_count": 736,
+    "sound_components_per_ghost": 1,
+    "automatic_sounds": true,
+    "cue_count": 0,
+    "pie_active": false,
+    "dirty_maps": 0,
+    "dirty_content": 0
+  }
+}

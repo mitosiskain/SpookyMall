@@ -1,0 +1,42 @@
+{
+  "tool": "edit_blueprint",
+  "arguments": {
+    "soft_path_from_project_root": "/Game/Environment/Escalator/BP_EscalatorLanding",
+    "properties": [],
+    "components": [
+      {
+        "component_name": "StaticMeshComponent",
+        "component_type": "StaticMeshComponent",
+        "is_new_component": false,
+        "component_properties": [
+          {
+            "name": "StaticMesh",
+            "value": "/Engine/BasicShapes/Cube.Cube"
+          },
+          {
+            "name": "Mobility",
+            "value": "Static"
+          },
+          {
+            "name": "OverrideMaterials",
+            "value_json": "[\"/Game/Environment/Escalator/Meshes/metal.metal\"]"
+          }
+        ],
+        "component_type_hints": [
+          {
+            "name": "StaticMesh",
+            "value": "StaticMesh"
+          },
+          {
+            "name": "Mobility",
+            "value": "EComponentMobility"
+          },
+          {
+            "name": "OverrideMaterials",
+            "value": "array:MaterialInterface"
+          }
+        ]
+      }
+    ]
+  }
+}

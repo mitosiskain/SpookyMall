@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  {\"dirty_content\": [], \"dirty_maps\": [], \"nearby\": [{\"name\": \"SM_wlombbzdw_0\", \"origin\": [979.4026526752859, -205.0, 80.80805745701187], \"extent\": [54.347347194328904, 135.87835274269196, 166.50042948146466]}, {\"name\": \"BP_TestEvidence\", \"origin\": [783.0, 1256.0, 211.00000000000009], \"extent\": [173.99999631941307, 173.99999631941319, 173.99999631941307]}]}\r\n"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

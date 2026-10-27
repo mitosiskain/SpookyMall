@@ -1,0 +1,4586 @@
+{
+  "decorative_book_set_01": [
+    {
+      "name": "book_softcover_01_cover01",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.04134355112910271,
+        0.1514478474855423,
+        0.2260366678237915
+      ],
+      "location": [
+        0.0,
+        0.011075133457779884,
+        0.0
+      ],
+      "bounds": [
+        [
+          -0.018593652173876762,
+          -0.06376083195209503,
+          -8.764970971242292e-09
+        ],
+        [
+          0.018593670800328255,
+          0.0847594141960144,
+          0.22317247092723846
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover01"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover02",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.041858918964862823,
+        0.1535525768995285,
+        0.22722044587135315
+      ],
+      "location": [
+        0.04097076505422592,
+        0.01262337900698185,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.02002892643213272,
+          -0.06525784730911255,
+          -8.029559830902144e-05
+        ],
+        [
+          0.0619126558303833,
+          0.088608518242836,
+          0.22749757766723633
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover02"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "catalogue_hardcover_01_cover03",
+      "parent": null,
+      "vertices": 846,
+      "faces": 780,
+      "dimensions": [
+        0.022451575845479965,
+        0.3211117684841156,
+        0.28515884280204773
+      ],
+      "location": [
+        0.07284577190876007,
+        -0.048573218286037445,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.0636199489235878,
+          -0.2105286717414856,
+          -1.907226376829385e-08
+        ],
+        [
+          0.08207159489393234,
+          0.10884376615285873,
+          0.28266143798828125
+        ]
+      ],
+      "materials": [
+        "catalogue_hardcover_01_cover03"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover04",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.04158313572406769,
+        0.15232548117637634,
+        0.2273465394973755
+      ],
+      "location": [
+        0.10229352861642838,
+        0.009870091453194618,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.08359213173389435,
+          -0.06539953500032425,
+          -8.815763230529683e-09
+        ],
+        [
+          0.1209949478507042,
+          0.08398137241601944,
+          0.2244657576084137
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover04"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover05",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.022440293803811073,
+        0.15082086622714996,
+        0.22536174952983856
+      ],
+      "location": [
+        0.13007807731628418,
+        0.012243200093507767,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.12103228271007538,
+          -0.062447089701890945,
+          -8.029800824260747e-09
+        ],
+        [
+          0.13912388682365417,
+          0.08578407764434814,
+          0.2227381020784378
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover05"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover06",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.04168170318007469,
+        0.1529024988412857,
+        0.22625847160816193
+      ],
+      "location": [
+        0.16094332933425903,
+        0.006245299242436886,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.14009015262126923,
+          -0.07130622118711472,
+          -7.995565101737157e-05
+        ],
+        [
+          0.18179656565189362,
+          0.08190874010324478,
+          0.2265344262123108
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover06"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover07",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.04165327921509743,
+        0.15279822051525116,
+        0.22610418498516083
+      ],
+      "location": [
+        0.20234830677509308,
+        0.008326767012476921,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.1815093457698822,
+          -0.06917186826467514,
+          -7.990112499101087e-05
+        ],
+        [
+          0.22318731248378754,
+          0.0839386135339737,
+          0.22637994587421417
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover07"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover08",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.041711799800395966,
+        0.17188270390033722,
+        0.22642181813716888
+      ],
+      "location": [
+        0.2451332062482834,
+        0.013775687664747238,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.2242649793624878,
+          -0.07303552329540253,
+          -8.00133784650825e-05
+        ],
+        [
+          0.26600149273872375,
+          0.09919078648090363,
+          0.22669798135757446
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover08"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover09",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.04155139997601509,
+        0.15220923721790314,
+        0.22717303037643433
+      ],
+      "location": [
+        0.28489574790000916,
+        -0.003824381623417139,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.26620861887931824,
+          -0.07903656363487244,
+          -8.809035279000454e-09
+        ],
+        [
+          0.30358290672302246,
+          0.07023034244775772,
+          0.22429443895816803
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover09"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "catalogue_softcover_01_cover10",
+      "parent": null,
+      "vertices": 426,
+      "faces": 428,
+      "dimensions": [
+        0.011721323244273663,
+        0.17739780247211456,
+        0.22771140933036804
+      ],
+      "location": [
+        0.30817514657974243,
+        0.01219174824655056,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.30335569381713867,
+          -0.07655232399702072,
+          -1.526501591797569e-08
+        ],
+        [
+          0.3129945993423462,
+          0.09908624738454819,
+          0.22588251531124115
+        ]
+      ],
+      "materials": [
+        "catalogue_softcover_01_cover10"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover11",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.02298557758331299,
+        0.15098081529140472,
+        0.22556884586811066
+      ],
+      "location": [
+        0.3224377930164337,
+        0.003881540149450302,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.3131197392940521,
+          -0.07087735831737518,
+          -8.057092770741292e-09
+        ],
+        [
+          0.3317558765411377,
+          0.07748973369598389,
+          0.22294236719608307
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover11"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover12",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.041320256888866425,
+        0.15136253833770752,
+        0.2259093075990677
+      ],
+      "location": [
+        0.35161858797073364,
+        0.006171444430947304,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.333035409450531,
+          -0.06862246245145798,
+          -8.76003181105034e-09
+        ],
+        [
+          0.37020179629325867,
+          0.07981409132480621,
+          0.22304672002792358
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover12"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover13",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.041585903614759445,
+        0.15255106985569,
+        0.22573845088481903
+      ],
+      "location": [
+        0.3919579088687897,
+        0.00676641333848238,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.3711526691913605,
+          -0.07060685753822327,
+          -0.0003371868806425482
+        ],
+        [
+          0.41276320815086365,
+          0.08225595206022263,
+          0.22575636208057404
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover13"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover14",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.03317170590162277,
+        0.1607377827167511,
+        0.2250208556652069
+      ],
+      "location": [
+        0.42696183919906616,
+        0.007899412885308266,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.4123741686344147,
+          -0.0714629665017128,
+          -8.428074238508998e-09
+        ],
+        [
+          0.44154950976371765,
+          0.08604021370410919,
+          0.22212795913219452
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover14"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover15",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03813435882329941,
+        0.1530373990535736,
+        0.2264581173658371
+      ],
+      "location": [
+        0.4610768258571625,
+        0.008447200059890747,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.44199836254119873,
+          -0.06917274743318558,
+          -8.002606773516163e-05
+        ],
+        [
+          0.480155348777771,
+          0.0841774046421051,
+          0.22673431038856506
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover15"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "magazine_01_cover16",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.011382391676306725,
+        0.21181952953338623,
+        0.27111777663230896
+      ],
+      "location": [
+        0.48417580127716064,
+        0.0023587504401803017,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.4802110195159912,
+          -0.10309509187936783,
+          -7.329896470764652e-05
+        ],
+        [
+          0.4881405830383301,
+          0.10738253593444824,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover16"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover17",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.009858263656497002,
+        0.21177640557289124,
+        0.27109023928642273
+      ],
+      "location": [
+        0.49189311265945435,
+        0.0003264741972088814,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.48869967460632324,
+          -0.10512784123420715,
+          -7.329893560381606e-05
+        ],
+        [
+          0.49508655071258545,
+          0.10534978657960892,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover17"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover18",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.009858256205916405,
+        0.21177640557289124,
+        0.27109017968177795
+      ],
+      "location": [
+        0.4988797903060913,
+        -0.004708574153482914,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.4956863522529602,
+          -0.110162653028965,
+          -7.329893560381606e-05
+        ],
+        [
+          0.5020732283592224,
+          0.10031497478485107,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover18"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover19",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.011201979592442513,
+        0.21181458234786987,
+        0.2711144685745239
+      ],
+      "location": [
+        0.5064595937728882,
+        -0.0027144374325871468,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.5025862455368042,
+          -0.10816828161478043,
+          -7.32989574316889e-05
+        ],
+        [
+          0.5103329420089722,
+          0.10230934619903564,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover19"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover20",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.011201979592442513,
+        0.21181458234786987,
+        0.2711144685745239
+      ],
+      "location": [
+        0.5147730112075806,
+        -0.007412568666040897,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.5108996629714966,
+          -0.11286640912294388,
+          -7.32989574316889e-05
+        ],
+        [
+          0.5186463594436646,
+          0.09761121869087219,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover20"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover21",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.011201993562281132,
+        0.21181459724903107,
+        0.2711145579814911
+      ],
+      "location": [
+        0.5224540829658508,
+        0.001023084856569767,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.5185807347297668,
+          -0.10443123430013657,
+          -7.32989574316889e-05
+        ],
+        [
+          0.5263274312019348,
+          0.1060463935136795,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover21"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover22",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.011201979592442513,
+        0.21181458234786987,
+        0.2711144685745239
+      ],
+      "location": [
+        0.5306093692779541,
+        -0.004333001561462879,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.5267360210418701,
+          -0.10978684574365616,
+          -7.32989574316889e-05
+        ],
+        [
+          0.5344827175140381,
+          0.10069078207015991,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover22"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover23",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03944026678800583,
+        0.15320536494255066,
+        0.22670665383338928
+      ],
+      "location": [
+        0.5547770857810974,
+        0.011173384264111519,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.5350452661514282,
+          -0.06653175503015518,
+          -0.00033863302087411284
+        ],
+        [
+          0.5745089054107666,
+          0.08698670566082001,
+          0.22672465443611145
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover23"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover24",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03926243260502815,
+        0.15251456201076508,
+        0.22568443417549133
+      ],
+      "location": [
+        0.594845712184906,
+        0.007807331159710884,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.5752028822898865,
+          -0.06954743713140488,
+          -7.975271728355438e-05
+        ],
+        [
+          0.6144886016845703,
+          0.08327880501747131,
+          0.2259596884250641
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover24"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover25",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.026323767378926277,
+        0.14963611960411072,
+        0.22484923899173737
+      ],
+      "location": [
+        0.6283804178237915,
+        0.007787374779582024,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.6152185201644897,
+          -0.0676102414727211,
+          -8.410188989671497e-09
+        ],
+        [
+          0.6415423154830933,
+          0.08202586323022842,
+          0.22484922409057617
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover25"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "catalogue_softcover_01_cover26",
+      "parent": null,
+      "vertices": 426,
+      "faces": 428,
+      "dimensions": [
+        0.012027831748127937,
+        0.22234798967838287,
+        0.2271379977464676
+      ],
+      "location": [
+        0.6469271779060364,
+        -0.0037573929876089096,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.6421077251434326,
+          -0.11521032452583313,
+          -5.251791890259483e-08
+        ],
+        [
+          0.6517466306686401,
+          0.1053725928068161,
+          0.22588247060775757
+        ]
+      ],
+      "materials": [
+        "catalogue_softcover_01_cover26"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover27",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.033066194504499435,
+        0.15130643546581268,
+        0.22566673159599304
+      ],
+      "location": [
+        0.6671003699302673,
+        0.005748574621975422,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.6526391506195068,
+          -0.06905301660299301,
+          -1.0917895476580952e-09
+        ],
+        [
+          0.6815615892410278,
+          0.07939903438091278,
+          0.22306999564170837
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover27"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover28",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.022637024521827698,
+        0.15214310586452484,
+        0.22733749449253082
+      ],
+      "location": [
+        0.6911213397979736,
+        0.006869050674140453,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.68199622631073,
+          -0.06847602128982544,
+          -6.889235293350282e-10
+        ],
+        [
+          0.7002464532852173,
+          0.0810546875,
+          0.22469085454940796
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover28"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover29",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.032652124762535095,
+        0.15226519107818604,
+        0.2253154069185257
+      ],
+      "location": [
+        0.7178600430488586,
+        0.007290275767445564,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.7015243172645569,
+          -0.06993800401687622,
+          -7.96220701886341e-05
+        ],
+        [
+          0.7341958284378052,
+          0.08263834565877914,
+          0.22559021413326263
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover29"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover31",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.034266531467437744,
+        0.15207000076770782,
+        0.2267935872077942
+      ],
+      "location": [
+        0.7498101592063904,
+        0.007426876574754715,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.7347555160522461,
+          -0.06774576008319855,
+          -1.136593930084473e-09
+        ],
+        [
+          0.7648648619651794,
+          0.08144265413284302,
+          0.22417649626731873
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover31"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover32",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.022494498640298843,
+        0.15118516981601715,
+        0.225906103849411
+      ],
+      "location": [
+        0.7753621935844421,
+        0.011044729501008987,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.766294538974762,
+          -0.06382597982883453,
+          -6.845858324666665e-10
+        ],
+        [
+          0.7844298481941223,
+          0.08476324379444122,
+          0.22327612340450287
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover32"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover33",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.03528784587979317,
+        0.15297167003154755,
+        0.228125661611557
+      ],
+      "location": [
+        0.8012452125549316,
+        0.011395877227187157,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.7856906652450562,
+          -0.06421753019094467,
+          -1.1743340744274633e-09
+        ],
+        [
+          0.8167998194694519,
+          0.08584565669298172,
+          0.2254909723997116
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover33"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover34",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03998333215713501,
+        0.1528852880001068,
+        0.22623302042484283
+      ],
+      "location": [
+        0.8377763628959656,
+        0.006371372379362583,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.8177728652954102,
+          -0.07117142528295517,
+          -7.994659972609952e-05
+        ],
+        [
+          0.8577799201011658,
+          0.08202630281448364,
+          0.2265089452266693
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover34"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover35",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.04002862423658371,
+        0.1530584692955017,
+        0.22648929059505463
+      ],
+      "location": [
+        0.8785970211029053,
+        0.013865811750292778,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.8585708737373352,
+          -0.06376481801271439,
+          -8.000749221537262e-05
+        ],
+        [
+          0.8986232280731201,
+          0.08960644155740738,
+          0.22676555812358856
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover35"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover36",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.036849576979875565,
+        0.1520816534757614,
+        0.22504383325576782
+      ],
+      "location": [
+        0.9183540344238281,
+        0.008346257731318474,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.8999183773994446,
+          -0.0687890499830246,
+          -7.952625310281292e-05
+        ],
+        [
+          0.9367897510528564,
+          0.0836033970117569,
+          0.2253183126449585
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover36"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover37",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03677031025290489,
+        0.15175451338291168,
+        0.2245597392320633
+      ],
+      "location": [
+        0.9556243419647217,
+        0.007990667596459389,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.9372283220291138,
+          -0.06897860020399094,
+          -7.935518806334585e-05
+        ],
+        [
+          0.9740204215049744,
+          0.0830860361456871,
+          0.2248336225748062
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover37"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover38",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.040898170322179794,
+        0.1498163640499115,
+        0.22360163927078247
+      ],
+      "location": [
+        0.993826687335968,
+        0.010160453617572784,
+        0.0
+      ],
+      "bounds": [
+        [
+          0.975433349609375,
+          -0.0638694316148758,
+          -1.3886570782162266e-09
+        ],
+        [
+          1.012220025062561,
+          0.08305084705352783,
+          0.2207683026790619
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover38"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover39",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.041839152574539185,
+        0.15326333045959473,
+        0.228746235370636
+      ],
+      "location": [
+        1.032333254814148,
+        0.01055155135691166,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.0135166645050049,
+          -0.06518161296844482,
+          -1.4206071874411919e-09
+        ],
+        [
+          1.051149845123291,
+          0.08511900156736374,
+          0.22584772109985352
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover39"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover40",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.023018382489681244,
+        0.150938019156456,
+        0.22549714148044586
+      ],
+      "location": [
+        1.0597444772720337,
+        0.0028249425813555717,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.050409197807312,
+          -0.0719100758433342,
+          2.8700213761112536e-08
+        ],
+        [
+          1.0690797567367554,
+          0.07640963047742844,
+          0.22287116944789886
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover40"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover41",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.04129742085933685,
+        0.15149281919002533,
+        0.22417250275611877
+      ],
+      "location": [
+        1.0907195806503296,
+        0.013068005442619324,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.0700587034225464,
+          -0.06376853585243225,
+          -0.00033486250322312117
+        ],
+        [
+          1.1113805770874023,
+          0.08803387731313705,
+          0.22419026494026184
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover41"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover42",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.039643459022045135,
+        0.15192942321300507,
+        0.22481854259967804
+      ],
+      "location": [
+        1.1322193145751953,
+        0.01033400185406208,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.112385869026184,
+          -0.06672398000955582,
+          -7.947619451442733e-05
+        ],
+        [
+          1.152052879333496,
+          0.08551591634750366,
+          0.22509272396564484
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover42"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "magazine_01_cover43",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.009858263656497002,
+        0.21177640557289124,
+        0.27109023928642273
+      ],
+      "location": [
+        1.1554640531539917,
+        -0.011501116678118706,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.1522706747055054,
+          -0.11695543676614761,
+          -7.332873792620376e-05
+        ],
+        [
+          1.158657431602478,
+          0.09352219104766846,
+          0.269875705242157
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover43"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "catalogue_hardcover_01_cover44",
+      "parent": null,
+      "vertices": 846,
+      "faces": 780,
+      "dimensions": [
+        0.02225198969244957,
+        0.22165803611278534,
+        0.2821013331413269
+      ],
+      "location": [
+        1.1687294244766235,
+        -0.009226055815815926,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.1596033573150635,
+          -0.11871346086263657,
+          1.7764749671300706e-08
+        ],
+        [
+          1.1778554916381836,
+          0.1012052521109581,
+          0.2796039581298828
+        ]
+      ],
+      "materials": [
+        "catalogue_hardcover_01_cover44"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover45",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.023338325321674347,
+        0.14900264143943787,
+        0.22256171703338623
+      ],
+      "location": [
+        1.187673568725586,
+        0.0011773519217967987,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.1781474351882935,
+          -0.07258477807044983,
+          2.8303011490038443e-08
+        ],
+        [
+          1.197199821472168,
+          0.07380412518978119,
+          0.21996986865997314
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover45"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover46",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.040427617728710175,
+        0.14809264242649078,
+        0.22102901339530945
+      ],
+      "location": [
+        1.2173877954483032,
+        0.009659785777330399,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.1992061138153076,
+          -0.06351812183856964,
+          -1.372680080713451e-09
+        ],
+        [
+          1.2355695962905884,
+          0.0817117840051651,
+          0.218228280544281
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover46"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover47",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.039626795798540115,
+        0.15332655608654022,
+        0.22688597440719604
+      ],
+      "location": [
+        1.2563068866729736,
+        0.01025424338877201,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.236481785774231,
+          -0.06751236319541931,
+          -8.020704262889922e-05
+        ],
+        [
+          1.2761321067810059,
+          0.08612753450870514,
+          0.2271626889705658
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover47"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover48",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.0417967326939106,
+        0.15332446992397308,
+        0.22688288986682892
+      ],
+      "location": [
+        1.297916293144226,
+        0.012137118726968765,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.2770055532455444,
+          -0.06562842428684235,
+          -8.01763089839369e-05
+        ],
+        [
+          1.3188270330429077,
+          0.08800937235355377,
+          0.22715960443019867
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover48"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover49",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.032988548278808594,
+        0.1518993228673935,
+        0.22477401793003082
+      ],
+      "location": [
+        1.3358690738677979,
+        0.01064859889447689,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.3193650245666504,
+          -0.06639411300420761,
+          -7.94307779869996e-05
+        ],
+        [
+          1.3523731231689453,
+          0.08581562340259552,
+          0.22504816949367523
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover49"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "magazine_01_cover50",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.011216674000024796,
+        0.20534107089042664,
+        0.2713209390640259
+      ],
+      "location": [
+        1.3576476573944092,
+        -0.0001739170402288437,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.3537743091583252,
+          -0.10248121619224548,
+          -7.32989574316889e-05
+        ],
+        [
+          1.3615210056304932,
+          0.10171616077423096,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover50"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover51",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.04145067185163498,
+        0.15101215243339539,
+        0.2250043898820877
+      ],
+      "location": [
+        1.382777214050293,
+        0.010657357051968575,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.362039566040039,
+          -0.06561295688152313,
+          -7.948300481075421e-05
+        ],
+        [
+          1.4035148620605469,
+          0.08570107817649841,
+          0.225278839468956
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover51"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover52",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.023258645087480545,
+        0.1484939604997635,
+        0.22180187702178955
+      ],
+      "location": [
+        1.4129904508590698,
+        0.01316872052848339,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.4034967422485352,
+          -0.060341477394104004,
+          -7.167498261573257e-10
+        ],
+        [
+          1.4224841594696045,
+          0.08554766327142715,
+          0.2192188799381256
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover52"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover53",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.008995011448860168,
+        0.20530886948108673,
+        0.2712901532649994
+      ],
+      "location": [
+        1.4259012937545776,
+        0.0010388121008872986,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.4231445789337158,
+          -0.10126880556344986,
+          -7.335851842071861e-05
+        ],
+        [
+          1.4286580085754395,
+          0.10292857140302658,
+          0.269875705242157
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover53"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover54",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.038323380053043365,
+        0.15336424112319946,
+        0.22694174945354462
+      ],
+      "location": [
+        1.4477205276489258,
+        0.00881623849272728,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.4285475015640259,
+          -0.06896944344043732,
+          -8.016725769266486e-05
+        ],
+        [
+          1.4668935537338257,
+          0.08470821380615234,
+          0.22721856832504272
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover54"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "catalogue_hardcover_01_cover55",
+      "parent": null,
+      "vertices": 846,
+      "faces": 780,
+      "dimensions": [
+        0.028461329638957977,
+        0.22310319542884827,
+        0.2851560711860657
+      ],
+      "location": [
+        1.479288935661316,
+        -0.006949377246201038,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.4670583009719849,
+          -0.12029682099819183,
+          -0.0004968863795511425
+        ],
+        [
+          1.4915196895599365,
+          0.10106116533279419,
+          0.282164603471756
+        ]
+      ],
+      "materials": [
+        "catalogue_hardcover_01_cover55"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover56",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.04271629452705383,
+        0.1498819887638092,
+        0.22377637028694153
+      ],
+      "location": [
+        1.510735273361206,
+        0.00016891025006771088,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.491437315940857,
+          -0.07389291375875473,
+          -1.4569548900666973e-09
+        ],
+        [
+          1.5300332307815552,
+          0.07309098541736603,
+          0.22086390852928162
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover56"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "catalogue_softcover_01_cover57",
+      "parent": null,
+      "vertices": 426,
+      "faces": 428,
+      "dimensions": [
+        0.012868543155491352,
+        0.16529124975204468,
+        0.22761553525924683
+      ],
+      "location": [
+        1.5364347696304321,
+        -0.0006381063722074032,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.531180739402771,
+          -0.08548451960086823,
+          -3.9666475659672074e-10
+        ],
+        [
+          1.5416887998580933,
+          0.07823369652032852,
+          0.22588253021240234
+        ]
+      ],
+      "materials": [
+        "catalogue_softcover_01_cover57"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover58",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.03578685224056244,
+        0.15215268731117249,
+        0.22690021991729736
+      ],
+      "location": [
+        1.5584652423858643,
+        0.002705533057451248,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.542649507522583,
+          -0.0724991112947464,
+          -1.1940540778354602e-09
+        ],
+        [
+          1.5742809772491455,
+          0.07675282657146454,
+          0.2242719531059265
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover58"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover59",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.03948074206709862,
+        0.15038348734378815,
+        0.22438561916351318
+      ],
+      "location": [
+        1.5924431085586548,
+        0.006587764248251915,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.5747624635696411,
+          -0.06772510707378387,
+          -1.334851451595398e-09
+        ],
+        [
+          1.6101237535476685,
+          0.07975701987743378,
+          0.22161255776882172
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover59"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "catalogue_hardcover_01_cover60",
+      "parent": null,
+      "vertices": 846,
+      "faces": 780,
+      "dimensions": [
+        0.038207799196243286,
+        0.21663524210453033,
+        0.22997882962226868
+      ],
+      "location": [
+        1.6285064220428467,
+        0.0007568439468741417,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.6114025115966797,
+          -0.1082160621881485,
+          1.3739093418507764e-08
+        ],
+        [
+          1.6456103324890137,
+          0.10667595267295837,
+          0.22748254239559174
+        ]
+      ],
+      "materials": [
+        "catalogue_hardcover_01_cover60"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "NODES",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover61",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.034863367676734924,
+        0.1527971625328064,
+        0.2278713881969452
+      ],
+      "location": [
+        1.6615287065505981,
+        0.0020193178206682205,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.6461845636367798,
+          -0.07351024448871613,
+          5.8276800274370544e-08
+        ],
+        [
+          1.6768728494644165,
+          0.07638630270957947,
+          0.22524063289165497
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover61"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover62",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.02615918032824993,
+        0.15238751471042633,
+        0.22549642622470856
+      ],
+      "location": [
+        1.690414547920227,
+        0.0006447182968258858,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.677327275276184,
+          -0.07664560526609421,
+          -7.971534796524793e-05
+        ],
+        [
+          1.7035019397735596,
+          0.07605332881212234,
+          0.22577142715454102
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover62"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover63",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.04287213832139969,
+        0.14965519309043884,
+        0.22344739735126495
+      ],
+      "location": [
+        1.7237119674682617,
+        -0.0021939892321825027,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.7043333053588867,
+          -0.0761440321803093,
+          5.672925240673976e-08
+        ],
+        [
+          1.7430906295776367,
+          0.07061779499053955,
+          0.22053025662899017
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover63"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover64",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.04373385012149811,
+        0.1526632010936737,
+        0.22793859243392944
+      ],
+      "location": [
+        1.7637019157409668,
+        0.004140891134738922,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.7439336776733398,
+          -0.07129551470279694,
+          5.7869485203809745e-08
+        ],
+        [
+          1.7834701538085938,
+          0.07841615378856659,
+          0.22496281564235687
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover64"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover65",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.04121140390634537,
+        0.1532469093799591,
+        0.22676816582679749
+      ],
+      "location": [
+        1.8047282695770264,
+        -0.0024568913504481316,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.784110426902771,
+          -0.08018287271261215,
+          -8.016545325517654e-05
+        ],
+        [
+          1.8253462314605713,
+          0.07337723672389984,
+          0.2270447164773941
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover65"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover66",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03902677446603775,
+        0.15252672135829926,
+        0.2257024049758911
+      ],
+      "location": [
+        1.8449952602386475,
+        0.0007553761824965477,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.8254703283309937,
+          -0.07660555094480515,
+          -7.978862413438037e-05
+        ],
+        [
+          1.8645201921463013,
+          0.07623286545276642,
+          0.22597765922546387
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover66"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover67",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.04305953159928322,
+        0.15030935406684875,
+        0.2244240790605545
+      ],
+      "location": [
+        1.8851324319839478,
+        0.007722090929746628,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.8656690120697021,
+          -0.06655117869377136,
+          -1.4694442329599156e-09
+        ],
+        [
+          1.9045958518981934,
+          0.08085213601589203,
+          0.2214941382408142
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover67"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover68",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.04099917411804199,
+        0.15245775878429413,
+        0.22560036182403564
+      ],
+      "location": [
+        1.926180124282837,
+        0.003933131694793701,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.9056683778762817,
+          -0.07339281588792801,
+          -7.975261542014778e-05
+        ],
+        [
+          1.946691870689392,
+          0.07937649637460709,
+          0.22587549686431885
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover68"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover69",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.0412919744849205,
+        0.1535465568304062,
+        0.22721150517463684
+      ],
+      "location": [
+        1.9681651592254639,
+        0.00407776702195406,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.9475069046020508,
+          -0.07380041480064392,
+          -8.032218465814367e-05
+        ],
+        [
+          1.988823413848877,
+          0.08005992323160172,
+          0.22748860716819763
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover69"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover70",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.03617587685585022,
+        0.1515979766845703,
+        0.22608119249343872
+      ],
+      "location": [
+        2.004763603210449,
+        0.005709943361580372,
+        0.0
+      ],
+      "bounds": [
+        [
+          1.9887458086013794,
+          -0.06921757012605667,
+          -1.2093092083276247e-09
+        ],
+        [
+          2.0207815170288086,
+          0.07948461920022964,
+          0.22344587743282318
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover70"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover71",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.010342469438910484,
+        0.20532964169979095,
+        0.27130869030952454
+      ],
+      "location": [
+        2.024266242980957,
+        -0.0011420603841543198,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.0208306312561035,
+          -0.10344982892274857,
+          -7.329894287977368e-05
+        ],
+        [
+          2.0277018547058105,
+          0.10074755549430847,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover71"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover72",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.010951993986964226,
+        0.2053377777338028,
+        0.2713172435760498
+      ],
+      "location": [
+        2.0316097736358643,
+        -0.0008299713954329491,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.0278685092926025,
+          -0.10313773900270462,
+          -7.329895015573129e-05
+        ],
+        [
+          2.035351037979126,
+          0.10105964541435242,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover72"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover73",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.010951993986964226,
+        0.2053377777338028,
+        0.2713172435760498
+      ],
+      "location": [
+        2.0389442443847656,
+        0.003038952127099037,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.035202980041504,
+          -0.09926881641149521,
+          -7.329895015573129e-05
+        ],
+        [
+          2.0426855087280273,
+          0.10492856800556183,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover73"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "magazine_01_cover74",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.010951995849609375,
+        0.2053377777338028,
+        0.2713173031806946
+      ],
+      "location": [
+        2.0462424755096436,
+        -0.00935896672308445,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.042501211166382,
+          -0.1116671934723854,
+          -7.329895015573129e-05
+        ],
+        [
+          2.0499837398529053,
+          0.09253019094467163,
+          0.26987576484680176
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover74"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover75",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.030365366488695145,
+        0.15285763144493103,
+        0.22619208693504333
+      ],
+      "location": [
+        2.06551456451416,
+        -0.0008518076501786709,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.050323009490967,
+          -0.07838057726621628,
+          -7.996142812771723e-05
+        ],
+        [
+          2.0807063579559326,
+          0.07478943467140198,
+          0.22646793723106384
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover75"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover76",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.025357887148857117,
+        0.15105004608631134,
+        0.2255052924156189
+      ],
+      "location": [
+        2.0912344455718994,
+        0.006438901647925377,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.0807156562805176,
+          -0.0683000311255455,
+          -5.96073306269318e-08
+        ],
+        [
+          2.1017532348632812,
+          0.08002766221761703,
+          0.22288307547569275
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover76"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover77",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.038718823343515396,
+        0.15078362822532654,
+        0.22486384212970734
+      ],
+      "location": [
+        2.120022773742676,
+        0.005170508287847042,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.1027257442474365,
+          -0.06931363046169281,
+          -1.3058902847973286e-09
+        ],
+        [
+          2.137319803237915,
+          0.07850845903158188,
+          0.2221233993768692
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover77"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover78",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.035841550678014755,
+        0.15238526463508606,
+        0.22724708914756775
+      ],
+      "location": [
+        2.1537816524505615,
+        0.00970270112156868,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.137941837310791,
+          -0.06561689078807831,
+          -6.046599310138845e-08
+        ],
+        [
+          2.169621706008911,
+          0.08386318385601044,
+          0.2246147096157074
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover78"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover79",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03730052337050438,
+        0.15329767763614655,
+        0.22684325277805328
+      ],
+      "location": [
+        2.1891632080078125,
+        0.004309597425162792,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.170501947402954,
+          -0.07344236224889755,
+          -0.0003388221375644207
+        ],
+        [
+          2.207824468612671,
+          0.08016858994960785,
+          0.22686125338077545
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover79"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover80",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03489421680569649,
+        0.15320807695388794,
+        0.22671067714691162
+      ],
+      "location": [
+        2.2258806228637695,
+        0.009704222902655602,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.208423137664795,
+          -0.06800223141908646,
+          -0.0003387428296264261
+        ],
+        [
+          2.243338108062744,
+          0.08551894873380661,
+          0.22672855854034424
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover80"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover81",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.026903189718723297,
+        0.15197335183620453,
+        0.22680093348026276
+      ],
+      "location": [
+        2.255345106124878,
+        0.0018980158492922783,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.244051933288574,
+          -0.07327286154031754,
+          -1.1915878417312342e-07
+        ],
+        [
+          2.2666382789611816,
+          0.07591208070516586,
+          0.22417116165161133
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover81"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover82",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.02678893506526947,
+        0.1513279229402542,
+        0.22583772242069244
+      ],
+      "location": [
+        2.27947735786438,
+        0.0061633167788386345,
+        0.00021592079428955913
+      ],
+      "bounds": [
+        [
+          2.2682321071624756,
+          -0.06868831068277359,
+          0.00021580213797278702
+        ],
+        [
+          2.290722608566284,
+          0.0798630490899086,
+          0.22343502938747406
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover82"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover83",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.035078924149274826,
+        0.15290789306163788,
+        0.22626647353172302
+      ],
+      "location": [
+        2.3092856407165527,
+        0.006338124163448811,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.291735887527466,
+          -0.07121600955724716,
+          -0.000535530096385628
+        ],
+        [
+          2.3268356323242188,
+          0.0820043608546257,
+          0.22608685493469238
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover83"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover85",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.04184238240122795,
+        0.15243922173976898,
+        0.2271306961774826
+      ],
+      "location": [
+        2.348320722579956,
+        0.008253879845142365,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.3273870944976807,
+          -0.06873719394207001,
+          -8.023412374313921e-05
+        ],
+        [
+          2.3692543506622314,
+          0.08400677144527435,
+          0.22740773856639862
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover85"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover86",
+      "parent": null,
+      "vertices": 658,
+      "faces": 660,
+      "dimensions": [
+        0.0319005511701107,
+        0.15107940137386322,
+        0.22533513605594635
+      ],
+      "location": [
+        2.38407039642334,
+        0.008623681962490082,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.3701956272125244,
+          -0.06607262790203094,
+          -1.0475115219676923e-09
+        ],
+        [
+          2.3979451656341553,
+          0.08217047899961472,
+          0.2227560430765152
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover86"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "book_hardcover_01_cover87",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.041808854788541794,
+        0.152317076921463,
+        0.22694867849349976
+      ],
+      "location": [
+        2.4202933311462402,
+        0.0019416380673646927,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.399376630783081,
+          -0.0749877393245697,
+          -8.016983338166028e-05
+        ],
+        [
+          2.4412102699279785,
+          0.0776338279247284,
+          0.22722551226615906
+        ]
+      ],
+      "materials": [
+        "book_hardcover_01_cover87"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "book_softcover_01_cover88",
+      "parent": null,
+      "vertices": 872,
+      "faces": 812,
+      "dimensions": [
+        0.03492077440023422,
+        0.1522185057401657,
+        0.2252463698387146
+      ],
+      "location": [
+        2.4587581157684326,
+        0.003809802234172821,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.4412875175476074,
+          -0.07339457422494888,
+          -7.95682572061196e-05
+        ],
+        [
+          2.476228952407837,
+          0.07913502305746078,
+          0.22552111744880676
+        ]
+      ],
+      "materials": [
+        "book_softcover_01_cover88"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "SUBSURF",
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    },
+    {
+      "name": "magazine_01_cover89",
+      "parent": null,
+      "vertices": 322,
+      "faces": 324,
+      "dimensions": [
+        0.009353278204798698,
+        0.2053147256374359,
+        0.27129504084587097
+      ],
+      "location": [
+        2.479135274887085,
+        0.0008808756247162819,
+        0.0
+      ],
+      "bounds": [
+        [
+          2.476198196411133,
+          -0.10142689198255539,
+          -7.323931640712544e-05
+        ],
+        [
+          2.482072353363037,
+          0.10277049243450165,
+          0.26987582445144653
+        ]
+      ],
+      "materials": [
+        "magazine_01_cover89"
+      ],
+      "collections": [
+        "decorative_book_set_01"
+      ],
+      "modifiers": [
+        "DISPLACE",
+        "DISPLACE",
+        "WEIGHTED_NORMAL",
+        "SUBSURF"
+      ]
+    }
+  ],
+  "modular_street_seating": [
+    {
+      "name": "crossbar",
+      "parent": null,
+      "vertices": 36,
+      "faces": 24,
+      "dimensions": [
+        1.8623936176300049,
+        0.03999999910593033,
+        0.04000002145767212
+      ],
+      "location": [
+        -1.159999966621399,
+        0.0,
+        0.16499999165534973
+      ],
+      "bounds": [
+        [
+          -2.092393398284912,
+          -0.019999999552965164,
+          0.14499995112419128
+        ],
+        [
+          -0.22999989986419678,
+          0.019999999552965164,
+          0.1849999725818634
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_armrests"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "legs_double",
+      "parent": null,
+      "vertices": 1831,
+      "faces": 1920,
+      "dimensions": [
+        0.18438175320625305,
+        0.6000000238418579,
+        0.45000001788139343
+      ],
+      "location": [
+        -5.587935447692871e-08,
+        0.0,
+        6.661338147750939e-16
+      ],
+      "bounds": [
+        [
+          -0.09219092130661011,
+          -0.30000001192092896,
+          -3.05979308556914e-09
+        ],
+        [
+          0.09219083189964294,
+          0.30000001192092896,
+          0.45000001788139343
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_supports"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "legs_single",
+      "parent": null,
+      "vertices": 1386,
+      "faces": 1439,
+      "dimensions": [
+        0.13219085335731506,
+        0.6000000238418579,
+        0.45000001788139343
+      ],
+      "location": [
+        -2.319999933242798,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -2.359999895095825,
+          -0.30000001192092896,
+          -3.05979308556914e-09
+        ],
+        [
+          -2.227809190750122,
+          0.30000001192092896,
+          0.45000001788139343
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_supports"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "suspended_support_01",
+      "parent": null,
+      "vertices": 1406,
+      "faces": 1464,
+      "dimensions": [
+        0.10603751242160797,
+        0.5670339465141296,
+        0.20096440613269806
+      ],
+      "location": [
+        -1.159999966621399,
+        0.0,
+        0.3499999940395355
+      ],
+      "bounds": [
+        [
+          -1.2130186557769775,
+          -0.2835169732570648,
+          0.12422893941402435
+        ],
+        [
+          -1.1069811582565308,
+          0.2835169732570648,
+          0.3251933455467224
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_supports"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "suspended_support_02",
+      "parent": null,
+      "vertices": 1536,
+      "faces": 1642,
+      "dimensions": [
+        0.18438175320625305,
+        0.6000000238418579,
+        0.22577108442783356
+      ],
+      "location": [
+        1.040000081062317,
+        0.0,
+        0.3499999940395355
+      ],
+      "bounds": [
+        [
+          0.9478091597557068,
+          -0.30000001192092896,
+          0.12422893941402435
+        ],
+        [
+          1.1321909427642822,
+          0.30000001192092896,
+          0.3500000238418579
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_supports"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "back_support_r",
+      "parent": null,
+      "vertices": 566,
+      "faces": 570,
+      "dimensions": [
+        0.12999999523162842,
+        0.17306500673294067,
+        0.44191402196884155
+      ],
+      "location": [
+        -2.0999999046325684,
+        0.0,
+        0.45000001788139343
+      ],
+      "bounds": [
+        [
+          -2.179999828338623,
+          0.19732889533042908,
+          0.4250001013278961
+        ],
+        [
+          -2.049999952316284,
+          0.37039390206336975,
+          0.8669141530990601
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_armrests"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": [
+        "SUBSURF"
+      ]
+    },
+    {
+      "name": "back_support_l",
+      "parent": null,
+      "vertices": 566,
+      "faces": 570,
+      "dimensions": [
+        0.12999999523162842,
+        0.17306500673294067,
+        0.44191402196884155
+      ],
+      "location": [
+        -0.21999996900558472,
+        0.0,
+        0.44999998807907104
+      ],
+      "bounds": [
+        [
+          -0.2699999213218689,
+          0.19732889533042908,
+          0.42500007152557373
+        ],
+        [
+          -0.13999992609024048,
+          0.37039390206336975,
+          0.8669140934944153
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_armrests"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "arm_rest_01",
+      "parent": null,
+      "vertices": 190,
+      "faces": 193,
+      "dimensions": [
+        0.07999993115663528,
+        0.5990468263626099,
+        0.229925274848938
+      ],
+      "location": [
+        -2.319999933242798,
+        0.0,
+        0.550000011920929
+      ],
+      "bounds": [
+        [
+          -2.359999895095825,
+          -0.2996315360069275,
+          0.550000011920929
+        ],
+        [
+          -2.2799999713897705,
+          0.29941532015800476,
+          0.7799252867698669
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_armrests"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "arm_rest_02",
+      "parent": null,
+      "vertices": 181,
+      "faces": 183,
+      "dimensions": [
+        0.07999993115663528,
+        0.4471709728240967,
+        0.1670055240392685
+      ],
+      "location": [
+        6.332993507385254e-08,
+        0.0,
+        0.550000011920929
+      ],
+      "bounds": [
+        [
+          -0.03999990224838257,
+          -0.14775563776493073,
+          0.550000011920929
+        ],
+        [
+          0.040000028908252716,
+          0.29941532015800476,
+          0.7170055508613586
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_armrests"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "seat",
+      "parent": null,
+      "vertices": 216,
+      "faces": 224,
+      "dimensions": [
+        1.840000033378601,
+        0.6000000238418579,
+        0.02499997615814209
+      ],
+      "location": [
+        -1.159999966621399,
+        0.0,
+        0.44999998807907104
+      ],
+      "bounds": [
+        [
+          -2.0799999237060547,
+          -0.30000001192092896,
+          0.42500004172325134
+        ],
+        [
+          -0.2399999499320984,
+          0.30000001192092896,
+          0.45000001788139343
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_timber"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": [
+        "NODES"
+      ]
+    },
+    {
+      "name": "seat_back",
+      "parent": null,
+      "vertices": 96,
+      "faces": 104,
+      "dimensions": [
+        1.6800000667572021,
+        0.36500000953674316,
+        0.02499997615814209
+      ],
+      "location": [
+        -1.159999966621399,
+        0.0,
+        0.4449999928474426
+      ],
+      "bounds": [
+        [
+          -2.0,
+          0.272964209318161,
+          0.49895167350769043
+        ],
+        [
+          -0.31999993324279785,
+          0.3602291941642761,
+          0.8620110154151917
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_timber"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": [
+        "NODES"
+      ]
+    },
+    {
+      "name": "connector_60",
+      "parent": null,
+      "vertices": 720,
+      "faces": 750,
+      "dimensions": [
+        0.6054816246032715,
+        0.6491891145706177,
+        0.02469242922961712
+      ],
+      "location": [
+        0.9400001168251038,
+        0.30000001192092896,
+        0.75
+      ],
+      "bounds": [
+        [
+          0.9399972558021545,
+          -0.40003877878189087,
+          0.7250000238418579
+        ],
+        [
+          1.5462502241134644,
+          0.24988698959350586,
+          0.7500000596046448
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_connectors"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": [
+        "BEVEL",
+        "SUBSURF",
+        "NODES"
+      ]
+    },
+    {
+      "name": "connector_45",
+      "parent": null,
+      "vertices": 570,
+      "faces": 600,
+      "dimensions": [
+        0.4940183758735657,
+        0.6281612515449524,
+        0.02469245344400406
+      ],
+      "location": [
+        0.14000016450881958,
+        0.30000001192092896,
+        0.949999988079071
+      ],
+      "bounds": [
+        [
+          0.13999728858470917,
+          -0.40003877878189087,
+          0.925000011920929
+        ],
+        [
+          0.635000467300415,
+          0.22912800312042236,
+          0.9500000476837158
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_connectors"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": [
+        "BEVEL",
+        "SUBSURF",
+        "NODES"
+      ]
+    },
+    {
+      "name": "connector_90",
+      "parent": null,
+      "vertices": 1020,
+      "faces": 1050,
+      "dimensions": [
+        0.6999788880348206,
+        0.699978768825531,
+        0.02469242922961712
+      ],
+      "location": [
+        0.14000004529953003,
+        0.30000001192092896,
+        0.75
+      ],
+      "bounds": [
+        [
+          0.13999716937541962,
+          -0.40003877878189087,
+          0.7250000238418579
+        ],
+        [
+          0.8400389552116394,
+          0.30000290274620056,
+          0.7500000596046448
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_connectors"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": [
+        "BEVEL",
+        "SUBSURF",
+        "NODES"
+      ]
+    },
+    {
+      "name": "connector_30",
+      "parent": null,
+      "vertices": 414,
+      "faces": 438,
+      "dimensions": [
+        0.349323570728302,
+        0.612530529499054,
+        0.024692459031939507
+      ],
+      "location": [
+        0.7400000691413879,
+        0.30000001192092896,
+        0.949999988079071
+      ],
+      "bounds": [
+        [
+          0.7399972081184387,
+          -0.40003877878189087,
+          0.925000011920929
+        ],
+        [
+          1.0900170803070068,
+          0.21319882571697235,
+          0.9500000476837158
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_connectors"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": [
+        "BEVEL",
+        "SUBSURF",
+        "NODES"
+      ]
+    },
+    {
+      "name": "seat_bench",
+      "parent": null,
+      "vertices": 216,
+      "faces": 224,
+      "dimensions": [
+        1.8400001525878906,
+        0.6000000238418579,
+        0.02499997615814209
+      ],
+      "location": [
+        1.0600000619888306,
+        0.0,
+        0.45000001788139343
+      ],
+      "bounds": [
+        [
+          0.13999998569488525,
+          -0.30000001192092896,
+          0.42500007152557373
+        ],
+        [
+          1.9800000190734863,
+          0.30000001192092896,
+          0.4500000476837158
+        ]
+      ],
+      "materials": [
+        "modular_street_seating_timber"
+      ],
+      "collections": [
+        "modular_street_seating"
+      ],
+      "modifiers": [
+        "NODES"
+      ]
+    }
+  ],
+  "pachira_aquatica_01": [
+    {
+      "name": "pachira_aquatica_01_bark_a",
+      "parent": null,
+      "vertices": 6772,
+      "faces": 6783,
+      "dimensions": [
+        0.23254407942295074,
+        0.2410164773464203,
+        0.8509118556976318
+      ],
+      "location": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -2.0918402671813965,
+          -0.11006901413202286,
+          -0.01765945740044117
+        ],
+        [
+          -1.859296202659607,
+          0.13094745576381683,
+          0.8332523703575134
+        ]
+      ],
+      "materials": [
+        "pachira_aquatica_01_bark"
+      ],
+      "collections": [
+        "pachira_aquatica_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "pachira_aquatica_01_bark_b",
+      "parent": null,
+      "vertices": 297,
+      "faces": 292,
+      "dimensions": [
+        0.1550859659910202,
+        0.23012612760066986,
+        0.5836933851242065
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -0.02270718291401863,
+          -0.20223431289196014,
+          -0.007645981386303902
+        ],
+        [
+          0.13237878680229187,
+          0.027891818434000015,
+          0.576047420501709
+        ]
+      ],
+      "materials": [
+        "pachira_aquatica_01_bark"
+      ],
+      "collections": [
+        "pachira_aquatica_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "pachira_aquatica_01_bark_c",
+      "parent": null,
+      "vertices": 1753,
+      "faces": 1748,
+      "dimensions": [
+        0.5933026075363159,
+        0.494815468788147,
+        1.0016270875930786
+      ],
+      "location": [
+        1.9785430431365967,
+        -0.001834876835346222,
+        -0.005579829216003418
+      ],
+      "bounds": [
+        [
+          1.7555447816848755,
+          -0.12776905298233032,
+          -0.006068281829357147
+        ],
+        [
+          2.3488473892211914,
+          0.36704644560813904,
+          0.9955588579177856
+        ]
+      ],
+      "materials": [
+        "pachira_aquatica_01_bark"
+      ],
+      "collections": [
+        "pachira_aquatica_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "pachira_aquatica_01_bark_d",
+      "parent": null,
+      "vertices": 1892,
+      "faces": 1882,
+      "dimensions": [
+        0.600787878036499,
+        0.4315468370914459,
+        1.6272460222244263
+      ],
+      "location": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          3.7622931003570557,
+          -0.12275829911231995,
+          -0.015593500807881355
+        ],
+        [
+          4.363080978393555,
+          0.308788537979126,
+          1.6116524934768677
+        ]
+      ],
+      "materials": [
+        "pachira_aquatica_01_bark"
+      ],
+      "collections": [
+        "pachira_aquatica_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "pachira_aquatica_01_leaves_a",
+      "parent": null,
+      "vertices": 6222,
+      "faces": 5184,
+      "dimensions": [
+        0.743908166885376,
+        0.6465188264846802,
+        0.7402381300926208
+      ],
+      "location": [
+        -2.000000238418579,
+        -6.51925802230835e-08,
+        0.0
+      ],
+      "bounds": [
+        [
+          -2.3091397285461426,
+          -0.3703416585922241,
+          0.5436117053031921
+        ],
+        [
+          -1.5652316808700562,
+          0.27617713809013367,
+          1.283849835395813
+        ]
+      ],
+      "materials": [
+        "pachira_aquatica_01_leaves"
+      ],
+      "collections": [
+        "pachira_aquatica_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "pachira_aquatica_01_leaves_b",
+      "parent": null,
+      "vertices": 2906,
+      "faces": 2411,
+      "dimensions": [
+        0.5031452178955078,
+        0.6073569059371948,
+        0.5179132223129272
+      ],
+      "location": [
+        -7.450580596923828e-09,
+        0.0,
+        -5.960464477539063e-08
+      ],
+      "bounds": [
+        [
+          -0.2374652624130249,
+          -0.3916022479534149,
+          0.209488183259964
+        ],
+        [
+          0.2656799554824829,
+          0.2157546728849411,
+          0.7274013757705688
+        ]
+      ],
+      "materials": [
+        "pachira_aquatica_01_leaves"
+      ],
+      "collections": [
+        "pachira_aquatica_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "pachira_aquatica_01_leaves_c",
+      "parent": null,
+      "vertices": 11084,
+      "faces": 9137,
+      "dimensions": [
+        0.9752868413925171,
+        0.9236829876899719,
+        0.8940290212631226
+      ],
+      "location": [
+        1.9785429239273071,
+        -0.001834779977798462,
+        -0.005579948425292969
+      ],
+      "bounds": [
+        [
+          1.620892882347107,
+          -0.3681287467479706,
+          0.24894097447395325
+        ],
+        [
+          2.596179723739624,
+          0.5555542707443237,
+          1.1429699659347534
+        ]
+      ],
+      "materials": [
+        "pachira_aquatica_01_leaves"
+      ],
+      "collections": [
+        "pachira_aquatica_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "pachira_aquatica_01_leaves_d",
+      "parent": null,
+      "vertices": 15724,
+      "faces": 13018,
+      "dimensions": [
+        1.054460048675537,
+        0.9970420598983765,
+        1.648691177368164
+      ],
+      "location": [
+        3.999999761581421,
+        -2.9802322387695312e-08,
+        -5.960464477539063e-08
+      ],
+      "bounds": [
+        [
+          3.5054214000701904,
+          -0.4060930013656616,
+          0.23772284388542175
+        ],
+        [
+          4.559881687164307,
+          0.5909490585327148,
+          1.8864140510559082
+        ]
+      ],
+      "materials": [
+        "pachira_aquatica_01_leaves"
+      ],
+      "collections": [
+        "pachira_aquatica_01"
+      ],
+      "modifiers": []
+    }
+  ],
+  "potted_plant_01": [
+    {
+      "name": "potted_plant_01_stem",
+      "parent": null,
+      "vertices": 3509,
+      "faces": 3504,
+      "dimensions": [
+        0.37134915590286255,
+        0.39321136474609375,
+        0.8559547662734985
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -0.23460757732391357,
+          -0.17607749998569489,
+          0.41102948784828186
+        ],
+        [
+          0.13674156367778778,
+          0.21713386476039886,
+          1.266984224319458
+        ]
+      ],
+      "materials": [
+        "potted_plant_01_pot"
+      ],
+      "collections": [
+        "potted_plant_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "potted_plant_01_pebbles",
+      "parent": null,
+      "vertices": 29470,
+      "faces": 56814,
+      "dimensions": [
+        0.4303102195262909,
+        0.430974543094635,
+        0.5439891219139099
+      ],
+      "location": [
+        0.0,
+        0.0,
+        -0.013706685975193977
+      ],
+      "bounds": [
+        [
+          -0.21860875189304352,
+          -0.21311818063259125,
+          -0.013706624507904053
+        ],
+        [
+          0.21170145273208618,
+          0.21785637736320496,
+          0.5302824974060059
+        ]
+      ],
+      "materials": [
+        "potted_plant_01_pot"
+      ],
+      "collections": [
+        "potted_plant_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "potted_plant_01_pot",
+      "parent": null,
+      "vertices": 2722,
+      "faces": 2752,
+      "dimensions": [
+        0.46620506048202515,
+        0.46620500087738037,
+        0.53143310546875
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -0.23310250043869019,
+          -0.233102485537529,
+          0.0
+        ],
+        [
+          0.23310254514217377,
+          0.23310253024101257,
+          0.53143310546875
+        ]
+      ],
+      "materials": [
+        "potted_plant_01_pot"
+      ],
+      "collections": [
+        "potted_plant_01"
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "potted_plant_01_leaves",
+      "parent": null,
+      "vertices": 15606,
+      "faces": 13373,
+      "dimensions": [
+        0.5873871445655823,
+        0.633564829826355,
+        0.7531737089157104
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -0.3388006389141083,
+          -0.2709676921367645,
+          0.5821572542190552
+        ],
+        [
+          0.25011786818504333,
+          0.36564406752586365,
+          1.3370721340179443
+        ]
+      ],
+      "materials": [
+        "potted_plant_01_leaves"
+      ],
+      "collections": [
+        "potted_plant_01"
+      ],
+      "modifiers": [
+        "SUBSURF",
+        "DATA_TRANSFER",
+        "NODES"
+      ]
+    }
+  ],
+  "steel_frame_shelves_01": [
+    {
+      "name": "steel_frame_shelves_01",
+      "parent": null,
+      "vertices": 2360,
+      "faces": 2378,
+      "dimensions": [
+        1.0974148511886597,
+        0.5021176338195801,
+        2.140501022338867
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -0.5486865639686584,
+          -0.25105881690979004,
+          -0.0010678906692191958
+        ],
+        [
+          0.5487282872200012,
+          0.25105881690979004,
+          2.1394331455230713
+        ]
+      ],
+      "materials": [
+        "steel_frame_shelves_01"
+      ],
+      "collections": [
+        "steel_frame_shelves_01"
+      ],
+      "modifiers": [
+        "NODES",
+        "WEIGHTED_NORMAL"
+      ]
+    }
+  ]
+}

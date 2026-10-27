@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "take_editor_screenshot",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"message\": \"Screenshot captured: viewport (1280x453)\", \"screenshot_path\": \"Saved/Screenshots/AuraScreenshots/viewport_20261010_174638_297.jpg\", \"width\": 1280, \"height\": 453, \"mode\": \"viewport\", \"add_to_context\": true}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

@@ -1,0 +1,114 @@
+{
+  "materials": [
+    {
+      "material_name": "M_Mall_white_plaster_02",
+      "asset_id": "white_plaster_02",
+      "provider": "Poly Haven",
+      "source_url": "https://polyhaven.com/a/white_plaster_02",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://polyhaven.com/license",
+      "resolution": "2K",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_diff_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_nor_dx_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_rough_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\white_plaster_02\\white_plaster_02_ao_2k.png"
+      },
+      "normal_convention": "DirectX",
+      "normal_flip_green": false,
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "metallic_constant": 0.0,
+      "shading_model": "DefaultLit",
+      "blend_mode": "Opaque",
+      "status": "downloaded_verified"
+    },
+    {
+      "material_name": "M_Mall_terrazzo_tiles",
+      "asset_id": "terrazzo_tiles",
+      "provider": "Poly Haven",
+      "source_url": "https://polyhaven.com/a/terrazzo_tiles",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://polyhaven.com/license",
+      "resolution": "2K",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_diff_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_nor_dx_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_rough_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\terrazzo_tiles\\terrazzo_tiles_ao_2k.png"
+      },
+      "normal_convention": "DirectX",
+      "normal_flip_green": false,
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "metallic_constant": 0.0,
+      "shading_model": "DefaultLit",
+      "blend_mode": "Opaque",
+      "status": "downloaded_verified"
+    },
+    {
+      "material_name": "M_Mall_painted_metal_shutter",
+      "asset_id": "painted_metal_shutter",
+      "provider": "Poly Haven",
+      "source_url": "https://polyhaven.com/a/painted_metal_shutter",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://polyhaven.com/license",
+      "resolution": "2K",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_diff_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_nor_dx_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_rough_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\painted_metal_shutter\\painted_metal_shutter_ao_2k.png"
+      },
+      "normal_convention": "DirectX",
+      "normal_flip_green": false,
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "metallic_constant": 0.0,
+      "shading_model": "DefaultLit",
+      "blend_mode": "Opaque",
+      "status": "downloaded_verified"
+    },
+    {
+      "material_name": "M_Mall_CeilingTiles",
+      "asset_id": "texturecan_tiles_0013",
+      "provider": "TextureCan",
+      "source_url": "https://www.texturecan.com/details/131/",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://www.texturecan.com/terms/",
+      "resolution": "2K",
+      "status": "downloaded_verified",
+      "textures": {
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_ao_2k.jpg",
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_color_2k.jpg",
+        "height": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_height_2k.png",
+        "metallic": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_metallic_2k.jpg",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_normal_directx_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\Surfaces\\texturecan_tiles_0013\\tiles_0013_roughness_2k.jpg"
+      },
+      "normal_convention": "DirectX",
+      "normal_convention_source": "https://www.texturecan.com/post/3/DirectX-vs-OpenGL-Normal-Map/",
+      "normal_flip_green": false,
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "metallic_constant": 0.0,
+      "shading_model": "DefaultLit",
+      "blend_mode": "Opaque"
+    }
+  ],
+  "import_notes": {
+    "base_color": {
+      "sRGB": true,
+      "CompressionSettings": "Default"
+    },
+    "normal": {
+      "sRGB": false,
+      "CompressionSettings": "Normalmap"
+    },
+    "data": {
+      "sRGB": false,
+      "CompressionSettings": "Masks"
+    },
+    "uv": "Use consistent world scale or suitable TexCoord tiling. Source surface dimensions must be reviewed for each authored mesh."
+  }
+}

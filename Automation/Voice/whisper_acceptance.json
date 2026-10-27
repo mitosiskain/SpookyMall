@@ -1,0 +1,116 @@
+{
+  "feature": "Local Whisper speech recognition",
+  "backend": "whisper.cpp 1.9.5 CPU / small.en",
+  "native_build": "Saved/Logs/WhisperFinalBuild.log",
+  "native_report": "Saved/Automation/WhisperCold/index.json",
+  "succeeded": 17,
+  "failed": 0,
+  "warnings": 0,
+  "skipped": 0,
+  "tests": [
+    {
+      "name": "Mall.Ghost.BookInteraction",
+      "state": "Success",
+      "duration_seconds": 1.018083095550537
+    },
+    {
+      "name": "Mall.Ghost.SpiritBoxNetwork",
+      "state": "Success",
+      "duration_seconds": 2.0675432682037354
+    },
+    {
+      "name": "Mall.Ghost.StateAndDisturbance",
+      "state": "Success",
+      "duration_seconds": 1.3897932767868042
+    },
+    {
+      "name": "Mall.Voice.CodecAndPacketBounds",
+      "state": "Success",
+      "duration_seconds": 0.1116718053817749
+    },
+    {
+      "name": "Mall.Voice.NetworkTransport",
+      "state": "Success",
+      "duration_seconds": 0.9012482762336731
+    },
+    {
+      "name": "MyProject2.Voice.Microphone.ChunkInvarianceAndInvalidOptions",
+      "state": "Success",
+      "duration_seconds": 0.009521901607513428
+    },
+    {
+      "name": "MyProject2.Voice.Microphone.LoudTransitionsAndManualGain",
+      "state": "Success",
+      "duration_seconds": 0.008398398756980896
+    },
+    {
+      "name": "MyProject2.Voice.Microphone.LowFrequencyFilter",
+      "state": "Success",
+      "duration_seconds": 0.00908070057630539
+    },
+    {
+      "name": "MyProject2.Voice.Microphone.QuietInput",
+      "state": "Success",
+      "duration_seconds": 0.02371099963784218
+    },
+    {
+      "name": "MyProject2.Voice.Microphone.SilenceAndFloor",
+      "state": "Success",
+      "duration_seconds": 0.01757499948143959
+    },
+    {
+      "name": "MyProject2.Voice.ConcurrentSpeechTeardown",
+      "state": "Success",
+      "duration_seconds": 41.43196105957031
+    },
+    {
+      "name": "MyProject2.Voice.ConcurrentWhisperTeardown",
+      "state": "Success",
+      "duration_seconds": 14.840529441833496
+    },
+    {
+      "name": "MyProject2.Voice.MicrophonePipeline",
+      "state": "Success",
+      "duration_seconds": 0.008458100259304047
+    },
+    {
+      "name": "MyProject2.Voice.OfflineSpeechBackend",
+      "state": "Success",
+      "duration_seconds": 10.105364799499512
+    },
+    {
+      "name": "MyProject2.Voice.PhraseMatching",
+      "state": "Success",
+      "duration_seconds": 0.008976198732852936
+    },
+    {
+      "name": "MyProject2.Voice.PushToTalkUtterance",
+      "state": "Success",
+      "duration_seconds": 0.007741399109363556
+    },
+    {
+      "name": "MyProject2.Voice.WhisperSpeechBackend",
+      "state": "Success",
+      "duration_seconds": 65.8170394897461
+    }
+  ],
+  "synthetic_only": true,
+  "microphone_test": "Pending user hardware test",
+  "live_aura_status": "Verified in restarted PIE: Offline English voice recognition ready (Whisper). Visible TextBlock_1 at game time 14.6179 seconds.",
+  "limits": [
+    "Human microphone accuracy is not established by synthetic fixtures.",
+    "CPU decoding adds several seconds of latency.",
+    "No microphone capture or cloud upload during automated checks."
+  ],
+  "model_location": "ThirdParty/Whisper/Models/ggml-small.en.bin",
+  "importer_issue": "Fixed: model moved outside Content so MetaHuman .bin importer cannot import it.",
+  "final_path_regression": {
+    "report": "Saved/Automation/WhisperFinalPath/index.json",
+    "succeeded": 1,
+    "failed": 0,
+    "warnings": 0,
+    "skipped": 0,
+    "test": "MyProject2.Voice.ConcurrentWhisperTeardown",
+    "note": "Actual model loading, decoding and teardown rerun after moving outside Content."
+  }
+}

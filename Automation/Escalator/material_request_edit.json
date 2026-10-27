@@ -1,0 +1,594 @@
+{
+  "calls": [
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_info",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "set_material_properties",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal",
+        "set_blend_mode": "Opaque",
+        "set_shading_model": "DefaultLit",
+        "set_two_sided": false
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "edit_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal",
+        "expression_name": "MaterialExpressionVectorParameter_0",
+        "expression_properties": [
+          {
+            "name": "ParameterName",
+            "value": "BaseColor"
+          },
+          {
+            "name": "DefaultValue",
+            "value_json": "[0.56,0.59,0.64,1]"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Metallic"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.85
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 100
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Roughness"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.3
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 200
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Specular"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.5
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 300
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_info",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "set_material_properties",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark",
+        "set_blend_mode": "Opaque",
+        "set_shading_model": "DefaultLit",
+        "set_two_sided": false
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "edit_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark",
+        "expression_name": "MaterialExpressionVectorParameter_0",
+        "expression_properties": [
+          {
+            "name": "ParameterName",
+            "value": "BaseColor"
+          },
+          {
+            "name": "DefaultValue",
+            "value_json": "[0.027,0.032,0.038,1]"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Metallic"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 100
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Roughness"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.65
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 200
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Specular"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.35
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 300
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_info",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "set_material_properties",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow",
+        "set_blend_mode": "Opaque",
+        "set_shading_model": "DefaultLit",
+        "set_two_sided": false
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "edit_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow",
+        "expression_name": "MaterialExpressionVectorParameter_0",
+        "expression_properties": [
+          {
+            "name": "ParameterName",
+            "value": "BaseColor"
+          },
+          {
+            "name": "DefaultValue",
+            "value_json": "[0.95,0.56,0.025,1]"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Metallic"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 100
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Roughness"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.45
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 200
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Specular"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.5
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 300
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_info",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "set_material_properties",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark",
+        "set_blend_mode": "Opaque",
+        "set_shading_model": "DefaultLit",
+        "set_two_sided": false
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "edit_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark",
+        "expression_name": "MaterialExpressionVectorParameter_0",
+        "expression_properties": [
+          {
+            "name": "ParameterName",
+            "value": "BaseColor"
+          },
+          {
+            "name": "DefaultValue",
+            "value_json": "[0.12,0.14,0.17,1]"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Metallic"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.65
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 100
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Roughness"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.52
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 200
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Specular"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.5
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 300
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_info",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "set_material_properties",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal",
+        "set_blend_mode": "Opaque",
+        "set_shading_model": "DefaultLit",
+        "set_two_sided": false
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "edit_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal",
+        "expression_name": "MaterialExpressionVectorParameter_0",
+        "expression_properties": [
+          {
+            "name": "ParameterName",
+            "value": "BaseColor"
+          },
+          {
+            "name": "DefaultValue",
+            "value_json": "[0.46,0.49,0.54,1]"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Metallic"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.85
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 100
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Roughness"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.48
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 200
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Specular"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.5
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 300
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_info",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "set_material_properties",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass",
+        "set_blend_mode": "Translucent",
+        "set_shading_model": "DefaultLit",
+        "set_two_sided": true
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "edit_expressions",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass",
+        "expression_name": "MaterialExpressionVectorParameter_0",
+        "expression_properties": [
+          {
+            "name": "ParameterName",
+            "value": "BaseColor"
+          },
+          {
+            "name": "DefaultValue",
+            "value_json": "[0.65,0.82,0.86,1]"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Metallic"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 100
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Roughness"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.08
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 200
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Specular"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.5
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 300
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "add_expression",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass",
+        "class_name": "ScalarParameter",
+        "properties": [
+          {
+            "name": "ParameterName",
+            "value": "Opacity"
+          },
+          {
+            "name": "DefaultValue",
+            "value": 0.15
+          }
+        ],
+        "pos_x": -500,
+        "pos_y": 400
+      }
+    }
+  ]
+}

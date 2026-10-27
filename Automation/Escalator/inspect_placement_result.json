@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  [{\"xy\": [1100, 800], \"z\": -5.9604644775390625e-05, \"actor\": \"LandscapeStreamingProxy_2_2_0\"}, {\"xy\": [1100, 1050], \"z\": -5.9604644775390625e-05, \"actor\": \"LandscapeStreamingProxy_2_2_0\"}, {\"xy\": [1900, 800], \"z\": -5.9604644775390625e-05, \"actor\": \"LandscapeStreamingProxy_2_2_0\"}, {\"xy\": [2400, 925], \"z\": -5.9604644775390625e-05, \"actor\": \"LandscapeStreamingProxy_2_2_0\"}, {\"xy\": [1100, 1400], \"z\": -5.9604644775390625e-05, \"actor\": \"LandscapeStreamingProxy_2_2_0\"}, {\"xy\": [0, 800], \"z\": -5.9604644775390625e-05, \"actor\": \"LandscapeStreamingProxy_2_2_0\"}]\r\n"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Megamall Anomaly — Interactive Game Design Bible & Workbook</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-6">
+  <div class="max-w-6xl mx-auto space-y-6">
+
+    <!-- Header Banner -->
+    <header class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--primary)] text-[var(--primary-foreground)]">Godot 4 (Forward+ Vulkan)</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--secondary)] text-[var(--secondary-foreground)]">1–4 Player Co-op / Solo</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--secondary)] text-[var(--secondary-foreground)]">6 Story Floors + Endless Mode</span>
+          </div>
+          <h1 class="text-2xl font-bold text-[var(--foreground)]">Megamall Anomaly — Game Design Bible & Workbook</h1>
+          <p class="text-sm text-[var(--muted-foreground)] mt-1">
+            Investigate haunted stores for cash, read subtle evidence tells to choose Peaceful vs. Forceful resolution, brave cart-less escalator beachheads to repair Service Freight Elevators, and revive fallen teammates via Sauna voice rituals.
+          </p>
+        </div>
+        <div class="flex flex-col items-start md:items-end gap-1.5 min-w-[230px]">
+          <div class="text-xs text-[var(--muted-foreground)] flex justify-between w-full">
+            <span>Overall Workbook Completion</span>
+            <span id="global-progress-label" class="font-semibold text-[var(--foreground)]">0%</span>
+          </div>
+          <div class="w-full h-2.5 bg-[var(--secondary)] rounded-full overflow-hidden border border-[var(--border)]">
+            <div id="global-progress-bar" class="h-full bg-[var(--primary)] transition-all duration-300" style="width: 0%"></div>
+          </div>
+          <div class="flex gap-2 mt-1">
+            <button onclick="exportWorkbookMarkdown()" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)] hover:opacity-90 transition">
+              Copy Checklist (MD)
+            </button>
+            <button onclick="resetWorkbookState()" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-[var(--background)] text-[var(--muted-foreground)] border border-[var(--border)] hover:text-[var(--foreground)] transition">
+              Reset Defaults
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-[var(--border)]">
+        <button onclick="switchTab('loop')" id="tab-btn-loop" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-[var(--primary)] text-[var(--primary-foreground)] transition">
+          1. Core Loop, Economy & Death/Revival
+        </button>
+        <button onclick="switchTab('maps')" id="tab-btn-maps" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-[var(--secondary)] text-[var(--secondary-foreground)] transition">
+          2. Floors 1–6+, Endless & Ghost Roster
+        </button>
+        <button onclick="switchTab('story')" id="tab-btn-story" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-[var(--secondary)] text-[var(--secondary-foreground)] transition">
+          3. Story & Hidden Lore Bible
+        </button>
+        <button onclick="switchTab('backlog')" id="tab-btn-backlog" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-[var(--secondary)] text-[var(--secondary-foreground)] transition">
+          4. Master Production Checklist
+        </button>
+      </nav>
+    </header>
+
+    <!-- Copy Toast -->
+    <div id="toast" class="hidden fixed bottom-5 right-5 z-50 bg-[var(--primary)] text-[var(--primary-foreground)] px-4 py-2.5 rounded-lg shadow-lg text-sm font-semibold">
+      Copied to clipboard!
+    </div>
+
+    <!-- TAB 1: CORE LOOP, ECONOMY & REVIVAL SIMULATOR -->
+    <section id="tab-loop" class="space-y-6">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm">
+        <h2 class="text-lg font-semibold text-[var(--foreground)]">7-Stage Core Gameplay Loop (Click Any Stage for Mechanics & Reference Details)</h2>
+        <p class="text-sm text-[var(--muted-foreground)] mb-4">
+          Includes Two-Stage Vertical Progression (Escalator No-Cart Beachhead &rarr; Service Freight Elevator Repair), Dual Store Resolution (Peaceful vs. Forceful), and Sauna Voice-to-Text Revival.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-2.5" id="loop-stage-buttons"></div>
+        <div id="loop-stage-detail" class="mt-4 p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-base font-semibold text-[var(--foreground)]">Investigation, Resolution & Death Simulator</h3>
+              <p class="text-xs text-[var(--muted-foreground)]">Test photo payouts, Peaceful vs. Forceful store clears, and the Endgame Death Tally:</p>
+            </div>
+            <button onclick="clearEconomySim()" class="px-2.5 py-1 text-xs rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)]">
+              Reset Run
+            </button>
+          </div>
+          <div class="space-y-2" id="payout-buttons"></div>
+          <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--border)] grid grid-cols-3 gap-2">
+            <div>
+              <div class="text-xs text-[var(--muted-foreground)]">Team Wallet</div>
+              <div class="text-lg font-bold text-[var(--foreground)]" id="sim-wallet-amount">$0</div>
+            </div>
+            <div>
+              <div class="text-xs text-[var(--muted-foreground)]">Camera Shots</div>
+              <div class="text-sm font-semibold text-[var(--foreground)]"><span id="sim-photos-used">0</span> / 10</div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-[var(--muted-foreground)]">Endgame Death Tally</div>
+              <div class="text-sm font-bold text-[var(--foreground)]"><span id="sim-deaths">0</span> Deaths</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm space-y-4">
+          <div>
+            <h3 class="text-base font-semibold text-[var(--foreground)]">Quartermaster Chen's Surplus (`AMallStoreVendorNPC`)</h3>
+            <p class="text-xs text-[var(--muted-foreground)]">Spend earned funds on Escalator Fuses, Proton Gear, Sauna Soul-Anchors, and tools:</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" id="vendor-buttons"></div>
+          <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--border)]">
+            <div class="text-xs font-medium text-[var(--muted-foreground)] mb-1">Purchased Loadout (4-Slot Hotbar + 8-Slot Cart Rack):</div>
+            <div id="sim-purchased-list" class="text-xs text-[var(--foreground)]">No items purchased yet. Capture photos or resolve stores on the left!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: FLOORS 1-6+, ENDLESS & GHOST BUILDER -->
+    <section id="tab-maps" class="hidden space-y-6">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm space-y-4">
+        <h2 class="text-lg font-semibold text-[var(--foreground)]">6-Floor Story Climb + Procedural "Endless Mode" (Escalator Beachhead &rarr; Freight Elevator)</h2>
+        <p class="text-xs text-[var(--muted-foreground)]">
+          Healing and Cart Charging cluster around the <strong>Central Oval Atrium</strong>, but initial escalators and freight elevators drop players into the <strong>outer H-concourse wings</strong> first—forcing teams to fight inward and unlock Central Oval shortcuts later in each stage.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="floor-cards"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm space-y-4">
+          <h3 class="text-base font-semibold text-[var(--foreground)]">Haunted Store & Ghost Profile Builder</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Store Tag & Name</label>
+              <input id="store-name" type="text" placeholder="e.g., West_F1_03 — Silk & Static" class="w-full px-3 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Store Archetype (`EMallStoreArchetype`)</label>
+              <select id="store-archetype" class="w-full px-3 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+                <option value="UselessClothing">UselessClothing (Maze Clothing & Shoe Outlet)</option>
+                <option value="LingerieParody">LingerieParody (Haunted Lingerie Boutique)</option>
+                <option value="HosierySpecialty">HosierySpecialty (Stockings & Static Store)</option>
+                <option value="ParodyLegoBrickStore">ParodyLegoBrickStore ("BRICKWORKZ" Toy Store)</option>
+                <option value="SurvivorCivicFacility">SurvivorCivicFacility (Clinic / DIY / Sleep Showroom)</option>
+                <option value="DeliveryAirlockBay">DeliveryAirlockBay ("Out-of-Nowhere" Supply Bay)</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Ghost Name & Former Role</label>
+              <input id="ghost-name" type="text" placeholder="e.g., Clara Venn (Window Dresser)" class="w-full px-3 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Primary Hiding Spot (`AMallHidingSpot`)</label>
+              <select id="store-hiding" class="w-full px-3 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+                <option value="FittingRoomBooth">FittingRoomBooth (Enclosed Cubicle)</option>
+                <option value="CircularClothingRack">CircularClothingRack (Dense Clothing Ring)</option>
+                <option value="SaunaWoodenBooth">SaunaWoodenBooth (Cedar Steam Booth)</option>
+                <option value="SleepPodBunk">SleepPodBunk (Curtained Mattress Bunk)</option>
+                <option value="ServiceUtilityCloset">ServiceUtilityCloset (BOH Janitor Closet)</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Select Required Evidence Signature (Pick 3)</label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <label class="flex items-center gap-2 p-2 rounded border border-[var(--border)] bg-[var(--background)] text-xs cursor-pointer"><input type="checkbox" value="EMF Level 5" checked class="ev-check" /> EMF Level 5</label>
+              <label class="flex items-center gap-2 p-2 rounded border border-[var(--border)] bg-[var(--background)] text-xs cursor-pointer"><input type="checkbox" value="UV Prints" checked class="ev-check" /> UV Prints</label>
+              <label class="flex items-center gap-2 p-2 rounded border border-[var(--border)] bg-[var(--background)] text-xs cursor-pointer"><input type="checkbox" value="Freezing (<0°C)" class="ev-check" /> Freezing (&lt;0°C)</label>
+              <label class="flex items-center gap-2 p-2 rounded border border-[var(--border)] bg-[var(--background)] text-xs cursor-pointer"><input type="checkbox" value="Spirit Box EVP" checked class="ev-check" /> Spirit Box EVP</label>
+              <label class="flex items-center gap-2 p-2 rounded border border-[var(--border)] bg-[var(--background)] text-xs cursor-pointer"><input type="checkbox" value="Ghost Writing Book" class="ev-check" /> Ghost Writing</label>
+              <label class="flex items-center gap-2 p-2 rounded border border-[var(--border)] bg-[var(--background)] text-xs cursor-pointer"><input type="checkbox" value="5-Star Manifest Photo" class="ev-check" /> 5-Star Photo</label>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Receptive vs. Corrupted Tells & Peaceful Ritual</label>
+            <input id="ghost-tells" type="text" placeholder="e.g., Receptive: Polite ledger note | Corrupted: Scratched threats | Ritual: Dim lights to 45%" class="w-full px-3 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]" />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Ghost Backstory & Unique Hunt Twist</label>
+            <textarea id="ghost-twist" rows="2" placeholder="How did they get trapped, and what makes their hunt unique?" class="w-full px-3 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]"></textarea>
+          </div>
+          <div class="flex gap-2">
+            <button onclick="saveStoreProfile()" class="flex-1 py-2 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 transition">
+              + Save Ghost Profile
+            </button>
+            <button onclick="copyCurrentStoreMarkdown()" class="px-4 py-2 rounded-lg text-xs font-medium bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)] hover:opacity-90 transition">
+              Copy as Markdown
+            </button>
+          </div>
+        </div>
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-semibold text-[var(--foreground)]">6 Signature Store Ghosts (Randomized Per Run)</h3>
+            <button onclick="rollAllDispositions()" class="px-2.5 py-1 text-xs font-semibold rounded bg-[var(--primary)] text-[var(--primary-foreground)]">
+              Roll Run Dispositions
+            </button>
+          </div>
+          <p class="text-xs text-[var(--muted-foreground)]">First ghost (`East_F0_02`) defaults to an obvious Peaceful tell for onboarding; all others roll dynamically each run:</p>
+          <div id="store-profiles-list" class="space-y-3 max-h-[540px] overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: STORY & HIDDEN LORE BIBLE -->
+    <section id="tab-story" class="hidden space-y-6">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm space-y-4">
+        <h2 class="text-lg font-semibold text-[var(--foreground)]">Narrative Architecture: The Missing Auditor & The Multi-Floor Pocket Mall</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] space-y-2">
+            <span class="px-2 py-0.5 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)]">Layer 1: The Hook</span>
+            <h3 class="text-base font-semibold text-[var(--foreground)]">The Elena Vance Contract</h3>
+            <p class="text-xs text-[var(--muted-foreground)]">
+              Hired to locate <strong>Elena Vance</strong>, an urban architectural auditor who vanished inside the condemned Arcadia Megamall. The entrance seals behind you at <strong>03:17 AM</strong>. Her first major camp &amp; trail is discovered on <strong>Floor 3</strong>.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] space-y-2">
+            <span class="px-2 py-0.5 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)]">Layer 2: The World</span>
+            <h3 class="text-base font-semibold text-[var(--foreground)]">"Mall City" &amp; Residual Ghosts</h3>
+            <p class="text-xs text-[var(--muted-foreground)]">
+              Survivors built sanctuaries around the Central Oval: Quartermaster Chen's <strong>Flash &amp; Phantom Surplus</strong>, the <strong>North Night-Market Food Court</strong>, and the <strong>South Geothermal Bathhouse &amp; Revival Sauna</strong>.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] space-y-2">
+            <span class="px-2 py-0.5 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)]">Layer 3: The Upper Climb</span>
+            <h3 class="text-base font-semibold text-[var(--foreground)]">The Geodesic Ark Canopy</h3>
+            <p class="text-xs text-[var(--muted-foreground)]">
+              Why do hallways bend by 1.5&deg;&ndash;4&deg; per bay, and why is the Floor 6 roof framed with <strong>Vaulted Spaceship Hull Ribs &amp; Biotic-Cyan Neon</strong>? Elena climbed toward the Roof Control Ring to override the containment lock.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div>
+              <h3 class="text-base font-semibold text-[var(--foreground)]">Hidden Lore Clue Registry</h3>
+              <p class="text-xs text-[var(--muted-foreground)]">Every investigation tool doubles as a lore discovery mechanic:</p>
+            </div>
+            <select id="lore-filter" onchange="renderLoreList()" class="px-3 py-1.5 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+              <option value="ALL">All Discovery Tools</option>
+              <option value="UV Blacklight">UV Blacklight</option>
+              <option value="Spirit Box">Spirit Box (FM Channels)</option>
+              <option value="Ghost Writing Book">Ghost Writing Book</option>
+              <option value="Photo Camera">Photo Camera</option>
+              <option value="Light Remote Gun">Light Remote Gun (45% Dim)</option>
+            </select>
+          </div>
+          <div id="lore-list" class="space-y-3"></div>
+        </div>
+
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm space-y-3">
+          <h3 class="text-base font-semibold text-[var(--foreground)]">Add a New Lore Clue Idea</h3>
+          <div>
+            <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Clue Title</label>
+            <input id="new-lore-title" type="text" placeholder="e.g., Audit Tape #4: Airlock Schedule" class="w-full px-3 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]" />
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Floor / Wing</label>
+              <select id="new-lore-floor" class="w-full px-2.5 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+                <option value="Floor 1 (Ground)">Floor 1 (Ground)</option>
+                <option value="Floor 2 (Z=850)">Floor 2 (Z=850)</option>
+                <option value="Floor 3 (Z=1700 — First Trail)">Floor 3 (Z=1700 — First Trail)</option>
+                <option value="Floor 4 (Z=2550)">Floor 4 (Z=2550)</option>
+                <option value="Floor 5 (Z=3400)">Floor 5 (Z=3400)</option>
+                <option value="Floor 6 (Z=4250 — Canopy)">Floor 6 (Z=4250 — Canopy)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Discovery Tool</label>
+              <select id="new-lore-tool" class="w-full px-2.5 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+                <option value="UV Blacklight">UV Blacklight</option>
+                <option value="Spirit Box">Spirit Box</option>
+                <option value="Ghost Writing Book">Ghost Writing Book</option>
+                <option value="Photo Camera">Photo Camera</option>
+                <option value="Light Remote Gun">Light Remote Gun</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-[var(--muted-foreground)] mb-1">Clue Text / Audio Transcript &amp; Gameplay Hint</label>
+            <textarea id="new-lore-desc" rows="4" placeholder="What does the player read or hear, and how does it help them survive or unlock the next floor?" class="w-full px-3 py-2 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]"></textarea>
+          </div>
+          <button onclick="addLoreClue()" class="w-full py-2 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 transition">
+            + Save Lore Clue to Workbook
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MASTER PRODUCTION CHECKLIST -->
+    <section id="tab-backlog" class="hidden space-y-6">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-[var(--foreground)]">Master Production Checklist (Godot 4 Port &amp; Feature Roadmap)</h2>
+            <p class="text-sm text-[var(--muted-foreground)]">Check off tasks as we build them. Progress saves automatically in your browser.</p>
+          </div>
+          <div class="flex gap-2">
+            <input id="new-task-input" type="text" placeholder="Add a custom task..." class="px-3 py-1.5 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]" />
+            <select id="new-task-cat" class="px-2.5 py-1.5 text-xs rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+              <option value="loop">Core Loop &amp; Godot Systems</option>
+              <option value="story">Story, Ghosts &amp; Lore</option>
+              <option value="maps">Maps, Floors &amp; Audio</option>
+            </select>
+            <button onclick="addCustomTask()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[var(--primary)] text-[var(--primary-foreground)]">Add</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="checklist-containers"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'megamall_anomaly_workbook_v2';
+    const LOOP_STAGES = [
+      { id: 1, step: 'Stage 1', title: 'Safe Hub & Cart Prep', summary: 'Gear up at Chen’s Surplus, charge Light Cart, or light Sauna Soul-Anchor.', classes: 'AMallStoreVendorNPC, AMallPushCart, AMallLightCart', details: 'Equip your 4-slot hotbar (1–4) + Belt Flashlight (T), load 8 tools onto the Equipment Push Cart, verify the 18,000 lm Light Cart battery (15m runtime / 5m charge), and optionally pre-light a Sauna Soul-Anchor / Pink Salt Ward Token for solo/team self-revival.' },
+      { id: 2, step: 'Stage 2', title: 'Concourse & Door Seal', summary: 'Push carts down drifting hallways & set Doorway Seal state.', classes: 'AMallSplineCorridor, AMallStoreCartDock', details: 'Navigate hallways that subtly bend 1.5°–4° per bay. Parking the Equipment Cart across the doorway seals the ghost inside; leaving it unaligned risks 100m hallway hunts; parking fully inside makes the store dormant.' },
+      { id: 3, step: 'Stage 3', title: 'Investigate & Read Tells', summary: 'Gather 3 evidence types & inspect Book/Spirit Box for Peaceful vs. Corrupted tells.', classes: 'AMallEMFReader, AMallUVLight, AMallSpiritBox, AMallGhostWritingBook', details: 'Every ghost rolls dynamically per run as Receptive or Corrupted (except the first onboarding ghost in East_F0_02, which is clearly Peaceful). Inspect handwriting and EVP tone to know whether peace is possible!' },
+      { id: 4, step: 'Stage 4', title: 'Peaceful vs. Forceful Clear', summary: 'Perform the Peaceful Ritual OR extract with Proton Ray Gun + Ectoplasm Canister.', classes: 'AMallProtonRayGun, AMallEctoplasmCanister, AMallPhotoCamera', details: 'If Receptive, completing the ghost’s store routine resolves it peacefully and saves battery/ammo. WARNING: Attempting peace on a Corrupted ghost backfires into an immediate Enraged Hunt! Hostile ghosts must be weakened with the Proton Ray Gun and trapped in an Ectoplasm Canister.' },
+      { id: 5, step: 'Stage 5', title: 'Death, Essence & Sauna Revival', summary: 'Dropped gear stays on death; Floating Essence guides team to Sauna Voice Ritual.', classes: 'UMallVoiceSubsystem, AMallSpaHealingZone', details: 'Territorial and Boss ghosts insta-kill on catch! All carried gear drops at the death site, increments the Endgame Death Tally, and turns the player into a Floating Essence. Teammates revive them at the Sauna Ritual Site by reciting a spoken prayer via local Voice-to-Text (with an accessibility option).' },
+      { id: 6, step: 'Stage 6', title: 'Escalator No-Cart Beachhead', summary: 'Insert $60 Fuse & ascend on foot WITHOUT carts into outer upper wings.', classes: 'AMallEscalatorFuse, AMallEscalatorBreakerPanel, AMallEscalator', details: 'Stepped escalators cannot carry carts! Ascending to a new floor drops the team into the outer concourse wings with ONLY their 4-slot hotbars and belt flashlights—no doorway seals and no 18,000 lm safety cone.' },
+      { id: 7, step: 'Stage 7', title: 'Freight Elevator & Oval Shortcuts', summary: 'Complete floor-escalating Elevator repair to bring carts up & unlock Central Oval.', classes: 'ServiceFreightElevator, AMallCurvedAtriumRing', details: 'Survive the floor’s unique Beachhead challenge (F2 Relay Switch -> F3 Two-Handed Heavy Hydraulic Carry at 50% speed -> F4 Cart-Less Gatekeeper Ghost Expulsion -> F5/F6 Compound Challenges) to unlock the Service Freight Elevator, bring carts up, and open Central Oval healing/charging shortcuts.' }
+    ];
+    const FLOOR_GUIDE = [
+      { floor: 'Floor 1 (Z = 0m)', title: 'Ground Plaza & Sanctuaries', beachhead: 'Starting Hub (Carts Available)', desc: 'Hebe Fountain Atrium, Quartermaster Chen’s Surplus, South Pink Salt Bathhouse & Revival Sauna, North Food Court. Onboarding store East_F0_02.' },
+      { floor: 'Floor 2 (Z = 8.5m)', title: 'The Upper Promenade', beachhead: 'Tier 1: Stealth & Relay Switch', desc: 'Arrive in outer wing on foot without carts; evade roaming hazards and flip the Freight Elevator Relay Switch to bring carts up, then unlock Central Oval bridges.' },
+      { floor: 'Floor 3 (Z = 17.0m)', title: 'Sky Arboretum & First Trail', beachhead: 'Tier 2: Heavy 2-Handed Hydraulic Carry', desc: 'Carry the Heavy Hydraulic Assembly in main hands (not hotbar; 50% speed / no sprint) to the elevator shaft. Discover Elena Vance’s first camp & trail.' },
+      { floor: 'Floor 4 (Z = 25.5m)', title: 'Civic & Department Wing', beachhead: 'Tier 3: Cart-Less Gatekeeper Ghost Expulsion', desc: 'A Gatekeeper Ghost guards the Floor 4 Elevator Relay. Expel or resolve the ghost using only 4-slot hotbars (zero cart protection) to unlock the elevator.' },
+      { floor: 'Floor 5 (Z = 34.0m)', title: 'Blackout Concourse & Gremlins', beachhead: 'Tier 4: Heavy Carry + Dual-Wing Breakers', desc: 'Combine a two-handed heavy part carry with synchronized dual-wing breaker overrides in pitch-black corridors prowled by Hallway Gremlins.' },
+      { floor: 'Floor 6 & 7+ (Z = 42.5m+)', title: 'Geodesic Ark Canopy + Endless Mode', beachhead: 'Tier 5: Skybridge Core Escort + Endless Tower', desc: 'Escort a Power Core across the Cardinal Skybridge under an Apex Haunting to reach Elena Vance. Floors 7+ unlock Procedural Endless Escalation Mode!' }
+    ];
+    const PAYOUT_OPTIONS = [
+      { label: '5-Star Photo: Manifested Store Ghost (+4s Flash Stun)', reward: 100, usesShot: true, isDeath: false },
+      { label: '4-Star Photo: UV Footprint / EMF-5 / Distortion', reward: 65, usesShot: true, isDeath: false },
+      { label: '3-Star Photo: Written Ghost Ledger / EMF-4', reward: 50, usesShot: true, isDeath: false },
+      { label: 'Peaceful Store Resolution (Solved Obsession — Saves Battery)', reward: 150, usesShot: false, isDeath: false },
+      { label: 'Forceful Ectoplasm Canister Extraction (Proton Gun Clear)', reward: 220, usesShot: false, isDeath: false },
+      { label: 'Simulate Territorial Ghost Catch (Insta-Kill + Drop Gear + Tally)', reward: 0, usesShot: false, isDeath: true }
+    ];
+    const VENDOR_CATALOG = [
+      { name: 'Heavy-Duty Escalator Relay Fuse', price: 60, tag: 'Foot Ascent Gate' },
+      { name: 'Parody Proton Ray Gun (Tier 1)', price: 120, tag: 'Forceful Extraction' },
+      { name: 'Ectoplasm Extraction Canister', price: 40, tag: 'Ghost Trap' },
+      { name: 'Sauna Soul-Anchor / Pink Salt Token', price: 45, tag: 'Solo/Team Self-Revive' },
+      { name: 'Frequency Spirit Box Radio', price: 55, tag: 'EVP & Tell Scanner' },
+      { name: 'Paranormal Evidence Photo Camera', price: 50, tag: '10 Shots + 4s Stun' },
+      { name: 'IR Motion & Presence Sensor', price: 45, tag: 'Invisible Tracker' },
+      { name: 'UV Blacklight Torch', price: 40, tag: 'Prints & Ciphers' },
+      { name: 'Digital IR Thermometer', price: 40, tag: 'Cold Spot Scanner' },
+      { name: 'Chongqing Hot Broth & Ration Bowl', price: 10, tag: '+HP/Stamina/+45% Cart' }
+    ];
+    const DEFAULT_STATE = {
+      activeStage: 1, wallet: 0, photosUsed: 0, deaths: 0, purchased: [],
+      loreClues: [
+        { title: 'Audit Note #1: The 03:17 AM Lockout', floor: 'Floor 1 (Ground)', tool: 'UV Blacklight', desc: 'Shining the UV Blacklight on the shutter beside Flash & Phantom Surplus reveals Elena’s fluorescent handwriting: "Do not trust the ground doors. Buy an escalator fuse from Chen, head up on foot, and find the freight elevator switch."' },
+        { title: 'Number Station on 104.7 FM', floor: 'Floor 1 (Ground)', tool: 'Spirit Box', desc: 'Tuning the Spirit Box to 104.7 FM within 4m of the Hebe Fountain plays a distorted recording of Elena reading structural coordinates: "Hallway drift is increasing by 3.2 degrees per bay. The building is coiling inward."' },
+        { title: 'Elena’s First Field Camp & Survey Map', floor: 'Floor 3 (Z=1700 — First Trail)', tool: 'Photo Camera', desc: 'Discovered after hauling the Heavy Hydraulic Assembly on Floor 3: Elena’s survey tripod and notes confirming the mall stretches at least 6 stories up to the Geodesic Ark Canopy.' }
+      ],
+      storeProfiles: [
+        { name: 'East_F0_02 — Atrium Books & Curios (Onboarding)', archetype: 'UselessClothing', ghost: 'Arthur Pendelton (Night Inventory Clerk)', hiding: 'CircularClothingRack', disposition: 'Receptive (Onboarding Default)', evidence: ['EMF Level 5', 'Spirit Box EVP', 'Ghost Writing Book'], tells: 'Receptive: Neat tally "Just one last shelf count..." | Corrupted: Scratched "DO NOT TOUCH MY STOCK" | Ritual: Return 2 books & say "Your shift is over"', twist: 'Throws hardcover/softcover books every 12s while invisible; pauses 5s when blinded by Photo Camera flash.' },
+        { name: 'Victoria’s Phantoms Boutique', archetype: 'LingerieParody', ghost: 'The Display Coordinator', hiding: 'FittingRoomBooth', disposition: 'Rolled Per Run', evidence: ['UV Prints', 'Freezing (<0°C)', 'Spirit Box EVP'], tells: 'Receptive: Whispered "Spotlight is too harsh..." | Corrupted: Hisses "DON\'T LOOK AT ME" | Ritual: Dim store lights to 45% with Light Remote Gun', twist: 'Swaps places with mannequins when players look away; hunts faster under 100% bright store lights.' },
+        { name: 'Sheer Terror Hosiery', archetype: 'HosierySpecialty', ghost: 'Static Evelyn', hiding: 'CircularClothingRack', disposition: 'Rolled Per Run', evidence: ['EMF Level 5', 'UV Prints', 'Ghost Writing Book'], tells: 'Receptive: Writes "Unplug the display transformer..." | Corrupted: Burned black arcs & constant EMF-5 | Ritual: Flip rear display switch with EMF Reader active', twist: 'Drains handheld flashlights and nearby Mobile Light Cart batteries 35% faster during Warning/Hunt.' },
+        { name: 'BRICKWORKZ Modular Toy Store', archetype: 'ParodyLegoBrickStore', ghost: 'The Night-Shift Builder', hiding: 'ServiceUtilityCloset', disposition: 'Rolled Per Run', evidence: ['EMF Level 5', 'Freezing (<0°C)', 'UV Prints'], tells: 'Receptive: UV blueprint arrows to center table | Corrupted: Clawed UV prints & hazard marks | Ritual: Place missing display piece on center podium', twist: 'Scatters plastic brick clusters in aisles that crunch loudly when stepped on, alerting the ghost.' },
+        { name: 'Floor 2–4 Department Maze', archetype: 'UselessClothing', ghost: 'The Lost Shopper', hiding: 'CircularClothingRack', disposition: 'Rolled Per Run', evidence: ['Spirit Box EVP', 'Ghost Writing Book', 'Freezing (<0°C)'], tells: 'Receptive: Asks "Which way is the fountain?" on 98.3 FM | Corrupted: Mimics players’ own voice chat | Ritual: Say "Where are you?" & ring checkout bell', twist: 'Uses NavigationServer3D acoustic pathing to project fake teammate voice echoes down adjacent aisles.' },
+        { name: 'Upper Civic & Ark Control', archetype: 'SurvivorCivicFacility', ghost: 'The Chief Architect', hiding: 'SleepPodBunk', disposition: 'Rolled Per Run', evidence: ['Spirit Box EVP', 'Ghost Writing Book', 'UV Prints'], tells: 'Receptive: Writes coil stabilization coordinates | Corrupted: Deafening sirens on 104.7 FM | Ritual: Tune 104.7 FM & photograph drafting blueprint', twist: 'Remotely flickers/cuts concourse lights outside the store; insta-kills on catch unless stunned.' }
+      ],
+      tasks: [
+        { id: 't1', cat: 'built', done: true, text: 'Reference C++ Formulas & Assets Verified (8 Tools, Push Cart, Light Cart, Spa, Food, Vendor, Escalator Fuse)' },
+        { id: 't2', cat: 'built', done: true, text: 'Master Game Design Bible & Workbook Updated for Godot 4 + Multi-Floor Beachhead Loop' },
+        { id: 'c1', cat: 'loop', done: false, text: 'Godot 4 Core Player Controller (1st-Person + SpringArm3D 3rd-Person Bench/Spa + 4-Slot Hotbar + Two-Handed Heavy Carry)' },
+        { id: 'c2', cat: 'loop', done: false, text: 'Physically-Based Co-op VoIP (Raycast Room Reverb + Wall Low-Pass Occlusion + NavigationServer3D Acoustic Pathing + Vosk/Whisper)' },
+        { id: 'c3', cat: 'loop', done: false, text: 'Two-Stage Vertical Progression (Escalator Foot Beachhead -> Floor-Escalating Service Freight Elevator Cart Unlock)' },
+        { id: 'c4', cat: 'loop', done: false, text: 'Dual Store Resolution System (Randomized Peaceful vs. Corrupted Tells + Enraged Hunt Backfire + Proton Ray Gun & Ectoplasm Canister)' },
+        { id: 'c5', cat: 'loop', done: false, text: 'Player Death, Dropped Gear, Floating Essence Guide & Sauna Voice-to-Text Prayer Revival (+ Sauna Soul-Anchor & Death Tally)' },
+        { id: 's1', cat: 'story', done: false, text: 'Implement Onboarding Store (East_F0_02 Arthur Pendelton) with Guaranteed Clear Peaceful Tell' },
+        { id: 's2', cat: 'story', done: false, text: 'Author All 6 Signature Store Ghost Profiles with Receptive vs. Corrupted Book/Spirit Box Assets' },
+        { id: 's3', cat: 'story', done: false, text: 'Place Elena Vance’s First Field Camp & Trail on Floor 3 (Revealing Floors 4–6+ Climb)' },
+        { id: 'm1', cat: 'maps', done: false, text: 'Outer-Wing Escalator/Elevator Arrival Layout -> Late-Stage Central Oval Shortcut & Sanctuary Unlocks' },
+        { id: 'm2', cat: 'maps', done: false, text: 'Dynamic Atmospheric Lighting (100% / 45% Gray-Space Dim / OFF + Ghost Flicker via OmniLight3D/SpotLight3D + VoxelGI)' },
+        { id: 'm3', cat: 'maps', done: false, text: 'Procedural "Endless Escalation Mode" (Floors 7+) Remixing Beachhead Challenges & Hallway Drift Seeds' }
+      ]
+    };
+
+    let state = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || JSON.parse(JSON.stringify(DEFAULT_STATE));
+    function saveState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); updateGlobalProgress(); }
+    function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.remove('hidden'); setTimeout(() => t.classList.add('hidden'), 2400); }
+    function switchTab(tabId) {
+      ['loop', 'maps', 'story', 'backlog'].forEach(id => {
+        document.getElementById('tab-' + id).classList.toggle('hidden', id !== tabId);
+        document.getElementById('tab-btn-' + id).className = id === tabId
+          ? 'tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-[var(--primary)] text-[var(--primary-foreground)] transition'
+          : 'tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-[var(--secondary)] text-[var(--secondary-foreground)] transition';
+      });
+    }
+    function renderLoopStages() {
+      document.getElementById('loop-stage-buttons').innerHTML = LOOP_STAGES.map(s => `
+        <button onclick="state.activeStage=${s.id};saveState();renderLoopStages();" class="text-left p-3 rounded-xl border transition ${s.id === state.activeStage ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]' : 'bg-[var(--background)] text-[var(--foreground)] border-[var(--border)]'}">
+          <div class="text-xs font-bold uppercase opacity-80">${s.step}</div>
+          <div class="text-xs font-semibold mt-0.5">${s.title}</div>
+          <div class="text-xs mt-1 opacity-85">${s.summary}</div>
+        </button>`).join('');
+      const c = LOOP_STAGES.find(s => s.id === state.activeStage) || LOOP_STAGES[0];
+      document.getElementById('loop-stage-detail').innerHTML = `<div class="flex flex-wrap justify-between items-center gap-2 pb-2 mb-2 border-b border-[var(--border)]"><div class="text-base font-bold">${c.step}: ${c.title}</div><span class="px-2.5 py-1 rounded text-xs font-mono bg-[var(--secondary)] text-[var(--secondary-foreground)]">${c.classes}</span></div><p class="text-sm text-[var(--muted-foreground)]">${c.details}</p>`;
+    }
+    function renderFloorCards() {
+      document.getElementById('floor-cards').innerHTML = FLOOR_GUIDE.map(f => `
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] space-y-1.5">
+          <div class="flex justify-between items-center">
+            <span class="text-xs font-bold text-[var(--foreground)]">${f.floor}</span>
+            <span class="px-2 py-0.5 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)]">${f.beachhead}</span>
+          </div>
+          <div class="text-sm font-semibold text-[var(--foreground)]">${f.title}</div>
+          <p class="text-xs text-[var(--muted-foreground)]">${f.desc}</p>
+        </div>`).join('');
+    }
+    function renderEconomySimulator() {
+      document.getElementById('payout-buttons').innerHTML = PAYOUT_OPTIONS.map((p, idx) => `<button onclick="triggerPayout(${idx})" class="w-full flex items-center justify-between px-3 py-2 rounded-lg bg-[var(--background)] border border-[var(--border)] hover:opacity-90 text-left"><span class="text-xs font-medium">${p.label}</span><span class="px-2 py-0.5 rounded text-xs font-bold bg-[var(--secondary)] text-[var(--secondary-foreground)]">${p.isDeath ? '+1 Death' : '+$' + p.reward}</span></button>`).join('');
+      document.getElementById('vendor-buttons').innerHTML = VENDOR_CATALOG.map((v, idx) => `<button onclick="buyVendorItem(${idx})" class="flex flex-col justify-between p-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] text-left ${state.wallet >= v.price ? 'hover:opacity-90' : 'opacity-50'}"><div class="text-xs font-semibold">${v.name}</div><div class="flex justify-between w-full mt-1.5"><span class="text-xs text-[var(--muted-foreground)]">${v.tag}</span><span class="text-xs font-bold text-[var(--foreground)]">$${v.price}</span></div></button>`).join('');
+      document.getElementById('sim-wallet-amount').textContent = '$' + state.wallet;
+      document.getElementById('sim-photos-used').textContent = state.photosUsed;
+      document.getElementById('sim-deaths').textContent = state.deaths || 0;
+      document.getElementById('sim-purchased-list').textContent = state.purchased.length ? state.purchased.join(' • ') : 'No items purchased yet.';
+    }
+    function triggerPayout(idx) {
+      const p = PAYOUT_OPTIONS[idx];
+      if (p.isDeath) {
+        state.deaths = (state.deaths || 0) + 1;
+        saveState(); renderEconomySimulator();
+        return showToast('Caught! Gear dropped at death site. Recite Sauna prayer or use Soul-Anchor!');
+      }
+      if (p.usesShot && state.photosUsed >= 10) return showToast('10/10 exposures used! Buy a new camera.');
+      state.wallet += p.reward;
+      if (p.usesShot) state.photosUsed++;
+      saveState(); renderEconomySimulator();
+    }
+    function buyVendorItem(idx) { const v = VENDOR_CATALOG[idx]; if (state.wallet < v.price) return showToast('Not enough cash!'); state.wallet -= v.price; state.purchased.push(v.name); if (v.name.includes('Photo Camera')) state.photosUsed = 0; saveState(); renderEconomySimulator(); }
+    function clearEconomySim() { state.wallet = 0; state.photosUsed = 0; state.deaths = 0; state.purchased = []; saveState(); renderEconomySimulator(); }
+    function renderLoreList() {
+      const f = document.getElementById('lore-filter').value;
+      const list = state.loreClues.filter(c => f === 'ALL' || c.tool === f);
+      document.getElementById('lore-list').innerHTML = list.map(c => `<div class="p-3.5 rounded-xl bg-[var(--background)] border border-[var(--border)] space-y-1"><div class="flex flex-wrap justify-between gap-1"><div class="text-sm font-semibold">${c.title}</div><div class="flex gap-1.5"><span class="px-2 py-0.5 rounded text-xs bg-[var(--secondary)] text-[var(--secondary-foreground)]">${c.floor}</span><span class="px-2 py-0.5 rounded text-xs bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold">${c.tool}</span></div></div><p class="text-xs text-[var(--muted-foreground)]">${c.desc}</p></div>`).join('');
+    }
+    function addLoreClue() {
+      const title = document.getElementById('new-lore-title').value.trim(), floor = document.getElementById('new-lore-floor').value, tool = document.getElementById('new-lore-tool').value, desc = document.getElementById('new-lore-desc').value.trim();
+      if (!title || !desc) return showToast('Enter title and description');
+      state.loreClues.unshift({ title, floor, tool, desc }); document.getElementById('new-lore-title').value = ''; document.getElementById('new-lore-desc').value = ''; saveState(); renderLoreList(); showToast('Saved Lore Clue!');
+    }
+    function getStoreBuilderData() {
+      return {
+        name: document.getElementById('store-name').value.trim() || 'Untitled_Store',
+        archetype: document.getElementById('store-archetype').value,
+        ghost: document.getElementById('ghost-name').value.trim() || 'Unnamed Ghost',
+        hiding: document.getElementById('store-hiding').value,
+        disposition: 'Rolled Per Run',
+        evidence: Array.from(document.querySelectorAll('.ev-check:checked')).map(e => e.value),
+        tells: document.getElementById('ghost-tells').value.trim() || 'Check Book & Spirit Box for Receptive vs. Corrupted tell.',
+        twist: document.getElementById('ghost-twist').value.trim() || 'Standard hunt cycle.'
+      };
+    }
+    function formatStoreMarkdown(s) { return `### Store Profile: ${s.name}\n- **Archetype:** \`${s.archetype}\`\n- **Ghost:** ${s.ghost}\n- **Disposition:** ${s.disposition || 'Rolled Per Run'}\n- **Hiding Spot:** \`${s.hiding}\`\n- **Evidence:** ${s.evidence.join(', ')}\n- **Tells & Ritual:** ${s.tells || 'N/A'}\n- **Twist:** ${s.twist}`; }
+    function saveStoreProfile() { state.storeProfiles.unshift(getStoreBuilderData()); saveState(); renderStoreProfiles(); showToast('Saved Ghost Profile!'); }
+    function copyCurrentStoreMarkdown() { navigator.clipboard.writeText(formatStoreMarkdown(getStoreBuilderData())); showToast('Copied Markdown!'); }
+    function copySavedStoreMarkdown(idx) { navigator.clipboard.writeText(formatStoreMarkdown(state.storeProfiles[idx])); showToast('Copied Store Markdown!'); }
+    function rollAllDispositions() {
+      state.storeProfiles.forEach((s, idx) => {
+        if (idx === 0 && s.name.includes('East_F0_02')) {
+          s.disposition = 'Receptive to Peace (Onboarding First Ghost)';
+        } else {
+          s.disposition = Math.random() < 0.5 ? 'Receptive to Peace (This Run)' : 'Corrupted — Hostile Only (Enraged Hunt if Peace Attempted!)';
+        }
+      });
+      saveState(); renderStoreProfiles(); showToast('Rolled per-run ghost dispositions!');
+    }
+    function renderStoreProfiles() {
+      document.getElementById('store-profiles-list').innerHTML = state.storeProfiles.map((s, idx) => `<div onclick="copySavedStoreMarkdown(${idx})" class="p-3.5 rounded-xl bg-[var(--background)] border border-[var(--border)] hover:opacity-95 cursor-pointer space-y-1.5"><div class="flex flex-wrap justify-between gap-1"><span class="text-sm font-semibold">${s.name}</span><span class="px-2 py-0.5 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)]">${s.disposition || 'Rolled Per Run'}</span></div><div class="text-xs font-medium">Ghost: ${s.ghost} | Evidence: ${s.evidence.join(', ')}</div><div class="text-xs text-[var(--muted-foreground)]"><strong>Tells &amp; Ritual:</strong> ${s.tells || 'See Bible'}</div><p class="text-xs text-[var(--muted-foreground)]"><strong>Hunt Twist:</strong> ${s.twist}</p></div>`).join('');
+    }
+    function renderChecklists() {
+      const cats = [ { key: 'built', title: 'Verified Reference & Bible Foundation' }, { key: 'loop', title: 'Core Gameplay Loop & Godot 4 Systems' }, { key: 'story', title: 'Story, 6 Ghost Profiles & Lore' }, { key: 'maps', title: 'Multi-Floor Maps, Lighting & Endless Mode' } ];
+      document.getElementById('checklist-containers').innerHTML = cats.map(cat => {
+        const items = state.tasks.filter(t => cat.key === 'maps' ? (t.cat === 'maps' || t.cat === 'art') : t.cat === cat.key);
+        return `<div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] space-y-3"><div class="flex justify-between border-b border-[var(--border)] pb-2"><h3 class="text-sm font-semibold">${cat.title}</h3><span class="text-xs text-[var(--muted-foreground)]">${items.filter(t=>t.done).length}/${items.length}</span></div><div class="space-y-2">${items.map(t => `<label class="flex items-start gap-2.5 text-xs cursor-pointer"><input type="checkbox" ${t.done?'checked':''} onchange="toggleTask('${t.id}')" class="mt-0.5"/><span class="${t.done?'line-through opacity-50':''}">${t.text}</span></label>`).join('')}</div></div>`;
+      }).join('');
+    }
+    function toggleTask(id) { const t = state.tasks.find(x => x.id === id); if (t) { t.done = !t.done; saveState(); renderChecklists(); } }
+    function addCustomTask() { const input = document.getElementById('new-task-input'), cat = document.getElementById('new-task-cat').value; if (!input.value.trim()) return; state.tasks.push({ id: 'c_' + Date.now(), cat, done: false, text: input.value.trim() }); input.value = ''; saveState(); renderChecklists(); }
+    function updateGlobalProgress() { const total = state.tasks.length || 1, done = state.tasks.filter(t => t.done).length, pct = Math.round((done / total) * 100); document.getElementById('global-progress-label').textContent = `${pct}% (${done}/${total})`; document.getElementById('global-progress-bar').style.width = `${pct}%`; }
+    function exportWorkbookMarkdown() { navigator.clipboard.writeText(state.tasks.map(t => `- [${t.done?'x':' '}] ${t.text}`).join('\n')); showToast('Copied Checklist Markdown!'); }
+    function resetWorkbookState() { localStorage.removeItem(STORAGE_KEY); state = JSON.parse(JSON.stringify(DEFAULT_STATE)); initAll(); showToast('Reset to defaults.'); }
+    function initAll() { renderLoopStages(); renderFloorCards(); renderEconomySimulator(); renderLoreList(); renderStoreProfiles(); renderChecklists(); updateGlobalProgress(); }
+    initAll();
+  </script>
+</body>
+</html>

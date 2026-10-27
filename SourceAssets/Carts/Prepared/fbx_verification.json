@@ -1,0 +1,35 @@
+[
+  {
+    "file": "SM_EquipmentUtilityCart.fbx",
+    "passed": true,
+    "dimensions_cm": [
+      121.10000228881836,
+      66.00000762939453,
+      110.0999984741211
+    ],
+    "maximum_dimension_error_cm": 7.62939453125e-06,
+    "triangles": 5104
+  },
+  {
+    "file": "SM_CartWorkLampFull.fbx",
+    "passed": true,
+    "dimensions_cm": [
+      68.19999694824219,
+      77.94613265991211,
+      133.203147046268
+    ],
+    "maximum_dimension_error_cm": 3.814697265625e-06,
+    "triangles": 10156
+  },
+  {
+    "file": "SM_CartWorkLampHead.fbx",
+    "passed": true,
+    "dimensions_cm": [
+      15.71657419204712,
+      30.000001907348633,
+      28.976892471313477
+    ],
+    "maximum_dimension_error_cm": 4.76837158203125e-07,
+    "triangles": 4292
+  }
+]

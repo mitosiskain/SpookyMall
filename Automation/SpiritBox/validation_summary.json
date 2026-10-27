@@ -1,0 +1,160 @@
+{
+  "status": "passed",
+  "build": {
+    "result": "Succeeded",
+    "log": "Saved/Logs/SpiritBoxFinalBuild.log",
+    "kind": "cold native editor build including final capsule fix"
+  },
+  "native_tests": {
+    "passed": 14,
+    "failed": 0,
+    "not_run": 0,
+    "warnings": 0,
+    "report": "Saved/Automation/SpiritBoxColdFinal/index.json",
+    "tests": {
+      "Mall.Ghost.BookInteraction": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "Mall.Ghost.SpiritBoxNetwork": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "Mall.Ghost.StateAndDisturbance": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "Mall.Voice.CodecAndPacketBounds": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "Mall.Voice.NetworkTransport": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.Microphone.ChunkInvarianceAndInvalidOptions": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.Microphone.LoudTransitionsAndManualGain": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.Microphone.LowFrequencyFilter": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.Microphone.QuietInput": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.Microphone.SilenceAndFloor": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.ConcurrentSpeechTeardown": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.MicrophonePipeline": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.OfflineSpeechBackend": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      "MyProject2.Voice.PhraseMatching": {
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      }
+    },
+    "scope": "Final cold DLL; includes oversized presentation-volume regression and real-IP ownership/response transport checks."
+  },
+  "network_cases": [
+    "actual owning-client pickup/power/placement RPCs",
+    "authority and carrier exclusivity",
+    "off/store/range/hunt/unknown phrase rejection",
+    "response cooldown",
+    "editable response variants",
+    "both-peer response metadata and multicast event delivery",
+    "late joining reconstructs state without replaying historical response events"
+  ],
+  "live_pie": {
+    "status": "passed",
+    "checks": [
+      "F picks up saved placed radio",
+      "R powers held radio on",
+      "accepted who_are_you at confidence 0.1 routes through ghost receiver",
+      "ResponseCount increments and ResponseAudio.is_playing is true immediately after routing",
+      "HUD displays I am here subtitle and F/R controls",
+      "F places powered radio on supported floor",
+      "R switches focused placed radio off",
+      "response history persists across placement and power change"
+    ],
+    "route_probe_scope": "Receiver-side supported phrase probe; not the microphone-to-server transport path",
+    "screenshot": "Automation/SpiritBox/held_answered.png",
+    "stopped_after_tests": true,
+    "assets_clean_after_testing": true
+  },
+  "hardware_tests": {
+    "microphone_capture_performed": false,
+    "audible_output_verified": false,
+    "two_computer_proximity_verified": false
+  },
+  "known_scope": [
+    "Primitive radio test prop",
+    "All three question intents initially share one synthesized I am here clip",
+    "Recordings and subtitles editable in actor Responses",
+    "No LLM or network speech generation service"
+  ],
+  "live_coding": {
+    "compile": "Succeeded",
+    "patch": "Succeeded",
+    "regression_report": "Automation/SpiritBox/live_coding_tests.json",
+    "passed": 14
+  },
+  "placement": {
+    "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+    "actor": "SpiritBox_East_F0_02",
+    "location_cm": [
+      4234,
+      -190,
+      70.3
+    ],
+    "rotation_degrees": [
+      0,
+      90,
+      0
+    ],
+    "actor_count": 736,
+    "existing_actor_poses_unchanged": 735,
+    "saved": true,
+    "note": "Counter occluded visibility/reach traces; moved only the new radio to the free edge of the existing evidence stand."
+  },
+  "fixes": [
+    "Character store confinement uses its collision capsule; camera/presentation volumes no longer reject a valid speaker. Equipment still uses full bounds.",
+    "Oversized presentation bounds on both ghost and speaker covered by native regression.",
+    "Network fixture waits for client possession acknowledgement and initial control rotation before first interaction."
+  ],
+  "tooling_cleanup": {
+    "temporary_aura_post_tick_sampler": "Orphaned callback found after verification; editor closed to clear it. No callbacks or helper scripts are part of game code.",
+    "unreal_closed_by_user_for_final_build": true,
+    "editor_restart_required": false,
+    "verification_callback_cleared_by_editor_shutdown": true
+  }
+}

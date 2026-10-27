@@ -1,0 +1,281 @@
+{
+  "recorded_date": "2026-10-18",
+  "asset": "/Game/Environment/Mall/Blueprints/BP_StoreGhost.BP_StoreGhost",
+  "asset_sha256": "6a3265431ab6aee5193f6513d3b1857b9a5c45a87ab666b4945a35ab2749aebc",
+  "compile": {
+    "compiled": true,
+    "status": "UpToDate",
+    "errors": 0,
+    "warnings": 0,
+    "saved": false,
+    "save_skipped_not_dirty": true
+  },
+  "summary": {
+    "graphs": 5,
+    "new_nodes": 11,
+    "disconnections": 8,
+    "new_connections": 29,
+    "failed_tool_mutations": 0,
+    "readback_edges_confirmed": 29
+  },
+  "graphs": [
+    {
+      "graph": "CheckSafeCenter",
+      "new_nodes": {
+        "CartCenterAllowed": "K2Node_CallFunction_1",
+        "CartProjectedFeetAllowed": "K2Node_CallFunction_2"
+      },
+      "connections": [
+        {
+          "from": "t0_Self_1",
+          "to": "K2Node_CallFunction_1",
+          "source_pin": "self",
+          "target_pin": "Ghost",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_FunctionEntry_0",
+          "to": "K2Node_CallFunction_1",
+          "source_pin": "Center",
+          "target_pin": "Center",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_1",
+          "to": "t0_IfThenElse_1",
+          "source_pin": "ReturnValue",
+          "target_pin": "Condition",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "t0_Self_1",
+          "to": "K2Node_CallFunction_2",
+          "source_pin": "self",
+          "target_pin": "Ghost",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "t0_NavigationSystemV1_K2_ProjectPointToNavigation_1",
+          "to": "K2Node_CallFunction_2",
+          "source_pin": "ProjectedLocation",
+          "target_pin": "Feet",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_2",
+          "to": "t0_CommutativeAssociativeBinaryOperator_BooleanAND_8",
+          "source_pin": "ReturnValue",
+          "target_pin": "A",
+          "target_seen_in_source_block": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "graph": "UpdateGuardAndEligibility",
+      "new_nodes": {
+        "GuardCartGhost": "K2Node_CallFunction_0",
+        "ResolveCartTarget": "K2Node_CallFunction_1",
+        "CartPlayerEligible": "K2Node_CallFunction_2"
+      },
+      "connections": [
+        {
+          "from": "t0_IfThenElse_1",
+          "to": "K2Node_CallFunction_0",
+          "source_pin": "then",
+          "target_pin": "execute",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "t0_Self_1",
+          "to": "K2Node_CallFunction_0",
+          "source_pin": "self",
+          "target_pin": "Ghost",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_0",
+          "to": "t0_VariableSet_1",
+          "source_pin": "then",
+          "target_pin": "execute",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "t0_Self_1",
+          "to": "K2Node_CallFunction_1",
+          "source_pin": "self",
+          "target_pin": "Ghost",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_1",
+          "to": "t0_VariableSet_5",
+          "source_pin": "ReturnValue",
+          "target_pin": "TargetPlayer",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "t0_Self_1",
+          "to": "K2Node_CallFunction_2",
+          "source_pin": "self",
+          "target_pin": "Ghost",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "t0_VariableGet_3",
+          "to": "K2Node_CallFunction_2",
+          "source_pin": "TargetPlayer",
+          "target_pin": "Player",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_2",
+          "to": "t0_VariableSet_13",
+          "source_pin": "ReturnValue",
+          "target_pin": "bPlayerEligible",
+          "target_seen_in_source_block": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "graph": "TryCatchPlayer",
+      "new_nodes": {
+        "CartCatchAllowed": "K2Node_CallFunction_19"
+      },
+      "connections": [
+        {
+          "from": "K2Node_Self_0",
+          "to": "K2Node_CallFunction_19",
+          "source_pin": "self",
+          "target_pin": "Ghost",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_VariableGet_4",
+          "to": "K2Node_CallFunction_19",
+          "source_pin": "TargetPlayer",
+          "target_pin": "Player",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_19",
+          "to": "K2Node_IfThenElse_5",
+          "source_pin": "ReturnValue",
+          "target_pin": "Condition",
+          "target_seen_in_source_block": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "graph": "BuildValidatedRoute",
+      "new_nodes": {
+        "CartSegmentAllowed": "K2Node_CallFunction_29",
+        "CartRouteAnd": "K2Node_CallFunction_30"
+      },
+      "connections": [
+        {
+          "from": "t0_Self_1",
+          "to": "K2Node_CallFunction_29",
+          "source_pin": "self",
+          "target_pin": "Ghost",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_VariableGet_8",
+          "to": "K2Node_CallFunction_29",
+          "source_pin": "PreviousPathPoint",
+          "target_pin": "StartFeet",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_MacroInstance_0",
+          "to": "K2Node_CallFunction_29",
+          "source_pin": "Array Element",
+          "target_pin": "EndFeet",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_22",
+          "to": "K2Node_CallFunction_30",
+          "source_pin": "ReturnValue",
+          "target_pin": "A",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_29",
+          "to": "K2Node_CallFunction_30",
+          "source_pin": "ReturnValue",
+          "target_pin": "B",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_30",
+          "to": "K2Node_IfThenElse_4",
+          "source_pin": "ReturnValue",
+          "target_pin": "Condition",
+          "target_seen_in_source_block": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "graph": "FollowValidatedRoute",
+      "new_nodes": {
+        "CartWaypointAllowed": "K2Node_CallFunction_0",
+        "CartWaypointBranch": "K2Node_IfThenElse_8",
+        "RejectCartRoute": "K2Node_CallFunction_2"
+      },
+      "connections": [
+        {
+          "from": "K2Node_IfThenElse_1",
+          "to": "K2Node_IfThenElse_8",
+          "source_pin": "then",
+          "target_pin": "execute",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_Self_0",
+          "to": "K2Node_CallFunction_0",
+          "source_pin": "self",
+          "target_pin": "Ghost",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallArrayFunction_1",
+          "to": "K2Node_CallFunction_0",
+          "source_pin": "Item",
+          "target_pin": "EndFeet",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_CallFunction_0",
+          "to": "K2Node_IfThenElse_8",
+          "source_pin": "ReturnValue",
+          "target_pin": "Condition",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_IfThenElse_8",
+          "to": "K2Node_IfThenElse_2",
+          "source_pin": "then",
+          "target_pin": "execute",
+          "target_seen_in_source_block": true
+        },
+        {
+          "from": "K2Node_IfThenElse_8",
+          "to": "K2Node_CallFunction_2",
+          "source_pin": "else",
+          "target_pin": "execute",
+          "target_seen_in_source_block": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "scope": "BP_StoreGhost only. No map edits, source writes, PIE or build performed during this wiring pass.",
+  "limitations": [
+    "This record validates graph structure and successful compilation/save. Actual chase movement, cart sealing and moving-light recovery require runtime validation."
+  ]
+}

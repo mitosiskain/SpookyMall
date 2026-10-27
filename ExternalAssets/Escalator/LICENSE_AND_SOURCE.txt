@@ -1,0 +1,13 @@
+Concourse Escalator Module
+Source: https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-escalator-mod-e0d69a9c
+Direct original model: https://cdn.3dassets.dev/assets/25360/v1/model.glb
+Source page license: CC0 1.0 Universal (public domain dedication).
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded: 2026-10-10
+Source page reports an AI-authored static model. No animation, rig or collision was supplied.
+Original SHA256: b9bc39fa4516480abaf3d0a55c6713c5ba6896c2ab5798493756a894b7d71889
+Adaptations: corrected opposite incline orientation of source long truss/glass/rail components,
+separated static frame, shortened fixed landings to expose moving approaches, centimeters/pivot normalization, replacement cast steps,
+parallel tread/riser ribs, yellow demarcation and landing threshold strips,
+rounded glass newels and continuous flattened rubber handrail sections.
+Preparation script: ../../Automation/Escalator/prepare_mesh.py

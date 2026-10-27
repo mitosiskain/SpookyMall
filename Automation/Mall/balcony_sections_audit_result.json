@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  [{\"mesh\": \"SM_MallBalconyStraight_400\", \"simple_count\": 0, \"sections\": [{\"index\": 0, \"collision\": true}, {\"index\": 1, \"collision\": true}, {\"index\": 2, \"collision\": true}]}, {\"mesh\": \"SM_MallBalconyModule_400\", \"simple_count\": 0, \"sections\": [{\"index\": 0, \"collision\": true}, {\"index\": 1, \"collision\": true}, {\"index\": 2, \"collision\": true}]}]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

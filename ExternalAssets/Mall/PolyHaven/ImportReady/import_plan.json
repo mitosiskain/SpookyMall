@@ -1,0 +1,523 @@
+{
+  "source": "Poly Haven",
+  "license": "CC0 1.0 Universal",
+  "license_url": "https://polyhaven.com/license",
+  "units": "centimeters",
+  "fbx_import": {
+    "ImportUniformScale": 1,
+    "ConvertScene": true,
+    "ConvertSceneUnit": true,
+    "ForceFrontXAxis": false,
+    "CombineMeshes": true,
+    "ImportMaterials": false,
+    "ImportTextures": false,
+    "AutoGenerateCollision": false,
+    "NormalImportMethod": "ImportNormals"
+  },
+  "meshes": [
+    {
+      "asset_id": "pachira_aquatica_01",
+      "mesh_name": "SM_PachiraA",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_PachiraA.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -30.913972854614258,
+          -37.03416442871094,
+          0.0
+        ],
+        [
+          43.47683334350586,
+          27.617713928222656,
+          130.1509246826172
+        ]
+      ],
+      "dimensions_cm": [
+        74.39080619812012,
+        64.6518783569336,
+        130.1509246826172
+      ],
+      "triangles": 23167,
+      "material_slots": [
+        "pachira_aquatica_01_bark",
+        "pachira_aquatica_01_leaves"
+      ],
+      "uv_channels": [
+        "UVMap"
+      ],
+      "sha256": "8431a999eda42140d029c099889227dce9394855f5713ae98e81b5cfa1afbce4",
+      "status": "prepared_roundtrip_verified"
+    },
+    {
+      "asset_id": "pachira_aquatica_01",
+      "mesh_name": "SM_PachiraB",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_PachiraB.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -23.74652671813965,
+          -39.16022491455078,
+          0.0
+        ],
+        [
+          26.567995071411133,
+          21.575468063354492,
+          73.50473022460938
+        ]
+      ],
+      "dimensions_cm": [
+        50.31452178955078,
+        60.73569297790527,
+        73.50473022460938
+      ],
+      "triangles": 5091,
+      "material_slots": [
+        "pachira_aquatica_01_bark",
+        "pachira_aquatica_01_leaves"
+      ],
+      "uv_channels": [
+        "UVMap"
+      ],
+      "sha256": "7cc0b2861d59443767994f11704fcb3982cd37515b52d47c8dd2b157e923e8d5",
+      "status": "prepared_roundtrip_verified"
+    },
+    {
+      "asset_id": "pachira_aquatica_01",
+      "mesh_name": "SM_PachiraC",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_PachiraC.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -35.7650146484375,
+          -36.62938690185547,
+          0.0
+        ],
+        [
+          61.763668060302734,
+          55.738914489746094,
+          114.90381622314453
+        ]
+      ],
+      "dimensions_cm": [
+        97.52868270874023,
+        92.36830139160156,
+        114.90381622314453
+      ],
+      "triangles": 20551,
+      "material_slots": [
+        "pachira_aquatica_01_bark",
+        "pachira_aquatica_01_leaves"
+      ],
+      "uv_channels": [
+        "UVMap"
+      ],
+      "sha256": "0728459d8f97b911184ddd9f6c495f5aeb22cbbcf3a29fdc5fb6ad4d3ae15284",
+      "status": "prepared_roundtrip_verified"
+    },
+    {
+      "asset_id": "pachira_aquatica_01",
+      "mesh_name": "SM_PachiraD",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_PachiraD.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -49.45785903930664,
+          -40.60929870605469,
+          0.0
+        ],
+        [
+          55.98816680908203,
+          59.094905853271484,
+          190.2007598876953
+        ]
+      ],
+      "dimensions_cm": [
+        105.44602584838867,
+        99.70420455932617,
+        190.2007598876953
+      ],
+      "triangles": 28105,
+      "material_slots": [
+        "pachira_aquatica_01_bark",
+        "pachira_aquatica_01_leaves"
+      ],
+      "uv_channels": [
+        "UVMap"
+      ],
+      "sha256": "63cb5bc7ca357902eb1e8518c5e6ac43be503bc3efd4ce02a5f8b112bf98e71e",
+      "status": "prepared_roundtrip_verified"
+    },
+    {
+      "asset_id": "potted_plant_01",
+      "mesh_name": "SM_PottedPlant01",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_PottedPlant01.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -33.880062103271484,
+          -27.096769332885742,
+          0.0
+        ],
+        [
+          25.01178741455078,
+          36.56440734863281,
+          135.077880859375
+        ]
+      ],
+      "dimensions_cm": [
+        58.891849517822266,
+        63.661176681518555,
+        135.077880859375
+      ],
+      "triangles": 47682,
+      "material_slots": [
+        "potted_plant_01_pot",
+        "potted_plant_01_leaves"
+      ],
+      "uv_channels": [
+        "UVMap"
+      ],
+      "sha256": "45a994b99c862e8fda637808b929c86a9404014d3fac49e51df010c1856c4a94",
+      "status": "prepared_roundtrip_verified"
+    },
+    {
+      "asset_id": "modular_street_seating",
+      "mesh_name": "SM_MallBench01",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_MallBench01.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -122.60953521728516,
+          -33.51969909667969,
+          0.0
+        ],
+        [
+          122.60954284667969,
+          33.51969909667969,
+          86.69141387939453
+        ]
+      ],
+      "dimensions_cm": [
+        245.21907806396484,
+        67.03939819335938,
+        86.69141387939453
+      ],
+      "triangles": 12500,
+      "material_slots": [
+        "modular_street_seating_armrests",
+        "modular_street_seating_supports",
+        "modular_street_seating_timber"
+      ],
+      "uv_channels": [
+        "UVMap",
+        "uv_map"
+      ],
+      "sha256": "52c0c32b3970be796b302f87bc86ec4248e149df18bac75682b6e50f870611f5",
+      "status": "prepared_roundtrip_verified"
+    },
+    {
+      "asset_id": "steel_frame_shelves_01",
+      "mesh_name": "SM_RetailShelves01",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_RetailShelves01.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -54.87074279785156,
+          -25.105880737304688,
+          0.0
+        ],
+        [
+          54.87074279785156,
+          25.105880737304688,
+          214.05010986328125
+        ]
+      ],
+      "dimensions_cm": [
+        109.74148559570312,
+        50.211761474609375,
+        214.05010986328125
+      ],
+      "triangles": 4348,
+      "material_slots": [
+        "steel_frame_shelves_01"
+      ],
+      "uv_channels": [
+        "UVMap"
+      ],
+      "sha256": "3429af1b0cbcc7b691c1d6eac702016558e2d5eabba86078355ac385f5abd345",
+      "status": "prepared_roundtrip_verified"
+    },
+    {
+      "asset_id": "decorative_book_set_01",
+      "mesh_name": "SM_BookHardcover02",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_BookHardcover02.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -2.094186544418335,
+          -7.6933183670043945,
+          0.0
+        ],
+        [
+          2.094186544418335,
+          7.6933183670043945,
+          22.757787704467773
+        ]
+      ],
+      "dimensions_cm": [
+        4.18837308883667,
+        15.386636734008789,
+        22.757787704467773
+      ],
+      "triangles": 1592,
+      "material_slots": [
+        "book_hardcover_01_cover02"
+      ],
+      "uv_channels": [
+        "standard_uv",
+        "cover"
+      ],
+      "sha256": "7ffefa42930ac49a82620d3bc1853295288f436cc1a8d228ec3f84d7ef1ee166",
+      "status": "prepared_roundtrip_verified"
+    },
+    {
+      "asset_id": "decorative_book_set_01",
+      "mesh_name": "SM_BookSoftcover04",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\ImportReady\\SM_BookSoftcover04.fbx",
+      "units": "centimeters",
+      "pivot": "ground at local Z0",
+      "bounds_cm": [
+        [
+          -1.8701404333114624,
+          -7.469045162200928,
+          0.0
+        ],
+        [
+          1.8701411485671997,
+          7.469045162200928,
+          22.446577072143555
+        ]
+      ],
+      "dimensions_cm": [
+        3.740281581878662,
+        14.938090324401855,
+        22.446577072143555
+      ],
+      "triangles": 1312,
+      "material_slots": [
+        "book_softcover_01_cover04"
+      ],
+      "uv_channels": [
+        "cover",
+        "standard_uv"
+      ],
+      "sha256": "fd6c3f0750272a844a230be6c1724713b1a0f06375f97608f6c182eb52bb5b71",
+      "status": "prepared_roundtrip_verified"
+    }
+  ],
+  "materials": {
+    "pachira_aquatica_01_bark": {
+      "asset_id": "pachira_aquatica_01",
+      "material_name": "pachira_aquatica_01_bark",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_bark_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_bark_rough_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_bark_nor_dx_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_bark_ao_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": false,
+      "blend_mode": "Opaque",
+      "shading_model": "DefaultLit",
+      "metallic_constant": 0.0
+    },
+    "pachira_aquatica_01_leaves": {
+      "asset_id": "pachira_aquatica_01",
+      "material_name": "pachira_aquatica_01_leaves",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_leaves_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_leaves_rough_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_leaves_nor_dx_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_leaves_ao_2k.png",
+        "opacity_mask": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\pachira_aquatica_01\\textures\\pachira_aquatica_01_leaves_alpha_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": true,
+      "blend_mode": "Masked",
+      "shading_model": "TwoSidedFoliage",
+      "metallic_constant": 0.0
+    },
+    "potted_plant_01_leaves": {
+      "asset_id": "potted_plant_01",
+      "material_name": "potted_plant_01_leaves",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_leaves_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_leaves_rough_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_leaves_nor_gl_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_leaves_ao_2k.png",
+        "opacity_mask": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_leaves_alpha_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": true,
+      "two_sided": true,
+      "blend_mode": "Masked",
+      "shading_model": "TwoSidedFoliage",
+      "metallic_constant": 0.0
+    },
+    "potted_plant_01_pot": {
+      "asset_id": "potted_plant_01",
+      "material_name": "potted_plant_01_pot",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_pot_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_pot_rough_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_pot_nor_dx_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\potted_plant_01\\textures\\potted_plant_01_pot_ao_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": false,
+      "blend_mode": "Opaque",
+      "shading_model": "DefaultLit",
+      "metallic_constant": 0.0
+    },
+    "modular_street_seating_armrests": {
+      "asset_id": "modular_street_seating",
+      "material_name": "modular_street_seating_armrests",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_armrests_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_armrests_rough_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_armrests_nor_dx_2k.png",
+        "metallic": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_armrests_metal_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": false,
+      "blend_mode": "Opaque",
+      "shading_model": "DefaultLit",
+      "metallic_constant": 0.0
+    },
+    "modular_street_seating_supports": {
+      "asset_id": "modular_street_seating",
+      "material_name": "modular_street_seating_supports",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_supports_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_supports_rough_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_supports_nor_dx_2k.png",
+        "metallic": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_supports_metal_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": false,
+      "blend_mode": "Opaque",
+      "shading_model": "DefaultLit",
+      "metallic_constant": 0.0
+    },
+    "modular_street_seating_timber": {
+      "asset_id": "modular_street_seating",
+      "material_name": "modular_street_seating_timber",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_timber_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_timber_rough_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\modular_street_seating\\textures\\modular_street_seating_timber_nor_dx_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": false,
+      "blend_mode": "Opaque",
+      "shading_model": "DefaultLit",
+      "metallic_constant": 0.0
+    },
+    "steel_frame_shelves_01": {
+      "asset_id": "steel_frame_shelves_01",
+      "material_name": "steel_frame_shelves_01",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\steel_frame_shelves_01\\textures\\steel_frame_shelves_01_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\steel_frame_shelves_01\\textures\\steel_frame_shelves_01_rough_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\steel_frame_shelves_01\\textures\\steel_frame_shelves_01_nor_dx_2k.png",
+        "metallic": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\steel_frame_shelves_01\\textures\\steel_frame_shelves_01_metal_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\steel_frame_shelves_01\\textures\\steel_frame_shelves_01_ao_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": false,
+      "blend_mode": "Opaque",
+      "shading_model": "DefaultLit",
+      "metallic_constant": 0.0
+    },
+    "book_hardcover_01_cover02": {
+      "asset_id": "decorative_book_set_01",
+      "material_name": "book_hardcover_01_cover02",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_hardcover_01_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_hardcover_01_roughness_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_hardcover_01_nor_dx_2k.png",
+        "metallic": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_hardcover_01_metallic_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_hardcover_01_ao_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": false,
+      "blend_mode": "Opaque",
+      "shading_model": "DefaultLit",
+      "metallic_constant": 0.0,
+      "cover_texture": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_hardcover_01_cover02_2k.png",
+      "page_mask_texture": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_hardcover_01_mask02_2k.png",
+      "base_color_expression": "lerp(Cover(TexCoord1), BaseColor(TexCoord0), PageMask(TexCoord0).r)",
+      "uv_channels": {
+        "0": "standard_uv",
+        "1": "cover"
+      }
+    },
+    "book_softcover_01_cover04": {
+      "asset_id": "decorative_book_set_01",
+      "material_name": "book_softcover_01_cover04",
+      "textures": {
+        "base_color": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_softcover_01_diff_2k.png",
+        "roughness": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_softcover_01_roughness_2k.png",
+        "normal": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_softcover_01_nor_dx_2k.png",
+        "metallic": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_softcover_01_metallic_2k.png",
+        "ambient_occlusion": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_softcover_01_ao_2k.png"
+      },
+      "base_color_srgb": true,
+      "data_maps_srgb": false,
+      "normal_flip_green": false,
+      "two_sided": false,
+      "blend_mode": "Opaque",
+      "shading_model": "DefaultLit",
+      "metallic_constant": 0.0,
+      "cover_texture": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_softcover_01_cover04_2k.png",
+      "page_mask_texture": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\PolyHaven\\decorative_book_set_01\\textures\\book_softcover_01_mask02_2k.png",
+      "base_color_expression": "lerp(Cover(TexCoord1), BaseColor(TexCoord0), PageMask(TexCoord0).r)",
+      "uv_channels": {
+        "0": "standard_uv",
+        "1": "cover"
+      }
+    }
+  },
+  "notes": [
+    "Each FBX contains a single combined rooted mesh; assign material slots using this plan, not automatic FBX materials.",
+    "Leaf materials must be masked and two-sided. PottedPlant leaves use a GL normal; set FlipGreenChannel=true for that texture only.",
+    "Books retain two UV channels. A clean cover uses Cover UV1 and page/base maps UV0, blended with Mask02 (white is pages).",
+    "Plants use no blocking collision; furniture needs authored simple collision or separate blocking volumes.",
+    "Original BLEND files are unmodified. Procedural subdivisions/displacement removed; dense potted soil pebbles decimated to15%."
+  ]
+}

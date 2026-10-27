@@ -1,0 +1,47 @@
+{
+ "slug": "work-lamp",
+ "triangles": 10156,
+ "texture_px": 2048,
+ "triangles_light": null,
+ "texture_px_light": null,
+ "files": {
+  "glb": {
+   "name": "work-lamp.glb",
+   "bytes": 1132304
+  },
+  "blend": {
+   "name": "work-lamp.blend",
+   "bytes": 926195
+  },
+  "fbx": {
+   "name": "work-lamp.fbx",
+   "bytes": 2064748
+  },
+  "obj": {
+   "name": "work-lamp-obj.zip",
+   "bytes": 1195311
+  },
+  "usdz": {
+   "name": "work-lamp.usdz",
+   "bytes": 1912055
+  }
+ },
+ "extras": {
+  "license": "CC0-1.0",
+  "source": "grab3d.com",
+  "dimensions_m": "0.779 x 0.682 x 1.332",
+  "triangles": 10156,
+  "textures": "PBR 2048px: base color, roughness, metallic, normal (baked)",
+  "generator": "Created by grab3d",
+  "created": "2026-09-26",
+  "real_size": "LED work light on a tripod stand, approx. 78 x 68 x 134 cm (column partly extended), head 30 x 10 x 24 cm",
+  "notes": "dark steel tripod with rubber feet, spreader struts and telescopic column with clamp knob; U-yoke with two star knobs; yellow LED flood light head with dark front bezel, glowing light panel behind a dark protective grille 'work-lamp_lens_panel' (emissive material, not baked, parented to the head), cooling fins and carry handle: 'work-lamp_head' is a separate object with its origin on the tilt axis through the star knobs (rotate around local X; default pose tilted 10 degrees down); cable with plug runs down the column to the floor; front (light) = -Y; no text, no logo",
+  "set": "Cozy Tools & Workshop Kit"
+ },
+ "origin": {
+  "method": "procedural",
+  "detail": "Built procedurally with Blender scripts. The scripts were written with the help of an AI coding assistant. No generative AI model produced the geometry or textures directly.",
+  "ai_content": false,
+  "ai_assisted_code": true
+ }
+}

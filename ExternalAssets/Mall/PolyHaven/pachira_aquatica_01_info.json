@@ -1,0 +1,57 @@
+{
+  "date_published": 1653004800,
+  "name": "Pachira Aquatica 01",
+  "type": 2,
+  "staging": null,
+  "authors": {
+    "Rob Tuytel": "scanning",
+    "Rico Cilliers": "modeling"
+  },
+  "categories": [
+    "plants",
+    "nature",
+    "collection: smugglers_cove"
+  ],
+  "tags": [
+    "nature",
+    "plant",
+    "shrub",
+    "leaves",
+    "forest",
+    "jungle",
+    "outdoor",
+    "bush",
+    "green",
+    "leaf",
+    "botany"
+  ],
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "polycount": 76914,
+  "texel_density": 12161.795358983074,
+  "dimensions": [
+    6869.021415710449,
+    997.0420598983765,
+    1904.0735084563494
+  ],
+  "files_hash": "26f491dc4d71f09717217df3cdec865c546926f2",
+  "description": "Free 8K Pachira Aquatica 01 - realistic tropical shrub models with braided trunks, glossy green leaves, varied sizes and high-detail bark and foliage.",
+  "category_id": "5a6111fb-71be-5686-a0cc-7e96df75aaf7",
+  "category": "Nature/Plants/Tropical Plants",
+  "collections": [
+    "smugglers_cove"
+  ],
+  "attributes": {
+    "condition": [
+      "clean"
+    ],
+    "material": [
+      "wood"
+    ]
+  },
+  "img_version": "cf3fa92c",
+  "download_count": 18382,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/pachira_aquatica_01.png?width=256&height=256&format=webp&v=cf3fa92c"
+}

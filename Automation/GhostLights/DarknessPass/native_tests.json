@@ -1,0 +1,62 @@
+{
+  "execution": "Full native DLL build; fresh command-line automation without Live Coding",
+  "build": "Saved/Logs/GhostDarknessBuild.log",
+  "report": "Saved/Automation/GhostDarknessFinal/index.json",
+  "log": "Saved/Logs/GhostDarknessFinalTests.log",
+  "succeeded": 8,
+  "failed": 0,
+  "not_run": 0,
+  "warnings": 0,
+  "errors": 0,
+  "duration_seconds": 26.537710189819336,
+  "tests": [
+    {
+      "test": "Mall.Ghost.AutomaticHuntCycleNetwork",
+      "result": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.BookInteraction",
+      "result": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.PhysicalSoundNetwork",
+      "result": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.SpatialAudio",
+      "result": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.SpiritBoxNetwork",
+      "result": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.StateAndDisturbance",
+      "result": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.StoreLightNetwork",
+      "result": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Voice.NetworkTransport",
+      "result": "Success",
+      "errors": 0,
+      "warnings": 0
+    }
+  ]
+}

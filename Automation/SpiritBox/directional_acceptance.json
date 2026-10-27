@@ -1,0 +1,62 @@
+{
+  "feature": "Separate spirit-box question bindings and ghost-position replies",
+  "status": "built_tested_and_saved",
+  "build": "Saved/Logs/SpiritBoxDirectionalBuild.log",
+  "report": "Saved/Automation/SpiritBoxDirectional/index.json",
+  "native_results": {
+    "succeeded": 3,
+    "failed": 0,
+    "warnings": 0,
+    "skipped": 0
+  },
+  "blueprint": "/Game/Environment/Mall/Blueprints/BP_MallSpiritBox",
+  "placeholder_sound": "/Game/Audio/Ghost/SpiritBox/SW_SpiritBox_Placeholder",
+  "audio_origin": "Server-selected ghost mouth/view position; follows ghost during playback, independent of radio.",
+  "placeholder_note": "Three sound slots intentionally share the same recording; prototype identity/age subtitles differ until replaced.",
+  "environmental_acoustics": "Map-specific reverb, reflections and occlusion deferred.",
+  "manual_test": "Microphone and audible directional perception remain user tests.",
+  "level_configuration": {
+    "record": "Automation/SpiritBox/directional_level_configuration.json",
+    "actor_count": 736,
+    "other_actor_poses_preserved": 735,
+    "saved": true,
+    "class": "/Game/Environment/Mall/Blueprints/BP_MallSpiritBox.BP_MallSpiritBox_C",
+    "radio_pose": [
+      4234.0,
+      -190.0,
+      70.3,
+      0.0,
+      90.0,
+      -0.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "live_pie_check": {
+    "record": "Automation/SpiritBox/directional_pie_validation.json",
+    "pickup_and_power_keys": "F and R verified",
+    "question": "who_are_you",
+    "subtitle": "I am Evelyn.",
+    "source_location_cm": [
+      4950,
+      0,
+      156.150002
+    ],
+    "ghost_location_cm": [
+      4950,
+      0,
+      92.15
+    ],
+    "source_independent_of_carried_radio": true,
+    "microphone_used": false,
+    "audible_perception_test": "Pending user headphones test"
+  },
+  "final_editor_state": {
+    "pie_active": false,
+    "radio_powered": false,
+    "response_count": 0,
+    "dirty_maps": 0,
+    "dirty_content": 0
+  }
+}

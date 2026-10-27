@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "python_agent",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"SUCCESS \\u2014 all 11 demo actors moved to their exact absolute Y targets, and `/Game/ThirdPerson/Lvl_ThirdPerson` was saved.\\n\\n- Verified unchanged X/Z, rotation, scale, component geometry, mobility, collision, materials and tags.\\n- All non-target actor transforms remained unchanged, including the evidence cube.\\n- No PIE, actor creation/deletion or asset edits.\\n- Idempotent: actors already at their targets are skipped.\\n- Undo registered through `actor.modify()` and `root.modify()` inside one scoped transaction. Used root `relative_location` editor-property updates instead of `set_actor_location`, per undo-safe editor guidance.\\n\\nDirty-package inventory:\\n```text\\ndirty_maps=[]\\ndirty_content=[]\\n```\\n\\nOriginal script ID was unavailable in thread state; the replacement script was repaired and executed successfully.\\n\\n**Script ID:** `CvOJK8fLA0xwyzixdB9ea`  \\n**Undo transaction:** `2C8F13754A8FF3617E87D6A724CB5ABB`\"\n  }\n]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

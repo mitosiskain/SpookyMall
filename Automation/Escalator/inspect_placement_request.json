@@ -1,0 +1,7 @@
+{
+  "tool": "execute_unreal_python_readonly",
+  "arguments": {
+    "query_text": "Inspect floor height and actor bounds in the open area beside the existing third-person test playground for an escalator pair; read-only.",
+    "python_script": "import unreal, json\nworld = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()\nresults=[]\nfor x,y in [(1100,800),(1100,1050),(1900,800),(2400,925),(1100,1400),(0,800)]:\n    hit = unreal.SystemLibrary.line_trace_single(world, unreal.Vector(x,y,2000), unreal.Vector(x,y,-1000), unreal.TraceTypeQuery.ECC_VISIBILITY, True, [], unreal.DrawDebugTrace.NONE, True)\n    b = hit.to_tuple()\n    if b[0]:\n        results.append({'xy':[x,y], 'z':b[4].z, 'actor':b[9].get_actor_label() if b[9] else None})\n    else: results.append({'xy':[x,y], 'no_hit':True})\nprint(json.dumps(results))"
+  }
+}

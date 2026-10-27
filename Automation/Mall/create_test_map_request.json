@@ -1,0 +1,1 @@
+{"calls":[{"tool":"create_easy_level_for_verification","arguments":{"level_name":"MallAtrium_Test","include_player_start":true}},{"tool":"fetch_blueprint_best_practices","arguments":{}},{"tool":"fetch_material_best_practices","arguments":{"category":"pbr"}},{"tool":"create_edit_material","arguments":{"operation":"get_templates"}}]}

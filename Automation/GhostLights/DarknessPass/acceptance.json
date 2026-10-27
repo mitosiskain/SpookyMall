@@ -1,0 +1,72 @@
+{
+  "feature": "Shadowed store lights with 10% warning dips and complete chase lamp outages",
+  "status": "built_tested_saved",
+  "source_revision_before_pass": "3ca2a03",
+  "settings": {
+    "warning_minimum_brightness": 0.1,
+    "chase_minimum_brightness": 0,
+    "flicker_rate": 2.3,
+    "endpoint_hold_fraction": 0.15
+  },
+  "shadow_light_count": 14,
+  "shadow_lights": [
+    "Lighting_F0_Prop_03",
+    "Lighting_F0_Prop_05",
+    "Lighting_F0_Prop_06",
+    "Lighting_F0_Prop_08",
+    "Lighting_F0_Prop_11",
+    "Lighting_F1_Prop_14",
+    "Lighting_F1_Prop_16",
+    "Lighting_F1_Prop_17",
+    "Lighting_F1_Prop_19",
+    "Lighting_F1_Prop_22",
+    "East_F0_02_Prop_21",
+    "East_F0_02_Prop_22",
+    "East_F0_02_Prop_23",
+    "East_F0_02_Prop_24"
+  ],
+  "shadow_selection": "Point-light attenuation spheres intersecting the test-store volume X3950..5950,Y-816.6667..816.6667,Z0..800cm",
+  "geometry": "Existing walls, floors, ceiling and shelving already cast shadows.",
+  "lighting_scope": "Only five opted-in store lamps flicker. The other nine lights gain shadows and retain their original intensity.",
+  "verification": {
+    "live_coding_compile": "Succeeded",
+    "live_coding_patch": "Succeeded",
+    "suite": "native_tests.json",
+    "passed": 8,
+    "failed": 0,
+    "two_player_pie": "Both peers reached exact warning0.1 and chase0.0; all five lamp intensities restored exactly during cooldown.",
+    "timeline_files": [
+      "live_peer0.json",
+      "live_peer1.json"
+    ],
+    "summary": "live_summary.json",
+    "default_cycle_timings": true,
+    "mode_commands": false,
+    "full_native_build": "Succeeded",
+    "build_log": "Saved/Logs/GhostDarknessBuild.log",
+    "report": "Saved/Automation/GhostDarknessFinal/index.json",
+    "warnings": 0,
+    "errors": 0,
+    "persistent_restart_confirmed": true,
+    "restart_configuration": "restart_verification.json"
+  },
+  "captures": {
+    "baseline": "baseline_t34.83s_f1007159.png",
+    "chase_bright_interval": "chase_peak_t53.79s_f1007609.png",
+    "cooldown": "cooldown_t64.81s_f1007870.png",
+    "raw_readbacks": "live_readbacks.json",
+    "note": "Raw requested screenshot labels do not indicate phase. The requested warning capture actually occurred during Chasing at53.79s and was renamed chase_peak; three redundant requested chase captures occurred during Cooldown and were removed. Warning0.1 and outage0.0 acceptance uses the native numeric timelines."
+  },
+  "limits": [
+    "0% means the five selected lamps are off. Skylight and light entering through openings can still illuminate the scene.",
+    "Flicker timings alternate held dim and variable bright peaks; full cycle rate is about1.15Hz."
+  ],
+  "final_editor": {
+    "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test.Lvl_MallOval_Test",
+    "actor_count": 736,
+    "pie_active": false,
+    "dirty_maps": 0,
+    "dirty_content": 0
+  },
+  "related_asset_maintenance": "BP_ThirdPersonCharacter was recompiled and saved after Live Coding marked it dirty; this pass performed no graph edits on that Blueprint."
+}

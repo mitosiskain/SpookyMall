@@ -1,0 +1,54 @@
+{
+  "feature": "Automatic invisible activity, harmless warning, bounded hunt and inter-hunt cooldown",
+  "status": "built_tested_and_saved",
+  "build": "Saved/Logs/GhostHuntCycleBuild.log",
+  "native_report": "Saved/Automation/GhostHuntCycle/index.json",
+  "native_results": {"succeeded": 7, "failed": 0, "skipped": 0, "warnings": 0, "errors": 0},
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "blueprint": "/Game/Environment/Mall/Blueprints/BP_StoreGhost",
+  "component": "MallGhostInteraction",
+  "defaults": {
+    "automatic_hunts": true,
+    "initial_activity_seconds": [30, 45],
+    "visible_harmless_warning_seconds": 3,
+    "maximum_hunt_seconds": 20,
+    "cooldown_seconds": [40, 60]
+  },
+  "rules": [
+    "Initial grace starts on full entry by a living possessed player; empty stores do not consume it",
+    "Warning is visible but cannot chase or catch",
+    "Hunting ends on deadline, first catch, or loss of eligible players",
+    "Hunt cooldown uses a separate clock from the short Blueprint catch/voice recovery",
+    "Harmless invisible interactions remain available during hunt cooldown",
+    "Existing store confinement and chase path validation remain in the Blueprint",
+    "The server owns all cycle transitions; phase, deadline, count and visibility replicate"
+  ],
+  "live_pie": {
+    "timeline": "Automation/GhostHuntCycle/live_timeline.json",
+    "property_samples": "Automation/GhostHuntCycle/live_samples.json",
+    "used_default_timings": true,
+    "mode_commands_used": false,
+    "cycle_timing_overrides_used": false,
+    "automatic_hunts_observed": 2,
+    "first_warning_observed_at_seconds": 46.58,
+    "first_hunt_observed_at_seconds": 49.71,
+    "catch_ended_hunt_at_seconds": 57.24,
+    "cooldown_deadline_seconds": 104.77,
+    "second_warning_observed_at_seconds": 104.91,
+    "second_hunt_observed_at_seconds": 108.21,
+    "harmless_disturbances_and_sounds_during_cooldown": true,
+    "microphone_used": false
+  },
+  "final_editor_state": {
+    "actor_count": 736,
+    "interaction_components_per_ghost": 1,
+    "sound_components_per_ghost": 1,
+    "automatic_hunts": true,
+    "cycle_phase": "Activity",
+    "hunt_count": 0,
+    "pie_active": false,
+    "dirty_maps": 0,
+    "dirty_content": 0
+  },
+  "manual_review": "Gameplay pacing and warning clarity remain user PIE feedback items"
+}

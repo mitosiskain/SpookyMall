@@ -1,0 +1,3716 @@
+{
+  "status": "prepared_not_executed",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "source_file": "C:\\unreal\\uprj\\MyProject2\\Saved\\Aura\\LDA\\District\\MallOvalTest\\connectivity_waypoints.json",
+  "source_sha256": "84ba9989f7191ba50fa86995a7b60a804bb19cdf76db2508490f7016cf38744a",
+  "confirmation": "Generator invoked with --confirmed-final",
+  "recorded_max_walk_speed_cm_s": 200,
+  "selected_routes": [
+    "OuterGalleryLoop_F1",
+    "Ring_F1",
+    "WestBridge_F1",
+    "EastBridge_F1",
+    "RearBridge_F1",
+    "FrontBridge_F1",
+    "OvalThrough_F1_-650",
+    "OvalThrough_F1_650"
+  ],
+  "excluded_routes": [
+    {
+      "route": "OuterGalleryLoop_F0",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "RearGallery_F0",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "SideBranchWest_F0",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "SideBranchEast_F0",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "RearGallery_F1",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "SideBranchWest_F1",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "SideBranchEast_F1",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "FountainBypass_F0",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "UpLandingClear_F1",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "Escalator_Up",
+      "reason": "Escalator transport is checked separately",
+      "explicitly_requested": false
+    },
+    {
+      "route": "DownLandingClear_F1",
+      "reason": "Not selected for this preparation",
+      "explicitly_requested": false
+    },
+    {
+      "route": "Escalator_Down",
+      "reason": "Escalator transport is checked separately",
+      "explicitly_requested": false
+    }
+  ],
+  "total_segments": 60,
+  "total_batches": 13,
+  "execution_instruction": "Execute manifest batches in order. Each route gets one initial placement. Continue split batches in the same PIE session at the actual previous endpoint, without any intervening teleport or movement. Escalators require separate tests.",
+  "limits": {
+    "maximum_actions": 50,
+    "maximum_summed_wait_seconds": 60.0
+  },
+  "batches": [
+    {
+      "batch_index_1_based": 1,
+      "request_file": "route_checks_001_OuterGalleryLoop_F1_part_001_request.json",
+      "route": "OuterGalleryLoop_F1",
+      "selected_route_index_0_based": 0,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        -3600.0,
+        -3100.0,
+        942.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 5,
+      "summed_wait_seconds": 36.3,
+      "segments": [
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -3600.0,
+            -3100.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            3600.0,
+            -3100.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 7200.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 36.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 36.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              -3600.0,
+              -3100.0,
+              942.15
+            ],
+            "batch_index_1_based": 1,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 2,
+      "request_file": "route_checks_002_OuterGalleryLoop_F1_part_002_request.json",
+      "route": "OuterGalleryLoop_F1",
+      "selected_route_index_0_based": 0,
+      "route_part_1_based": 2,
+      "requires_continuation_from_batch_1_based": 1,
+      "initial_placement_step_index_0_based": null,
+      "initial_placement_capsule_xyz_cm": null,
+      "continuation_instruction": "Continue at the previous batch endpoint in the same PIE session; do not teleport",
+      "action_count": 4,
+      "summed_wait_seconds": 33.95,
+      "segments": [
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            3600.0,
+            -3100.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            3600.0,
+            3630.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 6730.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 33.65,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 33.95,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 1,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 3,
+      "request_file": "route_checks_003_OuterGalleryLoop_F1_part_003_request.json",
+      "route": "OuterGalleryLoop_F1",
+      "selected_route_index_0_based": 0,
+      "route_part_1_based": 3,
+      "requires_continuation_from_batch_1_based": 2,
+      "initial_placement_step_index_0_based": null,
+      "initial_placement_capsule_xyz_cm": null,
+      "continuation_instruction": "Continue at the previous batch endpoint in the same PIE session; do not teleport",
+      "action_count": 4,
+      "summed_wait_seconds": 36.3,
+      "segments": [
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            3600.0,
+            3630.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -3600.0,
+            3630.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 7200.0,
+          "direction_unit_xy": [
+            -1.0,
+            0.0
+          ],
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 36.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 36.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 2,
+            "step_index_0_based": 3
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 4,
+      "request_file": "route_checks_004_OuterGalleryLoop_F1_part_004_request.json",
+      "route": "OuterGalleryLoop_F1",
+      "selected_route_index_0_based": 0,
+      "route_part_1_based": 4,
+      "requires_continuation_from_batch_1_based": 3,
+      "initial_placement_step_index_0_based": null,
+      "initial_placement_capsule_xyz_cm": null,
+      "continuation_instruction": "Continue at the previous batch endpoint in the same PIE session; do not teleport",
+      "action_count": 4,
+      "summed_wait_seconds": 33.95,
+      "segments": [
+        {
+          "route": "OuterGalleryLoop_F1",
+          "source_route_index_0_based": 4,
+          "segment_index_0_based": 3,
+          "segment_number_1_based": 4,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -3600.0,
+            3630.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -3600.0,
+            -3100.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 6730.0,
+          "direction_unit_xy": [
+            0.0,
+            -1.0
+          ],
+          "yaw_degrees": -90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 33.65,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 33.95,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 3,
+            "step_index_0_based": 3
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 5,
+      "request_file": "route_checks_005_Ring_F1_part_001_request.json",
+      "route": "Ring_F1",
+      "selected_route_index_0_based": 1,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        1875.0,
+        0.0,
+        942.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 49,
+      "summed_wait_seconds": 23.88,
+      "segments": [
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1875.0,
+            0.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1838.9724007560571,
+            287.75822497378914,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 290.0047998694987,
+          "direction_unit_xy": [
+            -0.12423104465910624,
+            0.9922533182322482
+          ],
+          "yaw_degrees": 97.13635175997825,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.450024,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.751,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              1875.0,
+              0.0,
+              942.15
+            ],
+            "batch_index_1_based": 5,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1838.9724007560571,
+            287.75822497378914,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1732.2741234586626,
+            564.4580627385075,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 296.559138448393,
+          "direction_unit_xy": [
+            -0.3597875211522509,
+            0.9330342649780439
+          ],
+          "yaw_degrees": 111.08714754736015,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.482796,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.783,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1732.2741234586626,
+            564.4580627385075,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1559.0055230672724,
+            819.4660937039132,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 308.30359021335545,
+          "direction_unit_xy": [
+            -0.5620064309711188,
+            0.8271328620887367
+          ],
+          "yaw_degrees": 124.1946696944559,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.541518,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.842,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 3,
+          "segment_number_1_based": 4,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1559.0055230672724,
+            819.4660937039132,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1325.8252147247767,
+            1042.9825022501577,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 323.00563631013165,
+          "direction_unit_xy": [
+            -0.7219078620616056,
+            0.6919891897231067
+          ],
+          "yaw_degrees": 136.21222253477637,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.615028,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.916,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 14,
+            "simulate_key_press": 15,
+            "wait_pie_seconds": 16,
+            "get_player_transform": 17
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 12
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 4,
+          "segment_number_1_based": 5,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1325.8252147247767,
+            1042.9825022501577,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1041.6941869117543,
+            1226.4176781462543,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 338.1995043197379,
+          "direction_unit_xy": [
+            -0.8401284572682328,
+            0.5423874770752908
+          ],
+          "yaw_degrees": 147.153686877333,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.690998,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.991,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 18,
+            "simulate_key_press": 19,
+            "wait_pie_seconds": 20,
+            "get_player_transform": 21
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 16
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 5,
+          "segment_number_1_based": 6,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1041.6941869117543,
+            1226.4176781462543,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            717.5314356845435,
+            1362.7223104541479,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 351.6538668517448,
+          "direction_unit_xy": [
+            -0.9218233660540862,
+            0.38761021890130054
+          ],
+          "yaw_degrees": 157.19411826263593,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.758269,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.059,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 22,
+            "simulate_key_press": 23,
+            "wait_pie_seconds": 24,
+            "get_player_transform": 25
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 20
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 6,
+          "segment_number_1_based": 7,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            717.5314356845435,
+            1362.7223104541479,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            365.7943537802406,
+            1446.6582885947648,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 361.6133614967461,
+          "direction_unit_xy": [
+            -0.9726882890843287,
+            0.23211525645291242
+          ],
+          "yaw_degrees": 166.5783622086369,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.808067,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.109,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 26,
+            "simulate_key_press": 27,
+            "wait_pie_seconds": 28,
+            "get_player_transform": 29
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 24
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 7,
+          "segment_number_1_based": 8,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            365.7943537802406,
+            1446.6582885947648,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1.1481063742006437e-13,
+            1475.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 366.89066745132857,
+          "direction_unit_xy": [
+            -0.9970118791009218,
+            0.0772483846539786
+          ],
+          "yaw_degrees": 175.5695798283817,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.834453,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.135,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 30,
+            "simulate_key_press": 31,
+            "wait_pie_seconds": 32,
+            "get_player_transform": 33
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 28
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 8,
+          "segment_number_1_based": 9,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1.1481063742006437e-13,
+            1475.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -365.7943537802404,
+            1446.6582885947648,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 366.89066745132857,
+          "direction_unit_xy": [
+            -0.9970118791009218,
+            -0.0772483846539786
+          ],
+          "yaw_degrees": -175.5695798283817,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.834453,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.135,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 34,
+            "simulate_key_press": 35,
+            "wait_pie_seconds": 36,
+            "get_player_transform": 37
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 32
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 9,
+          "segment_number_1_based": 10,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -365.7943537802404,
+            1446.6582885947648,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -717.5314356845432,
+            1362.7223104541479,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 361.6133614967461,
+          "direction_unit_xy": [
+            -0.9726882890843287,
+            -0.23211525645291242
+          ],
+          "yaw_degrees": -166.5783622086369,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.808067,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.109,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 38,
+            "simulate_key_press": 39,
+            "wait_pie_seconds": 40,
+            "get_player_transform": 41
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 36
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 10,
+          "segment_number_1_based": 11,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -717.5314356845432,
+            1362.7223104541479,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1041.6941869117536,
+            1226.4176781462543,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 351.65386685174434,
+          "direction_unit_xy": [
+            -0.9218233660540861,
+            -0.38761021890130104
+          ],
+          "yaw_degrees": -157.19411826263587,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.758269,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.059,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 41,
+            "simulate_key_press": 42,
+            "wait_pie_seconds": 43,
+            "get_player_transform": 44
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 42,
+            "simulate_key_press": 43,
+            "wait_pie_seconds": 44,
+            "get_player_transform": 45
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 40
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 11,
+          "segment_number_1_based": 12,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1041.6941869117536,
+            1226.4176781462543,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1325.8252147247765,
+            1042.9825022501577,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 338.1995043197383,
+          "direction_unit_xy": [
+            -0.8401284572682332,
+            -0.5423874770752901
+          ],
+          "yaw_degrees": -147.15368687733306,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.690998,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.991,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 45,
+            "simulate_key_press": 46,
+            "wait_pie_seconds": 47,
+            "get_player_transform": 48
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 46,
+            "simulate_key_press": 47,
+            "wait_pie_seconds": 48,
+            "get_player_transform": 49
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 44
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 6,
+      "request_file": "route_checks_006_Ring_F1_part_002_request.json",
+      "route": "Ring_F1",
+      "selected_route_index_0_based": 1,
+      "route_part_1_based": 2,
+      "requires_continuation_from_batch_1_based": 5,
+      "initial_placement_step_index_0_based": null,
+      "initial_placement_capsule_xyz_cm": null,
+      "continuation_instruction": "Continue at the previous batch endpoint in the same PIE session; do not teleport",
+      "action_count": 48,
+      "summed_wait_seconds": 22.878,
+      "segments": [
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 12,
+          "segment_number_1_based": 13,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1325.8252147247765,
+            1042.9825022501577,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1559.0055230672726,
+            819.4660937039132,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 323.005636310132,
+          "direction_unit_xy": [
+            -0.7219078620616063,
+            -0.6919891897231061
+          ],
+          "yaw_degrees": -136.21222253477643,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.615028,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.916,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 5,
+            "step_index_0_based": 48
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 13,
+          "segment_number_1_based": 14,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1559.0055230672726,
+            819.4660937039132,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1732.2741234586626,
+            564.4580627385076,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 308.3035902133552,
+          "direction_unit_xy": [
+            -0.5620064309711185,
+            -0.8271328620887369
+          ],
+          "yaw_degrees": -124.19466969445587,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.541518,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.842,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 3
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 14,
+          "segment_number_1_based": 15,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1732.2741234586626,
+            564.4580627385076,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1838.9724007560571,
+            287.7582249737897,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 296.55913844839256,
+          "direction_unit_xy": [
+            -0.35978752115225143,
+            -0.9330342649780438
+          ],
+          "yaw_degrees": -111.08714754736017,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.482796,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.783,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 7
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 15,
+          "segment_number_1_based": 16,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1838.9724007560571,
+            287.7582249737897,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1875.0,
+            1.806354028742346e-13,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 290.0047998694991,
+          "direction_unit_xy": [
+            -0.12423104465910606,
+            -0.9922533182322482
+          ],
+          "yaw_degrees": -97.13635175997824,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.450024,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.751,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 11
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 16,
+          "segment_number_1_based": 17,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1875.0,
+            1.806354028742346e-13,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1838.9724007560571,
+            -287.7582249737893,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 290.00479986949904,
+          "direction_unit_xy": [
+            0.12423104465910609,
+            -0.9922533182322482
+          ],
+          "yaw_degrees": -82.86364824002176,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.450024,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.751,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 15
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 17,
+          "segment_number_1_based": 18,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1838.9724007560571,
+            -287.7582249737893,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1732.2741234586629,
+            -564.4580627385072,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 296.55913844839256,
+          "direction_unit_xy": [
+            0.35978752115225066,
+            -0.933034264978044
+          ],
+          "yaw_degrees": -68.91285245263988,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.482796,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.783,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 19
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 18,
+          "segment_number_1_based": 19,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1732.2741234586629,
+            -564.4580627385072,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1559.0055230672726,
+            -819.4660937039129,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 308.3035902133554,
+          "direction_unit_xy": [
+            0.5620064309711189,
+            -0.8271328620887365
+          ],
+          "yaw_degrees": -55.805330305544096,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.541518,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.842,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 24,
+            "simulate_key_press": 25,
+            "wait_pie_seconds": 26,
+            "get_player_transform": 27
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 23
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 19,
+          "segment_number_1_based": 20,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1559.0055230672726,
+            -819.4660937039129,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1325.825214724777,
+            -1042.9825022501575,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 323.00563631013176,
+          "direction_unit_xy": [
+            0.7219078620616054,
+            -0.6919891897231069
+          ],
+          "yaw_degrees": -43.78777746522365,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.615028,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.916,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 28,
+            "simulate_key_press": 29,
+            "wait_pie_seconds": 30,
+            "get_player_transform": 31
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 27
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 20,
+          "segment_number_1_based": 21,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1325.825214724777,
+            -1042.9825022501575,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1041.694186911754,
+            -1226.4176781462543,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 338.1995043197384,
+          "direction_unit_xy": [
+            0.8401284572682329,
+            -0.5423874770752907
+          ],
+          "yaw_degrees": -32.84631312266699,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.690998,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.991,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 32,
+            "simulate_key_press": 33,
+            "wait_pie_seconds": 34,
+            "get_player_transform": 35
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 31
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 21,
+          "segment_number_1_based": 22,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1041.694186911754,
+            -1226.4176781462543,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -717.5314356845444,
+            -1362.7223104541476,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 351.65386685174366,
+          "direction_unit_xy": [
+            0.921823366054086,
+            -0.38761021890130115
+          ],
+          "yaw_degrees": -22.805881737364132,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.758269,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.059,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 36,
+            "simulate_key_press": 37,
+            "wait_pie_seconds": 38,
+            "get_player_transform": 39
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 35
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 22,
+          "segment_number_1_based": 23,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -717.5314356845444,
+            -1362.7223104541476,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -365.79435378024124,
+            -1446.6582885947648,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 361.61336149674645,
+          "direction_unit_xy": [
+            0.9726882890843286,
+            -0.23211525645291284
+          ],
+          "yaw_degrees": -13.421637791363139,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.808067,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.109,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 40,
+            "simulate_key_press": 41,
+            "wait_pie_seconds": 42,
+            "get_player_transform": 43
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 41,
+            "simulate_key_press": 42,
+            "wait_pie_seconds": 43,
+            "get_player_transform": 44
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 39
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 23,
+          "segment_number_1_based": 24,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -365.79435378024124,
+            -1446.6582885947648,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -3.4443191226019307e-13,
+            -1475.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 366.89066745132897,
+          "direction_unit_xy": [
+            0.9970118791009218,
+            -0.07724838465397851
+          ],
+          "yaw_degrees": -4.430420171618303,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.834453,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.135,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 44,
+            "simulate_key_press": 45,
+            "wait_pie_seconds": 46,
+            "get_player_transform": 47
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 45,
+            "simulate_key_press": 46,
+            "wait_pie_seconds": 47,
+            "get_player_transform": 48
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 43
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 7,
+      "request_file": "route_checks_007_Ring_F1_part_003_request.json",
+      "route": "Ring_F1",
+      "selected_route_index_0_based": 1,
+      "route_part_1_based": 3,
+      "requires_continuation_from_batch_1_based": 6,
+      "initial_placement_step_index_0_based": null,
+      "initial_placement_capsule_xyz_cm": null,
+      "continuation_instruction": "Continue at the previous batch endpoint in the same PIE session; do not teleport",
+      "action_count": 32,
+      "summed_wait_seconds": 15.586,
+      "segments": [
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 24,
+          "segment_number_1_based": 25,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -3.4443191226019307e-13,
+            -1475.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            365.79435378024056,
+            -1446.6582885947648,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 366.89066745132897,
+          "direction_unit_xy": [
+            0.9970118791009218,
+            0.07724838465397851
+          ],
+          "yaw_degrees": 4.430420171618303,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.834453,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.135,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 6,
+            "step_index_0_based": 47
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 25,
+          "segment_number_1_based": 26,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            365.79435378024056,
+            -1446.6582885947648,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            717.5314356845438,
+            -1362.7223104541479,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 361.6133614967465,
+          "direction_unit_xy": [
+            0.9726882890843287,
+            0.23211525645291217
+          ],
+          "yaw_degrees": 13.4216377913631,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.808067,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.109,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 7,
+            "step_index_0_based": 3
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 26,
+          "segment_number_1_based": 27,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            717.5314356845438,
+            -1362.7223104541479,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1041.6941869117534,
+            -1226.4176781462545,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 351.65386685174354,
+          "direction_unit_xy": [
+            0.9218233660540859,
+            0.38761021890130126
+          ],
+          "yaw_degrees": 22.80588173736414,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.758269,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.059,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 7,
+            "step_index_0_based": 7
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 27,
+          "segment_number_1_based": 28,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1041.6941869117534,
+            -1226.4176781462545,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1325.8252147247763,
+            -1042.9825022501577,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 338.1995043197384,
+          "direction_unit_xy": [
+            0.8401284572682329,
+            0.5423874770752907
+          ],
+          "yaw_degrees": 32.84631312266699,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.690998,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.991,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 7,
+            "step_index_0_based": 11
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 28,
+          "segment_number_1_based": 29,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1325.8252147247763,
+            -1042.9825022501577,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1559.0055230672724,
+            -819.4660937039132,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 323.005636310132,
+          "direction_unit_xy": [
+            0.7219078620616063,
+            0.6919891897231061
+          ],
+          "yaw_degrees": 43.787777465223584,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.615028,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.916,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 7,
+            "step_index_0_based": 15
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 29,
+          "segment_number_1_based": 30,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1559.0055230672724,
+            -819.4660937039132,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1732.2741234586622,
+            -564.4580627385084,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 308.3035902133544,
+          "direction_unit_xy": [
+            0.5620064309711191,
+            0.8271328620887365
+          ],
+          "yaw_degrees": 55.80533030554408,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.541518,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.842,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 7,
+            "step_index_0_based": 19
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 30,
+          "segment_number_1_based": 31,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1732.2741234586622,
+            -564.4580627385084,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1838.972400756057,
+            -287.7582249737899,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 296.55913844839324,
+          "direction_unit_xy": [
+            0.3597875211522514,
+            0.9330342649780438
+          ],
+          "yaw_degrees": 68.91285245263983,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.482796,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.783,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 24,
+            "simulate_key_press": 25,
+            "wait_pie_seconds": 26,
+            "get_player_transform": 27
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 7,
+            "step_index_0_based": 23
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "Ring_F1",
+          "source_route_index_0_based": 9,
+          "segment_index_0_based": 31,
+          "segment_number_1_based": 32,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1838.972400756057,
+            -287.7582249737899,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1875.0,
+            -3.612708057484692e-13,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 290.00479986949915,
+          "direction_unit_xy": [
+            0.12423104465910682,
+            0.992253318232248
+          ],
+          "yaw_degrees": 82.86364824002173,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.450024,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.751,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 28,
+            "simulate_key_press": 29,
+            "wait_pie_seconds": 30,
+            "get_player_transform": 31
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 7,
+            "step_index_0_based": 27
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 8,
+      "request_file": "route_checks_008_WestBridge_F1_part_001_request.json",
+      "route": "WestBridge_F1",
+      "selected_route_index_0_based": 2,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        -1875.0,
+        0.0,
+        942.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 13,
+      "summed_wait_seconds": 9.525,
+      "segments": [
+        {
+          "route": "WestBridge_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1875.0,
+            0.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -2050.0,
+            0.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 175.0,
+          "direction_unit_xy": [
+            -1.0,
+            0.0
+          ],
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 0.875,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.175,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              -1875.0,
+              0.0,
+              942.15
+            ],
+            "batch_index_1_based": 8,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "WestBridge_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -2050.0,
+            0.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -3250.0,
+            0.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 1200.0,
+          "direction_unit_xy": [
+            -1.0,
+            0.0
+          ],
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 6.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 6.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 8,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "WestBridge_F1",
+          "source_route_index_0_based": 10,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -3250.0,
+            0.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -3600.0,
+            0.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 350.0,
+          "direction_unit_xy": [
+            -1.0,
+            0.0
+          ],
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 8,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 9,
+      "request_file": "route_checks_009_EastBridge_F1_part_001_request.json",
+      "route": "EastBridge_F1",
+      "selected_route_index_0_based": 3,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        1875.0,
+        0.0,
+        942.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 13,
+      "summed_wait_seconds": 9.525,
+      "segments": [
+        {
+          "route": "EastBridge_F1",
+          "source_route_index_0_based": 11,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1875.0,
+            0.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            2050.0,
+            0.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 175.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 0.875,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.175,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              1875.0,
+              0.0,
+              942.15
+            ],
+            "batch_index_1_based": 9,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "EastBridge_F1",
+          "source_route_index_0_based": 11,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            2050.0,
+            0.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            3250.0,
+            0.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 1200.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 6.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 6.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 9,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "EastBridge_F1",
+          "source_route_index_0_based": 11,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            3250.0,
+            0.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            3600.0,
+            0.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 350.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 9,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 10,
+      "request_file": "route_checks_010_RearBridge_F1_part_001_request.json",
+      "route": "RearBridge_F1",
+      "selected_route_index_0_based": 4,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        0.0,
+        -1475.0,
+        942.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 13,
+      "summed_wait_seconds": 9.525,
+      "segments": [
+        {
+          "route": "RearBridge_F1",
+          "source_route_index_0_based": 12,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            -1475.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            -1650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 175.0,
+          "direction_unit_xy": [
+            0.0,
+            -1.0
+          ],
+          "yaw_degrees": -90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 0.875,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.175,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              0.0,
+              -1475.0,
+              942.15
+            ],
+            "batch_index_1_based": 10,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "RearBridge_F1",
+          "source_route_index_0_based": 12,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            -1650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            -2850.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 1200.0,
+          "direction_unit_xy": [
+            0.0,
+            -1.0
+          ],
+          "yaw_degrees": -90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 6.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 6.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 10,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "RearBridge_F1",
+          "source_route_index_0_based": 12,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            -2850.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            -3200.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 350.0,
+          "direction_unit_xy": [
+            0.0,
+            -1.0
+          ],
+          "yaw_degrees": -90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 10,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 11,
+      "request_file": "route_checks_011_FrontBridge_F1_part_001_request.json",
+      "route": "FrontBridge_F1",
+      "selected_route_index_0_based": 5,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        0.0,
+        1475.0,
+        942.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 13,
+      "summed_wait_seconds": 9.525,
+      "segments": [
+        {
+          "route": "FrontBridge_F1",
+          "source_route_index_0_based": 13,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            1475.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            1650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 175.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 0.875,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 1.175,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              0.0,
+              1475.0,
+              942.15
+            ],
+            "batch_index_1_based": 11,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "FrontBridge_F1",
+          "source_route_index_0_based": 13,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            1650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            2850.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 1200.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 6.0,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 6.3,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 11,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "FrontBridge_F1",
+          "source_route_index_0_based": 13,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            2850.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            3200.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 350.0,
+          "direction_unit_xy": [
+            0.0,
+            1.0
+          ],
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 1.75,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.05,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 11,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 12,
+      "request_file": "route_checks_012_OvalThrough_F1_-650_part_001_request.json",
+      "route": "OvalThrough_F1_-650",
+      "selected_route_index_0_based": 6,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        -1900.0,
+        -650.0,
+        942.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 25,
+      "summed_wait_seconds": 20.8,
+      "segments": [
+        {
+          "route": "OvalThrough_F1_-650",
+          "source_route_index_0_based": 14,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1900.0,
+            -650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1472.0,
+            -650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 428.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.14,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.44,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              -1900.0,
+              -650.0,
+              942.15
+            ],
+            "batch_index_1_based": 12,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_-650",
+          "source_route_index_0_based": 14,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1472.0,
+            -650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -850.0,
+            -650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 622.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.11,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.41,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 12,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_-650",
+          "source_route_index_0_based": 14,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -850.0,
+            -650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            -650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 850.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.25,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.55,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 12,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_-650",
+          "source_route_index_0_based": 14,
+          "segment_index_0_based": 3,
+          "segment_number_1_based": 4,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            -650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            850.0,
+            -650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 850.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.25,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.55,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 14,
+            "simulate_key_press": 15,
+            "wait_pie_seconds": 16,
+            "get_player_transform": 17
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 12,
+            "step_index_0_based": 12
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_-650",
+          "source_route_index_0_based": 14,
+          "segment_index_0_based": 4,
+          "segment_number_1_based": 5,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            850.0,
+            -650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1472.0,
+            -650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 622.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.11,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.41,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 18,
+            "simulate_key_press": 19,
+            "wait_pie_seconds": 20,
+            "get_player_transform": 21
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 12,
+            "step_index_0_based": 16
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_-650",
+          "source_route_index_0_based": 14,
+          "segment_index_0_based": 5,
+          "segment_number_1_based": 6,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1472.0,
+            -650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1900.0,
+            -650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 428.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.14,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.44,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 22,
+            "simulate_key_press": 23,
+            "wait_pie_seconds": 24,
+            "get_player_transform": 25
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 12,
+            "step_index_0_based": 20
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 13,
+      "request_file": "route_checks_013_OvalThrough_F1_650_part_001_request.json",
+      "route": "OvalThrough_F1_650",
+      "selected_route_index_0_based": 7,
+      "route_part_1_based": 1,
+      "requires_continuation_from_batch_1_based": null,
+      "initial_placement_step_index_0_based": 0,
+      "initial_placement_capsule_xyz_cm": [
+        -1900.0,
+        650.0,
+        942.15
+      ],
+      "continuation_instruction": "Start this route with its single explicit placement",
+      "action_count": 25,
+      "summed_wait_seconds": 20.8,
+      "segments": [
+        {
+          "route": "OvalThrough_F1_650",
+          "source_route_index_0_based": 15,
+          "segment_index_0_based": 0,
+          "segment_number_1_based": 1,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1900.0,
+            650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -1472.0,
+            650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 428.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.14,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.44,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 2,
+            "simulate_key_press": 3,
+            "wait_pie_seconds": 4,
+            "get_player_transform": 5
+          },
+          "actual_start_reference": {
+            "type": "initial_explicit_placement",
+            "capsule_xyz_cm": [
+              -1900.0,
+              650.0,
+              942.15
+            ],
+            "batch_index_1_based": 13,
+            "step_index_0_based": 0
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_650",
+          "source_route_index_0_based": 15,
+          "segment_index_0_based": 1,
+          "segment_number_1_based": 2,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -1472.0,
+            650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            -850.0,
+            650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 622.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.11,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.41,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 6,
+            "simulate_key_press": 7,
+            "wait_pie_seconds": 8,
+            "get_player_transform": 9
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 13,
+            "step_index_0_based": 4
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_650",
+          "source_route_index_0_based": 15,
+          "segment_index_0_based": 2,
+          "segment_number_1_based": 3,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            -850.0,
+            650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            0.0,
+            650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 850.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.25,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.55,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 10,
+            "simulate_key_press": 11,
+            "wait_pie_seconds": 12,
+            "get_player_transform": 13
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 13,
+            "step_index_0_based": 8
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_650",
+          "source_route_index_0_based": 15,
+          "segment_index_0_based": 3,
+          "segment_number_1_based": 4,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            0.0,
+            650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            850.0,
+            650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 850.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 4.25,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 4.55,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 14,
+            "simulate_key_press": 15,
+            "wait_pie_seconds": 16,
+            "get_player_transform": 17
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 13,
+            "step_index_0_based": 12
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_650",
+          "source_route_index_0_based": 15,
+          "segment_index_0_based": 4,
+          "segment_number_1_based": 5,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            850.0,
+            650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1472.0,
+            650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 622.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 3.11,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 3.41,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 18,
+            "simulate_key_press": 19,
+            "wait_pie_seconds": 20,
+            "get_player_transform": 21
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 13,
+            "step_index_0_based": 16
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        },
+        {
+          "route": "OvalThrough_F1_650",
+          "source_route_index_0_based": 15,
+          "segment_index_0_based": 5,
+          "segment_number_1_based": 6,
+          "floor": 1,
+          "floor_surface_z_cm": 850.0,
+          "nominal_start_capsule_xyz_cm": [
+            1472.0,
+            650.0,
+            942.15
+          ],
+          "expected_end_capsule_xyz_cm": [
+            1900.0,
+            650.0,
+            942.15
+          ],
+          "expected_capsule_center_z_cm": 942.15,
+          "horizontal_distance_cm": 428.0,
+          "direction_unit_xy": [
+            1.0,
+            0.0
+          ],
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "press_duration_seconds": 2.14,
+          "acceleration_allowance_seconds": 0.0,
+          "wait_seconds": 2.44,
+          "post_input_settle_seconds": 0.3,
+          "request_step_indices_0_based": {
+            "yaw_only_turn": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          },
+          "request_step_numbers_1_based": {
+            "yaw_only_turn": 22,
+            "simulate_key_press": 23,
+            "wait_pie_seconds": 24,
+            "get_player_transform": 25
+          },
+          "actual_start_reference": {
+            "type": "get_player_transform_result",
+            "batch_index_1_based": 13,
+            "step_index_0_based": 20
+          },
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "compare_end_to_recorded_target_not_only_action_success": true,
+            "measure_displacement_from_previous_actual_endpoint": true,
+            "require_capsule_height_matches_recorded_floor": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "no_teleport_at_batch_continuation": true
+          },
+          "status": "prepared_not_executed"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "asset_count": 2,
+  "prepared_date": "2026-10-14",
+  "source_pack": "https://3dassets.dev/packs/retail-store-fixtures-and-mall",
+  "license": "CC0 1.0 Universal",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "units": "centimeters",
+  "fbx_import_settings": {
+    "import_uniform_scale": 1.0,
+    "convert_scene": true,
+    "convert_scene_unit": true,
+    "force_front_x_axis": false,
+    "combine_meshes": true,
+    "normal_import_method": "import normals",
+    "auto_generate_collision": false,
+    "import_materials": false,
+    "import_textures": false
+  },
+  "existing_material_binding_prefix": "/Game/Generated_Materials/M_MallRetail_",
+  "collision_note": "No source collision. For static decoration use small simple collision or complex-as-simple; validate placement before gameplay.",
+  "assets": [
+    {
+      "source_id": "25324",
+      "title": "Point of sale terminal (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25324_POSTerminal",
+      "ue_folder": "/Game/Environment/Mall/Models/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\Checkout\\SM_Retail_25324_POSTerminal.fbx",
+      "source_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25324.glb",
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-pos-terminal-8d0454bd",
+      "download_url": "https://cdn.3dassets.dev/assets/25324/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "fb61bb83af622b3152aef6933584cd7a7437439c52c908e450906543cf307018",
+      "dimensions_cm": [
+        31.998512268066406,
+        24.999935150146484,
+        39.72325134277344
+      ],
+      "bounds_cm": [
+        [
+          -15.999256134033203,
+          -12.499967575073242,
+          0.0
+        ],
+        [
+          15.999256134033203,
+          12.499967575073242,
+          39.72325134277344
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -1.5000004768371582,
+        -0.0
+      ],
+      "local_axes": {
+        "X": "width",
+        "Y": "depth; Blender customer side toward -Y",
+        "Z": "up"
+      },
+      "unreal_local_axes": {
+        "X": "width",
+        "Y": "depth; Unreal customer side toward +Y after native FBX reflection",
+        "Z": "up"
+      },
+      "native_orientation_evidence": "Saved/MallBuild/import_orientation_notes.json, same established FBX settings",
+      "original_material_slots": [
+        "dark",
+        "glass",
+        "metal"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "two_sided": false,
+          "has_textures": false
+        },
+        {
+          "name": "glass",
+          "base_color_linear_rgba": [
+            0.6,
+            0.7,
+            0.74,
+            1
+          ],
+          "metallic": 0.2,
+          "roughness": 0.11,
+          "alpha_mode": "OPAQUE",
+          "two_sided": false,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "two_sided": false,
+          "has_textures": false
+        }
+      ],
+      "uv_channels": [],
+      "triangles": 506,
+      "vertices": 1518,
+      "source_animation_clips": [],
+      "source_description": "A counter-top point of sale terminal: a tilting touchscreen on a weighted arm base with a cable entry, a customer-facing rear display and a card slot on the pedestal. Screen and case are separate materials so the display face can be restated; nothing is animated. Dimensions 0.32 by 0.40 by 0.25 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "collision_supplied": false,
+      "note": "Static display prop; separate material slots retained. No checkout gameplay or animation added.",
+      "prepared_fbx_sha256": "1079d0394bea5b93eb9fd843933940e26bbcd4c624c1e9c5f05869d0f3a652b6"
+    },
+    {
+      "source_id": "25326",
+      "title": "Card terminal on stand (Retail Store Fixtures and Mall)",
+      "ue_name": "SM_Retail_25326_CardTerminalStand",
+      "ue_folder": "/Game/Environment/Mall/Models/Retail",
+      "fbx_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\ImportReady\\Checkout\\SM_Retail_25326_CardTerminalStand.fbx",
+      "source_path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25326.glb",
+      "source_url": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-card-terminal-stand-a5c2c2d7",
+      "download_url": "https://cdn.3dassets.dev/assets/25326/v1/model.glb",
+      "license": {
+        "slug": "cc0-1.0",
+        "name": "CC0 1.0 Universal",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false
+      },
+      "source_sha256": "3fc51d06a216c688355fc695e084f63b3fb0693d5e089d9840dc85e20750de49",
+      "dimensions_cm": [
+        14.999964714050293,
+        15.60865592956543,
+        24.95189666748047
+      ],
+      "bounds_cm": [
+        [
+          -7.4999823570251465,
+          -7.804327964782715,
+          0.0
+        ],
+        [
+          7.4999823570251465,
+          7.804327964782715,
+          24.95189666748047
+        ]
+      ],
+      "pivot": "horizontal bounding-box center at lowest mesh point",
+      "source_origin_to_baked_cm": [
+        -0.0,
+        -0.41789698600769043,
+        -0.0
+      ],
+      "local_axes": {
+        "X": "width",
+        "Y": "depth; Blender customer side toward -Y",
+        "Z": "up"
+      },
+      "unreal_local_axes": {
+        "X": "width",
+        "Y": "depth; Unreal customer side toward +Y after native FBX reflection",
+        "Z": "up"
+      },
+      "native_orientation_evidence": "Saved/MallBuild/import_orientation_notes.json, same established FBX settings",
+      "original_material_slots": [
+        "dark",
+        "metal",
+        "glass",
+        "carcass"
+      ],
+      "materials": [
+        {
+          "name": "dark",
+          "base_color_linear_rgba": [
+            0.13,
+            0.14,
+            0.15,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.55,
+          "alpha_mode": "OPAQUE",
+          "two_sided": false,
+          "has_textures": false
+        },
+        {
+          "name": "metal",
+          "base_color_linear_rgba": [
+            0.71,
+            0.72,
+            0.75,
+            1
+          ],
+          "metallic": 1,
+          "roughness": 0.35,
+          "alpha_mode": "OPAQUE",
+          "two_sided": false,
+          "has_textures": false
+        },
+        {
+          "name": "glass",
+          "base_color_linear_rgba": [
+            0.6,
+            0.7,
+            0.74,
+            1
+          ],
+          "metallic": 0.2,
+          "roughness": 0.11,
+          "alpha_mode": "OPAQUE",
+          "two_sided": false,
+          "has_textures": false
+        },
+        {
+          "name": "carcass",
+          "base_color_linear_rgba": [
+            0.88,
+            0.87,
+            0.85,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.52,
+          "alpha_mode": "OPAQUE",
+          "two_sided": false,
+          "has_textures": false
+        }
+      ],
+      "uv_channels": [],
+      "triangles": 1340,
+      "vertices": 4020,
+      "source_animation_clips": [],
+      "source_description": "A customer card terminal on a swivel stand: a keypad handset with a raised key block and a small display, docked on a tilting arm over a weighted disc base. The handset lifts off the dock in use; here it is modelled docked. Dimensions 0.15 by 0.25 by 0.16 m (X by Y by Z). Metre units, +Y up, customer side toward +Z, resting on y=0. Static geometry; no rig, collision or navigation data.",
+      "collision_supplied": false,
+      "note": "Static display prop; separate material slots retained. No checkout gameplay or animation added.",
+      "prepared_fbx_sha256": "12cea054e41dff0a5bfe1e9f54938fa0c777e12d31e29c09422ea30a7e81f59b"
+    }
+  ],
+  "protected_inputs_hash_check_passed": true,
+  "status": "prepared_roundtrip_verified_not_imported"
+}

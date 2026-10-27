@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-18",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "method": "Aura, saved Blueprint instances, connected two-world listen-server PIE. Actual host movement and F/T/G keys; test-only actor arrangements discarded on PIE stop.",
+  "results": {
+    "initial_physics": {"passed": true, "equipment_simulating": true, "light_simulating": true, "both_settled": true, "initial_door_sealed": true},
+    "doorway_recovery_bump": {
+      "passed": true,
+      "method": "Host runs into released cart for 2 seconds using existing IA_Move; no cart impulse or transform manufactures the result.",
+      "before_cart_cm": [3950.001703, -0.000475, 43.999989],
+      "after_cart_cm": [4221.419872, -2.402345, 43.999998],
+      "observer_cart_cm": [4221.419872, -2.402768, 43.999998],
+      "after_yaw_degrees": 87.026921,
+      "settled_afterwards": true,
+      "store_sealed_afterwards": false,
+      "store_dormant_when_cart_inside": true
+    },
+    "F_placement": {"passed": true, "book_and_radio_picked_up_with_F": true, "F_at_cart_stores_original_actors": true, "book_slot_cm": [-26, -17, 47], "radio_slot_cm": [26, -17, 47], "book_closed": true, "radio_off": true},
+    "T_flashlight": {"passed": true, "world_T_pickup_and_T_cart_deposit": true, "slot_cm": [-26, 17, 47], "original_actor_retained": true},
+    "controlled_movement": {
+      "passed": true,
+      "G_claim_disables_simulation": true,
+      "grab_aim_pitch_degrees": -12,
+      "method": "Actual G claim, IA_Move for 0.6 seconds, 15-degree steering, G release.",
+      "after_cart_cm": [3809.531261, -913.723100, 44.000001],
+      "after_yaw_degrees": 14.999612,
+      "book_world_cm": [3788.816956, -936.872984, 91.000006],
+      "radio_world_cm": [3839.045191, -923.414734, 91.000003],
+      "flashlight_world_cm": [3780.017332, -904.031446, 90.999999],
+      "all_three_attached_to_cart_on_host_and_observer": true,
+      "release_restores_simulation_and_settles": true
+    },
+    "loaded_physics_bump": {
+      "passed": true,
+      "method": "Host runs into side of released loaded cart for 1.5 seconds; no cart impulse applied.",
+      "before_cart_cm": [3809.531261, -913.723100, 44.000001],
+      "after_cart_cm": [3751.301144, -701.338063, 44.000000],
+      "observer_cart_cm": [3751.301144, -701.338063, 44.000000],
+      "after_yaw_degrees": 16.006729,
+      "observer_yaw_degrees": 16.007080,
+      "book_world_cm": [3730.996936, -724.848467, 91],
+      "radio_world_cm": [3780.980860, -710.509454, 91],
+      "flashlight_world_cm": [3721.621427, -692.166670, 91],
+      "all_three_relative_slots_unchanged_on_observer": true,
+      "settled_afterwards": true,
+      "book_still_blank_closed": true,
+      "radio_and_flashlight_off": true
+    },
+    "saved_map_after_test": {"passed": true, "PIE_stopped": true, "equipment_location_cm": [3950, 0, 45], "light_location_cm": [3560, -400, 45], "both_free_physics_enabled": true, "both_mass_kg": 100, "dirty_map_packages": [], "dirty_content_packages": []}
+  },
+  "live_remote_control_check": {
+    "accepted": false,
+    "reason": "Second PIE controller stayed Spectating with AcknowledgedPawn=None and no pawn InputComponent. Normal authority UnPossess/Possess retry did not initialize it. Actor replication and observer poses worked, but remote-controlled contact was not exercised in this saved-map session.",
+    "separate_coverage": "Mall.Cart.PhysicsNetwork passes actual autonomous client input, ServerMove contact, authoritative cart movement and peer convergence. No production multiplayer startup changes were made in this cart fix."
+  },
+  "visual_note": "The retained game-layer capture physics_loaded_cart_three_quarter_t458.01s_f11089.png is too dark to establish item alignment visually. Acceptance uses live actor/attachment/world-pose readings and the native network tests.",
+  "native_report": "physics_native_report.json",
+  "baseline_reproduction": "placement_follow_baseline.json"
+}

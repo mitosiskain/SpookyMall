@@ -1,0 +1,220 @@
+{
+  "recorded_date": "2026-10-18",
+  "task": "Movable equipment and protective light carts",
+  "status": "Cart mesh, lamp head and textures imported under /Game/Equipment/Carts; both carts and original charger endpoints placed in Lvl_MallOval_Test. See Automation/Carts/scene_setup.json and Evidence/live_acceptance.json.",
+  "selected_external_assets": [
+    {
+      "name": "Work Lamp",
+      "creator": "Grab3D",
+      "source_page": "https://grab3d.com/models/tools/work-lamp/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution_required": false,
+      "ai_disclosure": "Procedural Blender model and textures; AI-assisted generator code, no generative AI geometry or textures"
+    }
+  ],
+  "project_original_assets": [
+    {
+      "name": "Equipment Utility Cart",
+      "source_script": "create_utility_cart.py",
+      "third_party_geometry": false,
+      "third_party_textures": false
+    }
+  ],
+  "unacquired_candidates": [
+    {
+      "name": "Warehouse shelf trolley",
+      "creator": "3D Assets",
+      "source_page": "https://3dassets.dev/assets/hardware-store-and-diy-warehouse-warehouse-shelf-troll-c805d36f",
+      "download_url": "https://cdn.3dassets.dev/assets/23960/v1/model.glb",
+      "license": "CC0-1.0",
+      "reason": "CDN DNS failure and public asset/API403; not downloaded or imported"
+    }
+  ],
+  "missing_assets": [],
+  "prototype_art": "Wall outlet, extension endpoint, connection cable and mast use project-original prototype geometry; detailed outlet and cable art remains optional polish.",
+  "files": [
+    {
+      "file": "create_utility_cart.py",
+      "bytes": 5509,
+      "sha256": "dc30736a4fe5cc7e9abdc26c85739582589ecbf75daa639941ebcbdf9ab36a1d",
+      "download_url": null,
+      "origin": "Project-original model, preparation code or intake record"
+    },
+    {
+      "file": "extract_work_lamp_textures.py",
+      "bytes": 1981,
+      "sha256": "3d541949985bb0bbc9f38b5a39a7affd6dc48e6789e5b09051a04eab9f71b8ad",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "prepare_work_lamp.py",
+      "bytes": 3594,
+      "sha256": "6df39a33ba8ccee400114342a4fd8a91e9160b7a19c5a53c1f95eaac2f20e202",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/EquipmentUtilityCart.blend",
+      "bytes": 155905,
+      "sha256": "b28ebaf98eefe9c0b16ef876ff8ec8312ff027f03fd740ccbef231d52cdf7782",
+      "download_url": null,
+      "origin": "Project-original model, preparation code or intake record"
+    },
+    {
+      "file": "Prepared/fbx_verification.json",
+      "bytes": 790,
+      "sha256": "7fc2ba6bdcb8e4ce095d4fea6c63dda4a3fd19afe0cedcd9b02215ccc57f78a8",
+      "download_url": null,
+      "origin": "Project-original model, preparation code or intake record"
+    },
+    {
+      "file": "Prepared/SM_CartWorkLampFull.fbx",
+      "bytes": 380620,
+      "sha256": "9b28c64f0b4eef9509e96bf6e918201874c59b65566ca0b5a88f1036fc1c09b0",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/SM_CartWorkLampHead.fbx",
+      "bytes": 166140,
+      "sha256": "ec2ae45a2a5a36bd562e73bf0117255132607b0126f665c31564c063ad8ed749",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/SM_EquipmentUtilityCart.fbx",
+      "bytes": 87948,
+      "sha256": "6298246ea48ef8d0a0b1b71d6cce6405dde566c6349d8edb457d0a3cbe782a33",
+      "download_url": null,
+      "origin": "Project-original model, preparation code or intake record"
+    },
+    {
+      "file": "Prepared/Textures/textures.json",
+      "bytes": 2505,
+      "sha256": "c1b25f764df866baa6a5ffc2b5fb686badc5c513561856863c25776ae97ea6cb",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/Textures/WorkLamp_body_basecolor.png",
+      "bytes": 767319,
+      "sha256": "2a8bea648c1b566c6ed58299e5cd0177a2555a12935edd477504e48cc927c174",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/Textures/WorkLamp_body_metallic.png",
+      "bytes": 716764,
+      "sha256": "560967b585d847fb6a4c11fb422c725e39ffef85fe65f833e5e697c6b16ce12c",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/Textures/WorkLamp_body_normal_DX.png",
+      "bytes": 20854,
+      "sha256": "365308e0d6fda19725ed0c049fbbfaacbc241cc4ce07663e296c9416db2e69f6",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/Textures/WorkLamp_body_roughness.png",
+      "bytes": 691740,
+      "sha256": "ed5d80254aac82fc0e7eac5dd7a526ac8312f5705f9087c8d06c1cdbe9d8c75a",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/Textures/WorkLamp_head_basecolor.png",
+      "bytes": 498662,
+      "sha256": "7acacc31ce430c357acbe94651b0312ca4906b382f6436ba5103000fe92c0d64",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/Textures/WorkLamp_head_metallic.png",
+      "bytes": 191696,
+      "sha256": "48fc9f29e72436d629cea5d81db5c028c5c73c37ac1525bff02914a6bac29bfa",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/Textures/WorkLamp_head_normal_DX.png",
+      "bytes": 22853,
+      "sha256": "3f4d9e8cbe839306ace15d9c9e5251e7a2f855aca852d7e53dea521b5cd4a1f9",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/Textures/WorkLamp_head_roughness.png",
+      "bytes": 262851,
+      "sha256": "38a306b01ea4a9322e621a3515d7ee59b77c38f4fdd87c07e496c0d586a3017b",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "Prepared/utility_cart_preparation.json",
+      "bytes": 1864,
+      "sha256": "961193b403f2727198ab5d930afc4d52a9c93cf0ff892a665208099e1394fe0e",
+      "download_url": null,
+      "origin": "Project-original model, preparation code or intake record"
+    },
+    {
+      "file": "Prepared/utility_cart_preview.png",
+      "bytes": 438316,
+      "sha256": "47d340a06639b49065ec00a7f3fba62c3d65e073414b7cfee26c00a2cf4226f3",
+      "download_url": null,
+      "origin": "Project-original model, preparation code or intake record"
+    },
+    {
+      "file": "Prepared/work_lamp_preparation.json",
+      "bytes": 1690,
+      "sha256": "6a5e7b537032da39162de400379a6b0a662391c44c5a89d208dcd1129c485c10",
+      "download_url": null,
+      "origin": "Prepared CC0 derivative"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 4165,
+      "sha256": "ca6d8be6892d2fcc677373e346e28f2dea97f03e9cdd88ea5f3986d2540252ea",
+      "download_url": null,
+      "origin": "Project-original model, preparation code or intake record"
+    },
+    {
+      "file": "verify_prepared_models.py",
+      "bytes": 2503,
+      "sha256": "ea86f2d3a0d5861ede2ee558c43b270aa56d735b4bc8f99bd0ff2c77de12b17e",
+      "download_url": null,
+      "origin": "Project-original model, preparation code or intake record"
+    },
+    {
+      "file": "WorkLamp.fbx",
+      "bytes": 2064748,
+      "sha256": "306047201f1ed2c92bce1477666f3b43a45ff30d550cd430b861f7028bdb9a7e",
+      "download_url": "https://grab3d.com/dl/work-lamp/work-lamp.fbx",
+      "origin": "Grab3D CC0 original download"
+    },
+    {
+      "file": "WorkLamp.glb",
+      "bytes": 1132304,
+      "sha256": "b36655300b94bd74610fe1970f28dac962b3641ab01e7366061cb11829cbd6b8",
+      "download_url": "https://grab3d.com/dl/work-lamp/work-lamp.glb",
+      "origin": "Grab3D CC0 original download"
+    },
+    {
+      "file": "WorkLamp_LICENSE.txt",
+      "bytes": 760,
+      "sha256": "01908a56d6cada52704b20c5094c2aa16c9d8be6f124349c986764067abfd921",
+      "download_url": "https://grab3d.com/dl/work-lamp/LICENSE.txt",
+      "origin": "Grab3D CC0 original download"
+    },
+    {
+      "file": "WorkLamp_manifest.json",
+      "bytes": 1812,
+      "sha256": "95d807ac67014adf961a5a22accf6a96b625d3240f9aacd3e320c3b456f30a1e",
+      "download_url": "https://grab3d.com/dl/work-lamp/manifest.json",
+      "origin": "Grab3D CC0 original download"
+    }
+  ]
+}

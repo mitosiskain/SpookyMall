@@ -1,0 +1,125 @@
+{
+  "verified_date": "2026-10-17",
+  "license_summary": "All original primary asset pages explicitly identify CC0. Commercial use and modification permitted; attribution not required. Voluntary credits preserved below.",
+  "credits": [
+    "Ghost breath and Ghost Monster Voice Moaning & Growling by qubodup, OpenGameArt.org, CC0 1.0."
+  ],
+  "quality_note": "Selected using author descriptions and waveform/level checks. Not auditioned by the coding agent. Original ghost voices already contain artistic processing/tails. Mono preparation adds no reverb or pitch effect; subjective listening remains a PIE review item.",
+  "preparation": "Deterministic channel averaging, DC removal, 161-tap lowpass, interpolation to 48 kHz, edge fades and RMS/peak-limited level adjustment. Full short source clips retained; no audio synthesized.",
+  "sources": [
+    {
+      "id": "qubodup_ghost_breath",
+      "title": "Ghost breath",
+      "author": "qubodup",
+      "page_url": "https://opengameart.org/content/ghost-breath",
+      "download_url": "https://opengameart.org/sites/default/files/ghostbreath.flac",
+      "original_file": "Originals/ghostbreath_qubodup.flac",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "selected": true,
+      "sha256": "f371839853a5dff7dbd5a8c81368f5cfab587f567df5ba962e981d4392c530bc"
+    },
+    {
+      "id": "qubodup_ghost_moans",
+      "title": "Ghost Monster Voice Moaning & Growling",
+      "author": "qubodup",
+      "page_url": "https://opengameart.org/content/ghost-monster-voice-moaning-growling",
+      "download_url": "https://opengameart.org/sites/default/files/qubodup-GhostMoans.zip",
+      "original_file": "Originals/qubodup-GhostMoans.zip",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "selected": true,
+      "sha256": "25962d146f4634a93efa7fbfe9cde63f4182189ced6105b4f92f23c65d8c2a43"
+    },
+    {
+      "id": "primbal_horror_breathing_candidate",
+      "title": "horror breathing",
+      "author": "primbal",
+      "page_url": "https://opengameart.org/content/horror-breathing",
+      "download_url": "https://opengameart.org/sites/default/files/horrorbreathing.zip",
+      "original_file": "Originals/horrorbreathing_primbal.zip",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "selected": false,
+      "selection_note": "Research candidate only; strongly overdriven source (stereo RMS about 0.46). Not imported into Unreal.",
+      "sha256": "5984aa9d197885ab110c31ea0ba382d3f47d12b93449f8942e1cf96b0449462c"
+    }
+  ],
+  "clips": [
+    {
+      "file": "SW_Ghost_InvisibleBreath.wav",
+      "unreal_asset": "/Game/Audio/Ghost/Physical/SW_Ghost_InvisibleBreath",
+      "source_id": "qubodup_ghost_breath",
+      "archive_member": null,
+      "sha256": "942056ad379903d026c3f9f8d23c60849562e023b931a87c686e18045e36ddf3",
+      "format": "WAV mono PCM16 48000 Hz",
+      "duration_seconds": 3.415708,
+      "source_duration_seconds": 3.415708,
+      "source_rate_hz": 96000,
+      "source_channels": 2,
+      "source_trim_seconds": [
+        0.0,
+        3.415708
+      ],
+      "peak_dbfs": -7.031,
+      "rms_dbfs": -21.412,
+      "digital_clipped_samples": 0,
+      "gain_db": 12.947,
+      "fade_in_seconds": 0.045,
+      "fade_out_seconds": 0.12,
+      "looping": false,
+      "added_pitch_shift": false,
+      "added_reverb": false
+    },
+    {
+      "file": "SW_Ghost_InvisibleMoan.wav",
+      "unreal_asset": "/Game/Audio/Ghost/Physical/SW_Ghost_InvisibleMoan",
+      "source_id": "qubodup_ghost_moans",
+      "archive_member": "qubodup-GhostMoans/wav/qubodup-GhostMoan01.wav",
+      "sha256": "a8e8d5b1a4d6b676ea6597b2a18cabd86c04fe0cac8a3d6fcc9c3770eff63d62",
+      "format": "WAV mono PCM16 48000 Hz",
+      "duration_seconds": 3.023667,
+      "source_duration_seconds": 3.023673,
+      "source_rate_hz": 44100,
+      "source_channels": 2,
+      "source_trim_seconds": [
+        0.0,
+        3.023673
+      ],
+      "peak_dbfs": -6.021,
+      "rms_dbfs": -21.918,
+      "digital_clipped_samples": 0,
+      "gain_db": -5.872,
+      "fade_in_seconds": 0.045,
+      "fade_out_seconds": 0.12,
+      "looping": false,
+      "added_pitch_shift": false,
+      "added_reverb": false
+    },
+    {
+      "file": "SW_Ghost_HuntGrowl.wav",
+      "unreal_asset": "/Game/Audio/Ghost/Physical/SW_Ghost_HuntGrowl",
+      "source_id": "qubodup_ghost_moans",
+      "archive_member": "qubodup-GhostMoans/wav/qubodup-GhostMoan05.wav",
+      "sha256": "ee8795976332b7e13fbe48d1e119e7942a7dda35cc0b6b7e33e96b15cf7b227c",
+      "format": "WAV mono PCM16 48000 Hz",
+      "duration_seconds": 1.733875,
+      "source_duration_seconds": 1.733878,
+      "source_rate_hz": 44100,
+      "source_channels": 2,
+      "source_trim_seconds": [
+        0.0,
+        1.733878
+      ],
+      "peak_dbfs": -6.021,
+      "rms_dbfs": -22.393,
+      "digital_clipped_samples": 0,
+      "gain_db": -5.671,
+      "fade_in_seconds": 0.025,
+      "fade_out_seconds": 0.1,
+      "looping": false,
+      "added_pitch_shift": false,
+      "added_reverb": false
+    }
+  ]
+}

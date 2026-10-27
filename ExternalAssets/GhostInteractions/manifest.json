@@ -1,0 +1,103 @@
+{
+  "checked_date": "2026-10-16",
+  "status": "implemented_and_validated",
+  "paid_assets_acquired": false,
+  "new_unreal_imports": true,
+  "selected_existing_loose_props": [
+    {
+      "name": "Poly Haven closed hardcover book",
+      "source_url": "https://polyhaven.com/a/decorative_book_set_01",
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "source_file": "../Mall/PolyHaven/ImportReady/SM_BookHardcover02.fbx",
+      "source_sha256": "7ffefa42930ac49a82620d3bc1853295288f436cc1a8d228ec3f84d7ef1ee166",
+      "existing_unreal_asset": "/Game/Environment/Mall/Models/PolyHaven/SM_BookHardcover02",
+      "dimensions_cm": [
+        4.18837308883667,
+        15.386636734008789,
+        22.757787704467773
+      ],
+      "triangles": 1592,
+      "status": "reused_as_physics_collision_derivative",
+      "physics_derivative": "/Game/Environment/Mall/Interactions/Meshes/SM_GhostLooseHardcover02",
+      "collision": "One fitted box; SimpleAndComplex; original source asset unchanged"
+    },
+    {
+      "name": "Poly Haven closed softcover book",
+      "source_url": "https://polyhaven.com/a/decorative_book_set_01",
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "source_file": "../Mall/PolyHaven/ImportReady/SM_BookSoftcover04.fbx",
+      "source_sha256": "fd6c3f0750272a844a230be6c1724713b1a0f06375f97608f6c182eb52bb5b71",
+      "existing_unreal_asset": "/Game/Environment/Mall/Models/PolyHaven/SM_BookSoftcover04",
+      "dimensions_cm": [
+        3.740281581878662,
+        14.938090324401855,
+        22.446577072143555
+      ],
+      "triangles": 1312,
+      "status": "reused_as_physics_collision_derivative",
+      "physics_derivative": "/Game/Environment/Mall/Interactions/Meshes/SM_GhostLooseSoftcover04",
+      "collision": "One fitted box; SimpleAndComplex; original source asset unchanged"
+    }
+  ],
+  "downloaded_optional_sources": [
+    {
+      "name": "Kenney Furniture Kit",
+      "publisher": "Kenney",
+      "source_url": "https://kenney.nl/assets/furniture-kit",
+      "download_url": "https://kenney.nl/media/pages/assets/furniture-kit/440e0608a4-1677580847/kenney_furniture-kit.zip",
+      "local_file": "../../Saved/GhostInteractionPrototype/AssetSearch/KenneyFurniture/kenney_furniture-kit.zip",
+      "sha256": "e67652d0932cee41683f74711c03d3e192a2af9979ef8e6b237711f5482d46b0",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "included_license": "../../Saved/GhostInteractionPrototype/AssetSearch/KenneyFurniture/License.txt",
+      "status": "downloaded_inspected_not_selected_no_open_book",
+      "version_note": "Included License.txt identifies Furniture Kit (2.0); publisher page shows a historical release summary."
+    }
+  ],
+  "open_writing_book": {
+    "status": "project_generated_native_geometry_implemented",
+    "reason": "No suitable verified directly downloadable CC0 open book found during brief search; existing sourced book meshes are closed.",
+    "page_material_requirement": "Dedicated UV surface/material slot for blank page and writing overlay.",
+    "blueprint": "/Game/Environment/Mall/Interactions/Blueprints/BP_GhostWritingBook",
+    "page_size_cm": [
+      19.5,
+      28.5
+    ],
+    "interaction": "Starts closed/blank; F pickup or place open, R held inspection; ghost writing only after explicit request/question while placed open. Evidence survives interactions for the session."
+  },
+  "new_external_model_imports": false,
+  "project_generated_texture_imported": true,
+  "test_writing": {
+    "source_file": "T_GhostWriting_TestRGBA.png",
+    "generator": "generate_test_writing.ps1",
+    "text": "I AM STILL HERE",
+    "size_px": [
+      768,
+      1024
+    ],
+    "unreal_texture": "/Game/Environment/Mall/Interactions/Textures/T_GhostWriting_TestRGBA",
+    "material": "/Game/Generated_Materials/M_GhostWritingPage",
+    "parameters": [
+      "WritingTexture",
+      "WritingProgress"
+    ],
+    "artwork": "Project-generated placeholder text and tally marks; replace with transparent user artwork"
+  },
+  "acceptance": "../../Automation/BookInteractions/validation_summary.json",
+  "book_stand": {
+    "source": "Engine BasicShapes Cube; project-generated blockout stand",
+    "dimensions_cm": [
+      65,
+      55,
+      70
+    ],
+    "location_cm": [
+      4210,
+      -190,
+      35
+    ],
+    "reason": "Accessible placement outside raised checkout collision rim"
+  }
+}

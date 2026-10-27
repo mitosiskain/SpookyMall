@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "status": "EXECUTED_WITH_OBSERVATIONS_HARDWARE_PENDING",
+  "constraints": [
+    "No editor calls while Unreal is closed/building.",
+    "Use native Aura MCP only; no Computer Use.",
+    "PIE mutations must affect transient game instances, never the editor world, saved map or assets.",
+    "Direct receiver invocation validates receiver/AI integration; it does not prove microphone capture, speech recognition or voice RPC transport."
+  ],
+  "setup": {
+    "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+    "start_pie": {
+      "net_mode": "listen_server",
+      "num_clients": 2,
+      "window_width": 960,
+      "window_height": 540
+    },
+    "checks": [
+      "Start only after native build and saved Blueprint compile succeed.",
+      "Confirm is_pie_active instances identifies client_index0 listen host and1 joined client; honor GPU capacity recommendation.",
+      "Survey each live world once to obtain exact ghost/player/controller names.",
+      "Wait at least0.6s for runtime endpoints; each server PlayerController should have MallVoiceTransport; each relevant ghost peer should have exactly one MallGhostVoice receiver.",
+      "Read capsule collision Pawn response on host and client. Native receiver BeginPlay should set Ignore on both."
+    ]
+  },
+  "fixture_positions_cm": {
+    "ghost_home": {
+      "x": 4950,
+      "y": 0,
+      "z": 92.15
+    },
+    "host_nearby_safe_loop": {
+      "x": 4950,
+      "y": -640,
+      "z": 92.15
+    },
+    "remote_farther_safe_loop": {
+      "x": 5570,
+      "y": 640,
+      "z": 92.15
+    },
+    "main_hall_outside": {
+      "x": 3900,
+      "y": 0,
+      "z": 92.15
+    },
+    "negative_y_neighbor": {
+      "x": 4950,
+      "y": -950,
+      "z": 92.15
+    },
+    "positive_y_neighbor": {
+      "x": 4950,
+      "y": 950,
+      "z": 92.15
+    },
+    "upper_floor_same_xy": {
+      "x": 4950,
+      "y": 0,
+      "z": 942.15
+    }
+  },
+  "native_api_notes": {
+    "target_resolver": "unreal.MallGhostVoiceReceiver.resolve_target_pawn(ghost) returns the authoritative eligible ACharacter; compare actual possessed player identities, not hardcoded player0.",
+    "receiver": "ghost.get_component_by_class(unreal.MallGhostVoiceReceiver).on_server_phrase(server_speaker_pc, unreal.Name('phrase_id'), 1.0)",
+    "world_selection": "Discover actual PIE UWorlds and net modes before any Python fallback; the receiver call must target the listen-server world and its actual remote player's server controller. Native MCP pie_scene_edit exposes call_actor_function, not a component function, so a narrowly scoped execute_unreal_python call is justified only for this unavailable component-call operation. Fetch Python best practices before first use; never access editor actors/assets or save.",
+    "reads": "get_actor_property_in_pie(name=exact_ghost, component='MallGhostVoice', properties=['ReactionCount','LastPhrase','LastSpeaker','LastReactionServerTime'], client_index=0 or1); actor properties include TargetPlayer, PrototypeState, CooldownUntil, HasValidatedPath, OutsideBoundViolations, CatchCount, CurrentValidWaypoints, LastValidatedGoal.",
+    "recording": "start_state_recording ghost root/component world position plus CooldownUntil/OutsideBoundViolations/CatchCount/HasValidatedPath. Use socket_tracks with actor root for world positions. Non-numeric TargetPlayer/LastPhrase require individual property reads.",
+    "waits": "Use wait_pie_seconds or sequence waits; never wait_pie_frames because it freezes the game thread.",
+    "rpc_execution": "Editor Python forces nested RPCs to execute locally through FEditorScriptExecutionGuard. Use a native DEFER KE call to a discovered PIE component path for owner-RPC checks; direct Python receiver calls establish receiver/AI behavior and replicated properties, not multicast effects or end-to-end transport.",
+    "runtime_property_edits": "For this isolated transient hearing-range test, set_editor_property(..., notify_mode=unreal.PropertyAccessChangeNotifyMode.NEVER) and restore in finally. Editor property notifications reconstruct the owning Blueprint and invalidate its runtime controller cache."
+  },
+  "cases": [
+    {
+      "id": "nearest_multiplayer_target",
+      "arrange": "Host at near loop point, remote at farther loop point, both inside. No recent come_here preference.",
+      "act": "Allow one server Tick; read TargetPlayer and ResolveTargetPawn.",
+      "accept": "Nearest eligible host pawn selected. Moving host outside selects actual remote pawn. Both outside returns no target and ghost returns home."
+    },
+    {
+      "id": "accepted_sign_and_replication",
+      "arrange": "Remote inside, host nearby, no phrase in previous1.1s.",
+      "act": "Invoke remote server controller phrase where_are_you, then give_me_a_sign after1.1s.",
+      "accept": "Each call returns true; server ReactionCount increments once; LastPhrase and LastSpeaker identify phrase and actual remote pawn; corresponding client receiver telemetry converges. Local pulse/text/chime should appear on both relevant peers; rendering/audio remains a separate observation."
+    },
+    {
+      "id": "outside_and_floor_rejection",
+      "arrange": "Move both players outside for baseline. Then move remote to each out-of-store/main-hall/neighbor point and finally upper-floor sameXY point.",
+      "act": "Invoke where_are_you with actual remote server PC at each point; read pre/post ReactionCount and return bool.",
+      "accept": "All return false, count unchanged, no cue. Upper-floor feet850 excluded by authored[-40,+450] ground-floor eligibility."
+    },
+    {
+      "id": "unknown_confidence_and_rate_rejection",
+      "arrange": "Remote inside and within range.",
+      "act": "Invoke unknown_phrase; invoke a valid phrase with confidence0.1; accept one valid phrase then immediately repeat within1s.",
+      "accept": "Unknown/low-confidence/immediate-repeat calls return false and do not add reactions. A later valid phrase after1.1s is accepted."
+    },
+    {
+      "id": "hearing_range_gate",
+      "arrange": "Use clear interior poses separated beyond20m if validated by nav/capsule checks; otherwise temporarily reduce only this transient receiver HearingRangeCm to500 while speaker remains at a verified safe loop point more than500cm away. Restore original value after this isolated case.",
+      "act": "Invoke where_are_you beyond configured range, then move within range and retry after1.1s.",
+      "accept": "Outside configured range false/count unchanged; within range true. Do not claim real20m boundary was tested if using temporary500cm setting."
+    },
+    {
+      "id": "leave_me_alone_pause",
+      "arrange": "Eligible player at least300cm from ghost so no catch/reset interferes. Observe active pursuit first.",
+      "act": "Start state recording; invoke leave_me_alone; record at0.25s intervals for at least3.5 game seconds.",
+      "accept": "Accepted once; ClearRoute stops movement, cooldown extends to at leastreactionTime+3s; no pursuit displacement during first3s (small floor-settle tolerance only). Pursuit resumes after cooldown if a player remains eligible. CatchCount/player health/position unchanged."
+    },
+    {
+      "id": "come_here_remote_preference",
+      "arrange": "Host nearer than remote, both eligible; verify target initially host.",
+      "act": "Invoke come_here from actual remote server PC. Allow one Tick, then observe target and validated path for several seconds.",
+      "accept": "Remote pawn becomes TargetPlayer despite host being nearer; replan uses existing BuildValidatedRoute and all copied points remain in store. Preference lasts up to12s while eligible. If remote exits, fallback immediately chooses eligible host; both outside causes return. No direct voice-issued MoveTo bypass."
+    },
+    {
+      "id": "confinement_and_original_behavior",
+      "arrange": "Use each eligible player around both shelf loop routes; later place both players outside each of3exits.",
+      "act": "Sample ghost root world position, capsule dimensions, accepted waypoints, OutsideBoundViolations and CatchCount through pursuit, voice pause, retargeting, exit and return.",
+      "accept": "Capsule center stays within store marginsradius+5cm (withradius34: X3989..5911,Y±777.667), feet within80cm of floor; OutsideBoundViolations stays at baseline. Paths reject shelves/partial/wrongfloor as before; no player movement/health changes from phrase reactions."
+    },
+    {
+      "id": "network_phrase_guard_negative",
+      "arrange": "No active PTT or decoded speech in recognition grace window.",
+      "act": "Call the owning local MallVoiceComponent.SubmitRecognizedPhrase with an allowed ID; observe server receiver count/feedback.",
+      "accept": "Transport refuses phrase because no recent decoded speech/PTT. This intentionally must not trigger the ghost and is distinct from direct receiver tests."
+    },
+    {
+      "id": "actual_microphone_end_to_end_user_test",
+      "arrange": "Two players/headsets, inside test store, no editor test injection.",
+      "act": "Hold configured V push-to-talk, say each phrase clearly, release. Observe local microphone level/recognizer readiness and server heard feedback, remote proximity playback and ghost reaction.",
+      "accept": "Actual voice produces packets, offline recognition selects intended ID, server derives real speaker and accepts within store/range, ghost reacts on peers. Walk away to compare attenuation. This human hardware/network test remains pending unless real audio was exercised; synthetic recognition and receiver API calls do not substitute."
+    }
+  ],
+  "finish": [
+    "Stop state/visual recordings and PIE explicitly.",
+    "Verify PIE is inactive and editor packages are unchanged/clean.",
+    "Record which cases executed and which remain pending; save results separately from this prepared plan."
+  ],
+  "execution_result": "Automation/Voice/ghost_pie_acceptance.json"
+}

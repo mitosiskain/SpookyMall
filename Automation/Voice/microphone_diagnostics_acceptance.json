@@ -1,0 +1,147 @@
+{
+  "feature": "Fixed AGC target, fresh processing per PTT turn, opt-in local microphone diagnosis",
+  "status": "native_build_and_all_tests_passed",
+  "native_build": "Saved/Logs/MicrophoneDiagnosticsBuild.log",
+  "native_report": "Saved/Automation/MicrophoneDiagnosticsCold/index.json",
+  "changes": [
+    "Automatic gain uses its fixed speech target; saved manual boost applies only when AGC is off.",
+    "Every successful capture start resets prior gain, detector and filter state.",
+    "mall.MicRecordNext explicitly arms only one subsequent PTT turn for local raw/processed WAV and timing/level metadata.",
+    "Diagnostic audio is capped at eight seconds, excluded from Git, never uploaded and not retained without explicit arming.",
+    "Cancellation, disabled voice and PIE teardown discard unfinished diagnostic audio."
+  ],
+  "verification": {
+    "microphone_accessed_by_agent": false,
+    "recording_tests_use_synthetic_arrays_only": true,
+    "live_editor_ui_check": "Not run: user plans a PC restart; editor remains closed.",
+    "user_microphone_acceptance": "Pending: user reports microphone also failing in Discord after NVIDIA Studio installation and will troubleshoot Windows input after restart."
+  },
+  "remaining_limits": [
+    "Synthetic tests do not establish recognition accuracy on this microphone.",
+    "The existing Windows DirectSound capture can lose trailing or hitch-affected hardware samples; diagnostic timing and playback are provided to investigate actual input.",
+    "The basic filter is not neural speech isolation; Whisper cannot recover speech missing from the captured signal."
+  ],
+  "native_results": {
+    "succeeded": 19,
+    "failed": 0,
+    "warnings": 0,
+    "skipped": 0,
+    "duration_seconds": 148.3289337158203,
+    "tests": [
+      {
+        "name": "Mall.Ghost.BookInteraction",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "Mall.Ghost.SpiritBoxNetwork",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "Mall.Ghost.StateAndDisturbance",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "Mall.Voice.CodecAndPacketBounds",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "Mall.Voice.NetworkTransport",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.Microphone.AutomaticTargetIgnoresManualBoost",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.Microphone.ChunkInvarianceAndInvalidOptions",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.Microphone.LoudTransitionsAndManualGain",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.Microphone.LowFrequencyFilter",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.Microphone.QuietInput",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.Microphone.SilenceAndFloor",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.ConcurrentSpeechTeardown",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.ConcurrentWhisperTeardown",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.MicrophoneDiagnostics",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.MicrophonePipeline",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.OfflineSpeechBackend",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.PhraseMatching",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.PushToTalkUtterance",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "MyProject2.Voice.WhisperSpeechBackend",
+        "state": "Success",
+        "errors": 0,
+        "warnings": 0
+      }
+    ]
+  }
+}

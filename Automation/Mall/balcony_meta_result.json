@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "get_asset_meta",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Default Property Values for StaticMesh:\n  int32 LightMapResolution = 64\n  int32 LightMapCoordinateIndex = 2\n  EStaticMeshPaintSupport StaticMeshPaintSupport = Default\n  int32 MeshPaintTextureCoordinateIndex = 0\n  int32 MeshPaintTextureResolution = 0\n  float DistanceFieldSelfShadowBias = 0.000000\n  int32 LODForCollision = 0\n  uint8 bGenerateMeshDistanceField = False\n  uint8 bHasNavigationData = True\n  uint8 bSupportUniformlyDistributedSampling = False\n  uint8 bSupportPhysicalMaterialMasks = False\n  uint8 bSupportRayTracing = True\n  uint8 bAllowCPUAccess = False\n  uint8 bSupportGpuUniformlyDistributedSampling = False\n  FVector PositiveBoundsExtension = (X=0.000000,Y=0.000000,Z=0.000000)\n  FVector NegativeBoundsExtension = (X=0.000000,Y=0.000000,Z=0.000000)\n  TArray<TObjectPtr<UAssetUserData> > AssetUserData = []\n  AssetUserData contains 0 objects:\n  int32 NumCinematicMipLevels = 0\n  uint8 NeverStream = False\n  uint8 bGlobalForceMipLevelsToBeResident = False\n\nTo get referenced struct types/layouts call get_asset_structs\nTo get properties on components use get_blueprint_component_properties"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_asset_meta",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Default Property Values for BodySetup:\n  FKAggregateGeom AggGeom = ()\n  uint8 bConsiderForBounds = True\n  uint8 bDoubleSidedGeometry = False\n  uint8 bNeverNeedsCookedCollisionData = False\n  TObjectPtr<UPhysicalMaterial> PhysMaterial = None\n  FWalkableSlopeOverride WalkableSlopeOverride = ()\n  FBodyInstance DefaultInstance = (ObjectType=PhysicsBody)\n  FName BoneName = None\n  TEnumAsByte<EPhysicsType> PhysicsType = Default\n  TEnumAsByte<ECollisionTraceFlag> CollisionTraceFlag = Project Default\n  TEnumAsByte<EBodyCollisionResponse::Type> CollisionReponse = Enabled\n\nTo get referenced struct types/layouts call get_asset_structs\nTo get properties on components use get_blueprint_component_properties"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

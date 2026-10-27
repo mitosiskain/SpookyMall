@@ -1,0 +1,63 @@
+[
+  {
+    "file": "SM_CartWorkLampFull.fbx",
+    "sha256": "9b28c64f0b4eef9509e96bf6e918201874c59b65566ca0b5a88f1036fc1c09b0",
+    "bounds_cm": [
+      [
+        -34.099998474121094,
+        -38.97306823730469,
+        0.00010002404451370239
+      ],
+      [
+        34.10000228881836,
+        38.97306442260742,
+        133.2032470703125
+      ]
+    ],
+    "dimensions_cm": [
+      68.20000076293945,
+      77.94613265991211,
+      133.203147046268
+    ],
+    "pivot": "source ground origin",
+    "triangles": 10156,
+    "uv_channels": 1,
+    "materials": [
+      "work-lamp_body_pbr",
+      "work-lamp_head_pbr",
+      "work-lamp_lens_glow_x"
+    ],
+    "axes": "centimeters, +X lamp front, Z up",
+    "notes": "Default source head tilt retained (10 degrees down). Set component pitch to aim the spotlight downward."
+  },
+  {
+    "file": "SM_CartWorkLampHead.fbx",
+    "sha256": "ec2ae45a2a5a36bd562e73bf0117255132607b0126f665c31564c063ad8ed749",
+    "bounds_cm": [
+      [
+        -8.12334156036377,
+        -15.000000953674316,
+        -12.31590461730957
+      ],
+      [
+        7.593233108520508,
+        15.000000953674316,
+        16.660987854003906
+      ]
+    ],
+    "dimensions_cm": [
+      15.716574668884277,
+      30.000001907348633,
+      28.976892471313477
+    ],
+    "pivot": "source head tilt-axis origin",
+    "triangles": 4292,
+    "uv_channels": 1,
+    "materials": [
+      "work-lamp_head_pbr",
+      "work-lamp_lens_glow_x"
+    ],
+    "axes": "centimeters, +X lamp front, Z up",
+    "notes": "Default source head tilt retained (10 degrees down). Set component pitch to aim the spotlight downward."
+  }
+]

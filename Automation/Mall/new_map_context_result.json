@@ -1,0 +1,38 @@
+[
+  {
+    "tool": "get_unreal_context",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "handles: []\nimageParts: []\ntextParts:\n  -\n    Current window info:\n    {\r\n    \t\"open_windows\": [\r\n    \t\t\"MyProject2 - Unreal Editor\",\r\n    \t\t\"Message Log\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\",\r\n    \t\t\"\"\r\n    \t],\r\n    \t\"level\": \"PersistentLevel\",\r\n    \t\"current_level_path\": \"/Temp/Untitled_1091.Untitled_1091\"\r\n    }\nuseQuickSearch: false"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_available_actors_in_level",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Level Name: Untitled\nPath: /Temp/Untitled_1091.Untitled\n\n\nActor Hierarchy:\n- Label=\"WorldSettings\" Class=WorldSettings\n- Label=\"Brush0\" Class=Brush\n  Spatial info: Location=(0) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"VerificationFloor\" Class=StaticMeshActor\n  Spatial info: Location=(0) Rotation=(0) Scale=(X=50.00, Y=50.00, Z=1.00)\n- Label=\"VerificationSun\" Class=DirectionalLight\n  Spatial info: Location=(Z=500.00) Rotation=(P=-46.00) Scale=(X=2.50, Y=2.50, Z=2.50)\n- Label=\"VerificationSkyLight\" Class=SkyLight\n  Spatial info: Location=(Z=500.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n- Label=\"VerificationPlayerStart\" Class=PlayerStart\n  Spatial info: Location=(Z=100.00) Rotation=(0) Scale=(X=1.00, Y=1.00, Z=1.00)\n"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_asset_meta",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Default Property Values for MaterialInstanceConstant:\n  TObjectPtr<UPhysicalMaterialMask> PhysMaterialMask = None\n  TObjectPtr<UPhysicalMaterial> PhysMaterial = None\n  TObjectPtr<UPhysicalMaterial> PhysicalMaterialMap = None\n  TObjectPtr<UMaterialInterface> Parent = Material /InterchangeAssets/gltf/Substrate/M_GLTF.M_GLTF\n  FMaterialOverrideNanite NaniteOverrideMaterial = ()\n  uint8 bOverrideSubsurfaceProfile = False\n  uint8 bOverrideSpecularProfile = False\n  uint8 bOverrideToonProfile = False\n  uint8 bOverrideBlendableLocation = False\n  uint8 bOverrideBlendablePriority = False\n  uint8 bOverridePhysMaterial = False\n  TEnumAsByte<EBlendableLocation> BlendableLocationOverride = Scene Color After Tonemapping\n  int32 BlendablePriorityOverride = 0\n  TArray<FScalarParameterValue> ScalarParameterValues = [4 elements]\n    [0] (ParameterInfo=(Name=\"NormalTexture_TexCoord\"),\nParameterValue=1.000000)\n[1] (ParameterInfo=(Name=\"BaseColorTexture_TexCoord\"),\nParameterValue=1.000000)\n[2] (ParameterInfo=(Name=\"MetallicRoughnessTexture_TexCoord\"),\nParameterValue=1.000000)\n[3] (ParameterInfo=(Name=\"MetallicFactor\"))\n  TArray<FVectorParameterValue> VectorParameterValues = []\n  TArray<FDoubleVectorParameterValue> DoubleVectorParameterValues = []\n  TArray<FTextureParameterValue> TextureParameterValues = [3 elements]\n    [0] (ParameterInfo=(Name=\"NormalTexture\"),\nParameterValue=Texture2D /Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Textures/Stone_normal.Stone_normal)\n[1] (ParameterInfo=(Name=\"BaseColorTexture\"),\nParameterValue=Texture2D /Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Textures/Stone_basecolor.Stone_basecolor)\n[2] (ParameterInfo=(Name=\"MetallicRoughnessTexture\"),\nParameterValue=Texture2D /Game/Fab/Modular_Balcony_Structure_with_Glass_Railing___Outdoor_Balcony_Railing_Asset/railing/Textures/Stone_roughness.Stone_roughness)\n  TArray<FTextureCollectionParameterValue> TextureCollectionParameterValues = []\n  TArray<FParameterCollectionParameterValue> ParameterCollectionParameterValues = []\n  TArray<FRuntimeVirtualTextureParameterValue> RuntimeVirtualTextureParameterValues = []\n  TArray<FSparseVolumeTextureParameterValue> SparseVolumeTextureParameterValues = []\n  TArray<FFontParameterValue> FontParameterValues = []\n  TArray<FUserSceneTextureOverride> UserSceneTextureOverrides = []\n  FMaterialInstanceBasePropertyOverrides BasePropertyOverrides = (bOverride_BlendMode=True,bOverride_TwoSided=True,TwoSided=True,ShadingModel=Subsurface Profile,OpacityMaskClipValue=0.333300,UsageFlags=4456448)\n  TObjectPtr<USubsurfaceProfile> SubsurfaceProfile = None\n  TObjectPtr<UNeuralProfile> NeuralProfile = None\n  FLightmassMaterialInterfaceSettings LightmassSettings = ()\n  TArray<TObjectPtr<UAssetUserData> > AssetUserData = []\n  AssetUserData contains 0 objects:\n\nTo get referenced struct types/layouts call get_asset_structs\nTo get properties on components use get_blueprint_component_properties"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

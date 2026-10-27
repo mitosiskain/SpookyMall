@@ -1,0 +1,45 @@
+{
+  "ghost_count": 1,
+  "microphone_used": false,
+  "invisible_cue_count": 2,
+  "invisible_last_kind": "<MallGhostSoundKind.INVISIBLE: 0>",
+  "invisible_source": [
+    4950.0,
+    0.0,
+    156.1500015258789
+  ],
+  "ghost_location": [
+    4950.0,
+    0.0,
+    92.1500015258789
+  ],
+  "hunt_mode_requested": true,
+  "hunt_snapshot": {
+    "prototype_state": "Chasing",
+    "cue_count": 11,
+    "last_kind": "<MallGhostSoundKind.HUNT: 1>",
+    "last_sound": "/Game/Audio/Ghost/Physical/SW_Ghost_HuntGrowl.SW_Ghost_HuntGrowl",
+    "starting_source": [
+      4934.2735378657435,
+      -33.42539579043468,
+      156.1500015258789
+    ],
+    "ghost_location": [
+      4903.290653587013,
+      -99.27715322353659,
+      92.1500015258789
+    ],
+    "playing_physical_audio": [
+      {
+        "asset": "/Game/Audio/Ghost/Physical/SW_Ghost_HuntGrowl.SW_Ghost_HuntGrowl",
+        "position": [
+          4903.290653587013,
+          -99.27715322353659,
+          156.1500015258789
+        ],
+        "owner": "BP_StoreGhost_C_0"
+      }
+    ]
+  },
+  "restored_invisible_mode": true
+}

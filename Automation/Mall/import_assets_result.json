@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"Python execution result:\\n{\\n  \\\"bSuccess\\\": true,\\n  \\\"Message\\\": \\\"\\\",\\n  \\\"ResultData\\\": \\\"LOG OUTPUT:\\\\n{\\\\\\\"meshes\\\\\\\": 40, \\\\\\\"textures\\\\\\\": 66, \\\\\\\"warnings\\\\\\\": [\\\\\\\"Bounds require review: /Game/Environment/Mall/Models/PolyHaven/SM_PachiraA\\\\\\\", \\\\\\\"Bounds require review: /Game/Environment/Mall/Models/PolyHaven/SM_PachiraB\\\\\\\", \\\\\\\"Bounds require review: /Game/Environment/Mall/Models/PolyHaven/SM_PachiraC\\\\\\\", \\\\\\\"Bounds require review: /Game/Environment/Mall/Models/PolyHaven/SM_PachiraD\\\\\\\", \\\\\\\"Bounds require review: /Game/Environment/Mall/Models/PolyHaven/SM_PottedPlant01\\\\\\\"], \\\\\\\"report\\\\\\\": \\\\\\\"C:\\\\\\\\\\\\\\\\unreal\\\\\\\\\\\\\\\\uprj\\\\\\\\\\\\\\\\MyProject2\\\\\\\\\\\\\\\\Saved\\\\\\\\\\\\\\\\MallBuild\\\\\\\\\\\\\\\\import_report.json\\\\\\\"}\\\",\\n  \\\"TransactionId\\\": \\\"DF4E999D44418B83EE261EB1AF4EAB05\\\"\\n}\\nScript ID: traaqFb_-P2CRIsuaJfDn\"\n  }\n]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

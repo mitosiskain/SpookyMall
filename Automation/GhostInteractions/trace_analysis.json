@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "source": "C:\\unreal\\uprj\\MyProject2\\Saved\\GhostInteractionPrototype\\final_trace_tool.json",
+  "source_sha256": "f5c692f9488ae032679f3e1caf568b2466141c7e45977c55a602f925d76a72dc",
+  "scope": "Corrected physical-collision fixture session only. No editor or source changes by trace analyst.",
+  "sample_count": 1859,
+  "declared_sample_count": 1859,
+  "first_absolute_pie_time_seconds": 47.99966161698103,
+  "last_absolute_pie_time_seconds": 167.93319852277637,
+  "covered_duration_seconds": 119.93353690579534,
+  "all_values_finite": true,
+  "sample_times_strictly_increasing": true,
+  "observed_sample_intervals_seconds": {
+    "min": 0.04566450044512749,
+    "max": 0.21537800505757332,
+    "median": 0.062355250120162964
+  },
+  "actor_statistics": {
+    "StoreGhost_East_F0_02": {
+      "first_position_cm": [
+        4950.0,
+        0.0,
+        92.1500015258789
+      ],
+      "last_position_cm": [
+        4950.0,
+        0.0,
+        92.1500015258789
+      ],
+      "position_ranges_cm": {
+        "x": {
+          "min": 4341.10079693353,
+          "max": 4950.0
+        },
+        "y": {
+          "min": -626.9690321238578,
+          "max": 0.0
+        },
+        "z": {
+          "min": 92.1500015258789,
+          "max": 92.1500015258789
+        }
+      },
+      "net_displacement_cm": 0.0,
+      "net_horizontal_displacement_cm": 0.0,
+      "max_displacement_from_first_cm": 803.8171731992003,
+      "max_displacement_absolute_pie_time_seconds": 164.0089088268578,
+      "cumulative_sampled_path_cm": 3344.837212896249,
+      "max_sampled_speed_cm_s": 180.00000000001202,
+      "max_sampled_speed_absolute_pie_time_seconds": 154.35628632456064,
+      "speed_method": "Euclidean root-position difference divided by observed sample time difference; an interval average, not instantaneous velocity.",
+      "excluded_catch_reset_intervals": 5,
+      "max_raw_sampled_speed_including_catch_resets_cm_s": 13327.654981265914
+    },
+    "GhostLooseHardcover_East_F0_02": {
+      "first_position_cm": [
+        4188.999999577784,
+        -400.00000036757945,
+        96.09418512369832
+      ],
+      "last_position_cm": [
+        4188.999999577784,
+        -400.00000036757945,
+        96.09418512369832
+      ],
+      "position_ranges_cm": {
+        "x": {
+          "min": 4188.999999577784,
+          "max": 4188.999999577784
+        },
+        "y": {
+          "min": -400.00000036757945,
+          "max": -400.00000036757945
+        },
+        "z": {
+          "min": 96.09418512369832,
+          "max": 96.09418512369832
+        }
+      },
+      "net_displacement_cm": 0.0,
+      "net_horizontal_displacement_cm": 0.0,
+      "max_displacement_from_first_cm": 0.0,
+      "max_displacement_absolute_pie_time_seconds": 47.99966161698103,
+      "cumulative_sampled_path_cm": 0.0,
+      "max_sampled_speed_cm_s": 0.0,
+      "max_sampled_speed_absolute_pie_time_seconds": 48.08578572049737,
+      "speed_method": "Euclidean root-position difference divided by observed sample time difference; an interval average, not instantaneous velocity.",
+      "excluded_catch_reset_intervals": 0,
+      "max_raw_sampled_speed_including_catch_resets_cm_s": 0.0
+    },
+    "GhostLooseSoftcover_East_F0_02": {
+      "first_position_cm": [
+        4188.999999560687,
+        -315.0000005324,
+        95.87014047290525
+      ],
+      "last_position_cm": [
+        4138.577928887806,
+        -286.4539905834445,
+        1.8725131307373915
+      ],
+      "position_ranges_cm": {
+        "x": {
+          "min": 4136.794065887343,
+          "max": 4190.667069252845
+        },
+        "y": {
+          "min": -315.88509526212977,
+          "max": -286.44309751689315
+        },
+        "z": {
+          "min": 1.8725131307373915,
+          "max": 103.91003721023169
+        }
+      },
+      "net_displacement_cm": 110.42107516640084,
+      "net_horizontal_displacement_cm": 57.94186651245264,
+      "max_displacement_from_first_cm": 110.42626789132315,
+      "max_displacement_absolute_pie_time_seconds": 86.85770622268319,
+      "cumulative_sampled_path_cm": 144.105851851069,
+      "max_sampled_speed_cm_s": 240.275250448834,
+      "max_sampled_speed_absolute_pie_time_seconds": 86.62491642311215,
+      "speed_method": "Euclidean root-position difference divided by observed sample time difference; an interval average, not instantaneous velocity.",
+      "excluded_catch_reset_intervals": 0,
+      "max_raw_sampled_speed_including_catch_resets_cm_s": 240.275250448834
+    }
+  },
+  "ghost_capsule_confinement": {
+    "store_cm": {
+      "min_x": 3950.0,
+      "max_x": 5950.0,
+      "min_y": -816.6666667,
+      "max_y": 816.6666667,
+      "floor_z": 0.0,
+      "clear_height_cm": 800.0
+    },
+    "radius_cm": 34.0,
+    "half_height_cm": 90.0,
+    "required_extra_xy_margin_cm": 5.0,
+    "samples_outside_full_capsule_plus_margin": 0,
+    "all_samples_pass": true,
+    "minimum_observed_capsule_xy_edge_clearance_cm": 155.69763457614215,
+    "capsule_feet_z_range_cm": [
+      2.1500015258789062,
+      2.1500015258789062
+    ],
+    "capsule_top_z_range_cm": [
+      182.1500015258789,
+      182.1500015258789
+    ]
+  },
+  "ghost_store_violation_counter_range": [
+    0.0,
+    0.0
+  ],
+  "ghost_catch_count_range": [
+    0.0,
+    5.0
+  ],
+  "catch_events": [
+    {
+      "absolute_pie_time_seconds": 133.915815025568,
+      "previous_count": 0,
+      "count": 1,
+      "root_displacement_cm": 0.0
+    },
+    {
+      "absolute_pie_time_seconds": 136.91974702477455,
+      "previous_count": 1,
+      "count": 2,
+      "root_displacement_cm": 0.0
+    },
+    {
+      "absolute_pie_time_seconds": 146.36818812787533,
+      "previous_count": 2,
+      "count": 3,
+      "root_displacement_cm": 752.0845794329255
+    },
+    {
+      "absolute_pie_time_seconds": 155.82123612612486,
+      "previous_count": 3,
+      "count": 4,
+      "root_displacement_cm": 750.4042622547661
+    },
+    {
+      "absolute_pie_time_seconds": 165.23201652616262,
+      "previous_count": 4,
+      "count": 5,
+      "root_displacement_cm": 749.4222483967443
+    }
+  ],
+  "has_validated_path_sample_count": 291,
+  "known_invisible_initial_interval": {
+    "through_absolute_pie_time_seconds": 129.11815912649035,
+    "sample_count": 1267,
+    "catch_count_range": [
+      0.0,
+      0.0
+    ],
+    "evidence": "final_hunt_sequence_tool.json direct gated TryCatchPlayer before mode change"
+  },
+  "known_invisible_final_interval": {
+    "from_absolute_pie_time_seconds": 166.53613402694464,
+    "sample_count": 19,
+    "catch_count_range": [
+      5.0,
+      5.0
+    ],
+    "evidence": "final_invisible_stop_tool.json"
+  },
+  "limitations": [
+    "Trace does not record ghost mode directly; the two invisible windows use separate timestamped action evidence, with no inference of the exact hunt-mode change time.",
+    "Five catches during the visible-hunt portion are intentional. Zero catches is not claimed for the complete trace.",
+    "The trace contains prop root positions, not rotated mesh bounds or instantaneous physics velocities. Full prop-mesh confinement and a strict instantaneous speed ceiling cannot be proven from these root samples.",
+    "Catch reset teleports are excluded from the ghost locomotion-speed estimate and retained in raw-speed and event diagnostics.",
+    "Confinement is established at recorded samples, not every simulation frame. No forced displacement recovery was performed within this recording."
+  ]
+}

@@ -1,0 +1,2658 @@
+[
+  {
+    "url": "https://cdn.3dassets.dev/assets/25162/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25162.glb",
+    "bytes": 97584,
+    "sha256": "dd8235d7c21e3667f41e447c3637bff36a5e2d91181f8e9fe8dd33747c5455b7",
+    "id": "25162",
+    "name": "Slatwall panel 1.2 by 2.4 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-slatwall-panel-2400-b9244dd5",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25164/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25164.glb",
+    "bytes": 51508,
+    "sha256": "e25338eb5c6d6fe17681e1cf3e21a2ae260b7c13b96b47ff9d65ce19617c512e",
+    "id": "25164",
+    "name": "Slatwall panel 1.2 by 1.2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-slatwall-panel-1200-4f832c73",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25166/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25166.glb",
+    "bytes": 32564,
+    "sha256": "c3c34afc26a330668e351a04b56a9ddd19c3f2bf64a3b04f021041f440401829",
+    "id": "25166",
+    "name": "Slatwall shelf bracket and shelf (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-slatwall-shelf-bracket-9b6bccae",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25160/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25160.glb",
+    "bytes": 13768,
+    "sha256": "f9bb7d57be2d8ee5f70d9de5ffb3901d3bdc16d7a04305929f0d0e8ce38b47a8",
+    "id": "25160",
+    "name": "Slatwall straight hanging arm (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-slatwall-hanging-arm-1aab40b4",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25159/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25159.glb",
+    "bytes": 37196,
+    "sha256": "ad7782ebbc8c5ade655d557283ebe198dfe4a3766c008075980505d753a35b0d",
+    "id": "25159",
+    "name": "Slatwall waterfall arm (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-slatwall-waterfall-arm-e95f0bb8",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25165/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25165.glb",
+    "bytes": 33900,
+    "sha256": "567f4566402b5864b158bcf9815fa84ebaa404206ecfb8ccb2b5f0228a631f1e",
+    "id": "25165",
+    "name": "Gridwall panel 1.2 by 2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-gridwall-panel-2000-9565639f",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25163/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25163.glb",
+    "bytes": 27920,
+    "sha256": "5b72f01e0699a83c4cb630fc1d7b35d9eef99095f40f7ea2b4409fa26e464fa7",
+    "id": "25163",
+    "name": "Gridwall hook set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-gridwall-hook-set-8d560056",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25167/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25167.glb",
+    "bytes": 18768,
+    "sha256": "a3fe3dc4e2492bd2cff7fc4f17065c44f2ea241f8afa9548485aa21fe5d32f16",
+    "id": "25167",
+    "name": "Gridwall wire basket (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-gridwall-basket-24562f53",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25175/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25175.glb",
+    "bytes": 86272,
+    "sha256": "10dec0303f671b0dddeab45ec6aa73a66e3142a62d28ce07f3dd4bd6a1401883",
+    "id": "25175",
+    "name": "Slotted pilaster upright 2.4 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-pilaster-upright-2400-cf874b4d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25177/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25177.glb",
+    "bytes": 27144,
+    "sha256": "98d791666f4de4b59266185aa4018c2b1f759a508793efe61ed3e36972f8cd01",
+    "id": "25177",
+    "name": "Glass shelf bracket set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-glass-shelf-bracket-set-a29e25b7",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25179/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25179.glb",
+    "bytes": 17896,
+    "sha256": "7edae0e4b439c01de27ccbb9480a798bafe6c2fb8c88ef96f5af52674ac6d0c5",
+    "id": "25179",
+    "name": "Illuminated back panel (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-back-panel-lightbox-2f82717e",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25183/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25183.glb",
+    "bytes": 119592,
+    "sha256": "24d25ba8bb8f635c1ebfde1ed016512060e68f8acabdf00532bbf51fa641a194",
+    "id": "25183",
+    "name": "Perimeter wall bay 2.4 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-2400-986272c2",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25185/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25185.glb",
+    "bytes": 101536,
+    "sha256": "08c97ce9b8a21e3da800da1edbf12bedd40e64691cf49b10abb23ec93b2802ee",
+    "id": "25185",
+    "name": "Perimeter wall bay 2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-2000-9ae56ac3",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25182/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25182.glb",
+    "bytes": 155468,
+    "sha256": "0f2d29581d9d34902837da1e01fab507a233496dbb3104b5cc074277a570b41a",
+    "id": "25182",
+    "name": "Perimeter wall bay 3 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-3000-9db1d654",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25181/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25181.glb",
+    "bytes": 139588,
+    "sha256": "49ffb0ca5608630d93eb0b8b457e0b4a0b0791f27a826e76025d0da35d289453",
+    "id": "25181",
+    "name": "Perimeter wall bay with hanging rails (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-hanging-rail-fa616c40",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25184/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25184.glb",
+    "bytes": 128120,
+    "sha256": "c7b20c3ac7582b81782b1fba39e25df0a7abeebbb0c8dd6a5c69aa94034b842f",
+    "id": "25184",
+    "name": "Perimeter wall bay, shelf and rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-shelf-and-rail-e1cc3046",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25191/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25191.glb",
+    "bytes": 195512,
+    "sha256": "8c7092548a83645e7b318c482d1f874ab3ebbfcc2afdc84400cf3242b1384849",
+    "id": "25191",
+    "name": "Perimeter wall bay with slatwall back (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-slatwall-back-8ec66601",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25193/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25193.glb",
+    "bytes": 217984,
+    "sha256": "5854a87ec8a5bc7140c79eb69b9f2731e017bdf7cadebfc0c8b43831ee2d7d24",
+    "id": "25193",
+    "name": "Perimeter wall bay, shoe shelves (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-shoe-shelves-db35fa9a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25195/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25195.glb",
+    "bytes": 131892,
+    "sha256": "302a1829606a5a2617606cbac593c5284896f676e2c704d3be0afa2d351ab3f9",
+    "id": "25195",
+    "name": "Perimeter wall bay with cubbies (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-cubbies-e16c3314",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25198/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25198.glb",
+    "bytes": 117268,
+    "sha256": "fee21087047ca94820b4a925c5ba105bef37c84b66ec7f3d1897e9362210add3",
+    "id": "25198",
+    "name": "Mirrored perimeter wall bay (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-mirrored-e2296c1f",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25200/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25200.glb",
+    "bytes": 128688,
+    "sha256": "3993650e0cbf841a08cd576395c7146ba7d4024bf1a2274ed9cbcaea8c6d826c",
+    "id": "25200",
+    "name": "Perimeter wall bay with header sign (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-header-sign-d6447e4c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25197/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25197.glb",
+    "bytes": 48664,
+    "sha256": "8015ddc15f9e0753b28a99a92124bba577abf0dd03787b4b09298c1831cf1204",
+    "id": "25197",
+    "name": "Perimeter wall bay corner (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-corner-166781af",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25196/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25196.glb",
+    "bytes": 11024,
+    "sha256": "93223ac8119fd21a38f3d8a5c8b36c2ccfe54a0944d8c63f7dfd66cd69114ac6",
+    "id": "25196",
+    "name": "Perimeter wall bay end panel (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-end-panel-3e2ecf22",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25206/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25206.glb",
+    "bytes": 14792,
+    "sha256": "2a05c0993617f55f2111351244d1287ff190ad35f89470ac388a65f13b9382b0",
+    "id": "25206",
+    "name": "Wall bay lighting strip (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-bay-lighting-strip-efd738fd",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25208/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25208.glb",
+    "bytes": 44800,
+    "sha256": "b3e031337bf96ebef9b9ebc906c6d0a3d43d024101010af80ee534d1ce3209c2",
+    "id": "25208",
+    "name": "Straight hanging rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-straight-hanging-rail-32864b2b",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25212/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25212.glb",
+    "bytes": 50560,
+    "sha256": "b7d1ebdc58b69ae2d22fdc2e94460a5cb91200e8c60a66cb406d5f9dccb1d29c",
+    "id": "25212",
+    "name": "Two-tier hanging rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-two-tier-hanging-rail-eff1579b",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25210/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25210.glb",
+    "bytes": 60744,
+    "sha256": "1a3039ef30fb726938864c5b3bb907adc820c3eb25060536a1eb124cf596fc25",
+    "id": "25210",
+    "name": "Round hanging rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-round-hanging-rail-1bd87436",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25211/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25211.glb",
+    "bytes": 66860,
+    "sha256": "d851e2bd0bda64b2eea730393a3513c4a8000295d2de8d1c538940199d8216d9",
+    "id": "25211",
+    "name": "Four-way arm rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-four-way-arm-rail-bc29f434",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25215/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25215.glb",
+    "bytes": 145232,
+    "sha256": "d9f1e57dae78ca394bf61804cdd4edfd7dc5f3fd4db64506f15936832995f3d6",
+    "id": "25215",
+    "name": "Four-way waterfall rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-four-way-waterfall-rail-678f3d1d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25214/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25214.glb",
+    "bytes": 89724,
+    "sha256": "deb9d7b089d295241082a3d998e4c736a34dd0fcdd1cc03c4638a6180cb0dd11",
+    "id": "25214",
+    "name": "Rolling garment rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-rolling-garment-rail-38dfcbfa",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25218/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25218.glb",
+    "bytes": 41720,
+    "sha256": "dbaf7dd53e7a078498bf553822bdee30a1cc22fe22dec9218c33086f88c536a8",
+    "id": "25218",
+    "name": "Nesting display table, large (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-nesting-display-table-l-d25ccca1",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25221/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25221.glb",
+    "bytes": 41728,
+    "sha256": "23c52a95e0f77b11b7e73f92ccd4311ad2efa91437e5a4d16b95d6618890ef3c",
+    "id": "25221",
+    "name": "Nesting display table, medium (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-nesting-display-table-m-88d7c9a2",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25223/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25223.glb",
+    "bytes": 41724,
+    "sha256": "58d0943b8635f269676436dfa4a94fb9e37db37ee82d45d11b89b044808e546e",
+    "id": "25223",
+    "name": "Nesting display table, small (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-nesting-display-table-s-e81c1aa7",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25225/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25225.glb",
+    "bytes": 32072,
+    "sha256": "2a605e5fd34cd94739d32f0636590d710ab048e1896b76792a27d5cf6c0acd06",
+    "id": "25225",
+    "name": "Tiered round display table (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-tiered-round-display-ta-59099c32",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25226/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25226.glb",
+    "bytes": 14788,
+    "sha256": "23fa5f0043dfff384d481c4e66f0526ba8f8ec72d6dfa465df6f5d553c2df2eb",
+    "id": "25226",
+    "name": "Cube display block (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cube-display-block-561b48be",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25227/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25227.glb",
+    "bytes": 28644,
+    "sha256": "9b89288f944065f4ff57dc824650994396a7929b056fd070e414e8d0c68c6774",
+    "id": "25227",
+    "name": "Stepped display riser (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-stepped-display-riser-8b7a9715",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25230/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25230.glb",
+    "bytes": 19524,
+    "sha256": "33fec8cfb5ee6a4117eacb77d6913f5b61c4acf700393e40e72b1e886d3e6ecb",
+    "id": "25230",
+    "name": "Shoe riser set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shoe-riser-set-55368ed1",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25235/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25235.glb",
+    "bytes": 73224,
+    "sha256": "143d35d2ec075216c06a8598760ed07ce6e7e2b9125de463dc2acb52b24731cc",
+    "id": "25235",
+    "name": "Waterfall display stand (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-waterfall-display-stand-f7ed4580",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25236/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25236.glb",
+    "bytes": 92436,
+    "sha256": "e0e56625f643c2d27d4b6a61a075bcf00aa6c8c81a441db7b9a542a2da0c8d8e",
+    "id": "25236",
+    "name": "Accessory spinner rack (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-spinner-rack-accfe5be",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25238/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25238.glb",
+    "bytes": 94644,
+    "sha256": "3e38060d1daa44ad777351d7d6287c9efb7cc611783fcadea882d2ea234f3d25",
+    "id": "25238",
+    "name": "Wire basket bin (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wire-basket-bin-c12d54af",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25239/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25239.glb",
+    "bytes": 50932,
+    "sha256": "88b615c9f51a172d2c91dab576d8082b6c780c17c15b37ea2a7562fc772c02c7",
+    "id": "25239",
+    "name": "Promotional dump bin (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-promotional-dump-bin-6a9cf661",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25242/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25242.glb",
+    "bytes": 73796,
+    "sha256": "abba57a2ce341a8f143a65e399ab0d15b1174bc33d3415521ccf83b24b8e5c91",
+    "id": "25242",
+    "name": "Mid-floor gondola, general merchandise (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mid-floor-gondola-630432ab",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25241/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25241.glb",
+    "bytes": 42428,
+    "sha256": "def846a9a384c0029eccf5c2c5df8acd7e83471317a43d963da92eea6ee83385",
+    "id": "25241",
+    "name": "Mid-floor gondola with hanging rails (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mid-floor-gondola-hangi-0dcd7220",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25243/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25243.glb",
+    "bytes": 86288,
+    "sha256": "5c8cb20cd19733902ef917cb5357e74ff8af44d1387f9ddd23a59753ad875d25",
+    "id": "25243",
+    "name": "Mid-floor gondola with header signs (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mid-floor-gondola-heade-c8d5897f",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25244/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25244.glb",
+    "bytes": 32816,
+    "sha256": "c32351c48b9b2e2dc242f0327201650a024e1b7ec8d2d9cf13894828397030dd",
+    "id": "25244",
+    "name": "Gondola endcap unit (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-gondola-endcap-unit-c13129ed",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25250/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25250.glb",
+    "bytes": 14740,
+    "sha256": "392e0a5eeb4c41ccd14b5145b9400c64a6d3d6467b206d2b18121dc40b080f86",
+    "id": "25250",
+    "name": "End display plinth (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-end-display-plinth-7fb6613d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25252/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25252.glb",
+    "bytes": 39392,
+    "sha256": "6edeccd22be0792c2d776aac66408b210c324fc4dc031bc1e6a473301b5a826e",
+    "id": "25252",
+    "name": "Folded stock cube unit (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-folded-stock-cube-unit-9651a3ff",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25254/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25254.glb",
+    "bytes": 23316,
+    "sha256": "62f93e04130b801a8fb7ab794b7653e94aa5d32270a8138b6e394641aeeddad9",
+    "id": "25254",
+    "name": "Feature display podium (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-feature-display-podium-27ff440d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25255/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25255.glb",
+    "bytes": 29432,
+    "sha256": "d38dc01a724aff8816673038d2d9bcee400547184e7eacb72113d0bdd5d02e6e",
+    "id": "25255",
+    "name": "Aisle stack base (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-aisle-stack-base-1b48d35b",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25258/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25258.glb",
+    "bytes": 35264,
+    "sha256": "adda2223c87ca3846888984b26271bb191b66482fe786fb3e5b20f240694e76f",
+    "id": "25258",
+    "name": "Display arm bracket set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-display-arm-bracket-set-40ccc6db",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25257/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25257.glb",
+    "bytes": 127708,
+    "sha256": "eb0cdbe148e8ecce6b018ad679dee703c2dba0d43d595597ecc741a0308c2e6a",
+    "id": "25257",
+    "name": "Female display mannequin, standing (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mannequin-female-standi-bd5d8738",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25259/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25259.glb",
+    "bytes": 127696,
+    "sha256": "2cf960f001caf043e6f2b72df8fc8cabe386ac8d2d068365b6343ef960cb8302",
+    "id": "25259",
+    "name": "Male display mannequin, standing (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mannequin-male-standing-0fdc08d4",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25265/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25265.glb",
+    "bytes": 127736,
+    "sha256": "3dce54446e78a10326745a048e60fe2eabd4eb0ead6f8fd94b5b672f3675399c",
+    "id": "25265",
+    "name": "Female display mannequin, walking pose (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mannequin-walking-pose-61fa590e",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25266/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25266.glb",
+    "bytes": 127644,
+    "sha256": "b41c7ada76bf767fce872a6f8d1e7797dbd9cde5bdddf2b2a14d0f3c33b33f29",
+    "id": "25266",
+    "name": "Child display mannequin (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mannequin-child-3ce99644",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25267/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25267.glb",
+    "bytes": 100924,
+    "sha256": "fded031e021bfe2cdde4ff4eeb52a731b6917ab56d91a36720976c246e0d32aa",
+    "id": "25267",
+    "name": "Abstract headless mannequin (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mannequin-abstract-head-c8ab989a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25270/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25270.glb",
+    "bytes": 106712,
+    "sha256": "8fd866797e4e351ccc987ff1986def7c130f145bbca89e363367f35cc468e029",
+    "id": "25270",
+    "name": "Seated display mannequin (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mannequin-seated-05ab1b9a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25271/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25271.glb",
+    "bytes": 52640,
+    "sha256": "39d0d8854763f202493653339a9c534b5167a802265b93044e2b2b2673cb3683",
+    "id": "25271",
+    "name": "Torso display form on stand (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-torso-form-on-stand-f0286b0d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25272/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25272.glb",
+    "bytes": 52516,
+    "sha256": "d54d46a3bc1f739ef91b4d09ed3329251cece104878d3e833645e79e131540ab",
+    "id": "25272",
+    "name": "Dressmaker bust form (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-bust-form-dressmaker-59efeff3",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25273/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25273.glb",
+    "bytes": 46996,
+    "sha256": "a2bbc15c99bc841a0c73a8cf63863c93f50d24ed2f36a118597e8a42febd230a",
+    "id": "25273",
+    "name": "Trouser display form (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-trouser-form-d8ac0746",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25278/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25278.glb",
+    "bytes": 23284,
+    "sha256": "4801f50eda6b656662104cfec1f6e4bca20590b04753a84627b4a2c0b1536e1d",
+    "id": "25278",
+    "name": "Hanging shoulder form (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-hanging-shoulder-form-455efe13",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25279/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25279.glb",
+    "bytes": 21988,
+    "sha256": "2d72a2c85403c0e4390ecee39352db5d43af4bed22c5af43157d08e736d2f758",
+    "id": "25279",
+    "name": "Shoe display form (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shoe-display-form-acc8200b",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25280/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25280.glb",
+    "bytes": 46364,
+    "sha256": "8c456fc184789c59c531675c0f12c978a2aa3e59db5fb0178b944d85088fe4bf",
+    "id": "25280",
+    "name": "Mannequin arm form pair (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mannequin-arm-form-pair-c4da9150",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25281/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25281.glb",
+    "bytes": 14752,
+    "sha256": "ef77d20e48117b763db7128fb310243e4a7dfe4222b94f91ff0ef656465bab93",
+    "id": "25281",
+    "name": "Display form plinth (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-display-form-plinth-bf1a3da0",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25284/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25284.glb",
+    "bytes": 67268,
+    "sha256": "8233ca9d7f174aa89a5e8beae093741bab8c4216bb42f9818384c43a32f1aab2",
+    "id": "25284",
+    "name": "Fitting room cubicle (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fitting-room-cubicle-d8d69e06",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25285/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25285.glb",
+    "bytes": 68964,
+    "sha256": "c51b2cccb98ce86829b560d22beba335afd069fc00cf1203dbf40e6a13fb9204",
+    "id": "25285",
+    "name": "Fitting room cubicle, door open (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fitting-room-cubicle-op-e785368c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25287/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25287.glb",
+    "bytes": 68968,
+    "sha256": "9a3b9629b922ef3fb527537f7b4f7900ab3e747a3b2c49c3f6c4bf16b32a199b",
+    "id": "25287",
+    "name": "Accessible fitting room cubicle (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fitting-room-accessible-279f1ce4",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25288/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25288.glb",
+    "bytes": 87176,
+    "sha256": "d56fd4e0a49a91a6d6a41631262c83a9df8af22ecd42f684492f41483885f084",
+    "id": "25288",
+    "name": "Curtain fitting room cubicle (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fitting-room-curtain-cu-9e07d32d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25295/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25295.glb",
+    "bytes": 23348,
+    "sha256": "40add1cbbb85ec4c7f290b78bbf3adb15edeb39ed2664ce9ec360e35ac334c88",
+    "id": "25295",
+    "name": "Fitting room corner module (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fitting-room-corner-mod-92a1d8e1",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25294/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25294.glb",
+    "bytes": 52224,
+    "sha256": "3ec96ad2447ccc6835fa628f79a85bf181e7c495f48bec26607652572baee94f",
+    "id": "25294",
+    "name": "Cubicle bench and hook rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cubicle-bench-and-hooks-c434b153",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25296/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25296.glb",
+    "bytes": 20984,
+    "sha256": "fde58f486c7dd42f465c0d2c1de886095b0c33f2e90215895f55f7ac8b303b67",
+    "id": "25296",
+    "name": "Full-length leaning mirror (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-full-length-mirror-df912980",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25297/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25297.glb",
+    "bytes": 40092,
+    "sha256": "48dbfdd05746f28fb02bf1545a5e9c8acaa2667639b7d17783e78c3ad4a25d82",
+    "id": "25297",
+    "name": "Tri-fold fitting mirror (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-tri-fold-mirror-baa2e387",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25299/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25299.glb",
+    "bytes": 20164,
+    "sha256": "38a76dd1e3140171c4cf19190526c5cea42818dd41acfe3a5e13a92fe8f2b19a",
+    "id": "25299",
+    "name": "Wall mirror panel (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-wall-mirror-panel-e61a4d20",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25301/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25301.glb",
+    "bytes": 29372,
+    "sha256": "c131e90c7a20cf5fa464a400db21cac84c382752ce14bb7678d79deaf0687e8b",
+    "id": "25301",
+    "name": "Fitting room queue post (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fitting-room-queue-post-1a22c281",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25303/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25303.glb",
+    "bytes": 35476,
+    "sha256": "2f4f9371244caaed0da8e61bd590c29958f5dbf81c950b6be762e915306698b1",
+    "id": "25303",
+    "name": "Garment return rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-garment-return-rail-685b51d4",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25302/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25302.glb",
+    "bytes": 42520,
+    "sha256": "dbc3582600bebfc1394c1d673c0ae5abea781e41c9a94fa52b37ceebe7863041",
+    "id": "25302",
+    "name": "Fitting room attendant podium (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fitting-room-attendant--24feae68",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25309/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25309.glb",
+    "bytes": 42184,
+    "sha256": "0bd2d2b2d10c50c48e78a666d5b157408bfbde2ab181cf75ede7f9e418b5a466",
+    "id": "25309",
+    "name": "Fitting room lobby bench (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fitting-room-lobby-benc-cb01325c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25310/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25310.glb",
+    "bytes": 35136,
+    "sha256": "400aaf8bbcaee49a56a2cc15212c11e5eed6b683ee2a2599c3283ff3b92587d1",
+    "id": "25310",
+    "name": "Cash desk module 1.2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cash-desk-module-1200-daec0656",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25311/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25311.glb",
+    "bytes": 35136,
+    "sha256": "9f132cd6716907fa4a80cd2d9ddb451b24a249f87ae6ce3bd1750ddf73e82aa8",
+    "id": "25311",
+    "name": "Cash desk module 600 mm (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cash-desk-module-600-0054b2bd",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25312/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25312.glb",
+    "bytes": 31600,
+    "sha256": "831a5fd33c283e13cb2c1d47964deb223fee2953a77aace0d9ff7471a0a692e7",
+    "id": "25312",
+    "name": "Cash desk corner module (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cash-desk-corner-06d0dd83",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25314/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25314.glb",
+    "bytes": 37336,
+    "sha256": "989f90c39849b8537e927553656f1c59d76a5ddce5ea29c40364f0b0cb206fea",
+    "id": "25314",
+    "name": "Cash desk gate flap (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cash-desk-gate-flap-6cac0da5",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25317/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25317.glb",
+    "bytes": 60428,
+    "sha256": "ef3d36266fa0a101e6e3b1dff2462acff7f518a0df352f1692634c33a8af17c7",
+    "id": "25317",
+    "name": "Cash desk back fixture (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cash-desk-back-fixture-b9d666d8",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25318/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25318.glb",
+    "bytes": 64432,
+    "sha256": "cf57103fddbc59b387f2e3a186327b65287b725d2174f9d573998268bf65a800",
+    "id": "25318",
+    "name": "Till drawer unit (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-till-drawer-unit-77715887",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25319/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25319.glb",
+    "bytes": 63596,
+    "sha256": "94865accd581a0d942f44ba702c90294ff2b34c7aaeeef50fd18ba382f5429ee",
+    "id": "25319",
+    "name": "Till drawer unit, drawer open (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-till-drawer-unit-open-cea35d89",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25324/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25324.glb",
+    "bytes": 26816,
+    "sha256": "fb61bb83af622b3152aef6933584cd7a7437439c52c908e450906543cf307018",
+    "id": "25324",
+    "name": "Point of sale terminal (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-pos-terminal-8d0454bd",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25326/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25326.glb",
+    "bytes": 67624,
+    "sha256": "3fc51d06a216c688355fc695e084f63b3fb0693d5e089d9840dc85e20750de49",
+    "id": "25326",
+    "name": "Card terminal on stand (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-card-terminal-stand-a5c2c2d7",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25327/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25327.glb",
+    "bytes": 26224,
+    "sha256": "49050dd15ea0b4c29843f71c876ec90c275cf0f66a3a03426c38ec5b81ee31d9",
+    "id": "25327",
+    "name": "Thermal receipt printer (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-receipt-printer-5a85a1c8",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25330/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25330.glb",
+    "bytes": 23604,
+    "sha256": "6de4b9366db2242d696beef0f6b7c7c4fdf33d2817b3acf14f2488c0c53c7a92",
+    "id": "25330",
+    "name": "Counter bag stand (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-bag-stand-c900c543",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25334/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25334.glb",
+    "bytes": 54736,
+    "sha256": "664971e0609cc549116e13b9914b9617e618bc6fd713511e90f498a953c4231d",
+    "id": "25334",
+    "name": "Security pedestal pair (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-security-pedestal-pair-1da91703",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25332/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25332.glb",
+    "bytes": 19856,
+    "sha256": "cd5a6d91a99e1c0f43f1ba553af73de33fb2c8fb9c3c4982b1792d5aeb6429ac",
+    "id": "25332",
+    "name": "Security tag remover (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-tag-remover-unit-b81fc600",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25337/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25337.glb",
+    "bytes": 25796,
+    "sha256": "9149ec8ed2d973baad87b77064e2e6286f5097559218a2478bf4d6400ec5ab8d",
+    "id": "25337",
+    "name": "Ceiling camera dome (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-ceiling-camera-dome-f94d641c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25336/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25336.glb",
+    "bytes": 49188,
+    "sha256": "a5aa077e627e6e1d803bca7436a8178a5b8a6d0506e9a6a3d5e53682e0f43358",
+    "id": "25336",
+    "name": "Counter queue rail (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-counter-queue-rail-da9f9564",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25339/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25339.glb",
+    "bytes": 90064,
+    "sha256": "100b9fdadf21452afc52bf992bf94f86c3e820219a4f631f8fded0eb3574c814",
+    "id": "25339",
+    "name": "Glazed cash desk display case (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cash-desk-glazed-displa-283ab5ba",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25340/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25340.glb",
+    "bytes": 30920,
+    "sha256": "d5ed99aafd5ffc6b7165b8a99130c315057c8621d6f9c251b5bc7bdaca24b702",
+    "id": "25340",
+    "name": "Shopfront glazed module 1.2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-glazed-module-e3362ff9",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25341/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25341.glb",
+    "bytes": 17172,
+    "sha256": "2e0d5d629c75498bff8ac714b886e7715930f8dd0911cc40adff8af850345eab",
+    "id": "25341",
+    "name": "Shopfront pier module 1.2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-pier-module-420463fc",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25342/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25342.glb",
+    "bytes": 44864,
+    "sha256": "272c3d1bcf1f991eebe465b587b7daf28356a7c1fac02c126125df924edfb423",
+    "id": "25342",
+    "name": "Shopfront entrance module 1.2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-entrance-modu-81a703ff",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25343/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25343.glb",
+    "bytes": 46524,
+    "sha256": "d5c7c34321724428c8620cba641281a1dbbac87ea70b2d7dee00688df8501eb6",
+    "id": "25343",
+    "name": "Shopfront entrance module, door open (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-entrance-open-ce501cbf",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25345/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25345.glb",
+    "bytes": 36668,
+    "sha256": "7c1c991ac4640d2b9aaa6194129100250a28416998b39dfa0ab613de7f05d9ff",
+    "id": "25345",
+    "name": "Roller shutter, open (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-roller-shutter-open-2351a05a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25344/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25344.glb",
+    "bytes": 232592,
+    "sha256": "44a476b1521e3ba0dce014bc4a5ee1c018beb66a738cbfb236be81ea148f8d28",
+    "id": "25344",
+    "name": "Roller shutter, closed (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-roller-shutter-closed-92cb4c1e",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25346/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25346.glb",
+    "bytes": 20932,
+    "sha256": "6411375a31d68c15ec88ba5f31e9e14e8b21185a00a4c38d7241a0271c1a404b",
+    "id": "25346",
+    "name": "Blank fascia sign board (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-fascia-sign-board-cd600130",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25347/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25347.glb",
+    "bytes": 17912,
+    "sha256": "6ace48481e2ff297b8ba754b1036ca12eb2a70610040a7798ed8d72c159165c4",
+    "id": "25347",
+    "name": "Projecting blade sign (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-projecting-blade-sign-ef9f33c8",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25348/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25348.glb",
+    "bytes": 23460,
+    "sha256": "1aa1bc493a703e4a4124a9a0b0029666a4befa1dd3210dd4bd8f6a836c917b63",
+    "id": "25348",
+    "name": "Window display platform (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-window-display-platform-4f41e96f",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25349/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25349.glb",
+    "bytes": 27024,
+    "sha256": "aa6c51b29b65d61375dbc7f795190ce16372fcc72de1a2594c21a812f1e3a738",
+    "id": "25349",
+    "name": "Window backdrop panel (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-window-backdrop-panel-25bd901d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25350/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25350.glb",
+    "bytes": 42064,
+    "sha256": "69ab136499c4390305957b438ef65157280e21956da4f7b87f242035cc3dc27b",
+    "id": "25350",
+    "name": "Store threshold mat (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-store-threshold-mat-da02d150",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25351/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25351.glb",
+    "bytes": 11064,
+    "sha256": "2b9337be34cc0da46ae2230f00b2180749cce46355a30fbd59ff54b59b0a534c",
+    "id": "25351",
+    "name": "Internal store partition module (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-internal-store-partitio-8ed57ff4",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25352/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25352.glb",
+    "bytes": 41044,
+    "sha256": "5ec2b3c7dab63e06f0e5fd8b4c7bf8e7494e3304ba3ea71e51cca5d53b00b7cc",
+    "id": "25352",
+    "name": "Stock room door module (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-stock-room-door-module-47c0d108",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25353/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25353.glb",
+    "bytes": 18660,
+    "sha256": "3c9d16855983101195e29d4f8a8116b02896d40054f7df950b7ae7256371fd05",
+    "id": "25353",
+    "name": "Service riser access panel (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-service-riser-panel-401a7e92",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25354/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25354.glb",
+    "bytes": 78496,
+    "sha256": "a314799655f89f1cfc55e3fe28d4c3a18e55b3b3a0868b1ab2323941df6756b1",
+    "id": "25354",
+    "name": "Ceiling track lighting bar (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-ceiling-track-lighting--9cadd166",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25355/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25355.glb",
+    "bytes": 17096,
+    "sha256": "ebe79c769f6c4dc123b89770168b1b832b5b016d7543c9ef782a176e18dd6c71",
+    "id": "25355",
+    "name": "Shopfront corner post (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopfront-corner-post-00b020f1",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25356/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25356.glb",
+    "bytes": 20128,
+    "sha256": "2685f24d31cadc2b9190fd9d74a999398b9c61069414714b11691c572b3dec67",
+    "id": "25356",
+    "name": "Mall unit shell module 1.2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-unit-shell-module-41eecee9",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25357/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25357.glb",
+    "bytes": 20084,
+    "sha256": "8c63247bcf999ba3b9448811902c91662245305a4a12dff5b8d7e2100f8e3c6f",
+    "id": "25357",
+    "name": "Mall unit shell pier module (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-unit-shell-pier-cd07d94b",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25358/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25358.glb",
+    "bytes": 37068,
+    "sha256": "1d1d4dd2297a530a38e073299ab85221a69811d3a2f510e3c174b51a4812f1df",
+    "id": "25358",
+    "name": "Mall unit shell corner (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-unit-shell-corner-0c665ed0",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25359/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25359.glb",
+    "bytes": 36984,
+    "sha256": "23aec2fb8392003fffe11294d1b5af4435fa2dab7016d98439af28f73af59fd9",
+    "id": "25359",
+    "name": "Lift lobby module (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-lift-lobby-module-e03d2f0b",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25360/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25360.glb",
+    "bytes": 512492,
+    "sha256": "b9bc39fa4516480abaf3d0a55c6713c5ba6896c2ab5798493756a894b7d71889",
+    "id": "25360",
+    "name": "Concourse escalator (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-escalator-mod-e0d69a9c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25361/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25361.glb",
+    "bytes": 14796,
+    "sha256": "5d3eb314f6d992f768b16e539f54a847b8847a390f5ce8e94b9060e75c7e7a8a",
+    "id": "25361",
+    "name": "Escalator balustrade section (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-escalator-balustrade-9df31ffa",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25362/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25362.glb",
+    "bytes": 14828,
+    "sha256": "b0e56cfc84019f84b92b6077ddd2f80185e743eab8bef9a9089a1a5beb9e2373",
+    "id": "25362",
+    "name": "Escalator landing balustrade (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-escalator-landing-balus-e0e34a6f",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25364/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25364.glb",
+    "bytes": 27136,
+    "sha256": "b8ba1f4f4e45cd79904c1f26462b29d21d0342508dba3dd5d636abfd0d622a68",
+    "id": "25364",
+    "name": "Escalator newel end (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-escalator-newel-end-07c2b520",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25363/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25363.glb",
+    "bytes": 17156,
+    "sha256": "3080641fddec942cf1ff87cb52017ebfa7b35699a4b93676f6143ab2f4287fb3",
+    "id": "25363",
+    "name": "Glass balustrade panel 1.2 m (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-glass-balustrade-panel-ff3c9ae1",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25365/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25365.glb",
+    "bytes": 39216,
+    "sha256": "c2fb8e3482c22a945f5dc57399c495f9f1b362ac75faa4901528ea415af8f2ef",
+    "id": "25365",
+    "name": "Atrium handrail run (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-atrium-handrail-run-2780a76f",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25366/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25366.glb",
+    "bytes": 62376,
+    "sha256": "431bb3ea9ca0186826569f0b66e28bb39134face0a9efa7d17d6811dbefe1b5e",
+    "id": "25366",
+    "name": "Concourse bench (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-bench-e1d49b32",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25367/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25367.glb",
+    "bytes": 81656,
+    "sha256": "c9a724565f6b70228f4ed85ad81a67f3c87ba580f57f7cdb5b877e5b48e6dc5c",
+    "id": "25367",
+    "name": "Back-to-back concourse bench (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-back-to-back-bench-8640042d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25368/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25368.glb",
+    "bytes": 77444,
+    "sha256": "aeb2ac1efbddf1ae388a8a2a6e459b61fc32d3ed9443711dce57a94b4f46c784",
+    "id": "25368",
+    "name": "Curved concourse bench (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-curved-concourse-bench-f19f405c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25369/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25369.glb",
+    "bytes": 24016,
+    "sha256": "7a8f63103024a8f1111441272ae94b4ea217d5090a2add960320077a68eeb830",
+    "id": "25369",
+    "name": "Large atrium planter (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-atrium-planter-large-ee11d12d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25370/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25370.glb",
+    "bytes": 24020,
+    "sha256": "3f43d5c92d61b1a0445688c5ee981633115d85b5082796b1b6770d1b13fdce75",
+    "id": "25370",
+    "name": "Atrium planter trough (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-atrium-planter-trough-9ba1cffe",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25372/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25372.glb",
+    "bytes": 38220,
+    "sha256": "945eb847b85e58d6266023594f63fc09a5e173d889ee6eccbdf5b943afdded33",
+    "id": "25372",
+    "name": "Mall directory totem (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-directory-totem-c3638f0a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25371/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25371.glb",
+    "bytes": 35108,
+    "sha256": "4c70cfe3bb0f90eb95934c9479ccdf977e98d07566a70aacd1e6a61ae663c79e",
+    "id": "25371",
+    "name": "Hanging wayfinding sign (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-hanging-wayfinding-sign-20d1026f",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25373/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25373.glb",
+    "bytes": 210056,
+    "sha256": "34017a02916d94f7b5880af45ae04d2e6c075197647c1bfa0ac773ab72135744",
+    "id": "25373",
+    "name": "Food court table and chair set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-food-court-table-set-17580501",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25374/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25374.glb",
+    "bytes": 121988,
+    "sha256": "e1ec183ea13d67a0d0abeb894c627a798ae126e981ee41cd2d367ca73bfc1d9e",
+    "id": "25374",
+    "name": "Concourse kiosk cart (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-kiosk-cart-a91b7a4d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25375/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25375.glb",
+    "bytes": 179284,
+    "sha256": "c27e292cbaf50959b1612b2b165cd7c831a5a7ec8d7929e9af71a16bc87c176a",
+    "id": "25375",
+    "name": "Concourse cleaning trolley (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-cleaning-trolley-00c22c62",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25376/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25376.glb",
+    "bytes": 48024,
+    "sha256": "d1b57f7dca521ca2793f53eac7146cce772b0cadca8b83341463c1463afed98f",
+    "id": "25376",
+    "name": "Concourse waste station (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-waste-station-54ef2449",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25377/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25377.glb",
+    "bytes": 23996,
+    "sha256": "675180ff73d6ce1b5dd3c65fe6cf6fec712a634a1ebfb1739ccd8b76cc70b147",
+    "id": "25377",
+    "name": "Mall column cladding (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-column-cladding-3df9f2d3",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25378/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25378.glb",
+    "bytes": 49308,
+    "sha256": "b63b3a55051f8b02f856f9144cdd5310553597bd1d3f85f43b06f419a22dda82",
+    "id": "25378",
+    "name": "Concourse planter bench (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-planter-bench-7416799b",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25379/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25379.glb",
+    "bytes": 66556,
+    "sha256": "0cfa2252b27cdd5d41a290dcd1e23bee1330bb463c1876d7689375fadd0126f7",
+    "id": "25379",
+    "name": "Concourse information desk (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-info-desk-6e0a0be9",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25380/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25380.glb",
+    "bytes": 25452,
+    "sha256": "74168fc53c7dbc8966cf8c6a7cd0537dbb5fb641d4676d7c38b02a1186a0204d",
+    "id": "25380",
+    "name": "Concourse floor-standing sign (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-floor-standin-8f0099ca",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25381/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25381.glb",
+    "bytes": 81944,
+    "sha256": "26848f72c2858ca18fa21515591e71e5f90c1048798e05a722f56591c4b0d2f5",
+    "id": "25381",
+    "name": "Concourse charging bench (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-charging-benc-6fc340d5",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25382/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25382.glb",
+    "bytes": 35920,
+    "sha256": "d69369635ad997d09209b07eaea21ff10811ffb8c707fe91d09b36bf23214cf2",
+    "id": "25382",
+    "name": "Concourse bollard planter (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-planter-bollard-966c7980",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25383/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25383.glb",
+    "bytes": 20156,
+    "sha256": "9c7c74d0a7b8635b9804d16c056c0eedab7faee1f2a5416df5e66d8a944b26a0",
+    "id": "25383",
+    "name": "Atrium banner frame (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-flag-banner-frame-a7471426",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25384/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25384.glb",
+    "bytes": 61252,
+    "sha256": "71dc41b53f4d744dceecb21e3cd995f97163bd825ca9fda211d76d908b41ae68",
+    "id": "25384",
+    "name": "Stanchion and rope set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-stanchion-and-rope-set-6fccd81c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25385/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25385.glb",
+    "bytes": 39940,
+    "sha256": "1d2871253cdd62f3366d5c72f1af0d7556f69973598e5d6a49f795cd59479f0c",
+    "id": "25385",
+    "name": "Concourse litter bin (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-litter-bin-f5e07886",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25386/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25386.glb",
+    "bytes": 77104,
+    "sha256": "80929c5ef7991915efbd86749d33a5d3fe8a4455a68557e08a24242e97e6fbcd",
+    "id": "25386",
+    "name": "Escalator comb landing plate (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-escalator-comb-landing-159f7cd8",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25389/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25389.glb",
+    "bytes": 17436,
+    "sha256": "d47a6eb5731ee6e4b1460b09a509dcb823c80cb57deac136c733db5dd44333f0",
+    "id": "25389",
+    "name": "Paper shopping bag (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopping-bag-paper-49533c70",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25387/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25387.glb",
+    "bytes": 26372,
+    "sha256": "078d3f5bf3cc5a4014202d023cb293aca36a30be57c912b1a7d0fc714c693180",
+    "id": "25387",
+    "name": "Rigid boutique bag (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shopping-bag-rigid-cf24bda4",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25388/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25388.glb",
+    "bytes": 24408,
+    "sha256": "3def917fb8aa9adc635d794bbe0c0622f00a567e666e871d5159334674c73507",
+    "id": "25388",
+    "name": "Coat hanger (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-coat-hanger-1b9a8760",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25390/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25390.glb",
+    "bytes": 91604,
+    "sha256": "1c33567a3da243cd529d8534d95b3824d6b7f588b9b55f8fcbbd4381c10f5666",
+    "id": "25390",
+    "name": "Display hanger set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-display-hanger-set-28e0494a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25391/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25391.glb",
+    "bytes": 14732,
+    "sha256": "ffa9f83e265ebd60b2dfe69d287d6f06caab7a88db3dfcd738a8ee30398642ff",
+    "id": "25391",
+    "name": "Shoe box (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shoe-box-120c4922",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25392/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25392.glb",
+    "bytes": 27088,
+    "sha256": "0e01f808ec36f5c01147bbe8dd5348a45091a72a5f3f45a81b1c53e00485b943",
+    "id": "25392",
+    "name": "Shoe box with lid off (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shoe-box-open-36d5b45c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25393/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25393.glb",
+    "bytes": 29020,
+    "sha256": "8a521018dc620164f032fc5123ad3d512da4d50cf7791c84db183250e948b0a8",
+    "id": "25393",
+    "name": "Gift box with ribbon (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-gift-box-e87ee36a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25395/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25395.glb",
+    "bytes": 47976,
+    "sha256": "5a9c2331d1bb724c448e794aa50119df0d9793c61cf4c237bed5df3c53277a01",
+    "id": "25395",
+    "name": "Folded garment stack (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-folded-garment-stack-92f5c4bd",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25394/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25394.glb",
+    "bytes": 18072,
+    "sha256": "955843d8ab17bdf3d30e96bb27d6464372948e07cbfe4889e1165f796f08b95b",
+    "id": "25394",
+    "name": "Price cube (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-price-cube-665fefcd",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25396/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25396.glb",
+    "bytes": 45092,
+    "sha256": "a53252754581ab4527086cea8638e3b5d99015ac3e1ebc0b06384dc03944fc96",
+    "id": "25396",
+    "name": "Shelf talker set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-shelf-talker-set-7bdea94d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25397/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25397.glb",
+    "bytes": 36868,
+    "sha256": "09ee4f4aaf6957c83f932a42febe3415d28344ac36af51dd8c57e05306c49373",
+    "id": "25397",
+    "name": "A-frame sale sign (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-sale-sign-a-frame-3ace4b57",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25398/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25398.glb",
+    "bytes": 87896,
+    "sha256": "ea266eb645227c49d27bde5bd7f9f8692940e4e7abd4f0452f67637e0d00803c",
+    "id": "25398",
+    "name": "Tissue paper stack (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-tissue-paper-stack-e9e3e439",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25399/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25399.glb",
+    "bytes": 82384,
+    "sha256": "2be63175c880e57d7d912404a0db4ea57b2b5bc1d8da44a4da30edce31f2ad36",
+    "id": "25399",
+    "name": "Rail size divider set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-size-divider-set-644c6b9a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25401/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25401.glb",
+    "bytes": 114172,
+    "sha256": "cd20070094d7975462dfd811c9242971fdeffd8f862d0f2eea93ecee3dd72e27",
+    "id": "25401",
+    "name": "Upright garment steamer (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-garment-steamer-a977ce8c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25400/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25400.glb",
+    "bytes": 144612,
+    "sha256": "24ed2026123bbd0bb4960d060265e21412038a92c9805540409016b21868a820",
+    "id": "25400",
+    "name": "Stock roll cage (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-stock-roll-cage-a001e0bf",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25402/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25402.glb",
+    "bytes": 58176,
+    "sha256": "ded6b7271b0579d451d6f030e833a3c19797fe046ebae84634a9b6a108e6c065",
+    "id": "25402",
+    "name": "Security tag set (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-security-tag-set-ac58e24c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25403/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25403.glb",
+    "bytes": 12524,
+    "sha256": "9c9962125782d386c40295bed568258ad7bca2e5d9007a850666017695d2e110",
+    "id": "25403",
+    "name": "Garment folding board (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-garment-fold-board-d603ffca",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25404/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25404.glb",
+    "bytes": 28660,
+    "sha256": "1051b7155d6cb788331ce4edceae56576f4d7ef120225fb7a7003584d10ced3a",
+    "id": "25404",
+    "name": "Counter display riser (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-counter-display-riser-6c576687",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25405/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25405.glb",
+    "bytes": 97740,
+    "sha256": "269f775cb70db9d9647449e27fc5f60fd9d4713a66d9b8fb24d2e8f335b31865",
+    "id": "25405",
+    "name": "Shopfloor step stool (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-stock-ladder-step-0ec10025",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25407/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25407.glb",
+    "bytes": 93132,
+    "sha256": "91e2f097f2b007590a12525c0ecd1aa1ee4439a8232dcf212b17d7928589a59a",
+    "id": "25407",
+    "name": "Hanger return caddy (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-hanger-return-caddy-6983cd4a",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25406/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25406.glb",
+    "bytes": 24748,
+    "sha256": "846438e2368be1056f5375be1b25ba50db20fa938a4e5db51b7edab4250e0f74",
+    "id": "25406",
+    "name": "Window graphic frame (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-window-vinyl-frame-ed0c849f",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25408/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25408.glb",
+    "bytes": 73592,
+    "sha256": "1e529568f14a8964783275d539e4684451988cf86d9c76f1d3161e62ed5ae44d",
+    "id": "25408",
+    "name": "Mid-floor gondola, dark finish (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mid-floor-gondola-dark-8656d868",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25409/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25409.glb",
+    "bytes": 62304,
+    "sha256": "1c8d90bb7414a56c42ae8ee637291e8dda49860c7650176a5a979fa58f56d32f",
+    "id": "25409",
+    "name": "Concourse bench, dark slats (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-bench-dark-2615972c",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25411/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25411.glb",
+    "bytes": 127732,
+    "sha256": "c90c531fe29a64970037d37a2e6868cb61d85803c54716f5a928738dc58e3225",
+    "id": "25411",
+    "name": "Female display mannequin, dark finish (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mannequin-female-standi-3a035f6d",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25413/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25413.glb",
+    "bytes": 2144820,
+    "sha256": "dc3688b13508c70c1584b9a06c9059dd8451ab68b46d4ba2824a5f97b96c20bf",
+    "id": "25413",
+    "name": "Apparel shopfloor (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-apparel-s-68b15c21-starter-scene",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25410/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25410.glb",
+    "bytes": 1893416,
+    "sha256": "42665186ea34b59a5df11974025cccd86e1ff4ae47caa1e80739085453a0dad0",
+    "id": "25410",
+    "name": "Mall concourse (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-mall-concourse-32a4b9e5",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  },
+  {
+    "url": "https://cdn.3dassets.dev/assets/25412/v1/model.glb",
+    "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\RetailKit\\GLB\\25412.glb",
+    "bytes": 941560,
+    "sha256": "93331e6403be67efb7c8220092f614bea84fae6a4e36b167658edb19c1288c3a",
+    "id": "25412",
+    "name": "Connector cases (Retail Store Fixtures and Mall)",
+    "page": "https://3dassets.dev/assets/retail-store-fixtures-and-mall-connector-cases-ad3c4c17",
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "ai_generated": true
+  }
+]

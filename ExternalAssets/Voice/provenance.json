@@ -1,0 +1,291 @@
+{
+  "recorded_utc": "2026-10-16T14:42:52.7569799Z",
+  "library_version": "Vosk 0.3.45 Win64",
+  "model": "vosk-model-small-en-us-0.15",
+  "sources": [
+    "https://github.com/alphacep/vosk-api/releases/tag/v0.3.45",
+    "https://github.com/alphacep/vosk-api/releases/download/v0.3.45/vosk-win64-0.3.45.zip",
+    "https://alphacephei.com/vosk/models",
+    "https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip"
+  ],
+  "licenses": {
+    "winpthreads": "MinGW-w64 winpthreads COPYING notices bundled",
+    "model": "Apache-2.0 per official model catalog",
+    "gcc_runtime": "GPLv3 plus GCC Runtime Library Exception",
+    "vosk": "Apache-2.0",
+    "kaldi": "Apache-2.0 with upstream cumulative copyright notices",
+    "openfst": "Apache-2.0 with Google copyright notice",
+    "openblas": "BSD redistribution conditions in upstream v0.3.20 LICENSE",
+    "clapack": "BSD redistribution conditions in upstream v3.2.1 COPYING",
+    "libf2c": "AT&T/Lucent/Bellcore permission notice in upstream v3.2.1 F2CLIBS/libf2c/Notice",
+    "simplejson": "WTFPL declaration in Vosk v0.3.45 src/json.h; declaration retained verbatim"
+  },
+  "files": [
+    {
+      "path": "ThirdParty/Vosk/LICENSE-CLAPACK.txt",
+      "bytes": 1607,
+      "sha256": "23014869214a231525b38c39fdb5f82364fa24154ac80fdcab2a79671460fd09"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-GCC-GPL-3.0.txt",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-GCC-Runtime-Exception.txt",
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-Kaldi.txt",
+      "bytes": 17264,
+      "sha256": "3fd3dd523b1717f1fb2ae40896df943d767fa5e664e46156c2dba7094f0d7172"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-libf2c.txt",
+      "bytes": 1212,
+      "sha256": "44561c447e91203ddc747beeca5cc2794d95ee982c17c578670e4f0408bc3904"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-MinGW-w64.txt",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-OpenBLAS.txt",
+      "bytes": 1548,
+      "sha256": "190b5a9c8d9723fe958ad33916bd7346d96fab3c5ea90832bb02d854f620fcff"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-OpenFST.txt",
+      "bytes": 559,
+      "sha256": "dd0c6c9378a98b6a0e96b559b285c8506434fe2691eeeef151e8a8c1c492778e"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-SimpleJSON.txt",
+      "bytes": 346,
+      "sha256": "d9a5e02e6f383691631031b6cfeba78ee9cdf26ee1951d0988663ff650c706b1"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-Vosk-Apache-2.0.txt",
+      "bytes": 10173,
+      "sha256": "bb618af833c817ab01c1564bd3ec75ba4b4f9cf30910a4a2168e30a674ee8cc6"
+    },
+    {
+      "path": "ThirdParty/Vosk/LICENSE-winpthreads.txt",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177"
+    },
+    {
+      "path": "ThirdParty/Vosk/NOTICE.txt",
+      "bytes": 3119,
+      "sha256": "4eede5d9d8e72bab1a5a243baa358e1572d348807df0b716a65a67d210f8b9e7"
+    },
+    {
+      "path": "ThirdParty/Vosk/Win64/libgcc_s_seh-1.dll",
+      "bytes": 606425,
+      "sha256": "201bf8a54ebb490f93ea4beb20740a483bf67036b90b5720f32d0c746a72d1e9"
+    },
+    {
+      "path": "ThirdParty/Vosk/Win64/libstdc++-6.dll",
+      "bytes": 26619146,
+      "sha256": "a1d96a848a567d7657e152cfe92e2fd62da412968cc11ec8bdb04bf20ebc5747"
+    },
+    {
+      "path": "ThirdParty/Vosk/Win64/libvosk.dll",
+      "bytes": 26447872,
+      "sha256": "9331c2f6a32cf77141af27c9750e79532718f51bbc2e3cea3c60f14ca4251e4e"
+    },
+    {
+      "path": "ThirdParty/Vosk/Win64/libwinpthread-1.dll",
+      "bytes": 366907,
+      "sha256": "92caeb8a4ea281c674003462a233f3b445b685b0a6f93eb11254feda2dda9cde"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/LICENSE-Apache-2.0.txt",
+      "bytes": 10173,
+      "sha256": "bb618af833c817ab01c1564bd3ec75ba4b4f9cf30910a4a2168e30a674ee8cc6"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/README",
+      "bytes": 199,
+      "sha256": "c0cf286e4f7783306c5f6469b37db69228fb16803b03cae661edb2d7bba64ebb"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/am/final.mdl",
+      "bytes": 15962575,
+      "sha256": "75370a0137f9daf8f469dedd7daa4513ae7a621f03240c6e512e2b50b656a7b6"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/conf/mfcc.conf",
+      "bytes": 131,
+      "sha256": "1e2228006d01d805ad1c267fee9f79709ca87ac51bd82b0e3f5c69ba543f0fc4"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/conf/model.conf",
+      "bytes": 290,
+      "sha256": "8f14cb1eeb07c762c371db648c6be688d347236155ca0f64fb13b6567a8ce81f"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/graph/disambig_tid.int",
+      "bytes": 102,
+      "sha256": "9ad87cc166d0998f08f758f47a6223a120dfffcbee805c4849c3aa5e6bb3c0fc"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/graph/Gr.fst",
+      "bytes": 24013795,
+      "sha256": "023c8b7e30704a9e37765c635c252e608a02f361235bf94abdcf2a5225d85b20"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/graph/HCLr.fst",
+      "bytes": 22416994,
+      "sha256": "5caafba3081e1646545ac6bff0dd7a318e53dcbdc86f237909ce1d2ac1293d34"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int",
+      "bytes": 1761,
+      "sha256": "da199d9c991e0e84681ddbb34627b915b26302d50a8fdaa23c51e2bc3a50b5c3"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/ivector/final.dubm",
+      "bytes": 168048,
+      "sha256": "8c5d7dd69d2122313baaf19f61f35dd3fa18b70c62ac0687e311e1c46e6daca7"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/ivector/final.ie",
+      "bytes": 8288887,
+      "sha256": "3f37faf90c375b9e4740b569398b5829ed9cc07d19be6d441f72c3b71d7efcc6"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/ivector/final.mat",
+      "bytes": 44975,
+      "sha256": "ddd83586dc5f928cda8738b922c85ffe38fc789cb5f9151a712ca12f37265382"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats",
+      "bytes": 1080,
+      "sha256": "33be09afcc80059847a275c3d043b51f1ab954c7c2438ddbbf4745e8ba144ff9"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf",
+      "bytes": 95,
+      "sha256": "a2f3571754b64297cb7efb2e7ca3df61995c5a45fcbb97188f90613552bb2dfe"
+    },
+    {
+      "path": "Content/VoiceModels/vosk-model-small-en-us-0.15/ivector/splice.conf",
+      "bytes": 35,
+      "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+    },
+    {
+      "path": "ExternalAssets/Voice/vosk-model-small-en-us-0.15.zip",
+      "bytes": 41205931,
+      "sha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498"
+    },
+    {
+      "path": "ExternalAssets/Voice/vosk-win64-0.3.45.zip",
+      "bytes": 14882445,
+      "sha256": "f1dcc9cca460630f81ea8f71794f69c80bed6556d2a4e6237b5785e1d2dff34b"
+    }
+  ],
+  "dependency_build_evidence": [
+    {
+      "url": "https://raw.githubusercontent.com/alphacep/vosk-api/v0.3.45/travis/Dockerfile.win",
+      "content_sha256": "0698a7a88904f273eb55c521dc3d0241c5b4cc9970a0252dfba6bdf4c67137dd",
+      "hash_basis": "UTF-8 decoded HTTP response content",
+      "retrieved_utc": "2026-10-16T15:19:19.8770924Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/alphacep/vosk-api/v0.3.45/src/Makefile",
+      "content_sha256": "bb07de5722f25f5491a340d0a2276bf92c0dcbcde2aa2338ba112b3fbe9feeb1",
+      "hash_basis": "UTF-8 decoded HTTP response content",
+      "retrieved_utc": "2026-10-16T15:19:20.4065896Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/alphacep/vosk-api/v0.3.45/src/json.h",
+      "content_sha256": "0f829ed9c5faed9067899fec4056ec361312e71c83db143da7146efc399dbd02",
+      "hash_basis": "UTF-8 decoded HTTP response content",
+      "retrieved_utc": "2026-10-16T15:19:20.4792417Z"
+    }
+  ],
+  "license_sources": [
+    {
+      "file": "ThirdParty/Vosk/LICENSE-Vosk-Apache-2.0.txt",
+      "source_url": "https://raw.githubusercontent.com/alphacep/vosk-api/v0.3.45/COPYING",
+      "notice_sha256": "bb618af833c817ab01c1564bd3ec75ba4b4f9cf30910a4a2168e30a674ee8cc6",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-GCC-GPL-3.0.txt",
+      "source_url": "https://raw.githubusercontent.com/gcc-mirror/gcc/master/COPYING3",
+      "notice_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-GCC-Runtime-Exception.txt",
+      "source_url": "https://raw.githubusercontent.com/gcc-mirror/gcc/master/COPYING.RUNTIME",
+      "notice_sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-MinGW-w64.txt",
+      "source_url": "https://raw.githubusercontent.com/mingw-w64/mingw-w64/master/COPYING",
+      "notice_sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-winpthreads.txt",
+      "source_url": "https://raw.githubusercontent.com/mingw-w64/mingw-w64/master/mingw-w64-libraries/winpthreads/COPYING",
+      "notice_sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-Kaldi.txt",
+      "source_url": "https://raw.githubusercontent.com/alphacep/kaldi/vosk-android/COPYING",
+      "notice_sha256": "3fd3dd523b1717f1fb2ae40896df943d767fa5e664e46156c2dba7094f0d7172",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-OpenFST.txt",
+      "source_url": "https://raw.githubusercontent.com/alphacep/openfst/master/COPYING",
+      "notice_sha256": "dd0c6c9378a98b6a0e96b559b285c8506434fe2691eeeef151e8a8c1c492778e",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-OpenBLAS.txt",
+      "source_url": "https://raw.githubusercontent.com/xianyi/OpenBLAS/v0.3.20/LICENSE",
+      "notice_sha256": "190b5a9c8d9723fe958ad33916bd7346d96fab3c5ea90832bb02d854f620fcff",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-CLAPACK.txt",
+      "source_url": "https://raw.githubusercontent.com/alphacep/clapack/v3.2.1/COPYING",
+      "notice_sha256": "23014869214a231525b38c39fdb5f82364fa24154ac80fdcab2a79671460fd09",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-libf2c.txt",
+      "source_url": "https://raw.githubusercontent.com/alphacep/clapack/v3.2.1/F2CLIBS/libf2c/Notice",
+      "notice_sha256": "44561c447e91203ddc747beeca5cc2794d95ee982c17c578670e4f0408bc3904",
+      "source_basis": "Official upstream notice copied unchanged",
+      "exact_binary_source_revision_attested": false
+    },
+    {
+      "file": "ThirdParty/Vosk/LICENSE-SimpleJSON.txt",
+      "source_url": "https://raw.githubusercontent.com/alphacep/vosk-api/v0.3.45/src/json.h",
+      "notice_sha256": "d9a5e02e6f383691631031b6cfeba78ee9cdf26ee1951d0988663ff650c706b1",
+      "source_basis": "First six lines of source header, with source attribution added locally",
+      "exact_binary_source_revision_attested": false
+    }
+  ],
+  "license_audit_utc": "2026-10-16T15:19:48.2755241Z",
+  "static_dependency_version_basis": "The Vosk v0.3.45 Windows Dockerfile selects OpenBLAS v0.3.20 and CLAPACK v3.2.1, the Kaldi vosk-android branch, and OpenFST without a pinned revision. These are source-notice selection evidence, not attestation of the exact source revisions compiled into the downloaded release DLLs. DLL strings independently contain OpenBLAS and Kaldi/CLAPACK identifiers."
+}

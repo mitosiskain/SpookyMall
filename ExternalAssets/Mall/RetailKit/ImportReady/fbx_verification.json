@@ -1,0 +1,174 @@
+{
+  "all_passed": true,
+  "checked_assets": 28,
+  "checks": [
+    {
+      "source_id": "25356",
+      "dimensions_error_cm": 1.0789593218788873e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25357",
+      "dimensions_error_cm": 1.0789593218788873e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25358",
+      "dimensions_error_cm": 7.62939453125e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25340",
+      "dimensions_error_cm": 1.2212990259996125e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25341",
+      "dimensions_error_cm": 9.5367431640625e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25343",
+      "dimensions_error_cm": 3.2368779656366614e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25355",
+      "dimensions_error_cm": 2.6973983046972182e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25345",
+      "dimensions_error_cm": 1.1444091796875e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25344",
+      "dimensions_error_cm": 1.1444091796875e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25369",
+      "dimensions_error_cm": 2.1579186437577746e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25370",
+      "dimensions_error_cm": 1.9451215795870913e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25366",
+      "dimensions_error_cm": 7.62939453125e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25368",
+      "dimensions_error_cm": 0.0,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25378",
+      "dimensions_error_cm": 7.62939453125e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25310",
+      "dimensions_error_cm": 1.7059844799040144e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25317",
+      "dimensions_error_cm": 1.1444091796875e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25162",
+      "dimensions_error_cm": 1.049041748046875e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25166",
+      "dimensions_error_cm": 5.7220458984375e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25183",
+      "dimensions_error_cm": 1.9073486328125e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25181",
+      "dimensions_error_cm": 1.9073486328125e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25184",
+      "dimensions_error_cm": 1.9073486328125e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25193",
+      "dimensions_error_cm": 1.9073486328125e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25197",
+      "dimensions_error_cm": 7.62939453125e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25242",
+      "dimensions_error_cm": 7.62939453125e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25244",
+      "dimensions_error_cm": 8.529922399520072e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25208",
+      "dimensions_error_cm": 1.1444091796875e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25210",
+      "dimensions_error_cm": 7.62939453125e-06,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    },
+    {
+      "source_id": "25354",
+      "dimensions_error_cm": 1.348699152348609e-05,
+      "material_slots_passed": true,
+      "floor_pivot_passed": true
+    }
+  ]
+}

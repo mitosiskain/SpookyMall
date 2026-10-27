@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  {\"label\": \"Gallery_F1_Floor_01\", \"triangles\": 48, \"vertices\": 32, \"materials\": [\"/Game/Generated_Materials/M_MallFloorMarble.M_MallFloorMarble\"]}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

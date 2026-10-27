@@ -1,0 +1,662 @@
+[
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_leaves.M_Mall_potted_plant_01_leaves\",\r\n\t\"parent_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_leaves\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_pot\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_pot.M_Mall_potted_plant_01_pot\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_pot\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests.M_Mall_modular_street_seating_armrests\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports.M_Mall_modular_street_seating_supports\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_timber\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_timber.M_Mall_modular_street_seating_timber\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_timber\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01.M_Mall_steel_frame_shelves_01\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_white_plaster_02\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_white_plaster_02.M_Mall_white_plaster_02\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_white_plaster_02\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_terrazzo_tiles\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_terrazzo_tiles.M_Mall_terrazzo_tiles\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_terrazzo_tiles\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_painted_metal_shutter\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_painted_metal_shutter.M_Mall_painted_metal_shutter\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_painted_metal_shutter\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles.M_Mall_CeilingTiles\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_floor\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_floor.M_MallRetail_floor\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_MallRetail_floor\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_carcass\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_carcass.M_MallRetail_carcass\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_MallRetail_carcass\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_dark\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_dark.M_MallRetail_dark\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_MallRetail_dark\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_metal\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_metal.M_MallRetail_metal\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_MallRetail_metal\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_glass\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_glass.M_MallRetail_glass\",\r\n\t\"template\": \"glass\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_MallRetail_glass\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Roughness\", \"Opacity\", \"Refraction\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_surface\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_surface.M_MallRetail_surface\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_MallRetail_surface\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_accent\",\r\n\t\"save_folder\": \"/Game/Generated_Materials\",\r\n\t\"default_folder\": \"/Game/Generated_Materials\",\r\n\t\"used_preferred_folder\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"asset_path\": \"/Game/Generated_Materials/M_MallRetail_accent.M_MallRetail_accent\",\r\n\t\"template\": \"pbr_standard\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_MallRetail_accent\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

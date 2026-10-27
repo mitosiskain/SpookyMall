@@ -1,0 +1,53 @@
+{
+  "date_published": 1623767642,
+  "name": "Steel Frame Shelves 01",
+  "type": 2,
+  "staging": null,
+  "authors": {
+    "James Ray Cock": "All"
+  },
+  "categories": [
+    "furniture",
+    "shelves",
+    "industrial",
+    "collection: the_shed"
+  ],
+  "tags": [
+    "commercial",
+    "modern",
+    "shelf",
+    "bookshelf",
+    "metal",
+    "wood"
+  ],
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "polycount": 4348,
+  "texel_density": 2254.193004058903,
+  "dimensions": [
+    1097.4148511886597,
+    502.1176338195801,
+    2140.5010361922905
+  ],
+  "files_hash": "07b34991c01f75c3bfe85923ba649bc40de1dd17",
+  "description": "Free 8K model of a modern industrial steel-frame shelf with five wooden planks, sturdy metal frame and clean lines, ideal for commercial or home interiors.",
+  "category_id": "306ba141-9b10-54f2-8d06-09031cea8318",
+  "category": "Furniture/Storage Furniture/Shelving & Bookcases",
+  "collections": [
+    "the_shed"
+  ],
+  "attributes": {
+    "condition": [
+      "clean"
+    ],
+    "material": [
+      "steel",
+      "wood"
+    ]
+  },
+  "img_version": "07dfd724",
+  "download_count": 32486,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/steel_frame_shelves_01.png?width=256&height=256&format=webp&v=07dfd724"
+}

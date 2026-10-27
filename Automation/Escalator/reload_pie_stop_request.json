@@ -1,0 +1,1 @@
+{"calls":[{"tool":"stop_pie","arguments":{}},{"tool":"stop_pie_recording","arguments":{}},{"tool":"take_editor_screenshot","arguments":{"mode":"viewport","camera_location":{"x":600,"y":-420,"z":950},"camera_rotation":{"pitch":-25,"yaw":45,"roll":0},"restore_camera":false,"max_width":1000,"max_height":700}}]}

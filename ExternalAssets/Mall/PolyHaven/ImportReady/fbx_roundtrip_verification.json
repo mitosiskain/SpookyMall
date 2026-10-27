@@ -1,0 +1,110 @@
+[
+  {
+    "mesh_name": "SM_PachiraA",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      74.39080238342285,
+      64.6518783569336,
+      130.1509246826172
+    ]
+  },
+  {
+    "mesh_name": "SM_PachiraB",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      50.314523696899414,
+      60.73568916320801,
+      73.50473022460938
+    ]
+  },
+  {
+    "mesh_name": "SM_PachiraC",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      97.52868270874023,
+      92.3682975769043,
+      114.90381622314453
+    ]
+  },
+  {
+    "mesh_name": "SM_PachiraD",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      105.4460220336914,
+      99.70420455932617,
+      190.2007598876953
+    ]
+  },
+  {
+    "mesh_name": "SM_PottedPlant01",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      58.891849517822266,
+      63.661176681518555,
+      135.077880859375
+    ]
+  },
+  {
+    "mesh_name": "SM_MallBench01",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      245.21907806396484,
+      67.0394172668457,
+      86.69140625
+    ]
+  },
+  {
+    "mesh_name": "SM_RetailShelves01",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      109.74148559570312,
+      50.211769104003906,
+      214.05010986328125
+    ]
+  },
+  {
+    "mesh_name": "SM_BookHardcover02",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      4.188372850418091,
+      15.386636734008789,
+      22.75778579711914
+    ]
+  },
+  {
+    "mesh_name": "SM_BookSoftcover04",
+    "dimension_match": true,
+    "grounded": true,
+    "material_slots_match": true,
+    "uv_layers_preserved": true,
+    "dimensions_cm": [
+      3.740282893180847,
+      14.938089370727539,
+      22.446577072143555
+    ]
+  }
+]

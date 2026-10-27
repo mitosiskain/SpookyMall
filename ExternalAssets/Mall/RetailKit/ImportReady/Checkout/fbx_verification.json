@@ -1,0 +1,46 @@
+{
+  "all_passed": true,
+  "checked_assets": 2,
+  "checks": [
+    {
+      "source_id": "25324",
+      "full_bounds_error_cm": 0.0,
+      "floor_pivot_passed": true,
+      "dimensions_and_orientation_passed": true,
+      "material_slots_passed": true,
+      "uv_channel_count_passed": true,
+      "roundtrip_bounds_cm": [
+        [
+          -15.999256134033203,
+          -12.499967575073242,
+          0.0
+        ],
+        [
+          15.999256134033203,
+          12.499967575073242,
+          39.72325134277344
+        ]
+      ]
+    },
+    {
+      "source_id": "25326",
+      "full_bounds_error_cm": 4.76837158203125e-07,
+      "floor_pivot_passed": true,
+      "dimensions_and_orientation_passed": true,
+      "material_slots_passed": true,
+      "uv_channel_count_passed": true,
+      "roundtrip_bounds_cm": [
+        [
+          -7.4999823570251465,
+          -7.804327487945557,
+          0.0
+        ],
+        [
+          7.4999823570251465,
+          7.804327487945557,
+          24.95189666748047
+        ]
+      ]
+    }
+  ]
+}

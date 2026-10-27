@@ -1,0 +1,51 @@
+{
+  "feature": "Spirit-box-origin answers, retained physical ghost audio, and replacement static",
+  "status": "built_tested_and_saved",
+  "build": "Saved/Logs/SpiritBoxRadioBuild.log",
+  "report": "Saved/Automation/SpiritBoxRadio/index.json",
+  "native_results": {
+    "succeeded": 4,
+    "failed": 0,
+    "warnings": 0,
+    "skipped": 0,
+    "tests": [
+      "Mall.Ghost.BookInteraction",
+      "Mall.Ghost.SpatialAudio",
+      "Mall.Ghost.SpiritBoxNetwork",
+      "Mall.Ghost.StateAndDisturbance"
+    ]
+  },
+  "radio_origin": "Replies attach to the local replicated spirit box and follow placement/carrying; ghost movement does not move the reply.",
+  "ghost_origin": "MallGhostAudio preserves independent eye-height positional playback attached to the ghost, currently used by its existing signal chime. No new automatic chase/scare behavior.",
+  "static_source": "SourceAssets/SpiritBox/SW_SpiritBox_Scan.wav",
+  "static_asset": "/Game/Audio/Ghost/SpiritBox/SW_SpiritBox_Static",
+  "static_import_record": "Automation/SpiritBox/static_import_validation.json",
+  "static_import_recovery": "Import+overwrite of the native-rooted original triggered Unreal !IsRooted; imported a fresh asset instead. Original SoundWave preserved. Native defaults and Blueprint use the new asset.",
+  "static_provenance": "SourceAssets/SpiritBox/provenance.json",
+  "static_format": "Original deterministic 12-second seamless mono 48000 Hz PCM16 filtered noise; no third-party broadcasts or voices; zero clipped samples.",
+  "blueprint": "/Game/Environment/Mall/Blueprints/BP_MallSpiritBox",
+  "response_bindings": "where_are_you, who_are_you, how_old_are_you remain separate editable sound/subtitle entries, sharing the authorized temporary voice WAV.",
+  "environmental_acoustics": "Map-specific reverb, reflections and occlusion remain deferred.",
+  "manual_test": "Final perceived static quality, loudness and spatial direction remain a user listening test. No microphone accessed by automation.",
+  "guide": "Docs/SpiritBox.md",
+  "live_pie_check": {
+    "record": "Automation/SpiritBox/radio_pie_validation.json",
+    "pickup_and_power_keys": "F and R verified",
+    "question": "where_are_you",
+    "accepted": true,
+    "reply_playing_at_radio": true,
+    "static_muted_during_reply": true,
+    "static_resumed_after_reply": true,
+    "power_off_stopped_both_components": true,
+    "microphone_used": false
+  },
+  "final_editor_state": {
+    "world": "Lvl_MallOval_Test",
+    "actor_count": 736,
+    "pie_active": false,
+    "radio_powered": false,
+    "response_count": 0,
+    "dirty_maps": 0,
+    "dirty_content": 0
+  }
+}

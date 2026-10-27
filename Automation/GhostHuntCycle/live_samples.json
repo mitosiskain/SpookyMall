@@ -1,0 +1,29 @@
+{
+  "hunt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "success: true\ndata:\n  actor_name: StoreGhost_East_F0_02\n  actor_class: BP_StoreGhost_C\n  properties:\n    - name: MallGhostInteraction.CyclePhase\n      found: true\n      type: EMallGhostCyclePhase\n      value: Hunting\n    - name: MallGhostInteraction.HuntCount\n      found: true\n      type: int32\n      value_number: 1\n      value: 1\n    - name: MallGhostInteraction.PhaseEndsServerTime\n      found: true\n      type: double\n      value_number: 69.6653851121664\n      value: 69.665385\n    - name: Mesh.bHiddenInGame\n      found: true\n      type: uint8\n      value_bool: false\n      value_number: 0\n      value: false\n    - name: PrototypeState\n      found: true\n      type: FString\n      value: Chasing\n    - name: CatchCount\n      found: true\n      type: int32\n      value_number: 0\n      value: 0\npie_time_seconds: 55.54605280980468"
+      }
+    ],
+    "isError": false
+  },
+  "cooldown": {
+    "content": [
+      {
+        "type": "text",
+        "text": "success: true\ndata:\n  actor_name: StoreGhost_East_F0_02\n  actor_class: BP_StoreGhost_C\n  properties:\n    - name: MallGhostInteraction.CyclePhase\n      found: true\n      type: EMallGhostCyclePhase\n      value: Cooldown\n    - name: MallGhostInteraction.HuntCount\n      found: true\n      type: int32\n      value_number: 1\n      value: 1\n    - name: MallGhostInteraction.PhaseEndsServerTime\n      found: true\n      type: double\n      value_number: 104.76529674604535\n      value: 104.765297\n    - name: Mesh.bHiddenInGame\n      found: true\n      type: uint8\n      value_bool: true\n      value_number: 1\n      value: true\n    - name: PrototypeState\n      found: true\n      type: FString\n      value: Disturbing\n    - name: CatchCount\n      found: true\n      type: int32\n      value_number: 1\n      value: 1\npie_time_seconds: 75.89244151115417"
+      }
+    ],
+    "isError": false
+  },
+  "second_hunt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "success: true\ndata:\n  actor_name: StoreGhost_East_F0_02\n  actor_class: BP_StoreGhost_C\n  properties:\n    - name: MallGhostInteraction.CyclePhase\n      found: true\n      type: EMallGhostCyclePhase\n      value: Hunting\n    - name: MallGhostInteraction.HuntCount\n      found: true\n      type: int32\n      value_number: 2\n      value: 2\n    - name: MallGhostInteraction.PhaseEndsServerTime\n      found: true\n      type: double\n      value_number: 128.16032141074538\n      value: 128.160321\n    - name: Mesh.bHiddenInGame\n      found: true\n      type: uint8\n      value_bool: false\n      value_number: 0\n      value: false\n    - name: PrototypeState\n      found: true\n      type: FString\n      value: Chasing\n    - name: CatchCount\n      found: true\n      type: int32\n      value_number: 1\n      value: 1\npie_time_seconds: 113.24405101314187"
+      }
+    ],
+    "isError": false
+  }
+}

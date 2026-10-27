@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  {\"dirty_maps\": [], \"dirty_content_count\": 86, \"dirty_content_first10\": [\"/Game/Fab/free_chairs_set_1_-_130_items/_28\", \"/Game/Fab/free_chairs_set_1_-_130_items/_110\", \"/Game/Fab/free_chairs_set_1_-_130_items/_107\", \"/Game/Fab/free_chairs_set_1_-_130_items/_97\", \"/Game/Fab/free_chairs_set_1_-_130_items/_5\", \"/Game/Fab/free_chairs_set_1_-_130_items/_16\", \"/Game/Fab/free_chairs_set_1_-_130_items/_21\", \"/Game/Fab/free_chairs_set_1_-_130_items/_3\", \"/Game/Fab/free_chairs_set_1_-_130_items/_4\", \"/Game/Fab/free_chairs_set_1_-_130_items/_39\"], \"balcony_loaded\": false, \"restaurant_loaded\": false}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

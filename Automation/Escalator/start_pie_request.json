@@ -1,0 +1,1 @@
+{"calls":[{"tool":"start_pie","arguments":{"window_width":1000,"window_height":650}},{"tool":"is_pie_active","arguments":{}},{"tool":"survey_pie_scene","arguments":{"include":["census","player_state","vantages"],"targets":["MallEscalator_Up","MallEscalator_Down","Escalator_UpperLanding"],"max_actors_per_class":1,"hazard_radius":0}}]}

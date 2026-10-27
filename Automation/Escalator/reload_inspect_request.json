@@ -1,0 +1,1 @@
+{"calls":[{"tool":"get_unreal_context","arguments":{}},{"tool":"get_asset_meta","arguments":{"asset_path":"/Game/Environment/Escalator/BP_MallEscalator.BP_MallEscalator","parts":["Components"]}},{"tool":"get_available_actors_in_level","arguments":{"filter_actor_class":"","filter_actor_label":"Escalator","get_flags":"Label|Class|SpatialInfo","level":""}}]}

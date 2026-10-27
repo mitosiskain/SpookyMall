@@ -1,0 +1,58 @@
+Offline speech recognition dependencies for MyProject2
+
+Vosk API 0.3.45, Copyright 2020-2021 Alpha Cephei Inc.
+Source: https://github.com/alphacep/vosk-api/tree/v0.3.45
+Windows distribution:
+https://github.com/alphacep/vosk-api/releases/download/v0.3.45/vosk-win64-0.3.45.zip
+License: Apache License 2.0; see LICENSE-Vosk-Apache-2.0.txt.
+The four runtime DLLs are copied unchanged from this official distribution.
+
+English model: vosk-model-small-en-us-0.15
+Copyright 2020 Alpha Cephei Inc.
+https://alphacephei.com/vosk/models
+https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip
+The official model catalog lists Apache License 2.0 for this model.
+Its README and license are retained under Content/VoiceModels.
+
+The distribution includes GCC runtime libraries libgcc_s_seh-1.dll and
+libstdc++-6.dll. GCC is licensed under GPLv3 with the GCC Runtime Library
+Exception; copies are included as LICENSE-GCC-GPL-3.0.txt and
+LICENSE-GCC-Runtime-Exception.txt.
+https://github.com/gcc-mirror/gcc/blob/master/COPYING3
+https://github.com/gcc-mirror/gcc/blob/master/COPYING.RUNTIME
+
+The distribution includes the MinGW-w64 winpthreads runtime
+libwinpthread-1.dll. Preserve LICENSE-MinGW-w64.txt and
+LICENSE-winpthreads.txt with redistributed binaries.
+https://github.com/mingw-w64/mingw-w64/blob/master/COPYING
+https://github.com/mingw-w64/mingw-w64/blob/master/mingw-w64-libraries/winpthreads/COPYING
+
+Static dependencies included by the published Vosk 0.3.45 Windows build recipe:
+- Kaldi: LICENSE-Kaldi.txt (Apache 2.0 and retained attribution notices).
+- OpenFST: LICENSE-OpenFST.txt (Apache 2.0; Google copyright notice).
+- OpenBLAS: LICENSE-OpenBLAS.txt (BSD redistribution conditions).
+- CLAPACK: LICENSE-CLAPACK.txt (BSD redistribution conditions).
+- libf2c: LICENSE-libf2c.txt (AT&T, Lucent Technologies and Bellcore notice).
+- SimpleJSON: LICENSE-SimpleJSON.txt (license declaration retained from
+  the JSON header distributed with Vosk 0.3.45).
+
+Build recipe and linkage evidence:
+https://github.com/alphacep/vosk-api/blob/v0.3.45/travis/Dockerfile.win
+https://github.com/alphacep/vosk-api/blob/v0.3.45/src/Makefile
+The recipe selects OpenBLAS v0.3.20, CLAPACK v3.2.1, the Kaldi
+vosk-android branch, and the OpenFST repository without a pinned revision.
+These identify the source license notices retained here. They do not attest
+the exact source revisions used to produce the downloaded release binaries.
+Kaldi and OpenFST notices are upstream branch snapshots retrieved on
+2026-10-16; source URLs, retrieval times and notice hashes are recorded in
+ExternalAssets/Voice/provenance.json.
+
+No runtime libraries or speech model files have been modified.
+Download URLs, byte sizes, and SHA-256 hashes are recorded in
+ExternalAssets/Voice/provenance.json in the source project.
+
+Recognition runs locally. The recognizer uses an unrestricted vocabulary
+followed by exact normalized aliases and confidence filtering. It does not
+upload audio to a speech service, perform speaker identification, or store
+microphone recordings. The separate proximity chat transport relays
+push-to-talk audio to nearby players.

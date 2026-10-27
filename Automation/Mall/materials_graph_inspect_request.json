@@ -1,0 +1,1 @@
+{"calls":[{"tool":"create_edit_material","arguments":{"operation":"read_graph","material_path":"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_leaves"}},{"tool":"create_edit_material","arguments":{"operation":"read_graph","material_path":"/Game/Generated_Materials/M_MallFloorMarble"}}]}

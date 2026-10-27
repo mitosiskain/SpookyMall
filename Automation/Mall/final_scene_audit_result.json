@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  {\"world\": \"/Game/Environment/Mall/Maps/Lvl_MallAtrium_Test.Lvl_MallAtrium_Test\", \"actor_count\": 325, \"landmarks\": [{\"label\": \"Atrium_PlayerStart_01\", \"class\": \"PlayerStart\", \"location_cm\": [0.0, -2000.0, 100.0]}, {\"label\": \"Gallery_F1_Floor_01\", \"class\": \"DynamicMeshActor\", \"location_cm\": [0.0, 0.0, 0.0], \"triangles\": 96}, {\"label\": \"VerticalAccess_Stairs_01\", \"class\": \"BP_MallEscalator_450_C\", \"location_cm\": [-100.0, 690.577136594, 6.0]}, {\"label\": \"VerticalAccess_Stairs_02\", \"class\": \"BP_MallEscalator_450_Down_C\", \"location_cm\": [100.0, 690.577136594, 6.0]}]}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

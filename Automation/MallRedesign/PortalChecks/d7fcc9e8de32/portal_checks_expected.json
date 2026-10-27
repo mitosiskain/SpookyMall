@@ -1,0 +1,5488 @@
+{
+  "status": "prepared_not_executed",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "source_file": "C:\\unreal\\uprj\\MyProject2\\Saved\\Aura\\LDA\\District\\MallOvalTest\\connectivity_waypoints.json",
+  "source_sha256": "d7fcc9e8de326dbdabb387d6a363ac0ba880a1c5849a2175bce1ca82118f5d1e",
+  "confirmation": "Generator invoked with --confirmed-final",
+  "direction": "Recorded approach to recorded destination; no reverse tests implied",
+  "capsule_radius_cm": 35,
+  "capsule_halfheight_cm": 90,
+  "floor_z_cm": [
+    0,
+    450
+  ],
+  "recorded_max_walk_speed_cm_s": 200,
+  "total_links": 66,
+  "total_batches": 6,
+  "counts_by_kind": {
+    "hall_store": 16,
+    "store_store": 26,
+    "store_hall": 24
+  },
+  "limits": {
+    "maximum_actions": 50,
+    "maximum_summed_wait_seconds": 60.0
+  },
+  "batches": [
+    {
+      "batch_index_1_based": 1,
+      "request_file": "portal_checks_001_request.json",
+      "action_count": 48,
+      "summed_wait_seconds": 28.8,
+      "checks": [
+        {
+          "link_index_0_based": 0,
+          "source": "Hall_F0",
+          "destination": "West_F0_01",
+          "floor": 0,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            -2500.0,
+            -866.6666666666667,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2900.0,
+            -866.6666666666667,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2500.0,
+              -866.6666666666667,
+              92.15
+            ],
+            [
+              -2700.0,
+              -866.6666666666667,
+              92.15
+            ],
+            [
+              -2900.0,
+              -866.6666666666667,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2700.0,
+              -866.6666666666667,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              -1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          }
+        },
+        {
+          "link_index_0_based": 1,
+          "source": "West_F0_01",
+          "destination": "West_F0_02",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -3700.0,
+            -633.3333333333334,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3700.0,
+            -233.33333333333337,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3700.0,
+              -633.3333333333334,
+              92.15
+            ],
+            [
+              -3700.0,
+              -433.33333333333337,
+              92.15
+            ],
+            [
+              -3700.0,
+              -233.33333333333337,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3700.0,
+              -433.33333333333337,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          }
+        },
+        {
+          "link_index_0_based": 2,
+          "source": "Hall_F0",
+          "destination": "West_F0_02",
+          "floor": 0,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            -2500.0,
+            0.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2900.0,
+            0.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2500.0,
+              0.0,
+              92.15
+            ],
+            [
+              -2700.0,
+              0.0,
+              92.15
+            ],
+            [
+              -2900.0,
+              0.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2700.0,
+              0.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              -1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          }
+        },
+        {
+          "link_index_0_based": 3,
+          "source": "West_F0_02",
+          "destination": "West_F0_03",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -3700.0,
+            233.33333333333326,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3700.0,
+            633.3333333333333,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3700.0,
+              233.33333333333326,
+              92.15
+            ],
+            [
+              -3700.0,
+              433.33333333333326,
+              92.15
+            ],
+            [
+              -3700.0,
+              633.3333333333333,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3700.0,
+              433.33333333333326,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          }
+        },
+        {
+          "link_index_0_based": 4,
+          "source": "Hall_F0",
+          "destination": "West_F0_03",
+          "floor": 0,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            -2500.0,
+            866.6666666666665,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2900.0,
+            866.6666666666665,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2500.0,
+              866.6666666666665,
+              92.15
+            ],
+            [
+              -2700.0,
+              866.6666666666665,
+              92.15
+            ],
+            [
+              -2900.0,
+              866.6666666666665,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2700.0,
+              866.6666666666665,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              -1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          }
+        },
+        {
+          "link_index_0_based": 5,
+          "source": "Hall_F0",
+          "destination": "West_F0_01",
+          "floor": 0,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            -3700.0,
+            -1500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3700.0,
+            -1100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3700.0,
+              -1500.0,
+              92.15
+            ],
+            [
+              -3700.0,
+              -1300.0,
+              92.15
+            ],
+            [
+              -3700.0,
+              -1100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3700.0,
+              -1300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          }
+        },
+        {
+          "link_index_0_based": 6,
+          "source": "West_F0_03",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -3700.0,
+            1100.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3700.0,
+            1500.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3700.0,
+              1100.0,
+              92.15
+            ],
+            [
+              -3700.0,
+              1300.0,
+              92.15
+            ],
+            [
+              -3700.0,
+              1500.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3700.0,
+              1300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 24,
+            "simulate_key_press": 25,
+            "wait_pie_seconds": 26,
+            "get_player_transform": 27
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          }
+        },
+        {
+          "link_index_0_based": 7,
+          "source": "Hall_F0",
+          "destination": "East_F0_01",
+          "floor": 0,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            2500.0,
+            -866.6666666666667,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2900.0,
+            -866.6666666666667,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2500.0,
+              -866.6666666666667,
+              92.15
+            ],
+            [
+              2700.0,
+              -866.6666666666667,
+              92.15
+            ],
+            [
+              2900.0,
+              -866.6666666666667,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2700.0,
+              -866.6666666666667,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 28,
+            "simulate_key_press": 29,
+            "wait_pie_seconds": 30,
+            "get_player_transform": 31
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          }
+        },
+        {
+          "link_index_0_based": 8,
+          "source": "East_F0_01",
+          "destination": "East_F0_02",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            3700.0,
+            -633.3333333333334,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3700.0,
+            -233.33333333333337,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3700.0,
+              -633.3333333333334,
+              92.15
+            ],
+            [
+              3700.0,
+              -433.33333333333337,
+              92.15
+            ],
+            [
+              3700.0,
+              -233.33333333333337,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3700.0,
+              -433.33333333333337,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 32,
+            "simulate_key_press": 33,
+            "wait_pie_seconds": 34,
+            "get_player_transform": 35
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          }
+        },
+        {
+          "link_index_0_based": 9,
+          "source": "Hall_F0",
+          "destination": "East_F0_02",
+          "floor": 0,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            2500.0,
+            0.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2900.0,
+            0.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2500.0,
+              0.0,
+              92.15
+            ],
+            [
+              2700.0,
+              0.0,
+              92.15
+            ],
+            [
+              2900.0,
+              0.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2700.0,
+              0.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 36,
+            "simulate_key_press": 37,
+            "wait_pie_seconds": 38,
+            "get_player_transform": 39
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          }
+        },
+        {
+          "link_index_0_based": 10,
+          "source": "East_F0_02",
+          "destination": "East_F0_03",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            3700.0,
+            233.33333333333326,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3700.0,
+            633.3333333333333,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3700.0,
+              233.33333333333326,
+              92.15
+            ],
+            [
+              3700.0,
+              433.33333333333326,
+              92.15
+            ],
+            [
+              3700.0,
+              633.3333333333333,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3700.0,
+              433.33333333333326,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 40,
+            "simulate_key_press": 41,
+            "wait_pie_seconds": 42,
+            "get_player_transform": 43
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 41,
+            "simulate_key_press": 42,
+            "wait_pie_seconds": 43,
+            "get_player_transform": 44
+          }
+        },
+        {
+          "link_index_0_based": 11,
+          "source": "Hall_F0",
+          "destination": "East_F0_03",
+          "floor": 0,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            2500.0,
+            866.6666666666665,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2900.0,
+            866.6666666666665,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2500.0,
+              866.6666666666665,
+              92.15
+            ],
+            [
+              2700.0,
+              866.6666666666665,
+              92.15
+            ],
+            [
+              2900.0,
+              866.6666666666665,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2700.0,
+              866.6666666666665,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 44,
+            "simulate_key_press": 45,
+            "wait_pie_seconds": 46,
+            "get_player_transform": 47
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 45,
+            "simulate_key_press": 46,
+            "wait_pie_seconds": 47,
+            "get_player_transform": 48
+          }
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 2,
+      "request_file": "portal_checks_002_request.json",
+      "action_count": 48,
+      "summed_wait_seconds": 28.8,
+      "checks": [
+        {
+          "link_index_0_based": 12,
+          "source": "Hall_F0",
+          "destination": "East_F0_01",
+          "floor": 0,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            3700.0,
+            -1500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3700.0,
+            -1100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3700.0,
+              -1500.0,
+              92.15
+            ],
+            [
+              3700.0,
+              -1300.0,
+              92.15
+            ],
+            [
+              3700.0,
+              -1100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3700.0,
+              -1300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          }
+        },
+        {
+          "link_index_0_based": 13,
+          "source": "East_F0_03",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            3700.0,
+            1100.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3700.0,
+            1500.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3700.0,
+              1100.0,
+              92.15
+            ],
+            [
+              3700.0,
+              1300.0,
+              92.15
+            ],
+            [
+              3700.0,
+              1500.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3700.0,
+              1300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          }
+        },
+        {
+          "link_index_0_based": 14,
+          "source": "Rear_F0_01",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -4112.5,
+            -2500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -4112.5,
+            -2100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -4112.5,
+              -2500.0,
+              92.15
+            ],
+            [
+              -4112.5,
+              -2300.0,
+              92.15
+            ],
+            [
+              -4112.5,
+              -2100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -4112.5,
+              -2300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          }
+        },
+        {
+          "link_index_0_based": 15,
+          "source": "Rear_F0_01",
+          "destination": "Rear_F0_02",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -3725.0,
+            -2800.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3325.0,
+            -2800.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3725.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              -3525.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              -3325.0,
+              -2800.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3525.0,
+              -2800.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          }
+        },
+        {
+          "link_index_0_based": 16,
+          "source": "Rear_F0_02",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -2937.5,
+            -2500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2937.5,
+            -2100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2937.5,
+              -2500.0,
+              92.15
+            ],
+            [
+              -2937.5,
+              -2300.0,
+              92.15
+            ],
+            [
+              -2937.5,
+              -2100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2937.5,
+              -2300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          }
+        },
+        {
+          "link_index_0_based": 17,
+          "source": "Rear_F0_02",
+          "destination": "Rear_F0_03",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -2550.0,
+            -2800.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2150.0,
+            -2800.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2550.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              -2350.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              -2150.0,
+              -2800.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2350.0,
+              -2800.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          }
+        },
+        {
+          "link_index_0_based": 18,
+          "source": "Rear_F0_03",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -1762.5,
+            -2500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -1762.5,
+            -2100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -1762.5,
+              -2500.0,
+              92.15
+            ],
+            [
+              -1762.5,
+              -2300.0,
+              92.15
+            ],
+            [
+              -1762.5,
+              -2100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -1762.5,
+              -2300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 24,
+            "simulate_key_press": 25,
+            "wait_pie_seconds": 26,
+            "get_player_transform": 27
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          }
+        },
+        {
+          "link_index_0_based": 19,
+          "source": "Rear_F0_03",
+          "destination": "Rear_F0_04",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -1375.0,
+            -2800.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -975.0,
+            -2800.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -1375.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              -1175.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              -975.0,
+              -2800.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -1175.0,
+              -2800.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 28,
+            "simulate_key_press": 29,
+            "wait_pie_seconds": 30,
+            "get_player_transform": 31
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          }
+        },
+        {
+          "link_index_0_based": 20,
+          "source": "Rear_F0_04",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -587.5,
+            -2500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -587.5,
+            -2100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -587.5,
+              -2500.0,
+              92.15
+            ],
+            [
+              -587.5,
+              -2300.0,
+              92.15
+            ],
+            [
+              -587.5,
+              -2100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -587.5,
+              -2300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 32,
+            "simulate_key_press": 33,
+            "wait_pie_seconds": 34,
+            "get_player_transform": 35
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          }
+        },
+        {
+          "link_index_0_based": 21,
+          "source": "Rear_F0_04",
+          "destination": "Rear_F0_05",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -200.0,
+            -2800.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            200.0,
+            -2800.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -200.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              0.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              200.0,
+              -2800.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              0.0,
+              -2800.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 36,
+            "simulate_key_press": 37,
+            "wait_pie_seconds": 38,
+            "get_player_transform": 39
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          }
+        },
+        {
+          "link_index_0_based": 22,
+          "source": "Rear_F0_05",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            587.5,
+            -2500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            587.5,
+            -2100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              587.5,
+              -2500.0,
+              92.15
+            ],
+            [
+              587.5,
+              -2300.0,
+              92.15
+            ],
+            [
+              587.5,
+              -2100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              587.5,
+              -2300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 40,
+            "simulate_key_press": 41,
+            "wait_pie_seconds": 42,
+            "get_player_transform": 43
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 41,
+            "simulate_key_press": 42,
+            "wait_pie_seconds": 43,
+            "get_player_transform": 44
+          }
+        },
+        {
+          "link_index_0_based": 23,
+          "source": "Rear_F0_05",
+          "destination": "Rear_F0_06",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            975.0,
+            -2800.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            1375.0,
+            -2800.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              975.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              1175.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              1375.0,
+              -2800.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              1175.0,
+              -2800.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 44,
+            "simulate_key_press": 45,
+            "wait_pie_seconds": 46,
+            "get_player_transform": 47
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 45,
+            "simulate_key_press": 46,
+            "wait_pie_seconds": 47,
+            "get_player_transform": 48
+          }
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 3,
+      "request_file": "portal_checks_003_request.json",
+      "action_count": 48,
+      "summed_wait_seconds": 28.8,
+      "checks": [
+        {
+          "link_index_0_based": 24,
+          "source": "Rear_F0_06",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            1762.5,
+            -2500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            1762.5,
+            -2100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              1762.5,
+              -2500.0,
+              92.15
+            ],
+            [
+              1762.5,
+              -2300.0,
+              92.15
+            ],
+            [
+              1762.5,
+              -2100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              1762.5,
+              -2300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          }
+        },
+        {
+          "link_index_0_based": 25,
+          "source": "Rear_F0_06",
+          "destination": "Rear_F0_07",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            2150.0,
+            -2800.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2550.0,
+            -2800.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2150.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              2350.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              2550.0,
+              -2800.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2350.0,
+              -2800.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          }
+        },
+        {
+          "link_index_0_based": 26,
+          "source": "Rear_F0_07",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            2937.5,
+            -2500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2937.5,
+            -2100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2937.5,
+              -2500.0,
+              92.15
+            ],
+            [
+              2937.5,
+              -2300.0,
+              92.15
+            ],
+            [
+              2937.5,
+              -2100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2937.5,
+              -2300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          }
+        },
+        {
+          "link_index_0_based": 27,
+          "source": "Rear_F0_07",
+          "destination": "Rear_F0_08",
+          "floor": 0,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            3325.0,
+            -2800.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3725.0,
+            -2800.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3325.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              3525.0,
+              -2800.0,
+              92.15
+            ],
+            [
+              3725.0,
+              -2800.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3525.0,
+              -2800.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          }
+        },
+        {
+          "link_index_0_based": 28,
+          "source": "Rear_F0_08",
+          "destination": "Hall_F0",
+          "floor": 0,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            4112.5,
+            -2500.0,
+            92.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            4112.5,
+            -2100.0,
+            92.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              4112.5,
+              -2500.0,
+              92.15
+            ],
+            [
+              4112.5,
+              -2300.0,
+              92.15
+            ],
+            [
+              4112.5,
+              -2100.0,
+              92.15
+            ]
+          ],
+          "floor_surface_z_cm": 0.0,
+          "expected_capsule_center_z_cm": 92.15,
+          "expected_capsule_center_above_floor_cm": 92.15,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              4112.5,
+              -2300.0,
+              92.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          }
+        },
+        {
+          "link_index_0_based": 29,
+          "source": "Hall_F1",
+          "destination": "West_F1_01",
+          "floor": 1,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            -2500.0,
+            -866.6666666666667,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2900.0,
+            -866.6666666666667,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2500.0,
+              -866.6666666666667,
+              542.15
+            ],
+            [
+              -2700.0,
+              -866.6666666666667,
+              542.15
+            ],
+            [
+              -2900.0,
+              -866.6666666666667,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2700.0,
+              -866.6666666666667,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              -1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          }
+        },
+        {
+          "link_index_0_based": 30,
+          "source": "West_F1_01",
+          "destination": "West_F1_02",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -3700.0,
+            -633.3333333333334,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3700.0,
+            -233.33333333333337,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3700.0,
+              -633.3333333333334,
+              542.15
+            ],
+            [
+              -3700.0,
+              -433.33333333333337,
+              542.15
+            ],
+            [
+              -3700.0,
+              -233.33333333333337,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3700.0,
+              -433.33333333333337,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 24,
+            "simulate_key_press": 25,
+            "wait_pie_seconds": 26,
+            "get_player_transform": 27
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          }
+        },
+        {
+          "link_index_0_based": 31,
+          "source": "Hall_F1",
+          "destination": "West_F1_02",
+          "floor": 1,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            -2500.0,
+            0.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2900.0,
+            0.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2500.0,
+              0.0,
+              542.15
+            ],
+            [
+              -2700.0,
+              0.0,
+              542.15
+            ],
+            [
+              -2900.0,
+              0.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2700.0,
+              0.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              -1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 28,
+            "simulate_key_press": 29,
+            "wait_pie_seconds": 30,
+            "get_player_transform": 31
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          }
+        },
+        {
+          "link_index_0_based": 32,
+          "source": "West_F1_02",
+          "destination": "West_F1_03",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -3700.0,
+            233.33333333333326,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3700.0,
+            633.3333333333333,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3700.0,
+              233.33333333333326,
+              542.15
+            ],
+            [
+              -3700.0,
+              433.33333333333326,
+              542.15
+            ],
+            [
+              -3700.0,
+              633.3333333333333,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3700.0,
+              433.33333333333326,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 32,
+            "simulate_key_press": 33,
+            "wait_pie_seconds": 34,
+            "get_player_transform": 35
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          }
+        },
+        {
+          "link_index_0_based": 33,
+          "source": "Hall_F1",
+          "destination": "West_F1_03",
+          "floor": 1,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            -2500.0,
+            866.6666666666665,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2900.0,
+            866.6666666666665,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2500.0,
+              866.6666666666665,
+              542.15
+            ],
+            [
+              -2700.0,
+              866.6666666666665,
+              542.15
+            ],
+            [
+              -2900.0,
+              866.6666666666665,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2700.0,
+              866.6666666666665,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              -1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 180.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 36,
+            "simulate_key_press": 37,
+            "wait_pie_seconds": 38,
+            "get_player_transform": 39
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          }
+        },
+        {
+          "link_index_0_based": 34,
+          "source": "Hall_F1",
+          "destination": "West_F1_01",
+          "floor": 1,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            -3700.0,
+            -1500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3700.0,
+            -1100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3700.0,
+              -1500.0,
+              542.15
+            ],
+            [
+              -3700.0,
+              -1300.0,
+              542.15
+            ],
+            [
+              -3700.0,
+              -1100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3700.0,
+              -1300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 40,
+            "simulate_key_press": 41,
+            "wait_pie_seconds": 42,
+            "get_player_transform": 43
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 41,
+            "simulate_key_press": 42,
+            "wait_pie_seconds": 43,
+            "get_player_transform": 44
+          }
+        },
+        {
+          "link_index_0_based": 35,
+          "source": "West_F1_03",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -3700.0,
+            1100.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3700.0,
+            1500.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3700.0,
+              1100.0,
+              542.15
+            ],
+            [
+              -3700.0,
+              1300.0,
+              542.15
+            ],
+            [
+              -3700.0,
+              1500.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3700.0,
+              1300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 44,
+            "simulate_key_press": 45,
+            "wait_pie_seconds": 46,
+            "get_player_transform": 47
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 45,
+            "simulate_key_press": 46,
+            "wait_pie_seconds": 47,
+            "get_player_transform": 48
+          }
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 4,
+      "request_file": "portal_checks_004_request.json",
+      "action_count": 48,
+      "summed_wait_seconds": 28.8,
+      "checks": [
+        {
+          "link_index_0_based": 36,
+          "source": "Hall_F1",
+          "destination": "East_F1_01",
+          "floor": 1,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            2500.0,
+            -866.6666666666667,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2900.0,
+            -866.6666666666667,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2500.0,
+              -866.6666666666667,
+              542.15
+            ],
+            [
+              2700.0,
+              -866.6666666666667,
+              542.15
+            ],
+            [
+              2900.0,
+              -866.6666666666667,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2700.0,
+              -866.6666666666667,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          }
+        },
+        {
+          "link_index_0_based": 37,
+          "source": "East_F1_01",
+          "destination": "East_F1_02",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            3700.0,
+            -633.3333333333334,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3700.0,
+            -233.33333333333337,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3700.0,
+              -633.3333333333334,
+              542.15
+            ],
+            [
+              3700.0,
+              -433.33333333333337,
+              542.15
+            ],
+            [
+              3700.0,
+              -233.33333333333337,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3700.0,
+              -433.33333333333337,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          }
+        },
+        {
+          "link_index_0_based": 38,
+          "source": "Hall_F1",
+          "destination": "East_F1_02",
+          "floor": 1,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            2500.0,
+            0.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2900.0,
+            0.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2500.0,
+              0.0,
+              542.15
+            ],
+            [
+              2700.0,
+              0.0,
+              542.15
+            ],
+            [
+              2900.0,
+              0.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2700.0,
+              0.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          }
+        },
+        {
+          "link_index_0_based": 39,
+          "source": "East_F1_02",
+          "destination": "East_F1_03",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            3700.0,
+            233.33333333333326,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3700.0,
+            633.3333333333333,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3700.0,
+              233.33333333333326,
+              542.15
+            ],
+            [
+              3700.0,
+              433.33333333333326,
+              542.15
+            ],
+            [
+              3700.0,
+              633.3333333333333,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3700.0,
+              433.33333333333326,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          }
+        },
+        {
+          "link_index_0_based": 40,
+          "source": "Hall_F1",
+          "destination": "East_F1_03",
+          "floor": 1,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            2500.0,
+            866.6666666666665,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2900.0,
+            866.6666666666665,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2500.0,
+              866.6666666666665,
+              542.15
+            ],
+            [
+              2700.0,
+              866.6666666666665,
+              542.15
+            ],
+            [
+              2900.0,
+              866.6666666666665,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2700.0,
+              866.6666666666665,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          }
+        },
+        {
+          "link_index_0_based": 41,
+          "source": "Hall_F1",
+          "destination": "East_F1_01",
+          "floor": 1,
+          "kind": "hall_store",
+          "approach_capsule_xyz_cm": [
+            3700.0,
+            -1500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3700.0,
+            -1100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3700.0,
+              -1500.0,
+              542.15
+            ],
+            [
+              3700.0,
+              -1300.0,
+              542.15
+            ],
+            [
+              3700.0,
+              -1100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3700.0,
+              -1300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          }
+        },
+        {
+          "link_index_0_based": 42,
+          "source": "East_F1_03",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            3700.0,
+            1100.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3700.0,
+            1500.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3700.0,
+              1100.0,
+              542.15
+            ],
+            [
+              3700.0,
+              1300.0,
+              542.15
+            ],
+            [
+              3700.0,
+              1500.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3700.0,
+              1300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 24,
+            "simulate_key_press": 25,
+            "wait_pie_seconds": 26,
+            "get_player_transform": 27
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          }
+        },
+        {
+          "link_index_0_based": 43,
+          "source": "Rear_F1_01",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -4112.5,
+            -2500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -4112.5,
+            -2100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -4112.5,
+              -2500.0,
+              542.15
+            ],
+            [
+              -4112.5,
+              -2300.0,
+              542.15
+            ],
+            [
+              -4112.5,
+              -2100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -4112.5,
+              -2300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 28,
+            "simulate_key_press": 29,
+            "wait_pie_seconds": 30,
+            "get_player_transform": 31
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          }
+        },
+        {
+          "link_index_0_based": 44,
+          "source": "Rear_F1_01",
+          "destination": "Rear_F1_02",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -3725.0,
+            -2800.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -3325.0,
+            -2800.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -3725.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              -3525.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              -3325.0,
+              -2800.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -3525.0,
+              -2800.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 32,
+            "simulate_key_press": 33,
+            "wait_pie_seconds": 34,
+            "get_player_transform": 35
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          }
+        },
+        {
+          "link_index_0_based": 45,
+          "source": "Rear_F1_02",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -2937.5,
+            -2500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2937.5,
+            -2100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2937.5,
+              -2500.0,
+              542.15
+            ],
+            [
+              -2937.5,
+              -2300.0,
+              542.15
+            ],
+            [
+              -2937.5,
+              -2100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2937.5,
+              -2300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 36,
+            "simulate_key_press": 37,
+            "wait_pie_seconds": 38,
+            "get_player_transform": 39
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          }
+        },
+        {
+          "link_index_0_based": 46,
+          "source": "Rear_F1_02",
+          "destination": "Rear_F1_03",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -2550.0,
+            -2800.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -2150.0,
+            -2800.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -2550.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              -2350.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              -2150.0,
+              -2800.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -2350.0,
+              -2800.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 40,
+            "simulate_key_press": 41,
+            "wait_pie_seconds": 42,
+            "get_player_transform": 43
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 41,
+            "simulate_key_press": 42,
+            "wait_pie_seconds": 43,
+            "get_player_transform": 44
+          }
+        },
+        {
+          "link_index_0_based": 47,
+          "source": "Rear_F1_03",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -1762.5,
+            -2500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -1762.5,
+            -2100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -1762.5,
+              -2500.0,
+              542.15
+            ],
+            [
+              -1762.5,
+              -2300.0,
+              542.15
+            ],
+            [
+              -1762.5,
+              -2100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -1762.5,
+              -2300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 44,
+            "simulate_key_press": 45,
+            "wait_pie_seconds": 46,
+            "get_player_transform": 47
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 45,
+            "simulate_key_press": 46,
+            "wait_pie_seconds": 47,
+            "get_player_transform": 48
+          }
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 5,
+      "request_file": "portal_checks_005_request.json",
+      "action_count": 48,
+      "summed_wait_seconds": 28.801,
+      "checks": [
+        {
+          "link_index_0_based": 48,
+          "source": "Rear_F1_03",
+          "destination": "Rear_F1_04",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -1375.0,
+            -2800.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -975.0,
+            -2800.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -1375.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              -1175.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              -975.0,
+              -2800.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -1175.0,
+              -2800.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          }
+        },
+        {
+          "link_index_0_based": 49,
+          "source": "Rear_F1_04",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -587.5,
+            -2500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -587.5,
+            -2100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -587.5,
+              -2500.0,
+              542.15
+            ],
+            [
+              -587.5,
+              -2300.0,
+              542.15
+            ],
+            [
+              -587.5,
+              -2100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -587.5,
+              -2300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          }
+        },
+        {
+          "link_index_0_based": 50,
+          "source": "Rear_F1_04",
+          "destination": "Rear_F1_05",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -200.0,
+            -2800.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            200.0,
+            -2800.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -200.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              0.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              200.0,
+              -2800.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              0.0,
+              -2800.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          }
+        },
+        {
+          "link_index_0_based": 51,
+          "source": "Rear_F1_05",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            587.5,
+            -2500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            587.5,
+            -2100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              587.5,
+              -2500.0,
+              542.15
+            ],
+            [
+              587.5,
+              -2300.0,
+              542.15
+            ],
+            [
+              587.5,
+              -2100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              587.5,
+              -2300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          }
+        },
+        {
+          "link_index_0_based": 52,
+          "source": "Rear_F1_05",
+          "destination": "Rear_F1_06",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            975.0,
+            -2800.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            1375.0,
+            -2800.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              975.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              1175.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              1375.0,
+              -2800.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              1175.0,
+              -2800.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          }
+        },
+        {
+          "link_index_0_based": 53,
+          "source": "Rear_F1_06",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            1762.5,
+            -2500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            1762.5,
+            -2100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              1762.5,
+              -2500.0,
+              542.15
+            ],
+            [
+              1762.5,
+              -2300.0,
+              542.15
+            ],
+            [
+              1762.5,
+              -2100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              1762.5,
+              -2300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          }
+        },
+        {
+          "link_index_0_based": 54,
+          "source": "Rear_F1_06",
+          "destination": "Rear_F1_07",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            2150.0,
+            -2800.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2550.0,
+            -2800.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2150.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              2350.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              2550.0,
+              -2800.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2350.0,
+              -2800.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 24,
+            "simulate_key_press": 25,
+            "wait_pie_seconds": 26,
+            "get_player_transform": 27
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 25,
+            "simulate_key_press": 26,
+            "wait_pie_seconds": 27,
+            "get_player_transform": 28
+          }
+        },
+        {
+          "link_index_0_based": 55,
+          "source": "Rear_F1_07",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            2937.5,
+            -2500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            2937.5,
+            -2100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              2937.5,
+              -2500.0,
+              542.15
+            ],
+            [
+              2937.5,
+              -2300.0,
+              542.15
+            ],
+            [
+              2937.5,
+              -2100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              2937.5,
+              -2300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 28,
+            "simulate_key_press": 29,
+            "wait_pie_seconds": 30,
+            "get_player_transform": 31
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 29,
+            "simulate_key_press": 30,
+            "wait_pie_seconds": 31,
+            "get_player_transform": 32
+          }
+        },
+        {
+          "link_index_0_based": 56,
+          "source": "Rear_F1_07",
+          "destination": "Rear_F1_08",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            3325.0,
+            -2800.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            3725.0,
+            -2800.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              3325.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              3525.0,
+              -2800.0,
+              542.15
+            ],
+            [
+              3725.0,
+              -2800.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              3525.0,
+              -2800.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 32,
+            "simulate_key_press": 33,
+            "wait_pie_seconds": 34,
+            "get_player_transform": 35
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 33,
+            "simulate_key_press": 34,
+            "wait_pie_seconds": 35,
+            "get_player_transform": 36
+          }
+        },
+        {
+          "link_index_0_based": 57,
+          "source": "Rear_F1_08",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            4112.5,
+            -2500.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            4112.5,
+            -2100.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              4112.5,
+              -2500.0,
+              542.15
+            ],
+            [
+              4112.5,
+              -2300.0,
+              542.15
+            ],
+            [
+              4112.5,
+              -2100.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              4112.5,
+              -2300.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 36,
+            "simulate_key_press": 37,
+            "wait_pie_seconds": 38,
+            "get_player_transform": 39
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 37,
+            "simulate_key_press": 38,
+            "wait_pie_seconds": 39,
+            "get_player_transform": 40
+          }
+        },
+        {
+          "link_index_0_based": 58,
+          "source": "Oval_F1_NW",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -1299.0381056766578,
+            -550.0000000000001,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -1645.4482671904334,
+            -750.0000000000001,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -1299.0381056766578,
+              -550.0000000000001,
+              542.15
+            ],
+            [
+              -1472.2431864335456,
+              -650.0000000000001,
+              542.15
+            ],
+            [
+              -1645.4482671904334,
+              -750.0000000000001,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -1472.2431864335456,
+              -650.0000000000001,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              -0.8660254037844388,
+              -0.49999999999999983
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0000000000001,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0000000000001,
+          "yaw_degrees": -150.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.151,
+          "wait_seconds": 2.401,
+          "full_capsule_clearance_progress_cm": 235.0000000000001,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 40,
+            "simulate_key_press": 41,
+            "wait_pie_seconds": 42,
+            "get_player_transform": 43
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 41,
+            "simulate_key_press": 42,
+            "wait_pie_seconds": 43,
+            "get_player_transform": 44
+          }
+        },
+        {
+          "link_index_0_based": 59,
+          "source": "Oval_F1_NE",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            1299.0381056766576,
+            -550.0000000000005,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            1645.4482671904327,
+            -750.0000000000007,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              1299.0381056766576,
+              -550.0000000000005,
+              542.15
+            ],
+            [
+              1472.2431864335451,
+              -650.0000000000006,
+              542.15
+            ],
+            [
+              1645.4482671904327,
+              -750.0000000000007,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              1472.2431864335451,
+              -650.0000000000006,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.8660254037844382,
+              -0.5000000000000007
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -199.99999999999991,
+            "expected_destination_signed_distance_cm": 199.99999999999997
+          },
+          "horizontal_distance_cm": 399.9999999999999,
+          "yaw_degrees": -30.00000000000005,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 234.99999999999991,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 44,
+            "simulate_key_press": 45,
+            "wait_pie_seconds": 46,
+            "get_player_transform": 47
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 45,
+            "simulate_key_press": 46,
+            "wait_pie_seconds": 47,
+            "get_player_transform": 48
+          }
+        }
+      ]
+    },
+    {
+      "batch_index_1_based": 6,
+      "request_file": "portal_checks_006_request.json",
+      "action_count": 24,
+      "summed_wait_seconds": 14.402,
+      "checks": [
+        {
+          "link_index_0_based": 60,
+          "source": "Oval_F1_SW",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            -1299.038105676658,
+            549.9999999999999,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -1645.4482671904336,
+            749.9999999999999,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -1299.038105676658,
+              549.9999999999999,
+              542.15
+            ],
+            [
+              -1472.2431864335458,
+              649.9999999999999,
+              542.15
+            ],
+            [
+              -1645.4482671904336,
+              749.9999999999999,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -1472.2431864335458,
+              649.9999999999999,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              -0.8660254037844388,
+              0.49999999999999983
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0000000000001,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0000000000001,
+          "yaw_degrees": 150.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.151,
+          "wait_seconds": 2.401,
+          "full_capsule_clearance_progress_cm": 235.0000000000001,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 0,
+            "simulate_key_press": 1,
+            "wait_pie_seconds": 2,
+            "get_player_transform": 3
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 1,
+            "simulate_key_press": 2,
+            "wait_pie_seconds": 3,
+            "get_player_transform": 4
+          }
+        },
+        {
+          "link_index_0_based": 61,
+          "source": "Oval_F1_SE",
+          "destination": "Hall_F1",
+          "floor": 1,
+          "kind": "store_hall",
+          "approach_capsule_xyz_cm": [
+            1299.038105676658,
+            549.9999999999999,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            1645.4482671904336,
+            749.9999999999999,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              1299.038105676658,
+              549.9999999999999,
+              542.15
+            ],
+            [
+              1472.2431864335458,
+              649.9999999999999,
+              542.15
+            ],
+            [
+              1645.4482671904336,
+              749.9999999999999,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              1472.2431864335458,
+              649.9999999999999,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.8660254037844388,
+              0.49999999999999983
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0000000000001,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0000000000001,
+          "yaw_degrees": 29.999999999999993,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.151,
+          "wait_seconds": 2.401,
+          "full_capsule_clearance_progress_cm": 235.0000000000001,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 4,
+            "simulate_key_press": 5,
+            "wait_pie_seconds": 6,
+            "get_player_transform": 7
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 5,
+            "simulate_key_press": 6,
+            "wait_pie_seconds": 7,
+            "get_player_transform": 8
+          }
+        },
+        {
+          "link_index_0_based": 62,
+          "source": "Oval_F1_NW",
+          "destination": "Oval_F1_NE",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -200.0,
+            -650.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            200.0,
+            -650.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -200.0,
+              -650.0,
+              542.15
+            ],
+            [
+              0.0,
+              -650.0,
+              542.15
+            ],
+            [
+              200.0,
+              -650.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              0.0,
+              -650.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 8,
+            "simulate_key_press": 9,
+            "wait_pie_seconds": 10,
+            "get_player_transform": 11
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 9,
+            "simulate_key_press": 10,
+            "wait_pie_seconds": 11,
+            "get_player_transform": 12
+          }
+        },
+        {
+          "link_index_0_based": 63,
+          "source": "Oval_F1_SW",
+          "destination": "Oval_F1_SE",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -200.0,
+            650.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            200.0,
+            650.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -200.0,
+              650.0,
+              542.15
+            ],
+            [
+              0.0,
+              650.0,
+              542.15
+            ],
+            [
+              200.0,
+              650.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              0.0,
+              650.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              1.0,
+              0.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 0.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 12,
+            "simulate_key_press": 13,
+            "wait_pie_seconds": 14,
+            "get_player_transform": 15
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 13,
+            "simulate_key_press": 14,
+            "wait_pie_seconds": 15,
+            "get_player_transform": 16
+          }
+        },
+        {
+          "link_index_0_based": 64,
+          "source": "Oval_F1_NW",
+          "destination": "Oval_F1_SW",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            -850.0,
+            -200.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            -850.0,
+            200.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              -850.0,
+              -200.0,
+              542.15
+            ],
+            [
+              -850.0,
+              0.0,
+              542.15
+            ],
+            [
+              -850.0,
+              200.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              -850.0,
+              0.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 16,
+            "simulate_key_press": 17,
+            "wait_pie_seconds": 18,
+            "get_player_transform": 19
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 17,
+            "simulate_key_press": 18,
+            "wait_pie_seconds": 19,
+            "get_player_transform": 20
+          }
+        },
+        {
+          "link_index_0_based": 65,
+          "source": "Oval_F1_NE",
+          "destination": "Oval_F1_SE",
+          "floor": 1,
+          "kind": "store_store",
+          "approach_capsule_xyz_cm": [
+            850.0,
+            -200.0,
+            542.15
+          ],
+          "expected_destination_capsule_xyz_cm": [
+            850.0,
+            200.0,
+            542.15
+          ],
+          "recorded_waypoints_xyz_cm": [
+            [
+              850.0,
+              -200.0,
+              542.15
+            ],
+            [
+              850.0,
+              0.0,
+              542.15
+            ],
+            [
+              850.0,
+              200.0,
+              542.15
+            ]
+          ],
+          "floor_surface_z_cm": 450.0,
+          "expected_capsule_center_z_cm": 542.15,
+          "expected_capsule_center_above_floor_cm": 92.14999999999998,
+          "opening_width_cm": 260,
+          "opening_height_cm": 300,
+          "opening_plane": {
+            "point_xyz_cm": [
+              850.0,
+              0.0,
+              542.15
+            ],
+            "normal_unit_xy_toward_destination": [
+              0.0,
+              1.0
+            ],
+            "source": "middle recorded waypoint",
+            "approach_signed_distance_cm": -200.0,
+            "expected_destination_signed_distance_cm": 200.0
+          },
+          "horizontal_distance_cm": 400.0,
+          "yaw_degrees": 90.0,
+          "recorded_max_walk_speed_cm_s": 200.0,
+          "acceleration_allowance_seconds": 0.15,
+          "press_duration_seconds": 2.15,
+          "wait_seconds": 2.4,
+          "full_capsule_clearance_progress_cm": 235.0,
+          "validation_guidance": {
+            "require_all_nested_actions_success": true,
+            "measure_actual_displacement_from_setter_result_when_available": true,
+            "require_opening_plane_crossed_toward_destination": true,
+            "require_capsule_center_height_matches_recorded_destination": true,
+            "same_floor_capsule_z_tolerance_cm": 5.0,
+            "destination_xy_tolerance_cm": 50.0,
+            "lateral_route_tolerance_cm": 35.0
+          },
+          "status": "prepared_not_executed",
+          "request_step_indices_0_based": {
+            "set_player_transform": 20,
+            "simulate_key_press": 21,
+            "wait_pie_seconds": 22,
+            "get_player_transform": 23
+          },
+          "request_step_numbers_1_based": {
+            "set_player_transform": 21,
+            "simulate_key_press": 22,
+            "wait_pie_seconds": 23,
+            "get_player_transform": 24
+          }
+        }
+      ]
+    }
+  ]
+}

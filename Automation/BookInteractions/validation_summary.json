@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "baseline_commit": "e5297e9",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "result": "Native gameplay/network tests and live host keyboard/inspection checks passed; hardware microphone pending",
+  "build": {
+    "cold_native": "Succeeded",
+    "log": "Saved/Logs/BookInteractionBuildFinal.log",
+    "full_suite_report": "Saved/Automation/BookInteractions/index.json",
+    "full_suite": {
+      "succeeded": 7,
+      "failed": 0,
+      "warnings": 0,
+      "errors": 0,
+      "not_run": 0
+    },
+    "final_strengthened_ghost_report": "Saved/Automation/BookInteractionsFinal/index.json",
+    "final_strengthened_ghost_tests": {
+      "succeeded": 2,
+      "failed": 0,
+      "warnings": 0,
+      "errors": 0,
+      "not_run": 0
+    },
+    "later_ui_binding_change": {
+      "scope": "CPP method bodies only: F/R bind to the local controller InputComponent instead of raw focus polling",
+      "compile": "Aura Live Coding compile and patch both Succeeded",
+      "validation": "Live native F/R injection reports bound_via_input_component and performs pickup/open/close/place. Cold native suite preceded this UI binding-only change."
+    }
+  },
+  "controls": {
+    "F": "Aim at a nearby evidence book to pick it up; while carrying, aim at a flat supported surface to place open",
+    "R": "Open/close the carried book and local readable inspection",
+    "V": "Hold to talk; release to submit speech",
+    "pickup_reach_cm": 280,
+    "placement": "Server derives transform from validated camera ray; rejects unsupported, blocked, distant or insufficiently supported locations"
+  },
+  "book_rules": {
+    "initial_closed": true,
+    "initial_blank": true,
+    "placed_open_for_writing": true,
+    "held_book_can_start_writing": false,
+    "automatic_writing": false,
+    "question_ids": [
+      "where_are_you",
+      "who_are_you",
+      "how_old_are_you"
+    ],
+    "explicit_ids": [
+      "write_in_book"
+    ],
+    "phrase_aliases": [
+      "write in the book",
+      "write something",
+      "where are you",
+      "who are you",
+      "what is your name",
+      "how old are you",
+      "what is your age"
+    ],
+    "same_placeholder_response_all_questions": "I AM STILL HERE",
+    "writing_duration_seconds": 4,
+    "persistent_through": [
+      "pickup",
+      "closing",
+      "reopening",
+      "carrying",
+      "placement",
+      "other clients",
+      "late joining"
+    ],
+    "persistence_scope": "Current world/session; no disk save across game launches",
+    "normal_interactions_never_reset_evidence": true
+  },
+  "native_tests": {
+    "names": [
+      "Mall.Ghost.BookInteraction",
+      "Mall.Ghost.StateAndDisturbance",
+      "Mall.Voice.CodecAndPacketBounds",
+      "Mall.Voice.NetworkTransport",
+      "MyProject2.Voice.ConcurrentSpeechTeardown",
+      "MyProject2.Voice.OfflineSpeechBackend",
+      "MyProject2.Voice.PhraseMatching"
+    ],
+    "book_network_fixture": "Authoritative Entry world, two real IP clients and a third late joiner, voice disabled",
+    "checks": [
+      "Replicated owner endpoints attach independently of voice",
+      "Forged ray origin and opposed view rejected while actually aimed at book",
+      "Actual client-owned RPC pickup and owner-only HeldBook reference",
+      "Competing client cannot acquire or toggle a held book",
+      "Carrying/opening does not create writing; held/closed writing rejected",
+      "Actual owner RPC open, unsupported placement rejection and supported placement",
+      "Late join reconstructs carried/open state",
+      "Completed writing and original timestamp survive pickup/close/reopen/placement and replicate",
+      "No automatic writing after possessed player enters; automatic loose props still active",
+      "All seven configured phrase IDs/aliases admitted appropriately; negations, long speech and low confidence rejected"
+    ]
+  },
+  "live_pie": {
+    "topology": "Listen server plus joined client",
+    "native_keyboard_bindings_verified": true,
+    "blank_inspection_visually_reviewed": true,
+    "held_write_request": {
+      "accepted": false,
+      "book_remained_blank": true
+    },
+    "closed_held_book_placed_open": true,
+    "question_request": {
+      "id": "where_are_you",
+      "receiver_accepted": true,
+      "writing_started_at_server_time": 154.5437547042966,
+      "method": "Actual server ghost receiver invocation; not microphone/owner speech transport"
+    },
+    "peer_writing": {
+      "both_written": true,
+      "both_progress": 1,
+      "same_start_time": 154.5437547042966
+    },
+    "written_inspection_visually_reviewed": true,
+    "persistent_write_after_pickup_close_reopen_and_new_floor_placement": {
+      "carrier": null,
+      "open": true,
+      "written": true,
+      "progress": 1,
+      "start_unchanged": 154.5437547042966,
+      "new_location_cm": [
+        4198.877258,
+        1.992606,
+        0.3
+      ]
+    },
+    "joined_keyboard_inspection": "Not accepted evidence: native authority teleport did not move the joined local pawn from spawn; client ownership/RPC behavior is instead established by the real-IP native test",
+    "shutdown": "PIE stopped; editor connected; no fatal crash"
+  },
+  "scene": {
+    "authored_actor_count": 735,
+    "book_start_cm": [
+      4210,
+      -190,
+      70.3
+    ],
+    "new_stand": {
+      "label": "GhostBookStand_East_F0_02",
+      "source": "Project/engine primitive Cube, no external asset acquired",
+      "dimensions_cm": [
+        65,
+        55,
+        70
+      ]
+    },
+    "reason_for_relocation": "The checkout's raised128cm collision rim occluded the original94cm book recess from the player's normal camera. Starting book is now reachable on lowstand besidecheckout.",
+    "accepted_mall_scale_unchanged": true
+  },
+  "art": {
+    "blank_preview": "Automation/BookInteractions/inspection_blank.png",
+    "written_preview": "Automation/BookInteractions/inspection_written.png",
+    "existing_texture": "/Game/Environment/Mall/Interactions/Textures/T_GhostWriting_TestRGBA",
+    "external_model_downloads": 0,
+    "project_generated_open_close_book_geometry": true,
+    "free_loose_prop_provenance": "ExternalAssets/GhostInteractions/manifest.json"
+  },
+  "authoring_observations": [
+    "Initial live counter-side pickup attempts were correctly blocked by the raised checkout rim; superseded by accessible stand.",
+    "Aura runtime scripting assertion/cache failures interrupted one PIE fixture and required mandatory Python-agent repair; interrupted writing attempt is rejected evidence.",
+    "Only the successful reconstructed question test and subsequent replicated/native-key observations establish current writing acceptance."
+  ],
+  "limits": [
+    "Real microphone and audible proximity remain user hardware tests.",
+    "New writing/name/age audio recordings were not tested; matcher and transport IDs are tested, existing location-question audio fixture passes.",
+    "Receiver invocation alone does not establish complete speech transport or multicast cue media.",
+    "Inspection is a local non-modal page overlay, with a simple waist carry pose; no new hand animation, page turning or hotbar integration.",
+    "One shared response image is used; no generated conversational answers.",
+    "Pawn death/recovery path is implemented but no dedicated live death/disconnect acceptance is claimed.",
+    "The later UI key binding change was compiled/patched with Live Coding; the earlier cold suite covers gameplay/network mechanics."
+  ],
+  "final_editor": {
+    "connected": true,
+    "pie_active": false,
+    "authored_book_closed": true,
+    "authored_book_blank": true,
+    "dirty_maps": [],
+    "dirty_content": []
+  },
+  "computer_use": false
+}

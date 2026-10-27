@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-18",
+  "baseline_commit": "9a00d0a",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "method": "Aura actual F pickup, F placement on cart, G controlled push, existing IA_Move action, G release; runtime arrangements discarded after PIE.",
+  "reproduction": {
+    "cart_initial_cm": [3700, -950, 45],
+    "book_F_placed_cm": [3699.993326, -949.999184, 89.3],
+    "book_carrier": null,
+    "book_stored_on_cart": null,
+    "book_attachment_parent": null,
+    "cart_after_push_cm": [3815.613460, -950, 47.150002],
+    "book_after_push_cm": [3699.993326, -949.999184, 89.3],
+    "cart_horizontal_travel_cm": 115.613460,
+    "book_horizontal_travel_cm": 0,
+    "result": "Reproduced: ordinary F placement leaves the book hovering at its old world position."
+  },
+  "separate_T_control": {
+    "method": "Two-player listen-server PIE, actual F pickup then T deposit and G push",
+    "cart_horizontal_travel_cm": 157.362723,
+    "client_1_book_slot_relative_cm": [-26, -17, 47],
+    "client_1_attachment_parent": "EquipmentCart_East_F0_02.CartBounds",
+    "result": "Existing T rack storage follows correctly. The fix must cover F placement and retain T behavior."
+  }
+}

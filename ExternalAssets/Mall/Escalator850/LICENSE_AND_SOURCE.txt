@@ -1,0 +1,12 @@
+Mall escalator 850 cm rise derivative
+Source: https://3dassets.dev/assets/retail-store-fixtures-and-mall-concourse-escalator-mod-e0d69a9c
+Original download: https://cdn.3dassets.dev/assets/25360/v1/model.glb
+License: CC0 1.0 Universal; https://creativecommons.org/publicdomain/zero/1.0/
+Original model downloaded 2026-10-10; derivative prepared 2026-10-13.
+AI-authored source; static shell only. Existing custom moving tread mesh reused.
+Derived from ../../Escalator/MallEscalator.blend; existing source and Unreal assets remain unchanged.
+Adaptation: rise360->850 cm, same30-degree incline, slope run1472.243186 cm.
+Lower landings/newels unchanged; upper components shift848.704896 cm X and490 cm Z.
+Inclined steel/glass spans extended along incline axis; rubber handrails regenerated with
+original 10 x 6.4 cm section and 30 cm rounded newels. Fixed endplates remain45 cm.
+Preparation: ../../../Automation/Mall/prepare_escalator_850.py

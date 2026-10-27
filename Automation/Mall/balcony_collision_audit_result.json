@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  {\"bodies\": [{\"mesh\": \"SM_MallBalconyStraight_400\", \"body\": \"/Game/Environment/Mall/Models/Architecture/SM_MallBalconyStraight_400.SM_MallBalconyStraight_400:BodySetup_0\", \"trace\": \"<CollisionTraceFlag.CTF_USE_COMPLEX_AS_SIMPLE: 3>\", \"double_sided\": false}, {\"mesh\": \"SM_MallBalconyModule_400\", \"body\": \"/Game/Environment/Mall/Models/Architecture/SM_MallBalconyModule_400.SM_MallBalconyModule_400:BodySetup_0\", \"trace\": \"<CollisionTraceFlag.CTF_USE_COMPLEX_AS_SIMPLE: 3>\", \"double_sided\": false}], \"components\": [{\"label\": \"Gallery_F1_Floor_01\", \"location\": \"<Struct 'Vector' (0x00000220DD127B20) {x: 0.000000, y: 0.000000, z: 0.000000}>\", \"rotation\": \"<Struct 'Rotator' (0x00000220DD127BC0) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>\", \"collision\": null, \"profile\": null, \"mesh\": null}, {\"label\": \"Gallery_F1_Platform_01\", \"location\": \"<Struct 'Vector' (0x00000220DD127B20) {x: -900.000000, y: -1400.000000, z: 450.000000}>\", \"rotation\": \"<Struct 'Rotator' (0x00000220DD127B20) {pitch: 0.000000, yaw: 90.000000, roll: -0.000000}>\", \"collision\": \"<CollisionEnabled.QUERY_AND_PHYSICS: 3>\", \"profile\": \"BlockAll\", \"mesh\": \"/Game/Environment/Mall/Models/Architecture/SM_MallBalconyStraight_400.SM_MallBalconyStraight_400\"}, {\"label\": \"Gallery_F1_Platform_02\", \"location\": \"<Struct 'Vector' (0x00000220DD18E680) {x: 900.000000, y: -1400.000000, z: 450.000000}>\", \"rotation\": \"<Struct 'Rotator' (0x00000220DD18E680) {pitch: 0.000000, yaw: -90.000000, roll: 0.000000}>\", \"collision\": \"<CollisionEnabled.QUERY_AND_PHYSICS: 3>\", \"profile\": \"BlockAll\", \"mesh\": \"/Game/Environment/Mall/Models/Architecture/SM_MallBalconyStraight_400.SM_MallBalconyStraight_400\"}, {\"label\": \"Gallery_F1_Platform_03\", \"location\": \"<Struct 'Vector' (0x00000220DD18C060) {x: -900.000000, y: -1000.000000, z: 450.000000}>\", \"rotation\": \"<Struct 'Rotator' (0x00000220DD18C060) {pitch: 0.000000, yaw: 90.000000, roll: -0.000000}>\", \"collision\": \"<CollisionEnabled.QUERY_AND_PHYSICS: 3>\", \"profile\": \"BlockAll\", \"mesh\": \"/Game/Environment/Mall/Models/Architecture/SM_MallBalconyStraight_400.SM_MallBalconyStraight_400\"}]}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "create_assets",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "total_assets: 1\nsuccessful_assets: 1\nfailed_assets: 0\nsuccessful:\n  - index: 0\n    soft_path: /Game/Environment/Escalator/BP_EscalatorLanding\n    asset_type: Blueprint\n    result:\n    create_blueprint_result:\n      {\r\n      \t\"file_path\": \"/Game/Environment/Escalator/BP_EscalatorLanding\",\r\n      \t\"asset_type\": \"Actor Blueprint\",\r\n      \t\"parent_class\": \"StaticMeshActor\"\r\n      }\nfailed: []\ncontent:\n  - type: text\n    text:\n    total_assets: 1\n    successful_assets: 1\n    failed_assets: 0\n    successful:\n      - index: 0\n        soft_path: /Game/Environment/Escalator/BP_EscalatorLanding\n        asset_type: Blueprint\n        result:\n        create_blueprint_result:\n          {\r\n          \t\"file_path\": \"/Game/Environment/Escalator/BP_EscalatorLanding\",\r\n          \t\"asset_type\": \"Actor Blueprint\",\r\n          \t\"parent_class\": \"StaticMeshActor\"\r\n          }\n    failed: []\n  - type: assets\n    items:\n    - path: /Game/Environment/Escalator/BP_EscalatorLanding\n      name: BP_EscalatorLanding\n      label: Blueprint"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "edit_blueprint",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Error executing tool edit_blueprint: 6 validation errors for edit_blueprintArguments\nproperties\n  Field required [type=missing, input_value={'soft_path_from_project_...:MaterialInterface'}]}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\ncomponents.0.component_properties.3.value.float\n  Input should be a valid number [type=float_type, input_value=['/Game/Environment/Escalator/Meshes/metal.metal'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.11/v/float_type\ncomponents.0.component_properties.3.value.int\n  Input should be a valid integer [type=int_type, input_value=['/Game/Environment/Escalator/Meshes/metal.metal'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.11/v/int_type\ncomponents.0.component_properties.3.value.str\n  Input should be a valid string [type=string_type, input_value=['/Game/Environment/Escalator/Meshes/metal.metal'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\ncomponents.0.component_properties.3.value.bool\n  Input should be a valid boolean [type=bool_type, input_value=['/Game/Environment/Escalator/Meshes/metal.metal'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.11/v/bool_type\ncomponents.0.component_properties.3.value.list[float].0\n  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='/Game/Environment/Escalator/Meshes/metal.metal', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/float_parsing"
+        }
+      ],
+      "isError": true
+    }
+  }
+]

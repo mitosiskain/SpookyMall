@@ -1,0 +1,6 @@
+Supplemental mall surfaces
+Poly Haven sources and TextureCan ceiling tile archive are CC0 1.0 Universal.
+Poly Haven license: https://polyhaven.com/license
+TextureCan terms: https://www.texturecan.com/terms/
+CC0 dedication: https://creativecommons.org/publicdomain/zero/1.0/
+Exact source pages, download URLs and SHA256 values are in surface_manifest.json.

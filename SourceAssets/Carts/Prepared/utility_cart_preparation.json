@@ -1,0 +1,80 @@
+{
+  "file": "SM_EquipmentUtilityCart.fbx",
+  "sha256": "6298246ea48ef8d0a0b1b71d6cce6405dde566c6349d8edb457d0a3cbe782a33",
+  "origin": "Project-original geometry created for MyProject2; no external geometry or textures",
+  "axes": "centimeters, +X forward, Z up",
+  "pivot": "ground beneath center of decks",
+  "bounds_cm": [
+    [
+      -64.0999984741211,
+      -33.0,
+      0.0
+    ],
+    [
+      57.0,
+      33.0,
+      110.0999984741211
+    ]
+  ],
+  "dimensions_cm": [
+    121.0999984741211,
+    66.0,
+    110.0999984741211
+  ],
+  "shelf_top_cm": [
+    25,
+    58,
+    92
+  ],
+  "top_lip_cm": 95.2,
+  "handle_height_cm": 108,
+  "triangles": 5104,
+  "uv_channels": 1,
+  "materials": [
+    {
+      "name": "Cart_BluePaint",
+      "base_color": [
+        0.03500000014901161,
+        0.11999999731779099,
+        0.17000000178813934,
+        1.0
+      ],
+      "metallic": 0.15000000596046448,
+      "roughness": 0.4399999976158142
+    },
+    {
+      "name": "Cart_BrushedSteel",
+      "base_color": [
+        0.36000001430511475,
+        0.4000000059604645,
+        0.4399999976158142,
+        1.0
+      ],
+      "metallic": 0.8500000238418579,
+      "roughness": 0.3199999928474426
+    },
+    {
+      "name": "Cart_Rubber",
+      "base_color": [
+        0.017999999225139618,
+        0.023000000044703484,
+        0.02800000086426735,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.7599999904632568
+    },
+    {
+      "name": "Cart_AmberSafety",
+      "base_color": [
+        0.8999999761581421,
+        0.3499999940395355,
+        0.03500000014901161,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5
+    }
+  ],
+  "notes": "Static display mesh. Gameplay movement/collision supplied by native cart. Wheel animation is a later art refinement."
+}

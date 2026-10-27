@@ -1,0 +1,6 @@
+Retail Store Fixtures and Mall
+Source: https://3dassets.dev/packs/retail-store-fixtures-and-mall
+CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+AI-authored; geometry needs visual review.
+Source units metres, +Y up; no collision or gameplay supplied.
+Downloaded October 10, 2026. Individual URLs and SHA256 values: downloads.json.

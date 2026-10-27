@@ -1,0 +1,1 @@
+{"calls":[{"tool":"get_asset_meta","arguments":{"asset_path":"/Game/Environment/Escalator/BP_MallEscalator","parts":["Components"]}},{"tool":"quicksearch","arguments":{"query":"BP_EscalatorLanding","max_results":1}},{"tool":"query_unreal_project_assets","arguments":{"query":"BP_EscalatorLanding","num_files":1}}]}

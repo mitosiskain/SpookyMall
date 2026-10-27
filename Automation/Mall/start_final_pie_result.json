@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "start_pie",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "success: true\ndata:\n  status: pie_requested\n  message: PIE session start requested. Use is_pie_active to confirm it has started.\n  window_width: 1280\n  window_height: 720\n  net_mode: standalone\n  num_clients: 1\n  recommended_max_pie_instances: 4\n  auto_recording:\n    status: recording_armed\n    output_dir: C:/unreal/uprj/MyProject2/Saved/AuraVerify/rec_1791665209695968600_1\n    note: this PIE session is being FILMED from t=0 (background recorder, ~2fps, paths-only). run_verification_sequence returns the manifest automatically (its recording covers from PIE start), or call stop_pie_recording to collect it \u2014 frames carry game_time_seconds + mean_luma, the evidence for spawn-timing/from-start claims."
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "is_pie_active",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "success: true\ndata:\n  is_active: true\n  time_seconds: 0.026395097374916077\n  viewport_width: 1280\n  viewport_height: 723\n  num_instances: 1\n  instances:\n    - client_index: 0\n      pie_instance: 0\n      is_server: false\n      has_viewport: true\n      viewport_width: 1280\n      viewport_height: 723\n      time_seconds: 0.026395097374916077\n  pie_capacity:\n    hard_max_instances: 4\n    recommended_max_instances: 4\n    basis: live_budget\n    measured_while_pie_active: true\n    gpu:\n      adapter_name: NVIDIA GeForce RTX 3060\n      is_integrated: false\n      dedicated_video_memory_mb: 12115\n      budget_mb: 11347\n      current_usage_mb: 4443\n      available_mb: 6903\n      source: dxgi_local\n    system_memory:\n      total_physical_mb: 49013\n      available_physical_mb: 17645\n    tuning:\n      vram_per_instance_mb: 1536\n      vram_reserve_mb: 512\n      max_parallel_instances_override: 0\n  recommended_max_pie_instances: 4\npie_time_seconds: 0.026395097374916077"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

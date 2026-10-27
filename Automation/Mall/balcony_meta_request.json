@@ -1,0 +1,1 @@
+{"calls":[{"tool":"get_asset_meta","arguments":{"asset_path":"/Game/Environment/Mall/Models/Architecture/SM_MallBalconyStraight_400.SM_MallBalconyStraight_400","parts":["PropertyValues"]}},{"tool":"get_asset_meta","arguments":{"asset_path":"/Script/Engine.BodySetup","parts":["PropertyDeclarations"]}}]}

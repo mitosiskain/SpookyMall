@@ -1,0 +1,204 @@
+[
+  {
+    "name": "SM_EMFReader",
+    "file": "SM_EMFReader.fbx",
+    "sha256": "7934642b2dbc0aa244b3ef3fd26caa4b68e1252f0d3f8a28e2e18f882210b0f9",
+    "source": "Poly Haven CC0 retro_multimeter (https://polyhaven.com/a/retro_multimeter)",
+    "bounds_cm": [
+      [
+        -8.0,
+        -5.0,
+        0.0
+      ],
+      [
+        8.0,
+        5.0,
+        6.5
+      ]
+    ],
+    "dimensions_cm": [
+      16.0,
+      10.0,
+      6.5
+    ],
+    "triangles": 8948,
+    "materials": [
+      "retro_multimeter",
+      "retro_multimeter_glass"
+    ]
+  },
+  {
+    "name": "SM_UVLight",
+    "file": "SM_UVLight.fbx",
+    "sha256": "5b893fa8a22fc7cbad7fb830af46094310cefb727daa394072cbff0c2cf8a3ca",
+    "source": "Poly Haven CC0 signal_flashlight (https://polyhaven.com/a/signal_flashlight)",
+    "bounds_cm": [
+      [
+        -10.0,
+        -3.25,
+        0.0
+      ],
+      [
+        10.0,
+        3.25,
+        6.5
+      ]
+    ],
+    "dimensions_cm": [
+      20.0,
+      6.5,
+      6.5
+    ],
+    "triangles": 9730,
+    "materials": [
+      "signal_flashlight",
+      "signal_flashlight_glass",
+      "signal_flashlight_light"
+    ]
+  },
+  {
+    "name": "SM_Thermometer",
+    "file": "SM_Thermometer.fbx",
+    "sha256": "26baf9966987d10233d61b07c9d20fdfa9c49fcc420faa43d0109d6be29ba038",
+    "source": "Project-authored IR Laser Thermal Scanner (centimeter scale, +X forward)",
+    "bounds_cm": [
+      [
+        -8.25,
+        -3.1,
+        0.0
+      ],
+      [
+        8.25,
+        3.1,
+        13.5
+      ]
+    ],
+    "dimensions_cm": [
+      16.5,
+      6.2,
+      13.5
+    ],
+    "triangles": 692,
+    "materials": [
+      "M_Thermo_DarkGrip",
+      "M_Thermo_YellowShell",
+      "M_Thermo_LCD",
+      "M_Thermo_IRLens"
+    ]
+  },
+  {
+    "name": "SM_MotionSensor",
+    "file": "SM_MotionSensor.fbx",
+    "sha256": "26ad2b613761bdab92aa0d95475fcbad726b208a19082f2674ee1274ac4f0463",
+    "source": "Project-authored Wide-Angle IR Motion Sensor Bar (centimeter scale, +X forward)",
+    "bounds_cm": [
+      [
+        -6.25,
+        -9.75,
+        0.0
+      ],
+      [
+        6.25,
+        9.75,
+        14.5
+      ]
+    ],
+    "dimensions_cm": [
+      12.5,
+      19.5,
+      14.5
+    ],
+    "triangles": 476,
+    "materials": [
+      "M_Motion_Stand",
+      "M_Motion_Body",
+      "M_Motion_FresnelLens",
+      "M_Motion_Strobe"
+    ]
+  },
+  {
+    "name": "SM_PhotoCamera",
+    "file": "SM_PhotoCamera.fbx",
+    "sha256": "3013bf5de0a81ab7d8ede10e7c8ed994a5542473812568e740764bd527ac8cd6",
+    "source": "Poly Haven CC0 Camera_01 (https://polyhaven.com/a/Camera_01)",
+    "bounds_cm": [
+      [
+        -7.25,
+        -6.75,
+        0.0
+      ],
+      [
+        7.25,
+        6.75,
+        10.5
+      ]
+    ],
+    "dimensions_cm": [
+      14.5,
+      13.5,
+      10.5
+    ],
+    "triangles": 26987,
+    "materials": [
+      "Camera_01_lens_body",
+      "Camera_01_lens",
+      "Camera_01_body",
+      "Camera_01_strap"
+    ]
+  },
+  {
+    "name": "SM_UVFootprint",
+    "file": "SM_UVFootprint.fbx",
+    "sha256": "23775aedf8e4c8b1cac3ebbf58d663b3ae76243f030af22d34ea27d8b765ca72",
+    "source": "Project-authored Fluorescent UV Footprint Pair (centimeter scale, +X forward)",
+    "bounds_cm": [
+      [
+        -12.0,
+        -7.25,
+        0.0
+      ],
+      [
+        12.0,
+        7.25,
+        0.4
+      ]
+    ],
+    "dimensions_cm": [
+      24.0,
+      14.5,
+      0.4
+    ],
+    "triangles": 288,
+    "materials": [
+      "M_UV_FluorescentPrint"
+    ]
+  },
+  {
+    "name": "SM_SpiritBox_CC0",
+    "file": "SM_SpiritBox_CC0.fbx",
+    "sha256": "a9765b7e6850bef0604b37b4ee20777499d999cb3cab03749b38a2ac0c92dfe7",
+    "source": "Poly Haven CC0 portable_cassette_player (https://polyhaven.com/a/portable_cassette_player)",
+    "bounds_cm": [
+      [
+        -11.0,
+        -7.0,
+        0.0
+      ],
+      [
+        11.0,
+        7.0,
+        9.5
+      ]
+    ],
+    "dimensions_cm": [
+      22.0,
+      14.0,
+      9.5
+    ],
+    "triangles": 13307,
+    "materials": [
+      "portable_cassette_player",
+      "portable_cassette_player_glass"
+    ]
+  }
+]

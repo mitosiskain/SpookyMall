@@ -1,0 +1,100 @@
+{
+  "date_utc": "2026-10-18T12:35:09.6264529Z",
+  "build": "Succeeded",
+  "build_log": "Saved/Logs/CartFinalBuild.log",
+  "test_filter": "Mall.Ghost+Mall.Cart+Mall.Voice.NetworkTransport",
+  "test_count": 13,
+  "passed": 13,
+  "failed": 0,
+  "tests": [
+    {
+      "test": "Mall.Cart.ConeGeometry",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Cart.FlashlightNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Cart.GhostSuppressionCycleNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Cart.MovementStorageNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Cart.ProtectionAndBatteryNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 17
+    },
+    {
+      "test": "Mall.Ghost.AutomaticHuntCycleNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Ghost.BookInteraction",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.PhysicalSoundNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Ghost.SpatialAudio",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "test": "Mall.Ghost.SpiritBoxNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Ghost.StateAndDisturbance",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Ghost.StoreLightNetwork",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "test": "Mall.Voice.NetworkTransport",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1
+    }
+  ],
+  "warning_notes": [
+    "Multi-world automation fixtures log ambiguous GetCurrentPlayWorld warnings.",
+    "ProtectionAndBatteryNetwork additionally logs unsupported transient fixture BoxComponent NetGUID warnings. No test errors; live map behavior is separately checked."
+  ],
+  "full_report": "Saved/Automation/CartFinal/index.json",
+  "binary_sha256": "23e2e7912d4b4be4a693564aee3db4ada5f902ea7cb19767fabb1a101f019e23",
+  "final_regressions": [
+    "Remote pickup and cart retrieval equip a flashlight once, preserving later owner slot changes.",
+    "Ordinary transfer skips an ineligible spare flashlight to retrieve original book/radio actors and preserve evidence/history.",
+    "Crouched player remains catchable outside the cone and protected inside it."
+  ]
+}

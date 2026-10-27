@@ -1,0 +1,28 @@
+[
+  {
+    "peer": 0,
+    "samples": 489,
+    "warning_samples": 17,
+    "chasing_samples": 45,
+    "first_warning_at_local_world_seconds": 57.088251,
+    "first_chase_at_local_world_seconds": 60.137839,
+    "last_active_at_local_world_seconds": 67.395835,
+    "minimum_sampled_brightness_factor": 0.2775658369064331,
+    "selected_lights": 5,
+    "all_original_intensities_restored_exactly": true,
+    "neighbor_and_upstairs_lamps_unchanged": true
+  },
+  {
+    "peer": 1,
+    "samples": 496,
+    "warning_samples": 17,
+    "chasing_samples": 45,
+    "first_warning_at_local_world_seconds": 56.56269,
+    "first_chase_at_local_world_seconds": 59.598291,
+    "last_active_at_local_world_seconds": 66.842865,
+    "minimum_sampled_brightness_factor": 0.29395806789398193,
+    "selected_lights": 5,
+    "all_original_intensities_restored_exactly": true,
+    "neighbor_and_upstairs_lamps_unchanged": true
+  }
+]

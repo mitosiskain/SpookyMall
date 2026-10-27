@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "is_pie_active",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "success: true\ndata:\n  is_active: true\n  time_seconds: 119.01006502658129\n  viewport_width: 2584\n  viewport_height: 915\n  num_instances: 1\n  instances:\n    - client_index: 0\n      pie_instance: 0\n      is_server: false\n      has_viewport: true\n      viewport_width: 2584\n      viewport_height: 915\n      time_seconds: 119.01006502658129\n  pie_capacity:\n    hard_max_instances: 4\n    recommended_max_instances: 3\n    basis: live_budget\n    measured_while_pie_active: true\n    gpu:\n      adapter_name: NVIDIA GeForce RTX 3060\n      is_integrated: false\n      dedicated_video_memory_mb: 12115\n      budget_mb: 11347\n      current_usage_mb: 5039\n      available_mb: 6307\n      source: dxgi_local\n    system_memory:\n      total_physical_mb: 49013\n      available_physical_mb: 18121\n    tuning:\n      vram_per_instance_mb: 1536\n      vram_reserve_mb: 512\n      max_parallel_instances_override: 0\n  recommended_max_pie_instances: 3\npie_time_seconds: 119.01006502658129"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "get_unreal_context",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Unknown tool: get_unreal_context"
+        }
+      ],
+      "isError": true
+    }
+  }
+]

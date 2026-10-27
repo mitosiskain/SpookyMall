@@ -1,0 +1,230 @@
+[
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/metal.metal\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 3,\r\n\t\"connections_attempted\": 3,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Metallic\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Roughness\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Specular\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Environment/Escalator/Meshes/metal\", \"populated_outputs\": [\"BaseColor\", \"FrontMaterial\", \"Metallic\", \"Roughness\", \"Specular\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/metal\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 5,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColor\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.56000000238418579,\r\n\t\t\t\t\t0.5899999737739563,\r\n\t\t\t\t\t0.63999998569488525,\r\n\t\t\t\t\t1\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0.85000002384185791\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.30000001192092896\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/dark.dark\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 3,\r\n\t\"connections_attempted\": 3,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Metallic\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Roughness\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Specular\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Environment/Escalator/Meshes/dark\", \"populated_outputs\": [\"BaseColor\", \"FrontMaterial\", \"Metallic\", \"Roughness\", \"Specular\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/dark\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 5,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColor\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.027000000700354576,\r\n\t\t\t\t\t0.032000001519918442,\r\n\t\t\t\t\t0.037999998778104782,\r\n\t\t\t\t\t1\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.34999999403953552\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/safety_yellow.safety_yellow\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 3,\r\n\t\"connections_attempted\": 3,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Metallic\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Roughness\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Specular\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Environment/Escalator/Meshes/safety_yellow\", \"populated_outputs\": [\"BaseColor\", \"FrontMaterial\", \"Metallic\", \"Roughness\", \"Specular\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/safety_yellow\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 5,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColor\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.94999998807907104,\r\n\t\t\t\t\t0.56000000238418579,\r\n\t\t\t\t\t0.02500000037252903,\r\n\t\t\t\t\t1\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.44999998807907104\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_dark.tread_dark\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 3,\r\n\t\"connections_attempted\": 3,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Metallic\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Roughness\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Specular\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Environment/Escalator/Meshes/tread_dark\", \"populated_outputs\": [\"BaseColor\", \"FrontMaterial\", \"Metallic\", \"Roughness\", \"Specular\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_dark\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 5,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColor\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.11999999731779099,\r\n\t\t\t\t\t0.14000000059604645,\r\n\t\t\t\t\t0.17000000178813934,\r\n\t\t\t\t\t1\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.51999998092651367\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_metal.tread_metal\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 3,\r\n\t\"connections_attempted\": 3,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Metallic\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Roughness\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Specular\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Environment/Escalator/Meshes/tread_metal\", \"populated_outputs\": [\"BaseColor\", \"FrontMaterial\", \"Metallic\", \"Roughness\", \"Specular\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/tread_metal\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 5,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColor\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.46000000834465027,\r\n\t\t\t\t\t0.49000000953674316,\r\n\t\t\t\t\t0.54000002145767212,\r\n\t\t\t\t\t1\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0.85000002384185791\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.47999998927116394\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/glass.glass\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 4,\r\n\t\"connections_attempted\": 4,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Metallic\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Roughness\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Specular\",\r\n\t\t\t\"success\": true\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"to_expression\": \"Material\",\r\n\t\t\t\"to_input\": \"Opacity\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Environment/Escalator/Meshes/glass\", \"populated_outputs\": [\"BaseColor\", \"FrontMaterial\", \"Metallic\", \"Roughness\", \"Specular\", \"Opacity\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Environment/Escalator/Meshes/glass\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 6,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionVectorParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColor\",\r\n\t\t\t\t\"default_value\": [\r\n\t\t\t\t\t0.64999997615814209,\r\n\t\t\t\t\t0.81999999284744263,\r\n\t\t\t\t\t0.86000001430511475,\r\n\t\t\t\t\t1\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionVectorParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Opacity\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.079999998211860657\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Opacity\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Opacity\",\r\n\t\t\t\t\"default_value\": 0.15000000596046448\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"name\": \"glass\",\r\n\t\"path\": \"/Game/Environment/Escalator/Meshes/glass.glass\",\r\n\t\"class\": \"Material\",\r\n\t\"shading_model\": \"DefaultLit\",\r\n\t\"blend_mode\": \"Translucent\",\r\n\t\"two_sided\": true,\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"substrate_front_node\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\"expression_count\": 6,\r\n\t\"scalar_parameters\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Metallic\",\r\n\t\t\t\"default\": 0\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Roughness\",\r\n\t\t\t\"default\": 0.079999998211860657\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Specular\",\r\n\t\t\t\"default\": 0.5\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Opacity\",\r\n\t\t\t\"default\": 0.15000000596046448\r\n\t\t}\r\n\t],\r\n\t\"vector_parameters\": [\r\n\t\t{\r\n\t\t\t\"name\": \"BaseColor\",\r\n\t\t\t\"default\": [\r\n\t\t\t\t0.64999997615814209,\r\n\t\t\t\t0.81999999284744263,\r\n\t\t\t\t0.86000001430511475,\r\n\t\t\t\t1\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"texture_parameters\": [],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

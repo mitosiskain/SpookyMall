@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "execute_unreal_python_readonly",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Success: True\n\nLOG OUTPUT:\n\n  {\"missing_or_default_materials\": [], \"leaf_shading_override\": \"<MaterialShadingModel.MSM_TWO_SIDED_FOLIAGE: 6>\", \"dirty_mall_packages\": [], \"other_dirty_count\": 86}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

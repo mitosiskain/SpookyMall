@@ -1,0 +1,204 @@
+{
+  "source": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\railing.glb",
+  "source_sha256": "0c7f5e4665a6e52bbd16760111badf7eb3b894009a691c767041edc6c447d9e3",
+  "original_bounds_ue_cm": [
+    [
+      -191.03990173339844,
+      -399.72442626953125,
+      -111.49339294433594
+    ],
+    [
+      9.0889253616333,
+      1.5199328660964966,
+      72.99304962158203
+    ]
+  ],
+  "original_materials": [
+    {
+      "slot": 0,
+      "name": "Advanced Procedural Glass for Cycles",
+      "bounds_original_ue_cm": [
+        [
+          -175.10858154296875,
+          -391.6050720214844,
+          -48.18487548828125
+        ],
+        [
+          1.2184449434280396,
+          -18.1846923828125,
+          48.47190856933594
+        ]
+      ],
+      "faces": 1872
+    },
+    {
+      "slot": 1,
+      "name": "Stone",
+      "bounds_original_ue_cm": [
+        [
+          -190.91107177734375,
+          -399.72442626953125,
+          -111.49339294433594
+        ],
+        [
+          9.0889253616333,
+          1.5199328660964966,
+          -59.373836517333984
+        ]
+      ],
+      "faces": 523
+    },
+    {
+      "slot": 2,
+      "name": "Stainless steel",
+      "bounds_original_ue_cm": [
+        [
+          -191.03990173339844,
+          -393.3824157714844,
+          -60.2669792175293
+        ],
+        [
+          3.005127429962158,
+          -0.0,
+          72.99304962158203
+        ]
+      ],
+      "faces": 5076
+    }
+  ],
+  "original_floor_surface_z_cm": -59.373836517333984,
+  "original_floor_center_ue_cm": [
+    -90.91107177734375,
+    -199.1022491455078,
+    -59.373836517333984
+  ],
+  "original_slab_thickness_cm": 52.11955642700195,
+  "original_rail_height_above_floor_cm": 132.36688613891602,
+  "variant_fbx": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\SM_MallBalconyModule_400.fbx",
+  "variant_fbx_sha256": "78eb18fd8c610ae51dedef2ad7481a463489297ca74618ff17e0b9a0f576872a",
+  "variant_units": "centimeters",
+  "variant_pivot": "slab center XY, walking surface Z0",
+  "variant_bounds_cm": [
+    [
+      -200.0,
+      -100.12882995605469,
+      -50.0
+    ],
+    [
+      200.0,
+      100.0,
+      132.36688232421875
+    ]
+  ],
+  "variant_floor_bounds_cm": [
+    [
+      -200.0,
+      -100.0,
+      -50.0
+    ],
+    [
+      200.0,
+      100.0,
+      0.0
+    ]
+  ],
+  "variant_materials": [
+    {
+      "slot": 0,
+      "name": "Advanced Procedural Glass for Cycles",
+      "bounds_cm": [
+        [
+          -180.3564910888672,
+          -84.197509765625,
+          11.188961029052734
+        ],
+        [
+          191.90582275390625,
+          92.1295166015625,
+          107.84574890136719
+        ]
+      ]
+    },
+    {
+      "slot": 1,
+      "name": "Stone",
+      "bounds_cm": [
+        [
+          -200.0,
+          -100.0,
+          -50.0
+        ],
+        [
+          200.0,
+          100.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "slot": 2,
+      "name": "Stainless steel",
+      "bounds_cm": [
+        [
+          -198.4847869873047,
+          -100.12882995605469,
+          -0.8568210601806641
+        ],
+        [
+          193.6776580810547,
+          93.91619873046875,
+          132.36688232421875
+        ]
+      ]
+    }
+  ],
+  "variant_triangles": 7471,
+  "textures": [
+    {
+      "image_name": "Stainless steel_Metalness-Stainless steel_Roughness (1)",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stainless_steel_Metalness-Stainless_steel_Roughness__1_.png",
+      "colorspace": "Non-Color"
+    },
+    {
+      "image_name": "Stainless steel_NormalGL",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stainless_steel_NormalGL.jpg",
+      "colorspace": "Non-Color"
+    },
+    {
+      "image_name": "Stone_basecolor",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stone_basecolor.jpg",
+      "colorspace": "sRGB"
+    },
+    {
+      "image_name": "Stone_normal",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stone_normal.jpg",
+      "colorspace": "Non-Color"
+    },
+    {
+      "image_name": "Stone_roughness",
+      "path": "C:\\unreal\\uprj\\MyProject2\\ExternalAssets\\Mall\\UserImports\\Prepared\\Textures\\Stone_roughness.png",
+      "colorspace": "Non-Color"
+    }
+  ],
+  "original_source_unchanged": true,
+  "fbx_import": {
+    "ImportUniformScale": 1,
+    "ConvertScene": true,
+    "ConvertSceneUnit": true,
+    "ForceFrontXAxis": false,
+    "CombineMeshes": true,
+    "ImportMaterials": false,
+    "ImportTextures": false,
+    "AutoGenerateCollision": false
+  },
+  "source_url": "https://www.fab.com/listings/b82906d1-1b98-4266-83da-c89a389bb62a",
+  "license_note": "User-reported acquired Fab Standard Personal tier; acquisition receipt governs. No standalone redistribution.",
+  "rail_orientation": "L shape: long edge +Y, return +X; open edges -Y and -X.",
+  "notes": [
+    "Reuse already recovered UE materials by matching the three original material slots.",
+    "FBX exported texture references are absolute paths to extracted original embedded images.",
+    "The original image normal map is OpenGL; preserve its recovered UE normal-map handling.",
+    "Only the slab vertical depth is changed; rail height above the walking surface is preserved.",
+    "Face winding corrected for XY reflection; outward normals recomputed."
+  ]
+}

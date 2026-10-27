@@ -1,0 +1,56 @@
+{
+  "mesh_name": "SM_MallBalconyModule_400",
+  "fbx_bounds_cm": [
+    [
+      -199.99998474121094,
+      -100.12881469726562,
+      -50.0
+    ],
+    [
+      200.0,
+      100.00001525878906,
+      132.36688232421875
+    ]
+  ],
+  "material_slots": [
+    "Advanced Procedural Glass for Cycles",
+    "Stone",
+    "Stainless steel"
+  ],
+  "stone_signed_volume_cm3": 2691928.8994846903,
+  "walking_plane_area_cm2": 79998.75220115716,
+  "walking_plane_normal_z": 0.9999999918534938,
+  "uv_channels": [
+    "UVMap",
+    "UVMap.001"
+  ],
+  "glass_planes": {
+    "normal_X": {
+      "faces": 672,
+      "area": 29932.145420074463,
+      "mean_center_cm": [
+        184.6184857666386,
+        -6.064080556027871,
+        59.51735575608343
+      ]
+    },
+    "normal_Y": {
+      "faces": 1008,
+      "area": 61890.2113199234,
+      "mean_center_cm": [
+        -0.770027139673617,
+        90.15129900660075,
+        59.51735573314594
+      ]
+    },
+    "normal_Z": {
+      "faces": 192,
+      "area": 2277.154888153076,
+      "mean_center_cm": [
+        59.49725267953342,
+        58.872989460210185,
+        59.51735496520996
+      ]
+    }
+  }
+}

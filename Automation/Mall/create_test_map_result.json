@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "create_easy_level_for_verification",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "success: true\ndata:\n  level_name: MallAtrium_Test\n  floor_size: 5000\n  actors_created:\n    - VerificationFloor\n    - VerificationSun\n    - VerificationSkyLight\n    - VerificationPlayerStart"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "fetch_blueprint_best_practices",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "fetch_material_best_practices",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete."
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "[\r\n\t{\r\n\t\t\"name\": \"unlit_color\",\r\n\t\t\"description\": \"Simple unlit solid color. For UI, debug, flat-shaded art.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"color(vec4), intensity(scalar), texture_path(string optional \u2014 when set, multiplies the texture into the emissive output)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"emissive_pulse\",\r\n\t\t\"description\": \"Pulsing emissive glow. For crystals, power cores, lights.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"color_bright(vec4), color_dim(vec4), pulse_speed(scalar), intensity(scalar), texture_path(string optional \u2014 when set, multiplies the texture into the pulsing emissive output)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"panning_texture\",\r\n\t\t\"description\": \"Scrolling texture for water, lava, conveyors, energy flows.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"speed_x(scalar), speed_y(scalar), tint_color(vec4), tiling_x(scalar), tiling_y(scalar), texture_path(string), intensity(scalar)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"fresnel_glow\",\r\n\t\t\"description\": \"Edge-lit Fresnel glow. For shields, auras, rim lighting.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"glow_color(vec4), exponent(scalar), intensity(scalar), base_opacity(scalar), texture_path(string optional \u2014 when set, multiplies the texture into the fresnel-tinted emissive output)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"dissolve\",\r\n\t\t\"description\": \"Dissolve/burn effect. For death, teleportation, materializing.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"dissolve_amount(scalar 0-1), edge_color(vec4), edge_width(scalar), edge_intensity(scalar), noise_scale(scalar), base_color(vec4), texture_path(string optional \u2014 when set, multiplies the texture into the base_color portion of the emissive output; the edge-glow is left untextured so it always reads as a glowing ring)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"hologram\",\r\n\t\t\"description\": \"Holographic scanlines with flicker and spatial noise. For holograms, AR, sci-fi.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"holo_color(vec4), scanline_density(scalar default 0.5), scanline_speed(scalar default 1), flicker_speed(scalar default 1), flicker_scale(scalar default 5 \u2014 grain frequency: 0=none, higher=finer grain), fresnel_power(scalar default 5), opacity(scalar default 0.3)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"glass\",\r\n\t\t\"description\": \"Translucent glass with refraction. For windows, ice, gems.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"tint_color(vec4), opacity(scalar), roughness(scalar), metallic(scalar), refraction(scalar)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"pbr_standard\",\r\n\t\t\"description\": \"Full PBR with all standard params. For realistic objects.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"base_color(vec4), metallic(scalar), roughness(scalar), specular(scalar), emissive_color(vec4), emissive_intensity(scalar), texture_path(string), normal_path(string), tiling(scalar default 1.0)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"force_field\",\r\n\t\t\"description\": \"Animated force field/shield. For energy barriers.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"field_color(vec4), hex_scale(scalar), pulse_speed(scalar), fresnel_power(scalar), intensity(scalar), opacity(scalar), texture_path(string optional), spin_speed(scalar default 0)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"gradient\",\r\n\t\t\"description\": \"World-space color gradient. For sky domes, terrain.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"color_bottom(vec4), color_top(vec4), gradient_height(scalar), gradient_offset(scalar), intensity(scalar)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"toon_shading\",\r\n\t\t\"description\": \"Cel/cartoon stepped shading. For anime/cartoon games.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"lit_color(vec4 default white), shadow_color(vec4 default dark grey 0.08), steps(scalar default 4), shadow_threshold(scalar default 0.3), texture_path(string optional), light_direction(vec3 optional \u2014 overrides scene directional light if set)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"wireframe\",\r\n\t\t\"description\": \"Grid/wireframe overlay. For debug, holograms, tech.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"wire_color(vec4), wire_thickness(scalar), grid_scale(scalar), intensity(scalar), base_opacity(scalar)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"pbr_metal\",\r\n\t\t\"description\": \"Physically-based metallic material. For polished metals, chrome, steel.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"base_color(vec4 default silver), roughness(scalar 0-1 default 0.2), texture_path(string optional), normal_path(string optional), tiling(scalar default 1.0)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"pbr_wood\",\r\n\t\t\"description\": \"Physically-based wood material. For timber, planks, furniture.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"base_color(vec4 default warm brown), roughness(scalar 0-1 default 0.75), texture_path(string optional), normal_path(string optional), tiling(scalar default 1.0)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"pbr_stone\",\r\n\t\t\"description\": \"Physically-based stone material. For rock, concrete, masonry.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"base_color(vec4 default grey), roughness(scalar 0-1 default 0.85), texture_path(string optional), normal_path(string optional), tiling(scalar default 1.0)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"pbr_plastic\",\r\n\t\t\"description\": \"Physically-based plastic material. For smooth plastic, polymer surfaces.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"base_color(vec4 default white), roughness(scalar 0-1 default 0.4), texture_path(string optional), normal_path(string optional), tiling(scalar default 1.0)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"landscape\",\r\n\t\t\"description\": \"Multi-layer weight-blended landscape material. For terrain with paintable layers (grass, rock, dirt). Creates one LandscapeLayerBlend for BaseColor and a parallel one for Roughness so each layer has its own surface finish.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"layer_count(int default 3 \u2014 supported range 2-16, 2-8 typical, >8 may impact shader performance), layer_names(string[] default [\\\"Grass\\\",\\\"Rock\\\",\\\"Dirt\\\"]), layer_textures(string[] optional \u2014 one /Game/ or Saved/ texture path per layer; assigned to Layer{i}_Color), layer_roughnesses(float[] optional \u2014 one roughness value per layer 0-1; unspecified layers fall back to default_roughness), default_roughness(scalar default 0.8 \u2014 fallback for layers not covered by layer_roughnesses), tiling(scalar default 4.0)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"water\",\r\n\t\t\"description\": \"Animated translucent water with depth fade, dual panning normals, refraction, and wave animation.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"water_color(vec4), deep_color(vec4), depth_fade_distance(scalar default 200), wave_speed(scalar default 0.03), wave_height(scalar default 10), refraction_strength(scalar default 1.05), opacity(scalar default 0.7), roughness(scalar default 0.15)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"subsurface\",\r\n\t\t\"description\": \"Subsurface scattering material. For skin, wax, jade, candles.\",\r\n\t\t\"shading_model\": \"Subsurface\",\r\n\t\t\"parameter_docs\": \"base_color(vec4), subsurface_color(vec4 default reddish), roughness(scalar default 0.5), opacity(scalar default 0.8), texture_path(string optional)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"decal\",\r\n\t\t\"description\": \"Deferred decal material. For projected splatter, footprints, graffiti.\",\r\n\t\t\"shading_model\": \"DefaultLit\",\r\n\t\t\"parameter_docs\": \"decal_color(vec4 default white), opacity(scalar default 1.0), texture_path(string optional)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"masked_foliage\",\r\n\t\t\"description\": \"Two-sided foliage material with subsurface transmission. For leaves, grass, vegetation.\",\r\n\t\t\"shading_model\": \"TwoSidedFoliage\",\r\n\t\t\"parameter_docs\": \"base_color(vec4 default green), subsurface_color(vec4 default bright green), opacity_mask_clip(scalar default 0.33), texture_path(string optional), roughness(scalar default 0.7)\"\r\n\t},\r\n\t{\r\n\t\t\"name\": \"lava\",\r\n\t\t\"description\": \"Animated emissive lava material with dual-panning flow and glow.\",\r\n\t\t\"shading_model\": \"Unlit\",\r\n\t\t\"parameter_docs\": \"lava_color(vec4 default orange-red), glow_intensity(scalar default 5.0), flow_speed(scalar default 0.05), texture_path(string optional)\"\r\n\t}\r\n]"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

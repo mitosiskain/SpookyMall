@@ -1,0 +1,1 @@
+{"tool":"get_screenshot_of_objects_for_verification","arguments":{"actors":["MallEscalator_Up","MallEscalator_Down","Escalator_UpperLanding"],"output_path":"C:/unreal/uprj/MyProject2/Saved/EscalatorVerify/editor_pair.png","max_width":1000,"max_height":700,"padding_percent":12}}

@@ -1,0 +1,8 @@
+Retail Store Fixtures and Mall
+https://3dassets.dev/packs/retail-store-fixtures-and-mall
+All selected assets: CC0 1.0 Universal; https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded/prepared: 2026-10-10. AI-authored source meshes; human geometry review recommended.
+Original GLBs and full pack manifest retained one directory above.
+Each asset source URL, license, hash, dimensions and PBR material factors are recorded in import_plan.json.
+Derivatives bake original rigid transforms into centimeters and combine mesh sections; UVs/material slots preserved.
+Original animations remain in GLBs. FBXs are static meshes at source frame0.

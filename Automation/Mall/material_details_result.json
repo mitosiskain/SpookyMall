@@ -1,0 +1,1202 @@
+[
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/pachira_aquatica_01_bark_diff_2k.pachira_aquatica_01_bark_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.69999998807907104\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/pachira_aquatica_01_bark_nor_dx_2k.pachira_aquatica_01_bark_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark.M_Mall_pachira_aquatica_01_bark\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/pachira_aquatica_01_bark_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark.M_Mall_pachira_aquatica_01_bark\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark.M_Mall_pachira_aquatica_01_bark\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_pachira_aquatica_01_bark\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_pot\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/potted_plant_01_pot_diff_2k.potted_plant_01_pot_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/potted_plant_01_pot_nor_dx_2k.potted_plant_01_pot_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_pot.M_Mall_potted_plant_01_pot\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/potted_plant_01_pot_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_pot.M_Mall_potted_plant_01_pot\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_pot.M_Mall_potted_plant_01_pot\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_potted_plant_01_pot\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/modular_street_seating_armrests_diff_2k.modular_street_seating_armrests_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/modular_street_seating_armrests_nor_dx_2k.modular_street_seating_armrests_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 2,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests.M_Mall_modular_street_seating_armrests\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/modular_street_seating_armrests_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests.M_Mall_modular_street_seating_armrests\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests.M_Mall_modular_street_seating_armrests\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests.M_Mall_modular_street_seating_armrests\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/modular_street_seating_armrests_metal_2k\",\r\n\t\"target_input\": \"Metallic\",\r\n\t\"parameter_name\": \"MetallicMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests.M_Mall_modular_street_seating_armrests\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_3\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests.M_Mall_modular_street_seating_armrests\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_1\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Metallic\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_armrests\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/modular_street_seating_supports_diff_2k.modular_street_seating_supports_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/modular_street_seating_supports_nor_dx_2k.modular_street_seating_supports_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 2,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports.M_Mall_modular_street_seating_supports\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/modular_street_seating_supports_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports.M_Mall_modular_street_seating_supports\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports.M_Mall_modular_street_seating_supports\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports.M_Mall_modular_street_seating_supports\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/modular_street_seating_supports_metal_2k\",\r\n\t\"target_input\": \"Metallic\",\r\n\t\"parameter_name\": \"MetallicMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports.M_Mall_modular_street_seating_supports\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_3\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports.M_Mall_modular_street_seating_supports\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_1\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Metallic\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_supports\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_timber\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/modular_street_seating_timber_diff_2k.modular_street_seating_timber_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/modular_street_seating_timber_nor_dx_2k.modular_street_seating_timber_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_timber.M_Mall_modular_street_seating_timber\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/modular_street_seating_timber_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_timber.M_Mall_modular_street_seating_timber\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_timber.M_Mall_modular_street_seating_timber\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_modular_street_seating_timber\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/steel_frame_shelves_01_diff_2k.steel_frame_shelves_01_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/steel_frame_shelves_01_nor_dx_2k.steel_frame_shelves_01_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 2,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01.M_Mall_steel_frame_shelves_01\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/steel_frame_shelves_01_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01.M_Mall_steel_frame_shelves_01\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01.M_Mall_steel_frame_shelves_01\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01.M_Mall_steel_frame_shelves_01\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/steel_frame_shelves_01_metal_2k\",\r\n\t\"target_input\": \"Metallic\",\r\n\t\"parameter_name\": \"MetallicMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01.M_Mall_steel_frame_shelves_01\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_3\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01.M_Mall_steel_frame_shelves_01\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_1\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Metallic\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_steel_frame_shelves_01\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/book_hardcover_01_diff_2k.book_hardcover_01_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/book_hardcover_01_nor_dx_2k.book_hardcover_01_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 2,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/book_hardcover_01_roughness_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/book_hardcover_01_metallic_2k\",\r\n\t\"target_input\": \"Metallic\",\r\n\t\"parameter_name\": \"MetallicMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_3\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_1\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Metallic\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"expression_name\": \"MaterialExpressionTextureSampleParameter2D_4\",\r\n\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"Texture\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"expression_name\": \"MaterialExpressionTextureSampleParameter2D_5\",\r\n\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"Texture\",\r\n\t\t\"SamplerType\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"expression_name\": \"MaterialExpressionTextureCoordinate_1\",\r\n\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"CoordinateIndex\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionTextureCoordinate_1\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_4\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02.M_Mall_book_hardcover_01_cover02\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_2\",\r\n\t\"output_type\": \"float3\",\r\n\t\"wired_to\": \"BaseColor\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Cover\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Pages\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Mask\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/book_softcover_01_diff_2k.book_softcover_01_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/book_softcover_01_nor_dx_2k.book_softcover_01_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 2,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/book_softcover_01_roughness_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/book_softcover_01_metallic_2k\",\r\n\t\"target_input\": \"Metallic\",\r\n\t\"parameter_name\": \"MetallicMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_3\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_1\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Metallic\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"expression_name\": \"MaterialExpressionTextureSampleParameter2D_4\",\r\n\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"Texture\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"expression_name\": \"MaterialExpressionTextureSampleParameter2D_5\",\r\n\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"ParameterName\",\r\n\t\t\"Texture\",\r\n\t\t\"SamplerType\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"expression_name\": \"MaterialExpressionTextureCoordinate_1\",\r\n\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\"is_material_function\": false,\r\n\t\"properties_set\": [\r\n\t\t\"CoordinateIndex\"\r\n\t],\r\n\t\"errors\": [],\r\n\t\"warnings\": []\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionTextureCoordinate_1\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_4\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04.M_Mall_book_softcover_01_cover04\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_2\",\r\n\t\"output_type\": \"float3\",\r\n\t\"wired_to\": \"BaseColor\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Cover\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Pages\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Mask\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_book_softcover_01_cover04\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_white_plaster_02\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/white_plaster_02_diff_2k.white_plaster_02_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/white_plaster_02_nor_dx_2k.white_plaster_02_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_white_plaster_02.M_Mall_white_plaster_02\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/white_plaster_02_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_white_plaster_02.M_Mall_white_plaster_02\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_white_plaster_02.M_Mall_white_plaster_02\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_white_plaster_02\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_terrazzo_tiles\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/terrazzo_tiles_diff_2k.terrazzo_tiles_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/terrazzo_tiles_nor_dx_2k.terrazzo_tiles_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_terrazzo_tiles.M_Mall_terrazzo_tiles\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/terrazzo_tiles_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_terrazzo_tiles.M_Mall_terrazzo_tiles\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_terrazzo_tiles.M_Mall_terrazzo_tiles\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_terrazzo_tiles\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_painted_metal_shutter\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/painted_metal_shutter_diff_2k.painted_metal_shutter_diff_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/painted_metal_shutter_nor_dx_2k.painted_metal_shutter_nor_dx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_painted_metal_shutter.M_Mall_painted_metal_shutter\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/painted_metal_shutter_rough_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_painted_metal_shutter.M_Mall_painted_metal_shutter\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_painted_metal_shutter.M_Mall_painted_metal_shutter\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_painted_metal_shutter\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles\",\r\n\t\"is_material_function\": false,\r\n\t\"expression_count\": 9,\r\n\t\"expressions\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureCoordinate\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Tiling\",\r\n\t\t\t\t\"default_value\": 1\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"class\": \"MaterialExpressionMultiply\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"A\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureCoordinate_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"B\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"BaseColor\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"BaseColorTexture\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/tiles_0013_color_2k.tiles_0013_color_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Metallic\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Metallic\",\r\n\t\t\t\t\"default_value\": 0\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Specular\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Specular\",\r\n\t\t\t\t\"default_value\": 0.5\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"class\": \"MaterialExpressionScalarParameter\",\r\n\t\t\t\"output_slot\": \"Roughness\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"Roughness\",\r\n\t\t\t\t\"default_value\": 0.64999997615814209\r\n\t\t\t},\r\n\t\t\t\"input_connections\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\"class\": \"MaterialExpressionTextureSampleParameter2D\",\r\n\t\t\t\"output_slot\": \"Normal\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t\t\"parameter_name\": \"NormalMap\",\r\n\t\t\t\t\"texture\": \"/Game/Environment/Mall/Textures/tiles_0013_normal_directx_2k.tiles_0013_normal_directx_2k\"\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Coordinates\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"MaterialExpressionSubstrateShadingModels_0\",\r\n\t\t\t\"class\": \"MaterialExpressionSubstrateShadingModels\",\r\n\t\t\t\"output_slot\": \"FrontMaterial\",\r\n\t\t\t\"properties\":\r\n\t\t\t{\r\n\t\t\t},\r\n\t\t\t\"input_connections\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"BaseColor\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_0\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Metallic\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Specular\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_2\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Roughness\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"input_name\": \"Normal\",\r\n\t\t\t\t\t\"source_expression_name\": \"MaterialExpressionTextureSampleParameter2D_1\",\r\n\t\t\t\t\t\"source_output_index\": 0\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"material_domain\": \"Surface\",\r\n\t\"is_ui_material\": false,\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"is_material_function\": false,\r\n\t\"expressions_edited\": 2,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_3\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"expression_name\": \"MaterialExpressionScalarParameter_1\",\r\n\t\t\t\"success\": true,\r\n\t\t\t\"properties_set\": [\r\n\t\t\t\t\"DefaultValue\"\r\n\t\t\t],\r\n\t\t\t\"errors\": [],\r\n\t\t\t\"warnings\": []\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles.M_Mall_CeilingTiles\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/tiles_0013_roughness_2k\",\r\n\t\"target_input\": \"Roughness\",\r\n\t\"parameter_name\": \"RoughnessMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles.M_Mall_CeilingTiles\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_2\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles.M_Mall_CeilingTiles\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_0\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Roughness\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles.M_Mall_CeilingTiles\",\r\n\t\"texture_path\": \"/Game/Environment/Mall/Textures/tiles_0013_metallic_2k\",\r\n\t\"target_input\": \"Metallic\",\r\n\t\"parameter_name\": \"MetallicMap\",\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"success\": true,\r\n\t\"all_connected\": true,\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles.M_Mall_CeilingTiles\",\r\n\t\"is_material_function\": false,\r\n\t\"connections_made\": 1,\r\n\t\"connections_attempted\": 1,\r\n\t\"results\": [\r\n\t\t{\r\n\t\t\t\"from_expression\": \"MaterialExpressionMultiply_0\",\r\n\t\t\t\"to_expression\": \"MaterialExpressionTextureSampleParameter2D_3\",\r\n\t\t\t\"to_input\": \"Coordinates\",\r\n\t\t\t\"success\": true\r\n\t\t}\r\n\t]\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\r\n\t\"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles.M_Mall_CeilingTiles\",\r\n\t\"expression_name\": \"MaterialExpressionCustom_1\",\r\n\t\"output_type\": \"float\",\r\n\t\"wired_to\": \"Metallic\",\r\n\t\"inputs\": [\r\n\t\t{\r\n\t\t\t\"name\": \"MapValue\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Scale\"\r\n\t\t}\r\n\t],\r\n\t\"success\": true\r\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "create_edit_material",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\": true, \"material_path\": \"/Game/Generated_Materials/M_Mall_CeilingTiles\", \"populated_outputs\": [\"BaseColor\", \"Metallic\", \"Specular\", \"Roughness\", \"Normal\", \"FrontMaterial\"], \"missing_outputs\": [], \"orphan_expressions\": [], \"null_texture_samplers\": [], \"material_domain\": \"Surface\", \"is_ui_material\": false}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

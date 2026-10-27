@@ -1,0 +1,44 @@
+[
+  {
+    "file": "where_0.wav",
+    "text": "Where are you?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1
+  },
+  {
+    "file": "who_0.wav",
+    "text": "Who are you?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1
+  },
+  {
+    "file": "age_0.wav",
+    "text": "How old are you?",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1
+  },
+  {
+    "file": "book_0.wav",
+    "text": "Write in the book.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1
+  },
+  {
+    "file": "negated_0.wav",
+    "text": "Do not write in the book.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1
+  },
+  {
+    "file": "unrelated_0.wav",
+    "text": "The weather is better than yesterday.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1
+  },
+  {
+    "file": "similar_noise_words_0.wav",
+    "text": "Better. Then, then, there.",
+    "voice": "Microsoft Zira Desktop",
+    "rate": -1
+  }
+]

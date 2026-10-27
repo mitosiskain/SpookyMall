@@ -1,0 +1,53 @@
+{
+  "change": "Persistent raw capture, per-user microphone controls, bounded AGC and reliable metering",
+  "native_build": {"result": "Succeeded", "log": "Saved/Logs/MicrophoneAGCBuild3.log"},
+  "native_tests": {
+    "report": "Saved/Automation/MicrophoneAGC/index.json",
+    "succeeded": 11,
+    "succeeded_with_warnings": 0,
+    "failed": 0,
+    "not_run": 0,
+    "quiet_speech_backend_case": {
+      "source": "come_here.wav scaled to 0.0004 RMS",
+      "processing": "Fresh default AGC, without warm-up audio",
+      "recognized_id": "come_here",
+      "confidence": 1.0
+    },
+    "coverage": [
+      "Quiet first utterance and reacquisition after silence",
+      "Total gain cap, manual gain, limiter and raw clipping flag",
+      "Silence and low noise floor, high-pass filtering",
+      "Exact sample count and chunk-independent processed PCM",
+      "Identical processed PCM for recognition and network buffering",
+      "Time-based meter and clipping indication at 30 and 120 FPS",
+      "Actual Vosk decoding, concurrent worker teardown and phrase matching",
+      "Real network transport and low-confidence ghost reaction"
+    ]
+  },
+  "controls": {
+    "open": "F6",
+    "microphone_boost_db": [-12, 30],
+    "automatic_gain_default": true,
+    "basic_filter_default": true,
+    "persistence": "Local GameUserSettings.ini",
+    "platform_capture_gates": [0.0, 0.0],
+    "platform_gain": 1.0
+  },
+  "editor": {"reopened": true, "process_id": 42944, "map": "Lvl_MallOval_Test"},
+  "ui_verification": {
+    "status": "Passed through Aura",
+    "checks": [
+      "F6 opens the visible, focused microphone controls",
+      "Real Slate slider click changes boost to 9 dB and saves it",
+      "AGC/filter toggles change state and persist in local GameUserSettings.ini",
+      "Reset restores 0 dB and both checkboxes enabled",
+      "Close collapses the settings and returns to gameplay",
+      "Offline English voice recognition ready is visible",
+      "Final PIE stopped and map/content packages clean"
+    ],
+    "screenshot": "Automation/Voice/microphone_controls_verified.png",
+    "button_capture_fix": "Compiled and patched successfully through Live Coding after the cold build."
+  },
+  "final_user_preferences": {"GainDb": 0.0, "bAutoGain": true, "bNoiseFilter": true, "MaxAutoGainDb": 30.0},
+  "hardware_microphone_test": "Reserved for the user; no real microphone was captured by these checks."
+}

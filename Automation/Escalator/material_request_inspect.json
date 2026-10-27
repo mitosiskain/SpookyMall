@@ -1,0 +1,52 @@
+{
+  "calls": [
+    {
+      "tool": "fetch_material_best_practices",
+      "arguments": {
+        "category": "pbr"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/metal"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/glass"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/dark"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/safety_yellow"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_dark"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "read_graph",
+        "material_path": "/Game/Environment/Escalator/Meshes/tread_metal"
+      }
+    }
+  ]
+}

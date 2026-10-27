@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-16",
+  "project": "C:\\unreal\\uprj\\MyProject2\\MyProject2.uproject",
+  "native_editor_build": {
+    "result": "Succeeded",
+    "target": "MyProject2Editor Win64 Development",
+    "log": "Saved/Logs/VoiceStatusFixBuild.log"
+  },
+  "automated_tests": {
+    "succeeded": 7,
+    "failed": 0,
+    "warnings": 0,
+    "errors": 0,
+    "skipped": 0,
+    "tests": [
+      {
+        "name": "Mall.Ghost.BookInteraction",
+        "state": "Success"
+      },
+      {
+        "name": "Mall.Ghost.StateAndDisturbance",
+        "state": "Success"
+      },
+      {
+        "name": "Mall.Voice.CodecAndPacketBounds",
+        "state": "Success"
+      },
+      {
+        "name": "Mall.Voice.NetworkTransport",
+        "state": "Success"
+      },
+      {
+        "name": "MyProject2.Voice.ConcurrentSpeechTeardown",
+        "state": "Success"
+      },
+      {
+        "name": "MyProject2.Voice.OfflineSpeechBackend",
+        "state": "Success"
+      },
+      {
+        "name": "MyProject2.Voice.PhraseMatching",
+        "state": "Success"
+      }
+    ],
+    "report": "Saved/Automation/BookInteractions/index.json",
+    "final_ghost_recheck": "Saved/Automation/BookInteractionsFinal/index.json"
+  },
+  "method": "UnrealEditor-Cmd native automation, null RHI, no microphone, no audio playback, Aura/LudusAI disabled only for test invocation",
+  "native_runtime_dependencies": {
+    "voice_files": 31,
+    "non_ufs": 31,
+    "dlls": 4,
+    "license_notices": 13
+  },
+  "network_integration": {
+    "result": "Success",
+    "fixture": "Native server and two real IP-connected clients in isolated Entry worlds",
+    "actual_audio_hardware": false,
+    "checks": [
+      "Dynamic replicated endpoints and actual owning PlayerState identities",
+      "Generated PCM through actual Opus encoder, owner server RPC, distance-filtered listener RPC and decoder",
+      "Nearby delivery, beyond-20m packet exclusion, and reverse direction",
+      "Actual BP_StoreGhost receiver replication and Pawn-ignore collision on all peers even when voice is disabled",
+      "Recent decoded voice plus allowed phrase reaches server ghost and accepted owner feedback; LastPhrase/ReactionCount replicate",
+      "Outside-store speaker with recent decoded voice receives rejected feedback and does not trigger ghost",
+      "Local disable stops synthetic capture, discards pending audio without flushing, clears playback queues and rejects in-flight packets, PTT and phrase submissions"
+    ],
+    "limits": [
+      "No audible playback or microphone hardware in headless tests",
+      "Headless ghost movement is frozen; separate Aura live PIE validates pursuit, pause, preferred speaker and physical confinement with the observations recorded in ghost_pie_acceptance.json.",
+      "Session host/find/join commands, real LAN discovery and EOS services not exercised by this direct-IP fixture"
+    ]
+  },
+  "live_microphone_and_audible_proximity": "pending user test",
+  "internet_eos_cross_store": "not configured; user has no EOS product yet",
+  "active_backend": "NULL/LAN",
+  "planned_backend": "EOS with player-hosted listen server",
+  "default_max_players": 4,
+  "speech_fixture_count": 7,
+  "speech_fixture_cases": {
+    "accepted": 4,
+    "rejected": 3
+  },
+  "fixture_hashes": {
+    "come_here.wav": "56f4c465d3fa0ceee29a9e6c9fc22ff76121d26aa4dfef7ec3642e0f09806065",
+    "give_me_a_sign.wav": "5ebf6a42a9ee05e69bf9cdd8d66d08f1c45adc2b32bcbd25f74371f617996f93",
+    "leave_me_alone.wav": "9c8e499ff4ddb3d3b23f26887d4d4aafbe8340969aece50bce58ecf4c608501d",
+    "longer.wav": "f2387becbf00455fa9ee4e2c5affe55ac3ee97f3a450401809e613969269438a",
+    "negation.wav": "4fa8e1c8392095fd3d83c45883de8ff0f9f71568ff2616af40eb6fde59a5effb",
+    "unrelated.wav": "c193fba4b4b523bed2d68984abd23f59e3beecf1e144bbc6e97cade592501474",
+    "where_are_you.wav": "49c15a45a74d2936446cd4ef35c7be953ceb8da1a7008e92e045a7b5f19ee775"
+  },
+  "earlier_network_attempts": [
+    {
+      "report": "Saved/Automation/VoiceNetwork/index.json",
+      "result": "Rejected: fixture loaded unrelated default gameplay UI and did not wait for remote pawn/PlayerState mapping"
+    },
+    {
+      "report": "Saved/Automation/VoiceNetwork2/index.json",
+      "result": "Rejected: assertions passed but CommonUI viewport errors occurred"
+    },
+    {
+      "report": "Saved/Automation/VoiceNetwork3/index.json",
+      "result": "Success before final disable-state guards; final report supersedes this run"
+    }
+  ],
+  "private_config": {
+    "persistent_override": "Config/UserEngine.ini (ignored)",
+    "tracked_default_security_token_entries": 0,
+    "startup_preservation_checked": true
+  },
+  "live_pie": {
+    "result": "Automated receiver/AI checks passed with braking and timing observations; hardware test pending",
+    "acceptance": "Automation/Voice/ghost_pie_acceptance.json",
+    "topology": "Listen server plus one joined client",
+    "valid_position_samples": 4470,
+    "boundary_violations": 0,
+    "three_exit_regression": "Chasing -> Returning -> Idle for main hall and both neighboring-store exits",
+    "speech_teardown": "Three two-player PIE sessions shut down without crash after the cold build. Both workers were verified ready in sessions 1 and 3; session 2 stopped early without readiness acceptance.",
+    "editor_final": "Open on mall map; PIE inactive; no dirty map or content packages",
+    "historical_scope": "Earlier voice/chase acceptance on baseline 41e8815. Current default ghost mode is invisible; later interaction acceptance covers the new state gates, writing and physics props."
+  },
+  "crash_fix": {
+    "symptom": "Access violation in FMallSpeechRecognizer::FImpl::ReleaseBackend while stopping multiplayer PIE",
+    "cause": "Per-world DLL release could unload the shared native speech backend still used by another worker",
+    "change": "Pin four native DLLs for process lifetime and serialize backend/model lifetime changes; retain per-worker model cleanup, join and callback cancellation",
+    "tradeoff": "Windows native libraries remain loaded until application exit; updating them requires a restart",
+    "regression": "Three rounds of concurrent actual-model/PCM initialization, sibling shutdown, survivor recognition, cancellation and restart"
+  },
+  "latest_ghost_interactions": "Automation/GhostInteractions/validation_summary.json",
+  "new_writing_phrases": {
+    "aliases": [
+      "write in the book",
+      "write something",
+      "where are you",
+      "who are you",
+      "what is your name",
+      "how old are you",
+      "what is your age"
+    ],
+    "phrase_matcher": "Passed with negation rejection",
+    "live_receiver_and_replication": "Current pickup/placed-open book validation is recorded separately in Automation/BookInteractions/validation_summary.json",
+    "microphone_or_new_vosk_audio_fixture": "Not tested"
+  },
+  "latest_book_interactions": "Automation/BookInteractions/validation_summary.json",
+  "status_panel_followup": "Automation/Voice/status_panel_acceptance.json",
+  "targeted_config_regression": {
+    "name": "MyProject2.Voice.PhraseMatching",
+    "report": "Saved/Automation/VoiceStatusFix/index.json",
+    "state": "Success",
+    "warnings": 0,
+    "errors": 0
+  }
+}

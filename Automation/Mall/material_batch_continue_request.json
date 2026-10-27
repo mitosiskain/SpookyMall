@@ -1,0 +1,942 @@
+{
+  "calls": [
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_instance",
+        "asset_path": "/Game/Generated_Materials/M_Mall_potted_plant_01_leaves",
+        "parent_material_path": "/Game/Generated_Materials/M_Mall_pachira_aquatica_01_leaves",
+        "parameter_overrides": {
+          "textures": [
+            {
+              "name": "FoliageTexture",
+              "value": "/Game/Environment/Mall/Textures/potted_plant_01_leaves_diff_2k"
+            },
+            {
+              "name": "LeafNormal",
+              "value": "/Game/Environment/Mall/Textures/potted_plant_01_leaves_nor_gl_2k"
+            },
+            {
+              "name": "LeafAlphaMask",
+              "value": "/Game/Environment/Mall/Textures/potted_plant_01_leaves_alpha_2k"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_potted_plant_01_pot"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_potted_plant_01_pot",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/potted_plant_01_pot_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/potted_plant_01_pot_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_potted_plant_01_pot",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_modular_street_seating_armrests"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_modular_street_seating_armrests",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/modular_street_seating_armrests_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/modular_street_seating_armrests_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_modular_street_seating_armrests",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_modular_street_seating_supports"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_modular_street_seating_supports",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/modular_street_seating_supports_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/modular_street_seating_supports_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_modular_street_seating_supports",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_modular_street_seating_timber"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_modular_street_seating_timber",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/modular_street_seating_timber_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/modular_street_seating_timber_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_modular_street_seating_timber",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_steel_frame_shelves_01"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_steel_frame_shelves_01",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/steel_frame_shelves_01_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/steel_frame_shelves_01_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_steel_frame_shelves_01",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_book_hardcover_01_cover02"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/book_hardcover_01_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/book_hardcover_01_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_book_hardcover_01_cover02",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_book_softcover_01_cover04"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_book_softcover_01_cover04",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/book_softcover_01_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/book_softcover_01_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_book_softcover_01_cover04",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_white_plaster_02"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_white_plaster_02",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/white_plaster_02_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/white_plaster_02_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_white_plaster_02",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_terrazzo_tiles"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_terrazzo_tiles",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/terrazzo_tiles_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/terrazzo_tiles_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_terrazzo_tiles",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_painted_metal_shutter"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_painted_metal_shutter",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/painted_metal_shutter_diff_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/painted_metal_shutter_nor_dx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_painted_metal_shutter",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_Mall_CeilingTiles"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_Mall_CeilingTiles",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "texture_path",
+            "value": "/Game/Environment/Mall/Textures/tiles_0013_color_2k"
+          },
+          {
+            "name": "normal_path",
+            "value": "/Game/Environment/Mall/Textures/tiles_0013_normal_directx_2k"
+          },
+          {
+            "name": "metallic",
+            "value": 0.0
+          },
+          {
+            "name": "roughness",
+            "value": 0.65
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_Mall_CeilingTiles",
+        "require_outputs": [
+          "BaseColor",
+          "Normal",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_MallRetail_floor"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_MallRetail_floor",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "base_color",
+            "value": [
+              0.79,
+              0.78,
+              0.75,
+              1
+            ]
+          },
+          {
+            "name": "roughness",
+            "value": 0.82
+          },
+          {
+            "name": "metallic",
+            "value": 0
+          },
+          {
+            "name": "emissive_color",
+            "value": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "emissive_strength",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_MallRetail_floor",
+        "require_outputs": [
+          "BaseColor",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_MallRetail_carcass"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_MallRetail_carcass",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "base_color",
+            "value": [
+              0.88,
+              0.87,
+              0.85,
+              1
+            ]
+          },
+          {
+            "name": "roughness",
+            "value": 0.52
+          },
+          {
+            "name": "metallic",
+            "value": 0
+          },
+          {
+            "name": "emissive_color",
+            "value": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "emissive_strength",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_MallRetail_carcass",
+        "require_outputs": [
+          "BaseColor",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_MallRetail_dark"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_MallRetail_dark",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "base_color",
+            "value": [
+              0.13,
+              0.14,
+              0.15,
+              1
+            ]
+          },
+          {
+            "name": "roughness",
+            "value": 0.55
+          },
+          {
+            "name": "metallic",
+            "value": 0
+          },
+          {
+            "name": "emissive_color",
+            "value": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "emissive_strength",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_MallRetail_dark",
+        "require_outputs": [
+          "BaseColor",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_MallRetail_metal"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_MallRetail_metal",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "base_color",
+            "value": [
+              0.71,
+              0.72,
+              0.75,
+              1
+            ]
+          },
+          {
+            "name": "roughness",
+            "value": 0.35
+          },
+          {
+            "name": "metallic",
+            "value": 1
+          },
+          {
+            "name": "emissive_color",
+            "value": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "emissive_strength",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_MallRetail_metal",
+        "require_outputs": [
+          "BaseColor",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_MallRetail_glass"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_MallRetail_glass",
+        "template_name": "glass",
+        "parameters": [
+          {
+            "name": "tint_color",
+            "value": [
+              0.91,
+              0.97,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "opacity",
+            "value": 0.15
+          },
+          {
+            "name": "roughness",
+            "value": 0.07
+          },
+          {
+            "name": "metallic",
+            "value": 0
+          },
+          {
+            "name": "refraction",
+            "value": 1.02
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_MallRetail_glass",
+        "require_outputs": [
+          "BaseColor",
+          "Opacity",
+          "Roughness"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_MallRetail_surface"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_MallRetail_surface",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "base_color",
+            "value": [
+              0.6,
+              0.45,
+              0.3,
+              1
+            ]
+          },
+          {
+            "name": "roughness",
+            "value": 0.6
+          },
+          {
+            "name": "metallic",
+            "value": 0
+          },
+          {
+            "name": "emissive_color",
+            "value": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "emissive_strength",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_MallRetail_surface",
+        "require_outputs": [
+          "BaseColor",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "get_save_path",
+        "asset_path": "M_MallRetail_accent"
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "create_from_template",
+        "asset_path": "/Game/Generated_Materials/M_MallRetail_accent",
+        "template_name": "pbr_standard",
+        "parameters": [
+          {
+            "name": "base_color",
+            "value": [
+              0.74,
+              0.29,
+              0.21,
+              1
+            ]
+          },
+          {
+            "name": "roughness",
+            "value": 0.55
+          },
+          {
+            "name": "metallic",
+            "value": 0
+          },
+          {
+            "name": "emissive_color",
+            "value": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "emissive_strength",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "tool": "create_edit_material",
+      "arguments": {
+        "operation": "verify_material",
+        "material_path": "/Game/Generated_Materials/M_MallRetail_accent",
+        "require_outputs": [
+          "BaseColor",
+          "Roughness",
+          "Metallic"
+        ]
+      }
+    }
+  ]
+}

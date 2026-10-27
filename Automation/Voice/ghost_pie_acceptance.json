@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "status": "AUTOMATED_CHECKS_COMPLETE_WITH_OBSERVATIONS_HARDWARE_PENDING",
+  "map": "/Game/Environment/Mall/Maps/Lvl_MallOval_Test",
+  "method": "Aura native tools, two-player listen-server PIE. Python fallback only for unavailable component methods and relationship reads. Native deferred reflected calls for RPC checks. No Computer Use; no microphone/audio-quality acceptance.",
+  "checks": [
+    {
+      "id": "runtime_setup",
+      "result": "PASS",
+      "observed": "Native voice endpoints and ghost receivers on both peers; ghost capsule ignores Pawn collisions on host and joined client."
+    },
+    {
+      "id": "where_are_you_and_sign",
+      "result": "PASS_RECEIVER_AND_REPLICATION",
+      "observed": "Remote speaker accepted; reaction counts, phrase and real speaker replicate. Unknown phrase, confidence 0.1 and immediate repeat rejected."
+    },
+    {
+      "id": "come_here",
+      "result": "PASS_OBSERVED_WINDOW",
+      "host_distance_cm": 442.673835129154,
+      "remote_distance_cm": 1041.880562433775,
+      "preference_observed_through_seconds": 11.458942,
+      "nearest_fallback_observed_after_seconds": 67.5627,
+      "exact_12_second_boundary_tested": false,
+      "early_preferred_speaker_exit_fallback_separately_timed": false
+    },
+    {
+      "id": "leave_me_alone",
+      "result": "PASS_WITH_BRAKING_OBSERVATION",
+      "requested_cooldown_seconds": 3,
+      "strict_1cm_stationary_from_call_pass": false,
+      "initial_drift_cm": 6.490387933078442,
+      "settling_delay_seconds": 0.07631829753518105,
+      "subsequent_displacement_until_deadline_cm": 0,
+      "catch_count_during_pause": 18,
+      "resume_first_observed_after_deadline_seconds": 0.05246707797050476
+    },
+    {
+      "id": "outside_store_and_floor",
+      "result": "PASS",
+      "positions_cm": [
+        [
+          3770,
+          0,
+          90
+        ],
+        [
+          4950,
+          -997,
+          90
+        ],
+        [
+          4950,
+          997,
+          90
+        ],
+        [
+          4950,
+          0,
+          940
+        ]
+      ],
+      "observed": "Speaker rejected at each position; reaction count unchanged."
+    },
+    {
+      "id": "hearing_range",
+      "result": "PASS_CONFIGURABLE_GATE",
+      "distance_cm": 887.3577880859375,
+      "reject_radius_cm": 877.3577880859375,
+      "accept_radius_cm": 897.3577880859375,
+      "restored_radius_cm": 2000,
+      "cached_controller_and_catch_counter_preserved": true,
+      "physical_20m_boundary_tested": false
+    },
+    {
+      "id": "three_store_exits",
+      "result": "PASS",
+      "sequence_for_each": [
+        "Chasing",
+        "Returning",
+        "Idle"
+      ],
+      "exits": [
+        {
+          "name": "main_hall",
+          "speaker_position_cm": [
+            3770,
+            0,
+            90
+          ],
+          "idle_distance_from_home_cm": 17.224981219733873
+        },
+        {
+          "name": "negative_y_neighbor",
+          "speaker_position_cm": [
+            4950,
+            -997,
+            90
+          ],
+          "idle_distance_from_home_cm": 19.786472121865597
+        },
+        {
+          "name": "positive_y_neighbor",
+          "speaker_position_cm": [
+            4950,
+            997,
+            90
+          ],
+          "idle_distance_from_home_cm": 13.61802573648334
+        }
+      ],
+      "cached_controller_preserved": true,
+      "catch_count_at_all_nine_checkpoints": 16
+    },
+    {
+      "id": "confinement",
+      "result": "PASS",
+      "accepted_pre_fixture_reset_samples": 4139,
+      "accepted_fresh_samples": 331,
+      "total_valid_position_samples": 4470,
+      "entire_capsule_inside_store": true,
+      "boundary_violations": 0
+    },
+    {
+      "id": "player_safety",
+      "result": "PASS",
+      "host_health": 100,
+      "remote_health": 100,
+      "host_max_walk_speed_cm_s": 600,
+      "remote_max_walk_speed_cm_s": 600,
+      "catch_resets_ghost_only": true
+    },
+    {
+      "id": "native_owner_rpc_without_audio",
+      "result": "PASS_NEGATIVE",
+      "observed": "Deferred native owning-client SubmitRecognizedPhrase received rejected server feedback with no added ghost reaction; audio packets sent remained zero."
+    },
+    {
+      "id": "native_deferred_signal",
+      "result": "PASS_REPLICATED_TELEMETRY",
+      "reaction_count": 7,
+      "media_visual_reviewed": false,
+      "audible_cue_reviewed": false
+    },
+    {
+      "id": "speech_worker_teardown",
+      "result": "PASS_AFTER_FIX",
+      "native_regression_rounds": 3,
+      "actual_two_player_pie_shutdowns_without_crash": 3,
+      "ready_workers_confirmed_before_shutdown_sessions": [
+        1,
+        3
+      ],
+      "early_shutdown_without_readiness_acceptance_sessions": [
+        2
+      ],
+      "editor_connected_after_each_shutdown": true
+    }
+  ],
+  "rejected_evidence": [
+    {
+      "case": "first hearing-range edit and subsequent chase/exit checks",
+      "reason": "Default editor change notifications reconstructed the ghost Blueprint and cleared its cached GhostController at game time 494.5316. Post-edit chase/exit results discarded; fresh range and three exits repeated successfully without notifications."
+    },
+    {
+      "case": "direct editor-Python owner RPC",
+      "reason": "FEditorScriptExecutionGuard forces local callspace. Waiting feedback from this invocation is not valid network evidence; repeated through native deferred invocation."
+    },
+    {
+      "case": "second-session readiness inspection",
+      "reason": "Early read did not meet assertion; no ready-worker acceptance claimed for that session. Third session waited for both models and passed."
+    }
+  ],
+  "remaining_user_tests": [
+    "Real microphone recognition of all four commands using V push-to-talk",
+    "Audible proximity, distance falloff and speaker identity with two computers and headphones",
+    "Visual cue/chime presentation and gameplay feel"
+  ],
+  "other_limits": [
+    "Exact 12-second preference expiry boundary and early preferred-speaker exit fallback were not separately timed",
+    "No packaged-build staging, session host/find/join discovery, Internet EOS or cross-store test",
+    "Existing unrelated WBP_HotbarSlot UMG duplicate-property ensure and escalator mobility warnings remain in editor logs"
+  ],
+  "final_editor": {
+    "connected": true,
+    "pie_active": false,
+    "dirty_maps": [],
+    "dirty_content": []
+  },
+  "evidence": {
+    "native_report": "Saved/Automation/VoiceTeardown/index.json",
+    "build": "Saved/Logs/VoiceTeardownBuild.log",
+    "first_session": "Saved/Automation/VoicePIE/first_session_aggregate_analysis.json",
+    "fresh_exits": "Saved/Automation/VoicePIE/fixed_exit_analysis.json",
+    "range": "Saved/Automation/VoicePIE/fixed_range_tool.json",
+    "safety": "Saved/Automation/VoicePIE/fixed_ready_and_safety_tool.json",
+    "restart": "Saved/Automation/VoicePIE/fixed_lifecycle_third_tool.json"
+  }
+}
