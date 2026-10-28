@@ -146,8 +146,10 @@ func _rebuild_escalator() -> void:
 	_label_3d = Label3D.new()
 	_label_3d.position = Vector3(0.55, 1.95, 0.0)
 	_label_3d.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	_label_3d.font_size = 22
-	_label_3d.outline_size = 6
+	_label_3d.font_size = 20
+	_label_3d.outline_size = 5
+	_label_3d.visibility_range_end = 13.0
+	_label_3d.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
 	add_child(_label_3d)
 
 	_refresh_maintenance_visuals()
@@ -180,12 +182,22 @@ func _build_deck_and_balustrade_collision() -> void:
 	inc_col.rotation = Vector3(0.0, 0.0, pitch_rad)
 	sb.add_child(inc_col)
 
-	# 3. Upper Flat Landing Deck (X = landing_length_m + run_m .. total_run(), top surface at Y = rise_m)
+	# 3. Upper Crest 15° Smooth Transition Fillet + Upper Flat Landing Deck (top surface at Y = rise_m, zero protruding lip!)
+	var half_pitch := pitch_rad * 0.5
+	var fillet_normal := Vector3(-sin(half_pitch), cos(half_pitch), 0.0)
+	var fil_col := CollisionShape3D.new()
+	var fil_box := BoxShape3D.new()
+	fil_box.size = Vector3(0.44, deck_thick, belt_width_m)
+	fil_col.shape = fil_box
+	fil_col.position = Vector3(landing_length_m + run_m, rise_m - 0.015, 0.0) - fillet_normal * (deck_thick * 0.5)
+	fil_col.rotation = Vector3(0.0, 0.0, half_pitch)
+	sb.add_child(fil_col)
+
 	var up_col := CollisionShape3D.new()
 	var up_box := BoxShape3D.new()
-	up_box.size = Vector3(landing_length_m + 0.20, deck_thick, belt_width_m)
+	up_box.size = Vector3(landing_length_m, deck_thick, belt_width_m)
 	up_col.shape = up_box
-	up_col.position = Vector3(landing_length_m + run_m + landing_length_m * 0.5, rise_m - deck_thick * 0.5, 0.0)
+	up_col.position = Vector3(landing_length_m + run_m + landing_length_m * 0.5 + 0.04, rise_m - deck_thick * 0.5, 0.0)
 	sb.add_child(up_col)
 
 	# 4. Left & Right Solid Balustrade Side-Guard Colliders
@@ -219,25 +231,18 @@ func _build_deck_and_balustrade_collision() -> void:
 func _apply_shell_materials_recursive(node: Node) -> void:
 	if node is MeshInstance3D:
 		var mi := node as MeshInstance3D
-		var mat_metal := StandardMaterial3D.new()
-		mat_metal.albedo_color = Color(0.68, 0.72, 0.76)
-		mat_metal.metallic = 0.75
-		mat_metal.roughness = 0.28
-
-		var mat_glass := StandardMaterial3D.new()
-		mat_glass.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-		mat_glass.albedo_color = Color(0.55, 0.82, 0.95, 0.35)
-		mat_glass.roughness = 0.1
+		var mat_metal := MallPbrMaterialLibrary.get_brushed_steel_material(Color(0.84, 0.86, 0.88))
+		var mat_glass := MallPbrMaterialLibrary.get_architectural_glass_material(Color(0.76, 0.88, 0.94, 0.24))
 
 		var mat_dark := StandardMaterial3D.new()
-		mat_dark.albedo_color = Color(0.10, 0.11, 0.13)
-		mat_dark.roughness = 0.65
+		mat_dark.albedo_color = Color(0.16, 0.17, 0.19)
+		mat_dark.roughness = 0.55
 
 		var mat_yellow := StandardMaterial3D.new()
-		mat_yellow.albedo_color = Color(0.95, 0.78, 0.12)
+		mat_yellow.albedo_color = Color(0.92, 0.78, 0.22)
 		mat_yellow.emission_enabled = true
-		mat_yellow.emission = Color(0.95, 0.72, 0.08)
-		mat_yellow.emission_energy_multiplier = 0.5
+		mat_yellow.emission = Color(0.85, 0.68, 0.12)
+		mat_yellow.emission_energy_multiplier = 0.25
 
 		var slots := [mat_metal, mat_glass, mat_dark, mat_yellow]
 		if mi.mesh:

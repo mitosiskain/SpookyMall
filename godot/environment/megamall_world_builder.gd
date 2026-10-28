@@ -13,6 +13,7 @@ var push_cart: MallCartSystem = null
 var light_cart: MallCartSystem = null
 var escalator_up: MallEscalator = null
 var escalator_down: MallEscalator = null
+var freight_elevator: MallFreightElevator = null
 var store_ghost_east: StoreGhost = null
 var store_ghost_west: StoreGhost = null
 var store_ghost_floor2: StoreGhost = null
@@ -25,6 +26,9 @@ var journal_panel: PanelContainer = null
 var journal_text: RichTextLabel = null
 var voice_menu_panel: PanelContainer = null
 var voice_menu_status_lbl: Label = null
+var trader_menu_panel: PanelContainer = null
+var trader_status_lbl: Label = null
+var trader_buttons: Array[Button] = []
 var status_banner: Label = null
 var hotbar_gui_container: HBoxContainer = null
 var hotbar_slot_panels: Array[PanelContainer] = []
@@ -40,6 +44,11 @@ var hand_slot_sub: Label = null
 var eating_bar_panel: PanelContainer = null
 var eating_progress_bar: ProgressBar = null
 var eating_bar_label: Label = null
+var campaign_expansion: CampaignFloorsAndLore = null
+var curved_atrium: MallCurvedAtriumRing = null
+var stacked_h_wings: MallStackedHWings = null
+var cart_charger: ExpandedMallGadgets.MallCartChargerStation = null
+var zoltar_booth: ExpandedMallGadgets.ZoltarFortuneBooth = null
 var _status_timer: float = 0.0
 
 const VOICE_MENU_OPTIONS: Array[Dictionary] = [
@@ -77,6 +86,8 @@ func _ready() -> void:
 	_setup_world_environment()
 	_build_mall_architecture()
 	_spawn_interactive_props_and_sanctuaries()
+	campaign_expansion = CampaignFloorsAndLore.new()
+	add_child(campaign_expansion)
 	_spawn_carts_ghosts_and_gremlin()
 	if Engine.is_editor_hint():
 		return
@@ -98,27 +109,74 @@ func _ready() -> void:
 func _setup_world_environment() -> void:
 	var we := WorldEnvironment.new()
 	var env := Environment.new()
-	env.background_mode = Environment.BG_COLOR
-	env.background_color = Color(0.03, 0.04, 0.07)
-	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color(0.14, 0.16, 0.22)
-	env.ambient_light_energy = 0.55
-	env.tonemap_mode = Environment.TONE_MAPPER_ACES
+
+	var sky_mat := ProceduralSkyMaterial.new()
+	sky_mat.sky_top_color = Color(0.14, 0.20, 0.30)
+	sky_mat.sky_horizon_color = Color(0.42, 0.50, 0.60)
+	sky_mat.ground_bottom_color = Color(0.12, 0.13, 0.15)
+	sky_mat.ground_horizon_color = Color(0.32, 0.36, 0.42)
+	sky_mat.sun_angle_max = 28.0
+	var sky := Sky.new()
+	sky.sky_material = sky_mat
+	env.sky = sky
+	env.background_mode = Environment.BG_SKY
+
+	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
+	env.ambient_light_sky_contribution = 0.65
+	env.ambient_light_color = Color(0.76, 0.80, 0.86)
+	env.ambient_light_energy = 0.82
+	env.reflected_light_source = Environment.REFLECTION_SOURCE_SKY
+
+	# AgX Filmic Tonemapping + Natural Desaturation & Contrast
+	env.tonemap_mode = Environment.TONE_MAPPER_AGX
+	env.tonemap_exposure = 1.18
+	env.tonemap_white = 6.5
+	env.adjustment_enabled = true
+	env.adjustment_saturation = 0.86
+	env.adjustment_contrast = 1.05
+	env.adjustment_brightness = 1.02
+
+	# Godot 4.7 Forward+ Real-Time Global Illumination (SDFGI) + SSAO + SSIL + SSR
+	env.sdfgi_enabled = true
+	env.sdfgi_use_occlusion = true
+	env.sdfgi_read_sky_light = true
+	env.sdfgi_energy = 0.88
+	env.ssao_enabled = true
+	env.ssao_radius = 1.15
+	env.ssao_intensity = 1.65
 	env.ssil_enabled = true
+	env.ssil_radius = 3.5
+	env.ssil_intensity = 0.85
+	env.ssr_enabled = true
+	env.ssr_max_steps = 48
+
+	# Restrained Bloom & Subtle Architectural Haze (never washing out PBR normal maps)
 	env.glow_enabled = true
-	env.glow_intensity = 0.45
+	env.glow_intensity = 0.24
+	env.glow_bloom = 0.04
 	env.volumetric_fog_enabled = true
-	env.volumetric_fog_density = 0.014
-	env.volumetric_fog_albedo = Color(0.75, 0.82, 0.95)
+	env.volumetric_fog_density = 0.0038
+	env.volumetric_fog_albedo = Color(0.92, 0.94, 0.97)
 	we.environment = env
 	add_child(we)
 
+	# Natural Warm Architectural Skylight Sunlight shining through the Vaulted Geodesic Dome
 	var skylight := DirectionalLight3D.new()
-	skylight.rotation_degrees = Vector3(-62.0, -35.0, 0.0)
-	skylight.light_color = Color(0.62, 0.78, 0.98)
-	skylight.light_energy = 0.45
+	skylight.rotation_degrees = Vector3(-58.0, -32.0, 0.0)
+	skylight.light_color = Color(1.0, 0.96, 0.90)
+	skylight.light_energy = 1.15
 	skylight.shadow_enabled = true
+	skylight.shadow_blur = 1.25
 	add_child(skylight)
+
+	# Real-time PBR Specular Reflection Probes for Marble, Terrazzo, Brushed Steel & Glass
+	for probe_y in [5.5, 14.5]:
+		var rp := ReflectionProbe.new()
+		rp.position = Vector3(0.0, probe_y, 0.0)
+		rp.size = Vector3(66.0, 28.0, 52.0)
+		rp.intensity = 0.52
+		rp.ambient_mode = ReflectionProbe.AMBIENT_ENVIRONMENT
+		add_child(rp)
 
 func _build_mall_architecture() -> void:
 	var nav_region := NavigationRegion3D.new()
@@ -126,190 +184,270 @@ func _build_mall_architecture() -> void:
 	nav_region.navigation_mesh = nav_mesh
 	add_child(nav_region)
 
-	# 1. Central Atrium & Concourse Terrazzo Floor (64m x 44m, top surface at Y = 0.0m)
-	_create_static_box(nav_region, Vector3(0, -0.25, 0), Vector3(64.0, 0.5, 44.0), Color(0.24, 0.25, 0.28), 0.25)
+	# 0. Multi-Floor Central Oval Atrium Ring, Hebe Fountain, 4-Quadrant Hot Springs,
+	#    4 Cardinal Clear-Span Bridges, 4 Connected Floor 2 Oval Stores, Floor 3 Sky Arboretum,
+	#    4 Suspended Floating Forest Planter Pods, and Vaulted Geodesic Skylight Dome!
+	curved_atrium = MallCurvedAtriumRing.new()
+	add_child(curved_atrium)
 
-	# 2. Floor 2 Mezzanine Balcony Deck (+8.50m top walking surface) WITH Open Escalator Well Cutout!
-	#    Escalator Well Opening spans X = [-3.4m .. +3.4m], Z = [-13.0m .. -9.0m] so riders have 100% open headroom!
-	#    - West Mezzanine Wing: X = [-22.0 .. -3.4], Z = [-21.0 .. -9.0]
-	_create_static_box(nav_region, Vector3(-12.7, 8.25, -15.0), Vector3(18.6, 0.5, 12.0), Color(0.20, 0.22, 0.26), 0.35)
-	#    - East Mezzanine Wing: X = [+3.4 .. +22.0], Z = [-21.0 .. -9.0]
-	_create_static_box(nav_region, Vector3(12.7, 8.25, -15.0), Vector3(18.6, 0.5, 12.0), Color(0.20, 0.22, 0.26), 0.35)
-	#    - Center Rear Mezzanine Landing Promenade (docks flush with escalators' upper landings at Z = -13.00m, Y = 8.50m!):
-	#      X = [-3.4 .. +3.4], Z = [-21.0 .. -13.0]
-	_create_static_box(nav_region, Vector3(0.0, 8.25, -17.0), Vector3(6.8, 0.5, 8.0), Color(0.22, 0.25, 0.30), 0.30)
+	# 0B. Stacked-"H" Dual Parallel Hallway Wings (North & South Wings, 20m-26m Deep Stores, Sightline Bends, and 60m x 26m End-Cap Anchor Stores!)
+	stacked_h_wings = MallStackedHWings.new()
+	add_child(stacked_h_wings)
 
-	#    - Floor 2 Safety Glass & Brushed-Metal Balustrades around Mezzanine edge & Escalator Well Cutout
-	var rail_col := Color(0.45, 0.72, 0.88)
-	_create_static_box(self, Vector3(-12.7, 9.02, -9.05), Vector3(18.6, 1.05, 0.12), rail_col, 0.2)
-	_create_static_box(self, Vector3(12.7, 9.02, -9.05), Vector3(18.6, 1.05, 0.12), rail_col, 0.2)
-	_create_static_box(self, Vector3(-3.45, 9.02, -11.0), Vector3(0.12, 1.05, 4.0), rail_col, 0.2)
-	_create_static_box(self, Vector3(3.45, 9.02, -11.0), Vector3(0.12, 1.05, 4.0), rail_col, 0.2)
-	# Rear wall on Floor 2
-	_create_static_box(self, Vector3(0.0, 10.5, -21.0), Vector3(44.0, 4.0, 0.4), Color(0.16, 0.18, 0.22), 0.6)
+	# 1. Unified Ground Floor Polished Marble Slab (160m x 84m: X = -114.0..+46.0, Z = -42.0..+42.0, top surface at Y = 0.0m,
+	#    butt-jointing cleanly at Z = +-42.0m with MallStackedHWings with ZERO coplanar Z-fighting!)
+	var ground_sb := _create_static_box(nav_region, Vector3(-34.0, -0.25, 0.0), Vector3(160.0, 0.50, 84.0), Color(0.88, 0.87, 0.85), 0.18)
+	for ch in ground_sb.get_children():
+		if ch is MeshInstance3D:
+			(ch as MeshInstance3D).material_override = MallPbrMaterialLibrary.get_marble_floor_material()
 
-	# 3. Geodesic Ark Canopy Roof Ribs (+17.0m elevation with Biotic-Cyan Neon Cove Strips)
-	_create_static_box(self, Vector3(0, 17.0, 0), Vector3(64.0, 0.6, 44.0), Color(0.08, 0.10, 0.14), 0.5)
-	for i in range(-2, 3):
-		var rib := MeshInstance3D.new()
-		var rib_box := BoxMesh.new()
-		rib_box.size = Vector3(0.45, 0.35, 42.0)
-		rib.mesh = rib_box
-		rib.position = Vector3(float(i) * 11.0, 16.5, 0.0)
-		var cyan_mat := StandardMaterial3D.new()
-		cyan_mat.albedo_color = Color(0.2, 0.9, 1.0)
-		cyan_mat.emission_enabled = true
-		cyan_mat.emission = Color(0.15, 0.85, 1.0)
-		cyan_mat.emission_energy_multiplier = 2.2
-		rib.material_override = cyan_mat
-		add_child(rib)
+	# 2. Central Hub East Perimeter Wall at X = +46.0m (West side opens directly into the 80m x 76m Himalayan Pink Salt & Tangquan Sauna Liminal Biome!)
+	var perim_col := Color(0.86, 0.84, 0.80)
+	_create_static_box(self, Vector3(46.0, 26.0, 0.0), Vector3(0.4, 52.0, 84.0), perim_col, 0.55)
+	# Upper-floor West perimeter wall above Floor 1 Sauna Biome (Y = 8.5m .. 52.0m at X = -46.0m)
+	_create_static_box(self, Vector3(-46.0, 30.25, 0.0), Vector3(0.4, 43.5, 84.0), perim_col, 0.55)
 
-	# 4. Haunted Storefront Unit #1: East_F0_02 ("Pendelton's Book & Curio Shop" — Onboarding Receptive Store)
-	_create_static_box(nav_region, Vector3(21.0, 4.0, -7.0), Vector3(14.0, 8.0, 0.4), Color(0.18, 0.19, 0.23), 0.7)
-	_create_static_box(nav_region, Vector3(21.0, 4.0, 7.0), Vector3(14.0, 8.0, 0.4), Color(0.18, 0.19, 0.23), 0.7)
-	_create_static_box(nav_region, Vector3(28.0, 4.0, 0.0), Vector3(0.4, 8.0, 14.0), Color(0.15, 0.16, 0.20), 0.7)
-	_create_static_box(nav_region, Vector3(14.0, 4.0, -4.4), Vector3(0.4, 8.0, 5.2), Color(0.22, 0.24, 0.29), 0.5)
-	_create_static_box(nav_region, Vector3(14.0, 4.0, 4.4), Vector3(0.4, 8.0, 5.2), Color(0.22, 0.24, 0.29), 0.5)
-	_create_static_box(nav_region, Vector3(21.0, 6.0, 0.0), Vector3(14.0, 0.35, 14.0), Color(0.14, 0.15, 0.18), 0.6)
-	# Flush threshold strip (0.015m high so carts and investigators glide across effortlessly)
-	_create_static_box(self, Vector3(14.0, 0.0075, 0.0), Vector3(0.9, 0.015, 3.6), Color(0.95, 0.75, 0.15), 0.3)
+	# 3. Structural Mall Atrium Columns around the Double-Radius Elliptical Rim (AtriumRadius = 28.5m x 30.0m) supporting Floors 2..7+
+	var col_color := Color(0.76, 0.78, 0.82)
+	var atrium_col_positions := [
+		Vector3(-29.2, 0.0, -14.0), Vector3(29.2, 0.0, -14.0),
+		Vector3(-29.2, 0.0, 14.0),  Vector3(29.2, 0.0, 14.0),
+		Vector3(-16.0, 0.0, -27.5), Vector3(16.0, 0.0, -27.5),
+		Vector3(-16.0, 0.0, 27.5),  Vector3(16.0, 0.0, 27.5),
+	]
+	for cpos in atrium_col_positions:
+		_create_static_box(self, cpos + Vector3(0.0, 26.0, 0.0), Vector3(0.78, 52.0, 0.78), col_color, 0.28)
+		_create_static_box(self, cpos + Vector3(0.0, 0.35, 0.0), Vector3(1.05, 0.70, 1.05), Color(0.58, 0.60, 0.64), 0.25)
 
-	# 5. Dynamic Ceiling Light Fixtures
+	# NOTE:
+	# - All Upper Floors (Floors 2..7+, Y = 8.5m..51.0m+) around the Double-Radius Oval (AtriumRadius = 28.5m x 30.0m -> Outer (±46m, ±42m))
+	#   are generated as 100% continuous watertight curved-to-rectangular slabs with safety balustrades and Void-Spanning Escalators by MallCurvedAtriumRing!
+	# - All 32.0m-wide x 26.0m-deep Storefronts (including Bay 0 Stores East_F0_02, West_F1_03, West_F1_02, East_F2_01, West_F2_01, Center_F3_01)
+	#   are generated by MallStackedHWings!
+
+	# 4. Store Fascia Signs for the 32.0m-Wide x 26.0m-Deep Signature Haunted Storefronts in Bay 0 (Z = -74..-42m North Wing)
+	_create_static_box(self, Vector3(20.0, 0.0075, -58.0), Vector3(0.9, 0.015, 5.6), Color(0.82, 0.68, 0.32), 0.3)
+	_build_store_sign_header(Vector3(19.65, 4.45, -58.0), Vector3(0, -90, 0), "PENDELTON'S BOOKS & CURIOS [East_F0_02 — 32m Wide x 26m Deep]", Color(0.88, 0.94, 0.98))
+
+	_create_static_box(self, Vector3(-20.0, 0.0075, -58.0), Vector3(0.9, 0.015, 5.6), Color(0.84, 0.64, 0.72), 0.3)
+	_build_store_sign_header(Vector3(-19.65, 4.45, -58.0), Vector3(0, 90, 0), "SHEER TERROR HOSIERY & APPAREL [West_F1_03 — 32m Wide x 26m Deep]", Color(0.96, 0.84, 0.90))
+
+	_create_static_box(self, Vector3(20.0, 8.508, -58.0), Vector3(0.9, 0.015, 5.6), Color(0.68, 0.82, 0.90), 0.3)
+	_build_store_sign_header(Vector3(19.65, 12.65, -58.0), Vector3(0, -90, 0), "ARCADIA EVENING WEAR & BRIDALS [East_F2_01 — 32m Wide x 26m Deep]", Color(0.86, 0.94, 0.98))
+
+	# 5. Dynamic Ceiling Light Fixtures across Atrium, Concourse, and Haunted Stores
 	var atrium_light_positions := [
-		Vector3(-8.0, 7.6, -6.0), Vector3(-8.0, 7.6, 6.0),
-		Vector3(0.0, 7.6, -6.0), Vector3(0.0, 7.6, 6.0),
-		Vector3(8.0, 7.6, 0.0),
+		Vector3(-18.0, 7.8, -18.0), Vector3(-18.0, 7.8, 18.0),
+		Vector3(18.0, 7.8, -18.0),  Vector3(18.0, 7.8, 18.0),
+		Vector3(0.0, 7.8, -34.0),   Vector3(0.0, 7.8, 34.0),
+		Vector3(-34.0, 15.8, 0.0),  Vector3(34.0, 15.8, 0.0),
 	]
 	for pos in atrium_light_positions:
 		var fix := MallLightFixture.new()
 		fix.store_id = "Atrium_Concourse"
-		fix.light_color = Color(1.0, 0.95, 0.86)
-		fix.base_energy = 2.8
+		fix.light_color = Color(1.0, 0.95, 0.88)
+		fix.base_energy = 1.45
 		fix.position = pos
 		add_child(fix)
 
-	var store_light_positions := [
-		Vector3(17.5, 5.75, -3.2), Vector3(17.5, 5.75, 3.2),
-		Vector3(23.5, 5.75, -3.2), Vector3(23.5, 5.75, 3.2),
+	var store_east_lights := [
+		Vector3(24.5, 5.75, -66.0), Vector3(24.5, 5.75, -50.0),
+		Vector3(33.0, 5.75, -66.0), Vector3(33.0, 5.75, -50.0),
+		Vector3(41.5, 5.75, -66.0), Vector3(41.5, 5.75, -50.0),
 	]
-	for pos in store_light_positions:
+	for pos in store_east_lights:
 		var fix := MallLightFixture.new()
 		fix.store_id = "East_F0_02"
-		fix.light_color = Color(0.92, 0.96, 1.0)
-		fix.base_energy = 2.4
+		fix.light_color = Color(0.98, 0.95, 0.90)
+		fix.base_energy = 1.35
 		fix.position = pos
 		add_child(fix)
 
+	var store_west_lights := [
+		Vector3(-24.5, 5.75, -66.0), Vector3(-24.5, 5.75, -50.0),
+		Vector3(-33.0, 5.75, -66.0), Vector3(-33.0, 5.75, -50.0),
+		Vector3(-41.5, 5.75, -66.0), Vector3(-41.5, 5.75, -50.0),
+	]
+	for pos in store_west_lights:
+		var fix := MallLightFixture.new()
+		fix.store_id = "West_F1_03"
+		fix.light_color = Color(0.98, 0.94, 0.92)
+		fix.base_energy = 1.35
+		fix.position = pos
+		add_child(fix)
+
+	var store_f2_lights := [
+		Vector3(24.5, 14.2, -66.0), Vector3(24.5, 14.2, -50.0),
+		Vector3(33.0, 14.2, -66.0), Vector3(33.0, 14.2, -50.0),
+		Vector3(41.5, 14.2, -66.0), Vector3(41.5, 14.2, -50.0),
+	]
+	for pos in store_f2_lights:
+		var fix := MallLightFixture.new()
+		fix.store_id = "East_F2_01"
+		fix.light_color = Color(0.96, 0.95, 0.92)
+		fix.base_energy = 1.35
+		fix.position = pos
+		add_child(fix)
+
+func _build_store_sign_header(pos: Vector3, rot_deg: Vector3, title_text: String, glow_col: Color) -> void:
+	var sign_root := _spawn_model_or_box(
+		"res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25346_FasciaSignBoard.fbx",
+		pos,
+		Vector3(4.2, 0.65, 0.18),
+		Color(0.24, 0.26, 0.30),
+		false
+	)
+	sign_root.rotation_degrees = rot_deg
+	var lbl := Label3D.new()
+	lbl.position = pos + Vector3(0.0, 0.32, 0.0)
+	lbl.text = title_text
+	lbl.modulate = glow_col.lerp(Color(0.96, 0.94, 0.88), 0.35)
+	lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	lbl.font_size = 22
+	lbl.outline_size = 5
+	lbl.visibility_range_end = 26.0
+	lbl.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
+	add_child(lbl)
+
 func _spawn_interactive_props_and_sanctuaries() -> void:
-	# 1. Concourse Rest Bench (with solid bench collider + 3rd-Person Camera Transition)
-	var bench_pos := Vector3(-4.5, 0.0, 4.5)
-	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25366_ConcourseBench.fbx", bench_pos, Vector3(2.0, 0.48, 0.75), Color(0.48, 0.34, 0.22), true)
-	_create_floating_label(bench_pos + Vector3(0, 1.35, 0), "[F] Concourse Rest Bench\n(3rd-Person Character View: +24 Stamina/s, +8 HP/s)", Color(0.65, 0.95, 1.0))
+	# 1. Concourse Rest Bench on the Double-Radius Central Oval Island (with solid bench collider + 3rd-Person Camera Transition)
+	var bench_pos := Vector3(-6.5, 0.0, 6.5)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25366_ConcourseBench.fbx", bench_pos, Vector3(2.0, 0.48, 0.75), Color(0.54, 0.40, 0.28), true)
+	_create_floating_label(bench_pos + Vector3(0, 1.35, 0), "[F] Concourse Rest Bench\n(3rd-Person Character View: +24 Stamina/s, +8 HP/s)", Color(0.84, 0.94, 0.98))
 
-	# 2. South Tangquan Pink Salt Bathhouse (SM_Bath_SteamingOnsenPool.fbx) + Overhauled Small Platform Stairs Collision!
-	var spa_pos := Vector3(-11.0, 0.0, 11.0)
-	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Bath_SteamingOnsenPool.fbx", spa_pos, Vector3(5.6, 0.56, 4.7), Color(0.95, 0.55, 0.68), false)
-	_build_onsen_pool_and_stairs_collision(spa_pos)
-	var spa_light := OmniLight3D.new()
-	spa_light.position = spa_pos + Vector3(0, 1.8, 0)
-	spa_light.light_color = Color(1.0, 0.58, 0.72)
-	spa_light.light_energy = 2.6
-	spa_light.omni_range = 8.0
-	add_child(spa_light)
-	_create_floating_label(spa_pos + Vector3(0, 2.1, 0), "[F] South Pink Salt Spa & Sauna Revival Ritual Shrine\n• Walk Up Small Platform Stairs (North/South) into Pool!\n• Alive [F]: Soak (+60s Pink Salt Ward) & Light Soul-Anchor\n• Ectoplasm Form [F or 9]: Recite Spoken Prayer to Resurrect!", Color(1.0, 0.7, 0.85))
+	# 2. Whole-West-Side Floor 1 Himalayan Pink Salt & Tangquan Sauna Liminal Biome (X = -32m .. -112m, Z = -38m .. +38m)
+	#    Built by MallStackedHWings with 3 Steaming Geothermal Onsen Pools, 3-Tier Walkable Cedar Sauna Amphitheater,
+	#    6 Red-Hot Sauna Stoves, 4 Glass Sauna Pavilions, and 16 Active GPUParticles3D Volumetric Steam Emitters!
+	#    Add walkable Small Platform Stairs & Rim collision for all 3 Onsen Pools and 4 Glass Sauna Pavilions:
+	for pool_p in [Vector3(-48.0, 0.0, 0.0), Vector3(-50.0, 0.0, -20.0), Vector3(-50.0, 0.0, 20.0)]:
+		_build_onsen_pool_and_stairs_collision(pool_p)
+	for pav_p in [Vector3(-50.0, 0.0, -32.0), Vector3(-50.0, 0.0, 32.0), Vector3(-64.0, 0.0, -18.0), Vector3(-64.0, 0.0, 18.0)]:
+		_build_sauna_pavilion_collision(pav_p)
 
-	#    Hinoki Cedar Glass Sauna Pavilion (SM_Bath_GlassSaunaPavilion.fbx) with Entrance Step & Bench Collision
-	var sauna_pos := Vector3(-17.2, 0.0, 11.0)
-	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Bath_GlassSaunaPavilion.fbx", sauna_pos, Vector3(4.8, 2.9, 3.8), Color(0.85, 0.55, 0.30), false)
-	_build_sauna_pavilion_collision(sauna_pos)
+	# 3. North Night-Market Food Court Plaza at (-18.0, 0.0, -32.0) (with Hot Pot Dining Table, Bistro Tables, Service Counter & Waste Station)
+	var food_pos := Vector3(-18.0, 0.0, -32.0)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25373_FoodCourtTableSet.fbx", food_pos, Vector3(1.55, 0.90, 1.55), Color(0.68, 0.42, 0.28), true)
+	_create_floating_label(food_pos + Vector3(0, 1.8, 0), "[F] North Night-Market Food Court\n(Sit at Table for 5.0s & Eat Chongqing Hot Pot: +40 HP, +45% Light Cart Battery, +25% Speed)", Color(0.96, 0.88, 0.68))
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_User_RestaurantTableSet.fbx", Vector3(-14.5, 0.0, -32.2), Vector3(1.5, 0.85, 1.5), Color(0.62, 0.44, 0.28), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_User_BistrotTableSet.fbx", Vector3(-14.5, 0.0, -35.2), Vector3(1.2, 0.80, 1.2), Color(0.58, 0.42, 0.28), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25310_CashDesk120.fbx", Vector3(-18.0, 0.0, -36.8), Vector3(1.25, 1.05, 0.75), Color(0.62, 0.38, 0.28), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25376_WasteStation.fbx", Vector3(-15.8, 0.0, -36.8), Vector3(0.65, 1.0, 0.55), Color(0.48, 0.52, 0.56), true)
 
-	# 3. North Night-Market Food Court Stall (with solid table collider)
-	var food_pos := Vector3(-11.0, 0.0, -5.5)
-	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25373_FoodCourtTableSet.fbx", food_pos, Vector3(1.55, 0.90, 1.55), Color(0.88, 0.32, 0.18), true)
-	_create_floating_label(food_pos + Vector3(0, 1.8, 0), "[F] North Night-Market Food Court\n(Eat Chongqing Hot Pot: +40 HP, +45% Light Cart Battery, +25% Speed)", Color(1.0, 0.82, 0.45))
+	# 4. Quartermaster Chen's Raised Surplus Platform on the East Concourse Plaza (23.6, 0.0, 0.0) with West-facing stairs toward the Oval Island!
+	var vendor_plat_pos := Vector3(23.6, 0.0, 0.0)
+	_build_platform_with_small_stairs(vendor_plat_pos, Vector3(4.2, 0.48, 5.2), "west", Color(0.72, 0.70, 0.66))
+	var vendor_pos := Vector3(22.8, 0.48, 0.0)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25310_CashDesk120.fbx", vendor_pos, Vector3(1.23, 1.05, 0.75), Color(0.45, 0.58, 0.48), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/ImportReady/SM_RetailShelves01.fbx", Vector3(25.0, 0.48, -1.6), Vector3(1.1, 2.1, 0.55), Color(0.55, 0.58, 0.62), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25400_StockRollCage.fbx", Vector3(25.0, 0.48, 1.6), Vector3(0.85, 1.7, 0.75), Color(0.60, 0.64, 0.68), true)
+	var chen_node := _spawn_model_or_box("res://SourceAssets/Characters/NormalizedLowPoly/Quartermaster_Chen_LowPoly.glb", Vector3(24.1, 0.48, 0.0), Vector3(0.5, 1.78, 0.5), Color(0.42, 0.68, 0.52), false)
+	chen_node.rotation_degrees = Vector3(0, -90, 0)
+	_create_floating_label(
+		vendor_pos + Vector3(0, 2.25, 0),
+		"[F] Quartermaster Chen — Trader & Upgrade Shop\n• Sell Filled Ectoplasm Canisters (+$85 Gremlin / +$180-$260 Store Ghost)\n• Buy Empty Canister ($35) | Relay Fuse ($60) | Film ($20)\n• Ray Gun & Canister Upgrades (Higher-Tier Upgrades Unlock on Floor 2+!)",
+		Color(0.78, 0.96, 0.84)
+	)
 
-	# 4. Quartermaster Chen's Raised Surplus Platform with Small Platform Stairs + Normalized Low-Poly Character
-	var vendor_plat_pos := Vector3(-15.0, 0.0, 0.0)
-	_build_platform_with_small_stairs(vendor_plat_pos, Vector3(4.2, 0.48, 5.2), "east", Color(0.26, 0.30, 0.34))
-	var vendor_pos := Vector3(-14.2, 0.48, 0.0)
-	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25310_CashDesk120.fbx", vendor_pos, Vector3(1.23, 1.05, 0.75), Color(0.32, 0.58, 0.42), true)
-	var chen_node := _spawn_model_or_box("res://SourceAssets/Characters/NormalizedLowPoly/Quartermaster_Chen_LowPoly.glb", Vector3(-15.5, 0.48, 0.0), Vector3(0.5, 1.78, 0.5), Color(0.3, 0.7, 0.5), false)
-	chen_node.rotation_degrees = Vector3(0, 90, 0)
-	_create_floating_label(vendor_pos + Vector3(0, 2.25, 0), "[F] Quartermaster Chen — Flash & Phantom Surplus\nDispense Relay Fuse Crate ($60) | Camera Film Refill ($20)", Color(0.45, 1.0, 0.65))
+	#    Quartermaster Chen's Single-Line Surplus Equipment Display Table (at X = 18.2m, Z = -13.2m..+13.2m on the East Concourse Plaza)
+	#    Laid out in ONE straight line (single row, 1.48m apart) so no item ever sits behind another item!
+	_create_static_box(self, Vector3(18.2, 0.38, 0.0), Vector3(0.95, 0.76, 26.8), Color(0.54, 0.42, 0.30), 0.42)
 
-	#    Spawn Separate Equipment Tools (Photo Camera, Light Remote Gun, Proton Ray Gun & Trap) as World Pickups!
-	var proton_drop := PlaceableEvidenceActors.WorldDroppedItem.new()
-	proton_drop.item_data = PlayerController.make_item_data("proton_gun")
-	proton_drop.position = Vector3(-11.2, 0.0, -1.6)
-	add_child(proton_drop)
+	var single_line_table_item_ids: Array[String] = [
+		"ectoplasm_canister",
+		"proton_gun",
+		"photo_camera",
+		"light_remote",
+		"video_camera",
+		"camera_stand",
+		"audio_recorder",
+		"sls_camera",
+		"laser_grid_dome",
+		"barcode_scanner",
+		"parabolic_mic",
+		"ecto_viewmaster",
+		"pink_salt_pouch",
+		"eas_pedestal_ward",
+		"talkboy_decoy",
+		"helium_balloon",
+		"mannequin_disguise",
+		"price_slasher_baton",
+	]
+	var item_spacing_z := 1.48
+	var start_z := -0.5 * float(single_line_table_item_ids.size() - 1) * item_spacing_z # -12.58m .. +12.58m
+	for idx in range(single_line_table_item_ids.size()):
+		var item_id_str: String = single_line_table_item_ids[idx]
+		var sp_drop := PlaceableEvidenceActors.WorldDroppedItem.new()
+		sp_drop.item_data = PlayerController.make_item_data(item_id_str)
+		sp_drop.position = Vector3(18.05, 0.76, start_z + float(idx) * item_spacing_z)
+		add_child(sp_drop)
 
-	var camera_drop := PlaceableEvidenceActors.WorldDroppedItem.new()
-	camera_drop.item_data = PlayerController.make_item_data("photo_camera")
-	camera_drop.position = Vector3(-11.2, 0.0, -0.4)
-	add_child(camera_drop)
+	#    Wall-Mounted Cart Battery Charger Station (AMallCartCharger) near the Light Cart dock + Ask Zoltar Fortune Booth!
+	cart_charger = ExpandedMallGadgets.MallCartChargerStation.new()
+	cart_charger.position = Vector3(12.2, 0.0, 4.2)
+	add_child(cart_charger)
 
-	var remote_drop := PlaceableEvidenceActors.WorldDroppedItem.new()
-	remote_drop.item_data = PlayerController.make_item_data("light_remote")
-	remote_drop.position = Vector3(-11.2, 0.0, 0.8)
-	add_child(remote_drop)
+	zoltar_booth = ExpandedMallGadgets.ZoltarFortuneBooth.new()
+	zoltar_booth.position = Vector3(-10.5, 0.0, 8.5)
+	add_child(zoltar_booth)
 
-	# 5. Stage 6A: Dual 8.50m MallEscalators (Upward + Downward) connecting Floor 1 (Z = +4.32m, Y = 0.0m) -> Floor 2 (Z = -13.00m, Y = 8.50m)!
-	escalator_up = MallEscalator.new()
-	escalator_up.escalator_title = "East Concourse Escalator (F1 -> F2)"
-	escalator_up.position = Vector3(1.55, 0.0, 4.322432)
-	escalator_up.rotation_degrees = Vector3(0.0, 90.0, 0.0) # Local +X points along World -Z!
-	escalator_up.reverse_direction = false
-	escalator_up.set_operational_mode(MallEscalator.MaintenanceState.OPERATIONAL, true)
-	add_child(escalator_up)
+	var orb_f2 := VideoAndAudioSurveillance.GhostOrbActor.new()
+	orb_f2.store_id = "East_F2_01"
+	orb_f2.position = Vector3(25.5, 9.8, -58.0)
+	add_child(orb_f2)
 
-	escalator_down = MallEscalator.new()
-	escalator_down.escalator_title = "West Concourse Escalator (F2 -> F1)"
-	escalator_down.position = Vector3(-1.55, 0.0, 4.322432)
-	escalator_down.rotation_degrees = Vector3(0.0, 90.0, 0.0)
-	escalator_down.reverse_direction = true
-	escalator_down.set_operational_mode(MallEscalator.MaintenanceState.OPERATIONAL, true)
-	add_child(escalator_down)
+	# 5. Stage 6A: Void-Spanning MallEscalators (Floors 1..7+ at Z = +22.20m inside the South Open Elliptical Atrium Void!)
+	#    Built directly by MallCurvedAtriumRing so zero floor cutouts or upper-floor holes exist anywhere!
+	if is_instance_valid(curved_atrium):
+		escalator_up = curved_atrium.escalators_up.get(1)
+		escalator_down = curved_atrium.escalators_down.get(1)
 
-	#    Raised Escalator Breaker Control Dais with Small Platform Stairs at (5.2, 0.0, 4.2)
-	_build_platform_with_small_stairs(Vector3(5.2, 0.0, 4.2), Vector3(2.8, 0.48, 2.8), "west", Color(0.25, 0.28, 0.33))
-	_create_static_box(self, Vector3(5.8, 1.18, 4.2), Vector3(0.35, 1.4, 0.85), Color(0.20, 0.55, 0.42), 0.4)
-	_create_floating_label(Vector3(5.2, 2.35, 4.2), "[F] Escalator Breaker & Direction Control Dais\n(Walk up Small Platform Stairs & press [F] to Toggle/Motorize Escalators)", Color(0.45, 0.95, 1.0))
+	#    Raised Escalator Breaker Control Dais with Small Platform Stairs at (-22.5, 0.0, 22.2) right beside the South Escalator Lower Entrance (-19.82, 0.0, 22.2)!
+	_build_platform_with_small_stairs(Vector3(-22.5, 0.0, 22.2), Vector3(2.4, 0.48, 2.2), "east", Color(0.68, 0.70, 0.74))
+	_create_static_box(self, Vector3(-23.1, 1.18, 22.2), Vector3(0.35, 1.4, 0.85), Color(0.32, 0.56, 0.46), 0.4)
+	_create_floating_label(Vector3(-22.5, 2.35, 22.2), "[F] Escalator Breaker & Direction Control Dais\n(Walk up Small Platform Stairs & press [F] to Toggle/Motorize Escalators)", Color(0.82, 0.94, 0.98))
 
-	# 6. Stage 6B (Floor 2 Beachhead): Two-Handed Heavy Hydraulic Assembly (Hands-Only Pickup!) & Service Freight Elevator
+	# 6. Physical Rideable Service Freight Elevator (X = 10.0, Y = 0.0..51.0m+, Z = -25.8) inside the North Open Elliptical Atrium Void!
+	#    Docks flush against the North Outer Atrium Rim at Z = -28.55m across all 7 built-in floors + Procedural Infinite Floors 8+!
+	freight_elevator = MallFreightElevator.new()
+	freight_elevator.position = Vector3(10.0, 0.0, -25.8)
+	add_child(freight_elevator)
+	if is_instance_valid(curved_atrium):
+		freight_elevator.procedural_floor_requested.connect(func(new_floor: int) -> void:
+			curved_atrium.spawn_procedural_upper_floor(new_floor)
+		)
+
 	var heavy_drop := PlaceableEvidenceActors.WorldDroppedItem.new()
 	heavy_drop.item_data = PlayerController.make_item_data("heavy_hydraulic")
-	heavy_drop.position = Vector3(-10.0, 8.50, -15.0)
+	heavy_drop.position = Vector3(-10.0, 8.50, -34.0)
 	add_child(heavy_drop)
 
-	var freight_pos := Vector3(10.0, 8.50, -15.0)
-	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25359_LiftLobbyModule.fbx", freight_pos, Vector3(2.6, 3.2, 0.35), Color(0.35, 0.42, 0.5), true)
-	_create_floating_label(freight_pos + Vector3(0, 2.6, 0), "[F] Stage 6B: Floor 2 Service Freight Elevator Shaft\n(Carry Heavy Hydraulic Assembly in Hands & Press [F] to Bring Carts Up!)", Color(0.45, 1.0, 0.75))
+	# Elena Vance's Phased Audit Echo on Floor 2 North Promenade (1.74m 1:1 scale, right in front of the North Cardinal Bridge at Z = -30.0m!)
+	var _elena_node := _spawn_model_or_box("res://SourceAssets/Characters/NormalizedLowPoly/Elena_Vance_LowPoly.glb", Vector3(0.0, 8.50, -34.0), Vector3(0.5, 1.74, 0.5), Color(0.6, 0.88, 0.96), false)
+	_create_floating_label(Vector3(0.0, 10.6, -34.0), "Elena Vance's Audit Trail #1\n\"Cross the 4 Cardinal Bridges onto the Double-Radius Central Oval Island, or wheel your Carts onto the Service Freight Elevator [10, 0, -25.8] across all 7+ Floors!\"", Color(0.84, 0.95, 0.98))
 
-	# Elena Vance's Phased Audit Echo on Floor 2 (1.74m 1:1 scale)
-	var _elena_node := _spawn_model_or_box("res://SourceAssets/Characters/NormalizedLowPoly/Elena_Vance_LowPoly.glb", Vector3(0.0, 8.50, -18.0), Vector3(0.5, 1.74, 0.5), Color(0.4, 0.9, 1.0), false)
-	_create_floating_label(Vector3(0.0, 10.6, -18.0), "Elena Vance's Audit Trail #1\n\"Ride the Escalator up here, then haul the Hydraulic Assembly in your Hands to unlock the Freight Elevator!\"", Color(0.5, 0.95, 1.0))
-
-	# 7. Haunted Store Interior Props: Fitting Room Hiding Booth, Ghost Writing Ledger & Peaceful Ritual Checkout
-	var hiding_pos := Vector3(18.5, 0.0, -5.2)
-	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25284_FittingCubicleClosed.fbx", hiding_pos, Vector3(1.11, 2.25, 1.26), Color(0.36, 0.30, 0.44), false)
+	# 7. Haunted Store Interior Props & Mall Store Furnishings inside 32.0m-Wide x 26.0m-Deep Bay 0 Store East_F0_02 (X = 20..46, Z = -74..-42)
+	var hiding_pos := Vector3(24.5, 0.0, -64.0)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25284_FittingCubicleClosed.fbx", hiding_pos, Vector3(1.11, 2.25, 1.26), Color(0.58, 0.54, 0.64), false)
 	_create_floating_booth_walls(hiding_pos)
-	_create_floating_label(hiding_pos + Vector3(0, 2.4, 0), "[F] Fitting Room Hiding Spot\n(Conceals from Lethal Hunts if entered without Ghost witness)", Color(0.75, 0.8, 1.0))
+	_create_floating_label(hiding_pos + Vector3(0, 2.4, 0), "[F] Fitting Room Hiding Spot\n(Conceals from Lethal Hunts if entered without Ghost witness)", Color(0.84, 0.88, 0.96))
 
-	var book_pos := Vector3(19.5, 0.85, 2.2)
-	_create_static_box(self, Vector3(19.5, 0.425, 2.2), Vector3(1.1, 0.85, 0.75), Color(0.32, 0.26, 0.22), 0.5)
-	_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/decorative_book_set_01/SM_BookHardcover02.fbx", book_pos, Vector3(0.45, 0.12, 0.35), Color(0.65, 0.18, 0.18), false)
-	_create_floating_label(book_pos + Vector3(0, 1.05, 0), "[F] Store Ghost Ledger & Peaceful Resolution Stand\n• Inspect Tell & Perform Peaceful Ritual (+$120 if Receptive)\n• Or Speak [9] \"Your shift is over\" on 87.9 FM", Color(1.0, 0.88, 0.55))
+	var book_pos := Vector3(25.5, 0.85, -54.5)
+	_create_static_box(self, Vector3(25.5, 0.425, -54.5), Vector3(1.1, 0.85, 0.75), Color(0.52, 0.42, 0.32), 0.5)
+	_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/decorative_book_set_01/SM_BookHardcover02.fbx", book_pos, Vector3(0.45, 0.12, 0.35), Color(0.65, 0.24, 0.22), false)
+	_create_floating_label(book_pos + Vector3(0, 1.05, 0), "[F] Store Ghost Ledger & Peaceful Resolution Stand\n• Inspect Tell & Perform Peaceful Ritual (+$120 if Receptive)\n• Or Speak [9] \"Your shift is over\" on 87.9 FM", Color(0.96, 0.90, 0.70))
 
-	# 8. Spawn Placeable Infrared Motion Sensor & Hidden UV Footprints inside Store East_F0_02
+	_furnish_stores_and_atrium_concourse()
+
+	# 8. Spawn Placeable Infrared Motion Sensor & Hidden UV Footprints inside Store East_F0_02 (X = 20..46, Z = -74..-42)
 	var motion_sensor := PlaceableEvidenceActors.PlaceableMotionSensor.new()
 	motion_sensor.store_id = "East_F0_02"
-	motion_sensor.position = Vector3(16.2, 0.0, 0.0)
+	motion_sensor.position = Vector3(22.2, 0.0, -58.0)
 	add_child(motion_sensor)
 
 	var uv_positions := [
-		Vector3(16.8, 0.02, -1.6),
-		Vector3(18.4, 0.02, 1.1),
-		Vector3(20.2, 0.02, -0.8),
+		Vector3(22.8, 0.02, -59.6),
+		Vector3(24.4, 0.02, -56.9),
+		Vector3(26.2, 0.02, -58.8),
 	]
 	for i in range(uv_positions.size()):
 		var uvp := PlaceableEvidenceActors.UVEvidencePrint.new()
@@ -317,6 +455,65 @@ func _spawn_interactive_props_and_sanctuaries() -> void:
 		uvp.print_title = "UV Footprint #%d [Receptive Tell: Neat Clerk Step]" % (i + 1)
 		uvp.position = uv_positions[i]
 		add_child(uvp)
+
+func _furnish_stores_and_atrium_concourse() -> void:
+	# A. Furnish Store #1: East_F0_02 ("Pendelton's Book & Curio Shop" — X = 20.0..46.0, Z = -74.0..-42.0 — 32m Wide x 26m Deep!)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25334_SecurityPedestalPair.fbx", Vector3(20.6, 0.0, -58.0), Vector3(0.25, 1.45, 1.8), Color(0.55, 0.62, 0.70), false)
+	_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/ImportReady/SM_RetailShelves01.fbx", Vector3(30.5, 0.0, -68.8), Vector3(1.1, 2.1, 0.55), Color(0.32, 0.35, 0.40), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/ImportReady/SM_RetailShelves01.fbx", Vector3(41.5, 0.0, -68.8), Vector3(1.1, 2.1, 0.55), Color(0.32, 0.35, 0.40), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25242_MerchandiseGondola.fbx", Vector3(30.5, 0.0, -62.2), Vector3(1.25, 1.55, 0.85), Color(0.42, 0.38, 0.34), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25242_MerchandiseGondola.fbx", Vector3(30.5, 0.0, -53.4), Vector3(1.25, 1.55, 0.85), Color(0.42, 0.38, 0.34), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25242_MerchandiseGondola.fbx", Vector3(40.5, 0.0, -62.2), Vector3(1.25, 1.55, 0.85), Color(0.42, 0.38, 0.34), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25242_MerchandiseGondola.fbx", Vector3(40.5, 0.0, -53.4), Vector3(1.25, 1.55, 0.85), Color(0.42, 0.38, 0.34), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25225_TieredRoundTable.fbx", Vector3(23.2, 0.0, -51.4), Vector3(1.1, 0.95, 1.1), Color(0.52, 0.40, 0.28), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25310_CashDesk120.fbx", Vector3(32.2, 0.0, -49.6), Vector3(1.25, 1.05, 0.75), Color(0.36, 0.30, 0.25), true)
+
+	# B. Furnish Store #2: West_F1_03 ("Sheer Terror Hosiery & Apparel" — X = -46.0..-20.0, Z = -74.0..-42.0 — 32m Wide x 26m Deep!)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25334_SecurityPedestalPair.fbx", Vector3(-20.6, 0.0, -58.0), Vector3(0.25, 1.45, 1.8), Color(0.65, 0.55, 0.68), false)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25257_FemaleMannequin.fbx", Vector3(-22.5, 0.0, -64.8), Vector3(0.55, 1.78, 0.45), Color(0.85, 0.82, 0.88), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25265_FemaleWalkingMannequin.fbx", Vector3(-22.5, 0.0, -51.2), Vector3(0.55, 1.78, 0.55), Color(0.85, 0.82, 0.88), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25259_MaleMannequin.fbx", Vector3(-40.8, 0.0, -64.2), Vector3(0.55, 1.82, 0.45), Color(0.80, 0.80, 0.85), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25273_LegForm.fbx", Vector3(-24.8, 0.0, -65.6), Vector3(0.45, 1.15, 0.45), Color(0.88, 0.78, 0.84), false)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25208_StraightHangingRail.fbx", Vector3(-30.5, 0.0, -64.5), Vector3(1.35, 1.45, 0.60), Color(0.60, 0.64, 0.70), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25210_RoundHangingRail.fbx", Vector3(-30.5, 0.0, -51.5), Vector3(1.10, 1.38, 1.10), Color(0.60, 0.64, 0.70), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25208_StraightHangingRail.fbx", Vector3(-40.5, 0.0, -64.5), Vector3(1.35, 1.45, 0.60), Color(0.60, 0.64, 0.70), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25183_PerimeterWallBay240.fbx", Vector3(-45.0, 0.0, -58.0), Vector3(0.65, 2.40, 2.40), Color(0.42, 0.38, 0.46), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25310_CashDesk120.fbx", Vector3(-25.5, 0.0, -60.0), Vector3(1.25, 1.05, 0.75), Color(0.48, 0.34, 0.45), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25284_FittingCubicleClosed.fbx", Vector3(-42.5, 0.0, -48.0), Vector3(1.11, 2.25, 1.26), Color(0.38, 0.32, 0.44), true)
+
+	# C. Furnish Store #3 (Floor 2 East Mezzanine, Y = 8.50m): East_F2_01 ("Arcadia Evening Wear" — X = 20.0..46.0, Z = -74.0..-42.0 — 32m Wide x 26m Deep!)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25267_HeadlessMannequin.fbx", Vector3(22.6, 8.50, -64.5), Vector3(0.55, 1.62, 0.45), Color(0.82, 0.86, 0.92), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25271_TorsoFormStand.fbx", Vector3(22.6, 8.50, -51.5), Vector3(0.48, 1.50, 0.45), Color(0.82, 0.86, 0.92), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25208_StraightHangingRail.fbx", Vector3(30.5, 8.50, -64.5), Vector3(1.35, 1.45, 0.60), Color(0.65, 0.70, 0.78), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25210_RoundHangingRail.fbx", Vector3(30.5, 8.50, -51.5), Vector3(1.10, 1.38, 1.10), Color(0.65, 0.70, 0.78), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25208_StraightHangingRail.fbx", Vector3(40.5, 8.50, -64.5), Vector3(1.35, 1.45, 0.60), Color(0.65, 0.70, 0.78), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25198_WallBayMirror.fbx", Vector3(45.0, 8.50, -58.0), Vector3(0.45, 2.40, 1.20), Color(0.55, 0.72, 0.85), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25310_CashDesk120.fbx", Vector3(25.5, 8.50, -62.0), Vector3(1.25, 1.05, 0.75), Color(0.35, 0.42, 0.52), true)
+
+	# D. Central Double-Radius Oval Island Planters, Tropical Foliage, Directory Totems & Wayfinding Signage
+	var planter_positions := [
+		Vector3(-9.5, 0.0, 12.5),
+		Vector3(9.5, 0.0, 12.5),
+		Vector3(-9.5, 0.0, -12.5),
+		Vector3(9.5, 0.0, -12.5),
+	]
+	for ppos in planter_positions:
+		_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25369_LargeAtriumPlanter.fbx", ppos, Vector3(1.8, 0.65, 1.8), Color(0.58, 0.56, 0.52), true)
+		_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/ImportReady/SM_PachiraD.fbx", ppos + Vector3(0.0, 0.45, 0.0), Vector3(0.8, 1.9, 0.8), Color(0.24, 0.58, 0.30), false)
+
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25372_DirectoryTotem.fbx", Vector3(-8.5, 0.0, 1.8), Vector3(0.85, 2.25, 0.35), Color(0.32, 0.48, 0.58), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25374_ConcourseKioskCart.fbx", Vector3(9.5, 0.0, 15.5), Vector3(1.8, 2.1, 1.1), Color(0.55, 0.40, 0.28), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25378_ConcoursePlanterBench.fbx", Vector3(-9.5, 0.0, 15.8), Vector3(2.4, 0.65, 1.1), Color(0.48, 0.38, 0.28), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/ImportReady/SM_PottedPlant01.fbx", Vector3(-9.5, 0.45, 15.8), Vector3(0.6, 1.35, 0.6), Color(0.25, 0.62, 0.32), false)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25371_HangingWayfindingSign.fbx", Vector3(0.0, 6.2, -16.8), Vector3(2.8, 0.65, 0.25), Color(0.24, 0.28, 0.34), false)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25371_HangingWayfindingSign.fbx", Vector3(14.5, 6.2, -10.5), Vector3(2.8, 0.65, 0.25), Color(0.24, 0.28, 0.34), false)
+
+	# Floor 2 Gallery Seating & Planter Troughs on the Outer Concourse Gallery
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25370_AtriumPlanterTrough.fbx", Vector3(-6.0, 8.50, -35.5), Vector3(1.8, 0.65, 0.75), Color(0.56, 0.54, 0.50), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/ImportReady/SM_PachiraA.fbx", Vector3(-6.0, 8.95, -35.5), Vector3(0.7, 1.3, 0.7), Color(0.25, 0.60, 0.32), false)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_User_BistrotTableSet.fbx", Vector3(-34.5, 8.50, 12.0), Vector3(1.2, 0.80, 1.2), Color(0.55, 0.38, 0.24), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_User_BistrotTableSet.fbx", Vector3(34.5, 8.50, 12.0), Vector3(1.2, 0.80, 1.2), Color(0.55, 0.38, 0.24), true)
+	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25368_CurvedConcourseBench.fbx", Vector3(4.5, 8.50, -35.5), Vector3(2.2, 0.50, 0.85), Color(0.52, 0.40, 0.28), true)
 
 ## Builds exact walkable Small Platform Stairs + Pool Rim + Inner Basin Floor collision for SM_Bath_SteamingOnsenPool.fbx
 func _build_onsen_pool_and_stairs_collision(spa_pos: Vector3) -> void:
@@ -427,13 +624,15 @@ func _spawn_carts_ghosts_and_gremlin() -> void:
 	push_cart = MallCartSystem.new()
 	push_cart.cart_type = "PushCart"
 	push_cart.linked_store_id = "East_F0_02"
-	push_cart.dock_world_position = Vector3(14.0, 0.0, 0.0)
-	push_cart.store_interior_center = Vector3(21.0, 0.0, 0.0)
+	push_cart.dock_world_position = Vector3(20.0, 0.0, -58.0)
+	push_cart.store_interior_center = Vector3(30.0, 0.0, -58.0)
 	push_cart.position = Vector3(11.2, 0.0, -1.2)
 	add_child(push_cart)
+	push_cart.place_item_on_cart(PlayerController.make_item_data("proton_gun"), 4)
+	push_cart.place_item_on_cart(PlayerController.make_item_data("ectoplasm_canister"), 5)
 	push_cart.place_item_on_cart(PlayerController.make_item_data("photo_camera"), 6)
 	push_cart.place_item_on_cart(PlayerController.make_item_data("light_remote"), 7)
-	_create_floating_label(Vector3(14.0, 2.5, 0.0), "STORE [East_F0_02] DOORWAY CART DOCK\nPark Push Cart across threshold = SEALED\nPush inside store = DORMANT", Color(1.0, 0.88, 0.35))
+	_create_floating_label(Vector3(20.0, 2.5, -58.0), "STORE [East_F0_02] DOORWAY CART DOCK\nPark Push Cart across threshold = SEALED\nPush inside store = DORMANT", Color(1.0, 0.88, 0.35))
 
 	light_cart = MallCartSystem.new()
 	light_cart.cart_type = "LightCart"
@@ -441,36 +640,35 @@ func _spawn_carts_ghosts_and_gremlin() -> void:
 	light_cart.rotation_degrees = Vector3(0, -90, 0)
 	add_child(light_cart)
 
-	# 1. Floor 1 Onboarding Store Ghost: Arthur Pendelton (East_F0_02 — Store Territory Bound!)
+	# 1. Floor 1 Onboarding Store Ghost: Arthur Pendelton (East_F0_02 — 32m Wide x 26m Deep Bay 0 East!)
 	store_ghost_east = StoreGhost.new()
 	store_ghost_east.store_id = "East_F0_02"
 	store_ghost_east.floor_level = 1
 	store_ghost_east.can_briefly_pursue_outside_store = false
-	store_ghost_east.position = Vector3(21.5, 0.0, 0.0)
+	store_ghost_east.position = Vector3(30.0, 0.0, -58.0)
 	store_ghost_east.linked_push_cart = push_cart
 	add_child(store_ghost_east)
 
-	# 2. Floor 1 Secondary Store Ghost: Static Evelyn (West_F1_03 — Store Territory Bound!)
+	# 2. Floor 1 Secondary Store Ghost: Static Evelyn (West_F1_03 — 32m Wide x 26m Deep Bay 0 West!)
 	store_ghost_west = StoreGhost.new()
 	store_ghost_west.store_id = "West_F1_03"
 	store_ghost_west.floor_level = 1
 	store_ghost_west.can_briefly_pursue_outside_store = false
 	store_ghost_west.doorway_threshold_x = -999.0
-	store_ghost_west.position = Vector3(-19.5, 0.0, -8.5)
+	store_ghost_west.position = Vector3(-30.0, 0.0, -58.0)
 	add_child(store_ghost_west)
 	var west_tell := "CORRUPTED (Hostile-Only — Peace Will Backfire!)" if store_ghost_west.is_corrupted_hostile else "RECEPTIVE TO PEACE"
-	_create_floating_label(Vector3(-19.5, 2.8, -8.5), "West Boutique Haunting: Static Evelyn [West_F1_03] (Store Territory Bound)\nRolled Run Disposition: %s\n[F] Attempt Peaceful Ritual | Proton Ray Gun + Trap" % west_tell, Color(1.0, 0.5, 0.55) if store_ghost_west.is_corrupted_hostile else Color(0.5, 1.0, 0.75))
+	_create_floating_label(Vector3(-25.5, 2.8, -58.0), "West Boutique Haunting: Static Evelyn [West_F1_03] (Store Territory Bound)\nRolled Run Disposition: %s\n[F] Attempt Peaceful Ritual | Proton Ray Gun + Trap" % west_tell, Color(1.0, 0.5, 0.55) if store_ghost_west.is_corrupted_hostile else Color(0.5, 1.0, 0.75))
 
-	# 3. Upper-Floor Store Ghost (Floor 2 East Mezzanine, Y = 8.50m): The Lost Shopper (East_F2_01)
-	#    Only upper floors introduce store ghosts comfortable leaving their store briefly (6s) to continue pursuing players!
+	# 3. Upper-Floor Store Ghost (Floor 2 East Mezzanine, Y = 8.50m): The Lost Shopper (East_F2_01 — 32m Wide x 26m Deep!)
 	store_ghost_floor2 = StoreGhost.new()
 	store_ghost_floor2.store_id = "East_F2_01"
 	store_ghost_floor2.floor_level = 2
 	store_ghost_floor2.can_briefly_pursue_outside_store = true
-	store_ghost_floor2.position = Vector3(16.0, 8.50, -15.0)
+	store_ghost_floor2.position = Vector3(30.0, 8.50, -58.0)
 	add_child(store_ghost_floor2)
 	_create_floating_label(
-		Vector3(16.0, 11.3, -15.0),
+		Vector3(25.5, 11.3, -58.0),
 		"Floor 2 Boutique Haunting: The Lost Shopper [East_F2_01]\n(Upper-Floor Ghost: Leaves store briefly [6s] to continue pursuing players!\nBlock its exit using the edge of the Wheeled Light Cart's Circle of Safety!)",
 		Color(0.65, 0.92, 1.0)
 	)
@@ -599,10 +797,10 @@ func _process(delta: float) -> void:
 		toggle_voice_menu()
 
 	if Input.is_action_just_pressed("interact") and is_instance_valid(player):
-		_handle_contextual_interact()
+		_handle_pickup_interact()
 
-	if Input.is_action_just_pressed("secondary_action") and is_instance_valid(player) and not player.is_floating_essence:
-		_try_open_nearby_death_crate_on_floor()
+	if Input.is_action_just_pressed("secondary_action") and is_instance_valid(player):
+		_handle_world_object_interact()
 
 	if Input.is_action_just_pressed("toggle_journal") and journal_panel:
 		journal_panel.visible = not journal_panel.visible
@@ -611,20 +809,62 @@ func _process(delta: float) -> void:
 
 	_refresh_hud()
 
+func _any_modal_open() -> bool:
+	return (
+		(voice_menu_panel != null and voice_menu_panel.visible)
+		or (coop_menu_panel != null and coop_menu_panel.visible)
+		or (trader_menu_panel != null and trader_menu_panel.visible)
+	)
+
 func toggle_coop_menu(force_state: Variant = null) -> void:
 	if coop_menu_panel == null:
 		return
 	var next_vis: bool = (not coop_menu_panel.visible) if force_state == null else bool(force_state)
 	coop_menu_panel.visible = next_vis
+	if next_vis and trader_menu_panel:
+		trader_menu_panel.visible = false
 	if is_instance_valid(player):
-		player.voice_menu_open = next_vis or (voice_menu_panel != null and voice_menu_panel.visible)
+		player.voice_menu_open = _any_modal_open()
+	if _any_modal_open():
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func toggle_trader_menu(force_state: Variant = null) -> void:
+	if trader_menu_panel == null:
+		return
+	var next_vis: bool = (not trader_menu_panel.visible) if force_state == null else bool(force_state)
+	trader_menu_panel.visible = next_vis
 	if next_vis:
+		if voice_menu_panel:
+			voice_menu_panel.visible = false
+		if coop_menu_panel:
+			coop_menu_panel.visible = false
+		_refresh_trader_menu_ui()
+	if is_instance_valid(player):
+		player.voice_menu_open = _any_modal_open()
+	if _any_modal_open():
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_key_input(event: InputEvent) -> void:
-	if Engine.is_editor_hint() or voice_menu_panel == null or not voice_menu_panel.visible:
+	if Engine.is_editor_hint():
+		return
+	if trader_menu_panel != null and trader_menu_panel.visible:
+		if event is InputEventKey and event.pressed and not event.echo:
+			var kc_t: int = event.physical_keycode if event.physical_keycode != 0 else event.keycode
+			if kc_t >= KEY_1 and kc_t <= KEY_9:
+				execute_trader_shop_option(kc_t - KEY_1)
+				get_viewport().set_input_as_handled()
+			elif kc_t == KEY_0:
+				execute_trader_shop_option(9)
+				get_viewport().set_input_as_handled()
+			elif kc_t == KEY_ESCAPE:
+				toggle_trader_menu(false)
+				get_viewport().set_input_as_handled()
+		return
+	if voice_menu_panel == null or not voice_menu_panel.visible:
 		return
 	if event is InputEventKey and event.pressed and not event.echo:
 		var kc: int = event.physical_keycode if event.physical_keycode != 0 else event.keycode
@@ -641,9 +881,11 @@ func toggle_voice_menu(force_state: Variant = null) -> void:
 		return
 	var next_vis: bool = (not voice_menu_panel.visible) if force_state == null else bool(force_state)
 	voice_menu_panel.visible = next_vis
+	if next_vis and trader_menu_panel:
+		trader_menu_panel.visible = false
 	if is_instance_valid(player):
-		player.voice_menu_open = next_vis
-	if next_vis:
+		player.voice_menu_open = _any_modal_open()
+	if _any_modal_open():
 		_refresh_voice_menu_status()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
@@ -670,109 +912,284 @@ func _refresh_voice_menu_status() -> void:
 		]
 	)
 
-func _try_open_nearby_death_crate_on_floor() -> void:
+## [F] ("interact"): Strictly reserved for PICKING UP items (Mounted Cart CCTV Monitor -> Hands, Table items, Dropped floor tools, Placed Video Cameras / Canisters / Recorders / Laser Domes / Wards, Death Inventory Crates, or taking a stored item off the Push Cart shelf)!
+func _handle_pickup_interact() -> void:
+	if player.is_floating_essence:
+		GameState.status_message.emit(
+			"Cannot pick up items while in Ectoplasm Form! Float to the West Himalayan Sauna Biome and press [E] or [J] to resurrect.",
+			Color(0.35, 1.0, 0.95)
+		)
+		return
+
 	var ppos := player.global_position
+	var look_cam := player.main_camera if player.main_camera else null
+	var look_origin := look_cam.global_position if look_cam else (ppos + Vector3(0.0, 1.4, 0.0))
+	var look_fwd := (-look_cam.global_transform.basis.z.normalized()) if look_cam else (-player.global_transform.basis.z.normalized())
+
+	# 0. If looking directly at the Push Cart's mounted CCTV Monitor (<= 2.85m), pressing [F] unmounts & picks it up into the player's HANDS slot!
+	for mon_node in get_tree().get_nodes_in_group("cart_computer_monitors"):
+		var mon := mon_node as VideoAndAudioSurveillance.CartComputerMonitor
+		if mon and mon.is_mounted_on_cart and ppos.distance_to(mon.global_position) < 2.85:
+			var to_mon := (mon.global_position - look_origin).normalized()
+			if look_fwd.dot(to_mon) > 0.58:
+				var mon_item := mon.unmount_to_hand_item()
+				if not mon_item.is_empty():
+					if mon.parent_cart != null and mon.parent_cart.has_method("_refresh_push_cart_header_label"):
+						mon.parent_cart.call("_refresh_push_cart_header_label")
+					player.receive_item_from_cart(mon_item)
+					player.play_flashlight_click(true)
+					GameState.status_message.emit(
+						"Picked up Portable CCTV Monitor from Cart into HANDS [F]! ([LMB] Power ON/OFF | [RMB] Cycle Camera Locations | [G] near Cart to Mount Back on Cart)",
+						Color(0.45, 0.96, 1.0)
+					)
+					return
+
+	# 1. Pick up a Death Inventory Crate into Hands (Hands-Only — cannot go on the 4-slot hotbar!)
 	for c_node in get_tree().get_nodes_in_group("death_inventory_crates"):
 		var crate := c_node as PlaceableEvidenceActors.DeathInventoryCrate
 		if crate and ppos.distance_to(crate.global_position) < 2.8:
-			crate.open_and_spill_to_floor(self)
+			player.pickup_death_crate_in_hands(crate)
 			return
 
-	# If standing next to the 8-Slot Equipment Push Cart (<= 2.95m) and it has stored items on its shelves, pressing [E] takes the highlighted item off the cart!
-	for pc_node in get_tree().get_nodes_in_group("push_carts"):
-		var pc := pc_node as MallCartSystem
-		if pc and ppos.distance_to(pc.global_position) < 2.95 and pc.get_stored_item_count() > 0:
-			var taken := pc.take_highlighted_item_from_cart()
-			if not taken.is_empty():
-				player.receive_item_from_cart(taken)
+	# 2. Pick up ANY EctoplasmCanisterTrap on the floor (either FILLED to take to Trader Chen to sell, or EMPTY/DEPLETED to recharge & reposition)!
+	for can_node in get_tree().get_nodes_in_group("ectoplasm_canisters"):
+		var can_trap := can_node as PlaceableEvidenceActors.EctoplasmCanisterTrap
+		if can_trap and ppos.distance_to(can_trap.global_position) < 2.6:
+			if can_trap.is_captured:
+				var filled_data := PlayerController.make_filled_canister_item_data(
+					can_trap.captured_entity_name,
+					can_trap.captured_bounty_value,
+					can_trap.captured_store_id
+				)
+				can_trap.remove_from_group("ectoplasm_canisters")
+				can_trap.queue_free()
+				player.receive_item_from_cart(filled_data)
 				GameState.status_message.emit(
-					"Took %s off Equipment Push Cart (%d/8 stored on cart)." % [taken.get("name", "Tool"), pc.get_stored_item_count()],
-					Color(1.0, 0.90, 0.42)
+					"Picked up FILLED Ectoplasm Canister (%s — Worth $%d)! Take it to Trader Chen [-14.2, 0, 0] and press [E] to sell it and buy a new Empty Canister!" % [
+						filled_data.get("captured_entity", "Ghost"), int(filled_data.get("bounty_value", 180))
+					],
+					Color(1.0, 0.88, 0.35)
+				)
+				return
+			else:
+				var can_data := PlayerController.make_item_data("ectoplasm_canister")
+				can_data["deployed_seconds_left"] = can_trap.deployed_seconds_left
+				can_trap.remove_from_group("ectoplasm_canisters")
+				can_trap.queue_free()
+				player.receive_item_from_cart(can_data)
+				var max_t := GameState.get_canister_max_deployed_time()
+				GameState.status_message.emit(
+					"Picked up Ectoplasm Canister (Recharging battery: %.1fs / %.0fs) — press [LMB] or [G] to set on floor, then [E] to kick & open!" % [
+						float(can_data["deployed_seconds_left"]), max_t
+					],
+					Color(0.35, 1.0, 0.68)
 				)
 				return
 
-	# If pushing or standing next to a Wheeled Light Cart (<= 3.0m), pressing [E] toggles its overhead floodlight ON/OFF!
-	for lc_node in get_tree().get_nodes_in_group("light_carts"):
-		var lc := lc_node as MallCartSystem
-		if lc and ((lc.is_attached_to_player and lc.attached_player == player) or ppos.distance_to(lc.global_position) < 3.0):
-			lc.toggle_floodlight("Player Switch [E]")
-			return
-
-	# If standing right over a WorldDroppedItem on the floor (<= 2.2m) that can be switched ON/OFF:
+	# 3. Pick up any individual WorldDroppedItem on the Equipment Table or floor (prioritizing the item the player is looking at!)
+	var best_drop: PlaceableEvidenceActors.WorldDroppedItem = null
+	var best_score := 999.0
 	for d_node in get_tree().get_nodes_in_group("world_dropped_items"):
 		var drop := d_node as PlaceableEvidenceActors.WorldDroppedItem
-		if drop and drop.can_power_toggle() and ppos.distance_to(drop.global_position) < 2.2:
-			drop.toggle_ground_power()
+		if drop:
+			var d := ppos.distance_to(drop.global_position)
+			if d < 2.65:
+				var to_drop := (drop.global_position + Vector3(0.0, 0.15, 0.0)) - look_origin
+				var look_align := look_fwd.dot(to_drop.normalized())
+				var score := d - maxf(0.0, look_align) * 1.35
+				if score < best_score:
+					best_score = score
+					best_drop = drop
+	if best_drop:
+		player.pickup_world_item(best_drop)
+		return
+
+	# 4. Pick up PlacedVideoCameraActor, ParanormalAudioRecorderActor, LaserGridDomeActor, or EASPedestalWardActor!
+	for cam_node in get_tree().get_nodes_in_group("placed_video_cameras"):
+		var pcam := cam_node as VideoAndAudioSurveillance.PlacedVideoCameraActor
+		if pcam and ppos.distance_to(pcam.global_position) < 2.4:
+			var cam_data: Dictionary = pcam.to_pickup_item_data()
+			pcam.remove_from_group("placed_video_cameras")
+			pcam.queue_free()
+			player.receive_item_from_cart(cam_data)
+			GameState.status_message.emit("Picked up %s [F]!" % cam_data.get("name", "Video Camera"), Color(0.45, 1.0, 0.75))
+			return
+	for rec_node in get_tree().get_nodes_in_group("audio_recorders"):
+		var rec := rec_node as VideoAndAudioSurveillance.ParanormalAudioRecorderActor
+		if rec and ppos.distance_to(rec.global_position) < 2.4:
+			var rec_data: Dictionary = rec.to_pickup_item_data()
+			rec.remove_from_group("audio_recorders")
+			rec.queue_free()
+			player.receive_item_from_cart(rec_data)
+			GameState.status_message.emit("Picked up %s [F]!" % rec_data.get("name", "Audio Recorder"), Color(0.45, 1.0, 0.75))
+			return
+	for dome_node in get_tree().get_nodes_in_group("laser_grid_domes"):
+		var dome := dome_node as ExpandedMallGadgets.LaserGridDomeActor
+		if dome and ppos.distance_to(dome.global_position) < 2.2:
+			var d_data := PlayerController.make_item_data("laser_grid_dome")
+			dome.remove_from_group("laser_grid_domes")
+			dome.queue_free()
+			player.receive_item_from_cart(d_data)
+			GameState.status_message.emit("Picked up D.O.T.S. Laser Grid Projector Dome [F]!", Color(0.45, 1.0, 0.75))
+			return
+	for ward_node in get_tree().get_nodes_in_group("eas_pedestal_wards"):
+		var ward := ward_node as ExpandedMallGadgets.EASPedestalWardActor
+		if ward and not ward.is_burned_out and ppos.distance_to(ward.global_position) < 2.2:
+			var w_data := PlayerController.make_item_data("eas_pedestal_ward")
+			ward.remove_from_group("eas_pedestal_wards")
+			ward.queue_free()
+			player.receive_item_from_cart(w_data)
+			GameState.status_message.emit("Picked up Hacked EAS Anti-Theft Pedestal Ward [F]!", Color(0.45, 0.95, 1.0))
 			return
 
-func _handle_contextual_interact() -> void:
-	var ppos := player.global_position
+	# 5. If standing next to the 8-Slot Equipment Push Cart (<= 2.95m), pressing [F] takes the highlighted item off the cart (or unmounts the CCTV Monitor into Hands if shelves are empty)!
+	for pc_node in get_tree().get_nodes_in_group("push_carts"):
+		var pc := pc_node as MallCartSystem
+		if pc and ppos.distance_to(pc.global_position) < 2.95:
+			if pc.get_stored_item_count() > 0 or pc.get_hooked_item_count() > 0:
+				var taken := pc.take_highlighted_item_from_cart()
+				if not taken.is_empty():
+					player.receive_item_from_cart(taken)
+					GameState.status_message.emit(
+						"Picked up %s [F] off Equipment Push Cart (%d/8 stored on cart)." % [taken.get("name", "Tool"), pc.get_stored_item_count()],
+						Color(1.0, 0.90, 0.42)
+					)
+					return
+			elif pc.cart_monitor != null and pc.cart_monitor.is_mounted_on_cart:
+				var mon_item2 := pc.cart_monitor.unmount_to_hand_item()
+				if not mon_item2.is_empty():
+					pc._refresh_push_cart_header_label()
+					player.receive_item_from_cart(mon_item2)
+					player.play_flashlight_click(true)
+					GameState.status_message.emit(
+						"Picked up Portable CCTV Monitor from Cart into HANDS [F]! ([LMB] Power ON/OFF | [RMB] Cycle Camera Locations | [G] near Cart to Mount Back on Cart)",
+						Color(0.45, 0.96, 1.0)
+					)
+					return
 
-	# 0. If the player is ALREADY pushing a cart, pressing [F] ALWAYS parks that cart first!
-	#    This prevents accidentally grabbing the second cart when parking near it.
+	GameState.status_message.emit(
+		"No pickup item in range for [F] — look at the Cart CCTV Monitor, any Table Tool, Placed Camera/Canister, or Stored Cart Item and press [F]! (Use [E] to Push/Release Carts & press Elevator Buttons.)",
+		Color(0.75, 0.84, 0.94)
+	)
+
+## [E] ("secondary_action"): Strictly reserved for INTERACTING WITH WORLD OBJECTS THAT CANNOT BE PICKED UP
+## (Push/Release Carts, Elevator UP/DOWN Physical Buttons, Rotate Placed Camera +35°, Kick Open Deployed Canisters, Benches, Sauna, Food Court, Trader Chen, Hiding Spots, etc.)!
+## Note: The Cart CCTV Monitor NEVER intercepts [E] — use [F] to pick up the monitor into Hands, [G] to mount it on the cart, [LMB] for Power, and [RMB] to cycle cameras!
+func _handle_world_object_interact() -> void:
+	var ppos := player.global_position
+	var look_cam := player.main_camera if player.main_camera else null
+	var look_origin := look_cam.global_position if look_cam else (ppos + Vector3(0.0, 1.4, 0.0))
+	var look_fwd := (-look_cam.global_transform.basis.z.normalized()) if look_cam else (-player.global_transform.basis.z.normalized())
+
+	# 1. HIGHEST PRIORITY: If the player is ALREADY pushing a cart, pressing [E] IMMEDIATELY releases/parks that cart!
+	#    (Unless looking straight up at the Light Cart's overhead floodlight lamp head to toggle the lamp!)
 	var detached_any := false
 	for node in get_tree().get_nodes_in_group("mall_carts"):
 		var c := node as MallCartSystem
 		if c and c.is_attached_to_player and c.attached_player == player:
+			if c.cart_type == "LightCart":
+				var to_lamp := ((c.global_position + Vector3(0.0, 1.55, 0.0)) - look_origin).normalized()
+				if look_fwd.dot(to_lamp) > 0.72:
+					c.toggle_floodlight("Player Switch [E]")
+					return
 			c.detach_from_player(false)
 			detached_any = true
 	if detached_any:
 		return
 
-	# 0A. Pick up a Death Inventory Crate into Hands (Hands-Only — cannot go on the 4-slot hotbar!)
-	if not player.is_floating_essence:
-		for c_node in get_tree().get_nodes_in_group("death_inventory_crates"):
-			var crate := c_node as PlaceableEvidenceActors.DeathInventoryCrate
-			if crate and ppos.distance_to(crate.global_position) < 2.8:
-				player.pickup_death_crate_in_hands(crate)
-				return
-
-	# 0B. Pick up any individual WorldDroppedItem on the floor (slots into 1-4 hotbar, or into Hands if full / Hands-Only!)
-	if not player.is_floating_essence:
-		var best_drop: PlaceableEvidenceActors.WorldDroppedItem = null
-		var best_dist := 2.6
-		for d_node in get_tree().get_nodes_in_group("world_dropped_items"):
-			var drop := d_node as PlaceableEvidenceActors.WorldDroppedItem
-			if drop:
-				var d := ppos.distance_to(drop.global_position)
-				if d < best_dist:
-					best_dist = d
-					best_drop = drop
-		if best_drop:
-			player.pickup_world_item(best_drop)
+	# 2. If standing at either of the 2 Spaced-Out Physical Elevator Buttons (Left ▲ UP Button or Right ▼ DOWN Button) or a Call Pedestal, press it with [E]!
+	if is_instance_valid(freight_elevator):
+		var cab_up_pos := freight_elevator.to_global(Vector3(-freight_elevator.cab_width * 0.5 + 0.45, freight_elevator.current_cab_y, 0.0))
+		var cab_down_pos := freight_elevator.to_global(Vector3(freight_elevator.cab_width * 0.5 - 0.45, freight_elevator.current_cab_y, 0.0))
+		if ppos.distance_to(cab_up_pos) <= 2.4 or ppos.distance_to(cab_down_pos) <= 2.4 or freight_elevator.is_player_near_any_elevator_control(ppos):
+			if player.consume_carried_item_id("heavy_hydraulic"):
+				freight_elevator.install_hydraulic_overdrive()
+			freight_elevator.activate_elevator_for_player(player)
 			return
 
-	# 1. Attach the single closest Cart (Push Cart OR Light Cart — never both!) within 2.5m
+	# 4. If standing near an EctoplasmCanisterTrap set on the floor (<= 2.6m), pressing [E] KICKS IT & OPENS IT to start sucking the ghost in!
+	if not player.is_floating_essence:
+		for can_node in get_tree().get_nodes_in_group("ectoplasm_canisters"):
+			var can_trap := can_node as PlaceableEvidenceActors.EctoplasmCanisterTrap
+			if can_trap and ppos.distance_to(can_trap.global_position) < 2.6:
+				var kick_dir := -player.global_transform.basis.z.normalized()
+				can_trap.kick_and_open(kick_dir)
+				return
+
+	# 5. If standing near a PlacedVideoCameraActor on the floor (<= 2.4m), pressing [E] attaches a carried Tripod Stand or pans its motorized head (+35°)!
+	if not player.is_floating_essence:
+		for cam_node in get_tree().get_nodes_in_group("placed_video_cameras"):
+			var pcam := cam_node as VideoAndAudioSurveillance.PlacedVideoCameraActor
+			if pcam and ppos.distance_to(pcam.global_position) < 2.4:
+				if not pcam.is_on_tripod_stand and player.consume_carried_item_id("camera_stand"):
+					pcam.attach_tripod_stand()
+					return
+				pcam.pan_camera(35.0)
+				return
+
+	# 6. If standing near a ParanormalAudioRecorderActor on the floor (<= 2.4m), pressing [E] triggers EVP Playback (+$75 Bounty & Tell)!
+	if not player.is_floating_essence:
+		for rec_node in get_tree().get_nodes_in_group("audio_recorders"):
+			var rec := rec_node as VideoAndAudioSurveillance.ParanormalAudioRecorderActor
+			if rec and ppos.distance_to(rec.global_position) < 2.4:
+				rec.trigger_playback(true)
+				return
+
+	# 7. If standing near a UVWallStencilActor (<= 2.4m), pressing [E] cycles its glowing wayfinding symbol!
+	if not player.is_floating_essence:
+		for st_node in get_tree().get_nodes_in_group("uv_wall_stencils"):
+			var st := st_node as ExpandedMallGadgets.UVWallStencilActor
+			if st and ppos.distance_to(st.global_position) < 2.4:
+				st.cycle_symbol()
+				return
+
+	# 8. Attach/Push the Cart (Push Cart OR Light Cart) within 2.85m that the player is looking at (or closest) — or toggle Light Cart floodlight if aiming up at its lamp!
 	if not player.is_floating_essence:
 		var best_cart: MallCartSystem = null
-		var best_cart_dist := 2.5
+		var best_cart_score := 999.0
 		for node in get_tree().get_nodes_in_group("mall_carts"):
 			var c := node as MallCartSystem
 			if c:
 				var d := ppos.distance_to(c.global_position)
-				if d < best_cart_dist:
-					best_cart_dist = d
-					best_cart = c
+				if d < 2.85:
+					var to_c := (c.global_position + Vector3(0.0, 0.9, 0.0)) - look_origin
+					var align := look_fwd.dot(to_c.normalized())
+					var score := d - maxf(0.0, align) * 1.25
+					if score < best_cart_score:
+						best_cart_score = score
+						best_cart = c
 		if best_cart:
+			if best_cart.cart_type == "LightCart":
+				var to_lamp := ((best_cart.global_position + Vector3(0.0, 1.55, 0.0)) - look_origin).normalized()
+				if look_fwd.dot(to_lamp) > 0.72:
+					best_cart.toggle_floodlight("Player Switch [E]")
+					return
 			best_cart.toggle_attach(player)
 			return
 
-	# 2. Concourse Rest Bench (-4.5, 0, 4.5) -> 3rd-Person Rest
-	if ppos.distance_to(Vector3(-4.5, 0.0, 4.5)) < 3.0:
-		player.enter_contextual_third_person(Vector3(-4.5, 0.0, 4.5), "Sitting on Concourse Rest Bench (+24 Stamina/s)")
+	# 9. Concourse Rest Bench (-6.5, 0, 6.5) -> 3rd-Person Rest
+	if ppos.distance_to(Vector3(-6.5, 0.0, 6.5)) < 3.2 or ppos.distance_to(Vector3(-4.5, 0.0, 4.5)) < 3.0:
+		player.enter_contextual_third_person(Vector3(-6.5, 0.0, 6.5), "Sitting on Concourse Rest Bench (+24 Stamina/s)")
 		return
 
-	# 3. South Tangquan Pink Salt Bathhouse & Sauna Revival Ritual Shrine (-11, 0, 11)
-	if ppos.distance_to(Vector3(-11.0, 0.0, 11.0)) < 5.0 or ppos.distance_to(Vector3(-17.2, 0.0, 11.0)) < 4.5:
+	# 10. Whole-West-Side Floor 1 Himalayan Pink Salt & Tangquan Sauna Liminal Biome (X = -32m .. -112m, Z = -38m .. +38m)
+	if (
+		ppos.distance_to(Vector3(-48.0, 0.0, 0.0)) < 7.5
+		or ppos.distance_to(Vector3(-50.0, 0.0, -20.0)) < 6.5
+		or ppos.distance_to(Vector3(-50.0, 0.0, 20.0)) < 6.5
+		or (ppos.x <= -68.0 and ppos.x >= -112.0 and absf(ppos.z) <= 36.0 and absf(ppos.y) < 3.5)
+		or ppos.distance_to(Vector3(-11.0, 0.0, 11.0)) < 4.5
+	):
 		if player.is_floating_essence:
 			player.revive_from_sauna_ritual()
 		else:
 			GameState.sauna_soul_anchor_lit = true
-			player.enter_contextual_third_person(Vector3(-11.0, 0.28, 11.0), "Soaking in Pink Salt Spa (+60s Ward & Soul-Anchor Lit!)")
+			var soak_target := Vector3(-48.0, 0.28, 0.0) if ppos.x <= -30.0 else Vector3(-11.0, 0.28, 11.0)
+			player.enter_contextual_third_person(soak_target, "Soaking in Himalayan Pink Salt & Tangquan Sauna Biome (+60s Ward & Soul-Anchor Lit!)")
 		return
 
-	# 4. North Night-Market Food Court (-11, 0, -5.5) -> Sit down at table in 3rd-Person View for 5.0s minimum & watch bar fill up!
-	if ppos.distance_to(Vector3(-11.0, 0.0, -5.5)) < 3.6:
+	# 11. North Night-Market Food Court (-18.0, 0.0, -32.0) -> Sit down at table in 3rd-Person View for 5.0s minimum & watch bar fill up!
+	if ppos.distance_to(Vector3(-18.0, 0.0, -32.0)) < 4.2 or ppos.distance_to(Vector3(-11.0, 0.0, -5.5)) < 3.6:
 		if player.is_eating_meal:
 			GameState.status_message.emit(
 				"Still eating Chongqing Hot Pot at the table (%.1fs / %.1fs)..." % [player.eating_timer, player.eating_duration],
@@ -781,71 +1198,83 @@ func _handle_contextual_interact() -> void:
 		elif player.contextual_seat_active:
 			player.exit_contextual_third_person()
 		else:
-			player.start_eating_at_table(Vector3(-11.0, 0.0, -6.25), Vector3(-11.0, 0.0, -5.5), 5.0)
+			var eat_seat := Vector3(-18.0, 0.0, -32.75) if ppos.z < -20.0 else Vector3(-11.0, 0.0, -6.25)
+			var eat_look := Vector3(-18.0, 0.0, -32.0) if ppos.z < -20.0 else Vector3(-11.0, 0.0, -5.5)
+			player.start_eating_at_table(eat_seat, eat_look, 5.0)
 		return
 
-	# 5. Quartermaster Chen's Vendor Counter (-14.2, 0.48, 0)
-	if ppos.distance_to(Vector3(-14.2, 0.48, 0.0)) < 3.8:
-		if not player.is_carrying_item_id("escalator_fuse") and not GameState.powered_circuits.get("EscalatorCircuit_F1_To_F2", false):
-			if GameState.spend_cash(60, "Heavy-Duty Escalator Relay Fuse Crate"):
-				player.pickup_item_by_id_into_inventory_or_hands("escalator_fuse")
-				GameState.status_message.emit("Purchased Escalator Relay Fuse Crate (Carried in Hands)! Take it to the Escalator Breaker Dais (5.2, 0.48, 4.2).", Color(0.45, 1.0, 0.7))
-		else:
-			if GameState.spend_cash(20, "Evidence Camera Film Pack (+10 Exposures)"):
-				player.photo_exposures_left = 10
+	# 12. Quartermaster Chen's Trader & Upgrade Counter (22.8, 0.48, 0.0)
+	if ppos.distance_to(Vector3(22.8, 0.48, 0.0)) < 4.2 or ppos.distance_to(Vector3(-14.2, 0.48, 0.0)) < 3.8:
+		player.sell_all_carried_filled_canisters()
+		player._recharge_carried_canisters(100.0)
+		toggle_trader_menu()
 		return
 
-	# 6. Escalator Breaker Control Dais (5.2, 0.48, 4.2) or Escalator Lower Entrance
-	if ppos.distance_to(Vector3(5.2, 0.48, 4.2)) < 3.8 or ppos.distance_to(Vector3(1.55, 0.0, 4.3)) < 3.5:
+	# 13. Escalator Breaker Control Dais (-22.5, 0.48, 22.2) or Void-Spanning Escalator Lower Entrance (-19.82, 0, 22.2)
+	if (
+		ppos.distance_to(Vector3(-22.5, 0.48, 22.2)) < 4.2
+		or ppos.distance_to(Vector3(-19.82, 0.0, 22.2)) < 4.2
+		or ppos.distance_to(Vector3(-7.2, 0.48, 15.2)) < 3.8
+		or ppos.distance_to(Vector3(-8.66, 0.0, 17.5)) < 3.8
+		or ppos.distance_to(Vector3(5.2, 0.48, 4.2)) < 3.8
+	):
 		if player.consume_carried_item_id("escalator_fuse"):
 			GameState.power_escalator_circuit("EscalatorCircuit_F1_To_F2")
-			escalator_up.set_operational_mode(MallEscalator.MaintenanceState.OPERATIONAL, true)
+			if is_instance_valid(escalator_up):
+				escalator_up.set_operational_mode(MallEscalator.MaintenanceState.OPERATIONAL, true)
 			return
-		var new_run := not escalator_up.running
-		escalator_up.set_operational_mode(
-			MallEscalator.MaintenanceState.OPERATIONAL if new_run else MallEscalator.MaintenanceState.STALLED_WALKABLE,
-			new_run
-		)
-		GameState.status_message.emit(
-			"Escalator Breaker Toggled! East Escalator is now %s (Walk directly onto steps to ride/climb to Floor 2!)." % ("MOTORIZED (2.15 m/s)" if new_run else "STALLED WALKABLE STAIRS"),
-			Color(0.45, 0.95, 1.0)
-		)
+		if is_instance_valid(escalator_up):
+			var new_run := not escalator_up.running
+			escalator_up.set_operational_mode(
+				MallEscalator.MaintenanceState.OPERATIONAL if new_run else MallEscalator.MaintenanceState.STALLED_WALKABLE,
+				new_run
+			)
+			GameState.status_message.emit(
+				"Escalator Breaker Toggled [E]! South Escalator is now %s (Walk directly onto steps to ride/climb to Floor 2!)." % ("MOTORIZED (2.15 m/s)" if new_run else "STALLED WALKABLE STAIRS"),
+				Color(0.45, 0.95, 1.0)
+			)
 		return
 
-	# 7. Stage 6B (Floor 2): Service Freight Elevator Shaft (10, 8.5, -15)
-	if ppos.distance_to(Vector3(10.0, 8.5, -15.0)) < 4.0:
-		if player.consume_carried_item_id("heavy_hydraulic"):
-			GameState.repair_freight_elevator(2)
-			push_cart.global_position = Vector3(6.5, 8.5, -14.5)
-			light_cart.global_position = Vector3(8.0, 8.5, -14.5)
-		elif GameState.freight_elevator_unlocked_floors.get(2, false):
-			player.global_position = Vector3(2.0, 0.2, 0.0)
-			GameState.current_floor = 1
-			GameState.status_message.emit("Took Service Freight Elevator back to Floor 1 Central Oval Sanctuary.", Color(0.5, 0.95, 1.0))
-		else:
-			GameState.status_message.emit("Floor 2 Service Freight Elevator Offline! Pick up the Two-Handed Heavy Hydraulic Assembly on the West Balcony (-10, 8.5, -15) in your Hands first.", Color(1.0, 0.6, 0.35))
-		return
-
-	# 8. Fitting Room Hiding Booth (18.5, 0, -5.2)
-	if ppos.distance_to(Vector3(18.5, 0.0, -5.2)) < 2.8:
+	# 14. Fitting Room Hiding Booth (24.5, 0.0, -64.0)
+	if ppos.distance_to(Vector3(24.5, 0.0, -64.0)) < 3.0 or ppos.distance_to(Vector3(18.5, 0.0, -5.2)) < 2.8:
 		var witnessed := (store_ghost_east.current_phase == StoreGhost.GhostPhase.VISIBLE_HUNT and store_ghost_east.global_position.distance_to(ppos) < 5.0)
 		player.is_hidden_without_witness = not witnessed
-		player.enter_contextual_third_person(Vector3(18.5, 0.0, -5.2), "Hidden in Fitting Room Booth (%s)" % ("WITNESSED!" if witnessed else "Undetected"))
+		var hide_target := Vector3(24.5, 0.0, -64.0) if ppos.z < -30.0 else Vector3(18.5, 0.0, -5.2)
+		player.enter_contextual_third_person(hide_target, "Hidden in Fitting Room Booth (%s)" % ("WITNESSED!" if witnessed else "Undetected"))
 		return
 
-	# 9. Store East_F0_02 Ledger & Peaceful Lore Resolution Stand (19.5, 0, 2.2)
-	if ppos.distance_to(Vector3(19.5, 0.0, 2.2)) < 3.4:
+	# 15. Store East_F0_02 Ledger & Peaceful Lore Resolution Stand (25.5, 0.0, -54.5)
+	if ppos.distance_to(Vector3(25.5, 0.0, -54.5)) < 4.2 or ppos.distance_to(Vector3(19.5, 0.0, 2.2)) < 3.4:
 		GameState.record_evidence("East_F0_02", "Ghost Writing", 40)
 		GameState.discover_lore("LORE_LEDGER_EAST_F0_02", true)
 		store_ghost_east.try_peaceful_resolution()
 		return
 
-	# 10. Store West_F1_03 Peaceful Ritual Attempt (-19.5, 0, -8.5) — May Backfire if Corrupted!
-	if ppos.distance_to(Vector3(-19.5, 0.0, -8.5)) < 3.8:
+	# 16. Store West_F1_03 Peaceful Ritual Attempt (-25.5, 0.0, -58.0) — May Backfire if Corrupted!
+	if ppos.distance_to(Vector3(-25.5, 0.0, -58.0)) < 4.5 or ppos.distance_to(Vector3(-30.0, 0.0, -58.0)) < 4.5 or ppos.distance_to(Vector3(-19.5, 0.0, -8.5)) < 3.8:
 		store_ghost_west.try_peaceful_resolution()
 		return
 
-	GameState.status_message.emit("Step closer to a Dropped Item, Death Crate, Cart, Bench, Spa/Sauna, Vendor, Escalator Breaker, or Ledger and press [F].", Color(0.75, 0.82, 0.9))
+	# 17. Wall-Mounted Cart Battery Charger Station (12.2, 0, 4.2)
+	if is_instance_valid(cart_charger) and ppos.distance_to(cart_charger.global_position) < 3.2:
+		cart_charger.interact_charger()
+		return
+
+	# 18. "Ask Zoltar" Coin-Op Fortune Booth (-10.5, 0, 8.5)
+	if is_instance_valid(zoltar_booth) and ppos.distance_to(zoltar_booth.global_position) < 3.2:
+		zoltar_booth.interact_zoltar(player)
+		return
+
+	# 19. Campaign Expansion Interactions (All 5 Hiding Spot Types, Stores #2/#4/#6 Ledgers, Lore Ledgers & UV Ciphers, F2->F3 Escalator, and Floor 3 Elena Vance Ark Extraction Console!)
+	if is_instance_valid(campaign_expansion) and campaign_expansion.try_handle_campaign_interact(player):
+		return
+	if is_instance_valid(campaign_expansion) and campaign_expansion.try_handle_campaign_secondary_action(player):
+		return
+
+	GameState.status_message.emit(
+		"Step closer to a Cart, Cart CCTV Monitor, Elevator Button, Deployed Canister, Bench, Sauna, Trader Chen, or Breaker and press [E]! (Use [F] to pick up items.)",
+		Color(0.75, 0.82, 0.9)
+	)
 
 func _build_hud_and_journal() -> void:
 	var canvas := CanvasLayer.new()
@@ -1156,34 +1585,54 @@ func _build_hud_and_journal() -> void:
 	eating_progress_bar.add_theme_stylebox_override("fill", fill_style)
 	eat_vbox.add_child(eating_progress_bar)
 
-	# [P] Co-op Multiplayer & LAN/Tailscale Connection Modal
+	# [P] Co-op Multiplayer & Invite Code Connection Modal
 	coop_menu_panel = PanelContainer.new()
 	coop_menu_panel.set_anchors_preset(Control.PRESET_CENTER)
-	coop_menu_panel.offset_left = -310
-	coop_menu_panel.offset_right = 310
-	coop_menu_panel.offset_top = -185
-	coop_menu_panel.offset_bottom = 185
+	coop_menu_panel.offset_left = -335
+	coop_menu_panel.offset_right = 335
+	coop_menu_panel.offset_top = -235
+	coop_menu_panel.offset_bottom = 235
 	coop_menu_panel.visible = false
 	coop_menu_panel.add_theme_stylebox_override("panel", vm_style)
 	root_ctrl.add_child(coop_menu_panel)
 
 	var cm_vbox := VBoxContainer.new()
-	cm_vbox.add_theme_constant_override("separation", 10)
+	cm_vbox.add_theme_constant_override("separation", 8)
 	coop_menu_panel.add_child(cm_vbox)
 
 	var cm_title := Label.new()
-	cm_title.text = "CO-OP MULTIPLAYER LOBBY [P] — ENET UDP PORT 7777"
+	cm_title.text = "CO-OP MULTIPLAYER LOBBY [P] — INVITE CODES & UPnP"
 	cm_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	cm_title.add_theme_font_size_override("font_size", 18)
 	cm_title.modulate = Color(0.45, 0.96, 1.0)
 	cm_vbox.add_child(cm_title)
 
 	coop_status_lbl = Label.new()
-	coop_status_lbl.text = "Solo / Offline Mode — Press [F8] to Host or [F9] to Join"
+	coop_status_lbl.text = "Your Shareable Invite Code: %s" % MultiplayerManager.active_invite_code
 	coop_status_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	coop_status_lbl.add_theme_font_size_override("font_size", 13)
 	coop_status_lbl.modulate = Color(0.95, 0.85, 0.45)
 	cm_vbox.add_child(coop_status_lbl)
+
+	var code_row := HBoxContainer.new()
+	code_row.alignment = BoxContainer.ALIGNMENT_CENTER
+	code_row.add_theme_constant_override("separation", 10)
+	cm_vbox.add_child(code_row)
+
+	var copy_code_btn := Button.new()
+	copy_code_btn.text = "Copy My Host Invite Code (%s) to Clipboard" % MultiplayerManager.active_invite_code
+	copy_code_btn.custom_minimum_size = Vector2(580, 36)
+	copy_code_btn.modulate = Color(0.55, 1.0, 0.78)
+	copy_code_btn.pressed.connect(func() -> void:
+		DisplayServer.clipboard_set(MultiplayerManager.active_invite_code)
+		GameState.status_message.emit("Copied Invite Code [%s] to clipboard! Send it to your testers to paste in [P]." % MultiplayerManager.active_invite_code, Color(0.4, 1.0, 0.7))
+	)
+	code_row.add_child(copy_code_btn)
+	MultiplayerManager.invite_code_updated.connect(func(new_code: String, detail: String) -> void:
+		copy_code_btn.text = "Copy My Host Invite Code (%s) to Clipboard" % new_code
+		if coop_status_lbl:
+			coop_status_lbl.text = "%s | Code: %s" % [detail, new_code]
+	)
 
 	var ip_row := HBoxContainer.new()
 	ip_row.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -1191,27 +1640,37 @@ func _build_hud_and_journal() -> void:
 	cm_vbox.add_child(ip_row)
 
 	var ip_lbl := Label.new()
-	ip_lbl.text = "Host IP (Local / LAN / Tailscale):"
+	ip_lbl.text = "Enter Invite Code or Host IP:"
 	ip_row.add_child(ip_lbl)
 
 	coop_ip_input = LineEdit.new()
 	coop_ip_input.text = "127.0.0.1"
-	coop_ip_input.placeholder_text = "127.0.0.1 or LAN/Tailscale IP"
-	coop_ip_input.custom_minimum_size = Vector2(240, 34)
+	coop_ip_input.placeholder_text = "MALL-XXXX-XXXX, host:port, or IP"
+	coop_ip_input.custom_minimum_size = Vector2(310, 34)
 	ip_row.add_child(coop_ip_input)
 
 	var host_btn := Button.new()
-	host_btn.text = "[F8]  Host Co-op Server on UDP Port 7777 (Max 4 Investigators)"
-	host_btn.custom_minimum_size = Vector2(560, 40)
+	host_btn.text = "[F8]  Host Co-op Server (Local / LAN / Tailscale — UDP 7777)"
+	host_btn.custom_minimum_size = Vector2(580, 38)
 	host_btn.pressed.connect(func() -> void:
-		MultiplayerManager.host_coop_session()
+		MultiplayerManager.host_coop_session(MultiplayerManager.DEFAULT_PORT, false)
 		toggle_coop_menu(false)
 	)
 	cm_vbox.add_child(host_btn)
 
+	var upnp_host_btn := Button.new()
+	upnp_host_btn.text = "Host + Auto-Open Router Port via UPnP (Zero-Install Internet Co-op)"
+	upnp_host_btn.custom_minimum_size = Vector2(580, 38)
+	upnp_host_btn.modulate = Color(0.55, 0.95, 1.0)
+	upnp_host_btn.pressed.connect(func() -> void:
+		MultiplayerManager.host_coop_session(MultiplayerManager.DEFAULT_PORT, true)
+		toggle_coop_menu(false)
+	)
+	cm_vbox.add_child(upnp_host_btn)
+
 	var join_btn := Button.new()
-	join_btn.text = "[F9]  Join Co-op Server at Host IP above (Port 7777)"
-	join_btn.custom_minimum_size = Vector2(560, 40)
+	join_btn.text = "[F9]  Join Co-op Server using Invite Code / Address above"
+	join_btn.custom_minimum_size = Vector2(580, 38)
 	join_btn.pressed.connect(func() -> void:
 		MultiplayerManager.join_coop_session(coop_ip_input.text)
 		toggle_coop_menu(false)
@@ -1220,7 +1679,7 @@ func _build_hud_and_journal() -> void:
 
 	var disc_btn := Button.new()
 	disc_btn.text = "Disconnect / Return to Solo Mode"
-	disc_btn.custom_minimum_size = Vector2(560, 36)
+	disc_btn.custom_minimum_size = Vector2(580, 34)
 	disc_btn.modulate = Color(1.0, 0.72, 0.55)
 	disc_btn.pressed.connect(func() -> void:
 		MultiplayerManager.disconnect_coop_session()
@@ -1230,9 +1689,222 @@ func _build_hud_and_journal() -> void:
 
 	var close_coop_btn := Button.new()
 	close_coop_btn.text = "[P / Esc] Close Co-op Menu"
-	close_coop_btn.custom_minimum_size = Vector2(560, 34)
+	close_coop_btn.custom_minimum_size = Vector2(580, 32)
 	close_coop_btn.pressed.connect(func() -> void: toggle_coop_menu(false))
 	cm_vbox.add_child(close_coop_btn)
+
+	# Quartermaster Chen — Trader & Upgrade Shop Modal ([F] at Surplus Counter)
+	trader_menu_panel = PanelContainer.new()
+	trader_menu_panel.set_anchors_preset(Control.PRESET_CENTER)
+	trader_menu_panel.offset_left = -390
+	trader_menu_panel.offset_right = 390
+	trader_menu_panel.offset_top = -295
+	trader_menu_panel.offset_bottom = 295
+	trader_menu_panel.visible = false
+	trader_menu_panel.add_theme_stylebox_override("panel", vm_style)
+	root_ctrl.add_child(trader_menu_panel)
+
+	var tr_vbox := VBoxContainer.new()
+	tr_vbox.add_theme_constant_override("separation", 6)
+	trader_menu_panel.add_child(tr_vbox)
+
+	var tr_title := Label.new()
+	tr_title.text = "QUARTERMASTER CHEN — TRADER, EXTRA PUSH CARTS & EQUIPMENT UPGRADES"
+	tr_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	tr_title.add_theme_font_size_override("font_size", 18)
+	tr_title.modulate = Color(0.45, 1.0, 0.72)
+	tr_vbox.add_child(tr_title)
+
+	trader_status_lbl = Label.new()
+	trader_status_lbl.text = "Sell Filled Ectoplasm Canisters & Purchase Extra Push Carts, Surveillance Gear, or Upgrades:"
+	trader_status_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	trader_status_lbl.add_theme_font_size_override("font_size", 13)
+	trader_status_lbl.modulate = Color(1.0, 0.88, 0.42)
+	tr_vbox.add_child(trader_status_lbl)
+
+	trader_buttons.clear()
+	for i in range(10):
+		var t_btn := Button.new()
+		t_btn.custom_minimum_size = Vector2(730, 34)
+		t_btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		t_btn.add_theme_font_size_override("font_size", 13)
+		var opt_idx := i
+		t_btn.pressed.connect(func() -> void: execute_trader_shop_option(opt_idx))
+		tr_vbox.add_child(t_btn)
+		trader_buttons.append(t_btn)
+
+	var close_trader_btn := Button.new()
+	close_trader_btn.text = "[F / Esc] Close Trader Shop"
+	close_trader_btn.custom_minimum_size = Vector2(730, 32)
+	close_trader_btn.modulate = Color(0.85, 0.75, 0.75)
+	close_trader_btn.pressed.connect(func() -> void: toggle_trader_menu(false))
+	tr_vbox.add_child(close_trader_btn)
+
+	if is_instance_valid(campaign_expansion):
+		campaign_expansion.build_briefing_and_endgame_ui(root_ctrl)
+
+func _refresh_trader_menu_ui() -> void:
+	if trader_menu_panel == null or trader_buttons.size() < 10 or not is_instance_valid(player):
+		return
+	var filled_cnt := player.get_carried_filled_canisters_count()
+	var filled_val := player.get_carried_filled_canisters_total_value()
+	var push_cart_cnt := get_tree().get_nodes_in_group("push_carts").size()
+	if trader_status_lbl:
+		trader_status_lbl.text = "Team Cash: $%d | Highest Floor: Floor %d | Push Carts Owned: %d | Mobile Light Cart: 1 (Strictly 1-Per-Team!)" % [
+			GameState.team_cash, GameState.highest_floor_reached, push_cart_cnt
+		]
+
+	# Option 0: [1] Sell Filled Ectoplasm Canisters & Recharge Empty Canisters
+	if filled_cnt > 0:
+		trader_buttons[0].text = "[1]  SELL %d FILLED ECTOPLASM CANISTER(S)  —  Earn +$%d! (Once Full Must Be Sold)" % [filled_cnt, filled_val]
+		trader_buttons[0].modulate = Color(1.0, 0.92, 0.35)
+	else:
+		trader_buttons[0].text = "[1]  Sell Filled Ectoplasm Canisters (None Carried) & Recharge Carried Canisters (FREE)"
+		trader_buttons[0].modulate = Color(0.75, 0.90, 0.82)
+
+	# Option 1: [2] Buy New Empty Ectoplasm Canister ($35)
+	trader_buttons[1].text = "[2]  Buy Empty Ectoplasm Canister ($35)  —  %.0fs Deployed Active Time Limit" % GameState.get_canister_max_deployed_time()
+	trader_buttons[1].modulate = Color(0.45, 1.0, 0.72)
+
+	# Option 2: [3] Buy Heavy-Duty Escalator Relay Fuse Crate ($60)
+	var fuse_done: bool = bool(GameState.powered_circuits.get("EscalatorCircuit_F1_To_F2", false)) and bool(GameState.powered_circuits.get("EscalatorCircuit_F2_To_F3", false))
+	trader_buttons[2].text = "[3]  Buy Escalator Relay Fuse Crate ($60)  —  %s" % ("All Escalators Powered!" if fuse_done else "Powers Escalator Breaker Dais (F1->F2 / F2->F3)")
+	trader_buttons[2].modulate = Color(0.65, 0.75, 0.80) if fuse_done else Color(0.55, 0.95, 1.0)
+
+	# Option 3: [4] Buy Evidence Camera Film Pack (+10 Exposures) ($20)
+	trader_buttons[3].text = "[4]  Buy Camera Film Refill ($20)  —  Refill Photo Camera to 10/10 Exposures (Currently %d/10)" % player.photo_exposures_left
+	trader_buttons[3].modulate = Color(0.75, 0.92, 1.0)
+
+	# Option 4: [5] Upgrade Proton Ray Gun Power Level (Floor 1: Lvl 2 $80 | Floor 2+ Unlock: Lvl 3 $140 | Floor 3+ Unlock: Lvl 4 $220)
+	if GameState.ray_gun_power_level >= 4:
+		trader_buttons[4].text = "[5]  Proton Ray Gun Power Level: MAX LEVEL 4 (185 DPS / 6.5x Wrangle Power)"
+		trader_buttons[4].modulate = Color(0.55, 0.85, 0.65)
+	else:
+		var next_rlvl := GameState.ray_gun_power_level + 1
+		var r_cost := GameState.get_ray_gun_upgrade_cost()
+		var r_req_floor := GameState.get_ray_gun_next_upgrade_required_floor()
+		var r_locked := (GameState.highest_floor_reached < r_req_floor)
+		var dps_preview := 65 if next_rlvl == 2 else (120 if next_rlvl == 3 else 185)
+		if r_locked:
+			trader_buttons[4].text = "[5]  [SAVED FOR FLOOR %d+] Upgrade Proton Ray Gun to Level %d (%d DPS) ($%d) — Reach Floor %d to Unlock!" % [
+				r_req_floor, next_rlvl, dps_preview, r_cost, r_req_floor
+			]
+			trader_buttons[4].modulate = Color(1.0, 0.58, 0.38)
+		else:
+			trader_buttons[4].text = "[5]  Upgrade Proton Ray Gun to Level %d ($%d)  —  Boosts Damage to %d DPS & Stronger Ghost Pull!" % [
+				next_rlvl, r_cost, dps_preview
+			]
+			trader_buttons[4].modulate = Color(0.45, 0.96, 1.0)
+
+	# Option 5: [6] Upgrade Ectoplasm Canister Tech (Floor 1: Lvl 2 $65 [28s] | Floor 2+ Unlock: Lvl 3 $110 [40s + 4.0m Wide Circle])
+	if GameState.canister_upgrade_level >= 3:
+		trader_buttons[5].text = "[6]  Ectoplasm Canister Tech: MAX LEVEL 3 (40s Deployed Limit & 4.0m Wide Circle)"
+		trader_buttons[5].modulate = Color(0.55, 0.85, 0.65)
+	else:
+		var next_clvl := GameState.canister_upgrade_level + 1
+		var c_cost := GameState.get_canister_upgrade_cost()
+		var c_req_floor := GameState.get_canister_next_upgrade_required_floor()
+		var c_locked := (GameState.highest_floor_reached < c_req_floor)
+		var time_preview := 28 if next_clvl == 2 else 40
+		if c_locked:
+			trader_buttons[5].text = "[6]  [SAVED FOR FLOOR %d+] Upgrade Canister Tech to Level %d (%ds Limit + 4.0m Circle) ($%d) — Reach Floor %d!" % [
+				c_req_floor, next_clvl, time_preview, c_cost, c_req_floor
+			]
+			trader_buttons[5].modulate = Color(1.0, 0.58, 0.38)
+		else:
+			trader_buttons[5].text = "[6]  Upgrade Ectoplasm Canister Capacitor to Level %d ($%d)  —  %ds Deployed Active Time & Faster Recharge!" % [
+				next_clvl, c_cost, time_preview
+			]
+			trader_buttons[5].modulate = Color(0.45, 1.0, 0.78)
+
+	# Option 6: [7] Buy Extra 8-Slot Equipment Push Cart ($95) (Mobile Light Cart is strictly 1-per-team!)
+	trader_buttons[6].text = "[7]  Buy Extra 8-Slot Equipment Push Cart ($95)  —  Includes Pusher-Side Monitor & 2 Hooks (Currently %d Owned; Light Cart is Strictly 1)" % push_cart_cnt
+	trader_buttons[6].modulate = Color(0.42, 0.98, 0.85)
+
+	# Option 7: [8] Buy Video Surveillance Rig Kit ($90: IR Video Camera + Tripod Stand)
+	trader_buttons[7].text = "[8]  Buy Video Surveillance Bundle ($90)  —  IR Video Camera + Tripod Stand (Snap Together or Hang on Cart Hook!)"
+	trader_buttons[7].modulate = Color(0.55, 0.95, 1.0)
+
+	# Option 8: [9] Buy Paranormal Audio Recorder + D.O.T.S. Laser Grid Dome ($110)
+	trader_buttons[8].text = "[9]  Buy Audio Recorder + D.O.T.S. Laser Grid Dome ($110)  —  Record/Reverse EVP (+$75) & Project 3D Laser Silhouette"
+	trader_buttons[8].modulate = Color(0.55, 1.0, 0.72)
+
+	# Option 9: [0] Buy Cart Mod & Ward Kit ($85: 2-Cart Tow-Hook + EAS Pedestal Ward + Pink Salt Pouch + Helium Balloon)
+	trader_buttons[9].text = "[0]  Buy Cart Mod & Survival Kit ($85)  —  Deliver 2-Cart Tow-Hook, EAS Ward, Pink Salt & Helium Balloon to Airlock Bay"
+	trader_buttons[9].modulate = Color(1.0, 0.84, 0.45)
+
+func execute_trader_shop_option(idx: int) -> void:
+	if not is_instance_valid(player):
+		return
+	match idx:
+		0: # [1] Sell Filled Canisters & Recharge Carried Empty Canisters
+			var sold := player.sell_all_carried_filled_canisters()
+			player._recharge_carried_canisters(100.0)
+			if sold == 0:
+				GameState.status_message.emit(
+					"Recharged carried Ectoplasm Canisters to 100%! (Capture a ghost in an open canister first to sell a Filled Canister here!)",
+					Color(0.45, 1.0, 0.78)
+				)
+		1: # [2] Buy New Empty Ectoplasm Canister ($35)
+			if GameState.spend_cash(35, "New Empty Ectoplasm Collection Canister"):
+				var new_can := PlayerController.make_item_data("ectoplasm_canister")
+				new_can["deployed_seconds_left"] = GameState.get_canister_max_deployed_time()
+				player.receive_item_from_cart(new_can)
+				GameState.status_message.emit(
+					"Purchased a new Empty Ectoplasm Canister ($35, %.0fs charge)! Set it on the floor [LMB/G] and kick it open [E] to suck a ghost in!" % GameState.get_canister_max_deployed_time(),
+					Color(0.35, 1.0, 0.72)
+				)
+		2: # [3] Buy Escalator Relay Fuse Crate ($60)
+			if not player.is_carrying_item_id("escalator_fuse"):
+				if GameState.spend_cash(60, "Heavy-Duty Escalator Relay Fuse Crate"):
+					player.pickup_item_by_id_into_inventory_or_hands("escalator_fuse")
+					GameState.status_message.emit("Purchased Escalator Relay Fuse Crate (Carried in Hands)! Take it to an Escalator Breaker Dais (F1->F2 or F2->F3).", Color(0.45, 1.0, 0.7))
+			else:
+				GameState.status_message.emit("You are already carrying an Escalator Relay Fuse Crate in your Hands!", Color(0.85, 0.9, 0.95))
+		3: # [4] Buy Camera Film Pack ($20)
+			if GameState.spend_cash(20, "Evidence Camera Film Pack (+10 Exposures)"):
+				player.photo_exposures_left = 10
+				player._refresh_equipped_visuals()
+		4: # [5] Upgrade Proton Ray Gun Power Level (Floor-Gated for Lvl 3 & Lvl 4!)
+			if GameState.upgrade_ray_gun(false):
+				player._refresh_equipped_visuals()
+		5: # [6] Upgrade Ectoplasm Canister Tech (Floor-Gated for Lvl 3!)
+			if GameState.upgrade_canister_tech(false):
+				player._recharge_carried_canisters(100.0)
+				player._refresh_equipped_visuals()
+		6: # [7] Buy Extra 8-Slot Equipment Push Cart ($95) — Mobile Light Cart remains strictly 1!
+			if GameState.spend_cash(95, "Extra 8-Slot Equipment Push Cart (w/ Pusher-Side Monitor)"):
+				var existing_cnt := get_tree().get_nodes_in_group("push_carts").size()
+				var extra_pc := MallCartSystem.new()
+				extra_pc.cart_type = "PushCart"
+				extra_pc.linked_store_id = "West_F1_03" if existing_cnt == 1 else "East_F2_01"
+				extra_pc.position = Vector3(-9.5, 0.0, 1.5 + float(existing_cnt) * 1.8)
+				add_child(extra_pc)
+				GameState.status_message.emit(
+					"Purchased Extra 8-Slot Equipment Push Cart #%d ($95, parked at [%.1f, 0, %.1f] with Pusher-Side Monitor)! Note: The 18,000 lm Mobile Light Cart is strictly 1-per-team." % [
+						existing_cnt + 1, extra_pc.position.x, extra_pc.position.z
+					],
+					Color(0.35, 1.0, 0.82)
+				)
+		7: # [8] Buy Video Surveillance Bundle ($90: IR Video Camera + Camera Tripod Stand)
+			if GameState.spend_cash(90, "Video Surveillance Bundle (IR Video Camera + Tripod Stand)"):
+				player.receive_item_from_cart(PlayerController.make_item_data("video_camera"))
+				if is_instance_valid(campaign_expansion):
+					campaign_expansion.spawn_item_in_delivery_airlock(PlayerController.make_item_data("camera_stand"))
+				GameState.status_message.emit("Purchased Video Surveillance Bundle ($90)! IR Video Camera added to inventory & Tripod Stand delivered to Airlock Bay (-5.5, 0, -18.5)!", Color(0.45, 0.96, 1.0))
+		8: # [9] Buy Paranormal Audio Recorder + D.O.T.S. Laser Grid Dome ($110)
+			if GameState.spend_cash(110, "Paranormal Audio Recorder + D.O.T.S. Laser Grid Dome"):
+				player.receive_item_from_cart(PlayerController.make_item_data("audio_recorder"))
+				player.receive_item_from_cart(PlayerController.make_item_data("laser_grid_dome"))
+				GameState.status_message.emit("Purchased Paranormal Audio Recorder + D.O.T.S. Laser Grid Projector Dome ($110)!", Color(0.45, 1.0, 0.78))
+		9: # [0] Buy Cart Mod & Survival Kit ($85)
+			if GameState.spend_cash(85, "Cart Mod & Survival Kit (Tow-Hook, EAS Ward, Pink Salt, Helium Balloon)"):
+				player.receive_item_from_cart(PlayerController.make_item_data("cart_tow_hook"))
+				if is_instance_valid(campaign_expansion):
+					campaign_expansion.spawn_item_in_delivery_airlock(PlayerController.make_item_data("eas_pedestal_ward"))
+					campaign_expansion.spawn_item_in_delivery_airlock(PlayerController.make_item_data("pink_salt_pouch"))
+					campaign_expansion.spawn_item_in_delivery_airlock(PlayerController.make_item_data("helium_balloon"))
+	_refresh_trader_menu_ui()
 
 func _refresh_hud() -> void:
 	if hud_label == null or not is_instance_valid(player):
@@ -1241,12 +1913,17 @@ func _refresh_hud() -> void:
 	var east_status := store_ghost_east.get_phase_label() if is_instance_valid(store_ghost_east) else "Dormant"
 	var west_tell := store_ghost_west.get_disposition_tell_short() if is_instance_valid(store_ghost_west) else "N/A"
 	var ward_str := ("%.0fs ACTIVE" % player.pink_salt_ward_timer) if player.pink_salt_ward_timer > 0.0 else ("Soul-Anchor Lit" if GameState.sauna_soul_anchor_lit else "Inactive")
-	var freight_str := "ONLINE (Carts on F2)" if GameState.freight_elevator_unlocked_floors.get(2, false) else "OFFLINE (Need Hydraulic Part)"
+	var freight_str := "N/A"
+	if is_instance_valid(freight_elevator):
+		if freight_elevator.is_moving:
+			freight_str = "MOVING (Y=%.1fm)" % freight_elevator.current_cab_y
+		else:
+			freight_str = "DOCKED FLOOR %d [E: UP/DOWN Buttons]" % freight_elevator.current_floor_num
 	var cur_item := player.get_current_active_item()
 
 	hud_label.text = (
 		"[b][color=#66f2ff]MEGAMALL ANOMALY — FLOOR %d (Godot 4.7 Vulkan)[/color][/b]\n" % GameState.current_floor +
-		"[b]Team Cash:[/b] [color=#55ff88]$%d[/color] | [b]Deaths:[/b] %d | [b]F2 Freight Elevator:[/b] %s\n" % [
+		"[b]Team Cash:[/b] [color=#55ff88]$%d[/color] | [b]Deaths:[/b] %d | [b]Service Elevator:[/b] %s\n" % [
 			GameState.team_cash, GameState.total_death_tally, freight_str
 		] +
 		"[b]Vitality:[/b] HP %.0f/100 | Stamina %.0f/100 | [color=#ff99cc]Sauna Ward/Anchor:[/color] %s | [b]View:[/b] %s\n" % [
@@ -1262,7 +1939,7 @@ func _refresh_hud() -> void:
 			light_cart.battery_percent if is_instance_valid(light_cart) else 0.0
 		] +
 		"[b]East_F0_02 (Arthur):[/b] %s | [b]West_F1_03 (Evelyn):[/b] %s\n" % [east_status, west_tell] +
-		"[color=#aaaaaa][1-4/Wheel] Hotbar | [LMB] Gadget ON/OFF | [G] Throw/Drop Active | [E] Light Cart / Mode | [J] Voice Menu | [F] Interact[/color]"
+		"[color=#aaaaaa][LMB] Use/Power | [RMB] Alt/Next Cam/NV | [F] Pick Up Item/Monitor | [G] Drop/Place/Mount | [E] Push/Release Cart & World Interact[/color]"
 	)
 
 	if coop_hud_label:
@@ -1297,7 +1974,7 @@ func _refresh_hud() -> void:
 				MultiplayerManager.connected_peers.size(), MultiplayerManager.MAX_PLAYERS, net_mode
 			] +
 			"\n".join(peer_lines) + "\n" +
-			"[color=#99bbcc][F8] Host Server | [F9] Join 127.0.0.1 | [P] Co-op IP Menu | [V] PTT[/color]"
+			"[color=#99bbcc][F8] Host Server | [F9] Join 127.0.0.1 | [P] Co-op IP Menu | [B] Walkie PTT[/color]"
 		)
 	if eating_bar_panel and eating_progress_bar and eating_bar_label:
 		eating_bar_panel.visible = player.is_eating_meal
@@ -1388,25 +2065,31 @@ func _refresh_hotbar_gui() -> void:
 func _refresh_journal_text() -> void:
 	if journal_text == null:
 		return
-	var ev_east: Array = GameState.store_evidence_ledger.get("East_F0_02", [])
+	var store_order := ["East_F0_02", "West_F1_02", "West_F1_03", "West_F2_01", "East_F2_01", "Center_F3_01"]
+	var store_lines := ""
+	var idx := 1
+	for sid in store_order:
+		var prof: Dictionary = GameState.ghost_profiles.get(sid, {})
+		var ev_list: Array = GameState.store_evidence_ledger.get(sid, [])
+		var ev_str := ", ".join(ev_list) if not ev_list.is_empty() else "Scan with EMF, Therm, Spirit Box, UV, Video Cam, Audio Recorder, SLS/Laser, Barcode, or Parabolic"
+		var is_corr: bool = bool(prof.get("is_corrupted_hostile", false))
+		var disp_str := "[color=#ff5555]CORRUPTED (Hostile-Only — Use Proton Gun + Canister!)[/color]" if is_corr else "[color=#55ff88]RECEPTIVE TO PEACE (+$120 Ritual or Forceful Capture)[/color]"
+		var res_str := str(GameState.resolved_stores.get(sid, "Active Haunting"))
+		store_lines += "[b]%d. %s — %s (%s | Floor %d):[/b]\n   • Evidence: %s\n   • Disposition: %s | Status: [color=#ffe680]%s[/color]\n\n" % [
+			idx, sid, str(prof.get("name", sid)), str(prof.get("title", "Store Ghost")), int(prof.get("floor_level", 1)),
+			ev_str, disp_str, res_str
+		]
+		idx += 1
+
 	var lore_lines := ""
 	for k in GameState.discovered_lore.keys():
 		var item: Dictionary = GameState.discovered_lore[k]
-		lore_lines += "• [b]%s:[/b] %s\n\n" % [item["title"], item["text"]]
+		lore_lines += "• [b]%s:[/b] %s\n" % [item["title"], item["text"]]
 
 	journal_text.text = (
-		"[b][color=#66f2ff]INVESTIGATOR CASE FILE, DUAL RESOLUTION LEDGER & PROGRESSION STATUS[/color][/b]\n" +
+		"[b][color=#66f2ff]INVESTIGATOR CASE FILE, 6-STORE DUAL RESOLUTION LEDGER & 3-FLOOR PROGRESSION[/color][/b]\n" +
 		"==================================================================================\n" +
-		"[b]1. East_F0_02 — Pendelton's Book & Curio Shop (Arthur Pendelton — Onboarding Store):[/b]\n" +
-		"   • Confirmed Evidence: %s | Disposition Tell: [color=#55ff88]RECEPTIVE TO PEACE[/color]\n" % [", ".join(ev_east) if not ev_east.is_empty() else "Scan with EMF [1], UV/Spirit Box 87.9 FM [3], or Ledger [F]"] +
-		"   • Resolution Status: %s\n\n" % GameState.resolved_stores.get("East_F0_02", "Active Haunting (Press [F] at Ledger or speak [9] 'Your shift is over' for +$120 Peaceful Resolution)") +
-		"[b]2. West_F1_03 — Sheer Terror Hosiery (Static Evelyn — Rolled Per Run):[/b]\n" +
-		"   • Rolled Disposition Tell: %s\n" % ("[color=#ff5555]CORRUPTED (Hostile-Only — Peaceful Ritual Triggers ENRAGED HUNT! Pick up Proton Gun [F] + Canister Trap!)[/color]" if store_ghost_west.is_corrupted_hostile else "[color=#55ff88]RECEPTIVE TO PEACE (Can resolve peacefully with [F] or forcefully with Proton Gun)[/color]") +
-		"   • Resolution Status: %s\n\n" % GameState.resolved_stores.get("West_F1_03", "Active Haunting") +
-		"[b]3. 4-Slot Hotbar + Hands (Pseudo-5th Slot) & Death Inventory Crate Rules:[/b]\n" +
-		"   • Dying packs all your items into a [b]Death Inventory Crate[/b] (unusable until opened; carried in Hands [F]).\n" +
-		"   • Opening the crate ([LMB] or [E]) spills all stored items onto the floor near where it was opened to prevent overriding your 4-slot hotbar.\n" +
-		"   • Switching to [1-4] while holding an item in Hands drops the hand item if you have no empty slot for it.\n\n" +
+		store_lines +
 		"[b][color=#ffe680]DISCOVERED HIDDEN LORE & ELENA VANCE AUDIT TRAIL (%d/%d):[/color][/b]\n%s" % [
 			GameState.discovered_lore.size(), GameState.lore_catalog.size(), lore_lines
 		]
@@ -1431,10 +2114,7 @@ func _create_static_box(parent: Node3D, pos: Vector3, size: Vector3, color: Colo
 	var box := BoxMesh.new()
 	box.size = size
 	mi.mesh = box
-	var mat := StandardMaterial3D.new()
-	mat.albedo_color = color
-	mat.roughness = roughness
-	mi.material_override = mat
+	mi.material_override = MallPbrMaterialLibrary.get_smart_box_material(size, color, roughness)
 	sb.add_child(mi)
 	parent.add_child(sb)
 	return sb
@@ -1458,6 +2138,7 @@ func _spawn_model_or_box(res_path: String, pos: Vector3, fallback_size: Vector3,
 		var packed := load(res_path) as PackedScene
 		if packed:
 			var inst := packed.instantiate()
+			MallPbrMaterialLibrary.beautify_model_materials(inst, res_path, fallback_color)
 			root.add_child(inst)
 			return root
 
@@ -1466,9 +2147,7 @@ func _spawn_model_or_box(res_path: String, pos: Vector3, fallback_size: Vector3,
 	box.size = fallback_size
 	mi.mesh = box
 	mi.position = Vector3(0, fallback_size.y * 0.5, 0)
-	var mat := StandardMaterial3D.new()
-	mat.albedo_color = fallback_color
-	mi.material_override = mat
+	mi.material_override = MallPbrMaterialLibrary.get_smart_box_material(fallback_size, fallback_color, 0.45)
 	root.add_child(mi)
 	return root
 
@@ -1476,9 +2155,11 @@ func _create_floating_label(pos: Vector3, text: String, color: Color) -> Label3D
 	var lbl := Label3D.new()
 	lbl.position = pos
 	lbl.text = text
-	lbl.modulate = color
+	lbl.modulate = color.lerp(Color(0.96, 0.94, 0.88), 0.35)
 	lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	lbl.font_size = 26
-	lbl.outline_size = 7
+	lbl.font_size = 20
+	lbl.outline_size = 5
+	lbl.visibility_range_end = 13.5
+	lbl.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
 	add_child(lbl)
 	return lbl

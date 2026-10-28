@@ -32,21 +32,118 @@ var bar_fill_mat: StandardMaterial3D = null
 var proton_beam_mesh: MeshInstance3D = null
 var proton_beam_mat: StandardMaterial3D = null
 
+## Handheld Video Camera (Slot 9) Flip-Out Side LCD Screen + Dedicated Zero-Light SubViewport
+var handheld_cam_viewport: SubViewport = null
+var handheld_cam_3d: Camera3D = null
+var handheld_cam_attrs: CameraAttributesPractical = null
+var handheld_lcd_shader_mat: ShaderMaterial = null
+var handheld_side_label: Label3D = null
+
 func setup_for_slot(slot: int, model_path: String) -> void:
 	slot_index = slot
 	for c in get_children():
 		c.queue_free()
 	emf_led_meshes.clear()
 	emf_led_mats.clear()
+	handheld_cam_viewport = null
+	handheld_cam_3d = null
+	handheld_cam_attrs = null
+	handheld_lcd_shader_mat = null
+	handheld_side_label = null
 
 	device_model_root = Node3D.new()
 	add_child(device_model_root)
 
-	if ResourceLoader.exists(model_path):
+	if slot == 9:
+		# Build the exact same Camcorder + Flip-Out Side LCD Screen as PlacedVideoCameraActor,
+		# squared straight with the player's view and scaled/positioned to take ~1.8x screen space!
+		device_model_root.position = Vector3(-0.02, 0.09, 0.10)
+		device_model_root.rotation_degrees = Vector3.ZERO
+		device_model_root.scale = Vector3(1.48, 1.48, 1.48)
+
+		handheld_cam_viewport = SubViewport.new()
+		handheld_cam_viewport.name = "HandheldCamSideLCDViewport"
+		handheld_cam_viewport.size = Vector2i(320, 200)
+		handheld_cam_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
+		handheld_cam_viewport.handle_input_locally = false
+		add_child(handheld_cam_viewport)
+
+		handheld_cam_3d = Camera3D.new()
+		handheld_cam_3d.fov = 76.0
+		handheld_cam_3d.near = 0.08
+		handheld_cam_3d.far = 90.0
+		handheld_cam_3d.current = true
+		handheld_cam_attrs = CameraAttributesPractical.new()
+		handheld_cam_attrs.exposure_multiplier = 4.8
+		handheld_cam_3d.attributes = handheld_cam_attrs
+		handheld_cam_viewport.add_child(handheld_cam_3d)
+
+		var parts := VideoAndAudioSurveillance.build_camcorder_mesh_hierarchy(device_model_root, true, true)
+		handheld_lcd_shader_mat = parts.get("lcd_shader_mat") as ShaderMaterial
+		var lcd_frame := parts.get("lcd_frame") as Node3D
+		if lcd_frame:
+			# Keep the flip-out side LCD screen 100% squared with the direction the player is looking!
+			lcd_frame.position = Vector3(-0.145, 0.015, 0.03)
+			lcd_frame.rotation_degrees = Vector3.ZERO
+			handheld_side_label = Label3D.new()
+			handheld_side_label.position = Vector3(0.0, -0.058, 0.012)
+			handheld_side_label.font_size = 12
+			handheld_side_label.outline_size = 4
+			handheld_side_label.pixel_size = 0.00070
+			handheld_side_label.modulate = Color(0.88, 0.92, 0.96)
+			handheld_side_label.text = "B&W NIGHT-VISION [LMB:ON/OFF | RMB:NV]"
+			lcd_frame.add_child(handheld_side_label)
+		if handheld_lcd_shader_mat and handheld_cam_viewport:
+			VideoAndAudioSurveillance.update_camera_screen_shader_material(
+				handheld_lcd_shader_mat, handheld_cam_viewport.get_texture(), true, true
+			)
+	elif slot == 10:
+		# Portable Widescreen CCTV Camera Monitor (Hands-Only Item) squared with player view at ~1.8x screen space!
+		device_model_root.position = Vector3(-0.18, 0.10, 0.08)
+		device_model_root.rotation_degrees = Vector3.ZERO
+		device_model_root.scale = Vector3(1.48, 1.48, 1.48)
+
+		handheld_cam_viewport = SubViewport.new()
+		handheld_cam_viewport.name = "PortableCCTVMonitorViewport"
+		handheld_cam_viewport.size = Vector2i(384, 216)
+		handheld_cam_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
+		handheld_cam_viewport.handle_input_locally = false
+		add_child(handheld_cam_viewport)
+
+		handheld_cam_3d = Camera3D.new()
+		handheld_cam_3d.fov = 78.0
+		handheld_cam_3d.near = 0.08
+		handheld_cam_3d.far = 110.0
+		handheld_cam_3d.current = true
+		handheld_cam_attrs = CameraAttributesPractical.new()
+		handheld_cam_attrs.exposure_multiplier = 4.8
+		handheld_cam_3d.attributes = handheld_cam_attrs
+		handheld_cam_viewport.add_child(handheld_cam_3d)
+
+		var mon_parts := VideoAndAudioSurveillance.build_portable_cctv_monitor_mesh(device_model_root, true)
+		handheld_lcd_shader_mat = mon_parts.get("screen_shader_mat") as ShaderMaterial
+		handheld_side_label = Label3D.new()
+		handheld_side_label.position = Vector3(0.0, -0.095, 0.022)
+		handheld_side_label.font_size = 12
+		handheld_side_label.outline_size = 4
+		handheld_side_label.pixel_size = 0.00068
+		handheld_side_label.modulate = Color(0.88, 0.94, 1.0)
+		handheld_side_label.text = "CCTV MONITOR [LMB:ON/OFF | RMB:NEXT CAM | G:PUT DOWN]"
+		device_model_root.add_child(handheld_side_label)
+		if handheld_lcd_shader_mat and handheld_cam_viewport:
+			VideoAndAudioSurveillance.update_camera_screen_shader_material(
+				handheld_lcd_shader_mat, handheld_cam_viewport.get_texture(), false, true
+			)
+	elif ResourceLoader.exists(model_path):
 		var packed := load(model_path) as PackedScene
 		if packed:
 			var inst := packed.instantiate()
-			inst.scale = Vector3(0.82, 0.82, 0.82)
+			if slot == 4:
+				device_model_root.position = Vector3(-0.04, 0.06, 0.08)
+				device_model_root.rotation_degrees = Vector3.ZERO
+				inst.scale = Vector3(1.32, 1.32, 1.32)
+			else:
+				inst.scale = Vector3(0.82, 0.82, 0.82)
 			device_model_root.add_child(inst)
 
 	# Backlit diegetic 3D LCD display panel facing the player's eyes
@@ -62,6 +159,7 @@ func setup_for_slot(slot: int, model_path: String) -> void:
 	lcd_screen_mat.emission = Color(0.05, 0.18, 0.24)
 	lcd_screen_mat.emission_energy_multiplier = 1.4
 	lcd_screen_mesh.material_override = lcd_screen_mat
+	lcd_screen_mesh.visible = (slot != 9 and slot != 10)
 	add_child(lcd_screen_mesh)
 
 	lcd_label = Label3D.new()
@@ -112,23 +210,24 @@ func setup_for_slot(slot: int, model_path: String) -> void:
 	bar_fill_mesh.material_override = bar_fill_mat
 	lcd_screen_mesh.add_child(bar_fill_mesh)
 
-	# Subtle hand-illuminating status OmniLight3D
+	# Subtle hand-illuminating status OmniLight3D (strictly 0.0 for Video Camera Slot 9 & CCTV Monitor Slot 10 so they emit zero world light!)
 	status_omni = OmniLight3D.new()
 	status_omni.position = Vector3(-0.02, 0.09, 0.10)
 	status_omni.omni_range = 1.4
-	status_omni.light_energy = 0.35
+	status_omni.light_energy = 0.0 if (slot == 9 or slot == 10) else 0.35
 	status_omni.light_color = Color(0.3, 0.95, 0.5)
 	add_child(status_omni)
 
-	# Proton Ray Gun 3D Containment Stream (hidden unless firing)
+	# Proton Ray Gun 3D Containment Stream (hidden unless firing; unit height 1.0 scaled dynamically to track target!)
 	proton_beam_mesh = MeshInstance3D.new()
 	var cyl := CylinderMesh.new()
 	cyl.top_radius = 0.022
 	cyl.bottom_radius = 0.035
-	cyl.height = 7.5
+	cyl.height = 1.0
 	proton_beam_mesh.mesh = cyl
 	proton_beam_mesh.position = Vector3(0.0, 0.02, -3.85)
 	proton_beam_mesh.rotation_degrees = Vector3(90.0, 0.0, 0.0)
+	proton_beam_mesh.scale = Vector3(1.0, 7.5, 1.0)
 	proton_beam_mat = StandardMaterial3D.new()
 	proton_beam_mat.albedo_color = Color(1.0, 0.38, 0.15)
 	proton_beam_mat.emission_enabled = true
@@ -162,13 +261,111 @@ func update_indicators(
 	proton_heat: float,
 	proton_firing: bool,
 	ghost_weakened_pct: float,
-	is_powered_on: bool = true
+	is_powered_on: bool = true,
+	beam_track_world_pos: Vector3 = Vector3.ZERO,
+	ghost_hp_summary: String = "",
+	canister_radius_m: float = 2.2,
+	canister_charge_sec: float = 18.0,
+	filled_canister_label: String = "",
+	video_cam_nv_on: bool = true,
+	cctv_cam_idx: int = 0
 ) -> void:
+	if active_slot == 9:
+		if lcd_screen_mesh:
+			lcd_screen_mesh.visible = false
+		if status_omni:
+			status_omni.light_energy = 0.0
+		if handheld_cam_viewport and handheld_cam_3d and device_model_root and is_inside_tree():
+			var root_vp := get_viewport()
+			if root_vp != null and root_vp.world_3d != null and handheld_cam_viewport.world_3d != root_vp.world_3d:
+				handheld_cam_viewport.world_3d = root_vp.world_3d
+			handheld_cam_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS if is_powered_on else SubViewport.UPDATE_DISABLED
+			handheld_cam_3d.global_position = device_model_root.to_global(Vector3(0.0, 0.02, -0.28))
+			handheld_cam_3d.global_basis = global_transform.basis
+			if handheld_cam_attrs:
+				handheld_cam_attrs.exposure_multiplier = 4.8 if (is_powered_on and video_cam_nv_on) else 1.15
+			if handheld_lcd_shader_mat:
+				VideoAndAudioSurveillance.update_camera_screen_shader_material(
+					handheld_lcd_shader_mat, handheld_cam_viewport.get_texture(), is_powered_on, video_cam_nv_on
+				)
+		if handheld_side_label:
+			if not is_powered_on:
+				handheld_side_label.text = "CAM OFF [LMB: Turn ON | G: Place]"
+				handheld_side_label.modulate = Color(0.55, 0.60, 0.68)
+			elif video_cam_nv_on:
+				handheld_side_label.text = "NIGHT-VISION B&W [RMB: Color | G: Place]"
+				handheld_side_label.modulate = Color(0.90, 0.94, 0.98)
+			else:
+				handheld_side_label.text = "COLOR MODE [RMB: Night-Vision | G: Place]"
+				handheld_side_label.modulate = Color(0.85, 0.90, 0.96)
+		return
+	elif active_slot == 10:
+		if lcd_screen_mesh:
+			lcd_screen_mesh.visible = false
+		if status_omni:
+			status_omni.light_energy = 0.0
+		var cams := VideoAndAudioSurveillance.get_placed_cameras_sorted(get_tree()) if is_inside_tree() else []
+		if handheld_cam_viewport and handheld_cam_3d and is_inside_tree():
+			var root_vp2 := get_viewport()
+			if root_vp2 != null and root_vp2.world_3d != null and handheld_cam_viewport.world_3d != root_vp2.world_3d:
+				handheld_cam_viewport.world_3d = root_vp2.world_3d
+			if not is_powered_on or cams.is_empty():
+				handheld_cam_viewport.render_target_update_mode = SubViewport.UPDATE_DISABLED
+				if handheld_lcd_shader_mat:
+					VideoAndAudioSurveillance.update_camera_screen_shader_material(
+						handheld_lcd_shader_mat, handheld_cam_viewport.get_texture(), false, true
+					)
+				if handheld_side_label:
+					if not is_powered_on:
+						handheld_side_label.text = "MONITOR OFF [LMB: Turn ON | G: Put Down]"
+						handheld_side_label.modulate = Color(0.55, 0.60, 0.68)
+					else:
+						handheld_side_label.text = "NO CAMERAS DEPLOYED [Place Video Cam with G]"
+						handheld_side_label.modulate = Color(0.78, 0.85, 0.95)
+			else:
+				var sel_idx := posmod(cctv_cam_idx, cams.size())
+				var sel_cam := cams[sel_idx]
+				var feed_on := (sel_cam != null and sel_cam.is_powered_on)
+				var feed_nv := (sel_cam != null and sel_cam.ir_night_vision_on)
+				handheld_cam_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS if feed_on else SubViewport.UPDATE_DISABLED
+				if sel_cam != null and sel_cam.head_pivot != null:
+					handheld_cam_3d.global_position = sel_cam.head_pivot.to_global(Vector3(0.0, 0.02, -0.26))
+					handheld_cam_3d.global_basis = sel_cam.head_pivot.global_transform.basis
+				if handheld_cam_attrs:
+					handheld_cam_attrs.exposure_multiplier = 4.8 if (feed_on and feed_nv) else 1.15
+				if handheld_lcd_shader_mat:
+					VideoAndAudioSurveillance.update_camera_screen_shader_material(
+						handheld_lcd_shader_mat, handheld_cam_viewport.get_texture(), feed_on, feed_nv
+					)
+				if handheld_side_label and sel_cam != null:
+					var mode_tag := "OFF" if not feed_on else ("B&W NV" if feed_nv else "COLOR")
+					handheld_side_label.text = "CAM %02d [%s | %s] (%d/%d) | [LMB] ON/OFF | [RMB] Next Cam | [G] Put Down" % [
+						sel_cam.camera_index, sel_cam.store_id, mode_tag, sel_idx + 1, cams.size()
+					]
+					handheld_side_label.modulate = Color(0.92, 0.96, 1.0)
+		return
 	proton_beam_mesh.visible = (active_slot == 6 and proton_firing)
 	if proton_beam_mesh.visible:
-		# Wobble & pulse the proton stream
-		var jitter := randf_range(-0.025, 0.025)
-		proton_beam_mesh.position.x = jitter
+		# Wobble & pulse the proton stream, and dynamically track locked ghost movement!
+		var jitter := randf_range(-0.022, 0.022)
+		if beam_track_world_pos != Vector3.ZERO and is_inside_tree():
+			var nozzle_local := Vector3(0.0, 0.02, -0.12)
+			var target_local := to_local(beam_track_world_pos)
+			var span := target_local - nozzle_local
+			var dist := clampf(span.length(), 0.45, 10.5)
+			var dir := span.normalized()
+			var up_axis := dir
+			var right_axis := up_axis.cross(Vector3.UP)
+			if right_axis.length_squared() < 0.001:
+				right_axis = up_axis.cross(Vector3.RIGHT)
+			right_axis = right_axis.normalized()
+			var fwd_axis := right_axis.cross(up_axis).normalized()
+			proton_beam_mesh.transform.basis = Basis(right_axis, up_axis, fwd_axis).scaled(Vector3(1.0, dist, 1.0))
+			proton_beam_mesh.position = nozzle_local + span * 0.5 + Vector3(jitter, jitter * 0.5, 0.0)
+		else:
+			proton_beam_mesh.rotation_degrees = Vector3(90.0, 0.0, 0.0)
+			proton_beam_mesh.scale = Vector3(1.0, 7.5, 1.0)
+			proton_beam_mesh.position = Vector3(jitter, 0.02, -3.85)
 		proton_beam_mat.emission = Color(1.0, 0.35, 0.15) if randf() < 0.45 else Color(0.2, 0.9, 1.0)
 
 	# If an electronic gadget (EMF Reader, Thermal Scanner, Spirit Box, UV Blacklight) is powered OFF:
@@ -254,11 +451,29 @@ func update_indicators(
 			status_omni.light_color = rem_col
 			bar_fill_mesh.scale.x = 0.85
 			bar_fill_mat.emission = rem_col
-		6: # Separate Tool #7: Proton Ray Gun + Ectoplasm Canister
-			lcd_label.text = "PROTON HEAT: %.0f%%" % proton_heat
-			sub_label.text = "WEAKENED: %.0f%% [E: TRAP]" % ghost_weakened_pct
+		6: # Separate Tool #7: Proton Ray Gun (Deals HP Damage, Slows, Tracks & Wrangles Ghosts)
+			var r_lvl: int = GameState.ray_gun_power_level if "ray_gun_power_level" in GameState else 1
+			lcd_label.text = "RAY LVL %d | HEAT %.0f%%" % [r_lvl, proton_heat]
+			sub_label.text = ghost_hp_summary if not ghost_hp_summary.is_empty() else ("WEAK: %.0f%% [E: PULL/PUSH]" % ghost_weakened_pct)
 			var p_col := Color(1.0, 0.3, 0.2) if proton_heat > 75.0 else Color(0.3, 0.95, 1.0)
 			lcd_label.modulate = p_col
 			status_omni.light_color = p_col
 			bar_fill_mesh.scale.x = clampf(proton_heat / 100.0, 0.05, 1.0)
 			bar_fill_mat.emission = p_col
+		7: # Separate Tool #8: Empty Ectoplasm Collection Canister (Rechargeable & Deployable Floor Trap)
+			var max_t: float = GameState.get_canister_max_deployed_time() if GameState.has_method("get_canister_max_deployed_time") else 18.0
+			lcd_label.text = "CHG %.0fs/%.0fs | R %.1fm" % [canister_charge_sec, max_t, canister_radius_m]
+			sub_label.text = "[LMB/G] SET FLOOR | [E] SIZE"
+			var c_col := Color(0.35, 1.0, 0.65) if canister_charge_sec >= max_t * 0.95 else Color(0.95, 0.82, 0.32)
+			lcd_label.modulate = c_col
+			status_omni.light_color = c_col
+			bar_fill_mesh.scale.x = clampf(canister_charge_sec / maxf(max_t, 1.0), 0.08, 1.0)
+			bar_fill_mat.emission = c_col
+		8: # Filled Ectoplasm Canister (Once Full Must Be Sold to Trader Chen!)
+			lcd_label.text = filled_canister_label if not filled_canister_label.is_empty() else "CANISTER FULL!"
+			sub_label.text = "SELL AT TRADER CHEN [F]!"
+			var f_col := Color(1.0, 0.88, 0.28)
+			lcd_label.modulate = f_col
+			status_omni.light_color = f_col
+			bar_fill_mesh.scale.x = 1.0
+			bar_fill_mat.emission = f_col

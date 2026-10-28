@@ -28,6 +28,10 @@ signal prop_disturbed(store_id: String, world_pos: Vector3)
 @export var max_outside_pursuit_duration: float = 6.0
 @export var max_outside_pursuit_distance: float = 10.0
 @export var hunt_speed: float = 1.80
+@export var ghost_weight: float = 4.5
+@export var max_ghost_hp: float = 850.0
+@export var hp_regen_per_second: float = 3.5
+@export var regen_delay_after_beam: float = 3.5
 @export var is_corrupted_hostile: bool = false
 @export var required_spirit_freq: float = 87.9
 
@@ -41,7 +45,14 @@ var is_retreating_to_store: bool = false
 var is_blocked_by_light_circle_edge: bool = false
 var current_emf_level: int = 2
 var local_temperature_c: float = 4.5
+var ghost_hp: float = 850.0
 var weakened_percent: float = 0.0
+var _beamed_timer: float = 0.0
+var _regen_delay_timer: float = 0.0
+var _wrangle_target: Vector3 = Vector3.ZERO
+var _wrangle_pull_speed: float = 0.0
+var _last_ray_power: float = 1.0
+var _evade_phase: float = 0.0
 var is_resolved: bool = false
 var is_enraged: bool = false
 var _hover_phase: float = 0.0
@@ -65,6 +76,9 @@ func _ready() -> void:
 		if not prof.is_empty():
 			ghost_name = "%s (%s)" % [prof.get("name", "Entity"), prof.get("title", "Store Ghost")]
 			floor_level = int(prof.get("floor_level", floor_level))
+			ghost_weight = float(prof.get("ghost_weight", 5.5 if floor_level >= 2 else 4.5))
+			max_ghost_hp = float(prof.get("max_ghost_hp", 1100.0 if floor_level >= 2 else 850.0))
+			hp_regen_per_second = float(prof.get("hp_regen_per_second", 5.0 if floor_level >= 2 else 3.5))
 			can_briefly_pursue_outside_store = bool(prof.get("can_briefly_pursue_outside_store", floor_level >= 2))
 			if prof.has("territory_aabb"):
 				store_territory_aabb = prof["territory_aabb"]
@@ -72,6 +86,8 @@ func _ready() -> void:
 			required_spirit_freq = prof.get("spirit_box_channel", 87.9)
 	else:
 		can_briefly_pursue_outside_store = (floor_level >= 2)
+		max_ghost_hp = 1100.0 if floor_level >= 2 else 850.0
+	ghost_hp = max_ghost_hp
 
 	_build_ghost_character_visuals()
 	_setup_ghost_audio()
@@ -107,7 +123,7 @@ func _build_ghost_character_visuals() -> void:
 	overhead_label.font_size = 22
 	overhead_label.outline_size = 6
 	var territory_tag := "Upper-Floor Brief Pursuit (6s)" if can_briefly_pursue_outside_store else "Store Territory Bound"
-	overhead_label.text = "%s\n[%s]" % [ghost_name, territory_tag]
+	overhead_label.text = "%s\n[HP: %.0f / %.0f | Wt: %.1f | %s]" % [ghost_name, ghost_hp, max_ghost_hp, ghost_weight, territory_tag]
 	overhead_label.modulate = Color(1.0, 0.4, 0.4) if is_corrupted_hostile else Color(0.5, 0.95, 1.0)
 	visual_root.add_child(overhead_label)
 
@@ -194,9 +210,25 @@ func _physics_process(delta: float) -> void:
 		_sync_ghost_to_clients(delta)
 		return
 
-	phase_timer += delta
-	if phase_timer >= phase_duration:
-		_advance_phase()
+	if _beamed_timer > 0.0:
+		_beamed_timer = maxf(0.0, _beamed_timer - delta)
+		visual_root.visible = true
+	else:
+		if _regen_delay_timer > 0.0:
+			_regen_delay_timer = maxf(0.0, _regen_delay_timer - delta)
+		elif ghost_hp < max_ghost_hp:
+			ghost_hp = minf(max_ghost_hp, ghost_hp + hp_regen_per_second * delta)
+			weakened_percent = clampf((1.0 - (ghost_hp / maxf(max_ghost_hp, 1.0))) * 100.0, 0.0, 100.0)
+
+	# Keep ghost visible and prevent phase-transition vanishing while weakened or actively being beamed!
+	var is_at_catch_health := (ghost_hp <= max_ghost_hp * 0.20 or weakened_percent >= 80.0)
+	if is_at_catch_health or _regen_delay_timer > 0.0:
+		visual_root.visible = true
+
+	if _beamed_timer <= 0.0 and not is_at_catch_health:
+		phase_timer += delta
+		if phase_timer >= phase_duration:
+			_advance_phase()
 
 	match current_phase:
 		GhostPhase.INITIAL_ACTIVITY:
@@ -207,6 +239,11 @@ func _physics_process(delta: float) -> void:
 			_tick_visible_hunt(delta)
 		GhostPhase.COOLDOWN:
 			_tick_cooldown(delta)
+
+	# When beamed during non-hunt phases, the ghost is allowed to move around on its own a little
+	# while simultaneously being pulled/wrangled by the Proton Ray Gun toward `_wrangle_target`!
+	if _beamed_timer > 0.0 and current_phase != GhostPhase.VISIBLE_HUNT:
+		_tick_beamed_autonomous_and_wrangle_motion(delta)
 
 	_sync_ghost_to_clients(delta)
 
@@ -279,12 +316,14 @@ func _enter_phase(next_phase: GhostPhase) -> void:
 			current_emf_level = 3
 			local_temperature_c = -1.8
 			_set_store_lights_override(false, 1.0, 0.0)
+			_set_store_shutters_locked(false)
 		GhostPhase.VISIBLE_WARNING:
 			phase_duration = 3.0
 			visual_root.visible = true
 			current_emf_level = 4
 			local_temperature_c = -4.2
 			_set_store_lights_override(true, 0.10, 0.35)
+			_set_store_shutters_locked(false)
 			if ghost_audio and ghost_audio.stream:
 				ghost_audio.play()
 			ghost_manifested_event.emit(store_id, global_position)
@@ -296,21 +335,23 @@ func _enter_phase(next_phase: GhostPhase) -> void:
 			current_emf_level = 5
 			local_temperature_c = -6.8
 			_set_store_lights_override(true, 0.0, 0.0)
+			_set_store_shutters_locked(true)
 			var growl_path := "res://SourceAssets/GhostSounds/SW_Ghost_HuntGrowl.wav"
 			if ResourceLoader.exists(growl_path):
 				ghost_audio.stream = load(growl_path)
 				ghost_audio.play()
-			GameState.status_message.emit("LETHAL HUNT ACTIVE (20s): %s is hunting in [%s]!" % [ghost_name, store_id], Color(1.0, 0.25, 0.25))
+			GameState.status_message.emit("LETHAL HUNT ACTIVE (20s): %s is hunting in [%s] — STORE SHUTTERS LOCKED!" % [ghost_name, store_id], Color(1.0, 0.25, 0.25))
 		GhostPhase.COOLDOWN:
 			phase_duration = randf_range(35.0, 50.0)
-			visual_root.visible = false
+			visual_root.visible = (ghost_hp < max_ghost_hp * 0.85 or _beamed_timer > 0.0 or _regen_delay_timer > 0.0)
 			is_enraged = false
 			current_outside_pursuit_timer = 0.0
 			is_retreating_to_store = false
 			current_emf_level = 2
 			local_temperature_c = 5.5
 			_set_store_lights_override(false, 1.0, 0.0)
-			global_position = home_position
+			_set_store_shutters_locked(false)
+			# Never teleport `global_position = home_position`! The ghost stays at its current position and walks back smoothly if healthy.
 
 	phase_changed.emit(store_id, current_phase, get_phase_label())
 
@@ -332,11 +373,77 @@ func _tick_initial_activity(delta: float) -> void:
 		current_emf_level = 5
 		prop_disturbed.emit(store_id, global_position)
 
-func _tick_visible_warning(_delta: float) -> void:
-	pass
+func _tick_visible_warning(delta: float) -> void:
+	if store_id == "West_F1_03":
+		for cart in get_tree().get_nodes_in_group("light_carts"):
+			var lc := cart as MallCartSystem
+			if lc and lc.is_floodlight_on and global_position.distance_to(lc.global_position) <= 18.0:
+				lc.battery_percent = maxf(0.0, lc.battery_percent - 0.38 * delta)
+
+## Moves the ghost around on its own a little (autonomous evasive weave) while also applying the Proton Ray Gun's
+## wrangling pull/push force toward `_wrangle_target` so the player can herd the ghost into a deployed Ectoplasm Canister!
+func _tick_beamed_autonomous_and_wrangle_motion(delta: float) -> void:
+	_evade_phase += delta * 2.85
+	var autonomous_dir := Vector3(cos(_evade_phase * 1.15), 0.0, sin(_evade_phase * 1.65)).normalized()
+	var autonomous_speed := lerpf(1.45, 0.65, weakened_percent / 100.0)
+	var autonomous_step := autonomous_dir * autonomous_speed * delta
+
+	var wrangle_step := Vector3.ZERO
+	var to_tether := _wrangle_target - global_position
+	to_tether.y = 0.0
+	if to_tether.length() > 0.15:
+		wrangle_step = to_tether.normalized() * minf(_wrangle_pull_speed * delta, to_tether.length())
+
+	var candidate_pos := global_position + autonomous_step + wrangle_step
+	if not can_briefly_pursue_outside_store:
+		candidate_pos = clamp_point_to_store_territory(candidate_pos)
+
+	for cart in get_tree().get_nodes_in_group("light_carts"):
+		var lc := cart as MallCartSystem
+		if lc and lc.is_light_circle_active():
+			var block_res := lc.block_ghost_at_circle_edge(global_position, candidate_pos, 0.38)
+			if block_res.get("blocked", false):
+				candidate_pos = block_res["position"]
+				if not can_briefly_pursue_outside_store:
+					candidate_pos = clamp_point_to_store_territory(candidate_pos)
+
+	var actual_move := candidate_pos - global_position
+	actual_move.y = 0.0
+	if actual_move.length() > 0.002:
+		velocity = actual_move / maxf(delta, 0.001)
+		look_at(global_position + actual_move.normalized(), Vector3.UP)
+		move_and_slide()
+		if not can_briefly_pursue_outside_store:
+			global_position = clamp_point_to_store_territory(global_position)
+		_enforce_light_cart_circle_exclusion()
 
 func _tick_visible_hunt(delta: float) -> void:
 	var active_speed := (hunt_speed * 1.32) if is_enraged else hunt_speed
+	# Signature Twist — West_F1_02 (The Display Coordinator): Hunts 25% faster under 100% full bright store lights, calms at 45% Gray-Space Dim!
+	if store_id == "West_F1_02":
+		var store_full_bright := false
+		for node in get_tree().get_nodes_in_group("mall_light_fixtures"):
+			var fix := node as MallLightFixture
+			if fix and fix.store_id == store_id and int(fix.current_mode) == 0:
+				store_full_bright = true
+				break
+		active_speed *= (1.25 if store_full_bright else 0.88)
+	# Signature Twist — West_F1_03 (Static Evelyn): Drains nearby Mobile Light Cart battery 35% faster during hunts!
+	elif store_id == "West_F1_03":
+		for cart in get_tree().get_nodes_in_group("light_carts"):
+			var lc := cart as MallCartSystem
+			if lc and lc.is_floodlight_on and global_position.distance_to(lc.global_position) <= 18.0:
+				lc.battery_percent = maxf(0.0, lc.battery_percent - 0.38 * delta)
+
+	var is_at_catch_hp := (ghost_hp <= max_ghost_hp * 0.15 or weakened_percent >= 85.0)
+	if _beamed_timer > 0.0:
+		# The Proton Ray Gun ALWAYS slows the ghost down (-56% movement speed minimum, more at higher Ray Gun power levels)
+		var power_ratio := clampf(_last_ray_power / maxf(ghost_weight, 0.5), 0.22, 2.0)
+		var slow_mult := clampf(0.44 - (power_ratio - 0.22) * 0.12, 0.28, 0.44)
+		active_speed *= slow_mult
+	elif is_at_catch_hp:
+		# While weakened down to catch health, the Store Ghost stays groggy and slow so it doesn't sprint away
+		active_speed *= 0.28
 
 	# Check if an upper-floor ghost is currently outside its store territory
 	var currently_outside_store := not is_point_in_store_territory(global_position, 0.05)
@@ -405,6 +512,11 @@ func _tick_visible_hunt(delta: float) -> void:
 	var step_vec := dir * active_speed * delta
 	if step_vec.length() > to_goal.length():
 		step_vec = to_goal
+	if _beamed_timer > 0.0:
+		var to_tether := _wrangle_target - global_position
+		to_tether.y = 0.0
+		if to_tether.length() > 0.15:
+			step_vec += to_tether.normalized() * minf(_wrangle_pull_speed * delta, to_tether.length())
 	var candidate_pos := global_position + step_vec
 
 	# 1. Enforce Floor 1 Store Territory Boundary (Floor 1 ghosts never leave their store territory!)
@@ -448,8 +560,8 @@ func _tick_visible_hunt(delta: float) -> void:
 		global_position = clamp_point_to_store_territory(global_position)
 	_enforce_light_cart_circle_exclusion()
 
-	# Lethal catch check (only if player is NOT inside a Light Cart's Circle of Safety and ghost is allowed at player's position)
-	if chasing_player and is_instance_valid(target_player):
+	# Lethal catch check (only if ghost is NOT weakened to catch health, player is NOT inside a Light Cart's Circle of Safety, and ghost is allowed at player's position)
+	if not is_at_catch_hp and chasing_player and is_instance_valid(target_player):
 		for cart in get_tree().get_nodes_in_group("light_carts"):
 			var lc := cart as MallCartSystem
 			if lc and lc.is_point_inside_safety_circle(target_player.global_position, 0.05):
@@ -472,8 +584,18 @@ func _rpc_notify_remote_player_caught(killer_name: String) -> void:
 			p.call("on_caught_by_store_ghost", killer_name)
 			break
 
-func _tick_cooldown(_delta: float) -> void:
-	pass
+func _tick_cooldown(delta: float) -> void:
+	if _beamed_timer > 0.0 or _regen_delay_timer > 0.0 or ghost_hp <= max_ghost_hp * 0.25:
+		return
+	var to_home := home_position - global_position
+	to_home.y = 0.0
+	if to_home.length() > 0.35:
+		var step := to_home.normalized() * minf(1.2 * delta, to_home.length())
+		var cand := clamp_point_to_store_territory(global_position + step)
+		velocity = (cand - global_position) / maxf(delta, 0.001)
+		move_and_slide()
+	else:
+		velocity = Vector3.ZERO
 
 func _find_hunt_target() -> Node3D:
 	var best_p: Node3D = null
@@ -486,6 +608,10 @@ func _find_hunt_target() -> Node3D:
 			continue
 		var d := global_position.distance_to(p3d.global_position)
 		var emitting_noise: bool = p3d.has_method("is_emitting_device_noise") and bool(p3d.call("is_emitting_device_noise"))
+
+		# If the player is posed in a Mannequin Disguise and silent, the ghost walks right past them!
+		if p3d.get("is_mannequin_posed") == true and not emitting_noise:
+			continue
 
 		# If the player is hiding inside a booth, they stay safe ONLY if their noise-making gadgets are turned OFF!
 		# Leaving an EMF Reader, Spirit Box, or Thermal Scanner ON within 18m gives away their hiding spot to the ghost!
@@ -500,18 +626,19 @@ func _find_hunt_target() -> Node3D:
 			else:
 				continue
 
+		var stealth_mult := 0.70 if ("Matcha Boba" in str(p3d.get("food_buff_name"))) else 1.0
 		if not can_briefly_pursue_outside_store:
 			# Floor 1 territorial ghost: targets players inside its store territory (or within 3.5m of doorway, or 7.0m if making device noise)
-			var outside_detect := 7.0 if emitting_noise else 3.5
+			var outside_detect := (7.0 if emitting_noise else 3.5) * stealth_mult
 			if not is_point_in_store_territory(p3d.global_position, 0.15) and get_distance_outside_store_territory(p3d.global_position) > outside_detect:
 				continue
 		else:
-			if get_distance_outside_store_territory(p3d.global_position) > max_outside_pursuit_distance:
+			if get_distance_outside_store_territory(p3d.global_position) > max_outside_pursuit_distance * stealth_mult:
 				continue
 
 		# Players with active noise-making gadgets attract the ghost more strongly
 		var effective_score := (d * 0.65) if emitting_noise else d
-		if d <= 24.0 and effective_score < best_score:
+		if d <= (24.0 * stealth_mult) and effective_score < best_score:
 			best_score = effective_score
 			best_p = p3d
 	return best_p
@@ -550,27 +677,45 @@ func _apply_peaceful_resolution_local() -> void:
 	is_resolved = true
 	visual_root.visible = false
 	_set_store_lights_override(false, 1.0, 0.0)
+	_set_store_shutters_locked(false)
 	GameState.mark_store_resolved(store_id, "Peaceful Lore Resolution (Saved Proton Charge!)", 120)
 
-func apply_proton_beam(delta: float) -> void:
-	_apply_proton_beam_local(delta)
+func apply_proton_beam(delta: float, beam_target_pos: Vector3 = Vector3.ZERO, ray_power: float = 1.0, ray_dps: float = 28.0) -> void:
+	var target_pt := beam_target_pos if beam_target_pos != Vector3.ZERO else global_position
+	_apply_proton_beam_local(delta, target_pt, ray_power, ray_dps)
 	if MultiplayerManager != null and MultiplayerManager.is_coop_active and multiplayer.has_multiplayer_peer():
-		_rpc_apply_proton_beam.rpc(delta)
+		_rpc_apply_proton_beam.rpc(delta, target_pt, ray_power, ray_dps)
 
 @rpc("any_peer", "call_remote", "unreliable")
-func _rpc_apply_proton_beam(delta: float) -> void:
-	_apply_proton_beam_local(delta)
+func _rpc_apply_proton_beam(delta: float, beam_target_pos: Vector3, ray_power: float, ray_dps: float) -> void:
+	_apply_proton_beam_local(delta, beam_target_pos, ray_power, ray_dps)
 
-func _apply_proton_beam_local(delta: float) -> void:
+func _apply_proton_beam_local(delta: float, beam_target_pos: Vector3, ray_power: float, ray_dps: float) -> void:
 	if is_resolved:
 		return
+	# Store Ghosts have a big Health Pool (850–1100 HP) and are NEVER frozen in place (`stun_timer` is NOT set)!
+	# The Proton Ray Gun ALWAYS deals real HP damage (`ray_dps * delta`) and ALWAYS slows them down while pulling
+	# them toward `beam_target_pos` so the player can wear down their HP and wrangle them into the Canister's circle!
 	visual_root.visible = true
-	weakened_percent = clampf(weakened_percent + 38.0 * delta, 0.0, 100.0)
-	stun_timer = maxf(stun_timer, 0.35)
-	overhead_label.text = "%s [WEAKENED: %.0f%%]" % [ghost_name, weakened_percent]
-	if weakened_percent >= 100.0:
-		overhead_label.text = "%s [100%% WEAKENED — DEPLOY ECTOPLASM CANISTER (E/G)!]" % ghost_name
+	_beamed_timer = 0.25
+	_regen_delay_timer = regen_delay_after_beam
+	_wrangle_target = beam_target_pos
+	_last_ray_power = ray_power
+	ghost_hp = maxf(0.0, ghost_hp - ray_dps * delta)
+	weakened_percent = clampf((1.0 - (ghost_hp / maxf(max_ghost_hp, 1.0))) * 100.0, 0.0, 100.0)
+	var power_vs_weight := clampf(ray_power / maxf(ghost_weight, 0.5), 0.22, 2.5)
+	_wrangle_pull_speed = clampf(0.75 + power_vs_weight * (1.15 + 2.25 * (weakened_percent / 100.0)), 0.85, 3.8)
+
+	var ray_lvl: int = GameState.ray_gun_power_level if "ray_gun_power_level" in GameState else 1
+	if ghost_hp <= max_ghost_hp * 0.08 or weakened_percent >= 92.0:
+		overhead_label.text = "%s [HP: %.0f / %.0f (%.0f%% WEAKENED) — WRANGLE INTO CANISTER CIRCLE!]" % [
+			ghost_name, ghost_hp, max_ghost_hp, weakened_percent
+		]
 		overhead_label.modulate = Color(0.3, 1.0, 0.55)
+	else:
+		overhead_label.text = "%s [HP: %.0f / %.0f | WEAKENED: %.0f%% | Ray Lvl %d]\n[SLOWED BY RAY GUN — Keep Beaming & Herding Toward Canister Circle!]" % [
+			ghost_name, ghost_hp, max_ghost_hp, weakened_percent, ray_lvl
+		]
 
 func resolve_forcefully_into_canister(canister_pos: Vector3) -> void:
 	_apply_forceful_resolution_local(canister_pos)
@@ -587,7 +732,18 @@ func _apply_forceful_resolution_local(_canister_pos: Vector3) -> void:
 	is_resolved = true
 	visual_root.visible = false
 	_set_store_lights_override(false, 1.0, 0.0)
-	GameState.mark_store_resolved(store_id, "Forceful Ectoplasm Canister Extraction", 150)
+	_set_store_shutters_locked(false)
+	GameState.resolved_stores[store_id] = "Captured in Ectoplasm Canister (Sell Filled Canister to Trader Chen!)"
+	var sell_val := 260 if floor_level >= 2 else 180
+	GameState.status_message.emit(
+		"CAPTURED %s IN ECTOPLASM CANISTER! Canister is now FULL — press [F] to pick it up and sell it to Trader Chen (+$%d)!" % [ghost_name, sell_val],
+		Color(1.0, 0.88, 0.35)
+	)
+
+func _set_store_shutters_locked(locked: bool) -> void:
+	for node in get_tree().get_nodes_in_group("store_security_shutters"):
+		if node.has_method("set_shutter_locked_for_store"):
+			node.call("set_shutter_locked_for_store", store_id, locked)
 
 func apply_camera_flash_stun(duration: float = 4.0) -> void:
 	_apply_camera_flash_stun_local(duration)
@@ -599,8 +755,10 @@ func _rpc_apply_camera_flash_stun(duration: float) -> void:
 	_apply_camera_flash_stun_local(duration)
 
 func _apply_camera_flash_stun_local(duration: float) -> void:
-	stun_timer = maxf(stun_timer, duration)
-	GameState.status_message.emit("XENON FLASH STUN! %s halted for %.1fs!" % [ghost_name, duration], Color(1.0, 0.95, 0.35))
+	# Signature Twist — East_F0_02 (Arthur Pendelton): Stunned +1.0s longer (5.0s) by camera xenon flash!
+	var eff_dur := (duration + 1.0) if store_id == "East_F0_02" else duration
+	stun_timer = maxf(stun_timer, eff_dur)
+	GameState.status_message.emit("XENON FLASH STUN! %s halted for %.1fs!" % [ghost_name, eff_dur], Color(1.0, 0.95, 0.35))
 
 func force_trigger_hunt_warning() -> void:
 	if not is_resolved:
@@ -609,8 +767,13 @@ func force_trigger_hunt_warning() -> void:
 func _set_store_lights_override(active: bool, mult: float, flicker: float) -> void:
 	for node in get_tree().get_nodes_in_group("mall_light_fixtures"):
 		var fixture := node as MallLightFixture
-		if fixture and fixture.store_id == store_id:
+		if fixture == null:
+			continue
+		if fixture.store_id == store_id:
 			fixture.set_ghost_flicker_override(active, mult, flicker)
+		elif store_id == "Center_F3_01" and fixture.store_id == "Atrium_Concourse":
+			# Signature Twist — Center_F3_01 (The Chief Architect): Flickers hallway/atrium lights outside the store during hunts!
+			fixture.set_ghost_flicker_override(active, maxf(0.35, mult), maxf(0.45, flicker))
 
 func _on_player_voice_activity(speaker_pos: Vector3, loudness_norm: float, _is_talking: bool) -> void:
 	if is_resolved or global_position.distance_to(speaker_pos) > 22.0:

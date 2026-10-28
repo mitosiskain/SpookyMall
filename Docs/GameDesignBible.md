@@ -201,14 +201,22 @@ Every existing tool in your codebase doubles as a **Lore Discovery Tool**:
 
 ## 4. Map, Wing & Floor Progression Blueprint
 
-### Accepted Architectural Standards
-- **Oval Atrium Core (`/Game/Environment/Mall/Maps/Lvl_MallOval_Test`):**
-  - Central Oval Void: `34 × 26 m` | Gallery Ring: `41 × 33 m` | Outer Concourse Surround: `119 × 85 m`
-  - Four Cardinal Clear-Span Bridges: `12 m` clear spans (`North`, `South`, `East`, `West`)
-  - Vertical Floor Spacing: **`8.5 m` (`850 cm`) floor-to-floor** (`8.0 m` clear room height + `0.5 m` structural/services plenum)
-- **Drifting H-Concourse Corridors (`AMallSplineCorridor`):**
-  - Modular `10 m` (`1000 cm`) bays, `9 m` (`900 cm`) clear width, `8 m` (`800 cm`) height.
-  - Procedural Unsettling Drift: `1.5°–4.0°` horizontal yaw kinks and `0.8°–2.2°` floor incline pitch undulations per bay so long hallways subtly warp line-of-sight.
+### Accepted Architectural Standards (Double-Radius Oval, 7+ Procedural Floors, Whole-Side Himalayan Sauna Biome, `32m`-Wide Stores & `~800m` Smoothly Curving Parallel Hallways)
+- **Double-Radius Central Oval Atrium Core & Hole-Free Upper Floors (`MallCurvedAtriumRing`):**
+  - **Central Oval Shopping Island:** `16.0 m × 20.0 m` radii (`32.0 m × 40.0 m` diameter) surrounded by the **Open Elliptical Atrium Chasm** (`28.5 m × 30.0 m` radii = `57.0 m × 60.0 m` diameter).
+  - **100% Continuous Hole-Free Upper Floor Gallery Slabs (`Floors 2..7+`):** Every upper floor is generated as a watertight curved-to-rectangular slab (`AtriumRadius (28.5 m, 30.0 m) -> OuterRectangle (±46.0 m, ±42.0 m)`) with continuous `1.20 m`-tall safety balustrades, 4 Cardinal Clear-Span Bridges (`North`, `South`, `West`, `East`), and **Void-Spanning Escalators (`Z = +22.2 m`) + Service Freight Elevator (`(10.0, 0.0, -25.8)`)** inside the open atrium chasm so **zero floor holes** exist anywhere on upper floors.
+  - **7 Built-In Floors + Procedural Infinite Upper Floors (`Floor 8, 9, 10...`):** Built-in floors span **Floors 1 through 7 (`Y = 0.0 m .. 51.0 m`)** at **`8.5 m` (`850 cm`) floor-to-floor** spacing, with dynamic runtime generation (`spawn_procedural_upper_floor(floor_num)` and `extend_to_floor(floor_num)`) for **Floors 8+**.
+- **Whole-Side Floor 1 Himalayan Pink Salt & Tangquan Sauna Liminal Biome (`80.0 m × 76.0 m` at `X = -32.0 m .. -112.0 m, Z = -38.0 m .. +38.0 m`):**
+  - Occupies the **entire West side of Floor 1** as a self-contained liminal bathhouse and sauna biome entered through 5 grand portals at `X = -32.0 m`.
+  - Features glowing backlit Himalayan Pink Salt crystal brick walls, warm Hinoki cedar slatted ceilings, Ceramic Tile Poolrooms pillars, **3 Steaming Geothermal Onsen Pools** with walkable stairs, a **3-tier Walkable Cedar Sauna Amphitheater (`X = -70 m .. -111 m`)**, 6 red-hot sauna stoves, 4 Glass Sauna Pavilions, Open Rinse Showers, the Soul-Anchor Revival Shrine, and **16 active `GPUParticles3D` Volumetric Rising Steam Emitters**.
+- **`~800 m`-Long Smoothly Curving Parallel Hallways (`MallStackedHWings` — `1.67 km` Total North-to-South!):**
+  - Extending both **North** and **South** from `Z = ±42.0 m` are **two parallel `9.0 m`-wide shopping concourses** (`West Parallel Hallway: local X = -20.0 m .. -11.0 m`, `East Parallel Hallway: local X = +11.0 m .. +20.0 m`) across **`24` Stacked-`H` Store Bays (`24 × 32.0 m = 768.0 m`) + `26.0 m` End-Cap Anchor Store = `794.0 m` per wing**.
+  - **Smooth Gradual Curve Seen Quickly (`s = 32 m .. 256 m`):** After Bay 0 (`32.0 m`), Bays 1..7 curve smoothly by **`5.0°` per bay (`35.0°` total curve over `224.0 m`, radius `R ≈ 366.7 m`)**, followed by **16 bays (`512.0 m`)** of long straight travel where the Central Oval is 100% occluded from view.
+- **Wide `32.0 m` Storefronts & Stacked Capital `H` Pass-Through Columns:**
+  - **Central Column of `32.0 m`-Wide × `22.0 m`-Deep Pass-Through Stores (`local X = -11.0 m .. +11.0 m`):** Wide `5.8 m` portals on both West and East parallel hallways (forming 24 stacked capital `H` crossbars per wing) plus `3.4 m` North↔South neighbor doorways.
+  - **Outer Columns of `32.0 m`-Wide × `26.0 m`-Deep Retail Stores (`local |X| = 20.0 m .. 46.0 m`):** `5.8 m` concourse portals, `9.9 m` glazed display windows, and `3.4 m` neighbor pass-through doorways.
+- **End-Cap Anchor Department Stores (`60.0 m` Wide × `26.0 m` Deep at `s = 768.0 m .. 794.0 m`):**
+  - At the far end of the `768.0 m` North and South parallel hallways sit massive **End-Cap Anchor Department Stores** (*Aura Grand Emporium* North & *Monarch Grand Galleria* South) capping off both parallel hallways.
 
 ### Store Archetypes (`EMallStoreArchetype` in [`MallRetailStoreUnit.h`](../UnrealSourceReference/MyProject2/Environment/MallRetailStoreUnit.h))
 | Enum Archetype | In-World Store Identity | Gameplay & Level Design Role |

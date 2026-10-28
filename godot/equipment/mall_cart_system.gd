@@ -64,6 +64,28 @@ var highlighted_take_slot: int = -1
 var _outline_pulse_time: float = 0.0
 var _net_cart_sync_timer: float = 0.0
 
+## Pusher-Side Cart Computer Monitor (`UMallCartMonitorComponent`), Exterior Camera/Stand Hooks, & Cart Upgrades
+const EXTERIOR_HOOK_OFFSETS: Array[Vector3] = [
+	Vector3(0.46, 0.72, -0.36),
+	Vector3(0.46, 0.72,  0.36),
+]
+var exterior_hook_items: Array[Dictionary] = [{}, {}]
+var exterior_hook_holders: Array[Node3D] = []
+var cart_monitor: VideoAndAudioSurveillance.CartComputerMonitor = null
+var is_towing_light_cart: bool = false
+var has_proximity_horn: bool = false
+var has_zapper_cage: bool = false
+var _horn_ping_cooldown: float = 0.0
+
+const STORE_DOCK_CONFIGS: Dictionary = {
+	"East_F0_02": {"dock": Vector3(14.0, 0.0, 0.0), "center": Vector3(21.0, 0.0, 0.0)},
+	"West_F1_02": {"dock": Vector3(-14.0, 0.0, 8.5), "center": Vector3(-21.0, 0.0, 8.5)},
+	"West_F1_03": {"dock": Vector3(-14.0, 0.0, -8.5), "center": Vector3(-21.0, 0.0, -8.5)},
+	"East_F2_01": {"dock": Vector3(14.0, 8.50, -15.5), "center": Vector3(21.0, 8.50, -15.5)},
+	"West_F2_01": {"dock": Vector3(-14.0, 8.50, -15.5), "center": Vector3(-21.0, 8.50, -15.5)},
+	"Center_F3_01": {"dock": Vector3(14.0, 17.0, -15.5), "center": Vector3(21.0, 17.0, -15.5)},
+}
+
 func _ready() -> void:
 	name = "MallCart_%s" % cart_type
 	add_to_group("mall_carts")
@@ -168,6 +190,30 @@ func _build_push_cart_visuals() -> void:
 		add_child(holder)
 		cart_slot_visual_holders.append(holder)
 
+	# Build the 2 Exterior Side Hooks for hanging Video Cameras, folded Camera Stands, or Assembled Video Rigs!
+	exterior_hook_items = [{}, {}]
+	exterior_hook_holders.clear()
+	for h_pos in EXTERIOR_HOOK_OFFSETS:
+		var hook_bracket := MeshInstance3D.new()
+		var hb_box := BoxMesh.new()
+		hb_box.size = Vector3(0.10, 0.05, 0.08)
+		hook_bracket.mesh = hb_box
+		hook_bracket.position = h_pos
+		hook_bracket.material_override = pad_mat
+		add_child(hook_bracket)
+
+		var h_holder := Node3D.new()
+		h_holder.position = h_pos + Vector3(0.06, -0.08, 0.0)
+		add_child(h_holder)
+		exterior_hook_holders.append(h_holder)
+
+	# Mount the Fixed Front Cart Computer Monitor (`UMallCartMonitorComponent`) at the FRONT of the cart (+X),
+	# fixed and facing the front of the cart (+X) so the rear handle (-X) never blocks its view!
+	cart_monitor = VideoAndAudioSurveillance.CartComputerMonitor.new()
+	cart_monitor.parent_cart = self
+	cart_monitor.position = Vector3(0.42, 1.12, 0.0)
+	add_child(cart_monitor)
+
 	_refresh_push_cart_header_label()
 
 func _create_slot_wireframe_outline(box_size: Vector3, mat: StandardMaterial3D) -> Node3D:
@@ -224,17 +270,94 @@ func get_first_open_push_cart_slot() -> int:
 			return i
 	return -1
 
+func is_exterior_hook_item(item_data: Dictionary) -> bool:
+	var item_id := str(item_data.get("id", ""))
+	return item_id in ["video_camera", "camera_stand", "assembled_video_rig"]
+
+func get_first_open_exterior_hook() -> int:
+	for i in range(exterior_hook_items.size()):
+		if exterior_hook_items[i].is_empty():
+			return i
+	return -1
+
+func get_hooked_item_count() -> int:
+	var cnt := 0
+	for h in exterior_hook_items:
+		if not h.is_empty():
+			cnt += 1
+	return cnt
+
+## Hangs a Video Camera, folded Camera Stand, or Hands-Only Assembled Video Rig onto an exterior side hook of the Push Cart!
+func hang_item_on_exterior_hook(item_data: Dictionary) -> int:
+	if cart_type != "PushCart" or item_data.is_empty():
+		return -1
+	var hook_idx := get_first_open_exterior_hook()
+	if hook_idx == -1:
+		return -1
+	var copy := item_data.duplicate(true)
+	exterior_hook_items[hook_idx] = copy
+	_rebuild_exterior_hook_visual(hook_idx)
+	_refresh_push_cart_header_label()
+	return hook_idx
+
+func _rebuild_exterior_hook_visual(hook_idx: int) -> void:
+	if hook_idx < 0 or hook_idx >= exterior_hook_holders.size():
+		return
+	var holder := exterior_hook_holders[hook_idx]
+	for c in holder.get_children():
+		c.queue_free()
+	var item := exterior_hook_items[hook_idx]
+	if item.is_empty():
+		return
+	var model_path := str(item.get("model_path", ""))
+	var spawned := false
+	if not model_path.is_empty() and ResourceLoader.exists(model_path):
+		var packed := load(model_path) as PackedScene
+		if packed:
+			var inst := packed.instantiate() as Node3D
+			inst.scale = Vector3(0.68, 0.68, 0.68)
+			holder.add_child(inst)
+			spawned = true
+	if not spawned:
+		var mi := MeshInstance3D.new()
+		var bm := BoxMesh.new()
+		bm.size = Vector3(0.18, 0.24, 0.14)
+		mi.mesh = bm
+		var mat := StandardMaterial3D.new()
+		mat.albedo_color = item.get("accent_color", Color(0.28, 1.0, 0.72))
+		mi.material_override = mat
+		holder.add_child(mi)
+
 func can_accept_item_from_player(player: Node3D) -> bool:
 	if cart_type != "PushCart" or player == null:
 		return false
 	if global_position.distance_to(player.global_position) > 2.95:
 		return false
+	if player.has_method("get_current_active_item"):
+		var held: Dictionary = player.call("get_current_active_item")
+		if str(held.get("id", "")) == "cctv_monitor" and cart_monitor != null and not cart_monitor.is_mounted_on_cart:
+			return true
+		if is_exterior_hook_item(held) and get_first_open_exterior_hook() != -1:
+			return true
 	return get_first_open_push_cart_slot() != -1
 
-## Places an item Dictionary into the highlighted (or first open) slot on the Equipment Push Cart!
+## Places an item Dictionary into the highlighted (or first open) slot on the Equipment Push Cart,
+## mounts a held `"cctv_monitor"` onto the front Monitor Mount (returns `200`), or hangs camera/stand rigs on exterior hooks!
 func place_item_on_cart(item_data: Dictionary, preferred_slot: int = -1) -> int:
 	if cart_type != "PushCart" or item_data.is_empty():
 		return -1
+	if str(item_data.get("id", "")) == "cctv_monitor" and cart_monitor != null and not cart_monitor.is_mounted_on_cart:
+		if cart_monitor.mount_from_hand_item(item_data):
+			if switch_audio and ResourceLoader.exists("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_On.wav"):
+				switch_audio.stream = load("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_On.wav")
+				switch_audio.pitch_scale = 0.95
+				switch_audio.play()
+			_refresh_push_cart_header_label()
+			return 200
+	if preferred_slot == -1 and is_exterior_hook_item(item_data) and (not bool(item_data.get("can_store_in_hotbar", true)) or get_first_open_push_cart_slot() == -1):
+		var hook_i := hang_item_on_exterior_hook(item_data)
+		if hook_i != -1:
+			return 100 + hook_i
 	var target_slot := preferred_slot
 	if target_slot < 0 or target_slot >= cart_slot_items.size() or not cart_slot_items[target_slot].is_empty():
 		if highlighted_place_slot >= 0 and highlighted_place_slot < cart_slot_items.size() and cart_slot_items[highlighted_place_slot].is_empty():
@@ -242,11 +365,15 @@ func place_item_on_cart(item_data: Dictionary, preferred_slot: int = -1) -> int:
 		else:
 			target_slot = get_first_open_push_cart_slot()
 	if target_slot == -1:
+		if is_exterior_hook_item(item_data):
+			var hook_fallback := hang_item_on_exterior_hook(item_data)
+			if hook_fallback != -1:
+				return 100 + hook_fallback
 		return -1
 
 	var stored_copy := item_data.duplicate(true)
-	# Automatically switch noise-making gadgets OFF when neatly racked onto the Push Cart shelf
-	if bool(stored_copy.get("can_power_toggle", false)):
+	# Automatically switch noise-making gadgets OFF when neatly racked onto the Push Cart shelf (keep silent Video Cameras ON for Dashcam!)
+	if bool(stored_copy.get("can_power_toggle", false)) and bool(stored_copy.get("makes_noise_when_on", false)):
 		stored_copy["powered_on"] = false
 	cart_slot_items[target_slot] = stored_copy
 	_rebuild_slot_item_visual(target_slot)
@@ -259,12 +386,19 @@ func place_item_on_cart(item_data: Dictionary, preferred_slot: int = -1) -> int:
 	_broadcast_cart_slots_if_coop()
 	return target_slot
 
-## Removes and returns the item Dictionary from the currently highlighted occupied slot (or last occupied slot) on the Push Cart.
+## Removes and returns the item Dictionary from the currently highlighted occupied slot (or exterior hook / last occupied slot) on the Push Cart.
 func take_highlighted_item_from_cart() -> Dictionary:
 	if cart_type != "PushCart":
 		return {}
 	var slot_idx := highlighted_take_slot
 	if slot_idx < 0 or slot_idx >= cart_slot_items.size() or cart_slot_items[slot_idx].is_empty():
+		for h_i in range(exterior_hook_items.size() - 1, -1, -1):
+			if not exterior_hook_items[h_i].is_empty():
+				var hooked := exterior_hook_items[h_i].duplicate(true)
+				exterior_hook_items[h_i] = {}
+				_rebuild_exterior_hook_visual(h_i)
+				_refresh_push_cart_header_label()
+				return hooked
 		for i in range(cart_slot_items.size() - 1, -1, -1):
 			if not cart_slot_items[i].is_empty():
 				slot_idx = i
@@ -307,9 +441,13 @@ func _rebuild_slot_item_visual(slot_idx: int) -> void:
 	if item.is_empty():
 		return
 
+	var item_id_str := str(item.get("id", ""))
 	var model_path: String = str(item.get("model_path", ""))
 	var spawned := false
-	if not model_path.is_empty() and ResourceLoader.exists(model_path):
+	if item_id_str == "cctv_monitor":
+		VideoAndAudioSurveillance.build_portable_cctv_monitor_mesh(holder, false)
+		spawned = true
+	elif not model_path.is_empty() and ResourceLoader.exists(model_path):
 		var packed := load(model_path) as PackedScene
 		if packed:
 			var inst := packed.instantiate() as Node3D
@@ -331,9 +469,41 @@ func _refresh_push_cart_header_label() -> void:
 	if cart_type != "PushCart" or cart_label == null:
 		return
 	var used := get_stored_item_count()
+	var hooked := get_hooked_item_count()
+	var mon_status := "Monitor: MOUNTED [F: Pick Up]" if (cart_monitor != null and cart_monitor.is_mounted_on_cart) else "Monitor: IN HANDS [G: Mount]"
+	var upgrades: Array[String] = []
+	if is_towing_light_cart:
+		upgrades.append("TOW-HOOK")
+	if has_proximity_horn:
+		upgrades.append("SONAR HORN")
+	var upg_str := (" | " + "+".join(upgrades)) if not upgrades.is_empty() else ""
 	cart_label.text = (
-		"8-Slot Equipment Push Cart [%d/8 Stored | %s]\n" % [used, get_seal_state_label().split(" (")[0]] +
-		"[G] Place Held Item on Highlighted Outline | [E] Take Stored Item | [F] Push/Park Cart"
+		"8-Slot Equipment Push Cart [%d/8 Shelf | %d/2 Hooks | %s | %s%s]\n" % [used, hooked, mon_status, get_seal_state_label().split(" (")[0], upg_str] +
+		"[E] Push/Release Cart | [F] Pick Up Item/Monitor | [G] Place/Mount Held Item"
+	)
+
+func install_tow_hook() -> void:
+	is_towing_light_cart = true
+	_refresh_push_cart_header_label()
+	GameState.status_message.emit(
+		"INSTALLED CART TOW-HOOK! Pushing this Equipment Cart now tows the Wheeled Light Cart behind it as a 2-Cart Train!",
+		Color(1.0, 0.86, 0.32)
+	)
+
+func install_proximity_horn() -> void:
+	has_proximity_horn = true
+	_refresh_push_cart_header_label()
+	GameState.status_message.emit(
+		"INSTALLED ULTRASONIC PROXIMITY HORN! This Equipment Cart will now ping an accelerating sonar warning 3s before a ghost enters VisibleWarning!",
+		Color(1.0, 0.65, 0.28)
+	)
+
+func install_gremlin_zapper_cage() -> void:
+	has_zapper_cage = true
+	_update_light_cart_active_visuals()
+	GameState.status_message.emit(
+		"INSTALLED GREMLIN ZAPPER CAGE on Mobile Light Cart! Scavenging Gremlins attempting to switch off your floodlight will be shocked & stunned (-10% battery)!",
+		Color(0.35, 0.96, 1.0)
 	)
 
 ## Builds a Wheeled Mobile Light Cart with 4 rotating caster wheels, a 2.62m overhead mast,
@@ -573,7 +743,7 @@ func toggle_attach(player: Node3D) -> void:
 
 	is_attached_to_player = true
 	attached_player = player
-	GameState.status_message.emit("Wheeling %s (No Sprinting | Drains Stamina While Pushing — Press [F] to Park)." % cart_type, Color(0.5, 0.95, 1.0))
+	GameState.status_message.emit("Wheeling %s (No Sprinting | Drains Stamina While Pushing — Press [E] to Park)." % cart_type, Color(0.5, 0.95, 1.0))
 
 func _resolve_cart_overlap() -> void:
 	if not is_inside_tree():
@@ -593,6 +763,17 @@ func _resolve_cart_overlap() -> void:
 
 func set_floodlight_power(turn_on: bool, actor_reason: String = "Player", broadcast_rpc: bool = true) -> void:
 	if cart_type != "LightCart":
+		return
+	if not turn_on and "Gremlin" in actor_reason and has_zapper_cage and battery_percent >= 10.0:
+		battery_percent = maxf(0.0, battery_percent - 10.0)
+		_update_light_cart_active_visuals()
+		for gr in get_tree().get_nodes_in_group("hallway_gremlins"):
+			if gr and gr.global_position.distance_to(global_position) <= 4.5 and gr.has_method("stun_gremlin"):
+				gr.call("stun_gremlin", "Gremlin Zapper Cage Shock")
+		GameState.status_message.emit(
+			"GREMLIN ZAPPER CAGE TRIGGERED! Shocked & repelled Hallway Gremlin before it could switch off the Light Cart (-10%% battery -> %.0f%%)!" % battery_percent,
+			Color(0.35, 0.96, 1.0)
+		)
 		return
 	if is_floodlight_on == turn_on:
 		return
@@ -645,10 +826,10 @@ func _update_light_cart_active_visuals() -> void:
 		lens_mat.albedo_color = Color(1.0, 0.97, 0.86) if active else Color(0.28, 0.30, 0.34)
 	if cart_label:
 		if active:
-			cart_label.text = "Wheeled Mobile Light Cart [LIGHT: ON | %.0f%%]\n[F] Push/Park | [E] Turn Light OFF | 3.25m Circle of Safety" % battery_percent
+			cart_label.text = "Wheeled Mobile Light Cart [LIGHT: ON | %.0f%%]\n[E] Push/Park Cart (or Look Up + [E] to Toggle Light) | 3.25m Circle of Safety" % battery_percent
 			cart_label.modulate = Color(1.0, 0.94, 0.52)
 		else:
-			cart_label.text = "Wheeled Mobile Light Cart [LIGHT: OFF — NO SAFETY CIRCLE!]\n[E] Turn Light ON | [F] Push/Park (Watch out for Gremlin Interference!)"
+			cart_label.text = "Wheeled Mobile Light Cart [LIGHT: OFF — NO SAFETY CIRCLE!]\nLook Up at Lamp + [E] to Turn ON | [E] Push/Park Cart"
 			cart_label.modulate = Color(1.0, 0.55, 0.35)
 
 func is_light_circle_active() -> bool:
@@ -717,13 +898,20 @@ func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 	if is_attached_to_player and is_instance_valid(attached_player):
+		var on_freight_elevator := false
+		for fe_node in get_tree().get_nodes_in_group("freight_elevators"):
+			if fe_node != null and fe_node.has_method("is_point_inside_cab_footprint"):
+				if bool(fe_node.call("is_point_inside_cab_footprint", attached_player.global_position, 0.55)) or bool(fe_node.call("is_point_inside_cab_footprint", global_position, 0.55)):
+					on_freight_elevator = true
+					break
+
 		# Auto-detach if player died, sat down, or stepped onto a stepped escalator
 		if attached_player.get("is_floating_essence") == true or attached_player.get("contextual_seat_active") == true:
 			detach_from_player(true)
-		elif absf(attached_player.global_position.y - global_position.y) > 0.45:
+		elif not on_freight_elevator and absf(attached_player.global_position.y - global_position.y) > 0.55:
 			detach_from_player(true)
 			GameState.status_message.emit(
-				"Stepped escalators cannot carry carts! Parked %s at the foot of the escalator (Repair the Floor 2 Service Freight Elevator to bring carts up)." % cart_type,
+				"Stepped escalators cannot carry carts! Parked %s at the foot of the escalator (Use the Service Freight Elevator [10, 0, -10.8] to ride with carts between floors!)." % cart_type,
 				Color(1.0, 0.78, 0.32)
 			)
 		else:
@@ -743,10 +931,36 @@ func _physics_process(delta: float) -> void:
 					var hit_dist := ray_from.distance_to(hit["position"])
 					push_dist = clampf(hit_dist - 0.55, 0.75, 1.65)
 			var target_pos := attached_player.global_position + forward * push_dist
-			target_pos.y = global_position.y
-			global_position = global_position.lerp(target_pos, clampf(delta * 12.0, 0.0, 1.0))
-			look_at(global_position + forward, Vector3.UP)
+			if on_freight_elevator:
+				target_pos.y = global_position.y
+			else:
+				if attached_player.global_position.y >= 12.75:
+					target_pos.y = 17.0
+				elif attached_player.global_position.y >= 4.25:
+					target_pos.y = 8.50
+				else:
+					target_pos.y = 0.0
+			global_position = Vector3(
+				lerpf(global_position.x, target_pos.x, clampf(delta * 12.0, 0.0, 1.0)),
+				target_pos.y,
+				lerpf(global_position.z, target_pos.z, clampf(delta * 12.0, 0.0, 1.0))
+			)
+			if cart_type == "PushCart":
+				# SM_EquipmentUtilityCart has its rear push-handle at -X and its front at +X
+				rotation = Vector3(0.0, atan2(-forward.z, forward.x), 0.0)
+			else:
+				look_at(global_position + forward, Vector3.UP)
 			_evaluate_doorway_seal()
+
+			# 2-Cart Train Tow-Hook (`is_towing_light_cart`): smoothly tows the Mobile Light Cart behind this Equipment Push Cart!
+			if cart_type == "PushCart" and is_towing_light_cart:
+				for lc_node in get_tree().get_nodes_in_group("light_carts"):
+					var lc := lc_node as MallCartSystem
+					if lc and not lc.is_attached_to_player and absf(lc.global_position.y - global_position.y) <= 2.5 and lc.global_position.distance_to(global_position) <= 6.5:
+						var tow_target := attached_player.global_position - forward * 1.45
+						tow_target.y = global_position.y
+						lc.global_position = lc.global_position.lerp(tow_target, clampf(delta * 10.0, 0.0, 1.0))
+						lc.rotation.y = rotation.y
 
 			if MultiplayerManager != null and MultiplayerManager.is_coop_active and multiplayer.has_multiplayer_peer():
 				if not attached_player.has_method("is_local_player") or bool(attached_player.call("is_local_player")):
@@ -771,6 +985,27 @@ func _physics_process(delta: float) -> void:
 		_update_light_cart_active_visuals()
 	elif cart_type == "PushCart":
 		_update_push_cart_slot_outlines(delta)
+		if has_proximity_horn:
+			_tick_proximity_horn(delta)
+
+func _tick_proximity_horn(delta: float) -> void:
+	if _horn_ping_cooldown > 0.0:
+		_horn_ping_cooldown = maxf(0.0, _horn_ping_cooldown - delta)
+		return
+	for g_node in get_tree().get_nodes_in_group("store_ghosts"):
+		var g := g_node as StoreGhost
+		if g and not g.is_resolved and g.current_phase == StoreGhost.GhostPhase.INITIAL_ACTIVITY:
+			if global_position.distance_to(g.global_position) <= 18.0 and (g.phase_duration - g.phase_timer) <= 3.2:
+				_horn_ping_cooldown = 4.0
+				if switch_audio and ResourceLoader.exists("res://SourceAssets/EquipmentSounds/SW_EMF_Beep.wav"):
+					switch_audio.stream = load("res://SourceAssets/EquipmentSounds/SW_EMF_Beep.wav")
+					switch_audio.pitch_scale = 1.75
+					switch_audio.play()
+				GameState.status_message.emit(
+					"ULTRASONIC PROXIMITY HORN ALERT! %s in [%s] will enter VISIBLE WARNING in < 3.0s!" % [g.ghost_name, g.store_id],
+					Color(1.0, 0.62, 0.22)
+				)
+				break
 
 @rpc("any_peer", "call_remote", "unreliable_ordered")
 func _rpc_sync_cart_transform(pos: Vector3, yaw: float) -> void:
@@ -804,26 +1039,28 @@ func _update_push_cart_slot_outlines(delta: float) -> void:
 
 		# 1. Find the open slot closest to where the player is looking (to show the [G] Placement Outline!)
 		if not held_item.is_empty():
-			var best_open_score := 999.0
+			var best_open_score := 0.36
 			for i in range(PUSH_CART_SLOT_OFFSETS.size()):
 				if cart_slot_items[i].is_empty():
 					var slot_world := to_global(PUSH_CART_SLOT_OFFSETS[i] + Vector3(0.0, 0.08, 0.0))
 					var to_slot := slot_world - ray_origin
-					var perp_dist := to_slot.cross(ray_dir).length()
-					if perp_dist < best_open_score:
-						best_open_score = perp_dist
-						highlighted_place_slot = i
+					if to_slot.dot(ray_dir) > 0.25:
+						var perp_dist := to_slot.cross(ray_dir).length()
+						if perp_dist < best_open_score:
+							best_open_score = perp_dist
+							highlighted_place_slot = i
 
-		# 2. Find the occupied slot closest to where the player is looking (to allow taking with [E]!)
-		var best_take_score := 999.0
+		# 2. Find the occupied slot closest to where the player is looking (to allow taking with [F]!)
+		var best_take_score := 0.36
 		for i in range(PUSH_CART_SLOT_OFFSETS.size()):
 			if not cart_slot_items[i].is_empty():
 				var slot_world := to_global(PUSH_CART_SLOT_OFFSETS[i] + Vector3(0.0, 0.08, 0.0))
 				var to_slot := slot_world - ray_origin
-				var perp_dist := to_slot.cross(ray_dir).length()
-				if perp_dist < best_take_score:
-					best_take_score = perp_dist
-					highlighted_take_slot = i
+				if to_slot.dot(ray_dir) > 0.25:
+					var perp_dist := to_slot.cross(ray_dir).length()
+					if perp_dist < best_take_score:
+						best_take_score = perp_dist
+						highlighted_take_slot = i
 
 		var held_name: String = str(held_item.get("name", "Item"))
 		for i in range(cart_slot_outlines.size()):
@@ -842,7 +1079,7 @@ func _update_push_cart_slot_outlines(delta: float) -> void:
 				cart_slot_outline_mats[i].emission = Color(1.0, 0.82, 0.22)
 				cart_slot_outline_mats[i].emission_energy_multiplier = 1.8
 				cart_slot_labels[i].visible = true
-				cart_slot_labels[i].text = "[E] Take Off Cart:\n%s (Slot #%d)" % [st_name, i + 1]
+				cart_slot_labels[i].text = "[F] Take Off Cart:\n%s (Slot #%d)" % [st_name, i + 1]
 				cart_slot_labels[i].modulate = Color(1.0, 0.90, 0.42)
 			else:
 				cart_slot_outlines[i].visible = false
@@ -855,6 +1092,26 @@ func _update_push_cart_slot_outlines(delta: float) -> void:
 func _evaluate_doorway_seal() -> void:
 	if cart_type != "PushCart":
 		return
+	# Automatically check all 6 Haunted Store doorway docks on the cart's current floor so ANY Equipment Push Cart can seal ANY store!
+	var best_store := linked_store_id
+	var best_dock := dock_world_position
+	var best_center := store_interior_center
+	var best_dist := 999.0
+	for s_id in STORE_DOCK_CONFIGS.keys():
+		var cfg: Dictionary = STORE_DOCK_CONFIGS[s_id]
+		var d_pos: Vector3 = cfg["dock"]
+		if absf(d_pos.y - global_position.y) <= 2.5:
+			var d := Vector2(global_position.x - d_pos.x, global_position.z - d_pos.z).length()
+			if d < best_dist:
+				best_dist = d
+				best_store = s_id
+				best_dock = d_pos
+				best_center = cfg["center"]
+
+	linked_store_id = best_store
+	dock_world_position = best_dock
+	store_interior_center = best_center
+
 	var dist_to_dock := Vector2(global_position.x, global_position.z).distance_to(Vector2(dock_world_position.x, dock_world_position.z))
 	var dist_to_interior := Vector2(global_position.x, global_position.z).distance_to(Vector2(store_interior_center.x, store_interior_center.z))
 

@@ -4,6 +4,7 @@ extends Node3D
 ## Dynamic Mall Ceiling & Storefront Light Fixture.
 ## Supports Player Light Remote Gun states (100% ON, 45% GRAY-SPACE DIM, 0% OFF)
 ## and AI Ghost Flicker / Hunt Blackout overrides (VisibleWarning 10% flicker, VisibleHunt 0%).
+## Uses desaturated architectural warm-white Kelvin color temperatures and brushed steel housing.
 
 enum LightMode {
 	ON_100 = 0,
@@ -12,8 +13,8 @@ enum LightMode {
 }
 
 @export var store_id: String = "Concourse"
-@export var base_energy: float = 2.6
-@export var light_color: Color = Color(1.0, 0.94, 0.84)
+@export var base_energy: float = 1.45
+@export var light_color: Color = Color(1.0, 0.95, 0.88)
 @export var current_mode: LightMode = LightMode.ON_100
 
 var omni_light: OmniLight3D = null
@@ -24,44 +25,46 @@ var _ghost_override_active: bool = false
 var _ghost_multiplier: float = 1.0
 var _flicker_intensity: float = 0.0
 var _flicker_phase: float = 0.0
+var _natural_color: Color = Color(1.0, 0.95, 0.88)
 
 func _ready() -> void:
 	add_to_group("mall_light_fixtures")
+	# Desaturate overly saturated colors toward warm architectural halogen/daylight
+	_natural_color = light_color.lerp(Color(1.0, 0.96, 0.90), 0.68)
+	base_energy = clampf(base_energy * 0.58, 1.15, 1.65)
 	_build_fixture_visuals()
 	apply_light_mode(current_mode, false)
 
 func _build_fixture_visuals() -> void:
-	# Low-poly recessed ceiling troffer housing + emissive diffuser panel
+	# Brushed steel architectural ceiling troffer housing + warm frosted diffuser panel
 	var housing := MeshInstance3D.new()
 	var housing_box := BoxMesh.new()
-	housing_box.size = Vector3(1.2, 0.08, 0.6)
+	housing_box.size = Vector3(1.28, 0.09, 0.64)
 	housing.mesh = housing_box
-	var housing_mat := StandardMaterial3D.new()
-	housing_mat.albedo_color = Color(0.16, 0.17, 0.2)
-	housing_mat.roughness = 0.4
-	housing.material_override = housing_mat
+	housing.material_override = MallPbrMaterialLibrary.get_brushed_steel_material(Color(0.74, 0.76, 0.80))
 	add_child(housing)
 
 	bulb_mesh = MeshInstance3D.new()
 	var panel_box := BoxMesh.new()
-	panel_box.size = Vector3(1.08, 0.03, 0.48)
+	panel_box.size = Vector3(1.14, 0.03, 0.50)
 	bulb_mesh.mesh = panel_box
-	bulb_mesh.position = Vector3(0.0, -0.04, 0.0)
+	bulb_mesh.position = Vector3(0.0, -0.045, 0.0)
 	bulb_material = StandardMaterial3D.new()
-	bulb_material.albedo_color = light_color
+	bulb_material.albedo_color = _natural_color
+	bulb_material.roughness = 0.35
 	bulb_material.emission_enabled = true
-	bulb_material.emission = light_color
-	bulb_material.emission_energy_multiplier = 2.5
+	bulb_material.emission = _natural_color
+	bulb_material.emission_energy_multiplier = 1.15
 	bulb_mesh.material_override = bulb_material
 	add_child(bulb_mesh)
 
 	omni_light = OmniLight3D.new()
-	omni_light.position = Vector3(0.0, -0.22, 0.0)
-	omni_light.light_color = light_color
+	omni_light.position = Vector3(0.0, -0.25, 0.0)
+	omni_light.light_color = _natural_color
 	omni_light.light_energy = base_energy
-	omni_light.light_volumetric_fog_energy = 1.35
-	omni_light.omni_range = 11.5
-	omni_light.omni_attenuation = 1.25
+	omni_light.light_volumetric_fog_energy = 0.38
+	omni_light.omni_range = 14.5
+	omni_light.omni_attenuation = 1.12
 	omni_light.shadow_enabled = false
 	add_child(omni_light)
 
@@ -71,7 +74,7 @@ func _build_fixture_visuals() -> void:
 	static_body.collision_mask = 0
 	var col := CollisionShape3D.new()
 	var box_shape := BoxShape3D.new()
-	box_shape.size = Vector3(1.3, 0.25, 0.7)
+	box_shape.size = Vector3(1.35, 0.28, 0.72)
 	col.shape = box_shape
 	static_body.add_child(col)
 	add_child(static_body)
@@ -126,5 +129,5 @@ func _refresh_output() -> void:
 		omni_light.light_energy = base_energy * final_factor
 		omni_light.visible = final_factor > 0.01
 	if bulb_material:
-		bulb_material.emission_energy_multiplier = 2.8 * final_factor
-		bulb_material.albedo_color = light_color.darkened(1.0 - clampf(final_factor, 0.15, 1.0))
+		bulb_material.emission_energy_multiplier = 1.15 * final_factor
+		bulb_material.albedo_color = _natural_color.darkened(1.0 - clampf(final_factor, 0.15, 1.0))
