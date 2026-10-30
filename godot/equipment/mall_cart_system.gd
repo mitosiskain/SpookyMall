@@ -61,6 +61,9 @@ var cart_slot_labels: Array[Label3D] = []
 var cart_slot_visual_holders: Array[Node3D] = []
 var highlighted_place_slot: int = -1
 var highlighted_take_slot: int = -1
+var highlighted_hook_place_slot: int = -1
+var highlighted_hook_take_slot: int = -1
+var highlighted_monitor_mount: bool = false
 var _outline_pulse_time: float = 0.0
 var _net_cart_sync_timer: float = 0.0
 
@@ -288,10 +291,12 @@ func get_hooked_item_count() -> int:
 	return cnt
 
 ## Hangs a Video Camera, folded Camera Stand, or Hands-Only Assembled Video Rig onto an exterior side hook of the Push Cart!
-func hang_item_on_exterior_hook(item_data: Dictionary) -> int:
+func hang_item_on_exterior_hook(item_data: Dictionary, preferred_hook: int = -1) -> int:
 	if cart_type != "PushCart" or item_data.is_empty():
 		return -1
-	var hook_idx := get_first_open_exterior_hook()
+	var hook_idx := preferred_hook
+	if hook_idx < 0 or hook_idx >= exterior_hook_items.size() or not exterior_hook_items[hook_idx].is_empty():
+		hook_idx = get_first_open_exterior_hook()
 	if hook_idx == -1:
 		return -1
 	var copy := item_data.duplicate(true)
@@ -335,40 +340,43 @@ func can_accept_item_from_player(player: Node3D) -> bool:
 		return false
 	if player.has_method("get_current_active_item"):
 		var held: Dictionary = player.call("get_current_active_item")
-		if str(held.get("id", "")) == "cctv_monitor" and cart_monitor != null and not cart_monitor.is_mounted_on_cart:
+		if held.is_empty():
+			return false
+		if str(held.get("id", "")) == "cctv_monitor" and cart_monitor != null and not cart_monitor.is_mounted_on_cart and highlighted_monitor_mount:
 			return true
-		if is_exterior_hook_item(held) and get_first_open_exterior_hook() != -1:
+		if is_exterior_hook_item(held) and highlighted_hook_place_slot != -1:
 			return true
-	return get_first_open_push_cart_slot() != -1
+		if bool(held.get("can_store_in_hotbar", true)) or str(held.get("id", "")) == "cctv_monitor":
+			if highlighted_place_slot != -1 and cart_slot_items[highlighted_place_slot].is_empty():
+				return true
+	return false
 
-## Places an item Dictionary into the highlighted (or first open) slot on the Equipment Push Cart,
-## mounts a held `"cctv_monitor"` onto the front Monitor Mount (returns `200`), or hangs camera/stand rigs on exterior hooks!
+## Places an item Dictionary into the highlighted slot on the Equipment Push Cart (or `preferred_slot >= 0` during level setup),
+## mounts a held `"cctv_monitor"` onto the front Monitor Mount when highlighted (returns `200`), or hangs camera/stand rigs on highlighted exterior hooks!
 func place_item_on_cart(item_data: Dictionary, preferred_slot: int = -1) -> int:
 	if cart_type != "PushCart" or item_data.is_empty():
 		return -1
-	if str(item_data.get("id", "")) == "cctv_monitor" and cart_monitor != null and not cart_monitor.is_mounted_on_cart:
-		if cart_monitor.mount_from_hand_item(item_data):
-			if switch_audio and ResourceLoader.exists("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_On.wav"):
-				switch_audio.stream = load("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_On.wav")
-				switch_audio.pitch_scale = 0.95
-				switch_audio.play()
-			_refresh_push_cart_header_label()
-			return 200
-	if preferred_slot == -1 and is_exterior_hook_item(item_data) and (not bool(item_data.get("can_store_in_hotbar", true)) or get_first_open_push_cart_slot() == -1):
-		var hook_i := hang_item_on_exterior_hook(item_data)
-		if hook_i != -1:
-			return 100 + hook_i
+	if preferred_slot == -1:
+		# Player-initiated [G] placement: MUST be looking at a highlighted mount, hook, or shelf slot!
+		if str(item_data.get("id", "")) == "cctv_monitor" and cart_monitor != null and not cart_monitor.is_mounted_on_cart and highlighted_monitor_mount:
+			if cart_monitor.mount_from_hand_item(item_data):
+				if switch_audio and ResourceLoader.exists("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_On.wav"):
+					switch_audio.stream = load("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_On.wav")
+					switch_audio.pitch_scale = 0.95
+					switch_audio.play()
+				_refresh_push_cart_header_label()
+				return 200
+		if is_exterior_hook_item(item_data) and highlighted_hook_place_slot != -1:
+			var hook_i := hang_item_on_exterior_hook(item_data, highlighted_hook_place_slot)
+			if hook_i != -1:
+				return 100 + hook_i
+		if highlighted_place_slot >= 0 and highlighted_place_slot < cart_slot_items.size() and cart_slot_items[highlighted_place_slot].is_empty():
+			preferred_slot = highlighted_place_slot
+		else:
+			return -1
+
 	var target_slot := preferred_slot
 	if target_slot < 0 or target_slot >= cart_slot_items.size() or not cart_slot_items[target_slot].is_empty():
-		if highlighted_place_slot >= 0 and highlighted_place_slot < cart_slot_items.size() and cart_slot_items[highlighted_place_slot].is_empty():
-			target_slot = highlighted_place_slot
-		else:
-			target_slot = get_first_open_push_cart_slot()
-	if target_slot == -1:
-		if is_exterior_hook_item(item_data):
-			var hook_fallback := hang_item_on_exterior_hook(item_data)
-			if hook_fallback != -1:
-				return 100 + hook_fallback
 		return -1
 
 	var stored_copy := item_data.duplicate(true)
@@ -386,36 +394,36 @@ func place_item_on_cart(item_data: Dictionary, preferred_slot: int = -1) -> int:
 	_broadcast_cart_slots_if_coop()
 	return target_slot
 
-## Removes and returns the item Dictionary from the currently highlighted occupied slot (or exterior hook / last occupied slot) on the Push Cart.
+## Removes and returns the item Dictionary ONLY from the currently highlighted (looked-at) occupied slot or exterior hook on the Push Cart.
 func take_highlighted_item_from_cart() -> Dictionary:
 	if cart_type != "PushCart":
 		return {}
 	var slot_idx := highlighted_take_slot
-	if slot_idx < 0 or slot_idx >= cart_slot_items.size() or cart_slot_items[slot_idx].is_empty():
-		for h_i in range(exterior_hook_items.size() - 1, -1, -1):
-			if not exterior_hook_items[h_i].is_empty():
-				var hooked := exterior_hook_items[h_i].duplicate(true)
-				exterior_hook_items[h_i] = {}
-				_rebuild_exterior_hook_visual(h_i)
-				_refresh_push_cart_header_label()
-				return hooked
-		for i in range(cart_slot_items.size() - 1, -1, -1):
-			if not cart_slot_items[i].is_empty():
-				slot_idx = i
-				break
-	if slot_idx < 0 or slot_idx >= cart_slot_items.size() or cart_slot_items[slot_idx].is_empty():
-		return {}
+	if slot_idx >= 0 and slot_idx < cart_slot_items.size() and not cart_slot_items[slot_idx].is_empty():
+		var taken := cart_slot_items[slot_idx].duplicate(true)
+		cart_slot_items[slot_idx] = {}
+		_rebuild_slot_item_visual(slot_idx)
+		_refresh_push_cart_header_label()
+		if switch_audio and ResourceLoader.exists("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_Off.wav"):
+			switch_audio.stream = load("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_Off.wav")
+			switch_audio.pitch_scale = 1.08
+			switch_audio.play()
+		_broadcast_cart_slots_if_coop()
+		return taken
 
-	var taken := cart_slot_items[slot_idx].duplicate(true)
-	cart_slot_items[slot_idx] = {}
-	_rebuild_slot_item_visual(slot_idx)
-	_refresh_push_cart_header_label()
-	if switch_audio and ResourceLoader.exists("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_Off.wav"):
-		switch_audio.stream = load("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_Off.wav")
-		switch_audio.pitch_scale = 1.08
-		switch_audio.play()
-	_broadcast_cart_slots_if_coop()
-	return taken
+	if highlighted_hook_take_slot >= 0 and highlighted_hook_take_slot < exterior_hook_items.size() and not exterior_hook_items[highlighted_hook_take_slot].is_empty():
+		var h_i := highlighted_hook_take_slot
+		var hooked := exterior_hook_items[h_i].duplicate(true)
+		exterior_hook_items[h_i] = {}
+		_rebuild_exterior_hook_visual(h_i)
+		_refresh_push_cart_header_label()
+		if switch_audio and ResourceLoader.exists("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_Off.wav"):
+			switch_audio.stream = load("res://SourceAssets/EquipmentSounds/SW_Flashlight_Click_Off.wav")
+			switch_audio.pitch_scale = 1.08
+			switch_audio.play()
+		return hooked
+
+	return {}
 
 func _broadcast_cart_slots_if_coop() -> void:
 	if not Engine.is_editor_hint() and MultiplayerManager != null and MultiplayerManager.is_coop_active and multiplayer.has_multiplayer_peer():
@@ -1018,6 +1026,9 @@ func _update_push_cart_slot_outlines(delta: float) -> void:
 	var pulse := 2.4 + 1.2 * sin(_outline_pulse_time)
 	highlighted_place_slot = -1
 	highlighted_take_slot = -1
+	highlighted_hook_place_slot = -1
+	highlighted_hook_take_slot = -1
+	highlighted_monitor_mount = false
 
 	var near_player: Node3D = null
 	var best_p_dist := 2.95
@@ -1037,30 +1048,68 @@ func _update_push_cart_slot_outlines(delta: float) -> void:
 		var ray_origin := cam.global_position if cam else (near_player.global_position + Vector3(0.0, 1.6, 0.0))
 		var ray_dir := (-cam.global_transform.basis.z.normalized()) if cam else (-near_player.global_transform.basis.z.normalized())
 
-		# 1. Find the open slot closest to where the player is looking (to show the [G] Placement Outline!)
+		# 0. Check if player is looking directly at the front Monitor Mount (to mount or take the CCTV Monitor!)
+		if cart_monitor != null:
+			var mon_world := cart_monitor.global_position
+			var to_mon := mon_world - ray_origin
+			var mon_dist := to_mon.length()
+			if mon_dist > 0.15 and mon_dist <= 2.85:
+				var mon_dot := (to_mon / mon_dist).dot(ray_dir)
+				var mon_perp := to_mon.cross(ray_dir).length()
+				if mon_dot >= 0.88 and mon_perp < 0.25:
+					highlighted_monitor_mount = true
+
+		# 1. Find the open slot (or exterior hook) closest to where the player is looking (to show the [G] Placement Outline!)
 		if not held_item.is_empty():
-			var best_open_score := 0.36
+			var best_open_score := 0.22
 			for i in range(PUSH_CART_SLOT_OFFSETS.size()):
 				if cart_slot_items[i].is_empty():
 					var slot_world := to_global(PUSH_CART_SLOT_OFFSETS[i] + Vector3(0.0, 0.08, 0.0))
 					var to_slot := slot_world - ray_origin
-					if to_slot.dot(ray_dir) > 0.25:
+					var s_dist := to_slot.length()
+					if s_dist > 0.15 and s_dist <= 2.85 and (to_slot / s_dist).dot(ray_dir) >= 0.88:
 						var perp_dist := to_slot.cross(ray_dir).length()
 						if perp_dist < best_open_score:
 							best_open_score = perp_dist
 							highlighted_place_slot = i
 
-		# 2. Find the occupied slot closest to where the player is looking (to allow taking with [F]!)
-		var best_take_score := 0.36
+			if is_exterior_hook_item(held_item):
+				var best_hook_place_score := 0.24
+				for h_i in range(EXTERIOR_HOOK_OFFSETS.size()):
+					if exterior_hook_items[h_i].is_empty():
+						var hook_world := to_global(EXTERIOR_HOOK_OFFSETS[h_i])
+						var to_hook := hook_world - ray_origin
+						var h_dist := to_hook.length()
+						if h_dist > 0.15 and h_dist <= 2.85 and (to_hook / h_dist).dot(ray_dir) >= 0.88:
+							var perp_dist := to_hook.cross(ray_dir).length()
+							if perp_dist < best_hook_place_score:
+								best_hook_place_score = perp_dist
+								highlighted_hook_place_slot = h_i
+
+		# 2. Find the occupied slot (or exterior hook) closest to where the player is looking (to allow taking with [F]!)
+		var best_take_score := 0.22
 		for i in range(PUSH_CART_SLOT_OFFSETS.size()):
 			if not cart_slot_items[i].is_empty():
 				var slot_world := to_global(PUSH_CART_SLOT_OFFSETS[i] + Vector3(0.0, 0.08, 0.0))
 				var to_slot := slot_world - ray_origin
-				if to_slot.dot(ray_dir) > 0.25:
+				var s_dist := to_slot.length()
+				if s_dist > 0.15 and s_dist <= 2.85 and (to_slot / s_dist).dot(ray_dir) >= 0.88:
 					var perp_dist := to_slot.cross(ray_dir).length()
 					if perp_dist < best_take_score:
 						best_take_score = perp_dist
 						highlighted_take_slot = i
+
+		var best_hook_take_score := 0.24
+		for h_i in range(EXTERIOR_HOOK_OFFSETS.size()):
+			if not exterior_hook_items[h_i].is_empty():
+				var hook_world := to_global(EXTERIOR_HOOK_OFFSETS[h_i])
+				var to_hook := hook_world - ray_origin
+				var h_dist := to_hook.length()
+				if h_dist > 0.15 and h_dist <= 2.85 and (to_hook / h_dist).dot(ray_dir) >= 0.88:
+					var perp_dist := to_hook.cross(ray_dir).length()
+					if perp_dist < best_hook_take_score:
+						best_hook_take_score = perp_dist
+						highlighted_hook_take_slot = h_i
 
 		var held_name: String = str(held_item.get("name", "Item"))
 		for i in range(cart_slot_outlines.size()):

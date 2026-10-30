@@ -1487,12 +1487,15 @@ func _populate_wing_lights_signs_and_props(
 	var mannequin_model := "res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25257_FemaleMannequin.fbx"
 	var rail_model := "res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25208_StraightHangingRail.fbx"
 	if floor_num == 1:
-		# Central Rotunda Cosmetics & Watch Island Counters (inside X = -4..+4m, t = 12..16m)
+		# Central Rotunda Cosmetics & Watch Island Counters (inside X = -4..+4m, t = 12..16m) + Display Mannequins flanking the Rotunda!
 		for cx in [-3.2, 3.2]:
 			_spawn_prop(fl_root, counter_model, c_end + t_end * 12.8 + r_end * cx, Vector3(1.6, 1.15, 0.85))
 			_spawn_prop(fl_root, counter_model, c_end + t_end * 15.8 + r_end * cx, Vector3(1.6, 1.15, 0.85))
+		for mx in [-11.5, 11.5]:
+			_spawn_prop(fl_root, mannequin_model, c_end + t_end * 6.8 + r_end * mx, Vector3(0.6, 1.78, 0.6))
 		for ax in [-23.0, -16.5, 16.5, 23.0]:
 			_spawn_prop(fl_root, gondola_model, c_end + t_end * 14.5 + r_end * ax, Vector3(1.6, 1.5, 0.9))
+			_spawn_prop(fl_root, mannequin_model, c_end + t_end * 20.5 + r_end * ax, Vector3(0.6, 1.78, 0.6))
 			_spawn_prop(fl_root, desk_model, c_end + t_end * 26.5 + r_end * ax, Vector3(1.4, 1.1, 0.8))
 	elif floor_num == 2:
 		for ax in [-23.5, -17.5, 17.5, 23.5]:
@@ -1652,6 +1655,7 @@ func _build_sign_header(parent: Node3D, pos: Vector3, rot_deg: Vector3, text_str
 	parent.add_child(lbl)
 
 func _spawn_prop(parent: Node3D, model_path: String, pos: Vector3, col_size: Vector3, with_col: bool = true) -> void:
+	var prop_root: Node3D = null
 	if ResourceLoader.exists(model_path):
 		var packed := load(model_path) as PackedScene
 		if packed:
@@ -1660,6 +1664,15 @@ func _spawn_prop(parent: Node3D, model_path: String, pos: Vector3, col_size: Vec
 				inst.position = pos
 				MallPbrMaterialLibrary.beautify_model_materials(inst, model_path, Color(0.76, 0.68, 0.58))
 				parent.add_child(inst)
+				prop_root = inst
+	if prop_root != null and ("Mannequin" in model_path or "TorsoForm" in model_path or "LegForm" in model_path):
+		prop_root.add_to_group("mall_mannequins")
+		var seed_val := absi(int(pos.x * 137.0 + pos.z * 251.0 + pos.y * 53.0))
+		prop_root.set_meta("mannequin_name", "Department Store Mannequin")
+		prop_root.set_meta("uncanny_seed", seed_val)
+		prop_root.set_meta("body_temp_c", 29.8 + float(seed_val % 36) * 0.1)
+		prop_root.set_meta("barcode_sku", "SKU #0000-M: DEPARTMENT MANNEQUIN [WARNING: POSE DRIFT DETECTED]")
+		prop_root.set_meta("parabolic_sound", "Department Mannequin: Faint fiberglass neck-joint creak... & muffled breathing?! (26 dB)")
 	if with_col and col_size.length_squared() > 0.01:
 		var sb := StaticBody3D.new()
 		sb.position = pos + Vector3(0.0, col_size.y * 0.5, 0.0)

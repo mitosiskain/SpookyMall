@@ -93,6 +93,7 @@ class PlaceableMotionSensor extends Node3D:
 
 	func _ready() -> void:
 		add_to_group("motion_sensors")
+		add_to_group("placeable_motion_sensors")
 		var fbx_path := "res://SourceAssets/Equipment/Prepared/SM_MotionSensor.fbx"
 		if ResourceLoader.exists(fbx_path):
 			var packed := load(fbx_path) as PackedScene
@@ -145,14 +146,56 @@ class PlaceableMotionSensor extends Node3D:
 
 		for g in get_tree().get_nodes_in_group("store_ghosts"):
 			var ghost := g as StoreGhost
-			if ghost and ghost.visible and global_position.distance_to(ghost.global_position) <= 4.8:
+			if ghost and not ghost.is_resolved and global_position.distance_to(ghost.global_position) <= 4.8:
 				if _cooldown <= 0.0:
 					_cooldown = 4.5
 					trigger_count += 1
 					motion_active_timer = 2.8
-					readout_label.text = "IR MOTION ALERT! [Invisible Presence | Hits: %d]" % trigger_count
+					strobe_light.light_color = Color(0.25, 1.0, 0.55)
+					readout_label.text = "IR MOTION ALERT! [Invisible Ghost Presence | Hits: %d]" % trigger_count
 					readout_label.modulate = Color(0.25, 1.0, 0.55)
 					GameState.status_message.emit("IR Motion Sensor [%s] Triggered (#%d) — Spectral presence crossed aisle!" % [store_id, trigger_count], Color(0.3, 1.0, 0.85))
+				return
+
+		# Non-Ghost Presences: Store Mannequin micro-twitches & Investigator/NPC pass-by!
+		if motion_active_timer <= 0.0:
+			var near_mannequin := false
+			for m_node in get_tree().get_nodes_in_group("mall_mannequins"):
+				var m3d := m_node as Node3D
+				if m3d and absf(m3d.global_position.y - global_position.y) <= 2.2 and global_position.distance_to(m3d.global_position) <= 3.8:
+					near_mannequin = true
+					break
+			if near_mannequin:
+				var creep_pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() * 0.004)
+				strobe_light.light_color = Color(1.0, 0.58, 0.18)
+				strobe_light.light_energy = 0.85 * creep_pulse
+				readout_label.text = "IR SENSOR: MICRO-MOVEMENT (0.4 cm)\n[DISPLAY MANNEQUIN TWITCHED?! | Hits: %d]" % trigger_count
+				readout_label.modulate = Color(1.0, 0.68, 0.28)
+				return
+
+			var near_human_name := ""
+			for p_node in get_tree().get_nodes_in_group("players"):
+				var p3d := p_node as Node3D
+				if p3d and absf(p3d.global_position.y - global_position.y) <= 2.2 and global_position.distance_to(p3d.global_position) <= 2.6:
+					var vel: Vector3 = p3d.get("velocity") if p3d.get("velocity") != null else Vector3.ZERO
+					if Vector2(vel.x, vel.z).length() > 0.25:
+						near_human_name = "Investigator"
+						break
+			if near_human_name.is_empty():
+				for n_node in get_tree().get_nodes_in_group("mall_npcs"):
+					var n3d := n_node as Node3D
+					if n3d and absf(n3d.global_position.y - global_position.y) <= 2.2 and global_position.distance_to(n3d.global_position) <= 3.0:
+						near_human_name = str(n3d.get_meta("npc_name", "Mall Staff"))
+						break
+			if not near_human_name.is_empty():
+				strobe_light.light_color = Color(0.35, 0.85, 1.0)
+				strobe_light.light_energy = 0.65
+				readout_label.text = "IR SENSOR: NON-GHOST PASS-BY [%s | Hits: %d]" % [near_human_name, trigger_count]
+				readout_label.modulate = Color(0.55, 0.90, 1.0)
+			else:
+				strobe_light.light_color = Color(0.15, 0.95, 1.0)
+				readout_label.text = "IR MOTION SENSOR [IDLE | Hits: %d]" % trigger_count
+				readout_label.modulate = Color(0.45, 0.95, 1.0)
 
 
 # ------------------------------------------------------------------------------

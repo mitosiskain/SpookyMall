@@ -332,6 +332,13 @@ func _spawn_interactive_props_and_sanctuaries() -> void:
 	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_User_BistrotTableSet.fbx", Vector3(-14.5, 0.0, -35.2), Vector3(1.2, 0.80, 1.2), Color(0.58, 0.42, 0.28), true)
 	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25310_CashDesk120.fbx", Vector3(-18.0, 0.0, -36.8), Vector3(1.25, 1.05, 0.75), Color(0.62, 0.38, 0.28), true)
 	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25376_WasteStation.fbx", Vector3(-15.8, 0.0, -36.8), Vector3(0.65, 1.0, 0.55), Color(0.48, 0.52, 0.56), true)
+	var chef_node := _spawn_model_or_box("res://SourceAssets/Characters/NormalizedLowPoly/Quartermaster_Chen_LowPoly.glb", Vector3(-18.0, 0.0, -38.0), Vector3(0.5, 1.76, 0.5), Color(0.88, 0.48, 0.32), false)
+	chef_node.add_to_group("mall_npcs")
+	chef_node.set_meta("npc_name", "Night-Market Hot Pot Chef")
+	chef_node.set_meta("body_temp_c", 37.2)
+	chef_node.set_meta("is_living_human", true)
+	chef_node.set_meta("barcode_sku", "EMP-1997-CHEF: NIGHT-MARKET CULINARY STAFF [ACTIVE SHIFT]")
+	chef_node.set_meta("parabolic_sound", "Hot Pot Chef: Simmering chili broth & cleaver prep (41 dB)")
 
 	# 4. Quartermaster Chen's Raised Surplus Platform on the East Concourse Plaza (23.6, 0.0, 0.0) with West-facing stairs toward the Oval Island!
 	var vendor_plat_pos := Vector3(23.6, 0.0, 0.0)
@@ -340,13 +347,54 @@ func _spawn_interactive_props_and_sanctuaries() -> void:
 	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25310_CashDesk120.fbx", vendor_pos, Vector3(1.23, 1.05, 0.75), Color(0.45, 0.58, 0.48), true)
 	_spawn_model_or_box("res://ExternalAssets/Mall/PolyHaven/ImportReady/SM_RetailShelves01.fbx", Vector3(25.0, 0.48, -1.6), Vector3(1.1, 2.1, 0.55), Color(0.55, 0.58, 0.62), true)
 	_spawn_model_or_box("res://ExternalAssets/Mall/RetailKit/ImportReady/SM_Retail_25400_StockRollCage.fbx", Vector3(25.0, 0.48, 1.6), Vector3(0.85, 1.7, 0.75), Color(0.60, 0.64, 0.68), true)
-	var chen_node := _spawn_model_or_box("res://SourceAssets/Characters/NormalizedLowPoly/Quartermaster_Chen_LowPoly.glb", Vector3(24.1, 0.48, 0.0), Vector3(0.5, 1.78, 0.5), Color(0.42, 0.68, 0.52), false)
+	var chen_node := _spawn_model_or_box("res://SourceAssets/Characters/MikuDoomer_Chen.glb", Vector3(24.1, 0.48, 0.0), Vector3(0.5, 1.62, 0.5), Color(0.42, 0.68, 0.52), false)
 	chen_node.rotation_degrees = Vector3(0, -90, 0)
+	chen_node.add_to_group("mall_npcs")
+	chen_node.set_meta("npc_name", "Quartermaster Chen (Surplus Trader)")
+	chen_node.set_meta("body_temp_c", 36.8)
+	chen_node.set_meta("is_living_human", true)
+	chen_node.set_meta("barcode_sku", "EMP-1994-CHEN: QUARTERMASTER CHEN [CLOCKED IN: 10,240 CONSECUTIVE HRS]")
+	chen_node.set_meta("parabolic_sound", "Quartermaster Chen: Shortwave radio static & counting brass tokens (35 dB)")
+	var chen_anim_ik := HumanoidIKAndAnimController.new()
+	chen_anim_ik.default_animation = "Custom_Chen_Idle"
+	chen_anim_ik.enable_look_at_ik = true
+	chen_node.add_child(chen_anim_ik)
 	_create_floating_label(
 		vendor_pos + Vector3(0, 2.25, 0),
-		"[F] Quartermaster Chen — Trader & Upgrade Shop\n• Sell Filled Ectoplasm Canisters (+$85 Gremlin / +$180-$260 Store Ghost)\n• Buy Empty Canister ($35) | Relay Fuse ($60) | Film ($20)\n• Ray Gun & Canister Upgrades (Higher-Tier Upgrades Unlock on Floor 2+!)",
+		"[E] Quartermaster Chen — Trader & Upgrade Shop (MikuDoomer + Idle & Real-Time Look-At IK)\n• Sell Filled Ectoplasm Canisters (+$85 Gremlin / +$180-$260 Store Ghost)\n• Buy Empty Canister ($35) | Relay Fuse ($60) | Film ($20)\n• Ray Gun & Canister Upgrades (Higher-Tier Upgrades Unlock on Floor 2+!)",
 		Color(0.78, 0.96, 0.84)
 	)
+
+	# 4B. Side-by-Side Animation & IK Comparison Showcase (Universal Animation Library vs. Custom Procedural Animations)
+	#     Placed immediately North of Quartermaster Chen's platform (X = 23.2m, Z = -4.2m .. -8.4m) facing West toward the player!
+	_create_static_box(self, Vector3(23.2, 0.08, -6.3), Vector3(1.6, 0.16, 5.8), Color(0.28, 0.32, 0.38), 0.35)
+	var comparison_specs: Array[Dictionary] = [
+		{"anim": "Custom_Chen_Idle", "z": -4.2, "title": "1. CUSTOM IDLE (Custom_Chen_Idle)\n+ Real-Time Spine/Neck/Head Look-At IK", "col": Color(0.48, 1.0, 0.78)},
+		{"anim": "UAL_Idle_Loop", "z": -5.6, "title": "2. UNIVERSAL LIB IDLE (UAL_Idle_Loop)\n+ Real-Time Spine/Neck/Head Look-At IK", "col": Color(0.55, 0.90, 1.0)},
+		{"anim": "Custom_Walk_Loop", "z": -7.0, "title": "3. CUSTOM WALK (Custom_Walk_Loop)\nProcedural Keyframe Walk Cycle", "col": Color(1.0, 0.88, 0.48)},
+		{"anim": "UAL_Walk_Loop", "z": -8.4, "title": "4. UNIVERSAL LIB WALK (UAL_Walk_Loop)\nRetargeted Quaternius UAL1 Walk", "col": Color(1.0, 0.72, 0.88)},
+	]
+	for spec in comparison_specs:
+		var m_pos := Vector3(23.2, 0.16, float(spec["z"]))
+		var m_node := _spawn_model_or_box("res://SourceAssets/Characters/MikuDoomer_Chen.glb", m_pos, Vector3(0.5, 1.62, 0.5), Color(0.5, 0.6, 0.7), false)
+		m_node.rotation_degrees = Vector3(0, -90, 0)
+		m_node.add_to_group("mall_npcs")
+		m_node.add_to_group("anim_comparison_models")
+		m_node.set_meta("npc_name", "Animation Showcase (%s)" % str(spec["anim"]))
+		m_node.set_meta("body_temp_c", 36.6)
+		m_node.set_meta("is_living_human", true)
+		var ctrl := HumanoidIKAndAnimController.new()
+		ctrl.default_animation = str(spec["anim"])
+		ctrl.enable_look_at_ik = true
+		m_node.add_child(ctrl)
+		var m_lbl := _create_floating_label(
+			m_pos + Vector3(0.0, 1.92, 0.0),
+			"%s\n[Look + Press E to Cycle All 8 Animations]" % str(spec["title"]),
+			spec["col"] as Color
+		)
+		m_node.set_meta("anim_controller", ctrl)
+		m_node.set_meta("anim_label", m_lbl)
+		m_node.set_meta("base_title", str(spec["title"]))
 
 	#    Quartermaster Chen's Single-Line Surplus Equipment Display Table (at X = 18.2m, Z = -13.2m..+13.2m on the East Concourse Plaza)
 	#    Laid out in ONE straight line (single row, 1.48m apart) so no item ever sits behind another item!
@@ -388,6 +436,12 @@ func _spawn_interactive_props_and_sanctuaries() -> void:
 
 	zoltar_booth = ExpandedMallGadgets.ZoltarFortuneBooth.new()
 	zoltar_booth.position = Vector3(-10.5, 0.0, 8.5)
+	zoltar_booth.add_to_group("mall_npcs")
+	zoltar_booth.set_meta("npc_name", "Zoltar Coin-Op Automaton")
+	zoltar_booth.set_meta("body_temp_c", 31.8)
+	zoltar_booth.set_meta("is_living_human", false)
+	zoltar_booth.set_meta("barcode_sku", "SKU #1988-ZOL: ANIMATRONIC FORTUNE TELLER [UNPLUGGED — WHY IS IT WARM?!]")
+	zoltar_booth.set_meta("parabolic_sound", "Zoltar Automaton: Clockwork gears clicking & mechanical breathing (31 dB)")
 	add_child(zoltar_booth)
 
 	var orb_f2 := VideoAndAudioSurveillance.GhostOrbActor.new()
@@ -423,6 +477,12 @@ func _spawn_interactive_props_and_sanctuaries() -> void:
 
 	# Elena Vance's Phased Audit Echo on Floor 2 North Promenade (1.74m 1:1 scale, right in front of the North Cardinal Bridge at Z = -30.0m!)
 	var _elena_node := _spawn_model_or_box("res://SourceAssets/Characters/NormalizedLowPoly/Elena_Vance_LowPoly.glb", Vector3(0.0, 8.50, -34.0), Vector3(0.5, 1.74, 0.5), Color(0.6, 0.88, 0.96), false)
+	_elena_node.add_to_group("mall_npcs")
+	_elena_node.set_meta("npc_name", "Elena Vance (Phased Audit Echo)")
+	_elena_node.set_meta("body_temp_c", 13.8)
+	_elena_node.set_meta("is_living_human", false)
+	_elena_node.set_meta("barcode_sku", "ARC-0001-VANCE: CHIEF ARCHITECT ELENA VANCE [TIMELINE DESYNC]")
+	_elena_node.set_meta("parabolic_sound", "Elena Vance Echo: Whispering 1998 structural load calculations (29 dB)")
 	_create_floating_label(Vector3(0.0, 10.6, -34.0), "Elena Vance's Audit Trail #1\n\"Cross the 4 Cardinal Bridges onto the Double-Radius Central Oval Island, or wheel your Carts onto the Service Freight Elevator [10, 0, -25.8] across all 7+ Floors!\"", Color(0.84, 0.95, 0.98))
 
 	# 7. Haunted Store Interior Props & Mall Store Furnishings inside 32.0m-Wide x 26.0m-Deep Bay 0 Store East_F0_02 (X = 20..46, Z = -74..-42)
@@ -912,7 +972,37 @@ func _refresh_voice_menu_status() -> void:
 		]
 	)
 
-## [F] ("interact"): Strictly reserved for PICKING UP items (Mounted Cart CCTV Monitor -> Hands, Table items, Dropped floor tools, Placed Video Cameras / Canisters / Recorders / Laser Domes / Wards, Death Inventory Crates, or taking a stored item off the Push Cart shelf)!
+## Computes how closely the player's crosshair ray (`look_origin`, `look_fwd`) aims at `target_pos`.
+## Returns `-1.0` if the item is out of range OR the player is not looking at it!
+## Otherwise returns a lower-is-better alignment score (`perp_dist + dist * 0.08`).
+func _get_look_target_score(
+	look_origin: Vector3,
+	look_fwd: Vector3,
+	target_pos: Vector3,
+	max_range: float = 2.85,
+	hit_radius: float = 0.28,
+	min_dot: float = 0.88
+) -> float:
+	if not is_instance_valid(player):
+		return -1.0
+	if absf(target_pos.y - player.global_position.y) > 2.45:
+		return -1.0
+	var to_target := target_pos - look_origin
+	var dist := to_target.length()
+	if dist < 0.12 or dist > max_range:
+		return -1.0
+	var ray_proj := to_target.dot(look_fwd)
+	if ray_proj <= 0.12:
+		return -1.0
+	var dot_val := ray_proj / dist
+	var perp_dist := (to_target - look_fwd * ray_proj).length()
+	# Must be both within the angular cone OR tight perpendicular radius around the crosshair ray!
+	if dot_val < min_dot or perp_dist > hit_radius:
+		return -1.0
+	return perp_dist + dist * 0.08
+
+## [F] ("interact"): Strictly reserved for PICKING UP items that the player is IN RANGE OF AND LOOKING DIRECTLY AT!
+## Never uses proximity-only fallbacks — evaluates all looked-at pickup targets and selects the one closest to the crosshair ray.
 func _handle_pickup_interact() -> void:
 	if player.is_floating_essence:
 		GameState.status_message.emit(
@@ -926,35 +1016,153 @@ func _handle_pickup_interact() -> void:
 	var look_origin := look_cam.global_position if look_cam else (ppos + Vector3(0.0, 1.4, 0.0))
 	var look_fwd := (-look_cam.global_transform.basis.z.normalized()) if look_cam else (-player.global_transform.basis.z.normalized())
 
-	# 0. If looking directly at the Push Cart's mounted CCTV Monitor (<= 2.85m), pressing [F] unmounts & picks it up into the player's HANDS slot!
+	var best_kind := ""
+	var best_node: Object = null
+	var best_score := 999.0
+
+	# 1. Mounted Cart CCTV Monitor (must be looked at directly!)
 	for mon_node in get_tree().get_nodes_in_group("cart_computer_monitors"):
 		var mon := mon_node as VideoAndAudioSurveillance.CartComputerMonitor
-		if mon and mon.is_mounted_on_cart and ppos.distance_to(mon.global_position) < 2.85:
-			var to_mon := (mon.global_position - look_origin).normalized()
-			if look_fwd.dot(to_mon) > 0.58:
-				var mon_item := mon.unmount_to_hand_item()
-				if not mon_item.is_empty():
-					if mon.parent_cart != null and mon.parent_cart.has_method("_refresh_push_cart_header_label"):
-						mon.parent_cart.call("_refresh_push_cart_header_label")
-					player.receive_item_from_cart(mon_item)
-					player.play_flashlight_click(true)
-					GameState.status_message.emit(
-						"Picked up Portable CCTV Monitor from Cart into HANDS [F]! ([LMB] Power ON/OFF | [RMB] Cycle Camera Locations | [G] near Cart to Mount Back on Cart)",
-						Color(0.45, 0.96, 1.0)
-					)
-					return
+		if mon and mon.is_mounted_on_cart:
+			var sc := _get_look_target_score(look_origin, look_fwd, mon.global_position, 2.85, 0.25, 0.88)
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "cart_monitor"
+				best_node = mon
 
-	# 1. Pick up a Death Inventory Crate into Hands (Hands-Only — cannot go on the 4-slot hotbar!)
+	# 2. Highlighted (looked-at) item on an 8-Slot Equipment Push Cart shelf or exterior hook
+	for pc_node in get_tree().get_nodes_in_group("push_carts"):
+		var pc := pc_node as MallCartSystem
+		if pc and ppos.distance_to(pc.global_position) <= 2.95:
+			if pc.highlighted_take_slot >= 0 and pc.highlighted_take_slot < pc.cart_slot_items.size() and not pc.cart_slot_items[pc.highlighted_take_slot].is_empty():
+				var slot_world := pc.to_global(MallCartSystem.PUSH_CART_SLOT_OFFSETS[pc.highlighted_take_slot] + Vector3(0.0, 0.08, 0.0))
+				var sc := _get_look_target_score(look_origin, look_fwd, slot_world, 2.85, 0.24, 0.88)
+				if sc >= 0.0 and sc < best_score:
+					best_score = sc
+					best_kind = "cart_slot"
+					best_node = pc
+			elif pc.highlighted_hook_take_slot >= 0 and pc.highlighted_hook_take_slot < pc.exterior_hook_items.size() and not pc.exterior_hook_items[pc.highlighted_hook_take_slot].is_empty():
+				var hook_world := pc.to_global(MallCartSystem.EXTERIOR_HOOK_OFFSETS[pc.highlighted_hook_take_slot])
+				var sc := _get_look_target_score(look_origin, look_fwd, hook_world, 2.85, 0.25, 0.88)
+				if sc >= 0.0 and sc < best_score:
+					best_score = sc
+					best_kind = "cart_slot"
+					best_node = pc
+
+	# 3. WorldDroppedItems on the Equipment Table or floor (must be looked at directly!)
+	for d_node in get_tree().get_nodes_in_group("world_dropped_items"):
+		var drop := d_node as PlaceableEvidenceActors.WorldDroppedItem
+		if drop:
+			var sc := _get_look_target_score(look_origin, look_fwd, drop.global_position + Vector3(0.0, 0.12, 0.0), 2.85, 0.28, 0.88)
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "world_drop"
+				best_node = drop
+
+	# 4. Death Inventory Crate (must be looked at!)
 	for c_node in get_tree().get_nodes_in_group("death_inventory_crates"):
 		var crate := c_node as PlaceableEvidenceActors.DeathInventoryCrate
-		if crate and ppos.distance_to(crate.global_position) < 2.8:
-			player.pickup_death_crate_in_hands(crate)
-			return
+		if crate:
+			var sc := _get_look_target_score(look_origin, look_fwd, crate.global_position + Vector3(0.0, 0.20, 0.0), 2.85, 0.36, 0.86)
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "death_crate"
+				best_node = crate
 
-	# 2. Pick up ANY EctoplasmCanisterTrap on the floor (either FILLED to take to Trader Chen to sell, or EMPTY/DEPLETED to recharge & reposition)!
+	# 5. Ectoplasm Canister Trap on the floor (must be looked at!)
 	for can_node in get_tree().get_nodes_in_group("ectoplasm_canisters"):
 		var can_trap := can_node as PlaceableEvidenceActors.EctoplasmCanisterTrap
-		if can_trap and ppos.distance_to(can_trap.global_position) < 2.6:
+		if can_trap:
+			var sc := _get_look_target_score(look_origin, look_fwd, can_trap.global_position + Vector3(0.0, 0.14, 0.0), 2.85, 0.30, 0.88)
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "canister"
+				best_node = can_trap
+
+	# 6. Placeable Infrared Motion Sensor on the floor (must be looked at!)
+	for ms_node in get_tree().get_nodes_in_group("placeable_motion_sensors"):
+		var ms := ms_node as PlaceableEvidenceActors.PlaceableMotionSensor
+		if ms:
+			var sc := _get_look_target_score(look_origin, look_fwd, ms.global_position + Vector3(0.0, 0.18, 0.0), 2.85, 0.30, 0.88)
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "motion_sensor"
+				best_node = ms
+
+	# 7. PlacedVideoCameraActor (standalone camera or 1.45m tripod rig — check both base and head height!)
+	for cam_node in get_tree().get_nodes_in_group("placed_video_cameras"):
+		var pcam := cam_node as VideoAndAudioSurveillance.PlacedVideoCameraActor
+		if pcam:
+			var head_h := 1.35 if pcam.is_on_tripod_stand else 0.22
+			var sc_head := _get_look_target_score(look_origin, look_fwd, pcam.global_position + Vector3(0.0, head_h, 0.0), 2.85, 0.32, 0.87)
+			var sc_base := _get_look_target_score(look_origin, look_fwd, pcam.global_position + Vector3(0.0, 0.25, 0.0), 2.85, 0.32, 0.87)
+			var sc := sc_head if (sc_head >= 0.0 and (sc_base < 0.0 or sc_head < sc_base)) else sc_base
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "placed_camera"
+				best_node = pcam
+
+	# 8. ParanormalAudioRecorderActor, LaserGridDomeActor, EASPedestalWardActor (must be looked at!)
+	for rec_node in get_tree().get_nodes_in_group("audio_recorders"):
+		var rec := rec_node as VideoAndAudioSurveillance.ParanormalAudioRecorderActor
+		if rec:
+			var sc := _get_look_target_score(look_origin, look_fwd, rec.global_position + Vector3(0.0, 0.12, 0.0), 2.85, 0.28, 0.88)
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "audio_recorder"
+				best_node = rec
+	for dome_node in get_tree().get_nodes_in_group("laser_grid_domes"):
+		var dome := dome_node as ExpandedMallGadgets.LaserGridDomeActor
+		if dome:
+			var sc := _get_look_target_score(look_origin, look_fwd, dome.global_position + Vector3(0.0, 0.14, 0.0), 2.85, 0.28, 0.88)
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "laser_dome"
+				best_node = dome
+	for ward_node in get_tree().get_nodes_in_group("eas_pedestal_wards"):
+		var ward := ward_node as ExpandedMallGadgets.EASPedestalWardActor
+		if ward and not ward.is_burned_out:
+			var sc := _get_look_target_score(look_origin, look_fwd, ward.global_position + Vector3(0.0, 0.55, 0.0), 2.85, 0.34, 0.87)
+			if sc >= 0.0 and sc < best_score:
+				best_score = sc
+				best_kind = "eas_ward"
+				best_node = ward
+
+	# Execute ONLY the single best looked-at pickup candidate!
+	match best_kind:
+		"cart_monitor":
+			var mon := best_node as VideoAndAudioSurveillance.CartComputerMonitor
+			var mon_item := mon.unmount_to_hand_item()
+			if not mon_item.is_empty():
+				if mon.parent_cart != null and mon.parent_cart.has_method("_refresh_push_cart_header_label"):
+					mon.parent_cart.call("_refresh_push_cart_header_label")
+				player.receive_item_from_cart(mon_item)
+				player.play_flashlight_click(true)
+				GameState.status_message.emit(
+					"Picked up Portable CCTV Monitor from Cart into HANDS [F]! ([LMB] Power ON/OFF | [RMB] Cycle Camera Locations | Look at Cart Mount + [G] to Mount Back)",
+					Color(0.45, 0.96, 1.0)
+				)
+				return
+		"cart_slot":
+			var pc := best_node as MallCartSystem
+			var taken := pc.take_highlighted_item_from_cart()
+			if not taken.is_empty():
+				player.receive_item_from_cart(taken)
+				GameState.status_message.emit(
+					"Picked up %s [F] off Equipment Push Cart (%d/8 stored on cart)." % [taken.get("name", "Tool"), pc.get_stored_item_count()],
+					Color(1.0, 0.90, 0.42)
+				)
+				return
+		"world_drop":
+			var drop := best_node as PlaceableEvidenceActors.WorldDroppedItem
+			player.pickup_world_item(drop)
+			return
+		"death_crate":
+			var crate := best_node as PlaceableEvidenceActors.DeathInventoryCrate
+			player.pickup_death_crate_in_hands(crate)
+			return
+		"canister":
+			var can_trap := best_node as PlaceableEvidenceActors.EctoplasmCanisterTrap
 			if can_trap.is_captured:
 				var filled_data := PlayerController.make_filled_canister_item_data(
 					can_trap.captured_entity_name,
@@ -965,12 +1173,11 @@ func _handle_pickup_interact() -> void:
 				can_trap.queue_free()
 				player.receive_item_from_cart(filled_data)
 				GameState.status_message.emit(
-					"Picked up FILLED Ectoplasm Canister (%s — Worth $%d)! Take it to Trader Chen [-14.2, 0, 0] and press [E] to sell it and buy a new Empty Canister!" % [
+					"Picked up FILLED Ectoplasm Canister (%s — Worth $%d)! Take it to Trader Chen and press [E] to sell it!" % [
 						filled_data.get("captured_entity", "Ghost"), int(filled_data.get("bounty_value", 180))
 					],
 					Color(1.0, 0.88, 0.35)
 				)
-				return
 			else:
 				var can_data := PlayerController.make_item_data("ectoplasm_canister")
 				can_data["deployed_seconds_left"] = can_trap.deployed_seconds_left
@@ -984,57 +1191,41 @@ func _handle_pickup_interact() -> void:
 					],
 					Color(0.35, 1.0, 0.68)
 				)
-				return
-
-	# 3. Pick up any individual WorldDroppedItem on the Equipment Table or floor (prioritizing the item the player is looking at!)
-	var best_drop: PlaceableEvidenceActors.WorldDroppedItem = null
-	var best_score := 999.0
-	for d_node in get_tree().get_nodes_in_group("world_dropped_items"):
-		var drop := d_node as PlaceableEvidenceActors.WorldDroppedItem
-		if drop:
-			var d := ppos.distance_to(drop.global_position)
-			if d < 2.65:
-				var to_drop := (drop.global_position + Vector3(0.0, 0.15, 0.0)) - look_origin
-				var look_align := look_fwd.dot(to_drop.normalized())
-				var score := d - maxf(0.0, look_align) * 1.35
-				if score < best_score:
-					best_score = score
-					best_drop = drop
-	if best_drop:
-		player.pickup_world_item(best_drop)
-		return
-
-	# 4. Pick up PlacedVideoCameraActor, ParanormalAudioRecorderActor, LaserGridDomeActor, or EASPedestalWardActor!
-	for cam_node in get_tree().get_nodes_in_group("placed_video_cameras"):
-		var pcam := cam_node as VideoAndAudioSurveillance.PlacedVideoCameraActor
-		if pcam and ppos.distance_to(pcam.global_position) < 2.4:
+			return
+		"motion_sensor":
+			var ms := best_node as PlaceableEvidenceActors.PlaceableMotionSensor
+			var ms_data := PlayerController.make_item_data("motion_sensor")
+			ms.remove_from_group("placeable_motion_sensors")
+			ms.queue_free()
+			player.receive_item_from_cart(ms_data)
+			GameState.status_message.emit("Picked up Infrared Motion Sensor [F]!", Color(0.45, 1.0, 0.75))
+			return
+		"placed_camera":
+			var pcam := best_node as VideoAndAudioSurveillance.PlacedVideoCameraActor
 			var cam_data: Dictionary = pcam.to_pickup_item_data()
 			pcam.remove_from_group("placed_video_cameras")
 			pcam.queue_free()
 			player.receive_item_from_cart(cam_data)
 			GameState.status_message.emit("Picked up %s [F]!" % cam_data.get("name", "Video Camera"), Color(0.45, 1.0, 0.75))
 			return
-	for rec_node in get_tree().get_nodes_in_group("audio_recorders"):
-		var rec := rec_node as VideoAndAudioSurveillance.ParanormalAudioRecorderActor
-		if rec and ppos.distance_to(rec.global_position) < 2.4:
+		"audio_recorder":
+			var rec := best_node as VideoAndAudioSurveillance.ParanormalAudioRecorderActor
 			var rec_data: Dictionary = rec.to_pickup_item_data()
 			rec.remove_from_group("audio_recorders")
 			rec.queue_free()
 			player.receive_item_from_cart(rec_data)
 			GameState.status_message.emit("Picked up %s [F]!" % rec_data.get("name", "Audio Recorder"), Color(0.45, 1.0, 0.75))
 			return
-	for dome_node in get_tree().get_nodes_in_group("laser_grid_domes"):
-		var dome := dome_node as ExpandedMallGadgets.LaserGridDomeActor
-		if dome and ppos.distance_to(dome.global_position) < 2.2:
+		"laser_dome":
+			var dome := best_node as ExpandedMallGadgets.LaserGridDomeActor
 			var d_data := PlayerController.make_item_data("laser_grid_dome")
 			dome.remove_from_group("laser_grid_domes")
 			dome.queue_free()
 			player.receive_item_from_cart(d_data)
 			GameState.status_message.emit("Picked up D.O.T.S. Laser Grid Projector Dome [F]!", Color(0.45, 1.0, 0.75))
 			return
-	for ward_node in get_tree().get_nodes_in_group("eas_pedestal_wards"):
-		var ward := ward_node as ExpandedMallGadgets.EASPedestalWardActor
-		if ward and not ward.is_burned_out and ppos.distance_to(ward.global_position) < 2.2:
+		"eas_ward":
+			var ward := best_node as ExpandedMallGadgets.EASPedestalWardActor
 			var w_data := PlayerController.make_item_data("eas_pedestal_ward")
 			ward.remove_from_group("eas_pedestal_wards")
 			ward.queue_free()
@@ -1042,33 +1233,8 @@ func _handle_pickup_interact() -> void:
 			GameState.status_message.emit("Picked up Hacked EAS Anti-Theft Pedestal Ward [F]!", Color(0.45, 0.95, 1.0))
 			return
 
-	# 5. If standing next to the 8-Slot Equipment Push Cart (<= 2.95m), pressing [F] takes the highlighted item off the cart (or unmounts the CCTV Monitor into Hands if shelves are empty)!
-	for pc_node in get_tree().get_nodes_in_group("push_carts"):
-		var pc := pc_node as MallCartSystem
-		if pc and ppos.distance_to(pc.global_position) < 2.95:
-			if pc.get_stored_item_count() > 0 or pc.get_hooked_item_count() > 0:
-				var taken := pc.take_highlighted_item_from_cart()
-				if not taken.is_empty():
-					player.receive_item_from_cart(taken)
-					GameState.status_message.emit(
-						"Picked up %s [F] off Equipment Push Cart (%d/8 stored on cart)." % [taken.get("name", "Tool"), pc.get_stored_item_count()],
-						Color(1.0, 0.90, 0.42)
-					)
-					return
-			elif pc.cart_monitor != null and pc.cart_monitor.is_mounted_on_cart:
-				var mon_item2 := pc.cart_monitor.unmount_to_hand_item()
-				if not mon_item2.is_empty():
-					pc._refresh_push_cart_header_label()
-					player.receive_item_from_cart(mon_item2)
-					player.play_flashlight_click(true)
-					GameState.status_message.emit(
-						"Picked up Portable CCTV Monitor from Cart into HANDS [F]! ([LMB] Power ON/OFF | [RMB] Cycle Camera Locations | [G] near Cart to Mount Back on Cart)",
-						Color(0.45, 0.96, 1.0)
-					)
-					return
-
 	GameState.status_message.emit(
-		"No pickup item in range for [F] — look at the Cart CCTV Monitor, any Table Tool, Placed Camera/Canister, or Stored Cart Item and press [F]! (Use [E] to Push/Release Carts & press Elevator Buttons.)",
+		"Look directly at an item within reach and press [F] to pick it up! (Use [E] to Push/Release Carts & interact with world fixtures.)",
 		Color(0.75, 0.84, 0.94)
 	)
 
@@ -1202,6 +1368,25 @@ func _handle_world_object_interact() -> void:
 			var eat_look := Vector3(-18.0, 0.0, -32.0) if ppos.z < -20.0 else Vector3(-11.0, 0.0, -5.5)
 			player.start_eating_at_table(eat_seat, eat_look, 5.0)
 		return
+
+	# 11B. Animation Comparison Showcase Models (Look at model within 3.8m and press [E] to cycle animations!)
+	for comp_node in get_tree().get_nodes_in_group("anim_comparison_models"):
+		var cn := comp_node as Node3D
+		if cn and ppos.distance_to(cn.global_position) <= 3.8:
+			var to_cn := (cn.global_position + Vector3(0.0, 1.0, 0.0)) - look_origin
+			if look_fwd.dot(to_cn.normalized()) >= 0.82:
+				var ctrl: HumanoidIKAndAnimController = cn.get_meta("anim_controller", null) as HumanoidIKAndAnimController
+				if ctrl:
+					var next_a := ctrl.cycle_next_animation()
+					cn.set_meta("npc_name", "Animation Showcase (%s)" % next_a)
+					var lbl: Label3D = cn.get_meta("anim_label", null) as Label3D
+					if lbl:
+						lbl.text = "ACTIVE ANIMATION: %s\n[Look + Press E to Cycle All 8 Animations]" % next_a
+					GameState.status_message.emit(
+						"Animation Showcase switched to: %s (Look-At IK Active!)" % next_a,
+						Color(0.55, 0.96, 1.0)
+					)
+					return
 
 	# 12. Quartermaster Chen's Trader & Upgrade Counter (22.8, 0.48, 0.0)
 	if ppos.distance_to(Vector3(22.8, 0.48, 0.0)) < 4.2 or ppos.distance_to(Vector3(-14.2, 0.48, 0.0)) < 3.8:
@@ -2123,6 +2308,16 @@ func _spawn_model_or_box(res_path: String, pos: Vector3, fallback_size: Vector3,
 	var root := Node3D.new()
 	root.position = pos
 	add_child(root)
+
+	if "Mannequin" in res_path or "TorsoForm" in res_path or "LegForm" in res_path:
+		root.add_to_group("mall_mannequins")
+		var seed_val := absi(int(pos.x * 137.0 + pos.z * 251.0 + pos.y * 53.0))
+		var m_title := "Headless Display Mannequin" if ("Headless" in res_path or "TorsoForm" in res_path) else ("Walking Retail Mannequin" if "Walking" in res_path else "Retail Display Mannequin")
+		root.set_meta("mannequin_name", m_title)
+		root.set_meta("uncanny_seed", seed_val)
+		root.set_meta("body_temp_c", 29.6 + float(seed_val % 38) * 0.1)
+		root.set_meta("barcode_sku", "SKU #0000-M: %s [WARNING: POSE DRIFT +INVENTORY ANOMALY]" % m_title.to_upper())
+		root.set_meta("parabolic_sound", "%s: Faint fiberglass joint creak... & muffled breathing?! (26 dB)" % m_title)
 
 	if add_box_collision:
 		var sb := StaticBody3D.new()

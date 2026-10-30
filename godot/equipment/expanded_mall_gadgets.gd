@@ -1150,14 +1150,14 @@ static func get_expanded_item_catalog_entry(item_id: String) -> Dictionary:
 		"sls_camera":
 			return {
 				"id": "sls_camera",
-				"name": "SLS Stick-Figure Pose Camera",
+				"name": "SLS Stick-Figure Pose Camera (LCD Depth Viewfinder)",
 				"short_label": "SLS CAM",
 				"icon_symbol": "{o+}",
 				"accent_color": Color(0.22, 1.0, 0.48),
-				"model_path": "res://SourceAssets/Equipment/Prepared/SM_PhotoCamera.fbx",
+				"model_path": "",
 				"can_store_in_hotbar": true,
 				"two_handed_slow": false,
-				"indicator_slot": 4,
+				"indicator_slot": 11,
 				"powered_on": true,
 				"can_power_toggle": true,
 				"makes_noise_when_on": false,

@@ -20,10 +20,14 @@ Builds/
 ThirdParty/Whisper/Models/*.bin
 VoiceModels/Vosk/Whisper/*.bin
 
-# 5. Redundant Raw Archive Duplicates (Already extracted in VoiceModels/ & ThirdParty/)
+# 5. Redundant Raw Archive Duplicates (Already extracted in VoiceModels/, ThirdParty/, & SourceAssets/)
 ExternalAssets/Voice/Extracted/
 ExternalAssets/Voice/*.zip
 ExternalAssets/Mall/Surfaces/texturecan_tiles_0013/*.zip
+animation and models/*.blend
+animation and models/*.blend1
+animation and models/Universal Animation Library*/
+*.blend1
 
 # 6. Python / OS Temporary Files
 __pycache__/

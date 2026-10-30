@@ -73,6 +73,7 @@ func setup_for_slot(slot: int, model_path: String) -> void:
 		handheld_cam_3d.near = 0.08
 		handheld_cam_3d.far = 90.0
 		handheld_cam_3d.current = true
+		handheld_cam_3d.set_cull_mask_value(2, false)
 		handheld_cam_attrs = CameraAttributesPractical.new()
 		handheld_cam_attrs.exposure_multiplier = 4.8
 		handheld_cam_3d.attributes = handheld_cam_attrs
@@ -115,6 +116,7 @@ func setup_for_slot(slot: int, model_path: String) -> void:
 		handheld_cam_3d.near = 0.08
 		handheld_cam_3d.far = 110.0
 		handheld_cam_3d.current = true
+		handheld_cam_3d.set_cull_mask_value(2, false)
 		handheld_cam_attrs = CameraAttributesPractical.new()
 		handheld_cam_attrs.exposure_multiplier = 4.8
 		handheld_cam_3d.attributes = handheld_cam_attrs
@@ -134,6 +136,40 @@ func setup_for_slot(slot: int, model_path: String) -> void:
 			VideoAndAudioSurveillance.update_camera_screen_shader_material(
 				handheld_lcd_shader_mat, handheld_cam_viewport.get_texture(), false, true
 			)
+	elif slot == 11:
+		# SLS Stick-Figure Pose Camera with Squared Live LCD Display Screen (renders Layer 2 3D Stick Skeletons!)
+		device_model_root.position = Vector3(-0.04, 0.08, 0.10)
+		device_model_root.rotation_degrees = Vector3.ZERO
+		device_model_root.scale = Vector3(1.46, 1.46, 1.46)
+
+		handheld_cam_viewport = SubViewport.new()
+		handheld_cam_viewport.name = "HandheldSLSCamViewport"
+		handheld_cam_viewport.size = Vector2i(320, 200)
+		handheld_cam_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
+		handheld_cam_viewport.handle_input_locally = false
+		add_child(handheld_cam_viewport)
+
+		handheld_cam_3d = Camera3D.new()
+		handheld_cam_3d.fov = 74.0
+		handheld_cam_3d.near = 0.08
+		handheld_cam_3d.far = 65.0
+		handheld_cam_3d.current = true
+		handheld_cam_3d.set_cull_mask_value(1, true)
+		handheld_cam_3d.set_cull_mask_value(2, true) # Layer 2 = 3D Stick-Figure Skeletons!
+		handheld_cam_attrs = CameraAttributesPractical.new()
+		handheld_cam_attrs.exposure_multiplier = 2.6
+		handheld_cam_3d.attributes = handheld_cam_attrs
+		handheld_cam_viewport.add_child(handheld_cam_3d)
+
+		var sls_parts := VideoAndAudioSurveillance.build_sls_camera_mesh_hierarchy(device_model_root, true)
+		handheld_lcd_shader_mat = sls_parts.get("lcd_shader_mat") as ShaderMaterial
+		var sls_lcd_frame := sls_parts.get("lcd_frame") as Node3D
+		if sls_lcd_frame:
+			sls_lcd_frame.rotation_degrees = Vector3.ZERO
+		handheld_side_label = sls_parts.get("status_lbl") as Label3D
+		if handheld_lcd_shader_mat and handheld_cam_viewport:
+			handheld_lcd_shader_mat.set_shader_parameter("feed_tex", handheld_cam_viewport.get_texture())
+			handheld_lcd_shader_mat.set_shader_parameter("camera_powered_on", true)
 	elif ResourceLoader.exists(model_path):
 		var packed := load(model_path) as PackedScene
 		if packed:
@@ -159,7 +195,7 @@ func setup_for_slot(slot: int, model_path: String) -> void:
 	lcd_screen_mat.emission = Color(0.05, 0.18, 0.24)
 	lcd_screen_mat.emission_energy_multiplier = 1.4
 	lcd_screen_mesh.material_override = lcd_screen_mat
-	lcd_screen_mesh.visible = (slot != 9 and slot != 10)
+	lcd_screen_mesh.visible = (slot != 9 and slot != 10 and slot != 11)
 	add_child(lcd_screen_mesh)
 
 	lcd_label = Label3D.new()
@@ -344,6 +380,30 @@ func update_indicators(
 					]
 					handheld_side_label.modulate = Color(0.92, 0.96, 1.0)
 		return
+	elif active_slot == 11:
+		if lcd_screen_mesh:
+			lcd_screen_mesh.visible = false
+		if status_omni:
+			status_omni.light_energy = 0.0
+		if handheld_cam_viewport and handheld_cam_3d and is_inside_tree():
+			var root_vp_sls := get_viewport()
+			if root_vp_sls != null and root_vp_sls.world_3d != null and handheld_cam_viewport.world_3d != root_vp_sls.world_3d:
+				handheld_cam_viewport.world_3d = root_vp_sls.world_3d
+			handheld_cam_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS if is_powered_on else SubViewport.UPDATE_DISABLED
+			if is_powered_on and device_model_root:
+				handheld_cam_3d.global_position = device_model_root.to_global(Vector3(0.0, 0.075, -0.14))
+				handheld_cam_3d.global_basis = device_model_root.global_transform.basis
+			if handheld_lcd_shader_mat:
+				handheld_lcd_shader_mat.set_shader_parameter("feed_tex", handheld_cam_viewport.get_texture())
+				handheld_lcd_shader_mat.set_shader_parameter("camera_powered_on", is_powered_on)
+			if handheld_side_label:
+				if not is_powered_on:
+					handheld_side_label.text = "SLS CAMERA OFF [RMB: Power ON | LMB: Log Pose]"
+					handheld_side_label.modulate = Color(0.48, 0.55, 0.52)
+				else:
+					handheld_side_label.text = photo_target_label if not photo_target_label.is_empty() else "SLS STICK-POSE ACTIVE [Scanning Skeletons...]"
+					handheld_side_label.modulate = Color(1.0, 0.42, 0.25) if ("MANNEQUIN" in photo_target_label or "GHOST" in photo_target_label or "ENTITY" in photo_target_label) else Color(0.35, 1.0, 0.62)
+		return
 	proton_beam_mesh.visible = (active_slot == 6 and proton_firing)
 	if proton_beam_mesh.visible:
 		# Wobble & pulse the proton stream, and dynamically track locked ghost movement!
@@ -399,24 +459,34 @@ func update_indicators(
 		emf_led_mats[i].albedo_color = EMF_LED_COLORS[i] if lit else EMF_LED_COLORS[i].darkened(0.8)
 
 	match active_slot:
-		0: # Separate Tool #1: EMF Reader (5-LED EMF Level 1-5 + Audio Beeping)
+		0: # Separate Tool #1: EMF Reader (5-LED EMF Level 1-5 + Audio Beeping + Non-Ghost Electrical Presences)
 			lcd_label.text = "EMF LEVEL %d / 5" % emf_level
-			sub_label.text = "EVIDENCE: EMF-5!" if emf_level >= 5 else ("ANOMALY DETECTED" if emf_level >= 2 else "AMBIENT FIELD")
+			if emf_level >= 5:
+				sub_label.text = "EVIDENCE: EMF-5!"
+			elif not aimed_fixture_info.is_empty():
+				sub_label.text = aimed_fixture_info
+			else:
+				sub_label.text = "ANOMALY DETECTED" if emf_level >= 2 else "AMBIENT FIELD"
 			var c: Color = EMF_LED_COLORS[clampi(emf_level - 1, 0, 4)]
 			lcd_label.modulate = c
 			status_omni.light_color = c
 			status_omni.light_energy = 0.25 + float(emf_level) * 0.18
 			bar_fill_mesh.scale.x = clampf(float(emf_level) / 5.0, 0.15, 1.0)
 			bar_fill_mat.emission = c
-		1: # Separate Tool #2: Thermal Scanner (Digital IR Thermometer)
+		1: # Separate Tool #2: Thermal Scanner (Digital IR Thermometer + Non-Ghost Body/Mannequin/Sauna Heat)
 			var disp_temp := (temp_c * 9.0 / 5.0 + 32.0) if use_fahrenheit else temp_c
 			var unit := "°F" if use_fahrenheit else "°C"
 			lcd_label.text = "TEMP: %.1f %s" % [disp_temp, unit]
-			sub_label.text = "EVIDENCE: FREEZING (<0°C)!" if temp_c < 0.0 else "[E] Toggle °C / °F"
-			var t_col := Color(0.28, 0.92, 1.0) if temp_c < 0.0 else Color(0.45, 1.0, 0.65)
+			if temp_c < 0.0:
+				sub_label.text = "EVIDENCE: FREEZING (<0°C)!"
+			elif not aimed_fixture_info.is_empty():
+				sub_label.text = aimed_fixture_info
+			else:
+				sub_label.text = "[RMB] Toggle °C / °F"
+			var t_col := Color(0.28, 0.92, 1.0) if temp_c < 0.0 else (Color(1.0, 0.55, 0.25) if temp_c >= 28.0 else Color(0.45, 1.0, 0.65))
 			lcd_label.modulate = t_col
 			status_omni.light_color = t_col
-			var cold_ratio := clampf((20.5 - temp_c) / 28.0, 0.08, 1.0)
+			var cold_ratio := clampf(absf(21.0 - temp_c) / 28.0, 0.08, 1.0)
 			bar_fill_mesh.scale.x = cold_ratio
 			bar_fill_mat.emission = t_col
 		2: # Separate Tool #3: Spirit Box (FM EVP Radio + Static & Ghost Voice)

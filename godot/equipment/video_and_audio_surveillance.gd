@@ -408,6 +408,459 @@ static func build_portable_cctv_monitor_mesh(target_root: Node3D, initial_powere
 		"screen_shader_mat": screen_shader_mat,
 	}
 
+static var _cached_sls_screen_shader: Shader = null
+
+static func get_sls_screen_shader() -> Shader:
+	if _cached_sls_screen_shader != null:
+		return _cached_sls_screen_shader
+	var sh := Shader.new()
+	sh.code = """
+shader_type spatial;
+render_mode unshaded, cull_disabled;
+
+uniform sampler2D feed_tex : source_color, filter_linear;
+uniform bool camera_powered_on = true;
+
+void fragment() {
+	if (!camera_powered_on) {
+		ALBEDO = vec3(0.018, 0.032, 0.024);
+	} else {
+		vec3 col = texture(feed_tex, UV).rgb;
+		float lum = dot(col, vec3(0.299, 0.587, 0.114));
+		// Boosted dark-emerald depth sensor background + preserve bright neon stick-figure skeletons!
+		float depth_lum = clamp(pow(max(lum, 0.0005), 0.42) * 1.35 + 0.04, 0.0, 1.0);
+		vec3 bg_depth = vec3(depth_lum * 0.16, depth_lum * 0.58, depth_lum * 0.42);
+		float chroma = max(col.r, max(col.g, col.b)) - min(col.r, min(col.g, col.b));
+		float stick_mask = clamp((chroma - 0.18) * 3.8 + max(0.0, (max(col.g, col.r) - 0.55) * 2.5), 0.0, 1.0);
+		vec3 mixed = mix(bg_depth, col * 1.45, stick_mask);
+		// Subtle Kinect IR depth matrix dot/grid overlay
+		float grid_x = step(0.96, fract(UV.x * 28.0));
+		float grid_y = step(0.96, fract(UV.y * 18.0));
+		float grid = max(grid_x, grid_y) * 0.08;
+		float scanline = 0.95 + 0.05 * sin(UV.y * 220.0 * 3.14159);
+		ALBEDO = clamp((mixed + vec3(0.04, 0.22, 0.14) * grid) * scanline, vec3(0.0), vec3(1.0));
+	}
+}
+"""
+	_cached_sls_screen_shader = sh
+	return sh
+
+static func create_sls_screen_shader_material(tex: Texture2D = null, powered_on: bool = true) -> ShaderMaterial:
+	var sm := ShaderMaterial.new()
+	sm.shader = get_sls_screen_shader()
+	if tex != null:
+		sm.set_shader_parameter("feed_tex", tex)
+	sm.set_shader_parameter("camera_powered_on", powered_on)
+	return sm
+
+## Builds the Handheld SLS Stick-Figure Depth Camera (`"sls_camera"`, `indicator_slot = 11`)
+## with a Kinect-style horizontal 3-lens IR depth bar on the front and a large squared Rear/Side LCD Display Screen
+## similar to the Video Camera so the player can clearly see stick-figure poses on Players, NPCs, Mannequins & Ghosts!
+static func build_sls_camera_mesh_hierarchy(head_root: Node3D, initial_powered_on: bool = true) -> Dictionary:
+	var body_mat := StandardMaterial3D.new()
+	body_mat.albedo_color = Color(0.14, 0.18, 0.16)
+	body_mat.metallic = 0.48
+	body_mat.roughness = 0.38
+
+	var accent_mat := StandardMaterial3D.new()
+	accent_mat.albedo_color = Color(0.18, 0.92, 0.48)
+	accent_mat.emission_enabled = true
+	accent_mat.emission = Color(0.18, 0.95, 0.48)
+	accent_mat.emission_energy_multiplier = 1.6
+
+	# Main SLS camera housing
+	var body_mi := MeshInstance3D.new()
+	var body_box := BoxMesh.new()
+	body_box.size = Vector3(0.14, 0.11, 0.18)
+	body_mi.mesh = body_box
+	body_mi.material_override = body_mat
+	body_mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	head_root.add_child(body_mi)
+
+	# Top Kinect-style Horizontal 3-Sensor IR Depth Projector Bar (-Z front)
+	var sensor_bar := MeshInstance3D.new()
+	var bar_box := BoxMesh.new()
+	bar_box.size = Vector3(0.24, 0.042, 0.055)
+	sensor_bar.mesh = bar_box
+	sensor_bar.position = Vector3(0.0, 0.078, -0.05)
+	sensor_bar.material_override = body_mat
+	sensor_bar.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	head_root.add_child(sensor_bar)
+
+	for lx in [-0.082, 0.0, 0.082]:
+		var lens_mi := MeshInstance3D.new()
+		var cyl := CylinderMesh.new()
+		cyl.top_radius = 0.015
+		cyl.bottom_radius = 0.017
+		cyl.height = 0.022
+		lens_mi.mesh = cyl
+		lens_mi.position = Vector3(lx, 0.078, -0.082)
+		lens_mi.rotation_degrees.x = 90.0
+		lens_mi.material_override = accent_mat
+		lens_mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		head_root.add_child(lens_mi)
+
+	# Rear / Flip-Out Wide LCD Viewfinder Display Screen (squared toward the operator, similar to Video Camera!)
+	var lcd_frame := MeshInstance3D.new()
+	var lcd_box := BoxMesh.new()
+	lcd_box.size = Vector3(0.185, 0.122, 0.016)
+	lcd_frame.mesh = lcd_box
+	lcd_frame.position = Vector3(-0.085, 0.015, 0.075)
+	lcd_frame.rotation_degrees.y = 4.0
+	lcd_frame.material_override = body_mat
+	lcd_frame.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	head_root.add_child(lcd_frame)
+
+	var lcd_screen := MeshInstance3D.new()
+	var lcd_quad := QuadMesh.new()
+	lcd_quad.size = Vector2(0.170, 0.108)
+	lcd_screen.mesh = lcd_quad
+	lcd_screen.position = Vector3(0.0, 0.0, 0.010)
+	var sls_shader_mat := create_sls_screen_shader_material(null, initial_powered_on)
+	lcd_screen.material_override = sls_shader_mat
+	lcd_screen.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	lcd_frame.add_child(lcd_screen)
+
+	var status_lbl := Label3D.new()
+	status_lbl.position = Vector3(0.0, 0.076, 0.012)
+	status_lbl.font_size = 12
+	status_lbl.outline_size = 3
+	status_lbl.pixel_size = 0.0011
+	status_lbl.text = "SLS DEPTH SKELETON VIEW"
+	status_lbl.modulate = Color(0.35, 1.0, 0.58)
+	lcd_frame.add_child(status_lbl)
+
+	return {
+		"lcd_frame": lcd_frame,
+		"lcd_screen": lcd_screen,
+		"lcd_shader_mat": sls_shader_mat,
+		"status_lbl": status_lbl,
+		"accent_mat": accent_mat,
+	}
+
+
+# ------------------------------------------------------------------------------
+# 1B. SLSSkeletonOverlay — 3D Glowing Wireframe Stick-Figure Skeleton on Layer 2
+#     Rendered ONLY inside the SLS Camera's LCD Viewfinder (`layers = 2`)!
+#     Maps onto Players, NPCs, Ghosts, and Store Mannequins (where Mannequin
+#     stick-figures turn their heads to stare at the player, tilt their necks at
+#     broken angles, breathe raggedly, and reach out while the physical mannequin
+#     remains completely frozen!).
+# ------------------------------------------------------------------------------
+class SLSSkeletonOverlay extends Node3D:
+	const SLS_VISUAL_LAYER_MASK: int = 2 # Bit 2 (Layer 2) — seen only by SLS Camera SubViewport!
+
+	var subject_type: String = "mannequin" # "player", "npc", "mannequin", "ghost"
+	var subject_label: String = "DISPLAY MANNEQUIN"
+	var uncanny_seed: int = 1337
+	var _phase: float = 0.0
+	var _bone_mat: StandardMaterial3D = null
+	var _joint_mat: StandardMaterial3D = null
+	var _eye_mat: StandardMaterial3D = null
+	var _joints: Dictionary = {} # name -> MeshInstance3D
+	var _bones: Array[Dictionary] = [] # [{mesh, a, b}]
+	var _left_eye: MeshInstance3D = null
+	var _right_eye: MeshInstance3D = null
+
+	func _ready() -> void:
+		add_to_group("sls_skeleton_overlays")
+		_phase = float(uncanny_seed % 628) * 0.01
+		_build_wireframe_skeleton()
+
+	func _build_wireframe_skeleton() -> void:
+		_bone_mat = StandardMaterial3D.new()
+		_bone_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		_bone_mat.albedo_color = _get_base_skeleton_color()
+
+		_joint_mat = StandardMaterial3D.new()
+		_joint_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		_joint_mat.albedo_color = _get_base_skeleton_color().lightened(0.32)
+
+		_eye_mat = StandardMaterial3D.new()
+		_eye_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		_eye_mat.albedo_color = Color(1.0, 0.18, 0.18)
+
+		var joint_names := [
+			"head", "neck", "pelvis",
+			"shoulder_l", "elbow_l", "wrist_l",
+			"shoulder_r", "elbow_r", "wrist_r",
+			"hip_l", "knee_l", "ankle_l",
+			"hip_r", "knee_r", "ankle_r",
+		]
+		for jname in joint_names:
+			var j_mi := MeshInstance3D.new()
+			j_mi.layers = SLS_VISUAL_LAYER_MASK
+			j_mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+			if jname == "head":
+				var torus := TorusMesh.new()
+				torus.inner_radius = 0.075
+				torus.outer_radius = 0.105
+				torus.rings = 14
+				torus.ring_segments = 10
+				j_mi.mesh = torus
+				j_mi.rotation_degrees.x = 90.0
+				j_mi.material_override = _bone_mat
+				# Add 2 eerie glowing eye dots inside the stick-figure head ring!
+				_left_eye = MeshInstance3D.new()
+				var eye_sph := SphereMesh.new()
+				eye_sph.radius = 0.020
+				eye_sph.height = 0.040
+				_left_eye.mesh = eye_sph
+				_left_eye.layers = SLS_VISUAL_LAYER_MASK
+				_left_eye.position = Vector3(-0.036, -0.02, -0.02)
+				_left_eye.material_override = _eye_mat if subject_type in ["mannequin", "ghost"] else _joint_mat
+				j_mi.add_child(_left_eye)
+
+				_right_eye = MeshInstance3D.new()
+				_right_eye.mesh = eye_sph
+				_right_eye.layers = SLS_VISUAL_LAYER_MASK
+				_right_eye.position = Vector3(0.036, -0.02, -0.02)
+				_right_eye.material_override = _eye_mat if subject_type in ["mannequin", "ghost"] else _joint_mat
+				j_mi.add_child(_right_eye)
+			else:
+				var sph := SphereMesh.new()
+				sph.radius = 0.034 if ("wrist" in jname or "ankle" in jname) else 0.042
+				sph.height = sph.radius * 2.0
+				j_mi.mesh = sph
+				j_mi.material_override = _joint_mat
+			add_child(j_mi)
+			_joints[jname] = j_mi
+
+		var bone_pairs := [
+			["head", "neck"],
+			["neck", "pelvis"],
+			["shoulder_l", "shoulder_r"],
+			["shoulder_l", "elbow_l"],
+			["elbow_l", "wrist_l"],
+			["shoulder_r", "elbow_r"],
+			["elbow_r", "wrist_r"],
+			["hip_l", "hip_r"],
+			["pelvis", "hip_l"],
+			["pelvis", "hip_r"],
+			["hip_l", "knee_l"],
+			["knee_l", "ankle_l"],
+			["hip_r", "knee_r"],
+			["knee_r", "ankle_r"],
+		]
+		for pair in bone_pairs:
+			var b_mi := MeshInstance3D.new()
+			b_mi.layers = SLS_VISUAL_LAYER_MASK
+			b_mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+			var box := BoxMesh.new()
+			box.size = Vector3(0.026, 0.026, 1.0)
+			b_mi.mesh = box
+			b_mi.material_override = _bone_mat
+			add_child(b_mi)
+			_bones.append({"mesh": b_mi, "a": pair[0], "b": pair[1]})
+
+	func _get_base_skeleton_color() -> Color:
+		match subject_type:
+			"player":
+				return Color(0.20, 1.0, 0.72) # Crisp Cyan-Green for Co-op Players
+			"npc":
+				return Color(0.55, 1.0, 0.28) # Warm Lime-Green for Living/Mall NPCs
+			"ghost":
+				return Color(1.0, 0.18, 0.55) # High-Voltage Magenta-Red for Paranormal Entities
+			_: # "mannequin"
+				return Color(0.88, 1.0, 0.18) # Uncanny Sickly Chartreuse-Yellow / Twitching Red for Mannequins!
+
+	func update_skeleton_pose(delta: float, viewer_world_pos: Vector3) -> void:
+		_phase += delta * (4.2 if subject_type == "ghost" else 2.1)
+		var parent_3d := get_parent() as Node3D
+		if parent_3d == null:
+			return
+
+		var dist_to_viewer := global_position.distance_to(viewer_world_pos)
+		var p_head := Vector3(0.0, 1.62, 0.0)
+		var p_neck := Vector3(0.0, 1.42, 0.0)
+		var p_pelvis := Vector3(0.0, 0.92, 0.0)
+		var p_sh_l := Vector3(-0.22, 1.38, 0.0)
+		var p_sh_r := Vector3(0.22, 1.38, 0.0)
+		var p_el_l := Vector3(-0.28, 1.08, 0.04)
+		var p_wr_l := Vector3(-0.26, 0.80, 0.10)
+		var p_el_r := Vector3(0.28, 1.08, 0.04)
+		var p_wr_r := Vector3(0.26, 0.80, 0.10)
+		var p_hip_l := Vector3(-0.13, 0.90, 0.0)
+		var p_hip_r := Vector3(0.13, 0.90, 0.0)
+		var p_kn_l := Vector3(-0.14, 0.48, 0.02)
+		var p_an_l := Vector3(-0.14, 0.06, 0.0)
+		var p_kn_r := Vector3(0.14, 0.48, 0.02)
+		var p_an_r := Vector3(0.14, 0.06, 0.0)
+
+		if subject_type == "player":
+			var crouch_off := -0.45 if parent_3d.get("is_crouching") == true else 0.0
+			var vel: Vector3 = parent_3d.get("velocity") if parent_3d.get("velocity") != null else Vector3.ZERO
+			var spd := clampf(Vector2(vel.x, vel.z).length() / 4.5, 0.0, 1.0)
+			var swing := sin(_phase * 3.2) * 0.24 * spd
+			p_head.y += crouch_off
+			p_neck.y += crouch_off
+			p_pelvis.y += crouch_off * 0.65
+			p_sh_l.y += crouch_off
+			p_sh_r.y += crouch_off
+			p_el_l = Vector3(-0.27, 1.08 + crouch_off, swing * 0.6)
+			p_wr_l = Vector3(-0.25, 0.82 + crouch_off, swing * 1.1)
+			p_el_r = Vector3(0.27, 1.08 + crouch_off, -swing * 0.6)
+			p_wr_r = Vector3(0.25, 0.82 + crouch_off, -swing * 1.1)
+			p_kn_l.z = -swing * 0.7
+			p_an_l.z = -swing * 1.1
+			p_kn_r.z = swing * 0.7
+			p_an_r.z = swing * 1.1
+
+		elif subject_type == "npc":
+			var breathe := sin(_phase * 1.4) * 0.025
+			p_head.y += breathe
+			p_sh_l.y += breathe
+			p_sh_r.y += breathe
+			# Subtle clerk/trader gesture
+			p_el_r = Vector3(0.26, 1.10, 0.14)
+			p_wr_r = Vector3(0.18 + sin(_phase * 1.8) * 0.08, 1.16, 0.28)
+
+		elif subject_type == "ghost":
+			var jitter := Vector3(sin(_phase * 19.0) * 0.06, cos(_phase * 23.0) * 0.08, sin(_phase * 17.0) * 0.06)
+			p_head += jitter + Vector3(sin(_phase * 3.5) * 0.14, 0.12, 0.0)
+			p_el_l = Vector3(-0.34, 1.32, 0.28) + jitter
+			p_wr_l = Vector3(-0.28, 1.48 + sin(_phase * 5.0) * 0.16, 0.55)
+			p_el_r = Vector3(0.34, 1.32, 0.28) - jitter
+			p_wr_r = Vector3(0.28, 1.48 + cos(_phase * 5.0) * 0.16, 0.55)
+			if _bone_mat:
+				var g_flash := 0.5 + 0.5 * sin(_phase * 8.0)
+				_bone_mat.albedo_color = Color(1.0, 0.18, 0.55).lerp(Color(0.25, 1.0, 0.55), g_flash)
+
+		else: # "mannequin" — UNCOMFORTABLE / EERIE SKELETON BEHAVIOR!
+			# Even though the fiberglass mannequin is completely still to the naked eye,
+			# on the SLS Camera screen its stick-figure skeleton breathes raggedly, cocks its head
+			# at a broken-neck angle to stare directly at the player, and shifts its arms!
+			var local_viewer := to_local(viewer_world_pos)
+			var dir_to_viewer := Vector3(local_viewer.x, 0.0, local_viewer.z)
+			if dir_to_viewer.length_squared() > 0.001:
+				dir_to_viewer = dir_to_viewer.normalized()
+			else:
+				dir_to_viewer = Vector3(0.0, 0.0, 1.0)
+
+			var ragged_breathe := sin(_phase * 1.65) * 0.038
+			var twitch_spike := 1.0 if sin(_phase * 3.7 + float(uncanny_seed % 17)) > 0.92 else 0.0
+			var broken_neck_tilt := sin(_phase * 0.55 + float(uncanny_seed % 7)) * 0.13 + (0.09 if uncanny_seed % 2 == 0 else -0.09)
+
+			p_head = Vector3(broken_neck_tilt, 1.60 + ragged_breathe, 0.06) + dir_to_viewer * 0.06
+			p_neck = Vector3(broken_neck_tilt * 0.35, 1.41 + ragged_breathe, 0.02)
+			p_sh_l.y += ragged_breathe
+			p_sh_r.y += ragged_breathe
+
+			var pose_mode := (uncanny_seed + int(_phase * 0.18)) % 4
+			if dist_to_viewer < 4.2:
+				# When the player steps close with the SLS Camera, the mannequin's stick skeleton reaches toward them or covers its face!
+				if uncanny_seed % 2 == 0:
+					# Reaching / Pointing directly at the player!
+					p_el_r = Vector3(0.24, 1.34, 0.18) + dir_to_viewer * 0.16
+					p_wr_r = Vector3(0.12, 1.44 + twitch_spike * 0.08, 0.18) + dir_to_viewer * 0.44
+					p_el_l = Vector3(-0.26, 1.22, 0.10) + dir_to_viewer * 0.10
+					p_wr_l = Vector3(-0.18, 1.28 - twitch_spike * 0.06, 0.12) + dir_to_viewer * 0.32
+				else:
+					# Weeping / Holding its own head with both stick hands, then peeking!
+					p_el_l = Vector3(-0.32, 1.42, 0.18)
+					p_wr_l = p_head + Vector3(-0.07, 0.02 + twitch_spike * 0.06, 0.05)
+					p_el_r = Vector3(0.32, 1.42, 0.18)
+					p_wr_r = p_head + Vector3(0.07, 0.02 - twitch_spike * 0.06, 0.05)
+			else:
+				match pose_mode:
+					0: # Right stick arm slowly raised pointing at the player
+						p_el_r = Vector3(0.26, 1.32, 0.15) + dir_to_viewer * 0.12
+						p_wr_r = Vector3(0.16, 1.38, 0.15) + dir_to_viewer * 0.38
+					1: # Unnatural asymmetrical shoulder drop & crooked spine lean
+						p_sh_l.y += 0.09
+						p_sh_r.y -= 0.09
+						p_el_l = Vector3(-0.34, 1.18, -0.08)
+						p_wr_l = Vector3(-0.38, 0.92, 0.18)
+					2: # Both hands clasped over chest/throat
+						p_el_l = Vector3(-0.28, 1.12, 0.18)
+						p_wr_l = Vector3(-0.04, 1.34, 0.16)
+						p_el_r = Vector3(0.28, 1.12, 0.18)
+						p_wr_r = Vector3(0.04, 1.34, 0.16)
+					_: # Subtle spasmodic wrist/shoulder twitch
+						p_wr_l.x -= twitch_spike * 0.14
+						p_wr_r.z += twitch_spike * 0.22
+
+			if _bone_mat:
+				if twitch_spike > 0.5 or dist_to_viewer < 3.6:
+					_bone_mat.albedo_color = Color(1.0, 0.36, 0.18) # Flashes warning orange-red when twitching/reaching!
+				else:
+					_bone_mat.albedo_color = Color(0.88, 1.0, 0.18)
+
+		var pos_map := {
+			"head": p_head,
+			"neck": p_neck,
+			"pelvis": p_pelvis,
+			"shoulder_l": p_sh_l,
+			"elbow_l": p_el_l,
+			"wrist_l": p_wr_l,
+			"shoulder_r": p_sh_r,
+			"elbow_r": p_el_r,
+			"wrist_r": p_wr_r,
+			"hip_l": p_hip_l,
+			"knee_l": p_kn_l,
+			"ankle_l": p_an_l,
+			"hip_r": p_hip_r,
+			"knee_r": p_kn_r,
+			"ankle_r": p_an_r,
+		}
+		for jname in pos_map.keys():
+			var j_mi := _joints.get(jname) as MeshInstance3D
+			if j_mi:
+				j_mi.position = pos_map[jname]
+				if jname == "head" and subject_type == "mannequin":
+					# Rotate the mannequin's stick-figure head so its glowing eyes stare directly at the player!
+					var head_global := to_global(p_head)
+					var look_vec := viewer_world_pos - head_global
+					if look_vec.length_squared() > 0.01:
+						j_mi.look_at(viewer_world_pos, Vector3.UP)
+						j_mi.rotate_object_local(Vector3.RIGHT, deg_to_rad(90.0))
+						j_mi.rotate_object_local(Vector3.FORWARD, deg_to_rad(28.0 * sin(_phase * 0.9 + float(uncanny_seed % 5))))
+
+		for b_entry in _bones:
+			var b_mi := b_entry["mesh"] as MeshInstance3D
+			var pa: Vector3 = pos_map[b_entry["a"]]
+			var pb: Vector3 = pos_map[b_entry["b"]]
+			var diff := pb - pa
+			var len_val := diff.length()
+			if b_mi and len_val > 0.005:
+				var mid := (pa + pb) * 0.5
+				var up_ref := Vector3.RIGHT if absf(diff.normalized().dot(Vector3.UP)) > 0.95 else Vector3.UP
+				b_mi.transform = Transform3D(Basis.looking_at(diff.normalized(), up_ref), mid)
+				b_mi.scale = Vector3(1.0, 1.0, len_val)
+
+## Ensures every Mannequin, NPC, Co-op Player, StoreGhost, and HallwayGremlin within 28m of `viewer_pos`
+## has a live `SLSSkeletonOverlay` child on Visual Layer 2 and updates its 3D stick-figure pose!
+static func update_world_sls_skeletons(tree: SceneTree, delta: float, viewer_pos: Vector3, local_player: Node3D = null) -> void:
+	if tree == null:
+		return
+	var groups_and_types := [
+		["mall_mannequins", "mannequin"],
+		["mall_npcs", "npc"],
+		["players", "player"],
+		["store_ghosts", "ghost"],
+		["hallway_gremlins", "ghost"],
+	]
+	for gt in groups_and_types:
+		var grp_name: String = gt[0]
+		var s_type: String = gt[1]
+		for node in tree.get_nodes_in_group(grp_name):
+			var n3d := node as Node3D
+			if n3d == null or n3d == local_player:
+				continue
+			if n3d.global_position.distance_to(viewer_pos) > 28.0:
+				continue
+			var skel := n3d.get_node_or_null("SLSSkeletonOverlay") as SLSSkeletonOverlay
+			if skel == null:
+				skel = SLSSkeletonOverlay.new()
+				skel.name = "SLSSkeletonOverlay"
+				skel.subject_type = s_type
+				if n3d.has_meta("uncanny_seed"):
+					skel.uncanny_seed = int(n3d.get_meta("uncanny_seed"))
+				else:
+					skel.uncanny_seed = absi(int(n3d.global_position.x * 131.0 + n3d.global_position.z * 241.0))
+				n3d.add_child(skel)
+			skel.update_skeleton_pose(delta, viewer_pos)
+
 static func get_placed_cameras_sorted(tree: SceneTree) -> Array[PlacedVideoCameraActor]:
 	var list: Array[PlacedVideoCameraActor] = []
 	if tree == null:

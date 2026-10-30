@@ -465,6 +465,8 @@ func _build_player_hierarchy() -> void:
 	main_camera = Camera3D.new()
 	main_camera.fov = 75.0
 	main_camera.current = true
+	# Hide Visual Layer 2 (3D Stick-Figure Skeletons) from the naked eye so they ONLY appear on the SLS Camera's LCD Viewfinder!
+	main_camera.set_cull_mask_value(2, false)
 	head_pivot.add_child(main_camera)
 
 	# Belt Flashlight (T) — positioned forward of the first-person viewmodel plane on the left-chest side
@@ -1200,20 +1202,74 @@ func _try_place_held_item_on_push_cart() -> bool:
 			"Mounted Portable CCTV Monitor onto the Push Cart's Front Display Mount! ([F] on monitor to pick it back up into Hands, [LMB] Power, [RMB] Cycle Cameras)",
 			Color(0.35, 1.0, 0.78)
 		)
+	elif placed_slot >= 100:
+		GameState.status_message.emit(
+			"Hung %s onto Equipment Push Cart Exterior Hook #%d! (Look at hook + [F] to take back)." % [
+				item_copy.get("name", "Camera Rig"), (placed_slot - 100) + 1
+			],
+			Color(0.35, 1.0, 0.78)
+		)
 	else:
 		GameState.status_message.emit(
-			"Placed %s onto Equipment Push Cart (Slot #%d/8 — %d/8 stored | Press [F] near cart to take items back)." % [
+			"Placed %s into Highlighted Push Cart Slot #%d/8 (%d/8 stored | Look at item + [F] to take back)." % [
 				item_copy.get("name", "Tool"), placed_slot + 1, best_pc.get_stored_item_count()
 			],
 			Color(0.35, 1.0, 0.78)
 		)
 	return true
 
+## Computes the exact world position on the floor, table, counter, or shelf where the player is looking!
+func get_exact_look_drop_position(default_dist: float = 1.35, height_offset: float = 0.0) -> Vector3:
+	var eye_pos := main_camera.global_position if main_camera else (global_position + Vector3(0.0, 1.55, 0.0))
+	var look_dir := (-main_camera.global_transform.basis.z.normalized()) if main_camera else (-global_transform.basis.z.normalized())
+	var horiz_fwd := -global_transform.basis.z
+	horiz_fwd.y = 0.0
+	if horiz_fwd.length_squared() < 0.001:
+		horiz_fwd = Vector3(0.0, 0.0, -1.0)
+	else:
+		horiz_fwd = horiz_fwd.normalized()
+
+	var space_state := get_world_3d().direct_space_state if get_world_3d() else null
+	if space_state != null:
+		var excl: Array[RID] = [get_rid()]
+		var max_ray_dist := 2.65
+		var ray_q := PhysicsRayQueryParameters3D.create(eye_pos, eye_pos + look_dir * max_ray_dist)
+		ray_q.exclude = excl
+		var hit := space_state.intersect_ray(ray_q)
+		if not hit.is_empty():
+			var hit_pos: Vector3 = hit["position"]
+			var hit_norm: Vector3 = hit["normal"]
+			if hit_norm.y >= 0.45 and absf(hit_pos.y - global_position.y) <= 1.85:
+				# Looked directly at a floor, table, bench, or counter top!
+				return hit_pos + Vector3(0.0, height_offset, 0.0)
+			# Hit a wall or vertical prop -> pull back 0.22m from the wall and drop straight down to the surface below!
+			var pullback := hit_pos + Vector3(hit_norm.x, 0.0, hit_norm.z).normalized() * 0.22
+			var down_q := PhysicsRayQueryParameters3D.create(pullback + Vector3(0.0, 0.6, 0.0), pullback + Vector3(0.0, -3.0, 0.0))
+			down_q.exclude = excl
+			var down_hit := space_state.intersect_ray(down_q)
+			if not down_hit.is_empty():
+				return (down_hit["position"] as Vector3) + Vector3(0.0, height_offset, 0.0)
+			return Vector3(pullback.x, global_position.y + height_offset, pullback.z)
+
+		# No direct hit within 2.65m (e.g. looking horizontally) -> project `default_dist` along look ray & raycast down to floor/table!
+		var aim_pt := eye_pos + look_dir * default_dist
+		var horiz_vec := Vector2(aim_pt.x - global_position.x, aim_pt.z - global_position.z)
+		var h_len := clampf(horiz_vec.length(), 0.55, 2.25)
+		var h_dir := (horiz_vec / maxf(horiz_vec.length(), 0.001)) if horiz_vec.length() > 0.01 else Vector2(horiz_fwd.x, horiz_fwd.z)
+		var probe_top := Vector3(global_position.x + h_dir.x * h_len, clampf(aim_pt.y + 0.5, global_position.y + 0.2, global_position.y + 1.8), global_position.z + h_dir.y * h_len)
+		var probe_bot := Vector3(probe_top.x, global_position.y - 2.5, probe_top.z)
+		var down_q2 := PhysicsRayQueryParameters3D.create(probe_top, probe_bot)
+		down_q2.exclude = excl
+		var down_hit2 := space_state.intersect_ray(down_q2)
+		if not down_hit2.is_empty():
+			return (down_hit2["position"] as Vector3) + Vector3(0.0, height_offset, 0.0)
+
+	return global_position + horiz_fwd * default_dist + Vector3(0.0, height_offset, 0.0)
+
 func _drop_hand_item_to_floor(reason: String) -> void:
 	if hand_slot_item.is_empty():
 		return
-	var forward := -global_transform.basis.z.normalized()
-	var drop_pos := global_position + forward * 0.85 + Vector3(randf_range(-0.2, 0.2), 0.0, randf_range(-0.2, 0.2))
+	var drop_pos := get_exact_look_drop_position(1.25, 0.0)
 	var item_name: String = hand_slot_item.get("name", "Hand Item")
 
 	if hand_slot_item.get("id", "") == "death_crate":
@@ -1243,17 +1299,17 @@ func _drop_hand_item_to_floor(reason: String) -> void:
 
 	hand_slot_item = {}
 	_refresh_equipped_visuals()
-	GameState.status_message.emit("Dropped %s from Hands onto the floor (%s)." % [item_name, reason], Color(1.0, 0.72, 0.35))
+	GameState.status_message.emit("Dropped %s at looked-at spot (%s)." % [item_name, reason], Color(1.0, 0.72, 0.35))
 
 func _drop_active_hotbar_slot_to_floor() -> void:
 	if active_slot < 0 or active_slot >= 4 or hotbar_slots[active_slot].is_empty():
 		GameState.status_message.emit("Hotbar Slot [%d] is already empty." % (active_slot + 1), Color(0.75, 0.8, 0.85))
 		return
 	var item_data := hotbar_slots[active_slot]
-	var forward := -global_transform.basis.z.normalized()
+	var drop_pos := get_exact_look_drop_position(1.30, 0.0)
 	if str(item_data.get("id", "")) == "filled_ectoplasm_canister":
 		var f_trap := PlaceableEvidenceActors.EctoplasmCanisterTrap.new()
-		f_trap.position = global_position + forward * 1.15
+		f_trap.position = drop_pos
 		get_parent().add_child(f_trap)
 		f_trap._mark_filled_with_ghost(
 			str(item_data.get("captured_entity", "Captured Ghost")),
@@ -1262,21 +1318,21 @@ func _drop_active_hotbar_slot_to_floor() -> void:
 		)
 		hotbar_slots[active_slot] = {}
 		_refresh_equipped_visuals()
-		GameState.status_message.emit("Set %s down on the floor (Press [F] to pick it up and sell it to Trader Chen!)." % item_data.get("name", "Filled Canister"), Color(1.0, 0.86, 0.32))
+		GameState.status_message.emit("Set %s down where you are looking (Look at it + [F] to pick up and sell to Trader Chen!)." % item_data.get("name", "Filled Canister"), Color(1.0, 0.86, 0.32))
 		return
 
 	item_data["spirit_freq"] = spirit_box_channels[spirit_box_channel_idx]
 	item_data["uv_narrow"] = uv_narrow_beam
 	var drop := PlaceableEvidenceActors.WorldDroppedItem.new()
 	drop.item_data = item_data.duplicate(true)
-	drop.position = global_position + forward * 0.90
+	drop.position = drop_pos
 	drop.rotation.y = rotation.y
 	get_parent().add_child(drop)
 	var was_on := bool(item_data.get("powered_on", false)) and bool(item_data.get("can_power_toggle", false))
 	hotbar_slots[active_slot] = {}
 	_refresh_equipped_visuals()
 	GameState.status_message.emit(
-		"Threw/Dropped %s onto the floor (%s)." % [
+		"Dropped %s where you are looking (%s)." % [
 			item_data.get("name", "Tool"),
 			"LEFT ON — Still functioning & making sound on the ground!" if was_on else "Switched OFF"
 		],
@@ -1816,9 +1872,45 @@ func _tick_live_equipment_indicators(delta: float) -> void:
 			photo_lock = "LOCK: 4-STAR ECTOPLASM [$65]"
 
 	var fix_info := "AIM AT FIXTURE / LIGHT CART"
-	var aimed_fix := _find_aimed_light_fixture()
-	if aimed_fix:
-		fix_info = "[%s] Mode: %d" % [aimed_fix.store_id, int(aimed_fix.current_mode)]
+	if ind_slot == 5:
+		var aimed_fix := _find_aimed_light_fixture()
+		if aimed_fix:
+			fix_info = "[%s] Mode: %d" % [aimed_fix.store_id, int(aimed_fix.current_mode)]
+	else:
+		fix_info = ""
+
+	# --------------------------------------------------------------------------
+	# 5. Non-Ghost Presences & Uncanny Mannequin / NPC / Electrical Detection!
+	#    - SLS Stick-Pose Camera (`ind_slot == 11`): updates 3D wireframe stick-figure
+	#      skeletons on Mannequins, NPCs, Co-op Players & Ghosts on Visual Layer 2!
+	#    - Thermal Scanner (`ind_slot == 1`): detects Human Body Heat (36.8°C),
+	#      Uncanny Mannequin Residual Warmth (29.8°C-33.4°C?!), Sauna/Hot Pot Heat, & Zoltar!
+	#    - EMF Reader (`ind_slot == 0`): detects Electrical Machinery & Mannequin Armatures (EMF 2-3)!
+	#    - Spirit Box (`ind_slot == 2`): picks up Mannequin/Zoltar/Muzak FM bleed-through!
+	#    - Photo Camera (`ind_slot == 4`): shows viewfinder locks on Mannequins, NPCs & Players!
+	# --------------------------------------------------------------------------
+	var cam_eye := main_camera.global_position if main_camera else (global_position + Vector3(0.0, 1.55, 0.0))
+	var cam_fwd := (-main_camera.global_transform.basis.z.normalized()) if main_camera else (-global_transform.basis.z.normalized())
+
+	if ind_slot == 11 and cur_on:
+		VideoAndAudioSurveillance.update_world_sls_skeletons(get_tree(), delta, global_position, self)
+		photo_lock = _get_sls_camera_viewfinder_status(cam_eye, cam_fwd, g, ghost_dist)
+	else:
+		var non_ghost := _scan_non_ghost_environment_presences(cam_eye, cam_fwd)
+		if emf_lvl <= 1 and int(non_ghost.get("emf_lvl", 1)) > 1:
+			emf_lvl = int(non_ghost["emf_lvl"])
+			_current_emf_reading = emf_lvl
+			if ind_slot == 0:
+				fix_info = str(non_ghost.get("emf_label", "ELECTRICAL FIELD"))
+		if ghost_dist > 12.0 and non_ghost.has("temp_c"):
+			temp_c = float(non_ghost["temp_c"])
+			_current_temp_reading_c = temp_c
+			if ind_slot == 1:
+				fix_info = str(non_ghost.get("temp_label", ""))
+		if ghost_dist > 16.0 and not str(non_ghost.get("spirit_bleed", "")).is_empty():
+			spirit_tell = str(non_ghost["spirit_bleed"])
+		if ind_slot == 4 and photo_lock == "AIM AT GHOST / UV / LEDGER" and not str(non_ghost.get("photo_subject", "")).is_empty():
+			photo_lock = str(non_ghost["photo_subject"])
 
 	var max_can_t: float = GameState.get_canister_max_deployed_time() if GameState.has_method("get_canister_max_deployed_time") else 18.0
 	var cur_can_charge: float = float(cur_item.get("deployed_seconds_left", max_can_t))
@@ -1992,8 +2084,7 @@ func _deploy_held_ectoplasm_canister() -> bool:
 	trap.max_deployed_seconds = max_t
 	trap.deployed_seconds_left = clampf(carried_charge, 1.0, max_t)
 	trap.is_open_sucking = false
-	var forward := -global_transform.basis.z.normalized()
-	trap.position = global_position + forward * 1.35
+	trap.position = get_exact_look_drop_position(1.35, 0.0)
 	get_parent().add_child(trap)
 	trap.set_capture_radius(chosen_radius)
 	play_flashlight_click(true)
@@ -2263,13 +2354,12 @@ func _deploy_held_video_camera() -> bool:
 	cam_actor.is_powered_on = pwr_state
 	cam_actor.ir_night_vision_on = nv_state
 	cam_actor.store_id = _infer_nearest_store_id()
-	var forward := -global_transform.basis.z.normalized()
-	cam_actor.position = global_position + forward * 1.15
+	cam_actor.position = get_exact_look_drop_position(1.25, 0.0)
 	cam_actor.rotation.y = rotation.y
 	get_parent().add_child(cam_actor)
 	play_flashlight_click(true)
 	GameState.status_message.emit(
-		"Placed %s [G] facing [%s] (Power: %s | %s)! View on side LCD screen or Fixed Front Cart Display ([E] on Cart cycles locations, [E] on Camera rotates +35°, [LMB] Power, [RMB] Night-Vision)!" % [
+		"Placed %s [G] where you are looking in [%s] (Power: %s | %s)! View on side LCD screen or Cart Display ([E] on Camera rotates +35°, [LMB] Power, [RMB] Night-Vision)!" % [
 			"Assembled Tripod Video Rig (1.45m)" if is_mounted else "Night-Vision Video Camera (0.25m)",
 			cam_actor.store_id,
 			"ON" if pwr_state else "OFF",
@@ -2285,8 +2375,7 @@ func _deploy_held_audio_recorder() -> bool:
 	var rec := VideoAndAudioSurveillance.ParanormalAudioRecorderActor.new()
 	rec.recorded_store_id = _infer_nearest_store_id()
 	rec.is_recording = true
-	var forward := -global_transform.basis.z.normalized()
-	rec.position = global_position + forward * 1.05
+	rec.position = get_exact_look_drop_position(1.20, 0.0)
 	rec.rotation.y = rotation.y
 	get_parent().add_child(rec)
 	play_flashlight_click(true)
@@ -2345,12 +2434,11 @@ func _deploy_held_laser_grid_dome() -> bool:
 		return false
 	var dome := ExpandedMallGadgets.LaserGridDomeActor.new()
 	dome.store_id = _infer_nearest_store_id()
-	var forward := -global_transform.basis.z.normalized()
-	dome.position = global_position + forward * 1.15
+	dome.position = get_exact_look_drop_position(1.25, 0.0)
 	get_parent().add_child(dome)
 	play_flashlight_click(true)
 	GameState.status_message.emit(
-		"Deployed D.O.T.S. Laser Grid Projector Dome on floor (5.5m Green Laser Matrix — Outlines Invisible Ghosts & Logs SLS/Laser Evidence)!",
+		"Deployed D.O.T.S. Laser Grid Projector Dome where you are looking (5.5m Green Laser Matrix — Outlines Invisible Ghosts & Logs SLS/Laser Evidence)!",
 		Color(0.32, 1.0, 0.55)
 	)
 	return true
@@ -2360,8 +2448,7 @@ func _deploy_held_eas_pedestal_ward() -> bool:
 		return false
 	var ward := ExpandedMallGadgets.EASPedestalWardActor.new()
 	ward.store_id = _infer_nearest_store_id()
-	var forward := -global_transform.basis.z.normalized()
-	ward.position = global_position + forward * 1.20
+	ward.position = get_exact_look_drop_position(1.25, 0.0)
 	get_parent().add_child(ward)
 	play_flashlight_click(true)
 	GameState.status_message.emit(
@@ -2374,8 +2461,7 @@ func _deploy_held_talkboy_decoy() -> bool:
 	if not consume_carried_item_id("talkboy_decoy"):
 		return false
 	var decoy := ExpandedMallGadgets.TalkBoyDecoyActor.new()
-	var forward := -global_transform.basis.z.normalized()
-	decoy.position = global_position + forward * 1.35
+	decoy.position = get_exact_look_drop_position(1.35, 0.0)
 	get_parent().add_child(decoy)
 	play_flashlight_click(true)
 	GameState.status_message.emit(
@@ -2387,20 +2473,60 @@ func _deploy_held_talkboy_decoy() -> bool:
 func _execute_expanded_gadget_action(cur_id: String, is_secondary: bool) -> void:
 	var g := _get_nearest_ghost()
 	var g_dist := global_position.distance_to(g.global_position) if (g != null and not g.is_resolved) else 999.0
+	var cam_eye := main_camera.global_position if main_camera else (global_position + Vector3(0.0, 1.55, 0.0))
+	var cam_fwd := (-main_camera.global_transform.basis.z.normalized()) if main_camera else (-global_transform.basis.z.normalized())
 	match cur_id:
 		"sls_camera":
-			if not is_secondary:
+			if is_secondary:
 				toggle_active_gadget_power()
-			if is_item_powered_on(get_current_active_item()) and g != null and g_dist <= 10.0:
+				return
+			play_flashlight_click(true)
+			if not is_item_powered_on(get_current_active_item()):
+				toggle_active_gadget_power()
+				return
+			if g != null and g_dist <= 11.0 and cam_fwd.dot((g.global_position + Vector3(0.0, 1.0, 0.0) - cam_eye).normalized()) >= 0.55:
 				g.visual_root.visible = true
 				GameState.record_evidence(g.store_id, "SLS / Laser Silhouette", 50)
 				var posture_tell := "VIOLENT TWITCHING STICK-FIGURE [CORRUPTED TELL!]" if g.is_corrupted_hostile else "CALM BROWSING STICK-FIGURE [RECEPTIVE TELL!]"
 				GameState.status_message.emit("SLS Depth Camera Lock (%.1fm): Outlined %s — %s" % [g_dist, g.ghost_name, posture_tell], Color(0.35, 1.0, 0.88))
+				return
+			# Non-ghost stick-pose subjects (Mannequins, NPCs, Co-op Players)!
+			var best_mannequin: Node3D = _find_aimed_group_node("mall_mannequins", cam_eye, cam_fwd, 14.0, 0.68)
+			if best_mannequin != null:
+				var m_dist := global_position.distance_to(best_mannequin.global_position)
+				var m_title := str(best_mannequin.get_meta("mannequin_name", "Retail Display Mannequin"))
+				GameState.status_message.emit(
+					"SLS STICK-POSE ANOMALY (%.1fm — %s): The fiberglass mannequin is motionless, but on the SLS depth screen its stick-figure skeleton is breathing, tilting its neck, and turning its head to stare directly at you..." % [m_dist, m_title],
+					Color(1.0, 0.48, 0.25)
+				)
+				return
+			var best_npc: Node3D = _find_aimed_group_node("mall_npcs", cam_eye, cam_fwd, 15.0, 0.68)
+			if best_npc != null:
+				var n_dist := global_position.distance_to(best_npc.global_position)
+				var n_title := str(best_npc.get_meta("npc_name", "Mall Staff NPC"))
+				GameState.status_message.emit(
+					"SLS Stick-Pose Camera (%.1fm): Mapped non-ghost skeletal rig on %s [Articulated Posture Active]." % [n_dist, n_title],
+					Color(0.55, 1.0, 0.45)
+				)
+				return
+			for p_node in get_tree().get_nodes_in_group("players"):
+				var p3d := p_node as Node3D
+				if p3d and p3d != self and global_position.distance_to(p3d.global_position) <= 15.0:
+					if cam_fwd.dot(((p3d.global_position + Vector3(0.0, 1.0, 0.0)) - cam_eye).normalized()) >= 0.65:
+						GameState.status_message.emit(
+							"SLS Stick-Pose Camera: Mapped live 3D stick-figure skeleton on Co-op Teammate Investigator!",
+							Color(0.35, 1.0, 0.78)
+						)
+						return
+			GameState.status_message.emit(
+				"SLS Stick-Pose Camera: Aim LCD Viewfinder at Store Mannequins, NPCs, Co-op Players, or Haunted Stores to see live 3D Stick-Figure Skeletons! ([RMB] Power ON/OFF)",
+				Color(0.45, 1.0, 0.68)
+			)
 		"laser_grid_dome":
 			_deploy_held_laser_grid_dome()
 		"barcode_scanner":
 			play_flashlight_click(true)
-			if g != null and g_dist <= 9.5:
+			if g != null and g_dist <= 9.5 and cam_fwd.dot((g.global_position + Vector3(0.0, 1.0, 0.0) - cam_eye).normalized()) >= 0.55:
 				GameState.record_evidence(g.store_id, "Cursed Barcode ($6.66)", 40)
 				var sku_key := "BARCODE_%s" % g.store_id
 				if not GameState.powered_circuits.has(sku_key):
@@ -2408,20 +2534,56 @@ func _execute_expanded_gadget_action(cur_id: String, is_secondary: bool) -> void
 					GameState.add_cash(25, "Retail Barcode Scanner Audit (%s)" % g.store_id)
 				var price_tell := "CURSED SKU [$6.66 / ERROR-999 — CORRUPTED HOSTILE!]" if g.is_corrupted_hostile else "VALID SKU [$19.95 — RECEPTIVE TO PEACE!]"
 				GameState.status_message.emit("POS Laser Barcode Scan [%s]: %s" % [g.store_id, price_tell], Color(1.0, 0.45, 0.42) if g.is_corrupted_hostile else Color(0.45, 1.0, 0.72))
-			else:
-				GameState.status_message.emit("POS Barcode Scanner: Step within 9.5m of a Haunted Store to scan cursed price tags ($6.66 vs $19.95)!", Color(1.0, 0.75, 0.45))
+				return
+			# Non-Ghost Barcode Scans: Mannequins, NPCs, Co-op Teammates & Carts!
+			var aimed_man := _find_aimed_group_node("mall_mannequins", cam_eye, cam_fwd, 7.5, 0.72)
+			if aimed_man != null:
+				var m_sku := str(aimed_man.get_meta("barcode_sku", "SKU #0000-M: DISPLAY MANNEQUIN [WARNING: POSE DRIFT DETECTED]"))
+				GameState.status_message.emit("POS Barcode Scan [NON-GHOST ANOMALY]: %s — Wait, why does its tag say 'DO NOT TURN YOUR BACK ON IT'?!" % m_sku, Color(1.0, 0.52, 0.28))
+				return
+			var aimed_npc := _find_aimed_group_node("mall_npcs", cam_eye, cam_fwd, 7.5, 0.72)
+			if aimed_npc != null:
+				var n_sku := str(aimed_npc.get_meta("barcode_sku", "EMP #1994: ARCADIA MALL STAFF"))
+				GameState.status_message.emit("POS Barcode Scan [NON-GHOST PRESENCE]: %s" % n_sku, Color(0.55, 0.96, 0.72))
+				return
+			var aimed_cart := _find_aimed_group_node("mall_carts", cam_eye, cam_fwd, 6.5, 0.72)
+			if aimed_cart != null:
+				GameState.status_message.emit("POS Barcode Scan [FACILITIES ASSET]: SKU #ARC-CART-08 — HEAVY UTILITY CART [PROPERTY OF ARCADIA MALL]", Color(0.75, 0.92, 1.0))
+				return
+			GameState.status_message.emit("POS Barcode Scanner: Aim at Store Mannequins, NPCs, Carts, or step within 9.5m of a Haunted Store Ghost ($6.66 vs $19.95)!", Color(1.0, 0.75, 0.45))
 		"parabolic_mic":
-			if not is_secondary:
+			if is_secondary:
 				toggle_active_gadget_power()
-			if g != null and g_dist <= 30.0:
+				return
+			play_flashlight_click(true)
+			if g != null and g_dist <= 30.0 and cam_fwd.dot((g.global_position + Vector3(0.0, 1.0, 0.0) - cam_eye).normalized()) >= 0.65:
 				var db_val := lerpf(88.0, 32.0, clampf(g_dist / 30.0, 0.0, 1.0))
 				GameState.record_evidence(g.store_id, "Parabolic Whisper (30m)", 40)
 				GameState.status_message.emit(
 					"Parabolic Dish [30m Range]: Locked onto [%s] at %.1fm (%.1f dB — %s)" % [g.store_id, g_dist, db_val, g.get_disposition_tell_short()],
 					Color(0.55, 0.96, 1.0)
 				)
-			else:
-				GameState.status_message.emit("Parabolic Dish [30m]: Scanning concourse acoustics... No active ghost within 30m.", Color(0.75, 0.88, 0.96))
+				return
+			# Non-Ghost Directional Acoustic Presences (Mannequins creaking/breathing, NPCs, Elevator/Onsen)!
+			var para_man := _find_aimed_group_node("mall_mannequins", cam_eye, cam_fwd, 24.0, 0.80)
+			if para_man != null:
+				var pm_dist := global_position.distance_to(para_man.global_position)
+				var pm_snd := str(para_man.get_meta("parabolic_sound", "Display Mannequin: Faint fiberglass joint creak... & muffled breathing?! (26 dB)"))
+				GameState.status_message.emit(
+					"Parabolic Dish [NON-GHOST ACOUSTIC @ %.1fm]: %s" % [pm_dist, pm_snd],
+					Color(1.0, 0.58, 0.28)
+				)
+				return
+			var para_npc := _find_aimed_group_node("mall_npcs", cam_eye, cam_fwd, 28.0, 0.78)
+			if para_npc != null:
+				var pn_dist := global_position.distance_to(para_npc.global_position)
+				var pn_snd := str(para_npc.get_meta("parabolic_sound", "Mall Staff: Ambient rustling (32 dB)"))
+				GameState.status_message.emit(
+					"Parabolic Dish [NON-GHOST ACOUSTIC @ %.1fm]: %s" % [pn_dist, pn_snd],
+					Color(0.55, 0.98, 0.75)
+				)
+				return
+			GameState.status_message.emit("Parabolic Dish [30m]: Aim directional dish at Store Mannequins, NPCs, or Haunted Stores to eavesdrop on faint sounds!", Color(0.75, 0.88, 0.96))
 		"ecto_viewmaster":
 			play_flashlight_click(true)
 			if g != null and g_dist <= 14.0:
@@ -2449,8 +2611,7 @@ func _execute_expanded_gadget_action(cur_id: String, is_secondary: bool) -> void
 			var charges_left: int = int(cur_pouch.get("charges", 3)) - 1
 			var salt_line := ExpandedMallGadgets.PinkSaltLineActor.new()
 			salt_line.store_id = _infer_nearest_store_id()
-			var forward := -global_transform.basis.z.normalized()
-			salt_line.position = global_position + forward * 1.10
+			salt_line.position = get_exact_look_drop_position(1.20, 0.0)
 			salt_line.rotation.y = rotation.y
 			get_parent().add_child(salt_line)
 			if charges_left <= 0:
@@ -2481,8 +2642,7 @@ func _execute_expanded_gadget_action(cur_id: String, is_secondary: bool) -> void
 						st.cycle_symbol()
 						return
 			var stencil := ExpandedMallGadgets.UVWallStencilActor.new()
-			var forward := -global_transform.basis.z.normalized()
-			stencil.position = global_position + forward * 0.95
+			stencil.position = get_exact_look_drop_position(1.15, 0.0)
 			stencil.rotation.y = rotation.y
 			get_parent().add_child(stencil)
 			GameState.status_message.emit("Sprayed Glowing UV Wayfinding Stencil on floor/wall ([E] Cycle Symbol: Arrow / Cleared Check / Corrupted Skull)!", Color(0.78, 0.45, 1.0))
@@ -2666,7 +2826,153 @@ func _snap_evidence_photo() -> void:
 			GameState.add_cash(65, "4-STAR ECTOPLASMIC / UV EVIDENCE PHOTO")
 			return
 
+	var cam_eye := main_camera.global_position if main_camera else (global_position + Vector3(0.0, 1.55, 0.0))
+	var cam_fwd := (-main_camera.global_transform.basis.z.normalized()) if main_camera else (-global_transform.basis.z.normalized())
+	var aimed_man := _find_aimed_group_node("mall_mannequins", cam_eye, cam_fwd, 9.5, 0.72)
+	if aimed_man != null:
+		GameState.add_cash(30, "2-STAR UNCANNY MANNEQUIN PHOTO")
+		GameState.status_message.emit(
+			"Polaroid Developed (+$30): You photographed the Display Mannequin... In the flash exposure, its head is tilted 30° toward the lens.",
+			Color(1.0, 0.62, 0.32)
+		)
+		return
+
 	GameState.add_cash(30, "2-STAR ANOMALY / PROP PHOTO")
+
+func _find_aimed_group_node(group_name: String, origin: Vector3, forward: Vector3, max_dist: float, min_dot: float = 0.72) -> Node3D:
+	var best_node: Node3D = null
+	var best_score := 999.0
+	for node in get_tree().get_nodes_in_group(group_name):
+		var n3d := node as Node3D
+		if n3d == null or n3d == self:
+			continue
+		var target_pt := n3d.global_position + Vector3(0.0, 0.95, 0.0)
+		var to_n := target_pt - origin
+		var d := to_n.length()
+		if d > 0.15 and d <= max_dist and absf(n3d.global_position.y - global_position.y) <= 3.8:
+			var dot_val := forward.dot(to_n / d)
+			if dot_val >= min_dot:
+				var score := d * (1.15 - dot_val)
+				if score < best_score:
+					best_score = score
+					best_node = n3d
+	return best_node
+
+func _get_sls_camera_viewfinder_status(origin: Vector3, forward: Vector3, g: StoreGhost, ghost_dist: float) -> String:
+	if g != null and not g.is_resolved and ghost_dist <= 13.0:
+		var to_g := (g.global_position + Vector3(0.0, 1.0, 0.0)) - origin
+		if forward.dot(to_g.normalized()) >= 0.62:
+			return "SLS POSE: PARANORMAL ENTITY [%s — LMB LOG]" % g.ghost_name.left(14)
+
+	var aimed_man := _find_aimed_group_node("mall_mannequins", origin, forward, 16.0, 0.68)
+	if aimed_man != null:
+		var m_dist := global_position.distance_to(aimed_man.global_position)
+		if m_dist < 4.2:
+			return "SLS POSE: MANNEQUIN [SKELETON REACHING AT YOU?!]"
+		return "SLS POSE: MANNEQUIN [SKELETON HEAD TRACKING YOU!]"
+
+	var aimed_npc := _find_aimed_group_node("mall_npcs", origin, forward, 16.0, 0.68)
+	if aimed_npc != null:
+		var n_name := str(aimed_npc.get_meta("npc_name", "Mall Staff")).split(" (")[0]
+		return "SLS POSE: %s [NON-GHOST RIG]" % n_name.to_upper()
+
+	for p_node in get_tree().get_nodes_in_group("players"):
+		var p3d := p_node as Node3D
+		if p3d and p3d != self and global_position.distance_to(p3d.global_position) <= 16.0:
+			var to_p := (p3d.global_position + Vector3(0.0, 1.0, 0.0)) - origin
+			if forward.dot(to_p.normalized()) >= 0.68:
+				return "SLS POSE: CO-OP INVESTIGATOR [HUMAN RIG]"
+
+	return "SLS STICK-POSE VIEW [Mannequins / NPCs / Players / Ghosts]"
+
+func _scan_non_ghost_environment_presences(origin: Vector3, forward: Vector3) -> Dictionary:
+	var result: Dictionary = {}
+
+	# 1. Check Store Mannequins in front of the player (Uncanny Warmth 29.8°C-33.4°C, EMF-2 Armature, Spirit Box Retail Tape Bleed, Photo Subject!)
+	var aimed_man := _find_aimed_group_node("mall_mannequins", origin, forward, 6.5, 0.72)
+	if aimed_man != null:
+		var m_dist := global_position.distance_to(aimed_man.global_position)
+		var m_temp := float(aimed_man.get_meta("body_temp_c", 31.2))
+		result["temp_c"] = m_temp
+		result["temp_label"] = "MANNEQUIN WARMTH?! (WHY WARM?)"
+		result["photo_subject"] = "SUBJECT: MANNEQUIN [UNCANNY POSE]"
+		if m_dist <= 2.8:
+			result["emf_lvl"] = 2
+			result["emf_label"] = "MANNEQUIN ARMATURE HUM"
+		if m_dist <= 4.2:
+			result["spirit_bleed"] = "\"...HOLD YOUR POSE... DON'T BLINK...\""
+		return result
+
+	# 2. Check Mall NPCs (Quartermaster Chen, Hot Pot Chef, Zoltar Automaton, Elena Vance Echo)
+	var aimed_npc := _find_aimed_group_node("mall_npcs", origin, forward, 7.0, 0.70)
+	if aimed_npc != null:
+		var n_name := str(aimed_npc.get_meta("npc_name", "Mall Staff")).split(" (")[0]
+		var n_temp := float(aimed_npc.get_meta("body_temp_c", 36.8))
+		var is_human := bool(aimed_npc.get_meta("is_living_human", true))
+		result["temp_c"] = n_temp
+		result["temp_label"] = ("HUMAN BODY HEAT: %s" % n_name.to_upper()) if is_human else ("ANOMALOUS TEMP: %s" % n_name.to_upper())
+		result["photo_subject"] = "SUBJECT: %s" % n_name.to_upper()
+		if "Zoltar" in n_name and global_position.distance_to(aimed_npc.global_position) <= 4.0:
+			result["emf_lvl"] = 3
+			result["emf_label"] = "UNPLUGGED AUTOMATON COIL?!"
+			result["spirit_bleed"] = "\"...YOUR FLOOR IS NOT LISTED...\""
+		return result
+
+	# 3. Check Co-op Players in front of the player (36.8°C Human Body Heat)
+	for p_node in get_tree().get_nodes_in_group("players"):
+		var p3d := p_node as Node3D
+		if p3d and p3d != self and global_position.distance_to(p3d.global_position) <= 6.5:
+			var to_p := (p3d.global_position + Vector3(0.0, 1.0, 0.0)) - origin
+			if forward.dot(to_p.normalized()) >= 0.72:
+				result["temp_c"] = 36.8
+				result["temp_label"] = "TEAMMATE BODY HEAT (36.8°C)"
+				result["photo_subject"] = "SUBJECT: CO-OP INVESTIGATOR"
+				if p3d.has_method("is_emitting_device_noise") and bool(p3d.call("is_emitting_device_noise")):
+					result["emf_lvl"] = 2
+					result["emf_label"] = "TEAMMATE ACTIVE GEAR EMF"
+				return result
+
+	# 4. Check Non-Ghost Electrical Machinery (Cart Chargers, Powered Light Carts, Freight Elevator) for EMF 2-3 & Transformer Warmth!
+	for ch_node in get_tree().get_nodes_in_group("cart_chargers"):
+		var ch := ch_node as Node3D
+		if ch and global_position.distance_to(ch.global_position) <= 3.8:
+			result["emf_lvl"] = 3
+			result["emf_label"] = "240V CHARGER TRANSFORMER"
+			result["temp_c"] = 34.5
+			result["temp_label"] = "CHARGER COIL HEAT (34.5°C)"
+			return result
+
+	for lc_node in get_tree().get_nodes_in_group("light_carts"):
+		var lc := lc_node as MallCartSystem
+		if lc and lc.is_floodlight_on and global_position.distance_to(lc.global_position) <= 3.2:
+			result["emf_lvl"] = 2
+			result["emf_label"] = "18,000 LM BALLAST FIELD"
+			result["temp_c"] = 33.0
+			result["temp_label"] = "FLOODLIGHT BALLAST WARMTH"
+			return result
+
+	for fe_node in get_tree().get_nodes_in_group("freight_elevators"):
+		var fe := fe_node as Node3D
+		if fe and global_position.distance_to(fe.global_position) <= 4.5:
+			result["emf_lvl"] = 2
+			result["emf_label"] = "ELEVATOR 3-PHASE RELAY"
+			result["temp_c"] = 28.5
+			result["temp_label"] = "HYDRAULIC MOTOR WARMTH"
+			return result
+
+	# 5. Check Geothermal Onsen / Sauna Biome & Food Court Hot Pot Heat!
+	if global_position.x <= -36.0 and absf(global_position.z) <= 36.0 and global_position.y < 4.0:
+		result["temp_c"] = 48.5
+		result["temp_label"] = "SAUNA / GEOTHERMAL STEAM"
+	elif global_position.distance_to(Vector3(-18.0, 0.0, -32.0)) <= 4.5:
+		result["temp_c"] = 62.0
+		result["temp_label"] = "SIMMERING HOT POT BROTH"
+
+	# 6. Check 104.7 FM Mall Muzak Bleed on Spirit Box
+	if absf(spirit_box_channels[spirit_box_channel_idx] - 104.7) < 0.15:
+		result["spirit_bleed"] = "104.7 FM: 1998 ARCADIA MUZAK BLEED"
+
+	return result
 
 func _find_aimed_light_fixture() -> MallLightFixture:
 	var origin := main_camera.global_position

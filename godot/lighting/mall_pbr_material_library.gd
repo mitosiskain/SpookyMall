@@ -361,6 +361,9 @@ static func get_smart_box_material(size: Vector3, color: Color, roughness: float
 ## Automatically assigns 2K PBR textures & materials to all MeshInstance3D surfaces in an instantiated .fbx / .glb model!
 static func beautify_model_materials(root: Node, res_path: String, fallback_tint: Color = Color(0.85, 0.84, 0.82)) -> void:
 	var lower_path := res_path.to_lower()
+	# Preserve original materials on character and animation models (e.g. MikuDoomer_Chen.glb)
+	if "characters/" in lower_path or "mikudoomer" in lower_path or "animations/" in lower_path:
+		return
 	var meshes: Array[MeshInstance3D] = []
 	_collect_mesh_instances(root, meshes)
 	if meshes.is_empty():
