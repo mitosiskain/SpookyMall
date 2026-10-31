@@ -29,11 +29,10 @@ animation and models/*.blend1
 animation and models/Universal Animation Library*/
 *.blend1
 
-# 6. Python / OS Temporary Files & Local Windows Portable Godot / Shortcuts
+# 6. Python / OS Temporary Files & Unpacked 173MB Godot Binary (83MB .zip is tracked in Git!)
 __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
 Godot_v4*.exe
-Godot_v4*.zip
 *.lnk
