@@ -2,19 +2,6 @@
 setlocal EnableDelayedExpansion
 title SpookyMall - One-Click Installer & Launcher
 
-:: ============================================================================
-:: PRIVATE REPO READ-ONLY TOKEN (SPLIT INTO TWO PARTS SO DISCORD NEVER REVOKES IT)
-:: Keep TK_A as "github_pat_" and paste the rest of your token (after github_pat_)
-:: into TK_B below, OR run: ./Scripts/pack_tester_bootstrap.sh <FULL_TOKEN>
-:: ============================================================================
-set "TK_A=github_pat_"
-set "TK_B="
-if defined TK_B (
-    set "GITHUB_READ_TOKEN=!TK_A!!TK_B!"
-) else (
-    set "GITHUB_READ_TOKEN="
-)
-
 cd /d "%~dp0"
 
 echo ============================================================
@@ -67,16 +54,11 @@ if not defined GIT_EXE (
 echo [1/4] Git ready: "!GIT_EXE!"
 
 :: ----------------------------------------------------------------------------
-:: STEP 3: Clone or Update SpookyMall Repository (Isolated from Windows Login)
+:: STEP 3: Clone or Update SpookyMall Repository (100% Anonymous / No Login)
 :: ----------------------------------------------------------------------------
 set "GIT_TERMINAL_PROMPT=0"
 set "GCM_INTERACTIVE=never"
-
-if defined GITHUB_READ_TOKEN (
-    set "REPO_URL=https://x-access-token:!GITHUB_READ_TOKEN!@github.com/mitosiskain/SpookyMall.git"
-) else (
-    set "REPO_URL=https://github.com/mitosiskain/SpookyMall.git"
-)
+set "REPO_URL=https://github.com/mitosiskain/SpookyMall.git"
 
 set "GAME_DIR="
 if exist "%~dp0project.godot" (
@@ -87,9 +69,7 @@ if exist "%~dp0project.godot" (
 
 if defined GAME_DIR (
     echo [2/4] Updating existing SpookyMall installation...
-    if defined GITHUB_READ_TOKEN (
-        "!GIT_EXE!" -C "!GAME_DIR!" remote set-url origin "!REPO_URL!" >nul 2>nul
-    )
+    "!GIT_EXE!" -C "!GAME_DIR!" remote set-url origin "!REPO_URL!" >nul 2>nul
     "!GIT_EXE!" -c credential.helper= -C "!GAME_DIR!" pull --ff-only
 ) else (
     echo [2/4] Downloading SpookyMall into "%~dp0SpookyMall"...
@@ -97,8 +77,7 @@ if defined GAME_DIR (
     "!GIT_EXE!" -c credential.helper= clone "!REPO_URL!" "%~dp0SpookyMall"
     if !ERRORLEVEL! NEQ 0 (
         echo.
-        echo [ERROR] Failed to download SpookyMall from GitHub without a login prompt.
-        echo Either the repository is Private and TK_B is empty/revoked, or internet is offline.
+        echo [ERROR] Failed to download SpookyMall from GitHub. Please check your internet connection.
         pause
         exit /b 1
     )
