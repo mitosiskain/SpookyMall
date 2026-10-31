@@ -1,5 +1,5 @@
 @echo off
-setlocal EnableDelayedExpansion
+setlocal
 title Update SpookyMall
 
 cd /d "%~dp0"
@@ -14,12 +14,9 @@ set "GCM_INTERACTIVE=never"
 
 set "GIT_EXE="
 where git >nul 2>nul
-if !ERRORLEVEL! EQU 0 (
-    set "GIT_EXE=git"
-) else (
-    if exist "%ProgramFiles%\Git\cmd\git.exe" set "GIT_EXE=%ProgramFiles%\Git\cmd\git.exe"
-    if exist "%LOCALAPPDATA%\Programs\Git\cmd\git.exe" set "GIT_EXE=%LOCALAPPDATA%\Programs\Git\cmd\git.exe"
-)
+if not errorlevel 1 set "GIT_EXE=git"
+if not defined GIT_EXE if exist "%ProgramFiles%\Git\cmd\git.exe" set "GIT_EXE=%ProgramFiles%\Git\cmd\git.exe"
+if not defined GIT_EXE if exist "%LOCALAPPDATA%\Programs\Git\cmd\git.exe" set "GIT_EXE=%LOCALAPPDATA%\Programs\Git\cmd\git.exe"
 
 if not defined GIT_EXE (
     echo [ERROR] Git was not found on this PC.
@@ -27,11 +24,11 @@ if not defined GIT_EXE (
     exit /b 1
 )
 
-"!GIT_EXE!" remote set-url origin "https://github.com/mitosiskain/SpookyMall.git" >nul 2>nul
-"!GIT_EXE!" -c credential.helper= pull --ff-only
+"%GIT_EXE%" remote set-url origin "https://github.com/mitosiskain/SpookyMall.git" >nul 2>nul
+"%GIT_EXE%" -c credential.helper= pull --ff-only
 
 echo.
-if !ERRORLEVEL! EQU 0 (
+if not errorlevel 1 (
     echo [SUCCESS] SpookyMall is up to date!
 ) else (
     echo [WARNING] Update encountered an issue.

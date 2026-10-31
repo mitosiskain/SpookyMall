@@ -1,5 +1,5 @@
 @echo off
-setlocal EnableDelayedExpansion
+setlocal
 title Install SpookyMall (One-Click Installer)
 
 cd /d "%~dp0"
@@ -12,21 +12,18 @@ echo.
 :: 1. Check for Git (and auto-install via winget if missing)
 set "GIT_EXE="
 where git >nul 2>nul
-if !ERRORLEVEL! EQU 0 (
-    set "GIT_EXE=git"
-) else (
-    if exist "%ProgramFiles%\Git\cmd\git.exe" set "GIT_EXE=%ProgramFiles%\Git\cmd\git.exe"
-    if exist "%LOCALAPPDATA%\Programs\Git\cmd\git.exe" set "GIT_EXE=%LOCALAPPDATA%\Programs\Git\cmd\git.exe"
-)
+if not errorlevel 1 set "GIT_EXE=git"
+if not defined GIT_EXE if exist "%ProgramFiles%\Git\cmd\git.exe" set "GIT_EXE=%ProgramFiles%\Git\cmd\git.exe"
+if not defined GIT_EXE if exist "%LOCALAPPDATA%\Programs\Git\cmd\git.exe" set "GIT_EXE=%LOCALAPPDATA%\Programs\Git\cmd\git.exe"
+if defined GIT_EXE goto :git_ready
 
+echo [1/4] Git is not installed on this PC. Installing Git automatically...
+winget install --id Git.Git -e --source winget --accept-source-agreements --accept-package-agreements
+if exist "%ProgramFiles%\Git\cmd\git.exe" set "GIT_EXE=%ProgramFiles%\Git\cmd\git.exe"
+if not defined GIT_EXE if exist "%LOCALAPPDATA%\Programs\Git\cmd\git.exe" set "GIT_EXE=%LOCALAPPDATA%\Programs\Git\cmd\git.exe"
 if not defined GIT_EXE (
-    echo [1/4] Git is not installed on this PC. Installing Git automatically...
-    winget install --id Git.Git -e --source winget --accept-source-agreements --accept-package-agreements
-    set "PATH=%PATH%;%ProgramFiles%\Git\cmd;%LOCALAPPDATA%\Programs\Git\cmd"
-    if exist "%ProgramFiles%\Git\cmd\git.exe" set "GIT_EXE=%ProgramFiles%\Git\cmd\git.exe"
-    if exist "%LOCALAPPDATA%\Programs\Git\cmd\git.exe" set "GIT_EXE=%LOCALAPPDATA%\Programs\Git\cmd\git.exe"
     where git >nul 2>nul
-    if !ERRORLEVEL! EQU 0 if not defined GIT_EXE set "GIT_EXE=git"
+    if not errorlevel 1 set "GIT_EXE=git"
 )
 
 if not defined GIT_EXE (
@@ -35,62 +32,58 @@ if not defined GIT_EXE (
     pause
     exit /b 1
 )
-echo [1/4] Git ready: "!GIT_EXE!"
 
-:: 2. Check for Godot 4 (and auto-install via winget if missing)
-set "GODOT_EXE="
-for %%G in (godot.exe godot4.exe) do (
-    where %%G >nul 2>nul
-    if !ERRORLEVEL! EQU 0 if not defined GODOT_EXE (
-        for /f "delims=" %%P in ('where %%G') do if not defined GODOT_EXE set "GODOT_EXE=%%P"
-    )
-)
-if not defined GODOT_EXE (
-    if exist "%LOCALAPPDATA%\Microsoft\WinGet\Links\godot.exe" set "GODOT_EXE=%LOCALAPPDATA%\Microsoft\WinGet\Links\godot.exe"
-)
-if not defined GODOT_EXE (
-    for /f "delims=" %%F in ('dir /b /s "%LOCALAPPDATA%\Microsoft\WinGet\Packages\Godot_v4*.exe" 2^>nul ^| findstr /v /i "_console.exe"') do (
-        if not defined GODOT_EXE set "GODOT_EXE=%%F"
-    )
-)
-if not defined GODOT_EXE (
-    echo [2/4] Godot 4 not found. Installing Godot 4 automatically via winget...
-    winget install --id GodotEngine.GodotEngine -e --accept-source-agreements --accept-package-agreements
-) else (
-    echo [2/4] Godot 4 ready!
-)
+:git_ready
+echo [1/4] Git ready: "%GIT_EXE%"
 
-:: 3. Clone SpookyMall into this folder (100% Anonymous / No Login)
+:: 2. Clone or Update SpookyMall into this folder (100% Anonymous / No Login)
 set "GIT_TERMINAL_PROMPT=0"
 set "GCM_INTERACTIVE=never"
 set "REPO_URL=https://github.com/mitosiskain/SpookyMall.git"
 
-if exist "%~dp0SpookyMall\project.godot" (
-    echo [3/4] SpookyMall folder already exists. Updating it...
-    "!GIT_EXE!" -c credential.helper= -C "%~dp0SpookyMall" pull --ff-only
-    set "GAME_DIR=%~dp0SpookyMall"
-) else if exist "%~dp0project.godot" (
-    echo [3/4] Already inside SpookyMall folder. Updating it...
-    "!GIT_EXE!" -c credential.helper= -C "%~dp0." pull --ff-only
-    set "GAME_DIR=%~dp0."
-) else (
-    echo [3/4] Downloading SpookyMall into "%~dp0SpookyMall"...
-    echo       ^(This is ~750 MB and may take 1-3 minutes^)
-    "!GIT_EXE!" -c credential.helper= clone "!REPO_URL!" "%~dp0SpookyMall"
-    if !ERRORLEVEL! NEQ 0 (
-        echo.
-        echo [ERROR] Failed to download SpookyMall. Please check your internet connection.
-        pause
-        exit /b 1
-    )
-    set "GAME_DIR=%~dp0SpookyMall"
+if exist "%~dp0project.godot" goto :already_in_repo
+if exist "%~dp0SpookyMall\project.godot" goto :update_subfolder
+
+echo [2/4] Downloading SpookyMall into "%~dp0SpookyMall"...
+echo       (This is ~750 MB and may take 1-3 minutes)
+"%GIT_EXE%" -c credential.helper= clone "%REPO_URL%" "%~dp0SpookyMall"
+if errorlevel 1 (
+    echo.
+    echo [ERROR] Failed to download SpookyMall. Please check your internet connection.
+    pause
+    exit /b 1
+)
+set "GAME_DIR=%~dp0SpookyMall"
+goto :repo_ready
+
+:update_subfolder
+echo [2/4] SpookyMall folder already exists. Updating it...
+"%GIT_EXE%" -c credential.helper= -C "%~dp0SpookyMall" pull --ff-only
+set "GAME_DIR=%~dp0SpookyMall"
+goto :repo_ready
+
+:already_in_repo
+echo [2/4] Already inside SpookyMall folder. Updating it...
+"%GIT_EXE%" -c credential.helper= -C "%~dp0." pull --ff-only
+set "GAME_DIR=%~dp0."
+
+:repo_ready
+:: 3. Download portable Godot 4.7.2 into the game folder if not already present
+if exist "%GAME_DIR%\Godot_v4.7.2-stable_win64.exe" goto :godot_ready
+echo [3/4] Downloading official Godot 4.7.2 for Windows (~65 MB)...
+curl.exe -fL --progress-bar -o "%GAME_DIR%\Godot_v4.7.2-stable_win64.exe.zip" "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_win64.exe.zip"
+if not errorlevel 1 (
+    echo [*] Extracting Godot 4.7.2...
+    tar.exe -xf "%GAME_DIR%\Godot_v4.7.2-stable_win64.exe.zip" -C "%GAME_DIR%"
+    del /q "%GAME_DIR%\Godot_v4.7.2-stable_win64.exe.zip" >nul 2>nul
 )
 
-:: 4. Create "Run SpookyMall" Shortcut with Discord Pic Icon (icon.ico from the cloned repo)
+:godot_ready
+:: 4. Create "Run SpookyMall" Shortcut with Discord Pic Icon (icon.ico)
 echo [4/4] Creating "Run SpookyMall" icon with your custom avatar...
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^
   "$ws = New-Object -ComObject WScript.Shell; " ^
-  "$gameDir = (Resolve-Path '!GAME_DIR!').Path; " ^
+  "$gameDir = (Resolve-Path '%GAME_DIR%').Path; " ^
   "$runBat = Join-Path $gameDir 'run.bat'; " ^
   "$iconFile = Join-Path $gameDir 'icon.ico'; " ^
   "$desktop = [Environment]::GetFolderPath('Desktop'); " ^
@@ -110,4 +103,4 @@ echo   - Use "Run SpookyMall" (on your Desktop or folder) to play
 echo   - Use "update.bat" inside SpookyMall to get updates
 echo ============================================================
 echo.
-call "!GAME_DIR!\run.bat"
+call "%GAME_DIR%\run.bat"
