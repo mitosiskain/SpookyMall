@@ -49,12 +49,12 @@ func _setup_references() -> void:
 		skeleton = _find_skeleton(self)
 
 	if skeleton:
-		_idx_spine3 = skeleton.find_bone("spine_03")
-		_idx_neck = skeleton.find_bone("neck_01")
-		_idx_head = skeleton.find_bone("Head")
-		_idx_upperarm_r = skeleton.find_bone("upperarm_r")
-		_idx_lowerarm_r = skeleton.find_bone("lowerarm_r")
-		_idx_hand_r = skeleton.find_bone("hand_r")
+		_idx_spine3 = _find_first_bone(skeleton, ["spine_03.x", "spine_03"])
+		_idx_neck = _find_first_bone(skeleton, ["neck.x", "neck_01", "neck"])
+		_idx_head = _find_first_bone(skeleton, ["head.x", "Head", "head"])
+		_idx_upperarm_r = _find_first_bone(skeleton, ["arm.r", "upperarm_r"])
+		_idx_lowerarm_r = _find_first_bone(skeleton, ["forearm.r", "lowerarm_r"])
+		_idx_hand_r = _find_first_bone(skeleton, ["hand.r", "hand_r"])
 
 	if anim_player:
 		var raw_list := anim_player.get_animation_list()
@@ -257,6 +257,13 @@ static func _find_anim_player(node: Node) -> AnimationPlayer:
 		if found:
 			return found
 	return null
+
+static func _find_first_bone(skel: Skeleton3D, names: Array[String]) -> int:
+	for bname in names:
+		var idx := skel.find_bone(bname)
+		if idx >= 0:
+			return idx
+	return -1
 
 static func _find_skeleton(node: Node) -> Skeleton3D:
 	if node is Skeleton3D:

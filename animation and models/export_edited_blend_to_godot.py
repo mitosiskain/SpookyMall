@@ -37,20 +37,31 @@ CLEAN_HIERARCHY = {
 }
 for side in [".l", ".r"]:
     for f_name in ["thumb", "index", "middle", "ring", "pinky"]:
-        CLEAN_HIERARCHY[f"c_{f_name}1{side}"] = f"hand{side}"
-        CLEAN_HIERARCHY[f"c_{f_name}2{side}"] = f"c_{f_name}1{side}"
+        CLEAN_HIERARCHY[f"{f_name}1{side}"] = f"hand{side}"
+        CLEAN_HIERARCHY[f"c_{f_name}2{side}"] = f"{f_name}1{side}"
         CLEAN_HIERARCHY[f"c_{f_name}3{side}"] = f"c_{f_name}2{side}"
 
+# Complete mapping of all ARP stretch/twist/base vertex groups onto the 53 clean bones
 WEIGHT_REMAP = {
     "c_head.x": "head.x",
+    "thigh_stretch.l": "thigh.l",
+    "thigh_stretch.r": "thigh.r",
     "thigh_twist.l": "thigh.l",
     "thigh_twist.r": "thigh.r",
     "c_thigh_b.l": "thigh.l",
     "c_thigh_b.r": "thigh.r",
+    "leg_stretch.l": "leg.l",
+    "leg_stretch.r": "leg.r",
+    "leg_twist.l": "leg.l",
+    "leg_twist.r": "leg.r",
+    "arm_stretch.l": "arm.l",
+    "arm_stretch.r": "arm.r",
     "arm_twist.l": "arm.l",
     "arm_twist.r": "arm.r",
     "c_arm_twist_offset.l": "arm.l",
     "c_arm_twist_offset.r": "arm.r",
+    "forearm_stretch.l": "forearm.l",
+    "forearm_stretch.r": "forearm.r",
     "forearm_twist.l": "forearm.l",
     "forearm_twist.r": "forearm.r",
     "c_index1_base.l": "hand.l",
@@ -63,10 +74,32 @@ WEIGHT_REMAP = {
     "c_pinky1_base.r": "hand.r",
     "c_thumb1_base.l": "hand.l",
     "c_thumb1_base.r": "hand.r",
+    "c_index1.l": "index1.l",
+    "c_index1.r": "index1.r",
+    "c_middle1.l": "middle1.l",
+    "c_middle1.r": "middle1.r",
+    "c_ring1.l": "ring1.l",
+    "c_ring1.r": "ring1.r",
+    "c_pinky1.l": "pinky1.l",
+    "c_pinky1.r": "pinky1.r",
+    "c_thumb1.l": "thumb1.l",
+    "c_thumb1.r": "thumb1.r",
 }
 
-# 2. Sample all Actions on Mikudoomer_ARP by evaluating ARP's full IK/FK rig at every frame in memory
-arp_actions = [a for a in bpy.data.actions if len(a.slots) > 0]
+# 2. Sample all Actions on Mikudoomer_ARP (any action with c_* controller fcurves, including ARP _remap actions!)
+def is_arp_action(act):
+    if hasattr(act, "fcurves"):
+        return any('pose.bones["c_' in fc.data_path for fc in act.fcurves)
+    if hasattr(act, "layers"):
+        for layer in act.layers:
+            for strip in layer.strips:
+                if hasattr(strip, "channelbags"):
+                    for bag in strip.channelbags:
+                        if any('pose.bones["c_' in fc.data_path for fc in bag.fcurves):
+                            return True
+    return False
+
+arp_actions = [a for a in bpy.data.actions if len(a.slots) > 0 and is_arp_action(a)]
 sampled_actions = {}
 
 if not arp_arm.animation_data:
@@ -104,6 +137,10 @@ for act in arp_actions:
     sampled_actions[act.name] = (f_start, f_end, frames_dict)
     print(f"Sampled ARP action '{act.name}' ({f_start}..{f_end})")
 
+# Reset ARP armature to REST pose before transferring meshes so no posed deformation is ever baked
+arp_arm.data.pose_position = 'REST'
+bpy.context.view_layer.update()
+
 # 3. Build the clean 53-bone Godot Armature in memory (without saving over MikuDoomer_ReadyToEdit.blend!)
 clean_arm_data = bpy.data.armatures.new("ArmatureData")
 clean_arm_obj = bpy.data.objects.new("Armature", clean_arm_data)
@@ -130,7 +167,7 @@ for bname, parent_name in CLEAN_HIERARCHY.items():
 
 bpy.ops.object.mode_set(mode='OBJECT')
 
-# 4. Transfer character meshes to clean_arm_obj and merge twist vertex groups
+# 4. Transfer character meshes to clean_arm_obj and merge stretch/twist vertex groups
 char_meshes = [obj for obj in bpy.data.objects if obj.type == 'MESH' and obj.parent == arp_arm]
 for mesh_obj in char_meshes:
     vgroups = {vg.name: vg.index for vg in mesh_obj.vertex_groups}
@@ -149,6 +186,11 @@ for mesh_obj in char_meshes:
             mesh_obj.vertex_groups.remove(mesh_obj.vertex_groups[old_vg])
             vgroups = {vg.name: vg.index for vg in mesh_obj.vertex_groups}
 
+    # Remove any empty vertex groups not in CLEAN_HIERARCHY
+    for vg in list(mesh_obj.vertex_groups):
+        if vg.name not in CLEAN_HIERARCHY:
+            mesh_obj.vertex_groups.remove(vg)
+
     world_mat = mesh_obj.matrix_world.copy()
     mesh_obj.parent = clean_arm_obj
     mesh_obj.matrix_parent_inverse = clean_arm_obj.matrix_world.inverted()
@@ -163,6 +205,8 @@ for obj in list(bpy.data.objects):
         bpy.data.objects.remove(obj, do_unlink=True)
 for act in list(bpy.data.actions):
     bpy.data.actions.remove(act)
+
+clean_arm_obj.name = "Armature"
 
 # 5. Bake sampled world poses onto clean_arm_obj Actions
 clean_arm_obj.animation_data_create()
@@ -211,13 +255,13 @@ if "Custom_Chen_Idle" in bpy.data.actions:
     if hasattr(clean_arm_obj.animation_data, "action_slot") and len(act_idle.slots) > 0:
         clean_arm_obj.animation_data.action_slot = act_idle.slots[0]
 
-# 6. Export clean game GLB and reimport into Godot
+# 6. Export clean game GLB (with export_apply=False so rest mesh is never baked in pose!) and reimport into Godot
 os.makedirs(os.path.dirname(OUT_GLB), exist_ok=True)
 bpy.ops.export_scene.gltf(
     filepath=OUT_GLB,
     export_format='GLB',
     use_selection=False,
-    export_apply=True,
+    export_apply=False,
     export_animations=True,
     export_animation_mode='ACTIONS',
     export_nla_strips=True,
